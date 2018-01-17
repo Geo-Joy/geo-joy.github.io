@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Geo&#39;z Blog</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Geo&#39;z Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 17 Jan 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How a software developer re-focused his life to learn artificial intelligence</title>
+      <link>http://localhost:1313/post/2018/01/17/how-a-software-developer-re-focused-his-life-to-learn-artificial-intelligence/</link>
+      <pubDate>Wed, 17 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2018/01/17/how-a-software-developer-re-focused-his-life-to-learn-artificial-intelligence/</guid>
+      <description>Why would a young man quit his comfortable life and enjoyable career to „survive on benefits“ while studying a new field without any certainty as to where it may lead him? Tune in to hear Tuatini Godard&amp;rsquo;s story and life philosophy.
+Along the way, you will hear us discuss the wide range of tools and ideas within the space of deep learning and AI, as well as our in depth discussion about the current state of hardware technology for deep learning and where it is headed.</description>
+    </item>
+    
+  </channel>
+</rss>

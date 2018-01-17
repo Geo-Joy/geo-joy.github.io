@@ -2,7 +2,16 @@
 
 <main class="fade-in">
 
-    {{ partial "list-item" . }}
+    <!-- {{ partial "list-item" . }} -->
+    <h4><a itemprop="url" href="{{ .Scratch.Get "link" }}">
+        <span itemprop="name">{{ .Title }}</span>
+      </a></h4>
+  
+      {{ .Date.Format "January 2, 2006" }} 
+      <br>
+      {{ range .Params.tags }} <a href="../../../../../tags/{{ . }}"><kbd class="item-tag">{{ . }}</kbd></a> {{ end }}
+      <br>
+      <hr>
 
     <br> <div class="text-justify">{{ .Content }}</div>
 
