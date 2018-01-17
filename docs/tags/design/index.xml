@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Design on Geo&#39;z Blog</title>
-    <link>https://geojoy.me/tags/design/</link>
+    <link>http://geojoy.me/tags/design/</link>
     <description>Recent content in Design on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 08 Aug 2008 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://geojoy.me/tags/design/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://geojoy.me/tags/design/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Design Patterns Cheat Sheet</title>
-      <link>https://geojoy.me/post---copy/design-patterns-cheat-sheet/</link>
+      <link>http://geojoy.me/post---copy/design-patterns-cheat-sheet/</link>
       <pubDate>Fri, 08 Aug 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/design-patterns-cheat-sheet/</guid>
+      <guid>http://geojoy.me/post---copy/design-patterns-cheat-sheet/</guid>
       <description>On va encore dire que je suis obsédé par les &amp;ldquo;design patterns&amp;rdquo; je sais ! Mais bon j&amp;rsquo;ai toujours pas trouvé une fiche avec les DP bien présentés, je sens que je vais en faire une comme ça, j&amp;rsquo;aurais ce que je veux &amp;hellip;
 En attendant en voici une qui s&amp;rsquo;approche de ce que je souhaite.
 [ PDF ]</description>

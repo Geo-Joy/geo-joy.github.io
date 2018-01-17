@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ubiquity on Geo&#39;z Blog</title>
-    <link>https://geojoy.me/tags/ubiquity/</link>
+    <link>http://geojoy.me/tags/ubiquity/</link>
     <description>Recent content in Ubiquity on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 30 Aug 2008 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://geojoy.me/tags/ubiquity/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://geojoy.me/tags/ubiquity/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Ubiquity, Enso pour Firefox</title>
-      <link>https://geojoy.me/post---copy/ubiquity-enso-pour-firefox/</link>
+      <link>http://geojoy.me/post---copy/ubiquity-enso-pour-firefox/</link>
       <pubDate>Sat, 30 Aug 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/ubiquity-enso-pour-firefox/</guid>
+      <guid>http://geojoy.me/post---copy/ubiquity-enso-pour-firefox/</guid>
       <description>Voici une extension Firefox qu&amp;rsquo;il va falloir surveiller de près, elle permet d&amp;rsquo;associer à des commandes textuelles des actions : email to (Envoyer un mail au contact via gmail), map (affiche une carte de l&amp;rsquo;adresse sélectionnée), tout comme le fait enso.
 Plus d&amp;rsquo;informations</description>
     </item>

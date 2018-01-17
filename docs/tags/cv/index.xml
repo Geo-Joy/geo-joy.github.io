@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cv on Geo&#39;z Blog</title>
-    <link>https://geojoy.me/tags/cv/</link>
+    <link>http://geojoy.me/tags/cv/</link>
     <description>Recent content in Cv on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 06 Jan 2014 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://geojoy.me/tags/cv/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://geojoy.me/tags/cv/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Et voilà on change d&#39;horizon !</title>
-      <link>https://geojoy.me/post---copy/et-voila-on-change-horizon/</link>
+      <link>http://geojoy.me/post---copy/et-voila-on-change-horizon/</link>
       <pubDate>Mon, 06 Jan 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/et-voila-on-change-horizon/</guid>
+      <guid>http://geojoy.me/post---copy/et-voila-on-change-horizon/</guid>
       <description>Bonne année 2014 à toutes et à tous !
 Cette année a été riche en changements (appartement, boulot, etc.). J&amp;rsquo;espère que 2014 sera comme chaque année, meilleure que l&amp;rsquo;année précédente.
 Je parlais du boulot, et oui ça y est ! J&amp;rsquo;ai pris le temps, mais j&amp;rsquo;ai franchi le pas j&amp;rsquo;ai quitté mon ancienne boîte (Infotel), pour me diriger (/retourner) dans le domaine de la sécurité (c&amp;rsquo;est plus fort que moi). Je travaille en temps qu&amp;rsquo;architecte technique sur des systèmes d&amp;rsquo;analyses liés à la sécurité (CEP, EEP).</description>
@@ -24,10 +24,10 @@ Je parlais du boulot, et oui ça y est ! J&amp;rsquo;ai pris le temps, mais j&am
     
     <item>
       <title>Merci XSL-FO !</title>
-      <link>https://geojoy.me/post---copy/merci-xsl-fo/</link>
+      <link>http://geojoy.me/post---copy/merci-xsl-fo/</link>
       <pubDate>Sun, 10 Jul 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/merci-xsl-fo/</guid>
+      <guid>http://geojoy.me/post---copy/merci-xsl-fo/</guid>
       <description>Pour des besoins professionnels, j&amp;rsquo;ai du apprendre à utiliser XSL-FO, au debut j&amp;rsquo;ai avais vraiment pas envie, mais bon au final si on a une bonne connaissance HTML / CSS2, on s&amp;rsquo;en sort sans problème.
 Du coup j&amp;rsquo;ai ajouté à partir du XML de mon CV, 3 cibles au travers de XSL-FO :
  CV (FR) : PDF CV (FR) : RTF CV (FR) : DOCX  J&amp;rsquo;ai essayé de me rapprocher le plus possible du rendu HResume HTML, mais sans les possibilités CSS3 (l&amp;rsquo;ombre du texte).</description>
@@ -35,28 +35,28 @@ Du coup j&amp;rsquo;ai ajouté à partir du XML de mon CV, 3 cibles au travers d
     
     <item>
       <title>Petites mises à jour</title>
-      <link>https://geojoy.me/post---copy/petites-mises-a-jour/</link>
+      <link>http://geojoy.me/post---copy/petites-mises-a-jour/</link>
       <pubDate>Sun, 22 May 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/petites-mises-a-jour/</guid>
+      <guid>http://geojoy.me/post---copy/petites-mises-a-jour/</guid>
       <description> Mise à jour du CV  Nouveau point d&amp;rsquo;entrée : http://zenithar.org Travaux sur le référencement pour fusionner mes &amp;ldquo;deux identités numériques&amp;rdquo;   </description>
     </item>
     
     <item>
       <title>Bientot la fin d&#39;une époque.</title>
-      <link>https://geojoy.me/post---copy/bientot-la-fin-dune-epoque/</link>
+      <link>http://geojoy.me/post---copy/bientot-la-fin-dune-epoque/</link>
       <pubDate>Tue, 06 May 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/bientot-la-fin-dune-epoque/</guid>
+      <guid>http://geojoy.me/post---copy/bientot-la-fin-dune-epoque/</guid>
       <description>Hé oui avec la fin de l&amp;rsquo;année qui approche, cela marque la marque la fin de 23ans 1&amp;frasl;2 d&amp;rsquo;études acharnées, des dessins, des pâtes à sel, des assemblages Legos, de l&amp;rsquo;apprentissage des lettres, de la prononciation des syllabes, de l&amp;rsquo;écriture sur des cahiers à lignes, des additions à 1 ou 2 chiffres, biensur des soustractions, puis sont arrivées les fractions, les nombres relatifs, (ouh la d&amp;rsquo;un coup on prend un coup de vieux), puis les théorèmes (Pythagore, Thalès, &amp;hellip;), puis comme c&amp;rsquo;est trop simple on passe en généralisé, avec des intégrales, de la géométrie dans l&amp;rsquo;espace, la trigonométrie (on s&amp;rsquo;aperçois à ce moment que les touches SIN, COS, TAN qui étaient sur votre calculette depuis le CM2 qui vous intriguaient peuvent devenir un vrai cauchemar ^^).</description>
     </item>
     
     <item>
       <title>Viadeo &amp;amp; LinkedIn</title>
-      <link>https://geojoy.me/post---copy/viadeo-linkedin/</link>
+      <link>http://geojoy.me/post---copy/viadeo-linkedin/</link>
       <pubDate>Thu, 27 Sep 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/viadeo-linkedin/</guid>
+      <guid>http://geojoy.me/post---copy/viadeo-linkedin/</guid>
       <description>Je viens de remplir mon profil dans ces deux sites, je ne sais pas ce que ça va m&amp;rsquo;apporter, hormis le fait de retrouver des vieux amis du lycée ^^
 Viadeo : Profil Invitation
 LinkedIn : Profil</description>

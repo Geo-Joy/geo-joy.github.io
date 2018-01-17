@@ -2,51 +2,51 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>G33k on Geo&#39;z Blog</title>
-    <link>https://geojoy.me/tags/g33k/</link>
+    <link>http://geojoy.me/tags/g33k/</link>
     <description>Recent content in G33k on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 13 Sep 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://geojoy.me/tags/g33k/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://geojoy.me/tags/g33k/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Ma configuration i3</title>
-      <link>https://geojoy.me/post---copy/configuration-i3/</link>
+      <link>http://geojoy.me/post---copy/configuration-i3/</link>
       <pubDate>Tue, 13 Sep 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/configuration-i3/</guid>
+      <guid>http://geojoy.me/post---copy/configuration-i3/</guid>
       <description>Cela fait quelques temps que je regarde pour changer d&amp;rsquo;environnement graphique. J&amp;rsquo;ai quasiment toujours été sous KDE, c&amp;rsquo;est un environnement &amp;ldquo;Komplet&amp;rdquo; que j&amp;rsquo;apprécie pour son côté justement complet.
 Mais bon avec le temps, j&amp;rsquo;aime de plus en plus le minimalisme et surtout le tiling window manager c&amp;rsquo;est l&amp;rsquo;avenir pour les gens comme moi qui ouvrent 200 consoles car ils doivent, en même temps, construire des docker, les déployer sur Kubernetes, implémenter un webservices en Go, et pendant que tout ça se fait écrire les tests, et l&amp;rsquo;IHM en Javascript avec votre framework préféré.</description>
     </item>
     
     <item>
       <title>MineCraft : Compiler la libnoise sous OpenSuSE, voir d&#39;autres ...</title>
-      <link>https://geojoy.me/post---copy/minecraft-compiler-la-libnoise-sous-opensuse-voir-dautres/</link>
+      <link>http://geojoy.me/post---copy/minecraft-compiler-la-libnoise-sous-opensuse-voir-dautres/</link>
       <pubDate>Sat, 02 Apr 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/minecraft-compiler-la-libnoise-sous-opensuse-voir-dautres/</guid>
+      <guid>http://geojoy.me/post---copy/minecraft-compiler-la-libnoise-sous-opensuse-voir-dautres/</guid>
       <description>Je suis en train de rechercher un serveur MineCraft en C++, tout googlement je suis tombé sur MineServer, seul petit bémol, il nécessite la librairie libnoise qui n&amp;rsquo;est pas disponible sour OpenSuSE et c&amp;rsquo;est une galère à compiler depuis les sources (make + libtool), j&amp;rsquo;ai commencé par mettre à jour libtool, puis bon, j&amp;rsquo;ai donc reécris le build-system avec CMake.
 Quand est-ce que les gens arrêterons d&amp;rsquo;utiliser make / autotools pour leur build &amp;hellip; surtout quand on fait du multiplateforme !</description>
     </item>
     
     <item>
       <title>Acceleo 3.0 et les attributs de classe UML.</title>
-      <link>https://geojoy.me/post---copy/acceleo-3-0-et-les-attributs-de-classe-uml/</link>
+      <link>http://geojoy.me/post---copy/acceleo-3-0-et-les-attributs-de-classe-uml/</link>
       <pubDate>Sat, 19 Mar 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/acceleo-3-0-et-les-attributs-de-classe-uml/</guid>
+      <guid>http://geojoy.me/post---copy/acceleo-3-0-et-les-attributs-de-classe-uml/</guid>
       <description>Ah lala ça fait depuis quelque temps que j&amp;rsquo;utilise Acceleo pour faire pas de mal de chose (Génération de code Java, Docbook, etc.), et bon j&amp;rsquo;ai été confronté à un problème particulier. Il faut savoir que dans le métamodele UML, la liste des attributs (Property) est marqué comme unordered, ce qui a pour effet dans Acceleo suite à des générations successives de mélanger les attributs de votre classe.
 Vous me direz pas très grave pour un bean Java, mais ça devient plus compliqué quand celui-ci est un bean à persistance (type JPA).</description>
     </item>
     
     <item>
       <title>BackTrack 4 is unleashed ! Watch the dog !</title>
-      <link>https://geojoy.me/post---copy/backtrack-4-is-unleashed-watch-the-dog/</link>
+      <link>http://geojoy.me/post---copy/backtrack-4-is-unleashed-watch-the-dog/</link>
       <pubDate>Fri, 13 Mar 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/backtrack-4-is-unleashed-watch-the-dog/</guid>
+      <guid>http://geojoy.me/post---copy/backtrack-4-is-unleashed-watch-the-dog/</guid>
       <description>Halte aux paraskevidékatriaphobe ! Savez vous que BackTrack 4 est sortie ? Sinon je vous l&amp;rsquo;annonce !
 En plus du changement de version, il y a aussi un changement de distribution de base, avant BackTrack était une variante gonflée (comme vahiné) de Slax, qui était une version modulaire et portable (dans le sens USB) de Slackware.
 Elle est basée aujourd&amp;rsquo;hui sur une debian un peu modifiée, pour les audits de sécurité (intégration des modules d&amp;rsquo;injection 802.</description>
@@ -54,10 +54,10 @@ Elle est basée aujourd&amp;rsquo;hui sur une debian un peu modifiée, pour les 
     
     <item>
       <title>ZeroWine &amp; les malwares</title>
-      <link>https://geojoy.me/post---copy/zerowine-les-malwares/</link>
+      <link>http://geojoy.me/post---copy/zerowine-les-malwares/</link>
       <pubDate>Fri, 13 Mar 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/zerowine-les-malwares/</guid>
+      <guid>http://geojoy.me/post---copy/zerowine-les-malwares/</guid>
       <description>Et bien non ce n&amp;rsquo;est pas un nouvel épisode de Martine. C&amp;rsquo;est une distribution linux configurée pour l&amp;rsquo;analyse de malware Windows.
 Elle s&amp;rsquo;exécute au travers de QEmu. Il suffit delancer la machine virtuelle, et de se connecter via le navigateur. Un formulaire vous propose d&amp;rsquo;uploader votre malware. Il va l&amp;rsquo;exécuter avec Wine (Windows Emulator) pour en ressortir la trace d&amp;rsquo;execution.
 Vous pourrez par la suite effectuer un analyse forensic du malware sur votre Linux.</description>
@@ -65,20 +65,20 @@ Vous pourrez par la suite effectuer un analyse forensic du malware sur votre Lin
     
     <item>
       <title>Passage à Wordpress 2.6</title>
-      <link>https://geojoy.me/post---copy/passage-a-wordpress-26/</link>
+      <link>http://geojoy.me/post---copy/passage-a-wordpress-26/</link>
       <pubDate>Fri, 18 Jul 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/passage-a-wordpress-26/</guid>
+      <guid>http://geojoy.me/post---copy/passage-a-wordpress-26/</guid>
       <description>Une mise à jour plutôt sous le signe de la galère &amp;hellip; En général ça se passe sans pb ! Bien pas cette fois !
  Problème de reconnaissance du préfixe de la base Autorisations révoquées Import partiel &amp;hellip; Activation de l&amp;rsquo;URL Rewriting chez TuxFamily, donc toutes les pages en 404 Problèmes de référencements Que du bonheur &amp;hellip;  Normalement tout est revenu à la normal. Avec un redirect 301 pour corriger le problème de PATHINFO.</description>
     </item>
     
     <item>
       <title>WiFi McDO</title>
-      <link>https://geojoy.me/post---copy/wifi-mcdo/</link>
+      <link>http://geojoy.me/post---copy/wifi-mcdo/</link>
       <pubDate>Sat, 31 May 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/wifi-mcdo/</guid>
+      <guid>http://geojoy.me/post---copy/wifi-mcdo/</guid>
       <description>Ca y est j&amp;rsquo;ai testé, ça fait un moment que je dis : &amp;ldquo;faut que je teste pour voir !&amp;rdquo;. Bien ça y est , ça c&amp;rsquo;est fait ^^.
 Connexion plutôt stable, débit moyen (j&amp;rsquo;étais tout seul 100 Ko/s), pas mal de services bloqués; reste HTTP, et HTTPS; oubliez MSN lol mais bon ya SSH ^^ (que conseille vivement pour éviter la scrutation de traffic).
 Voila, c&amp;rsquo;est tout ^^.</description>
@@ -86,39 +86,39 @@ Voila, c&amp;rsquo;est tout ^^.</description>
     
     <item>
       <title>La programmation objet : évidence ou fatalité ....</title>
-      <link>https://geojoy.me/post---copy/la-programmation-objet-evidence-ou-fatalite/</link>
+      <link>http://geojoy.me/post---copy/la-programmation-objet-evidence-ou-fatalite/</link>
       <pubDate>Sat, 17 May 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/la-programmation-objet-evidence-ou-fatalite/</guid>
+      <guid>http://geojoy.me/post---copy/la-programmation-objet-evidence-ou-fatalite/</guid>
       <description>Comment avoir de l&amp;rsquo;objet en ANSI-C ? Si vous avez fait un peu de Gtk dans votre vie vous connaissez forcément !
 No comment : http://www.cs.rit.edu/~ats/books/ooc.pdf</description>
     </item>
     
     <item>
       <title>Une autre dans le même esprit.</title>
-      <link>https://geojoy.me/post---copy/une-autre-dans-le-meme-esprit/</link>
+      <link>http://geojoy.me/post---copy/une-autre-dans-le-meme-esprit/</link>
       <pubDate>Fri, 28 Mar 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/une-autre-dans-le-meme-esprit/</guid>
+      <guid>http://geojoy.me/post---copy/une-autre-dans-le-meme-esprit/</guid>
       <description>Je suis en pleine période : analyse statique, complexité cyclomatique, etc &amp;hellip; .
 [WTF = What the fuck =&amp;gt; Mais c&amp;rsquo;est quoi cette m&amp;hellip; (dans ce contexte)]</description>
     </item>
     
     <item>
       <title>Get back to work !</title>
-      <link>https://geojoy.me/post---copy/get-back-to-work/</link>
+      <link>http://geojoy.me/post---copy/get-back-to-work/</link>
       <pubDate>Thu, 27 Mar 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/get-back-to-work/</guid>
+      <guid>http://geojoy.me/post---copy/get-back-to-work/</guid>
       <description>Combien de fois on l&amp;rsquo;a dit ^^ - &amp;ldquo;Viens bosser !&amp;rdquo; - &amp;ldquo;Je peux pas ça compile !&amp;rdquo;</description>
     </item>
     
     <item>
       <title>Encore mieux que Katapult ! Oui ça existe !</title>
-      <link>https://geojoy.me/post---copy/encore-mieux-que-katapult-oui-ca-existe/</link>
+      <link>http://geojoy.me/post---copy/encore-mieux-que-katapult-oui-ca-existe/</link>
       <pubDate>Wed, 13 Feb 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/encore-mieux-que-katapult-oui-ca-existe/</guid>
+      <guid>http://geojoy.me/post---copy/encore-mieux-que-katapult-oui-ca-existe/</guid>
       <description>Voici une application que j&amp;rsquo;ai trouvée par hasard en me perdant dans les méandres de l&amp;rsquo;Internet.
 http://www.hamunized.com/enso/
 Propose un lanceur d&amp;rsquo;application, mais pas uniquement cela ! il permet d&amp;rsquo;exécuter des opérations sur la sélection en cours : à partir d&amp;rsquo;une adresse sortir le plan GoogleMap, (mon préféré) transformer une expression LaTeX en image pendant que vous utilisez votre éditeur de texte favori, mettre en majuscule, traduire vers 7 langues, donner une définition, etc &amp;hellip; vraiment j&amp;rsquo;adore !</description>
@@ -126,144 +126,144 @@ Propose un lanceur d&amp;rsquo;application, mais pas uniquement cela ! il permet
     
     <item>
       <title>FastCGI &#43; SuEXEC, ouf !</title>
-      <link>https://geojoy.me/post---copy/fastcgi-suexec-ouf/</link>
+      <link>http://geojoy.me/post---copy/fastcgi-suexec-ouf/</link>
       <pubDate>Tue, 18 Dec 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/fastcgi-suexec-ouf/</guid>
+      <guid>http://geojoy.me/post---copy/fastcgi-suexec-ouf/</guid>
       <description>Ca y est j&amp;rsquo;ai enfin réussi à faire tourner la plateforme sous FastCGI + SuEXEC, pour pouvoir exécuter les virtualhosts avec des utilisateurs et groupes différents des uns des autres. Reste quelques petits problèmes à régler par ci par là ! mais ça marche !</description>
     </item>
     
     <item>
       <title>I need a good Firewall !</title>
-      <link>https://geojoy.me/post---copy/i-need-a-good-firewall/</link>
+      <link>http://geojoy.me/post---copy/i-need-a-good-firewall/</link>
       <pubDate>Thu, 13 Dec 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/i-need-a-good-firewall/</guid>
+      <guid>http://geojoy.me/post---copy/i-need-a-good-firewall/</guid>
       <description>Si vous connaissez un bon firewall léger, qui ne fait que firewall et rien d&amp;rsquo;autres, je suis preneur. J&amp;rsquo;ai testé Look&amp;rsquo;n Stop vraiment bien, Bit defender total 2008, j&amp;rsquo;ai viré car il rendait mon PC inutilisable, Agnitum Outpost il ne marchait pas (étonnant c&amp;rsquo;est mon firewall préféré sous Windows).
 C&amp;rsquo;est pour quand IPTables ou pf sous Windows ?</description>
     </item>
     
     <item>
       <title>7 Strikes Wiiiiiiiiiiiiiiiiiiiiii</title>
-      <link>https://geojoy.me/post---copy/6-strikes-wiiiiiiiiiiiiiiiiiiiiii/</link>
+      <link>http://geojoy.me/post---copy/6-strikes-wiiiiiiiiiiiiiiiiiiiiii/</link>
       <pubDate>Thu, 06 Dec 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/6-strikes-wiiiiiiiiiiiiiiiiiiiiii/</guid>
+      <guid>http://geojoy.me/post---copy/6-strikes-wiiiiiiiiiiiiiiiiiiiiii/</guid>
       <description>Voila une image pour vous montrer mes 7 strikes dans une partie ^^ Parce qu&amp;rsquo;il faut bien se détendre un peu (sauf le bras, j&amp;rsquo;ai mal!) entre les ISA Server, L2TP/IPSec, OpenBSD, et autres machines du diable qui me donnent du fil à retordre.</description>
     </item>
     
     <item>
       <title>TGS - Content de savoir qu&#39;il y a plus G33k que moi !</title>
-      <link>https://geojoy.me/post---copy/tgs-content-de-savoir-quil-y-a-plus-g33k-que-moi/</link>
+      <link>http://geojoy.me/post---copy/tgs-content-de-savoir-quil-y-a-plus-g33k-que-moi/</link>
       <pubDate>Sun, 25 Nov 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/tgs-content-de-savoir-quil-y-a-plus-g33k-que-moi/</guid>
+      <guid>http://geojoy.me/post---copy/tgs-content-de-savoir-quil-y-a-plus-g33k-que-moi/</guid>
       <description>De retour du TGS (Toulouse Game Show) à ne pas confondre avec le Tokyo Game Show, qui est d&amp;rsquo;après mes sources 15 fois plus grand en surface ! Au programme, jeux vidéos (Guitar hero, Mario Galaxy, Wii sport, etc &amp;hellip;), mangas (Naruto, Bleach, &amp;hellip;), du cosplay (Personnage matérialisé par des déguisements), du Japan Art, enfin plein de souvenirs. J&amp;rsquo;ai trouvé l&amp;rsquo;intégrale des samurai pizza cats à 10€ ^^ et surtout au final pour les vrais addict les génériques de dessins animés composés et chantés par Bernard Minet !</description>
     </item>
     
     <item>
       <title>OpenSuSE 10.3</title>
-      <link>https://geojoy.me/post---copy/opensuse-103/</link>
+      <link>http://geojoy.me/post---copy/opensuse-103/</link>
       <pubDate>Sun, 07 Oct 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/opensuse-103/</guid>
+      <guid>http://geojoy.me/post---copy/opensuse-103/</guid>
       <description>Je viens de terminer ma migration vers OpenSuSE 10.3, premier sentiment, c&amp;rsquo;est plus rapide ! Pour YaST, c&amp;rsquo;est que du bonheur, il y a enfin un cache, plus besoin de recharger les dépots, plus besoin de se casser la tête à checher les dépots non plus, les développeurs ont intégrés un module &amp;ldquo;référentiels communautaires&amp;rdquo; qui permet en un click de souris d&amp;rsquo;ajouter les dépots de KDE, Gnome, Beryl, etc &amp;hellip; .</description>
     </item>
     
     <item>
       <title>The answer to life, the universe, and everything</title>
-      <link>https://geojoy.me/post---copy/the-answer-to-life-the-universe-and-everything/</link>
+      <link>http://geojoy.me/post---copy/the-answer-to-life-the-universe-and-everything/</link>
       <pubDate>Sun, 16 Sep 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/the-answer-to-life-the-universe-and-everything/</guid>
+      <guid>http://geojoy.me/post---copy/the-answer-to-life-the-universe-and-everything/</guid>
       <description>the answer to life, the universe, and everything - Google Search
 Même Google connait la réponse ^^^(référence au Guide du voyageur intergallactique H2G2) .</description>
     </item>
     
     <item>
       <title>Everyone has heroes no ?</title>
-      <link>https://geojoy.me/post---copy/everyone-has-heroes-no/</link>
+      <link>http://geojoy.me/post---copy/everyone-has-heroes-no/</link>
       <pubDate>Thu, 13 Sep 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/everyone-has-heroes-no/</guid>
+      <guid>http://geojoy.me/post---copy/everyone-has-heroes-no/</guid>
       <description>Voici les photographies des &amp;ldquo;héros&amp;rdquo; de l&amp;rsquo;informatique.
 http://www.seo-expert-blog.com/blog/geeks-are-sexy</description>
     </item>
     
     <item>
       <title>Frets On Fire</title>
-      <link>https://geojoy.me/post---copy/frets-on-fire/</link>
+      <link>http://geojoy.me/post---copy/frets-on-fire/</link>
       <pubDate>Thu, 06 Sep 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/frets-on-fire/</guid>
+      <guid>http://geojoy.me/post---copy/frets-on-fire/</guid>
       <description>Guitariste en herbe, vous connaissez DDR, bien voici le Guitar Heore pour PC avec votre clavier ^^
 Frets On Fire</description>
     </item>
     
     <item>
       <title>Un peu d&#39;inutile, mais tellement beau !</title>
-      <link>https://geojoy.me/post---copy/un-peu-dinutile-mais-tellement-beau/</link>
+      <link>http://geojoy.me/post---copy/un-peu-dinutile-mais-tellement-beau/</link>
       <pubDate>Tue, 21 Aug 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/un-peu-dinutile-mais-tellement-beau/</guid>
+      <guid>http://geojoy.me/post---copy/un-peu-dinutile-mais-tellement-beau/</guid>
       <description>Une vidéo mettant en oeuvre le nouveau Compize-Fusion, (ex Beryl) sur une Ubuntu.
 [coolplayer]http://www.youtube.com/watch?v=E4Fbk52Mk1w[/coolplayer]</description>
     </item>
     
     <item>
       <title>VBI, Teletext, CC, DirectShow, ...</title>
-      <link>https://geojoy.me/post---copy/vbi-teletext-cc-directshow/</link>
+      <link>http://geojoy.me/post---copy/vbi-teletext-cc-directshow/</link>
       <pubDate>Tue, 19 Jun 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/vbi-teletext-cc-directshow/</guid>
+      <guid>http://geojoy.me/post---copy/vbi-teletext-cc-directshow/</guid>
       <description>Voila de quoi parlent mes activités, je dois lire du VBI (Vertical Blanking Interval), l&amp;rsquo;analyser, le reconstruire, le modifier, en gros le torturer ^^. Tout ça avec du DirectShow mêlé de GDI+ (ou sont passés les produits OpenSource ???).
 Enfin voila c&amp;rsquo;était une petite brève.</description>
     </item>
     
     <item>
       <title>Debian 4.0 Etch.</title>
-      <link>https://geojoy.me/post---copy/debian-40-etch/</link>
+      <link>http://geojoy.me/post---copy/debian-40-etch/</link>
       <pubDate>Fri, 01 Jun 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/debian-40-etch/</guid>
+      <guid>http://geojoy.me/post---copy/debian-40-etch/</guid>
       <description>Après un crash système de mon serveur, installé sous OpenSuSE 10.2, j&amp;rsquo;ai décidé de redonné une chance à Debian, qui faut quand même l&amp;rsquo;avouer et LA distribution adaptée pour les installs type serveur. J&amp;rsquo;ai essayé Ubuntu, je trouve inadapté, OpenSuSE, un peu trop orienté desktop (même critique pour Ubuntu d&amp;rsquo;ailleurs), Gentoo, (dommage ma machine est trop faible pour la compilation, mais j&amp;rsquo;admet avec attends des records de stabilité, plus de 5 Mois sans reboot, ni crash !</description>
     </item>
     
     <item>
       <title>2/3 G33k, ouf ....</title>
-      <link>https://geojoy.me/post---copy/23-g33k-ouf/</link>
+      <link>http://geojoy.me/post---copy/23-g33k-ouf/</link>
       <pubDate>Tue, 29 May 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/23-g33k-ouf/</guid>
+      <guid>http://geojoy.me/post---copy/23-g33k-ouf/</guid>
       <description>69% GeekMingle2 - Free Online Dating
 Ouf je suis pas complètement, j&amp;rsquo;avais peur &amp;hellip;</description>
     </item>
     
     <item>
       <title>Solution à l&#39;ecran noir à l&#39;installation de XP.</title>
-      <link>https://geojoy.me/post---copy/solution-a-lecran-noir-a-linstallation-de-xp/</link>
+      <link>http://geojoy.me/post---copy/solution-a-lecran-noir-a-linstallation-de-xp/</link>
       <pubDate>Fri, 20 Apr 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/solution-a-lecran-noir-a-linstallation-de-xp/</guid>
+      <guid>http://geojoy.me/post---copy/solution-a-lecran-noir-a-linstallation-de-xp/</guid>
       <description>Voila ça fait deux ans, que je cherche pourquoi l&amp;rsquo;installation plante après le message Inspection de la configuration matériel et bien je viens de trouver en trainant sur un forum. L&amp;rsquo;installation de MS Windows XP ne supporte pas le faite de trouver une partition inconnue (dans mon cas ext3fs /boot), il faut lui mettre un partition qu&amp;rsquo;il sait lire ! Voila c&amp;rsquo;était tout simple, mais tellement stupide que je n&amp;rsquo;y avais jamais pensé.</description>
     </item>
     
     <item>
       <title>Quelques trucs sous Linux ....</title>
-      <link>https://geojoy.me/post---copy/quelques-trucs-sous-linux/</link>
+      <link>http://geojoy.me/post---copy/quelques-trucs-sous-linux/</link>
       <pubDate>Sun, 04 Mar 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/quelques-trucs-sous-linux/</guid>
+      <guid>http://geojoy.me/post---copy/quelques-trucs-sous-linux/</guid>
       <description>Voici quelques utilitaires que j&amp;rsquo;utilise sous Linux :
  KoolDock : simule le dock de OSX, fonctionne très bien, peu gourmand en ressources.   Katapult : augmente l&amp;rsquo;accessibilté du menu en ajouter une recherche indexée pour le lancement de vos programmes, et autres documents.   Yakuake : Ajout un emulateur de terminel accessible à tous moments par la touche F12 (configurable). J&amp;rsquo;adore !!!!  </description>
     </item>
     
     <item>
       <title>Il existe moins bien mais c&#39;est plus cher :)</title>
-      <link>https://geojoy.me/post---copy/il-existe-moins-bien-mais-cest-plus-cher/</link>
+      <link>http://geojoy.me/post---copy/il-existe-moins-bien-mais-cest-plus-cher/</link>
       <pubDate>Tue, 02 Jan 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/il-existe-moins-bien-mais-cest-plus-cher/</guid>
+      <guid>http://geojoy.me/post---copy/il-existe-moins-bien-mais-cest-plus-cher/</guid>
       <description>Résolution 2007 n°1 : ça y est c&amp;rsquo;est fait ! Je suis passé complètement sous Linux, fini Windows, pourquoi ? Après le test de Vista ! J&amp;rsquo;aime bien ce système cependant, je le trouve vraiment chiant à l&amp;rsquo;utilisation quotidienne. J&amp;rsquo;ai donc choisi le &amp;ldquo;vista killer&amp;rdquo; OpenSUSE 10.2 comme système alternatif.
 Parce que y en a marre de payer pour installer, payer pour utiliser, payer pour planter !
 &amp;ldquo;Software is like sex better when it&amp;rsquo;s free&amp;rdquo; (L.</description>
@@ -271,39 +271,39 @@ Parce que y en a marre de payer pour installer, payer pour utiliser, payer pour 
     
     <item>
       <title>Basshunter - DotA</title>
-      <link>https://geojoy.me/post---copy/basshunter-dota/</link>
+      <link>http://geojoy.me/post---copy/basshunter-dota/</link>
       <pubDate>Fri, 22 Sep 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/basshunter-dota/</guid>
+      <guid>http://geojoy.me/post---copy/basshunter-dota/</guid>
       <description>Lancer le clip</description>
     </item>
     
     <item>
       <title>Oblivion J-4</title>
-      <link>https://geojoy.me/post---copy/oblivion-j-4/</link>
+      <link>http://geojoy.me/post---copy/oblivion-j-4/</link>
       <pubDate>Sun, 19 Mar 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/oblivion-j-4/</guid>
+      <guid>http://geojoy.me/post---copy/oblivion-j-4/</guid>
       <description>Ah ahahahahahahahahahahahahah Pas bien en pleine période de partiels, mode trogloditte bientot !!!
 Vidéos</description>
     </item>
     
     <item>
       <title>BiteFight - Lycans vs Vampire</title>
-      <link>https://geojoy.me/post---copy/bitefight-lycans-vs-vampire/</link>
+      <link>http://geojoy.me/post---copy/bitefight-lycans-vs-vampire/</link>
       <pubDate>Sun, 26 Feb 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/bitefight-lycans-vs-vampire/</guid>
+      <guid>http://geojoy.me/post---copy/bitefight-lycans-vs-vampire/</guid>
       <description>Par les créateurs du jeu Ogame BiteFight. Un nouveau jeu où vous devez choisir votre camps Vampire ou Loup Garou, et partir en quête de sang ou chair fraiche.
 http://s2.bitefight.fr/c.php?uid=33362</description>
     </item>
     
     <item>
       <title>RumbleBox Tournament Edition</title>
-      <link>https://geojoy.me/post---copy/rumblebox-tournament-edition/</link>
+      <link>http://geojoy.me/post---copy/rumblebox-tournament-edition/</link>
       <pubDate>Fri, 17 Feb 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/rumblebox-tournament-edition/</guid>
+      <guid>http://geojoy.me/post---copy/rumblebox-tournament-edition/</guid>
       <description>Un jeu trop trop bizarre, mais trop bien. Il rentre dans le style de Darwinia (pour ceux qui connaissent !!!).
 Article sur l&amp;rsquo;excellent clubic
 Site officiel</description>
@@ -311,47 +311,47 @@ Site officiel</description>
     
     <item>
       <title>Un site casse tête ...</title>
-      <link>https://geojoy.me/post---copy/un-site-casse-tete/</link>
+      <link>http://geojoy.me/post---copy/un-site-casse-tete/</link>
       <pubDate>Wed, 30 Nov 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/un-site-casse-tete/</guid>
+      <guid>http://geojoy.me/post---copy/un-site-casse-tete/</guid>
       <description>Amateur de challenge impossible, bien là j&amp;rsquo;ai l&amp;rsquo;impossible de l&amp;rsquo;incroyable de l&amp;rsquo;énorme. Au jour du post, je suis level 13, bonne prise de tête lol http://www.ouverturefacile.com</description>
     </item>
     
     <item>
       <title>Trop fort, le steak hashé ...</title>
-      <link>https://geojoy.me/post---copy/trop-fort-le-steak-hashe/</link>
+      <link>http://geojoy.me/post---copy/trop-fort-le-steak-hashe/</link>
       <pubDate>Mon, 03 Oct 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/trop-fort-le-steak-hashe/</guid>
+      <guid>http://geojoy.me/post---copy/trop-fort-le-steak-hashe/</guid>
       <description>Blague de geek !!!</description>
     </item>
     
     <item>
       <title>MLdonkey World</title>
-      <link>https://geojoy.me/post---copy/mldonkey-world/</link>
+      <link>http://geojoy.me/post---copy/mldonkey-world/</link>
       <pubDate>Sun, 28 Aug 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/mldonkey-world/</guid>
+      <guid>http://geojoy.me/post---copy/mldonkey-world/</guid>
       <description>MLdonkey World
 Je viens de découvrir un programme génial, fini le : &amp;ldquo;J&amp;rsquo;aimerais bien avoir le core d&amp;rsquo;emule en service et le gui à part&amp;rdquo; . Bien ça existe, et c&amp;rsquo;est (encore) un produit libre (et gratuit biensûr), ce programme est composé de deux parties un Core (le daemon : coeur du système de téléchargement), et d&amp;rsquo;un GUI qui peut être n&amp;rsquo;importe quoi tout en sachant qu&amp;rsquo;il y a déja une interface web et un serveur telnet.</description>
     </item>
     
     <item>
       <title>Toujours pas de nouvelles de LDLC !</title>
-      <link>https://geojoy.me/post---copy/toujours-pas-de-nouvelles-de-ldlc/</link>
+      <link>http://geojoy.me/post---copy/toujours-pas-de-nouvelles-de-ldlc/</link>
       <pubDate>Sat, 13 Aug 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/toujours-pas-de-nouvelles-de-ldlc/</guid>
+      <guid>http://geojoy.me/post---copy/toujours-pas-de-nouvelles-de-ldlc/</guid>
       <description>Je veux mes cartes graaaaphiiiiiiiiiiiiiqueeeeeeeeeeeeees !</description>
     </item>
     
     <item>
       <title>Un clavier pour les programmeurs !</title>
-      <link>https://geojoy.me/post---copy/un-clavier-pour-les-programmeurs/</link>
+      <link>http://geojoy.me/post---copy/un-clavier-pour-les-programmeurs/</link>
       <pubDate>Thu, 11 Aug 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/un-clavier-pour-les-programmeurs/</guid>
+      <guid>http://geojoy.me/post---copy/un-clavier-pour-les-programmeurs/</guid>
       <description></description>
     </item>
     

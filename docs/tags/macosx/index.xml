@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Macosx on Geo&#39;z Blog</title>
-    <link>https://geojoy.me/tags/macosx/</link>
+    <link>http://geojoy.me/tags/macosx/</link>
     <description>Recent content in Macosx on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 03 Apr 2011 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://geojoy.me/tags/macosx/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://geojoy.me/tags/macosx/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Minecraft : Compiler Mineserver sous Linux/MacOSX</title>
-      <link>https://geojoy.me/post---copy/minecraft-compiler-mineserver-sous-linuxmacosx/</link>
+      <link>http://geojoy.me/post---copy/minecraft-compiler-mineserver-sous-linuxmacosx/</link>
       <pubDate>Sun, 03 Apr 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/minecraft-compiler-mineserver-sous-linuxmacosx/</guid>
+      <guid>http://geojoy.me/post---copy/minecraft-compiler-mineserver-sous-linuxmacosx/</guid>
       <description>Suite au précédent article, concernant libnoise, je me suis penché sur la compilation du projet sous MacOSX. Cependant même problème, le support est incomplet à la compilation.
 Il suffit d&amp;rsquo;ajouter les flags au compilateur dans les deux fichiers CMakeLists.txt du projet libnoise et mineserver.
 IF(APPLE) set(CMAKE_CXX_FLAGS &amp;#34;-W -Wall -Wno-unused -pedantic&amp;#34;) set(CMAKE_CXX_FLAGS_DEBUG &amp;#34;-DDEBUG -g&amp;#34;) set(CMAKE_CXX_FLAGS_RELEASE &amp;#34;-O3 -fomit-frame-pointer -fPIC -DNDEBUG&amp;#34;)ENDIF() Puis tout recompiler :
@@ -25,10 +25,10 @@ IF(APPLE) set(CMAKE_CXX_FLAGS &amp;#34;-W -Wall -Wno-unused -pedantic&amp;#34;) 
     
     <item>
       <title>Concours VODEO iPad, j&#39;en veux un !</title>
-      <link>https://geojoy.me/post---copy/concours-vodeo-ipad-jen-veux-un/</link>
+      <link>http://geojoy.me/post---copy/concours-vodeo-ipad-jen-veux-un/</link>
       <pubDate>Wed, 14 Apr 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/concours-vodeo-ipad-jen-veux-un/</guid>
+      <guid>http://geojoy.me/post---copy/concours-vodeo-ipad-jen-veux-un/</guid>
       <description>Voici un lien vers la page du concours, bonne chance aux participants.</description>
     </item>
     

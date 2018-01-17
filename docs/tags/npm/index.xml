@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Npm on Geo&#39;z Blog</title>
-    <link>https://geojoy.me/tags/npm/</link>
+    <link>http://geojoy.me/tags/npm/</link>
     <description>Recent content in Npm on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 20 Mar 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://geojoy.me/tags/npm/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://geojoy.me/tags/npm/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>NPM / YARN sans sudo</title>
-      <link>https://geojoy.me/post---copy/npm-yarn-sans-sudo/</link>
+      <link>http://geojoy.me/post---copy/npm-yarn-sans-sudo/</link>
       <pubDate>Mon, 20 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/npm-yarn-sans-sudo/</guid>
+      <guid>http://geojoy.me/post---copy/npm-yarn-sans-sudo/</guid>
       <description>NPM pour Node Package Manager est un gestionnaire de dépendances de NodeJS, puisqu&amp;rsquo;aujourd&amp;rsquo;hui il est existe plusieurs (notamment YARN).
 NPM $ npm config set prefix $HOME/.npmroot Cette commande va modifier votre fichier de configuration ~/.npmrc.
 Ajoutant la directive définissant le répertoire concerné par les installations globales -g.

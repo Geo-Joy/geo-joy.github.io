@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Release on Geo&#39;z Blog</title>
-    <link>https://geojoy.me/tags/release/</link>
+    <link>http://geojoy.me/tags/release/</link>
     <description>Recent content in Release on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 06 Nov 2008 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://geojoy.me/tags/release/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://geojoy.me/tags/release/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>En route vers OpenSUSE 11.1</title>
-      <link>https://geojoy.me/post---copy/en-route-vers-opensuse-111/</link>
+      <link>http://geojoy.me/post---copy/en-route-vers-opensuse-111/</link>
       <pubDate>Thu, 06 Nov 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/en-route-vers-opensuse-111/</guid>
+      <guid>http://geojoy.me/post---copy/en-route-vers-opensuse-111/</guid>
       <description>openSUSE 11.1 est la prochaine version qui incorporera de nouvelles fonctionnalités issues de la communauté ainsi que des développements internes. Elle sera disponible pour les plateformes x86, x86-64 et PPC.
 Les principaux travaux qui seront effectués concernent:
   GNOME 2.24 KDE: KDE 4.1.1 (avec optionnellement KDE 3.5.10) OpenOffice.org 3.0 Amélioration continue du système de gestion des paquets Noyau Linux 2.6.27 (ou plus récent)  Voila ne reste plus qu&amp;rsquo;a attendre ^^.</description>
@@ -24,10 +24,10 @@ Les principaux travaux qui seront effectués concernent:
     
     <item>
       <title>KDE4 Toulouse Release Party : J - 15</title>
-      <link>https://geojoy.me/post---copy/kde4-toulouse-release-party-j-15/</link>
+      <link>http://geojoy.me/post---copy/kde4-toulouse-release-party-j-15/</link>
       <pubDate>Fri, 11 Jan 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/kde4-toulouse-release-party-j-15/</guid>
+      <guid>http://geojoy.me/post---copy/kde4-toulouse-release-party-j-15/</guid>
       <description>A l&amp;rsquo;occasion de la sortie de KDE4, est organisée une &amp;ldquo;Release Party&amp;rdquo; dans les locaux de l&amp;rsquo;association Toulibre (Centre culturel de Bellegarde), les vendredi 25 et samedi 26 janvier à Toulouse.
 Venez nombreux !
 Plus d&amp;rsquo;informations par ici Le programme c&amp;rsquo;est ici</description>

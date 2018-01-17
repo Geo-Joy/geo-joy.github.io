@@ -1,4 +1,4 @@
-baseurl = "https://geojoy.me"
+baseurl = "http://geojoy.me"
 publishDir = "docs"
 languageCode = "en-us"
 title = "Geo'z Blog"
@@ -28,8 +28,8 @@ SectionPagesMenu = "Main"
   cover = "https://geojoy.me/images/cover.jpg"
 
   # Google analytics
-  googleAnalyticsUserID = "UA-8114245-4"
-  domainVerification = "fc173d84e3a4de948ed4bda2908afd3e"
+  googleAnalyticsUserID = "UA-112614749-1"
+  domainVerification = "58lHJFznHgioHOIv2NvLfobc8XEUUZSKm016uFFO4vE"
   disqus = "geojoy-me"
 
   accent = "green"

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Life on Geo&#39;z Blog</title>
-    <link>https://geojoy.me/tags/life/</link>
+    <link>http://geojoy.me/tags/life/</link>
     <description>Recent content in Life on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 03 Jan 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://geojoy.me/tags/life/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://geojoy.me/tags/life/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Rétrospective 2015</title>
-      <link>https://geojoy.me/post---copy/retrospective-2015/</link>
+      <link>http://geojoy.me/post---copy/retrospective-2015/</link>
       <pubDate>Sun, 03 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/retrospective-2015/</guid>
+      <guid>http://geojoy.me/post---copy/retrospective-2015/</guid>
       <description>Bonne année à toutes et à tous !
 2015 a été plutôt riche comme année, sur le plan professionnel et personnel. Afin de repartir sur une nouvelle base, j&amp;rsquo;ai changé le thème de mon blog plus orienté &amp;ldquo;magazine&amp;rdquo;. Il est un peu plus lourd que l&amp;rsquo;ancien crisp, mais il est plus agréable à lire.
 J&amp;rsquo;ai ouvert le dépot du thème Ghost porté sur Hugo Bleak.
@@ -25,79 +25,79 @@ Mes projets Concrètement pour moi, c&amp;rsquo;est l&amp;rsquo;année du Go et 
     
     <item>
       <title>Deux ans sans Java et ça va !</title>
-      <link>https://geojoy.me/post---copy/deux-ans-sans-java-et-ca-va/</link>
+      <link>http://geojoy.me/post---copy/deux-ans-sans-java-et-ca-va/</link>
       <pubDate>Wed, 20 May 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/deux-ans-sans-java-et-ca-va/</guid>
+      <guid>http://geojoy.me/post---copy/deux-ans-sans-java-et-ca-va/</guid>
       <description>J&amp;rsquo;ai quitté le monde de l&amp;rsquo;édition logiciel depuis bientôt 2 ans, pour retourner dans le domaine de la sécurité. J&amp;rsquo;occupe aujourd&amp;rsquo;hui un poste d&amp;rsquo;architecte technique au sein d&amp;rsquo;une équipe d&amp;rsquo;ingénieur sécurité divisés en deux camps : les offenseurs, et les défenseurs. Mon rôle est de fournir le plus rapidement possible des solutions aux deux &amp;ldquo;camps&amp;rdquo; pour attendre leurs objectifs.
 Au cours de ces 2 années, j&amp;rsquo;ai dû concevoir et réaliser de nombreux projets orientés sécurité : que ce soit de l&amp;rsquo;analyse de logs, à la réalisation d&amp;rsquo;une boîte blanche, en passant par du machine learning pour de la détection de comportements suspicieux.</description>
     </item>
     
     <item>
       <title>Désolé mon blog, je t&#39;ai laissé à l&#39;abandon...</title>
-      <link>https://geojoy.me/post---copy/desole-mon-blog-je-tai-laisse-a-labandon/</link>
+      <link>http://geojoy.me/post---copy/desole-mon-blog-je-tai-laisse-a-labandon/</link>
       <pubDate>Thu, 15 Apr 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/desole-mon-blog-je-tai-laisse-a-labandon/</guid>
+      <guid>http://geojoy.me/post---copy/desole-mon-blog-je-tai-laisse-a-labandon/</guid>
       <description>Et oui, déjà plus de 6 mois que je n&amp;rsquo;ai rien posté. Pourquoi ? Un gros manque de motivation, beaucoup de boulot, pas de mal de choses ont changés aussi pendant ce temps (changement de boite, de métier, déménagement de DNS, etc.).
 Comme je viens de le dire, oui j&amp;rsquo;ai quitté mon activité dans la Sécurité, pour me rediriger vers ma veine principale, l&amp;rsquo;ingénierie du logiciel. Pourquoi ce changement ? Et bien c&amp;rsquo;est difficile à expliquer.</description>
     </item>
     
     <item>
       <title>JATN</title>
-      <link>https://geojoy.me/post---copy/jatn/</link>
+      <link>http://geojoy.me/post---copy/jatn/</link>
       <pubDate>Sat, 31 May 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/jatn/</guid>
+      <guid>http://geojoy.me/post---copy/jatn/</guid>
       <description>Je suis en fin d&amp;rsquo;études, et qui dit fin d&amp;rsquo;études dit début d&amp;rsquo;une autre la vie active. Il est vrai que cette année a été très lourde tant au niveau psychologique (fatigue intellectuelle), que physique avec le rythme des cours, mêlé au rythme du stage (2jrs de cours + 3 jrs d&amp;rsquo;entreprise).
 Avec une forte impression d&amp;rsquo;apprendre un métier différent de celui qu&amp;rsquo;on pratique, mais bon je m&amp;rsquo;en sors pas mal (je pense !</description>
     </item>
     
     <item>
       <title>Petite cure pour mon blog.</title>
-      <link>https://geojoy.me/post---copy/petite-cure-pour-mon-blog/</link>
+      <link>http://geojoy.me/post---copy/petite-cure-pour-mon-blog/</link>
       <pubDate>Mon, 12 May 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/petite-cure-pour-mon-blog/</guid>
+      <guid>http://geojoy.me/post---copy/petite-cure-pour-mon-blog/</guid>
       <description>Voila j&amp;rsquo;ai presque terminé :
  Un nouveau thème, enfin un nouveau squelette (Silver-Light) avec l&amp;rsquo;ancienne peau, parce que j&amp;rsquo;aime bien la palette de couleur. (UtomBox 4u) Du nettoyage dans les plugins Du nettoyage dans les javascripts chargés (JQuery était téléchargé 3 fois lol car 3 versions différentes) Un design plus clair, moins brouillon (enfin je crois ^^)  Allé bonne journée à tous.</description>
     </item>
     
     <item>
       <title>Bonne Année 2008</title>
-      <link>https://geojoy.me/post---copy/bonne-annee-2008/</link>
+      <link>http://geojoy.me/post---copy/bonne-annee-2008/</link>
       <pubDate>Tue, 01 Jan 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/bonne-annee-2008/</guid>
+      <guid>http://geojoy.me/post---copy/bonne-annee-2008/</guid>
       <description>Bonne année, bonne santé (ça commence mal pour moi ^^), pleins de sous dans le porte monnaie.</description>
     </item>
     
     <item>
       <title>Attention, je me mets au Roller ....</title>
-      <link>https://geojoy.me/post---copy/attention-je-me-mets-au-roller/</link>
+      <link>http://geojoy.me/post---copy/attention-je-me-mets-au-roller/</link>
       <pubDate>Mon, 30 Jul 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/attention-je-me-mets-au-roller/</guid>
+      <guid>http://geojoy.me/post---copy/attention-je-me-mets-au-roller/</guid>
       <description>Bon voila tout est dans le titre, puisqu&amp;rsquo;il y a des gens &amp;ldquo;sympathiques&amp;rdquo; qui n&amp;rsquo;ont qu&amp;rsquo;objectifs de vous faire chier dans la vie, en volant le fruit du travail, ou les cadeaux des amis, comme un vélo par exemple, j&amp;rsquo;ai décidé d&amp;rsquo;apprendre à faire du roller pour ne pas avoir à laisser mon transport dans un local qui ressemble plus à un supermarché ouvert tous les Jeudi &amp;hellip; .
 Franchement je t&amp;rsquo;attrape, tu vas digérer le vélo avec la selle que je te réserve !</description>
     </item>
     
     <item>
       <title>Statistiques visiteurs</title>
-      <link>https://geojoy.me/post---copy/statistiques-visiteurs/</link>
+      <link>http://geojoy.me/post---copy/statistiques-visiteurs/</link>
       <pubDate>Tue, 17 Apr 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/statistiques-visiteurs/</guid>
+      <guid>http://geojoy.me/post---copy/statistiques-visiteurs/</guid>
       <description>Voici la carte de provenance de mes visiteurs :
 héhé ervin, je t&amp;rsquo;ai vu venir sur mon site depuis Oslo ^^.</description>
     </item>
     
     <item>
       <title>ZeniTHaR&#39;z PhoRhum</title>
-      <link>https://geojoy.me/post---copy/zenitharz-phorhum/</link>
+      <link>http://geojoy.me/post---copy/zenitharz-phorhum/</link>
       <pubDate>Sun, 28 Aug 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/zenitharz-phorhum/</guid>
+      <guid>http://geojoy.me/post---copy/zenitharz-phorhum/</guid>
       <description>ZeniTHaR&amp;rsquo;z PhoRhum
 Voila mon nouveau forum pour HermS et autres biensur &amp;hellip;.
 PS : le script est PunBB très sympa et léger et pleins de plugins partout et en plus il marche sur Free et &amp;hellip; à tester.</description>

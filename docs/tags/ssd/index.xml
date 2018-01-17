@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ssd on Geo&#39;z Blog</title>
-    <link>https://geojoy.me/tags/ssd/</link>
+    <link>http://geojoy.me/tags/ssd/</link>
     <description>Recent content in Ssd on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 24 Jan 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://geojoy.me/tags/ssd/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://geojoy.me/tags/ssd/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Archlinux sur un SSD avec LUKS / LVM2 / BTRFS</title>
-      <link>https://geojoy.me/post---copy/archlinux-ssd-luks-lvm-btrfs/</link>
+      <link>http://geojoy.me/post---copy/archlinux-ssd-luks-lvm-btrfs/</link>
       <pubDate>Sun, 24 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/archlinux-ssd-luks-lvm-btrfs/</guid>
+      <guid>http://geojoy.me/post---copy/archlinux-ssd-luks-lvm-btrfs/</guid>
       <description>J&amp;rsquo;utilise Archlinux depuis plus de 3 ans maintenant comme système d&amp;rsquo;exploitation principal au boulot. Le but de cet article est de créer une configuration qui fonctionne ! Je vais essayer d&amp;rsquo;expliquer toutes les étapes et les configurations.
 Préparation de l&amp;rsquo;image L&amp;rsquo;image d&amp;rsquo;installation est une image ISO, qui peut être simplement gravée sur un CD, ou sur une clé USB.
 La procédure est documentée ici.

@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog on Geo&#39;z Blog</title>
-    <link>https://geojoy.me/tags/blog/</link>
+    <link>http://geojoy.me/tags/blog/</link>
     <description>Recent content in Blog on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 12 May 2008 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://geojoy.me/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://geojoy.me/tags/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Petite cure pour mon blog.</title>
-      <link>https://geojoy.me/post---copy/petite-cure-pour-mon-blog/</link>
+      <link>http://geojoy.me/post---copy/petite-cure-pour-mon-blog/</link>
       <pubDate>Mon, 12 May 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/petite-cure-pour-mon-blog/</guid>
+      <guid>http://geojoy.me/post---copy/petite-cure-pour-mon-blog/</guid>
       <description>Voila j&amp;rsquo;ai presque terminé :
  Un nouveau thème, enfin un nouveau squelette (Silver-Light) avec l&amp;rsquo;ancienne peau, parce que j&amp;rsquo;aime bien la palette de couleur. (UtomBox 4u) Du nettoyage dans les plugins Du nettoyage dans les javascripts chargés (JQuery était téléchargé 3 fois lol car 3 versions différentes) Un design plus clair, moins brouillon (enfin je crois ^^)  Allé bonne journée à tous.</description>
     </item>
     
     <item>
       <title>Du nouveau sur le blog ....</title>
-      <link>https://geojoy.me/post---copy/du-nouveau-sur-le-blog/</link>
+      <link>http://geojoy.me/post---copy/du-nouveau-sur-le-blog/</link>
       <pubDate>Sun, 28 Aug 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/du-nouveau-sur-le-blog/</guid>
+      <guid>http://geojoy.me/post---copy/du-nouveau-sur-le-blog/</guid>
       <description>Je viens d&amp;rsquo;ajouter quelques fonctionnalités aux blogs :
  Pagination des billets
  Affichage de fortune dans le blog (humour, bd, proverbes) Affichage des dates importantes avec GDay nouveau thème (Rouge Ciel 2.1) Support des gravatars Affichage des derniers commentaires.  </description>
@@ -34,10 +34,10 @@
     
     <item>
       <title>Et voilà, mon premier Blog !</title>
-      <link>https://geojoy.me/post---copy/et-voila-mon-premier-blog/</link>
+      <link>http://geojoy.me/post---copy/et-voila-mon-premier-blog/</link>
       <pubDate>Mon, 01 Aug 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/et-voila-mon-premier-blog/</guid>
+      <guid>http://geojoy.me/post---copy/et-voila-mon-premier-blog/</guid>
       <description>Voici mon premier Blog, installation super simple, upload un peu dur mais bon ça y est !</description>
     </item>
     

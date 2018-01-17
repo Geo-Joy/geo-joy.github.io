@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Code on Geo&#39;z Blog</title>
-    <link>https://geojoy.me/tags/code/</link>
+    <link>http://geojoy.me/tags/code/</link>
     <description>Recent content in Code on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 17 Sep 2013 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://geojoy.me/tags/code/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://geojoy.me/tags/code/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>OAuth 2.0, Authorization Code - Partie 2</title>
-      <link>https://geojoy.me/post---copy/oauth-20-authorization-code-part-2/</link>
+      <link>http://geojoy.me/post---copy/oauth-20-authorization-code-part-2/</link>
       <pubDate>Tue, 17 Sep 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/oauth-20-authorization-code-part-2/</guid>
+      <guid>http://geojoy.me/post---copy/oauth-20-authorization-code-part-2/</guid>
       <description>Previously on &amp;lsquo;OAuth 2.0&amp;rsquo;
 Le workflow d&amp;rsquo;autorisation par code (authorization_code) permet à un client (logiciel), d&amp;rsquo;obtenir un jeton d&amp;rsquo;accès à la ressource demandée en deux temps.
 C&amp;rsquo;est le dispositif le plus utilisé dans les applications web. Vous avez certainement déjà utilisé ce workflow lors d&amp;rsquo;une authentification sur un site à l&amp;rsquo;aide Facebook par exemple.

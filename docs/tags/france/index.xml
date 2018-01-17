@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>France on Geo&#39;z Blog</title>
-    <link>https://geojoy.me/tags/france/</link>
+    <link>http://geojoy.me/tags/france/</link>
     <description>Recent content in France on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 13 Jul 2008 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://geojoy.me/tags/france/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://geojoy.me/tags/france/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Tour de france 2008</title>
-      <link>https://geojoy.me/post---copy/tour-de-france-2008/</link>
+      <link>http://geojoy.me/post---copy/tour-de-france-2008/</link>
       <pubDate>Sun, 13 Jul 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/tour-de-france-2008/</guid>
+      <guid>http://geojoy.me/post---copy/tour-de-france-2008/</guid>
       <description>Bonjour à tous, Aujourd&amp;rsquo;hui on va voir le tour de france à Saint-sulpice sur lèze.
 Bon ce post est surtout un test de geoPress ^^</description>
     </item>

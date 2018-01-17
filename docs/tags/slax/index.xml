@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Slax on Geo&#39;z Blog</title>
-    <link>https://geojoy.me/tags/slax/</link>
+    <link>http://geojoy.me/tags/slax/</link>
     <description>Recent content in Slax on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 13 Mar 2009 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://geojoy.me/tags/slax/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://geojoy.me/tags/slax/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>BackTrack 4 is unleashed ! Watch the dog !</title>
-      <link>https://geojoy.me/post---copy/backtrack-4-is-unleashed-watch-the-dog/</link>
+      <link>http://geojoy.me/post---copy/backtrack-4-is-unleashed-watch-the-dog/</link>
       <pubDate>Fri, 13 Mar 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/backtrack-4-is-unleashed-watch-the-dog/</guid>
+      <guid>http://geojoy.me/post---copy/backtrack-4-is-unleashed-watch-the-dog/</guid>
       <description>Halte aux paraskevidékatriaphobe ! Savez vous que BackTrack 4 est sortie ? Sinon je vous l&amp;rsquo;annonce !
 En plus du changement de version, il y a aussi un changement de distribution de base, avant BackTrack était une variante gonflée (comme vahiné) de Slax, qui était une version modulaire et portable (dans le sens USB) de Slackware.
 Elle est basée aujourd&amp;rsquo;hui sur une debian un peu modifiée, pour les audits de sécurité (intégration des modules d&amp;rsquo;injection 802.</description>

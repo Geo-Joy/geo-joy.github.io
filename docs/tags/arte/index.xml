@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Arte on Geo&#39;z Blog</title>
-    <link>https://geojoy.me/tags/arte/</link>
+    <link>http://geojoy.me/tags/arte/</link>
     <description>Recent content in Arte on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 26 Apr 2007 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://geojoy.me/tags/arte/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://geojoy.me/tags/arte/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Hmm ça commence à devenir intéressant ...</title>
-      <link>https://geojoy.me/post---copy/hmm-ca-commence-a-devenir-interessant/</link>
+      <link>http://geojoy.me/post---copy/hmm-ca-commence-a-devenir-interessant/</link>
       <pubDate>Thu, 26 Apr 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/hmm-ca-commence-a-devenir-interessant/</guid>
+      <guid>http://geojoy.me/post---copy/hmm-ca-commence-a-devenir-interessant/</guid>
       <description>Enfin, un peu d&amp;rsquo;action, je rentre dans le cadre d&amp;rsquo;un projet à grande échelle, fondé sur l&amp;rsquo;association de deux sociétés et d&amp;rsquo;une chaîne publique nationale. But de la manoeuvre créer une norme de sous-titre, enfin aidé à la validation de celle ci, faire les implémentations. Enfin un projet différents des autres &amp;hellip; pas des projets &amp;ldquo;spécial stagiaire&amp;rdquo; &amp;hellip; .
  OpenCube NInsight Arte  </description>
     </item>

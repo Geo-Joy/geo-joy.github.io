@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cmake on Geo&#39;z Blog</title>
-    <link>https://geojoy.me/tags/cmake/</link>
+    <link>http://geojoy.me/tags/cmake/</link>
     <description>Recent content in Cmake on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 03 Apr 2011 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://geojoy.me/tags/cmake/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://geojoy.me/tags/cmake/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Minecraft : Compiler Mineserver sous Linux/MacOSX</title>
-      <link>https://geojoy.me/post---copy/minecraft-compiler-mineserver-sous-linuxmacosx/</link>
+      <link>http://geojoy.me/post---copy/minecraft-compiler-mineserver-sous-linuxmacosx/</link>
       <pubDate>Sun, 03 Apr 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/minecraft-compiler-mineserver-sous-linuxmacosx/</guid>
+      <guid>http://geojoy.me/post---copy/minecraft-compiler-mineserver-sous-linuxmacosx/</guid>
       <description>Suite au précédent article, concernant libnoise, je me suis penché sur la compilation du projet sous MacOSX. Cependant même problème, le support est incomplet à la compilation.
 Il suffit d&amp;rsquo;ajouter les flags au compilateur dans les deux fichiers CMakeLists.txt du projet libnoise et mineserver.
 IF(APPLE) set(CMAKE_CXX_FLAGS &amp;#34;-W -Wall -Wno-unused -pedantic&amp;#34;) set(CMAKE_CXX_FLAGS_DEBUG &amp;#34;-DDEBUG -g&amp;#34;) set(CMAKE_CXX_FLAGS_RELEASE &amp;#34;-O3 -fomit-frame-pointer -fPIC -DNDEBUG&amp;#34;)ENDIF() Puis tout recompiler :
@@ -25,20 +25,20 @@ IF(APPLE) set(CMAKE_CXX_FLAGS &amp;#34;-W -Wall -Wno-unused -pedantic&amp;#34;) 
     
     <item>
       <title>MineCraft : Compiler la libnoise sous OpenSuSE, voir d&#39;autres ...</title>
-      <link>https://geojoy.me/post---copy/minecraft-compiler-la-libnoise-sous-opensuse-voir-dautres/</link>
+      <link>http://geojoy.me/post---copy/minecraft-compiler-la-libnoise-sous-opensuse-voir-dautres/</link>
       <pubDate>Sat, 02 Apr 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/minecraft-compiler-la-libnoise-sous-opensuse-voir-dautres/</guid>
+      <guid>http://geojoy.me/post---copy/minecraft-compiler-la-libnoise-sous-opensuse-voir-dautres/</guid>
       <description>Je suis en train de rechercher un serveur MineCraft en C++, tout googlement je suis tombé sur MineServer, seul petit bémol, il nécessite la librairie libnoise qui n&amp;rsquo;est pas disponible sour OpenSuSE et c&amp;rsquo;est une galère à compiler depuis les sources (make + libtool), j&amp;rsquo;ai commencé par mettre à jour libtool, puis bon, j&amp;rsquo;ai donc reécris le build-system avec CMake.
 Quand est-ce que les gens arrêterons d&amp;rsquo;utiliser make / autotools pour leur build &amp;hellip; surtout quand on fait du multiplateforme !</description>
     </item>
     
     <item>
       <title>Autotools to CMake</title>
-      <link>https://geojoy.me/post---copy/autotools-to-cmake/</link>
+      <link>http://geojoy.me/post---copy/autotools-to-cmake/</link>
       <pubDate>Fri, 24 Aug 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/autotools-to-cmake/</guid>
+      <guid>http://geojoy.me/post---copy/autotools-to-cmake/</guid>
       <description>I’ve made some changes and bug fixes in “gencmake” &amp;amp; “am2cmake” script, to convert automake files that use static libraries ‘.la’, and some code clean up.
 J&amp;rsquo;ai fais quelques changements et des corrections dans les scripts : “gencmake” &amp;amp; “am2cmake”, pour pouvoir convertir des fichiers Automake qui utilisent des librairies statiques &amp;lsquo;.la&amp;rsquo;, ainsi qu&amp;rsquo;un peu de nettoyage dans le code ^^</description>
     </item>

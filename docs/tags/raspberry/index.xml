@@ -2,40 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Raspberry on Geo&#39;z Blog</title>
-    <link>https://geojoy.me/tags/raspberry/</link>
+    <link>http://geojoy.me/tags/raspberry/</link>
     <description>Recent content in Raspberry on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 17 Jan 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://geojoy.me/tags/raspberry/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://geojoy.me/tags/raspberry/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Test1</title>
-      <link>https://geojoy.me/post/2018/01/17/test-description/</link>
+      <link>http://geojoy.me/post/2018/01/17/test-description/</link>
       <pubDate>Wed, 17 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post/2018/01/17/test-description/</guid>
+      <guid>http://geojoy.me/post/2018/01/17/test-description/</guid>
       <description>Hello! Welcome to my blog! Please come back some other time when I&amp;rsquo;ve written something worth yout time.</description>
     </item>
     
     <item>
       <title>Spotify your Mopidy</title>
-      <link>https://geojoy.me/post---copy/spotify-your-mopidy/</link>
+      <link>http://geojoy.me/post---copy/spotify-your-mopidy/</link>
       <pubDate>Mon, 12 Sep 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/spotify-your-mopidy/</guid>
+      <guid>http://geojoy.me/post---copy/spotify-your-mopidy/</guid>
       <description>Mopidy est un serveur de musique, il permet de lancer de la musique via un protocole de communication et d&amp;rsquo;une application cliente (Desktop, Mobile, etc.). La musique peut provenir d&amp;rsquo;un disque, d&amp;rsquo;un stream radio ou d&amp;rsquo;un flux cloud (Spotify, SoundCloud, Google Play Music).
 Vous pouvez par exemple l&amp;rsquo;utiliser sur un mini PC (RPI, ODROID, etc.) connecté à votre kit son domestique, pour diffuser de la musique sans avoir un ordinateur allumé.</description>
     </item>
     
     <item>
       <title>Souriez au Photobooth !</title>
-      <link>https://geojoy.me/post---copy/photobooth/</link>
+      <link>http://geojoy.me/post---copy/photobooth/</link>
       <pubDate>Sat, 11 Jun 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/photobooth/</guid>
+      <guid>http://geojoy.me/post---copy/photobooth/</guid>
       <description>Voici le code du photobooth que j&amp;rsquo;ai développé pour mon mariage. RaspiBooth
 Environnement  Raspberry Pi 3 (Archlinux arm7h) RPi Camera v2 (8MP) Imprimante photo (ie: Canon SELPHY CP910) Une tablette pour l&amp;rsquo;IHM  Principe Le raspberry PI héberge un point d&amp;rsquo;accès WiFi (Hostap), et un serveur Web (Flask).
 Le service Web possède deux opérations :
@@ -44,10 +44,10 @@ Le service Web possède deux opérations :
     
     <item>
       <title>Archlinux et Raspberry PI 3</title>
-      <link>https://geojoy.me/post---copy/archlinux-raspberry-pi/</link>
+      <link>http://geojoy.me/post---copy/archlinux-raspberry-pi/</link>
       <pubDate>Fri, 03 Jun 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/archlinux-raspberry-pi/</guid>
+      <guid>http://geojoy.me/post---copy/archlinux-raspberry-pi/</guid>
       <description>TL;DR =&amp;gt; Si vous voulez simplement récupérer l&amp;rsquo;image, c&amp;rsquo;est par ici (2016-06-01).
  Avant de commencer J&amp;rsquo;utilise Archlinux pour générer l&amp;rsquo;image pour mon RaspberryPI. Il faut commencer par installer ce qu&amp;rsquo;il manque :
 $&amp;gt; yaourt -S pv  pv : ajoute une barre de progression lors de l&amp;rsquo;utilisation via des pipes, trés util pour &amp;ldquo;voir&amp;rdquo; l&amp;rsquo;avancement d&amp;rsquo;un transfers de flux;  Construction de l&amp;rsquo;image Tout d&amp;rsquo;abord, allez récupérer l&amp;rsquo;archive contenant le système pour votre plateforme :</description>
@@ -55,10 +55,10 @@ $&amp;gt; yaourt -S pv  pv : ajoute une barre de progression lors de l&amp;rsquo
     
     <item>
       <title>Filtrer les serveurs de publicités avec Unbound</title>
-      <link>https://geojoy.me/post---copy/filtrer-serveurs-pubs-avec-unbound/</link>
+      <link>http://geojoy.me/post---copy/filtrer-serveurs-pubs-avec-unbound/</link>
       <pubDate>Sat, 22 Aug 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/filtrer-serveurs-pubs-avec-unbound/</guid>
+      <guid>http://geojoy.me/post---copy/filtrer-serveurs-pubs-avec-unbound/</guid>
       <description>Pour faire suite à l&amp;rsquo;installation d&amp;rsquo;Unbound sur votre réseau personnel, vous pouvez mettre à profit ce dispositif afin de pouvoir filtrer les requêtes de résolution DNS.
 Il faut une source de données (Yoyo) listant les serveurs de publicités connues, cette liste doit être tranformée pour être ajouté en résolution locale sur le serveur Unbound.
 Tous les serveurs de publicités vout être résolus en 127.0.0.1, ce qui empêchera l&amp;rsquo;accès à ces serveurs.</description>
@@ -66,10 +66,10 @@ Tous les serveurs de publicités vout être résolus en 127.0.0.1, ce qui empêc
     
     <item>
       <title>Installer un resolveur DNS sur son Raspberry PI</title>
-      <link>https://geojoy.me/post---copy/installer-resolveur-dns-raspberry-pi/</link>
+      <link>http://geojoy.me/post---copy/installer-resolveur-dns-raspberry-pi/</link>
       <pubDate>Tue, 11 Aug 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/installer-resolveur-dns-raspberry-pi/</guid>
+      <guid>http://geojoy.me/post---copy/installer-resolveur-dns-raspberry-pi/</guid>
       <description>Afin d&amp;rsquo;optimiser et de fiabiliser votre accès internet à la maison, je vous propose d&amp;rsquo;installer un resolveur DNS unbound comme relai à dnscrypt-proxy permettant de faire des requêtes DNS chiffrées (en attendant la généralisation de DNSSEC).
 Pour cela, vous aurez besoin :
  D&amp;rsquo;un raspberry pi (1 ou 2); Archlinux installé sur le raspberry; de temps.  DNSCrypt c&amp;rsquo;est quoi ? : DNSCrypt est un protocole qui tente de sécuriser le protocole DNS à l&amp;rsquo;aide de la librairie Sodium (NaCl), utilisée notamment dans le chiffrement et l&amp;rsquo;authentification pour ZMQ.</description>

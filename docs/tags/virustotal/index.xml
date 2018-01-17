@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Virustotal on Geo&#39;z Blog</title>
-    <link>https://geojoy.me/tags/virustotal/</link>
+    <link>http://geojoy.me/tags/virustotal/</link>
     <description>Recent content in Virustotal on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 15 Jan 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://geojoy.me/tags/virustotal/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://geojoy.me/tags/virustotal/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Utiliser Tyk comme proxy VirusTotal</title>
-      <link>https://geojoy.me/post---copy/tyk-proxy-virustotal/</link>
+      <link>http://geojoy.me/post---copy/tyk-proxy-virustotal/</link>
       <pubDate>Fri, 15 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/tyk-proxy-virustotal/</guid>
+      <guid>http://geojoy.me/post---copy/tyk-proxy-virustotal/</guid>
       <description>Tyk, serveur proxy API Tyk.io est un reverse-proxy permettant de contrôller / monitorer les accès aux API.
 Le serveur, écrit en golang, est OpenSource et gratuit, mais la documentation n&amp;rsquo;est pas très simple d&amp;rsquo;accès. Il existe un dashboard payant exploitant les données de traffic du reverse-proxy.
 Avec Tyk, vous pouvez simplement ajouter :

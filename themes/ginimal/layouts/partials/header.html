@@ -8,8 +8,8 @@
         <meta name="MobileOptimized" content="320" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <link rel="preload" href="/{{ .Site.BaseURL }}js/main.js" as="script" />
-        <link rel="preload" href="/{{ .Site.BaseURL }}css/main.css" as="style" />
+        <link rel="preload" href="{{ .Site.BaseURL }}/js/main.js" as="script" />
+        <link rel="preload" href="{{ .Site.BaseURL }}/css/main.css" as="style" />
 
         <title>{{ .Title }}</title>
         {{ .Hugo.Generator }}

@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Haxe on Geo&#39;z Blog</title>
-    <link>https://geojoy.me/tags/haxe/</link>
+    <link>http://geojoy.me/tags/haxe/</link>
     <description>Recent content in Haxe on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 22 Sep 2010 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://geojoy.me/tags/haxe/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://geojoy.me/tags/haxe/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Mon premier jeu en Flash avec Haxe</title>
-      <link>https://geojoy.me/post---copy/mon-premier-jeu-en-flash-avec-haxe/</link>
+      <link>http://geojoy.me/post---copy/mon-premier-jeu-en-flash-avec-haxe/</link>
       <pubDate>Wed, 22 Sep 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/mon-premier-jeu-en-flash-avec-haxe/</guid>
+      <guid>http://geojoy.me/post---copy/mon-premier-jeu-en-flash-avec-haxe/</guid>
       <description>Et voila ça c&amp;rsquo;est fait ^^. Mon premier jeu en Flash, j&amp;rsquo;ai utilisé un espèce de meta langage appelé Haxe permettant entre autre d&amp;rsquo;écrire une application et de la faire tourner sous plusieurs environnement C++ / SDL, C++ / iPhone, Flash, JS, etc. (M. Haxe une version Html5 ?)
 J&amp;rsquo;ai réalisé ce jeu après avoir vu sous forme de borne d&amp;rsquo;arcade à une fête foraine, j&amp;rsquo;ai donc eu l&amp;rsquo;idée de le cloner pour pouvoir m&amp;rsquo;entrainer ^^.</description>
     </item>
     
     <item>
       <title>Zog Zog Akita ! Baaaaston !</title>
-      <link>https://geojoy.me/post---copy/zog-zog-akita-baaaaston/</link>
+      <link>http://geojoy.me/post---copy/zog-zog-akita-baaaaston/</link>
       <pubDate>Tue, 05 Aug 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/zog-zog-akita-baaaaston/</guid>
+      <guid>http://geojoy.me/post---copy/zog-zog-akita-baaaaston/</guid>
       <description>Derrière ce titre au combien évocateur se cache biensur l&amp;rsquo;ogre et le barbare du donjon de naheulbeuk. Alors maintenant pourquoi citer ces oeuvres ?
 
 Pour appeler un jeu en ligne fait par Motion Twin : Kado kado, &amp;hellip;. véritable usine à jeu en flash, ils utilisent le framework Haxe permettant de faire rapidement des applications client / serveur en flash / javascript, &amp;hellip;

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ipsec on Geo&#39;z Blog</title>
-    <link>https://geojoy.me/tags/ipsec/</link>
+    <link>http://geojoy.me/tags/ipsec/</link>
     <description>Recent content in Ipsec on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 28 Mar 2008 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://geojoy.me/tags/ipsec/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://geojoy.me/tags/ipsec/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Mise en place d&#39;une plateforme d&#39;authentification sous Linux.</title>
-      <link>https://geojoy.me/post---copy/mise-en-place-dune-plateforme-dauthentification-opensource-sous-linux/</link>
+      <link>http://geojoy.me/post---copy/mise-en-place-dune-plateforme-dauthentification-opensource-sous-linux/</link>
       <pubDate>Fri, 28 Mar 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/mise-en-place-dune-plateforme-dauthentification-opensource-sous-linux/</guid>
+      <guid>http://geojoy.me/post---copy/mise-en-place-dune-plateforme-dauthentification-opensource-sous-linux/</guid>
       <description>Dans cette série d&amp;rsquo;articles je vais présenter l&amp;rsquo;architecture que j&amp;rsquo;ai mise en place pour la gestion des utilisateurs et des services mis à disposition. En bref, on abordera sur un plan technique : Samba 3 (serveur de fichiers compatible réseau microsoft), LDAP (annuaire des stockage des informations liées aux utilisateurs), Freeradius (serveur d&amp;rsquo;authentification réseau pour l&amp;rsquo;accès distant), OpenVPN (solution VPN SSL), StrongSWAN (solution VPN IPSec).
 Pré-requis : * Serveur sous Debian 4.</description>
     </item>

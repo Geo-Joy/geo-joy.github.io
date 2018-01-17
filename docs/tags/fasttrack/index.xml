@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Fasttrack on Geo&#39;z Blog</title>
-    <link>https://geojoy.me/tags/fasttrack/</link>
+    <link>http://geojoy.me/tags/fasttrack/</link>
     <description>Recent content in Fasttrack on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 30 Aug 2008 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://geojoy.me/tags/fasttrack/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://geojoy.me/tags/fasttrack/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>FastTrack / Metasploit</title>
-      <link>https://geojoy.me/post---copy/fasttrack-metasploit/</link>
+      <link>http://geojoy.me/post---copy/fasttrack-metasploit/</link>
       <pubDate>Sat, 30 Aug 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/fasttrack-metasploit/</guid>
+      <guid>http://geojoy.me/post---copy/fasttrack-metasploit/</guid>
       <description>Voici un outil plus qu&amp;rsquo;utile pour nos amis auditeurs, &amp;amp; pentesters. C&amp;rsquo;est un script d&amp;rsquo;automatisation d&amp;rsquo;audit de vulnérabilités et exploitation via metasploit.
 Pour ceux qui connaissent c&amp;rsquo;est une surcouche à autopwn, permettant de mettre à jour la base milw0rm d&amp;rsquo;exploits, mise à jour des versions des outils utilisés (nikto, w3af, metaspoit, &amp;hellip;), le tout présenté sous forme d&amp;rsquo;une interface Web, simple à utiliser ! (encore).
 Biensûr il faut être conscient des risques que l&amp;rsquo;on prends à l&amp;rsquo;utilisation de ces logiciels envers une tierce personne non informée.</description>

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tfidf on Geo&#39;z Blog</title>
-    <link>https://geojoy.me/tags/tfidf/</link>
+    <link>http://geojoy.me/tags/tfidf/</link>
     <description>Recent content in Tfidf on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 25 May 2014 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://geojoy.me/tags/tfidf/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://geojoy.me/tags/tfidf/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>De Docpad à Hugo</title>
-      <link>https://geojoy.me/post---copy/de-docpad-a-hugo/</link>
+      <link>http://geojoy.me/post---copy/de-docpad-a-hugo/</link>
       <pubDate>Sun, 25 May 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/de-docpad-a-hugo/</guid>
+      <guid>http://geojoy.me/post---copy/de-docpad-a-hugo/</guid>
       <description>Je sais ! Je migre encore de solution de génération de site static, mais bon ça s&amp;rsquo;appelle le progrès. Cette fois migration de Docpad vers Hugo, pour une raison simple : la performance.
 Avant j&amp;rsquo;avais Docpad, mais ça c&amp;rsquo;était avant ! Je suis passé :
  de Dotclear, à Wordpress, pour des raisons de lenteur de correctifs (notamment sécurité). de Wordpress à Jekyll, parce que Wordpress faisait beaucoup trop de choses, et devenait de plus en plus statique grace à W3Total Cache, et puis il fallait PHP &amp;hellip; Jekyll à Octopress, c&amp;rsquo;est la même famille, c&amp;rsquo;est un fork &amp;ldquo;on steroid&amp;rdquo; du premier, mais trop lourd (à mon gout) pour le déploiement.</description>

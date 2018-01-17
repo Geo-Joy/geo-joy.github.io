@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Utf 8 on Geo&#39;z Blog</title>
-    <link>https://geojoy.me/tags/utf-8/</link>
+    <link>http://geojoy.me/tags/utf-8/</link>
     <description>Recent content in Utf 8 on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 02 Aug 2010 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://geojoy.me/tags/utf-8/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://geojoy.me/tags/utf-8/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Caractères carrés avec les applications 32bits</title>
-      <link>https://geojoy.me/post---copy/caracteres-carres-avec-les-applications-32bits/</link>
+      <link>http://geojoy.me/post---copy/caracteres-carres-avec-les-applications-32bits/</link>
       <pubDate>Mon, 02 Aug 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/caracteres-carres-avec-les-applications-32bits/</guid>
+      <guid>http://geojoy.me/post---copy/caracteres-carres-avec-les-applications-32bits/</guid>
       <description>Vous avez certainement déja vu ça, dans la configuration suivante : * Système Linux 64 bits (Gentoo 2008.0 dans mon cas) * Applications 32 Bits (Firefox static, Acrobat Reader, etc &amp;hellip;)
 Un problème d&amp;rsquo;affichage des caractères pouvant être mis en évidence par une sortie en ligne de commande suivante :
 (firefox-bin:19337): Pango-CRITICAL **: No modules found: No builtin or dynamically loaded modules were found. PangoFc will not work correctly. This probably means there was an error in the creation of: &amp;#39;/etc/pango/pango.</description>

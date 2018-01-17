@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Qemu on Geo&#39;z Blog</title>
-    <link>https://geojoy.me/tags/qemu/</link>
+    <link>http://geojoy.me/tags/qemu/</link>
     <description>Recent content in Qemu on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 13 Mar 2009 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://geojoy.me/tags/qemu/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://geojoy.me/tags/qemu/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>ZeroWine &amp; les malwares</title>
-      <link>https://geojoy.me/post---copy/zerowine-les-malwares/</link>
+      <link>http://geojoy.me/post---copy/zerowine-les-malwares/</link>
       <pubDate>Fri, 13 Mar 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/zerowine-les-malwares/</guid>
+      <guid>http://geojoy.me/post---copy/zerowine-les-malwares/</guid>
       <description>Et bien non ce n&amp;rsquo;est pas un nouvel épisode de Martine. C&amp;rsquo;est une distribution linux configurée pour l&amp;rsquo;analyse de malware Windows.
 Elle s&amp;rsquo;exécute au travers de QEmu. Il suffit delancer la machine virtuelle, et de se connecter via le navigateur. Un formulaire vous propose d&amp;rsquo;uploader votre malware. Il va l&amp;rsquo;exécuter avec Wine (Windows Emulator) pour en ressortir la trace d&amp;rsquo;execution.
 Vous pourrez par la suite effectuer un analyse forensic du malware sur votre Linux.</description>

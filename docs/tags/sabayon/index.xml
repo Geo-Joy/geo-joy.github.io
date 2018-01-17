@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sabayon on Geo&#39;z Blog</title>
-    <link>https://geojoy.me/tags/sabayon/</link>
+    <link>http://geojoy.me/tags/sabayon/</link>
     <description>Recent content in Sabayon on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 24 Apr 2008 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://geojoy.me/tags/sabayon/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://geojoy.me/tags/sabayon/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Petit &#34;héron robuste&#34; qui s&#39;envole ...</title>
-      <link>https://geojoy.me/post---copy/petit-heron-robuste-qui-senvole/</link>
+      <link>http://geojoy.me/post---copy/petit-heron-robuste-qui-senvole/</link>
       <pubDate>Thu, 24 Apr 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/petit-heron-robuste-qui-senvole/</guid>
+      <guid>http://geojoy.me/post---copy/petit-heron-robuste-qui-senvole/</guid>
       <description>Je suis en pleine phase de tests de systèmes 64bits, comme toutes mes machines le sont matériellement parlant, je me suis mis en tête d&amp;rsquo;installer un système 64bits, pour voir ^^.
 Gentoo 2007.0 Amd64 J&amp;rsquo;ai donc commencé &amp;ldquo;naturellement&amp;rdquo; par le plus dur : Gentoo 2007.0 Amd64, bon c&amp;rsquo;est bien sympa mais pour un &amp;ldquo;desktop&amp;rdquo; c&amp;rsquo;est pas génial de compiler tout le temps, donc j&amp;rsquo;ai cherché une alternative je suis tombé sur,</description>
     </item>

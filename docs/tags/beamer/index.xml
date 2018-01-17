@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Beamer on Geo&#39;z Blog</title>
-    <link>https://geojoy.me/tags/beamer/</link>
+    <link>http://geojoy.me/tags/beamer/</link>
     <description>Recent content in Beamer on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 23 Sep 2008 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://geojoy.me/tags/beamer/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://geojoy.me/tags/beamer/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Ruby on Rails - Cours IUP</title>
-      <link>https://geojoy.me/post---copy/ruby-on-rails-cours-iup/</link>
+      <link>http://geojoy.me/post---copy/ruby-on-rails-cours-iup/</link>
       <pubDate>Tue, 23 Sep 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/ruby-on-rails-cours-iup/</guid>
+      <guid>http://geojoy.me/post---copy/ruby-on-rails-cours-iup/</guid>
       <description>Voici la présentation de Ruby on Rails faites à l&amp;rsquo;IUP ISI Paul Sabatier, ce mardi 23 septembre.
 Bonne lecture.
 Présentation RoR 2008 (2h)</description>
@@ -24,10 +24,10 @@ Présentation RoR 2008 (2h)</description>
     
     <item>
       <title>Présentation Ruby on Rails - Toulibre</title>
-      <link>https://geojoy.me/post---copy/presentation-ruby-on-rails-toulibre/</link>
+      <link>http://geojoy.me/post---copy/presentation-ruby-on-rails-toulibre/</link>
       <pubDate>Wed, 28 May 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/presentation-ruby-on-rails-toulibre/</guid>
+      <guid>http://geojoy.me/post---copy/presentation-ruby-on-rails-toulibre/</guid>
       <description>Voila ça c&amp;rsquo;est fait ! Ouf une tâche en moins dans mon rtm (remember the milk) ^^
 Promis je mets les transparents demain, dès que je me lève ! Je mettrais aussi les sources du beamer.
 Présentation (Source LaTeX)</description>
@@ -35,10 +35,10 @@ Présentation (Source LaTeX)</description>
     
     <item>
       <title>LaTeX &#43; Beamer &#43; Keyjnote.</title>
-      <link>https://geojoy.me/post---copy/latex-beamer-keyjnote/</link>
+      <link>http://geojoy.me/post---copy/latex-beamer-keyjnote/</link>
       <pubDate>Wed, 25 Jul 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/latex-beamer-keyjnote/</guid>
+      <guid>http://geojoy.me/post---copy/latex-beamer-keyjnote/</guid>
       <description>Ou comment faire une présentation &amp;ldquo;qui déchire grave&amp;rdquo; ^^.
  LaTeX est un langage de balise à la manière du HTML, surtout orienté pour la rédaction de document scientifique, partiels de certains professeurs, ou thèse (sur la construction d&amp;rsquo;ontologie dynamique au moyen d&amp;rsquo;un algorithme multi-agent de classification par exemple ^^).
  Beamer, est une classe LaTeX permettant de faire des présentations à la OO Impress ou KPresenter (non je dirais pas l&amp;rsquo;autre !</description>

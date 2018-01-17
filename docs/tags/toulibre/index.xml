@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Toulibre on Geo&#39;z Blog</title>
-    <link>https://geojoy.me/tags/toulibre/</link>
+    <link>http://geojoy.me/tags/toulibre/</link>
     <description>Recent content in Toulibre on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 28 May 2008 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://geojoy.me/tags/toulibre/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://geojoy.me/tags/toulibre/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Présentation Ruby on Rails - Toulibre</title>
-      <link>https://geojoy.me/post---copy/presentation-ruby-on-rails-toulibre/</link>
+      <link>http://geojoy.me/post---copy/presentation-ruby-on-rails-toulibre/</link>
       <pubDate>Wed, 28 May 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/presentation-ruby-on-rails-toulibre/</guid>
+      <guid>http://geojoy.me/post---copy/presentation-ruby-on-rails-toulibre/</guid>
       <description>Voila ça c&amp;rsquo;est fait ! Ouf une tâche en moins dans mon rtm (remember the milk) ^^
 Promis je mets les transparents demain, dès que je me lève ! Je mettrais aussi les sources du beamer.
 Présentation (Source LaTeX)</description>
@@ -24,20 +24,20 @@ Présentation (Source LaTeX)</description>
     
     <item>
       <title>Ruby on Rails = Ruby &#43; Rails</title>
-      <link>https://geojoy.me/post---copy/ruby-on-rails-ruby-rails/</link>
+      <link>http://geojoy.me/post---copy/ruby-on-rails-ruby-rails/</link>
       <pubDate>Mon, 12 May 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/ruby-on-rails-ruby-rails/</guid>
+      <guid>http://geojoy.me/post---copy/ruby-on-rails-ruby-rails/</guid>
       <description>Je suis en train d&amp;rsquo;écrire ma présentation pour le 28 mai à Toulibre, et voici ce qu&amp;rsquo;on peut trouver sur le web :
  Ruby est un langage, et Rails un environnement de travail pour Ruby Le nom Ruby n&amp;rsquo;est pas un acronyme mais un jeu de mots sur Perl. Ruby est un langage de script entièrement orienté objet. Il est relativement récent (première version publiée en 1995), ce qui lui permet de s&amp;rsquo;affranchir des lourdeurs syntaxiques des langages héritant du C (tels Java, C#, Perl, PHP&amp;hellip;).</description>
     </item>
     
     <item>
       <title>KDE4 Toulouse Release Party : J - 15</title>
-      <link>https://geojoy.me/post---copy/kde4-toulouse-release-party-j-15/</link>
+      <link>http://geojoy.me/post---copy/kde4-toulouse-release-party-j-15/</link>
       <pubDate>Fri, 11 Jan 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/kde4-toulouse-release-party-j-15/</guid>
+      <guid>http://geojoy.me/post---copy/kde4-toulouse-release-party-j-15/</guid>
       <description>A l&amp;rsquo;occasion de la sortie de KDE4, est organisée une &amp;ldquo;Release Party&amp;rdquo; dans les locaux de l&amp;rsquo;association Toulibre (Centre culturel de Bellegarde), les vendredi 25 et samedi 26 janvier à Toulouse.
 Venez nombreux !
 Plus d&amp;rsquo;informations par ici Le programme c&amp;rsquo;est ici</description>

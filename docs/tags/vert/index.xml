@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Vert on Geo&#39;z Blog</title>
-    <link>https://geojoy.me/tags/vert/</link>
+    <link>http://geojoy.me/tags/vert/</link>
     <description>Recent content in Vert on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 03 Sep 2007 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://geojoy.me/tags/vert/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://geojoy.me/tags/vert/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Se mettre au vert ...</title>
-      <link>https://geojoy.me/post---copy/se-mettre-au-vert/</link>
+      <link>http://geojoy.me/post---copy/se-mettre-au-vert/</link>
       <pubDate>Mon, 03 Sep 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/se-mettre-au-vert/</guid>
+      <guid>http://geojoy.me/post---copy/se-mettre-au-vert/</guid>
       <description>Voici un fond d&amp;rsquo;ecran sympathique.
 [](http://www.flickr.com/photos/12501436@N05/1296469121/)</description>
     </item>

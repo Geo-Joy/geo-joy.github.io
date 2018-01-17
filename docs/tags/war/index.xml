@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>War on Geo&#39;z Blog</title>
-    <link>https://geojoy.me/tags/war/</link>
+    <link>http://geojoy.me/tags/war/</link>
     <description>Recent content in War on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 17 Oct 2013 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://geojoy.me/tags/war/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://geojoy.me/tags/war/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Personnalisez vos WAR avec un overlay Maven</title>
-      <link>https://geojoy.me/post---copy/personalisation-war-maven-overlay/</link>
+      <link>http://geojoy.me/post---copy/personalisation-war-maven-overlay/</link>
       <pubDate>Thu, 17 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/personalisation-war-maven-overlay/</guid>
+      <guid>http://geojoy.me/post---copy/personalisation-war-maven-overlay/</guid>
       <description>Le système de packaging WAR (Web Application Archive) est un format (ZIP) de distribution d&amp;rsquo;application java web. Il assemble les ressources statiques (html, css, js) avec le code compilé.
 Cependant, il arrive souvent que l&amp;rsquo;on ait le besoin de produire une application avec un &amp;ldquo;style&amp;rdquo; différent, dans ce cas deux possibilités :
  Gérer la gestion des thèmes dans l&amp;rsquo;application Utiliser un overlay pour personnaliser l&amp;rsquo;application  Le processus standard de modification est le suivant :</description>

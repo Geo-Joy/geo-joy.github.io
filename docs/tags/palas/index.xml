@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Palas on Geo&#39;z Blog</title>
-    <link>https://geojoy.me/tags/palas/</link>
+    <link>http://geojoy.me/tags/palas/</link>
     <description>Recent content in Palas on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 16 Aug 2005 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://geojoy.me/tags/palas/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://geojoy.me/tags/palas/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Laurent Wolf au Palas</title>
-      <link>https://geojoy.me/post---copy/laurent-wolf-au-palas/</link>
+      <link>http://geojoy.me/post---copy/laurent-wolf-au-palas/</link>
       <pubDate>Tue, 16 Aug 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/laurent-wolf-au-palas/</guid>
+      <guid>http://geojoy.me/post---copy/laurent-wolf-au-palas/</guid>
       <description>Voilà, une soirée sympa, bonne musique, bon DJ (Laurent Wolf) avec des potes sympas. Une bonne soirée quoi !</description>
     </item>
     

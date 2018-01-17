@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Node.js on Geo&#39;z Blog</title>
-    <link>https://geojoy.me/tags/node.js/</link>
+    <link>http://geojoy.me/tags/node.js/</link>
     <description>Recent content in Node.js on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 25 May 2014 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://geojoy.me/tags/node.js/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://geojoy.me/tags/node.js/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>De Docpad à Hugo</title>
-      <link>https://geojoy.me/post---copy/de-docpad-a-hugo/</link>
+      <link>http://geojoy.me/post---copy/de-docpad-a-hugo/</link>
       <pubDate>Sun, 25 May 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/de-docpad-a-hugo/</guid>
+      <guid>http://geojoy.me/post---copy/de-docpad-a-hugo/</guid>
       <description>Je sais ! Je migre encore de solution de génération de site static, mais bon ça s&amp;rsquo;appelle le progrès. Cette fois migration de Docpad vers Hugo, pour une raison simple : la performance.
 Avant j&amp;rsquo;avais Docpad, mais ça c&amp;rsquo;était avant ! Je suis passé :
  de Dotclear, à Wordpress, pour des raisons de lenteur de correctifs (notamment sécurité). de Wordpress à Jekyll, parce que Wordpress faisait beaucoup trop de choses, et devenait de plus en plus statique grace à W3Total Cache, et puis il fallait PHP &amp;hellip; Jekyll à Octopress, c&amp;rsquo;est la même famille, c&amp;rsquo;est un fork &amp;ldquo;on steroid&amp;rdquo; du premier, mais trop lourd (à mon gout) pour le déploiement.</description>
@@ -24,10 +24,10 @@ Avant j&amp;rsquo;avais Docpad, mais ça c&amp;rsquo;était avant ! Je suis pass
     
     <item>
       <title>Oui j&#39;utilise Node.js au boulot, et alors ?</title>
-      <link>https://geojoy.me/post---copy/oui-jutilise-nodejs-au-boulot-et-alors/</link>
+      <link>http://geojoy.me/post---copy/oui-jutilise-nodejs-au-boulot-et-alors/</link>
       <pubDate>Tue, 07 Jan 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/oui-jutilise-nodejs-au-boulot-et-alors/</guid>
+      <guid>http://geojoy.me/post---copy/oui-jutilise-nodejs-au-boulot-et-alors/</guid>
       <description>Voila n&amp;rsquo;ayons pas honte de dire :
  &amp;lsquo;Oui j&amp;rsquo;utilise Node.js dans un milieu professionnel !&amp;lsquo;, et non ce n&amp;rsquo;est pas pour faire joujou !
  Contexte Il est important de présenter le contexte pour bien comprendre les choix que j&amp;rsquo;ai fait. Aujourd&amp;rsquo;hui j&amp;rsquo;utilise la stack MEAN (Mongo, Express, AngularJS, Node, Yeoman), dans 2 projets professionnels.
@@ -36,30 +36,30 @@ Je ne me suis pas de suite dirigé vers Node, je suis passé par Rails, Django, 
     
     <item>
       <title>Notifications temps réel avec Socket.io et Java - Partie 1</title>
-      <link>https://geojoy.me/post---copy/notifications-socket-io-avec-java-part-1/</link>
+      <link>http://geojoy.me/post---copy/notifications-socket-io-avec-java-part-1/</link>
       <pubDate>Fri, 18 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/notifications-socket-io-avec-java-part-1/</guid>
+      <guid>http://geojoy.me/post---copy/notifications-socket-io-avec-java-part-1/</guid>
       <description>On parle aujourd&amp;rsquo;hui de plus en plus de communications bi-directionnelles asynchrones entre le client et le serveur. Ceci est possible grâce à des technologies comme :
  Les WebSockets Web Messaging (postMessage) Server Side Events  Java est un monde qui a du mal à évoluer (même si ça change un peu en ce moment : JSR 356 pour Java EE 7), il est souvent difficile d&amp;rsquo;avoir accès à de tels systèmes lors de leur sortie dans nos environnements Java.</description>
     </item>
     
     <item>
       <title>Exporter les tâches IceScrum avec Node.js</title>
-      <link>https://geojoy.me/post---copy/exporter-les-taches-icescrum-avec-nodejs/</link>
+      <link>http://geojoy.me/post---copy/exporter-les-taches-icescrum-avec-nodejs/</link>
       <pubDate>Tue, 05 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/exporter-les-taches-icescrum-avec-nodejs/</guid>
+      <guid>http://geojoy.me/post---copy/exporter-les-taches-icescrum-avec-nodejs/</guid>
       <description>Voici un petit outil permettant d&amp;rsquo;exporter les tâches associées aux stories d&amp;rsquo;un sprint pour un projet donné, depuis IceScrum vers un format imprimable : postit HTML en l&amp;rsquo;occurence.
 Code  Explication Rien de bien sorcier, vous trouverez des références aux projets annexes : - Restler : Librairie utilisée pour la communication HTTP - Async.js : Librairie utilisée pour simplifier l&amp;rsquo;asynchronisme - Underscore.js : Véritable caisse à outils du Javascript, utilisée pour filtrer, ainsi que la gestion du template.</description>
     </item>
     
     <item>
       <title>Mon bootstrap en laisse !</title>
-      <link>https://geojoy.me/post---copy/mon-bootstrap-en-laisse/</link>
+      <link>http://geojoy.me/post---copy/mon-bootstrap-en-laisse/</link>
       <pubDate>Mon, 13 Aug 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/mon-bootstrap-en-laisse/</guid>
+      <guid>http://geojoy.me/post---copy/mon-bootstrap-en-laisse/</guid>
       <description>Oui, moi aussi je veux mon Bootstrap ! Voici comment le personnaliser, avec possibilités de mises à jour du framework de base.
 Avant de commencer, il vous faudra installer Git, Node.js, ainsi que les dépendances associées à Bootstrap.
 projectRoot +- bootstrap +- custom	+- grunt.js	+- package.json   bootstrap : Contiendra un sous-module Git, pointant sur le dépôt Github de Bootstrap. custom : Contiendra vos sources venant surcharger les scripts LESS de bootstrap.</description>
@@ -67,10 +67,10 @@ projectRoot +- bootstrap +- custom	+- grunt.js	+- package.json   bootstrap : Con
     
     <item>
       <title>Backbone.js - Les évènements</title>
-      <link>https://geojoy.me/post---copy/backbone-dot-js-les-evenements/</link>
+      <link>http://geojoy.me/post---copy/backbone-dot-js-les-evenements/</link>
       <pubDate>Mon, 05 Mar 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/backbone-dot-js-les-evenements/</guid>
+      <guid>http://geojoy.me/post---copy/backbone-dot-js-les-evenements/</guid>
       <description>Cet article fait suite à la présentation des concepts Backbone.JS. Vous devez avoir connaissance d&amp;rsquo;une base de Javascript pour aborder de manière sereine la partie suivante.
 Dans cet article, je vais m&amp;rsquo;attacher à expliquer le fonctionnement des évènements dans Backbone.JS, ainsi que, de fait, les principes de programmation asynchrone utilisés.
 Programmation asynchrone La programmation asynchrone est le coeur de la programmation Javascript, vous avez toujours la possibilité de faire du synchrone, cependant ce serait perdre un des avantages de Javascript.</description>
@@ -78,10 +78,10 @@ Programmation asynchrone La programmation asynchrone est le coeur de la programm
     
     <item>
       <title>Backbone.js - Présentation</title>
-      <link>https://geojoy.me/post---copy/backbone-dot-js-presentation/</link>
+      <link>http://geojoy.me/post---copy/backbone-dot-js-presentation/</link>
       <pubDate>Sun, 04 Mar 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/backbone-dot-js-presentation/</guid>
+      <guid>http://geojoy.me/post---copy/backbone-dot-js-presentation/</guid>
       <description>Cet article s&amp;rsquo;adresse aux personnes désirants découvrir ou redécouvrir, l&amp;rsquo;utilité et l&amp;rsquo;utilisation de Backbone.JS au sein d&amp;rsquo;une application Web Javascript. En effet Backbone.JS s&amp;rsquo;inscrit dans les technologies Javascript clientes (puisqu&amp;rsquo;il existe aussi un coté serveur via Node.js).
 Les concepts Chaque concept est implémenté en Javascript de telle sorte qu&amp;rsquo;ensemble ils forment votre application.
 Les modèles Les modèles Backbone sont des objets Javascript servant à représenter l&amp;rsquo;information, qui sera souvent utilisée pour l&amp;rsquo;affichage.</description>
@@ -89,10 +89,10 @@ Les modèles Les modèles Backbone sont des objets Javascript servant à représ
     
     <item>
       <title>Du JavaScript à toutes les Sauces !!!</title>
-      <link>https://geojoy.me/post---copy/du-javascript-a-toutes-les-sauces/</link>
+      <link>http://geojoy.me/post---copy/du-javascript-a-toutes-les-sauces/</link>
       <pubDate>Tue, 29 Nov 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/du-javascript-a-toutes-les-sauces/</guid>
+      <guid>http://geojoy.me/post---copy/du-javascript-a-toutes-les-sauces/</guid>
       <description>Vous n&amp;rsquo;êtes pas sans savoir (en tout cas ceux qui bossent avec moi le savent ^^), ou alors vous avez vécu sur une autre planète qu&amp;rsquo;en ce moment (depuis 6mois - 1an), le monde du JavaScript a subit d&amp;rsquo;énormes mutations. Et qu&amp;rsquo;il y trouve ça place au rang des PHP, Ruby, voir même Java;
 Les technologies dérivées permettent de mettre à plat un serveur Apache tant au niveau performance, qu&amp;rsquo;au niveau consommation mémoire.</description>
     </item>

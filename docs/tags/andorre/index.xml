@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Andorre on Geo&#39;z Blog</title>
-    <link>https://geojoy.me/tags/andorre/</link>
+    <link>http://geojoy.me/tags/andorre/</link>
     <description>Recent content in Andorre on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 11 Sep 2007 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://geojoy.me/tags/andorre/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://geojoy.me/tags/andorre/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Petite randonnée en Andorre.</title>
-      <link>https://geojoy.me/post---copy/petite-randonnee-en-andorre/</link>
+      <link>http://geojoy.me/post---copy/petite-randonnee-en-andorre/</link>
       <pubDate>Tue, 11 Sep 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/petite-randonnee-en-andorre/</guid>
+      <guid>http://geojoy.me/post---copy/petite-randonnee-en-andorre/</guid>
       <description>Voila une petite randonnée sympatique en Andorre, voici les phtos sur Flickr.</description>
     </item>
     

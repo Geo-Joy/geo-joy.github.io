@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mongodb on Geo&#39;z Blog</title>
-    <link>https://geojoy.me/tags/mongodb/</link>
+    <link>http://geojoy.me/tags/mongodb/</link>
     <description>Recent content in Mongodb on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 07 Jan 2014 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://geojoy.me/tags/mongodb/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://geojoy.me/tags/mongodb/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Oui j&#39;utilise Node.js au boulot, et alors ?</title>
-      <link>https://geojoy.me/post---copy/oui-jutilise-nodejs-au-boulot-et-alors/</link>
+      <link>http://geojoy.me/post---copy/oui-jutilise-nodejs-au-boulot-et-alors/</link>
       <pubDate>Tue, 07 Jan 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/oui-jutilise-nodejs-au-boulot-et-alors/</guid>
+      <guid>http://geojoy.me/post---copy/oui-jutilise-nodejs-au-boulot-et-alors/</guid>
       <description>Voila n&amp;rsquo;ayons pas honte de dire :
  &amp;lsquo;Oui j&amp;rsquo;utilise Node.js dans un milieu professionnel !&amp;lsquo;, et non ce n&amp;rsquo;est pas pour faire joujou !
  Contexte Il est important de présenter le contexte pour bien comprendre les choix que j&amp;rsquo;ai fait. Aujourd&amp;rsquo;hui j&amp;rsquo;utilise la stack MEAN (Mongo, Express, AngularJS, Node, Yeoman), dans 2 projets professionnels.
@@ -25,10 +25,10 @@ Je ne me suis pas de suite dirigé vers Node, je suis passé par Rails, Django, 
     
     <item>
       <title>Persistance MongoDB, et indexation ElasticSearch</title>
-      <link>https://geojoy.me/post---copy/persistance-mongodb-indexation-elasticsearch/</link>
+      <link>http://geojoy.me/post---copy/persistance-mongodb-indexation-elasticsearch/</link>
       <pubDate>Sat, 19 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/persistance-mongodb-indexation-elasticsearch/</guid>
+      <guid>http://geojoy.me/post---copy/persistance-mongodb-indexation-elasticsearch/</guid>
       <description>Attention ! Le concept de &amp;#39;river&amp;#39; a été supprimé d&amp;#39;ElasticSearch, cet article n&amp;#39;est plus à jour.  Je travaille actuellement sur un projet personnel utilisant MongoDB comme base de persistance, et j&amp;rsquo;ai eu besoin de mettre en place un dispositif de recherche multi-critères (geo, fuzzy, etc.), mon choix c&amp;rsquo;est tout de suite pencher sur ElasticSearch.
 ElasticSearch est un moteur de recherche clusterisable, basé sur Lucene. Il fonctionne sous la forme d&amp;rsquo;un grid d&amp;rsquo;instance qui équilibre les indexes entre les membres d&amp;rsquo;un même cluster.</description>
     </item>

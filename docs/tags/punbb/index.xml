@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Punbb on Geo&#39;z Blog</title>
-    <link>https://geojoy.me/tags/punbb/</link>
+    <link>http://geojoy.me/tags/punbb/</link>
     <description>Recent content in Punbb on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 28 Aug 2005 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://geojoy.me/tags/punbb/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://geojoy.me/tags/punbb/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>ZeniTHaR&#39;z PhoRhum</title>
-      <link>https://geojoy.me/post---copy/zenitharz-phorhum/</link>
+      <link>http://geojoy.me/post---copy/zenitharz-phorhum/</link>
       <pubDate>Sun, 28 Aug 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/zenitharz-phorhum/</guid>
+      <guid>http://geojoy.me/post---copy/zenitharz-phorhum/</guid>
       <description>ZeniTHaR&amp;rsquo;z PhoRhum
 Voila mon nouveau forum pour HermS et autres biensur &amp;hellip;.
 PS : le script est PunBB très sympa et léger et pleins de plugins partout et en plus il marche sur Free et &amp;hellip; à tester.</description>

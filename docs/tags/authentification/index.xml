@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Authentification on Geo&#39;z Blog</title>
-    <link>https://geojoy.me/tags/authentification/</link>
+    <link>http://geojoy.me/tags/authentification/</link>
     <description>Recent content in Authentification on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 19 Dec 2007 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://geojoy.me/tags/authentification/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://geojoy.me/tags/authentification/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>gpgAuth - GnuPG Web Authentication</title>
-      <link>https://geojoy.me/post---copy/gpgauth-gnupg-web-authentication/</link>
+      <link>http://geojoy.me/post---copy/gpgauth-gnupg-web-authentication/</link>
       <pubDate>Wed, 19 Dec 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/gpgauth-gnupg-web-authentication/</guid>
+      <guid>http://geojoy.me/post---copy/gpgauth-gnupg-web-authentication/</guid>
       <description>Après mon article sur FireGPG (extension firefox permettant l&amp;rsquo;intégration de GPG), voici un système d&amp;rsquo;authentification basé sur le système clé privée / clé publique. En effet il suffit de s&amp;rsquo;enregistrer sur le site (site exemple), d&amp;rsquo;importer la clé publique du service, leur donner notre clé publique, et voila FireGPG fait le reste.
 Il existe une implémentation coté serveur utilisant python, pour intégrer le processus dans vos sites. Cependant ce n&amp;rsquo;est compatible qu&amp;rsquo;avec Firefox + FireGPG.</description>
     </item>
     
     <item>
       <title>OpenID, la nouvelle technologie d&#39;authentification</title>
-      <link>https://geojoy.me/post---copy/openid-la-nouvelle-technologie-dauthentification/</link>
+      <link>http://geojoy.me/post---copy/openid-la-nouvelle-technologie-dauthentification/</link>
       <pubDate>Wed, 17 Oct 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/openid-la-nouvelle-technologie-dauthentification/</guid>
+      <guid>http://geojoy.me/post---copy/openid-la-nouvelle-technologie-dauthentification/</guid>
       <description>OpenID est un système d’authentification décentralisé qui permet l’authentification unique, ainsi que le partage d’attributs. Il permet à un utilisateur de s’authentifier auprès de plusieurs sites (devant prendre en charge cette technologie) sans avoir à retenir un identifiant pour chacun d’eux mais en utilisant à chaque fois un unique identifiant OpenID. Le modèle OpenID se base sur des liens de confiance préalablement établis entre les fournisseurs de services (sites web utilisant OpenID par exemple) et les fournisseurs d’identité (OpenID providers).</description>
     </item>
     

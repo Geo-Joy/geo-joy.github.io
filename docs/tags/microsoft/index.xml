@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Microsoft on Geo&#39;z Blog</title>
-    <link>https://geojoy.me/tags/microsoft/</link>
+    <link>http://geojoy.me/tags/microsoft/</link>
     <description>Recent content in Microsoft on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 19 Aug 2005 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://geojoy.me/tags/microsoft/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://geojoy.me/tags/microsoft/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Et voici le certificat ....</title>
-      <link>https://geojoy.me/post---copy/et-voici-le-certificat/</link>
+      <link>http://geojoy.me/post---copy/et-voici-le-certificat/</link>
       <pubDate>Fri, 19 Aug 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/et-voici-le-certificat/</guid>
+      <guid>http://geojoy.me/post---copy/et-voici-le-certificat/</guid>
       <description></description>
     </item>
     
     <item>
       <title>On dit Monsieur MICROSOFT Certified !</title>
-      <link>https://geojoy.me/post---copy/on-dit-monsieur-microsoft-certified/</link>
+      <link>http://geojoy.me/post---copy/on-dit-monsieur-microsoft-certified/</link>
       <pubDate>Tue, 02 Aug 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/on-dit-monsieur-microsoft-certified/</guid>
+      <guid>http://geojoy.me/post---copy/on-dit-monsieur-microsoft-certified/</guid>
       <description>Mouah ahahah, après une lutte acharnée dans la révision de ma certification MS 72-215 (2000 Server), ben je l&amp;rsquo;ai eu !!!!!!
 Mais au fait ça sert à quoi ???</description>
     </item>

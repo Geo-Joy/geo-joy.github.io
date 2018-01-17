@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Qt on Geo&#39;z Blog</title>
-    <link>https://geojoy.me/tags/qt/</link>
+    <link>http://geojoy.me/tags/qt/</link>
     <description>Recent content in Qt on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 13 Aug 2007 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://geojoy.me/tags/qt/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://geojoy.me/tags/qt/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>GeeGo aka franglish : &#34;J&#39;y go&#34; (J&#39;y vais)</title>
-      <link>https://geojoy.me/post---copy/geego-aka-franglish-jy-go-jy-vais/</link>
+      <link>http://geojoy.me/post---copy/geego-aka-franglish-jy-go-jy-vais/</link>
       <pubDate>Mon, 13 Aug 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/geego-aka-franglish-jy-go-jy-vais/</guid>
+      <guid>http://geojoy.me/post---copy/geego-aka-franglish-jy-go-jy-vais/</guid>
       <description>Voici mon &amp;ldquo;nouveau&amp;rdquo; projet, enfin nouveau non, je le déterre du fond de mes archives et de mes &amp;ldquo;cahiers à idées&amp;rdquo;. Pour faire simple, un logiciel de chat muiltiplateforme (pas en Java, C++/Qt), fortement &amp;ldquo;Jabberisé&amp;rdquo; pour le protocole réseau, insertion de la libjingle pour le VoP2P, transfert de fichiers, recherche, etc &amp;hellip; . Tout ça pour un réseau local, oui pour l&amp;rsquo;instant vu ma culture dans les DHT (Distributed Hash Table), et autres méthodes pour le P2P, ça sera pas tout de suite pour l&amp;rsquo;extranet.</description>
     </item>
     

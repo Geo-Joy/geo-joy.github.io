@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Toulouse on Geo&#39;z Blog</title>
-    <link>https://geojoy.me/tags/toulouse/</link>
+    <link>http://geojoy.me/tags/toulouse/</link>
     <description>Recent content in Toulouse on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 23 Sep 2008 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://geojoy.me/tags/toulouse/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://geojoy.me/tags/toulouse/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Ruby on Rails - Cours IUP</title>
-      <link>https://geojoy.me/post---copy/ruby-on-rails-cours-iup/</link>
+      <link>http://geojoy.me/post---copy/ruby-on-rails-cours-iup/</link>
       <pubDate>Tue, 23 Sep 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/ruby-on-rails-cours-iup/</guid>
+      <guid>http://geojoy.me/post---copy/ruby-on-rails-cours-iup/</guid>
       <description>Voici la présentation de Ruby on Rails faites à l&amp;rsquo;IUP ISI Paul Sabatier, ce mardi 23 septembre.
 Bonne lecture.
 Présentation RoR 2008 (2h)</description>
@@ -24,39 +24,39 @@ Présentation RoR 2008 (2h)</description>
     
     <item>
       <title>Le der des der ...</title>
-      <link>https://geojoy.me/post---copy/le-der-des-der/</link>
+      <link>http://geojoy.me/post---copy/le-der-des-der/</link>
       <pubDate>Wed, 09 Jul 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/le-der-des-der/</guid>
+      <guid>http://geojoy.me/post---copy/le-der-des-der/</guid>
       <description>Bon ben voila c&amp;rsquo;est fait ! c&amp;rsquo;est fini ! Une nouvelle vie qui commence ! Au revoir l&amp;rsquo;étudiant, bonjour l&amp;rsquo;ingénieur sécurité !</description>
     </item>
     
     <item>
       <title>Les tribulations d&#39;un futur freenaute (ou pas!)</title>
-      <link>https://geojoy.me/post---copy/les-tribulations-dun-futur-freenaute-ou-pas/</link>
+      <link>http://geojoy.me/post---copy/les-tribulations-dun-futur-freenaute-ou-pas/</link>
       <pubDate>Thu, 19 Jun 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/les-tribulations-dun-futur-freenaute-ou-pas/</guid>
+      <guid>http://geojoy.me/post---copy/les-tribulations-dun-futur-freenaute-ou-pas/</guid>
       <description>Voila ça fait 6 mois (depuis le 26/02/08) que j&amp;rsquo;ai commandé ma ligne et ma freebox. Comme prévu je reçois un appel d&amp;rsquo;un sous traitant de france télécom pour venir me câbler la ligne en Total Freebox, celui ci me donne un rendez-vous, nickel chrome, je me dis lundi (17/03/08) c&amp;rsquo;est bon j&amp;rsquo;ai ma ligne.
 Arrive ce fameux lundi, j&amp;rsquo;attends le technicien, mais un imprévu : un partiel surprise ! j&amp;rsquo;ai du aller passer le partiel pour revenir; le rdv était pour 16-18h, mon partiel 16-17h :( .</description>
     </item>
     
     <item>
       <title>La nuit des musées - 17 Mai 2008</title>
-      <link>https://geojoy.me/post---copy/la-nuit-des-musees-17-mai-2008/</link>
+      <link>http://geojoy.me/post---copy/la-nuit-des-musees-17-mai-2008/</link>
       <pubDate>Sun, 18 May 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/la-nuit-des-musees-17-mai-2008/</guid>
+      <guid>http://geojoy.me/post---copy/la-nuit-des-musees-17-mai-2008/</guid>
       <description>Dans le cadre du programme &amp;ldquo;nuits des musées&amp;rdquo;, la ville de Toulouse a ouvert les portes de pas mal de musées, en l&amp;rsquo;occurrence : le museum des histoires naturelles. Une file d&amp;rsquo;attente plutôt impressionnante, mais rien d&amp;rsquo;autres nous étions dans le musée au bout de 30 minutes. Environ 2heures plus tard, nous sommes sortis (~00h20).
 Enfin tout ça pour dire, très bonne idée ce programme, ce n&amp;rsquo;est pas le fait que ce soit gratuit, mais bien de visiter de nuit un musée plutôt original.</description>
     </item>
     
     <item>
       <title>Saint Patrick au Frog !</title>
-      <link>https://geojoy.me/post---copy/saint-patrick-au-frog/</link>
+      <link>http://geojoy.me/post---copy/saint-patrick-au-frog/</link>
       <pubDate>Mon, 17 Mar 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/saint-patrick-au-frog/</guid>
+      <guid>http://geojoy.me/post---copy/saint-patrick-au-frog/</guid>
       <description>Bonne Saint Patrick à tous ! Quelle bonne soirée ^^ je vous conseille la Ginger Twist (Gimgembre + Citron) c&amp;rsquo;est de la Homebrew, elle est vraiment bonne (bon après les gouts et les couleurs &amp;hellip;). Allé bonne journée à tous, je vais en cours, pour 4h de Petri à 7h45.
 Vraiment très bonne ambiance, histoire de se rappeler l&amp;rsquo;Ecosse ^^.
 Plus d&amp;rsquo;informations sur le pub.</description>
@@ -64,85 +64,85 @@ Plus d&amp;rsquo;informations sur le pub.</description>
     
     <item>
       <title>Emile, y&#39;avait que l&#39;allé !</title>
-      <link>https://geojoy.me/post---copy/emile-yavais-que-lalle/</link>
+      <link>http://geojoy.me/post---copy/emile-yavais-que-lalle/</link>
       <pubDate>Sat, 09 Feb 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/emile-yavais-que-lalle/</guid>
+      <guid>http://geojoy.me/post---copy/emile-yavais-que-lalle/</guid>
       <description>Voila bonsoir à tous, ça fait deux jours que le tremplin &amp;ldquo;Musiques de RU 2008&amp;rdquo; est terminé, le groupe Hemsi a fini à la 3ème place, merci le Crous pour cette récompense. En bref, dans l&amp;rsquo;après midi, balances et sons tous bien calibrés, balances nickel, mais bon voila la magie du direct : pas de retour, lors de la performance, ce qui rendait difficile la synchro entre membres ! et bien même sans cela, le groupe a fait bouger la salle !</description>
     </item>
     
     <item>
       <title>TGS - Content de savoir qu&#39;il y a plus G33k que moi !</title>
-      <link>https://geojoy.me/post---copy/tgs-content-de-savoir-quil-y-a-plus-g33k-que-moi/</link>
+      <link>http://geojoy.me/post---copy/tgs-content-de-savoir-quil-y-a-plus-g33k-que-moi/</link>
       <pubDate>Sun, 25 Nov 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/tgs-content-de-savoir-quil-y-a-plus-g33k-que-moi/</guid>
+      <guid>http://geojoy.me/post---copy/tgs-content-de-savoir-quil-y-a-plus-g33k-que-moi/</guid>
       <description>De retour du TGS (Toulouse Game Show) à ne pas confondre avec le Tokyo Game Show, qui est d&amp;rsquo;après mes sources 15 fois plus grand en surface ! Au programme, jeux vidéos (Guitar hero, Mario Galaxy, Wii sport, etc &amp;hellip;), mangas (Naruto, Bleach, &amp;hellip;), du cosplay (Personnage matérialisé par des déguisements), du Japan Art, enfin plein de souvenirs. J&amp;rsquo;ai trouvé l&amp;rsquo;intégrale des samurai pizza cats à 10€ ^^ et surtout au final pour les vrais addict les génériques de dessins animés composés et chantés par Bernard Minet !</description>
     </item>
     
     <item>
       <title>C&#39;est la rentrée !</title>
-      <link>https://geojoy.me/post---copy/cest-la-rentree/</link>
+      <link>http://geojoy.me/post---copy/cest-la-rentree/</link>
       <pubDate>Mon, 15 Oct 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/cest-la-rentree/</guid>
+      <guid>http://geojoy.me/post---copy/cest-la-rentree/</guid>
       <description>Aujourd&amp;rsquo;hui commence mon M2 ISI, journée particulièrement légère ^^ 4h de cours ! et il faut déja amener un CV et une lettre de motivation ! Enfin comme on le sait tous, ça va pas correspondre aux critères du professeur, donc ça sera une mauvaise note pour finir sur une bonne note au final !
 On verra bien ^^</description>
     </item>
     
     <item>
       <title>Ateliers KDE - Septembre 2007</title>
-      <link>https://geojoy.me/post---copy/ateliers-kde-septembre-2007/</link>
+      <link>http://geojoy.me/post---copy/ateliers-kde-septembre-2007/</link>
       <pubDate>Sun, 30 Sep 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/ateliers-kde-septembre-2007/</guid>
+      <guid>http://geojoy.me/post---copy/ateliers-kde-septembre-2007/</guid>
       <description>L&amp;rsquo;atelier KDE a eu lieu ce Samedi 29 Septembre à Toulouse (chez luxtin), au programme : accueil d&amp;rsquo;une nouvelle arrivante, initiation à l&amp;rsquo;outil KBabel et à la traduction dans KDE. Pour ma part, j&amp;rsquo;ai commencé à écrire des tutoriaux pour la mise en place &amp;amp; compilation des projets Ksirk, et Kopete, pour éviter de reproduire les problèmes de l&amp;rsquo;année dernière, et surtout éviter de dégouter les étudiants.</description>
     </item>
     
     <item>
       <title>Les nouveaux projets KDE encadrés commencent ...</title>
-      <link>https://geojoy.me/post---copy/les-nouveaux-projets-kde-encadres-commencent/</link>
+      <link>http://geojoy.me/post---copy/les-nouveaux-projets-kde-encadres-commencent/</link>
       <pubDate>Sun, 23 Sep 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/les-nouveaux-projets-kde-encadres-commencent/</guid>
+      <guid>http://geojoy.me/post---copy/les-nouveaux-projets-kde-encadres-commencent/</guid>
       <description>Pour mettre fin à cette suite de post concernant Google ^^, je reviens de la réunion de lancement du BE1 de l&amp;rsquo;IUP de Toulouse, qui relance cette année les projets KDE ainsi que le projet Wilos, et IceScrum.
 Concernant le projet Wilos : 3 équipes, IceScrum : 1 équipes, et KDE : 4 équipes. Les projets KDE sont à choisir parmis 6 projets éxistant, et 1 projet à démarrer : * KPresenter : partie présentation de la suite KOffice.</description>
     </item>
     
     <item>
       <title>Ah les voitures ...</title>
-      <link>https://geojoy.me/post---copy/ah-les-voitures/</link>
+      <link>http://geojoy.me/post---copy/ah-les-voitures/</link>
       <pubDate>Thu, 13 Sep 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/ah-les-voitures/</guid>
+      <guid>http://geojoy.me/post---copy/ah-les-voitures/</guid>
       <description>Elles sont toujours là quand vous en avez besoin, mais quand elles tombent en panne, elles savent comment vous en faire voir ! Voila 700€de réparation pour un montant initial de 250 €, surprise Feux Vert ! Système de freinage complet à changer (Disque + plaquette avant, bloc arrière), pneu avant neuf, amortisseur à changer &amp;hellip; Croyez vous qu&amp;rsquo;il faut engager les réparations quand le montant du prix de celles ci dépasse la moitié du prix d&amp;rsquo;achat du véhicule, y a 4 ans &amp;amp; ~40 000 Km ?</description>
     </item>
     
     <item>
       <title>VBI, Teletext, CC, DirectShow, ...</title>
-      <link>https://geojoy.me/post---copy/vbi-teletext-cc-directshow/</link>
+      <link>http://geojoy.me/post---copy/vbi-teletext-cc-directshow/</link>
       <pubDate>Tue, 19 Jun 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/vbi-teletext-cc-directshow/</guid>
+      <guid>http://geojoy.me/post---copy/vbi-teletext-cc-directshow/</guid>
       <description>Voila de quoi parlent mes activités, je dois lire du VBI (Vertical Blanking Interval), l&amp;rsquo;analyser, le reconstruire, le modifier, en gros le torturer ^^. Tout ça avec du DirectShow mêlé de GDI+ (ou sont passés les produits OpenSource ???).
 Enfin voila c&amp;rsquo;était une petite brève.</description>
     </item>
     
     <item>
       <title>Merci à vous ^^</title>
-      <link>https://geojoy.me/post---copy/merci-a-vous/</link>
+      <link>http://geojoy.me/post---copy/merci-a-vous/</link>
       <pubDate>Sun, 03 Jun 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/merci-a-vous/</guid>
+      <guid>http://geojoy.me/post---copy/merci-a-vous/</guid>
       <description>Vous m&amp;rsquo;avez fait une surprise pour mon anniversaire ^^ Merci à Emi, SaMaeL, Soosuske, MiKaMiKaZZe, Sarah, Folick, Aeolus, Pico, Ishtar, N3hio &amp;amp; Simba d&amp;rsquo;être venu, et de m&amp;rsquo;avoir menti pour la bonne cause (mais je note ^^). J&amp;rsquo;espère que vous avez passé une bonne soirée, en tout cas moi oui ! Et merci pour votre super cadeau !</description>
     </item>
     
     <item>
       <title>M1 ISI Yesturday, tomorrow you know  ?</title>
-      <link>https://geojoy.me/post---copy/m1-isi-yesturday-tomorrow-you-know/</link>
+      <link>http://geojoy.me/post---copy/m1-isi-yesturday-tomorrow-you-know/</link>
       <pubDate>Fri, 25 May 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/m1-isi-yesturday-tomorrow-you-know/</guid>
+      <guid>http://geojoy.me/post---copy/m1-isi-yesturday-tomorrow-you-know/</guid>
       <description>Voila c&amp;rsquo;est fait, sans le stage , j&amp;rsquo;ai mon semestre, ça a été tendu, mais c&amp;rsquo;est passé ^^. Donc maintenant reste plus qu&amp;rsquo;a choisir le M2, je pense me diriger vers la modélisation, en fait j&amp;rsquo;aime ça &amp;hellip;
 J&amp;rsquo;aime plus trop coder, mais modéliser pour générer ^^
 UML2.0 est une révélation pour moi, et surtout avoir bosser pour Umbrello.</description>
@@ -150,10 +150,10 @@ UML2.0 est une révélation pour moi, et surtout avoir bosser pour Umbrello.</de
     
     <item>
       <title>Umbrello, un BE pas comme les autres ...</title>
-      <link>https://geojoy.me/post---copy/umbrello-un-be-pas-comme-les-autres/</link>
+      <link>http://geojoy.me/post---copy/umbrello-un-be-pas-comme-les-autres/</link>
       <pubDate>Sat, 24 Mar 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/umbrello-un-be-pas-comme-les-autres/</guid>
+      <guid>http://geojoy.me/post---copy/umbrello-un-be-pas-comme-les-autres/</guid>
       <description>Aujourd&amp;rsquo;hui, avec la dernière revue, en grande ponte, marque la fin des projets de Master 1ere année de l&amp;rsquo;IUP de Toulouse.
  Umbrello (C++ / KDE4 / Qt) Modeleur UML, but du projet : passage à UML 2.0, refonte de l&amp;rsquo;architecture Undo / Redo.
  KPlato (C++ / KDE4 / Qt) Outil d&amp;rsquo;aide à la gestion de projet (Méthode PERT).
@@ -162,30 +162,30 @@ UML2.0 est une révélation pour moi, et surtout avoir bosser pour Umbrello.</de
     
     <item>
       <title>Hakin&#39; Session Mars</title>
-      <link>https://geojoy.me/post---copy/hakin-session-mars/</link>
+      <link>http://geojoy.me/post---copy/hakin-session-mars/</link>
       <pubDate>Sat, 17 Mar 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/hakin-session-mars/</guid>
+      <guid>http://geojoy.me/post---copy/hakin-session-mars/</guid>
       <description>Cette Hackin&amp;rsquo; Session marque la fin de la participation aux projets KDE de l&amp;rsquo;IUP. Umbrello possède un nouveau framework Undo/Redo (basé Qt), quelques fonctionnalités UML2.0 (Diagrammes de séquences, diagramme d&amp;rsquo;activités complets).
  ISI-Umbrello Umbrello  </description>
     </item>
     
     <item>
       <title>Stage Fin Master 1</title>
-      <link>https://geojoy.me/post---copy/stage-fin-master-1/</link>
+      <link>http://geojoy.me/post---copy/stage-fin-master-1/</link>
       <pubDate>Sun, 11 Mar 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/stage-fin-master-1/</guid>
+      <guid>http://geojoy.me/post---copy/stage-fin-master-1/</guid>
       <description>Voila, je vais effectuer mes 5 mois de stage de fin d&amp;rsquo;études de mon Master 1 chez OpenCube. Le stage se déroule en deux parties :
  Etat de l&amp;rsquo;art des normes de sous-titres pour le HD. Réalisation d&amp;rsquo;une API pour l&amp;rsquo;exploitation, le rendu de ces sous titres dans le format MXF. Ainsi que la réalisation de logiciels d&amp;rsquo;exploitation de cette API.  Début du stage le 2 Avril &amp;hellip; que j&amp;rsquo;attends avec impatience :) .</description>
     </item>
     
     <item>
       <title>Hakin&#39; Session Fevrier</title>
-      <link>https://geojoy.me/post---copy/hakin-session-fevrier/</link>
+      <link>http://geojoy.me/post---copy/hakin-session-fevrier/</link>
       <pubDate>Wed, 21 Feb 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/hakin-session-fevrier/</guid>
+      <guid>http://geojoy.me/post---copy/hakin-session-fevrier/</guid>
       <description>Voila ma première Hakin&amp;rsquo; Session, résultat ambiance très bon enfant.
 http://annma.blogspot.com/2007/02/h&amp;hellip;
 http://ervin.ipsquad.net/index.php/&amp;hellip;
@@ -194,161 +194,161 @@ http://luxtin.thefilou.com/blog/ind&amp;hellip;</description>
     
     <item>
       <title>Vivement Vendredi ...</title>
-      <link>https://geojoy.me/post---copy/vivement-vendredi/</link>
+      <link>http://geojoy.me/post---copy/vivement-vendredi/</link>
       <pubDate>Thu, 18 Jan 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/vivement-vendredi/</guid>
+      <guid>http://geojoy.me/post---copy/vivement-vendredi/</guid>
       <description>Vivement la fin de cette semaine de M@%$. Parce que là c&amp;rsquo;est abusé tout part en sucette !</description>
     </item>
     
     <item>
       <title>De retour à Toulouse, après de loonnnnnnnnnggggggues vacances</title>
-      <link>https://geojoy.me/post---copy/de-retour-a-toulouse-apres-de-loonnnnnnnnnggggggues-vacances/</link>
+      <link>http://geojoy.me/post---copy/de-retour-a-toulouse-apres-de-loonnnnnnnnnggggggues-vacances/</link>
       <pubDate>Thu, 04 Jan 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/de-retour-a-toulouse-apres-de-loonnnnnnnnnggggggues-vacances/</guid>
+      <guid>http://geojoy.me/post---copy/de-retour-a-toulouse-apres-de-loonnnnnnnnnggggggues-vacances/</guid>
       <description>Voila un très bon réveillon en Aveyron, chez une amie à ma petite chérie (soirée raclette). De retour à 4h du mat, Ils ont des chapeaux ronds ! &amp;hellip; Maintenant retour dans le monde réel, boulot quand tu nous tiens ! En tout cas 2 semaine sans penser, réfléchir, ni travailler pour l&amp;rsquo;ecole ça fait trop de bien ^^</description>
     </item>
     
     <item>
       <title>Fin du malheur, début des vacances ^^</title>
-      <link>https://geojoy.me/post---copy/fin-du-malheur-debut-des-vacances/</link>
+      <link>http://geojoy.me/post---copy/fin-du-malheur-debut-des-vacances/</link>
       <pubDate>Thu, 21 Dec 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/fin-du-malheur-debut-des-vacances/</guid>
+      <guid>http://geojoy.me/post---copy/fin-du-malheur-debut-des-vacances/</guid>
       <description>Voila les partiels sont terminés ! C&amp;rsquo;est les vancances de noyel !
 Noyeux Joyel à tchoum ! :)</description>
     </item>
     
     <item>
       <title>Début du malheur ...</title>
-      <link>https://geojoy.me/post---copy/debut-du-malheur/</link>
+      <link>http://geojoy.me/post---copy/debut-du-malheur/</link>
       <pubDate>Mon, 18 Dec 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/debut-du-malheur/</guid>
+      <guid>http://geojoy.me/post---copy/debut-du-malheur/</guid>
       <description>Les partiels commencent aujourd&amp;rsquo;hui
  Lundi : J2EE &amp;amp; IL2 (Ingénierie logiciel) Mardi : CAMO (Concept Avancé et Modélisation Objet) Mercredi : BD (Base de données) &amp;amp; C++ Jeudi : IL1 &amp;amp; SAPR (Programmation Parallèle &amp;amp; Répartie) Vendredi : Décompression &amp;hellip; Samedi : Retour à la maison  </description>
     </item>
     
     <item>
       <title>Premier commit-digest ^^</title>
-      <link>https://geojoy.me/post---copy/premier-commit-digest/</link>
+      <link>http://geojoy.me/post---copy/premier-commit-digest/</link>
       <pubDate>Sun, 17 Dec 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/premier-commit-digest/</guid>
+      <guid>http://geojoy.me/post---copy/premier-commit-digest/</guid>
       <description>Voici le premier commit-digest où le groupe Umbrello/Kplato apparait.
 2006-12-17</description>
     </item>
     
     <item>
       <title>Je me fais chier alors j&#39;écris ...</title>
-      <link>https://geojoy.me/post---copy/je-me-fais-chier-alors-jecris/</link>
+      <link>http://geojoy.me/post---copy/je-me-fais-chier-alors-jecris/</link>
       <pubDate>Wed, 15 Nov 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/je-me-fais-chier-alors-jecris/</guid>
+      <guid>http://geojoy.me/post---copy/je-me-fais-chier-alors-jecris/</guid>
       <description>Bonjour à tous mes lecteurs ^^, je suis actuellement en cours d&amp;rsquo;IL1 (Ingénierie Logiciel 1).
 Nous venons d&amp;rsquo;emménager ensemble ma TiTFeMMe et son TiToMe dans un appartement bien plus grand qu&amp;rsquo;avant (y a 2 pièces ^^), ça fait drôle de dire qu&amp;rsquo;on possède un appartement à 2, un appartement à nous :-X .</description>
     </item>
     
     <item>
       <title>Umbrello-FR [umbrello.free.fr]</title>
-      <link>https://geojoy.me/post---copy/umbrello-fr-umbrellofreefr/</link>
+      <link>http://geojoy.me/post---copy/umbrello-fr-umbrellofreefr/</link>
       <pubDate>Mon, 23 Oct 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/umbrello-fr-umbrellofreefr/</guid>
+      <guid>http://geojoy.me/post---copy/umbrello-fr-umbrellofreefr/</guid>
       <description>Ouverture du site des suivis du projet Umbrello-FR. Ce site regroupe un blog pour les annonces journalières, un wiki pour la documentations, et un forum pour les traces de discussions.
 Maintenant en avant KDE, et que le projet avance &amp;hellip;</description>
     </item>
     
     <item>
       <title>Projet KDE/Umbrello</title>
-      <link>https://geojoy.me/post---copy/projet-kdeumbrello/</link>
+      <link>http://geojoy.me/post---copy/projet-kdeumbrello/</link>
       <pubDate>Mon, 16 Oct 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/projet-kdeumbrello/</guid>
+      <guid>http://geojoy.me/post---copy/projet-kdeumbrello/</guid>
       <description>Le BE du Master ISI vient de commencer, il s&amp;rsquo;agit (pour une fois) d&amp;rsquo;un sujet intéressant : nous reprenons un projet actif, développé par les contributeurs KDE Umbrello, le but du projet sera le portage vers QT/KDE 4, l&amp;rsquo;ajout des fonctionnalités pour utiliser UML 2.0.
 Pour plus d&amp;rsquo;informations, veuillez consulter le site Umbrello, et le site de suivi du projet Umbrello.</description>
     </item>
     
     <item>
       <title>Voila c&#39;est dur d&#39;être un ISI ...</title>
-      <link>https://geojoy.me/post---copy/voila-cest-dur-detre-un-isi/</link>
+      <link>http://geojoy.me/post---copy/voila-cest-dur-detre-un-isi/</link>
       <pubDate>Thu, 05 Oct 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/voila-cest-dur-detre-un-isi/</guid>
+      <guid>http://geojoy.me/post---copy/voila-cest-dur-detre-un-isi/</guid>
       <description>Pourquoi on est pas comme tous les autres 20h de cours par semaine ? Non 45h ! J&amp;rsquo;en ai marre des cours, je me fais chier, l&amp;rsquo;école est trop &amp;ldquo;scolaire&amp;rdquo; même dans ma formation dites professionnalisée. Pourquoi cela ne m&amp;rsquo;intéresse plus ? Aurais-je perdu ma passion ? ou simplement un raz le bol &amp;hellip;
 Vous savez quoi mon projet d&amp;rsquo;aller élever des chèvres dans le larzac, mais j&amp;rsquo;y pense, mais j&amp;rsquo;y pense &amp;hellip; :-) .</description>
     </item>
     
     <item>
       <title>Une soirée bien arrosée ... ^^</title>
-      <link>https://geojoy.me/post---copy/une-soiree-bien-arrosee/</link>
+      <link>http://geojoy.me/post---copy/une-soiree-bien-arrosee/</link>
       <pubDate>Fri, 29 Sep 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/une-soiree-bien-arrosee/</guid>
+      <guid>http://geojoy.me/post---copy/une-soiree-bien-arrosee/</guid>
       <description>Soirée avec Bogdan, Jon, mon ptit ange, et Moi.</description>
     </item>
     
     <item>
       <title>Je suis en vacances, je suis en vacances, je suis, je suis ....</title>
-      <link>https://geojoy.me/post---copy/je-suis-en-vacances-je-suis-en-vacances-je-suis-je-suis/</link>
+      <link>http://geojoy.me/post---copy/je-suis-en-vacances-je-suis-en-vacances-je-suis-je-suis/</link>
       <pubDate>Tue, 05 Sep 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/je-suis-en-vacances-je-suis-en-vacances-je-suis-je-suis/</guid>
+      <guid>http://geojoy.me/post---copy/je-suis-en-vacances-je-suis-en-vacances-je-suis-je-suis/</guid>
       <description>Tout est dans le titre comme vous pouvez le deviner, lol, JE SUIS EN VACANCES depuis cette aprem, plus de stage, fini !, plus de rapport, fini aussi, et plus de soutenance finie ! Maintenant farniente et grasse mat&amp;rsquo; jusqu&amp;rsquo;au 18 septembre.</description>
     </item>
     
     <item>
       <title>Pré soutenance OK ^^</title>
-      <link>https://geojoy.me/post---copy/pre-soutenance-ok/</link>
+      <link>http://geojoy.me/post---copy/pre-soutenance-ok/</link>
       <pubDate>Thu, 31 Aug 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/pre-soutenance-ok/</guid>
+      <guid>http://geojoy.me/post---copy/pre-soutenance-ok/</guid>
       <description>Visiblement mon travail a porté ses fruits (oui la chance ne m&amp;rsquo;a pas abandonnée finalement, juste un peu délaissée quelques temps), quelques remarques sur la structuration de mon explication ^^ mais tout le monde sait que je ne suis jamais clair dans mes explications lol. Sinon voila, ça c&amp;rsquo;est bien passé ! Maintenant en attente de l&amp;rsquo;officielle, je vais bosser mon rapport et souffler un peu.</description>
     </item>
     
     <item>
       <title>Plus qu&#39;un jour, mouahahahahahahah</title>
-      <link>https://geojoy.me/post---copy/plus-quun-jour-mouahahahahahahah/</link>
+      <link>http://geojoy.me/post---copy/plus-quun-jour-mouahahahahahahah/</link>
       <pubDate>Wed, 30 Aug 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/plus-quun-jour-mouahahahahahahah/</guid>
+      <guid>http://geojoy.me/post---copy/plus-quun-jour-mouahahahahahahah/</guid>
       <description>Bientôt fini mon calvaire d&amp;rsquo;universitaire : stagiaire ! Maintenant, il va falloir bosser sec, pour finir le rapport, préparer la soutenance &amp;hellip; Passer la soutenance sur un composant qui a été développé 4 fois depuis zéro de manière différentes lol et qui biensur ne fonctionnera jamais. Heureusement que je n&amp;rsquo;ai pas fait que ça !</description>
     </item>
     
     <item>
       <title>A 23 ans, on se croit tjrs immortel ...</title>
-      <link>https://geojoy.me/post---copy/a-23-ans-on-se-croit-tjrs-immortel/</link>
+      <link>http://geojoy.me/post---copy/a-23-ans-on-se-croit-tjrs-immortel/</link>
       <pubDate>Wed, 26 Jul 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/a-23-ans-on-se-croit-tjrs-immortel/</guid>
+      <guid>http://geojoy.me/post---copy/a-23-ans-on-se-croit-tjrs-immortel/</guid>
       <description>Je viens de me prendre une grosse claque dans la gueule. Après 1 semaine, de douleur supportable, est arrivé ce qu&amp;rsquo;il devait arriver, j&amp;rsquo;ai été conduis aux Urgences, résultats pas très jouasses :s, j&amp;rsquo;ai fini aux soins intensifs où j&amp;rsquo;y ai passé plus de 5 jours, connecté à d&amp;rsquo;innombrable tuyaux, machines pour me remettre l&amp;rsquo;aplomb. Il semblerait encore cette fois que ma chance ne m&amp;rsquo;ai pas abandonnée, et je voudrais remercier une personne chère à mon coeur qui a été là quand il le fallait et grâce à qui mon moral n&amp;rsquo;a pas flanché ^^.</description>
     </item>
     
     <item>
       <title>Tjrs pas Internet ....</title>
-      <link>https://geojoy.me/post---copy/tjrs-pas-internet/</link>
+      <link>http://geojoy.me/post---copy/tjrs-pas-internet/</link>
       <pubDate>Wed, 19 Oct 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/tjrs-pas-internet/</guid>
+      <guid>http://geojoy.me/post---copy/tjrs-pas-internet/</guid>
       <description>J&amp;rsquo;annonce au jour d&amp;rsquo;aujourd&amp;rsquo;hui que je n&amp;rsquo;ai tjrs pas Internet depuis 1mois 6jrs. Les autorités compétentes (devrais je dire incompétentes) donne tjrs la m^eme phrase : &amp;ldquo;ça sera fait dans la semaine !!!&amp;rdquo;.</description>
     </item>
     
     <item>
       <title>Toujours pas Internet ....</title>
-      <link>https://geojoy.me/post---copy/toujours-pas-internet/</link>
+      <link>http://geojoy.me/post---copy/toujours-pas-internet/</link>
       <pubDate>Mon, 03 Oct 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/toujours-pas-internet/</guid>
+      <guid>http://geojoy.me/post---copy/toujours-pas-internet/</guid>
       <description>Ouiiinnnnnnnnn, je veux internet dans ma chambreeeeee ! Sinon freebox ! Les newsgroups me manquent ! Sinon ça va bien, samedi je suis allé voir un match au Stade Toulousain. Vive Toulouse !</description>
     </item>
     
     <item>
       <title>Des nouvelles de Toulouse ....</title>
-      <link>https://geojoy.me/post---copy/des-nouvelles-de-toulouse/</link>
+      <link>http://geojoy.me/post---copy/des-nouvelles-de-toulouse/</link>
       <pubDate>Wed, 21 Sep 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/des-nouvelles-de-toulouse/</guid>
+      <guid>http://geojoy.me/post---copy/des-nouvelles-de-toulouse/</guid>
       <description>Et voila après quelques problèmes divers, je suis installé à Toulouse en chambre rénové : résultats Nice = voleurs.
 Pourquoi ? Douche + Toilette + Prise réseau (Internet + LAN) + Prise internet + Chambre Neuve = 198 euros sans APL. Voila donc venez à Toulouse c&amp;rsquo;est mieux et moins cher ! Je mettrais des photos de ma chambre plus tard quand j&amp;rsquo;aurais internet dans ma chambre, c&amp;rsquo;est à dire demain (normalement !</description>
     </item>

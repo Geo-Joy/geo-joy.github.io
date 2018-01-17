@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Colons on Geo&#39;z Blog</title>
-    <link>https://geojoy.me/tags/colons/</link>
+    <link>http://geojoy.me/tags/colons/</link>
     <description>Recent content in Colons on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 05 Aug 2008 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://geojoy.me/tags/colons/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://geojoy.me/tags/colons/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Katan : Colons de catane, modélisation.</title>
-      <link>https://geojoy.me/post---copy/katan-colons-de-catane-modelisation/</link>
+      <link>http://geojoy.me/post---copy/katan-colons-de-catane-modelisation/</link>
       <pubDate>Tue, 05 Aug 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/katan-colons-de-catane-modelisation/</guid>
+      <guid>http://geojoy.me/post---copy/katan-colons-de-catane-modelisation/</guid>
       <description>Bonsoir à tous, ça fait un petit bout de temps que ce modèle traine sur mon PC, je suis en train de faire le ménage en vue de changement de matériel, et j&amp;rsquo;ai donc décidé de publier ce modèle. Il est a prendre comme il est, il nécessite certainement un travail de &amp;ldquo;refactoring&amp;rdquo;, cependant ce n&amp;rsquo;est pas le diagramme de classe final.
 
 A vous les retours, si vous en avez !</description>

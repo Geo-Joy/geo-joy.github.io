@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Khs on Geo&#39;z Blog</title>
-    <link>https://geojoy.me/tags/khs/</link>
+    <link>http://geojoy.me/tags/khs/</link>
     <description>Recent content in Khs on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 30 Sep 2007 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://geojoy.me/tags/khs/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://geojoy.me/tags/khs/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Ateliers KDE - Septembre 2007</title>
-      <link>https://geojoy.me/post---copy/ateliers-kde-septembre-2007/</link>
+      <link>http://geojoy.me/post---copy/ateliers-kde-septembre-2007/</link>
       <pubDate>Sun, 30 Sep 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/ateliers-kde-septembre-2007/</guid>
+      <guid>http://geojoy.me/post---copy/ateliers-kde-septembre-2007/</guid>
       <description>L&amp;rsquo;atelier KDE a eu lieu ce Samedi 29 Septembre à Toulouse (chez luxtin), au programme : accueil d&amp;rsquo;une nouvelle arrivante, initiation à l&amp;rsquo;outil KBabel et à la traduction dans KDE. Pour ma part, j&amp;rsquo;ai commencé à écrire des tutoriaux pour la mise en place &amp;amp; compilation des projets Ksirk, et Kopete, pour éviter de reproduire les problèmes de l&amp;rsquo;année dernière, et surtout éviter de dégouter les étudiants.</description>
     </item>
     

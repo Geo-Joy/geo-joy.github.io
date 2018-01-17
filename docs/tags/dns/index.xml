@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dns on Geo&#39;z Blog</title>
-    <link>https://geojoy.me/tags/dns/</link>
+    <link>http://geojoy.me/tags/dns/</link>
     <description>Recent content in Dns on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 21 Jan 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://geojoy.me/tags/dns/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://geojoy.me/tags/dns/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Domain Typosquatting</title>
-      <link>https://geojoy.me/project---copy/domain-typosquatting/</link>
+      <link>http://geojoy.me/project---copy/domain-typosquatting/</link>
       <pubDate>Sat, 21 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/project---copy/domain-typosquatting/</guid>
+      <guid>http://geojoy.me/project---copy/domain-typosquatting/</guid>
       <description>Bonne Année à toutes et à tous !
  Il existe plusieurs techniques pour avoir des domaines proches du domaine original. Le typosquatting est une manière de crédibiliser un phishing.
 Homoglyphes  Il était une fois l&amp;rsquo;ASCII &amp;hellip;
@@ -26,10 +26,10 @@ Homoglyphes  Il était une fois l&amp;rsquo;ASCII &amp;hellip;
     
     <item>
       <title>Activation de l&#39;IPv6 et DANE</title>
-      <link>https://geojoy.me/post---copy/activation-ipv6-dane/</link>
+      <link>http://geojoy.me/post---copy/activation-ipv6-dane/</link>
       <pubDate>Sat, 19 Sep 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/activation-ipv6-dane/</guid>
+      <guid>http://geojoy.me/post---copy/activation-ipv6-dane/</guid>
       <description>L&amp;rsquo;IPv6 est une version du protocole IP. Cette spécification vient après la 5eme du nom qui n&amp;rsquo;a jamais été identifiée comme IPv5.
 Actuellement Internet est un espace de machine adressées par IP, cependant avec l&amp;rsquo;explosion des machines, serveurs et autres IoT (Internet Of Thing : objets connectés) l&amp;rsquo;espace d&amp;rsquo;adressage publique devient limité.
 Une IPv4 est un nombre entier codé en 32bits ce qui représente 4 294 967 296 (2^32) adresses utilisables au total.</description>
@@ -37,10 +37,10 @@ Une IPv4 est un nombre entier codé en 32bits ce qui représente 4 294 967 296 (
     
     <item>
       <title>Filtrer les serveurs de publicités avec Unbound</title>
-      <link>https://geojoy.me/post---copy/filtrer-serveurs-pubs-avec-unbound/</link>
+      <link>http://geojoy.me/post---copy/filtrer-serveurs-pubs-avec-unbound/</link>
       <pubDate>Sat, 22 Aug 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/filtrer-serveurs-pubs-avec-unbound/</guid>
+      <guid>http://geojoy.me/post---copy/filtrer-serveurs-pubs-avec-unbound/</guid>
       <description>Pour faire suite à l&amp;rsquo;installation d&amp;rsquo;Unbound sur votre réseau personnel, vous pouvez mettre à profit ce dispositif afin de pouvoir filtrer les requêtes de résolution DNS.
 Il faut une source de données (Yoyo) listant les serveurs de publicités connues, cette liste doit être tranformée pour être ajouté en résolution locale sur le serveur Unbound.
 Tous les serveurs de publicités vout être résolus en 127.0.0.1, ce qui empêchera l&amp;rsquo;accès à ces serveurs.</description>
@@ -48,10 +48,10 @@ Tous les serveurs de publicités vout être résolus en 127.0.0.1, ce qui empêc
     
     <item>
       <title>Installer un resolveur DNS sur son Raspberry PI</title>
-      <link>https://geojoy.me/post---copy/installer-resolveur-dns-raspberry-pi/</link>
+      <link>http://geojoy.me/post---copy/installer-resolveur-dns-raspberry-pi/</link>
       <pubDate>Tue, 11 Aug 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/installer-resolveur-dns-raspberry-pi/</guid>
+      <guid>http://geojoy.me/post---copy/installer-resolveur-dns-raspberry-pi/</guid>
       <description>Afin d&amp;rsquo;optimiser et de fiabiliser votre accès internet à la maison, je vous propose d&amp;rsquo;installer un resolveur DNS unbound comme relai à dnscrypt-proxy permettant de faire des requêtes DNS chiffrées (en attendant la généralisation de DNSSEC).
 Pour cela, vous aurez besoin :
  D&amp;rsquo;un raspberry pi (1 ou 2); Archlinux installé sur le raspberry; de temps.  DNSCrypt c&amp;rsquo;est quoi ? : DNSCrypt est un protocole qui tente de sécuriser le protocole DNS à l&amp;rsquo;aide de la librairie Sodium (NaCl), utilisée notamment dans le chiffrement et l&amp;rsquo;authentification pour ZMQ.</description>
@@ -59,10 +59,10 @@ Pour cela, vous aurez besoin :
     
     <item>
       <title>J&#39;ai ma ligne, mais pas de Freebox !</title>
-      <link>https://geojoy.me/post---copy/jai-ma-ligne-mais-pas-de-freebox/</link>
+      <link>http://geojoy.me/post---copy/jai-ma-ligne-mais-pas-de-freebox/</link>
       <pubDate>Tue, 28 Oct 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/jai-ma-ligne-mais-pas-de-freebox/</guid>
+      <guid>http://geojoy.me/post---copy/jai-ma-ligne-mais-pas-de-freebox/</guid>
       <description>Je viens de recevoir mon avis d&amp;rsquo;activation de ligne : hourra enfin !
 Cependant, je n&amp;rsquo;ai pas reçu de Freebox, donc voici comment vous connecter au réseau Free sans avoir la freeboite.
 J&amp;rsquo;ai récupéré du fond de mes placards mon bon vieux Netgear DG834Gv2, que j&amp;rsquo;ai flashé en passant (firmware 3.01.32). Pour ceux qui ne connaissent pas la procédure, je vous invite à consulter un très bon site à ce sujet [Tutorial DG834G].</description>
@@ -70,10 +70,10 @@ J&amp;rsquo;ai récupéré du fond de mes placards mon bon vieux Netgear DG834Gv
     
     <item>
       <title>Exploit DNS toujours possible ...</title>
-      <link>https://geojoy.me/post---copy/exploit-dns-toujours-possible/</link>
+      <link>http://geojoy.me/post---copy/exploit-dns-toujours-possible/</link>
       <pubDate>Sat, 30 Aug 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/exploit-dns-toujours-possible/</guid>
+      <guid>http://geojoy.me/post---copy/exploit-dns-toujours-possible/</guid>
       <description>Cela fait plus de 3 semaines que j&amp;rsquo;ai effectué le scan pour voir si mon fournisseur était vulnérable, et il l&amp;rsquo;était. Aujourd&amp;rsquo;hui rien à changer, sauf mon sentiment de paranoïa qui monte un peu quand je vois des alertes SSL.
 Solution tout dans VPN pour être sûr !
 Je tiens à préciser que mon fournisseur n&amp;rsquo;est pas un fournisseur public, j&amp;rsquo;utilise un accès groupé à internet (Internet de la résidence).</description>
@@ -81,10 +81,10 @@ Je tiens à préciser que mon fournisseur n&amp;rsquo;est pas un fournisseur pub
     
     <item>
       <title>Dan Kaminsky exploit &#43; Metasploit &#43; Evilgrade = Duuuuuuuuude</title>
-      <link>https://geojoy.me/post---copy/dan-kaminsky-metasploit-evilgrade-duuuuuuuuude/</link>
+      <link>http://geojoy.me/post---copy/dan-kaminsky-metasploit-evilgrade-duuuuuuuuude/</link>
       <pubDate>Tue, 05 Aug 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/dan-kaminsky-metasploit-evilgrade-duuuuuuuuude/</guid>
+      <guid>http://geojoy.me/post---copy/dan-kaminsky-metasploit-evilgrade-duuuuuuuuude/</guid>
       <description>Je ne sais pas si vous êtes au courant mais une vulnérabilité a été découverte par Dan Kaminsky sur les implémentations des serveurs DNS, permettant à un petit malin de faire du DNS-Poisoning (corrompre des entrées d&amp;rsquo;un serveur DNS, pour faire pointer par ex : static.zenithar.org sur une autre ip &amp;hellip;), vous allez me dire normal si je suis admin de mon serveur DNS, cependant pas si normal puisque la vulnérabilité est rendu très facilement exploitable en utilisant l&amp;rsquo;excellent Metasploit (c&amp;rsquo;est comme les sushis j&amp;rsquo;adore !</description>
     </item>
     

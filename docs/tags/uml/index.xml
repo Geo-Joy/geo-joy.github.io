@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Uml on Geo&#39;z Blog</title>
-    <link>https://geojoy.me/tags/uml/</link>
+    <link>http://geojoy.me/tags/uml/</link>
     <description>Recent content in Uml on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 19 Mar 2011 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://geojoy.me/tags/uml/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://geojoy.me/tags/uml/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Acceleo 3.0 et les attributs de classe UML.</title>
-      <link>https://geojoy.me/post---copy/acceleo-3-0-et-les-attributs-de-classe-uml/</link>
+      <link>http://geojoy.me/post---copy/acceleo-3-0-et-les-attributs-de-classe-uml/</link>
       <pubDate>Sat, 19 Mar 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/acceleo-3-0-et-les-attributs-de-classe-uml/</guid>
+      <guid>http://geojoy.me/post---copy/acceleo-3-0-et-les-attributs-de-classe-uml/</guid>
       <description>Ah lala ça fait depuis quelque temps que j&amp;rsquo;utilise Acceleo pour faire pas de mal de chose (Génération de code Java, Docbook, etc.), et bon j&amp;rsquo;ai été confronté à un problème particulier. Il faut savoir que dans le métamodele UML, la liste des attributs (Property) est marqué comme unordered, ce qui a pour effet dans Acceleo suite à des générations successives de mélanger les attributs de votre classe.
 Vous me direz pas très grave pour un bean Java, mais ça devient plus compliqué quand celui-ci est un bean à persistance (type JPA).</description>
     </item>
     
     <item>
       <title>Katan : Colons de catane, modélisation.</title>
-      <link>https://geojoy.me/post---copy/katan-colons-de-catane-modelisation/</link>
+      <link>http://geojoy.me/post---copy/katan-colons-de-catane-modelisation/</link>
       <pubDate>Tue, 05 Aug 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/katan-colons-de-catane-modelisation/</guid>
+      <guid>http://geojoy.me/post---copy/katan-colons-de-catane-modelisation/</guid>
       <description>Bonsoir à tous, ça fait un petit bout de temps que ce modèle traine sur mon PC, je suis en train de faire le ménage en vue de changement de matériel, et j&amp;rsquo;ai donc décidé de publier ce modèle. Il est a prendre comme il est, il nécessite certainement un travail de &amp;ldquo;refactoring&amp;rdquo;, cependant ce n&amp;rsquo;est pas le diagramme de classe final.
 
 A vous les retours, si vous en avez !</description>
@@ -34,19 +34,19 @@ A vous les retours, si vous en avez !</description>
     
     <item>
       <title>XMI-G : XMI Generator</title>
-      <link>https://geojoy.me/post---copy/xmi-g-xmi-generator/</link>
+      <link>http://geojoy.me/post---copy/xmi-g-xmi-generator/</link>
       <pubDate>Fri, 08 Feb 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/xmi-g-xmi-generator/</guid>
+      <guid>http://geojoy.me/post---copy/xmi-g-xmi-generator/</guid>
       <description>Deuxieme plugin pour RoR, permettant cette fois de produire une application RoR, directement depuis un modèle UML exporté en XMI. J&amp;rsquo;ai défini un profil XMI, ajoutant ainsi des extensions au méta modèle. Le générateur utilise ces informations dans le but d&amp;rsquo;initialiser les modèles, controleurs, et vues (c&amp;rsquo;est possible aussi) RoR (Validations automatiques, génération des tests Rspec, etc. ). Bon pour l&amp;rsquo;instant c&amp;rsquo;est correct dans le texte, c&amp;rsquo;est fonctionnel en partie, reste plus qu&amp;rsquo;à intégrer le tout.</description>
     </item>
     
     <item>
       <title>Objecteering : Modeleur UML basé sur MDA.</title>
-      <link>https://geojoy.me/post---copy/objecteering-modeleur-uml-base-sur-mda/</link>
+      <link>http://geojoy.me/post---copy/objecteering-modeleur-uml-base-sur-mda/</link>
       <pubDate>Wed, 09 May 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/objecteering-modeleur-uml-base-sur-mda/</guid>
+      <guid>http://geojoy.me/post---copy/objecteering-modeleur-uml-base-sur-mda/</guid>
       <description>http://www.objecteering.com/
 Au programme :
  Génération de code (C++ / Java / Corba / Fortran &amp;hellip;) Gestion des exigences Production de documentation Gestion des métriques  Que du bonheur, pour analyste programmeur &amp;hellip;</description>

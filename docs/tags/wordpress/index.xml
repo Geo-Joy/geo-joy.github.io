@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Wordpress on Geo&#39;z Blog</title>
-    <link>https://geojoy.me/tags/wordpress/</link>
+    <link>http://geojoy.me/tags/wordpress/</link>
     <description>Recent content in Wordpress on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 18 Feb 2012 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://geojoy.me/tags/wordpress/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://geojoy.me/tags/wordpress/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Bye bye Wordpress</title>
-      <link>https://geojoy.me/post---copy/bye-bye-wordpress/</link>
+      <link>http://geojoy.me/post---copy/bye-bye-wordpress/</link>
       <pubDate>Sat, 18 Feb 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/bye-bye-wordpress/</guid>
+      <guid>http://geojoy.me/post---copy/bye-bye-wordpress/</guid>
       <description>Au revoir, Wordpress, et dîtes bonjour à Octopress, j&amp;rsquo;ai eu envie de migrer mon blog sur cette solution, car depuis quelques temps, je cherchais de plus en plus à rendre mon blog statique pour des raisons de performances mais aussi pour les petits malins qui tente par bruteforce de trouver le mdp d&amp;rsquo;administration du blog Wordpress.
 J&amp;rsquo;ai choisi une migration vers une solution moins fournie mais correspondant plus à mes besoins, tout en allégeant le serveur car le blog est entièrement statique.</description>
     </item>
     
     <item>
       <title>Un petit vent de fraîcheur avant l&#39;automne.</title>
-      <link>https://geojoy.me/post---copy/un-petit-vent-de-fraicheur-avant-lautomne/</link>
+      <link>http://geojoy.me/post---copy/un-petit-vent-de-fraicheur-avant-lautomne/</link>
       <pubDate>Tue, 09 Sep 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/un-petit-vent-de-fraicheur-avant-lautomne/</guid>
+      <guid>http://geojoy.me/post---copy/un-petit-vent-de-fraicheur-avant-lautomne/</guid>
       <description>Un nouveau thème, du nettoyage et il pleut ! Ne serait ce pas l&amp;rsquo;arrivée de l&amp;rsquo;automne ?
 Et bien oui, le blog a bronzé pendant les vacances alors il change de tête pour l&amp;rsquo;instant j&amp;rsquo;ai changé le squelette en me basant sur HemingwayEx, avec un peu de retouche CSS (Moi j&amp;rsquo;aime pas le webdesign) .
 Voila, bon je vais revoir un peu la typo pour la lisibilité, qu&amp;rsquo;en pensez vous de ce nouveau thème ?</description>
@@ -34,10 +34,10 @@ Voila, bon je vais revoir un peu la typo pour la lisibilité, qu&amp;rsquo;en pe
     
     <item>
       <title>PathInfo vers Url-rewriting</title>
-      <link>https://geojoy.me/post---copy/pathinfo-vers-url-rewriting/</link>
+      <link>http://geojoy.me/post---copy/pathinfo-vers-url-rewriting/</link>
       <pubDate>Wed, 23 Jul 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/pathinfo-vers-url-rewriting/</guid>
+      <guid>http://geojoy.me/post---copy/pathinfo-vers-url-rewriting/</guid>
       <description>Comme je suis passé à Wordpress 2.6, et que j&amp;rsquo;ai découvert au même moment que mon hébergeur (tuxfamily.org) avait activé mod_rewrite, j&amp;rsquo;ai donc eu des petits problèmes à cause des URL type : index.php/post, qui n&amp;rsquo;étaient plus atteignable (Erreur 404).
 J&amp;rsquo;ai donc écrit une règle dans mon .htaccess
 # BEGIN CustomRules &amp;lt;IfModule mod_rewrite.c&amp;gt; RewriteEngine On RewriteBase / RewriteCond %{REQUEST_URI} ^.*/index\.php/post/.* RewriteRule index.php/post/(.*) /$1 [QSA,R=301,L] RewriteCond %{REQUEST_URI} ^.*/index\.php/.*feed RewriteRule index.php/(.*)feed /$1feed [QSA,R=301,L] &amp;lt;/IfModule&amp;gt; # END CustomRules  </description>
@@ -45,38 +45,38 @@ J&amp;rsquo;ai donc écrit une règle dans mon .htaccess
     
     <item>
       <title>Passage à Wordpress 2.6</title>
-      <link>https://geojoy.me/post---copy/passage-a-wordpress-26/</link>
+      <link>http://geojoy.me/post---copy/passage-a-wordpress-26/</link>
       <pubDate>Fri, 18 Jul 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/passage-a-wordpress-26/</guid>
+      <guid>http://geojoy.me/post---copy/passage-a-wordpress-26/</guid>
       <description>Une mise à jour plutôt sous le signe de la galère &amp;hellip; En général ça se passe sans pb ! Bien pas cette fois !
  Problème de reconnaissance du préfixe de la base Autorisations révoquées Import partiel &amp;hellip; Activation de l&amp;rsquo;URL Rewriting chez TuxFamily, donc toutes les pages en 404 Problèmes de référencements Que du bonheur &amp;hellip;  Normalement tout est revenu à la normal. Avec un redirect 301 pour corriger le problème de PATHINFO.</description>
     </item>
     
     <item>
       <title>Migration vers www.zenithar.org</title>
-      <link>https://geojoy.me/post---copy/migration-vers-wwwzenitharorg/</link>
+      <link>http://geojoy.me/post---copy/migration-vers-wwwzenitharorg/</link>
       <pubDate>Thu, 11 Oct 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/migration-vers-wwwzenitharorg/</guid>
+      <guid>http://geojoy.me/post---copy/migration-vers-wwwzenitharorg/</guid>
       <description>Je suis en train de migrer mon blog, vers une nouvelle plateforme d&amp;rsquo;hébergement, car celle de Free est bien trop lente et restrictive pour mes besoins (ceci étant le résultat d&amp;rsquo;un &amp;ldquo;Digg&amp;rdquo; effect ^^). Il est fort possible qu&amp;rsquo;il y ait encore des problèmes non résolus, merci de votre compréhension.</description>
     </item>
     
     <item>
       <title>Migration vers wordpress 2.3, ouf j&#39;y suis !</title>
-      <link>https://geojoy.me/post---copy/migration-vers-wordpress-23-ouf-jy-suis/</link>
+      <link>http://geojoy.me/post---copy/migration-vers-wordpress-23-ouf-jy-suis/</link>
       <pubDate>Tue, 25 Sep 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/migration-vers-wordpress-23-ouf-jy-suis/</guid>
+      <guid>http://geojoy.me/post---copy/migration-vers-wordpress-23-ouf-jy-suis/</guid>
       <description>J&amp;rsquo;ai presque terminé la migration du blog vers Wordpress 2.3, encore quelques problèmes subsistes notament sur le support de certains plugins utilisés (fallait s&amp;rsquo;y attendre), ainsi qu&amp;rsquo;une erreur de base de données, et un problème avec un proxy qui m&amp;rsquo;affichait une page qui ne devrait pas être enfin, perte de temps, mais j&amp;rsquo;y suis arrivé !</description>
     </item>
     
     <item>
       <title>Migration vers WordPress 2.x</title>
-      <link>https://geojoy.me/post---copy/migration-vers-wordpress-2x/</link>
+      <link>http://geojoy.me/post---copy/migration-vers-wordpress-2x/</link>
       <pubDate>Wed, 11 Jul 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/migration-vers-wordpress-2x/</guid>
+      <guid>http://geojoy.me/post---copy/migration-vers-wordpress-2x/</guid>
       <description>Voila je viens de terminer la migration de mon Blog vers WordPress 2.x, lors de la migration DotClear 1.x vers 2.x, j&amp;rsquo;ai hésité mais voila le développement de DotClear est trop lent, alors je migre vers une autre solution, c&amp;rsquo;est la loi du marché ^^. Reste plus qu&amp;rsquo;a trouver un thème plus agréable.</description>
     </item>
     

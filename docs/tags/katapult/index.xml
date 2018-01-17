@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Katapult on Geo&#39;z Blog</title>
-    <link>https://geojoy.me/tags/katapult/</link>
+    <link>http://geojoy.me/tags/katapult/</link>
     <description>Recent content in Katapult on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 13 Feb 2008 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://geojoy.me/tags/katapult/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://geojoy.me/tags/katapult/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Encore mieux que Katapult ! Oui ça existe !</title>
-      <link>https://geojoy.me/post---copy/encore-mieux-que-katapult-oui-ca-existe/</link>
+      <link>http://geojoy.me/post---copy/encore-mieux-que-katapult-oui-ca-existe/</link>
       <pubDate>Wed, 13 Feb 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/encore-mieux-que-katapult-oui-ca-existe/</guid>
+      <guid>http://geojoy.me/post---copy/encore-mieux-que-katapult-oui-ca-existe/</guid>
       <description>Voici une application que j&amp;rsquo;ai trouvée par hasard en me perdant dans les méandres de l&amp;rsquo;Internet.
 http://www.hamunized.com/enso/
 Propose un lanceur d&amp;rsquo;application, mais pas uniquement cela ! il permet d&amp;rsquo;exécuter des opérations sur la sélection en cours : à partir d&amp;rsquo;une adresse sortir le plan GoogleMap, (mon préféré) transformer une expression LaTeX en image pendant que vous utilisez votre éditeur de texte favori, mettre en majuscule, traduire vers 7 langues, donner une définition, etc &amp;hellip; vraiment j&amp;rsquo;adore !</description>

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Migration on Geo&#39;z Blog</title>
-    <link>https://geojoy.me/tags/migration/</link>
+    <link>http://geojoy.me/tags/migration/</link>
     <description>Recent content in Migration on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 03 Jan 2013 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://geojoy.me/tags/migration/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://geojoy.me/tags/migration/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>De Octopress vers DocPad</title>
-      <link>https://geojoy.me/post---copy/de-octopress-vers-docpad/</link>
+      <link>http://geojoy.me/post---copy/de-octopress-vers-docpad/</link>
       <pubDate>Thu, 03 Jan 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/de-octopress-vers-docpad/</guid>
+      <guid>http://geojoy.me/post---copy/de-octopress-vers-docpad/</guid>
       <description>Il y a quelques temps, j&amp;rsquo;ai fait la migration de Worpress vers Octopress, cependant je n&amp;rsquo;étais pas vraiment satisfait.
 C&amp;rsquo;est un bon logiciel, forké de Jekyll, cependant je trouve qu&amp;rsquo;il est difficile à personnaliser et l&amp;rsquo;on se trouve souvent à avoir un blog qui ressemble à tous les utilisateurs d&amp;rsquo;Octopress.
 J&amp;rsquo;ai donc pris la décison de migrer (encore une fois), vers une autre solution de publication basé Markdown. Cette fois ce sera DocPad.</description>
@@ -24,20 +24,20 @@ J&amp;rsquo;ai donc pris la décison de migrer (encore une fois), vers une autre
     
     <item>
       <title>Bye bye Wordpress</title>
-      <link>https://geojoy.me/post---copy/bye-bye-wordpress/</link>
+      <link>http://geojoy.me/post---copy/bye-bye-wordpress/</link>
       <pubDate>Sat, 18 Feb 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/bye-bye-wordpress/</guid>
+      <guid>http://geojoy.me/post---copy/bye-bye-wordpress/</guid>
       <description>Au revoir, Wordpress, et dîtes bonjour à Octopress, j&amp;rsquo;ai eu envie de migrer mon blog sur cette solution, car depuis quelques temps, je cherchais de plus en plus à rendre mon blog statique pour des raisons de performances mais aussi pour les petits malins qui tente par bruteforce de trouver le mdp d&amp;rsquo;administration du blog Wordpress.
 J&amp;rsquo;ai choisi une migration vers une solution moins fournie mais correspondant plus à mes besoins, tout en allégeant le serveur car le blog est entièrement statique.</description>
     </item>
     
     <item>
       <title>Migration vers WordPress 2.x</title>
-      <link>https://geojoy.me/post---copy/migration-vers-wordpress-2x/</link>
+      <link>http://geojoy.me/post---copy/migration-vers-wordpress-2x/</link>
       <pubDate>Wed, 11 Jul 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/migration-vers-wordpress-2x/</guid>
+      <guid>http://geojoy.me/post---copy/migration-vers-wordpress-2x/</guid>
       <description>Voila je viens de terminer la migration de mon Blog vers WordPress 2.x, lors de la migration DotClear 1.x vers 2.x, j&amp;rsquo;ai hésité mais voila le développement de DotClear est trop lent, alors je migre vers une autre solution, c&amp;rsquo;est la loi du marché ^^. Reste plus qu&amp;rsquo;a trouver un thème plus agréable.</description>
     </item>
     

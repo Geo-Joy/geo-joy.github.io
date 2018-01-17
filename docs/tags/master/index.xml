@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Master on Geo&#39;z Blog</title>
-    <link>https://geojoy.me/tags/master/</link>
+    <link>http://geojoy.me/tags/master/</link>
     <description>Recent content in Master on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 25 May 2007 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://geojoy.me/tags/master/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://geojoy.me/tags/master/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>M1 ISI Yesturday, tomorrow you know  ?</title>
-      <link>https://geojoy.me/post---copy/m1-isi-yesturday-tomorrow-you-know/</link>
+      <link>http://geojoy.me/post---copy/m1-isi-yesturday-tomorrow-you-know/</link>
       <pubDate>Fri, 25 May 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/m1-isi-yesturday-tomorrow-you-know/</guid>
+      <guid>http://geojoy.me/post---copy/m1-isi-yesturday-tomorrow-you-know/</guid>
       <description>Voila c&amp;rsquo;est fait, sans le stage , j&amp;rsquo;ai mon semestre, ça a été tendu, mais c&amp;rsquo;est passé ^^. Donc maintenant reste plus qu&amp;rsquo;a choisir le M2, je pense me diriger vers la modélisation, en fait j&amp;rsquo;aime ça &amp;hellip;
 J&amp;rsquo;aime plus trop coder, mais modéliser pour générer ^^
 UML2.0 est une révélation pour moi, et surtout avoir bosser pour Umbrello.</description>
@@ -24,10 +24,10 @@ UML2.0 est une révélation pour moi, et surtout avoir bosser pour Umbrello.</de
     
     <item>
       <title>Stage Fin Master 1</title>
-      <link>https://geojoy.me/post---copy/stage-fin-master-1/</link>
+      <link>http://geojoy.me/post---copy/stage-fin-master-1/</link>
       <pubDate>Sun, 11 Mar 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/stage-fin-master-1/</guid>
+      <guid>http://geojoy.me/post---copy/stage-fin-master-1/</guid>
       <description>Voila, je vais effectuer mes 5 mois de stage de fin d&amp;rsquo;études de mon Master 1 chez OpenCube. Le stage se déroule en deux parties :
  Etat de l&amp;rsquo;art des normes de sous-titres pour le HD. Réalisation d&amp;rsquo;une API pour l&amp;rsquo;exploitation, le rendu de ces sous titres dans le format MXF. Ainsi que la réalisation de logiciels d&amp;rsquo;exploitation de cette API.  Début du stage le 2 Avril &amp;hellip; que j&amp;rsquo;attends avec impatience :) .</description>
     </item>

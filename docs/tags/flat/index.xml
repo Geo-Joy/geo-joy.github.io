@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Flat on Geo&#39;z Blog</title>
-    <link>https://geojoy.me/tags/flat/</link>
+    <link>http://geojoy.me/tags/flat/</link>
     <description>Recent content in Flat on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 18 Aug 2013 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://geojoy.me/tags/flat/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://geojoy.me/tags/flat/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Suivons la mode</title>
-      <link>https://geojoy.me/post---copy/suivons-la-mode/</link>
+      <link>http://geojoy.me/post---copy/suivons-la-mode/</link>
       <pubDate>Sun, 18 Aug 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/suivons-la-mode/</guid>
+      <guid>http://geojoy.me/post---copy/suivons-la-mode/</guid>
       <description>Encore une fois, je change de thème, bon cette fois je reste avec docpad.
 Je suis parti d&amp;rsquo;un nouveau framework CSS YUI PureCSS, j&amp;rsquo;utilisais Bootstrap Twitter, cependant je cherchais un thème type Flat.
 J&amp;rsquo;ai essayé d&amp;rsquo;adapter Bootstrap 3, mais je trouve que les changements sont trop importantq, et la philosophie `mobile first, j&amp;rsquo;ai du mal. J&amp;rsquo;ai donc pris la décision de changer le framework css, beaucoup plus léger.

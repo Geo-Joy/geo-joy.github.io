@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Wifi on Geo&#39;z Blog</title>
-    <link>https://geojoy.me/tags/wifi/</link>
+    <link>http://geojoy.me/tags/wifi/</link>
     <description>Recent content in Wifi on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 31 May 2008 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://geojoy.me/tags/wifi/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://geojoy.me/tags/wifi/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>WiFi McDO</title>
-      <link>https://geojoy.me/post---copy/wifi-mcdo/</link>
+      <link>http://geojoy.me/post---copy/wifi-mcdo/</link>
       <pubDate>Sat, 31 May 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/wifi-mcdo/</guid>
+      <guid>http://geojoy.me/post---copy/wifi-mcdo/</guid>
       <description>Ca y est j&amp;rsquo;ai testé, ça fait un moment que je dis : &amp;ldquo;faut que je teste pour voir !&amp;rdquo;. Bien ça y est , ça c&amp;rsquo;est fait ^^.
 Connexion plutôt stable, débit moyen (j&amp;rsquo;étais tout seul 100 Ko/s), pas mal de services bloqués; reste HTTP, et HTTPS; oubliez MSN lol mais bon ya SSH ^^ (que conseille vivement pour éviter la scrutation de traffic).
 Voila, c&amp;rsquo;est tout ^^.</description>

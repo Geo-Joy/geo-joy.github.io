@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ftp on Geo&#39;z Blog</title>
-    <link>https://geojoy.me/tags/ftp/</link>
+    <link>http://geojoy.me/tags/ftp/</link>
     <description>Recent content in Ftp on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 17 Oct 2013 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://geojoy.me/tags/ftp/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://geojoy.me/tags/ftp/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Git FTP</title>
-      <link>https://geojoy.me/post---copy/git-ftp/</link>
+      <link>http://geojoy.me/post---copy/git-ftp/</link>
       <pubDate>Thu, 17 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/git-ftp/</guid>
+      <guid>http://geojoy.me/post---copy/git-ftp/</guid>
       <description>Petite astuce pour ceux qui comme moi utilise un serveur mutualisé sans accès SSH et donc pas de Git ou rsync pour la publication des fichiers : git-ftp.
 Cela permet d&amp;rsquo;envoyer uniquement les fichiers qui ont été modifiés lors de la génération du site statique.
 Pour l&amp;rsquo;installation c&amp;rsquo;est tout simple sous Unix :

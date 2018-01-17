@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blockchain on Geo&#39;z Blog</title>
-    <link>https://geojoy.me/tags/blockchain/</link>
+    <link>http://geojoy.me/tags/blockchain/</link>
     <description>Recent content in Blockchain on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 14 Mar 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://geojoy.me/tags/blockchain/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://geojoy.me/tags/blockchain/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Blockchain privée sur Ethereum</title>
-      <link>https://geojoy.me/post---copy/blockchain-privee-ethereum/</link>
+      <link>http://geojoy.me/post---copy/blockchain-privee-ethereum/</link>
       <pubDate>Tue, 14 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/blockchain-privee-ethereum/</guid>
+      <guid>http://geojoy.me/post---copy/blockchain-privee-ethereum/</guid>
       <description>On entends de plus en plus parler des blochains c&amp;rsquo;est un buzzword à la mode mais derrière ce mot se cache un concept très simple (à la base).
  C&amp;rsquo;est une technologie de stockage et de transmission d&amp;rsquo;informations, transparente, sécurisée et fonctionnant sans organisme central de contrôle.
  Cela peut être vu comme un registre (ledger en anglais) dans lequel il n&amp;rsquo;est permit que d&amp;rsquo;écrire uniquement que des nouveaux enregistrements : les blocs.</description>

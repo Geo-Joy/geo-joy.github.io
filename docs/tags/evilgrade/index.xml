@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Evilgrade on Geo&#39;z Blog</title>
-    <link>https://geojoy.me/tags/evilgrade/</link>
+    <link>http://geojoy.me/tags/evilgrade/</link>
     <description>Recent content in Evilgrade on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 05 Aug 2008 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://geojoy.me/tags/evilgrade/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://geojoy.me/tags/evilgrade/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Dan Kaminsky exploit &#43; Metasploit &#43; Evilgrade = Duuuuuuuuude</title>
-      <link>https://geojoy.me/post---copy/dan-kaminsky-metasploit-evilgrade-duuuuuuuuude/</link>
+      <link>http://geojoy.me/post---copy/dan-kaminsky-metasploit-evilgrade-duuuuuuuuude/</link>
       <pubDate>Tue, 05 Aug 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/dan-kaminsky-metasploit-evilgrade-duuuuuuuuude/</guid>
+      <guid>http://geojoy.me/post---copy/dan-kaminsky-metasploit-evilgrade-duuuuuuuuude/</guid>
       <description>Je ne sais pas si vous êtes au courant mais une vulnérabilité a été découverte par Dan Kaminsky sur les implémentations des serveurs DNS, permettant à un petit malin de faire du DNS-Poisoning (corrompre des entrées d&amp;rsquo;un serveur DNS, pour faire pointer par ex : static.zenithar.org sur une autre ip &amp;hellip;), vous allez me dire normal si je suis admin de mon serveur DNS, cependant pas si normal puisque la vulnérabilité est rendu très facilement exploitable en utilisant l&amp;rsquo;excellent Metasploit (c&amp;rsquo;est comme les sushis j&amp;rsquo;adore !</description>
     </item>
     

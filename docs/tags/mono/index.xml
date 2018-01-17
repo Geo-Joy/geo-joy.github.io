@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mono on Geo&#39;z Blog</title>
-    <link>https://geojoy.me/tags/mono/</link>
+    <link>http://geojoy.me/tags/mono/</link>
     <description>Recent content in Mono on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 14 Aug 2005 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://geojoy.me/tags/mono/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://geojoy.me/tags/mono/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>HermS sous linux c&#39;est possible !</title>
-      <link>https://geojoy.me/post---copy/herms-sous-linux-cest-possible/</link>
+      <link>http://geojoy.me/post---copy/herms-sous-linux-cest-possible/</link>
       <pubDate>Sun, 14 Aug 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/herms-sous-linux-cest-possible/</guid>
+      <guid>http://geojoy.me/post---copy/herms-sous-linux-cest-possible/</guid>
       <description>Après une lutte acharnée pour la compilation du composant MyXaml sur mon ordinateur, la victoire vient s&amp;rsquo;offrir à nous. Je vous annonce que HermS marche sous Linux (moyennant plateforme Mono mais ça marche).</description>
     </item>
     

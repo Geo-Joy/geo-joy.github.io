@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Markdown on Geo&#39;z Blog</title>
-    <link>https://geojoy.me/tags/markdown/</link>
+    <link>http://geojoy.me/tags/markdown/</link>
     <description>Recent content in Markdown on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 03 Jan 2013 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://geojoy.me/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://geojoy.me/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>De Octopress vers DocPad</title>
-      <link>https://geojoy.me/post---copy/de-octopress-vers-docpad/</link>
+      <link>http://geojoy.me/post---copy/de-octopress-vers-docpad/</link>
       <pubDate>Thu, 03 Jan 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/de-octopress-vers-docpad/</guid>
+      <guid>http://geojoy.me/post---copy/de-octopress-vers-docpad/</guid>
       <description>Il y a quelques temps, j&amp;rsquo;ai fait la migration de Worpress vers Octopress, cependant je n&amp;rsquo;étais pas vraiment satisfait.
 C&amp;rsquo;est un bon logiciel, forké de Jekyll, cependant je trouve qu&amp;rsquo;il est difficile à personnaliser et l&amp;rsquo;on se trouve souvent à avoir un blog qui ressemble à tous les utilisateurs d&amp;rsquo;Octopress.
 J&amp;rsquo;ai donc pris la décison de migrer (encore une fois), vers une autre solution de publication basé Markdown. Cette fois ce sera DocPad.</description>

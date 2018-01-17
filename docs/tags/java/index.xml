@@ -2,41 +2,41 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Java on Geo&#39;z Blog</title>
-    <link>https://geojoy.me/tags/java/</link>
+    <link>http://geojoy.me/tags/java/</link>
     <description>Recent content in Java on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 20 May 2015 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://geojoy.me/tags/java/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://geojoy.me/tags/java/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Deux ans sans Java et ça va !</title>
-      <link>https://geojoy.me/post---copy/deux-ans-sans-java-et-ca-va/</link>
+      <link>http://geojoy.me/post---copy/deux-ans-sans-java-et-ca-va/</link>
       <pubDate>Wed, 20 May 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/deux-ans-sans-java-et-ca-va/</guid>
+      <guid>http://geojoy.me/post---copy/deux-ans-sans-java-et-ca-va/</guid>
       <description>J&amp;rsquo;ai quitté le monde de l&amp;rsquo;édition logiciel depuis bientôt 2 ans, pour retourner dans le domaine de la sécurité. J&amp;rsquo;occupe aujourd&amp;rsquo;hui un poste d&amp;rsquo;architecte technique au sein d&amp;rsquo;une équipe d&amp;rsquo;ingénieur sécurité divisés en deux camps : les offenseurs, et les défenseurs. Mon rôle est de fournir le plus rapidement possible des solutions aux deux &amp;ldquo;camps&amp;rdquo; pour attendre leurs objectifs.
 Au cours de ces 2 années, j&amp;rsquo;ai dû concevoir et réaliser de nombreux projets orientés sécurité : que ce soit de l&amp;rsquo;analyse de logs, à la réalisation d&amp;rsquo;une boîte blanche, en passant par du machine learning pour de la détection de comportements suspicieux.</description>
     </item>
     
     <item>
       <title>Notifications temps réel avec Socket.io et Java - Partie 1</title>
-      <link>https://geojoy.me/post---copy/notifications-socket-io-avec-java-part-1/</link>
+      <link>http://geojoy.me/post---copy/notifications-socket-io-avec-java-part-1/</link>
       <pubDate>Fri, 18 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/notifications-socket-io-avec-java-part-1/</guid>
+      <guid>http://geojoy.me/post---copy/notifications-socket-io-avec-java-part-1/</guid>
       <description>On parle aujourd&amp;rsquo;hui de plus en plus de communications bi-directionnelles asynchrones entre le client et le serveur. Ceci est possible grâce à des technologies comme :
  Les WebSockets Web Messaging (postMessage) Server Side Events  Java est un monde qui a du mal à évoluer (même si ça change un peu en ce moment : JSR 356 pour Java EE 7), il est souvent difficile d&amp;rsquo;avoir accès à de tels systèmes lors de leur sortie dans nos environnements Java.</description>
     </item>
     
     <item>
       <title>Personnalisez vos WAR avec un overlay Maven</title>
-      <link>https://geojoy.me/post---copy/personalisation-war-maven-overlay/</link>
+      <link>http://geojoy.me/post---copy/personalisation-war-maven-overlay/</link>
       <pubDate>Thu, 17 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/personalisation-war-maven-overlay/</guid>
+      <guid>http://geojoy.me/post---copy/personalisation-war-maven-overlay/</guid>
       <description>Le système de packaging WAR (Web Application Archive) est un format (ZIP) de distribution d&amp;rsquo;application java web. Il assemble les ressources statiques (html, css, js) avec le code compilé.
 Cependant, il arrive souvent que l&amp;rsquo;on ait le besoin de produire une application avec un &amp;ldquo;style&amp;rdquo; différent, dans ce cas deux possibilités :
  Gérer la gestion des thèmes dans l&amp;rsquo;application Utiliser un overlay pour personnaliser l&amp;rsquo;application  Le processus standard de modification est le suivant :</description>
@@ -44,10 +44,10 @@ Cependant, il arrive souvent que l&amp;rsquo;on ait le besoin de produire une ap
     
     <item>
       <title>Génération de code avec Maven et Freemarker</title>
-      <link>https://geojoy.me/post---copy/generation-de-code-avec-maven-et-freemarker/</link>
+      <link>http://geojoy.me/post---copy/generation-de-code-avec-maven-et-freemarker/</link>
       <pubDate>Thu, 24 Jan 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/generation-de-code-avec-maven-et-freemarker/</guid>
+      <guid>http://geojoy.me/post---copy/generation-de-code-avec-maven-et-freemarker/</guid>
       <description>J&amp;rsquo;utilise de plus en plus dans mes applications les évènements Spring car je trouve ça tout simplement pratique et cela offre un découplage simple et efficace des applications.
 Ces évènements sont à la fois des évènements de type Entity : Create, Delete, Update, mais aussi ils peuvent être Business. Ils sont représentés sous la forme de classes souvent en quantité.
 Je n&amp;rsquo;ai pas souvent l&amp;rsquo;occasion d&amp;rsquo;utiliser mes connaissances en métamodélisation, et ou génération de code, en entreprise, mais quand l&amp;rsquo;occasion se présente j&amp;rsquo;en profite.</description>
@@ -55,10 +55,10 @@ Je n&amp;rsquo;ai pas souvent l&amp;rsquo;occasion d&amp;rsquo;utiliser mes conn
     
     <item>
       <title>Pourquoi je n&#39;utiliserai plus Struts 2 à l&#39;avenir ...</title>
-      <link>https://geojoy.me/post---copy/pourquoi-je-nutiliserai-plus-struts-2-a-lavenir/</link>
+      <link>http://geojoy.me/post---copy/pourquoi-je-nutiliserai-plus-struts-2-a-lavenir/</link>
       <pubDate>Fri, 06 May 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/pourquoi-je-nutiliserai-plus-struts-2-a-lavenir/</guid>
+      <guid>http://geojoy.me/post---copy/pourquoi-je-nutiliserai-plus-struts-2-a-lavenir/</guid>
       <description>Voila ça fait 2 ans que je l&amp;rsquo;utilise et que je cherche à le mettre à la porte ! Toi développeur, je te déconseille fortement ce framework Web dit MVC &amp;hellip; Parce que c&amp;rsquo;est un mensonge . Surtout si comme moi tu viens du monde RoR / Node.JS, oublies-le ! Pauvre fou !
 C&amp;rsquo;est un framework Web 2.0 qui n&amp;rsquo;a que de 2.0 sa version de Struts.
 Voici une liste de principaux défauts :</description>
@@ -66,20 +66,20 @@ Voici une liste de principaux défauts :</description>
     
     <item>
       <title>Acceleo 3.0 et les attributs de classe UML.</title>
-      <link>https://geojoy.me/post---copy/acceleo-3-0-et-les-attributs-de-classe-uml/</link>
+      <link>http://geojoy.me/post---copy/acceleo-3-0-et-les-attributs-de-classe-uml/</link>
       <pubDate>Sat, 19 Mar 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/acceleo-3-0-et-les-attributs-de-classe-uml/</guid>
+      <guid>http://geojoy.me/post---copy/acceleo-3-0-et-les-attributs-de-classe-uml/</guid>
       <description>Ah lala ça fait depuis quelque temps que j&amp;rsquo;utilise Acceleo pour faire pas de mal de chose (Génération de code Java, Docbook, etc.), et bon j&amp;rsquo;ai été confronté à un problème particulier. Il faut savoir que dans le métamodele UML, la liste des attributs (Property) est marqué comme unordered, ce qui a pour effet dans Acceleo suite à des générations successives de mélanger les attributs de votre classe.
 Vous me direz pas très grave pour un bean Java, mais ça devient plus compliqué quand celui-ci est un bean à persistance (type JPA).</description>
     </item>
     
     <item>
       <title>Java c&#39;est mal !!!!!!!</title>
-      <link>https://geojoy.me/post---copy/java-cest-mal/</link>
+      <link>http://geojoy.me/post---copy/java-cest-mal/</link>
       <pubDate>Wed, 10 Aug 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/java-cest-mal/</guid>
+      <guid>http://geojoy.me/post---copy/java-cest-mal/</guid>
       <description>MAL, pas femelle, MALLE (au trésors), comme virtools ;-) &amp;hellip;..</description>
     </item>
     

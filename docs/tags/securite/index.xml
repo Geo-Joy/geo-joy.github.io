@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Securite on Geo&#39;z Blog</title>
-    <link>https://geojoy.me/tags/securite/</link>
+    <link>http://geojoy.me/tags/securite/</link>
     <description>Recent content in Securite on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 17 Sep 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://geojoy.me/tags/securite/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://geojoy.me/tags/securite/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Anvil: Challenge / Response Forge</title>
-      <link>https://geojoy.me/project---copy/anvil-password-challenge/</link>
+      <link>http://geojoy.me/project---copy/anvil-password-challenge/</link>
       <pubDate>Sun, 17 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/project---copy/anvil-password-challenge/</guid>
+      <guid>http://geojoy.me/project---copy/anvil-password-challenge/</guid>
       <description>EDITO: Un certains temps que je n&amp;rsquo;ai pas posté d&amp;rsquo;articles, cela a été mouvementé pour moi depuis Avril, j&amp;rsquo;ai changé d&amp;rsquo;entreprise quittant pour le coup tout un investissement intellectuel de 3 ans. Voilà, je suis passé à autre chose ^^
  Encore un dispositif d&amp;rsquo;identification pour Internet, pfff &amp;hellip; encore un !
  Oui mais non ^^
@@ -25,10 +25,10 @@
     
     <item>
       <title>La &#39;Threat Intelligence&#39; technique: Attention !</title>
-      <link>https://geojoy.me/post---copy/threat-intelligence/</link>
+      <link>http://geojoy.me/post---copy/threat-intelligence/</link>
       <pubDate>Thu, 13 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/threat-intelligence/</guid>
+      <guid>http://geojoy.me/post---copy/threat-intelligence/</guid>
       <description>Je travaille dans le domaine de la cybersécurité dans l&amp;rsquo;objectif de réaliser des produits pour une entreprise fournissant des services autour de la cybersécurité.
 J&amp;rsquo;ai réalisé un certains nombre de produits visant à outiller un SOC (Security Operations Center), et un CERT (Computer Emergency Response Team) de cette même société.
 Lors de la réalisation des services, j&amp;rsquo;ai été confronté à la demande de pouvoir aggréger de l&amp;rsquo;information provenant de sources diverses et variées, et de confiance tout autant diverse et variée, afin de faciliter les intégrations dans les équipements sécurité, ainsi que l&amp;rsquo;interrogation de dépôt de données.</description>
@@ -36,10 +36,10 @@ Lors de la réalisation des services, j&amp;rsquo;ai été confronté à la dema
     
     <item>
       <title>Butcher : Password Hasher</title>
-      <link>https://geojoy.me/project---copy/butcher-password-hasher/</link>
+      <link>http://geojoy.me/project---copy/butcher-password-hasher/</link>
       <pubDate>Wed, 29 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/project---copy/butcher-password-hasher/</guid>
+      <guid>http://geojoy.me/project---copy/butcher-password-hasher/</guid>
       <description>Lorsque l&amp;rsquo;on développe des applications ayant dans la majorité des cas des utilisateurs, sans lesquels nous pouvons nous poser la question sur l&amp;rsquo;utilité de celles-ci, vient une notion de compte d&#39;accès permettant d&amp;rsquo;identifier un utilisateur.
 Cette identification nécessite un mécanisme, le plus souvent un login et un mot de passe. Bien qu&amp;rsquo;il existe d&amp;rsquo;autres moyens d&amp;rsquo;identification cela reste le plus répandu.
 En outre des recommandations sur la qualité du mot de passe lui-même, il faut se poser la question de comment le stocker dans notre application, et surtout comment faire évoluer cette stratégie dans le temps.</description>
@@ -47,10 +47,10 @@ En outre des recommandations sur la qualité du mot de passe lui-même, il faut 
     
     <item>
       <title>NPM / YARN sans sudo</title>
-      <link>https://geojoy.me/post---copy/npm-yarn-sans-sudo/</link>
+      <link>http://geojoy.me/post---copy/npm-yarn-sans-sudo/</link>
       <pubDate>Mon, 20 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/npm-yarn-sans-sudo/</guid>
+      <guid>http://geojoy.me/post---copy/npm-yarn-sans-sudo/</guid>
       <description>NPM pour Node Package Manager est un gestionnaire de dépendances de NodeJS, puisqu&amp;rsquo;aujourd&amp;rsquo;hui il est existe plusieurs (notamment YARN).
 NPM $ npm config set prefix $HOME/.npmroot Cette commande va modifier votre fichier de configuration ~/.npmrc.
 Ajoutant la directive définissant le répertoire concerné par les installations globales -g.
@@ -59,10 +59,10 @@ $ npm install -g ionic cordova ... /home/zenithar/.npmroot/bin/cordova -&amp;gt;
     
     <item>
       <title>Blockchain privée sur Ethereum</title>
-      <link>https://geojoy.me/post---copy/blockchain-privee-ethereum/</link>
+      <link>http://geojoy.me/post---copy/blockchain-privee-ethereum/</link>
       <pubDate>Tue, 14 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/blockchain-privee-ethereum/</guid>
+      <guid>http://geojoy.me/post---copy/blockchain-privee-ethereum/</guid>
       <description>On entends de plus en plus parler des blochains c&amp;rsquo;est un buzzword à la mode mais derrière ce mot se cache un concept très simple (à la base).
  C&amp;rsquo;est une technologie de stockage et de transmission d&amp;rsquo;informations, transparente, sécurisée et fonctionnant sans organisme central de contrôle.
  Cela peut être vu comme un registre (ledger en anglais) dans lequel il n&amp;rsquo;est permit que d&amp;rsquo;écrire uniquement que des nouveaux enregistrements : les blocs.</description>
@@ -70,10 +70,10 @@ $ npm install -g ionic cordova ... /home/zenithar/.npmroot/bin/cordova -&amp;gt;
     
     <item>
       <title>Domain Typosquatting</title>
-      <link>https://geojoy.me/project---copy/domain-typosquatting/</link>
+      <link>http://geojoy.me/project---copy/domain-typosquatting/</link>
       <pubDate>Sat, 21 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/project---copy/domain-typosquatting/</guid>
+      <guid>http://geojoy.me/project---copy/domain-typosquatting/</guid>
       <description>Bonne Année à toutes et à tous !
  Il existe plusieurs techniques pour avoir des domaines proches du domaine original. Le typosquatting est une manière de crédibiliser un phishing.
 Homoglyphes  Il était une fois l&amp;rsquo;ASCII &amp;hellip;
@@ -83,10 +83,10 @@ Homoglyphes  Il était une fois l&amp;rsquo;ASCII &amp;hellip;
     
     <item>
       <title>Utiliser Tyk comme proxy VirusTotal</title>
-      <link>https://geojoy.me/post---copy/tyk-proxy-virustotal/</link>
+      <link>http://geojoy.me/post---copy/tyk-proxy-virustotal/</link>
       <pubDate>Fri, 15 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/tyk-proxy-virustotal/</guid>
+      <guid>http://geojoy.me/post---copy/tyk-proxy-virustotal/</guid>
       <description>Tyk, serveur proxy API Tyk.io est un reverse-proxy permettant de contrôller / monitorer les accès aux API.
 Le serveur, écrit en golang, est OpenSource et gratuit, mais la documentation n&amp;rsquo;est pas très simple d&amp;rsquo;accès. Il existe un dashboard payant exploitant les données de traffic du reverse-proxy.
 Avec Tyk, vous pouvez simplement ajouter :
@@ -95,10 +95,10 @@ Avec Tyk, vous pouvez simplement ajouter :
     
     <item>
       <title>Rétrospective 2015</title>
-      <link>https://geojoy.me/post---copy/retrospective-2015/</link>
+      <link>http://geojoy.me/post---copy/retrospective-2015/</link>
       <pubDate>Sun, 03 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/retrospective-2015/</guid>
+      <guid>http://geojoy.me/post---copy/retrospective-2015/</guid>
       <description>Bonne année à toutes et à tous !
 2015 a été plutôt riche comme année, sur le plan professionnel et personnel. Afin de repartir sur une nouvelle base, j&amp;rsquo;ai changé le thème de mon blog plus orienté &amp;ldquo;magazine&amp;rdquo;. Il est un peu plus lourd que l&amp;rsquo;ancien crisp, mais il est plus agréable à lire.
 J&amp;rsquo;ai ouvert le dépot du thème Ghost porté sur Hugo Bleak.
@@ -107,10 +107,10 @@ Mes projets Concrètement pour moi, c&amp;rsquo;est l&amp;rsquo;année du Go et 
     
     <item>
       <title>Activation de l&#39;IPv6 et DANE</title>
-      <link>https://geojoy.me/post---copy/activation-ipv6-dane/</link>
+      <link>http://geojoy.me/post---copy/activation-ipv6-dane/</link>
       <pubDate>Sat, 19 Sep 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/activation-ipv6-dane/</guid>
+      <guid>http://geojoy.me/post---copy/activation-ipv6-dane/</guid>
       <description>L&amp;rsquo;IPv6 est une version du protocole IP. Cette spécification vient après la 5eme du nom qui n&amp;rsquo;a jamais été identifiée comme IPv5.
 Actuellement Internet est un espace de machine adressées par IP, cependant avec l&amp;rsquo;explosion des machines, serveurs et autres IoT (Internet Of Thing : objets connectés) l&amp;rsquo;espace d&amp;rsquo;adressage publique devient limité.
 Une IPv4 est un nombre entier codé en 32bits ce qui représente 4 294 967 296 (2^32) adresses utilisables au total.</description>
@@ -118,20 +118,20 @@ Une IPv4 est un nombre entier codé en 32bits ce qui représente 4 294 967 296 (
     
     <item>
       <title>Deux ans sans Java et ça va !</title>
-      <link>https://geojoy.me/post---copy/deux-ans-sans-java-et-ca-va/</link>
+      <link>http://geojoy.me/post---copy/deux-ans-sans-java-et-ca-va/</link>
       <pubDate>Wed, 20 May 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/deux-ans-sans-java-et-ca-va/</guid>
+      <guid>http://geojoy.me/post---copy/deux-ans-sans-java-et-ca-va/</guid>
       <description>J&amp;rsquo;ai quitté le monde de l&amp;rsquo;édition logiciel depuis bientôt 2 ans, pour retourner dans le domaine de la sécurité. J&amp;rsquo;occupe aujourd&amp;rsquo;hui un poste d&amp;rsquo;architecte technique au sein d&amp;rsquo;une équipe d&amp;rsquo;ingénieur sécurité divisés en deux camps : les offenseurs, et les défenseurs. Mon rôle est de fournir le plus rapidement possible des solutions aux deux &amp;ldquo;camps&amp;rdquo; pour attendre leurs objectifs.
 Au cours de ces 2 années, j&amp;rsquo;ai dû concevoir et réaliser de nombreux projets orientés sécurité : que ce soit de l&amp;rsquo;analyse de logs, à la réalisation d&amp;rsquo;une boîte blanche, en passant par du machine learning pour de la détection de comportements suspicieux.</description>
     </item>
     
     <item>
       <title>OAuth 2.0, Authorization Code - Partie 2</title>
-      <link>https://geojoy.me/post---copy/oauth-20-authorization-code-part-2/</link>
+      <link>http://geojoy.me/post---copy/oauth-20-authorization-code-part-2/</link>
       <pubDate>Tue, 17 Sep 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/oauth-20-authorization-code-part-2/</guid>
+      <guid>http://geojoy.me/post---copy/oauth-20-authorization-code-part-2/</guid>
       <description>Previously on &amp;lsquo;OAuth 2.0&amp;rsquo;
 Le workflow d&amp;rsquo;autorisation par code (authorization_code) permet à un client (logiciel), d&amp;rsquo;obtenir un jeton d&amp;rsquo;accès à la ressource demandée en deux temps.
 C&amp;rsquo;est le dispositif le plus utilisé dans les applications web. Vous avez certainement déjà utilisé ce workflow lors d&amp;rsquo;une authentification sur un site à l&amp;rsquo;aide Facebook par exemple.
@@ -140,10 +140,10 @@ Le principe est d&amp;rsquo;utiliser une identité hébergée par un site tiers 
     
     <item>
       <title>OAuth 2.0, Partie 1</title>
-      <link>https://geojoy.me/post---copy/oauth-20-partie-1/</link>
+      <link>http://geojoy.me/post---copy/oauth-20-partie-1/</link>
       <pubDate>Mon, 09 Sep 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/oauth-20-partie-1/</guid>
+      <guid>http://geojoy.me/post---copy/oauth-20-partie-1/</guid>
       <description>OAUTH est un protocole d&amp;rsquo;autorisation, il a pour but de fournir un jeton d&amp;rsquo;accès à une ressource demandée. Il ne faut pas confondre identification qui a pour but d&amp;rsquo;identifier un utilisateur auprès d&amp;rsquo;un système, et autorisation qui a pour but, une fois l&amp;rsquo;identification passée, d&amp;rsquo;obtenir des droits sur celui-ci.
 OAUTH 2.0 est :
  un système d&amp;rsquo;autorisation libre utilisable par des navigateurs et des applications   OAUTH 2.0 est un protocole très utilisé dans le domaine des applications sociales :</description>
@@ -151,20 +151,20 @@ OAUTH 2.0 est :
     
     <item>
       <title>OAuth : Protection des WebServices.</title>
-      <link>https://geojoy.me/post---copy/oauth-protection-des-webservices/</link>
+      <link>http://geojoy.me/post---copy/oauth-protection-des-webservices/</link>
       <pubDate>Sun, 23 May 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/oauth-protection-des-webservices/</guid>
+      <guid>http://geojoy.me/post---copy/oauth-protection-des-webservices/</guid>
       <description>&amp;ldquo;OAuth permet aux utilisateurs de donner, à une application ou un site « consommateur », l&amp;rsquo;accès à des informations personnelles sur un site &amp;ldquo;fournisseur&amp;rdquo; de service. OAuth permet de gérer ces autorisations sans avoir besoin de donner son identité.&amp;rdquo; [Wikipédia]
 Pour résumer, c&amp;rsquo;est un procédé d&amp;rsquo;authentification auprès de webservices, un peu plus complexe qu&amp;rsquo;une API key ou autre. Cela ressemble (je vais peut être me faire taper) à OpenID dans le principe.</description>
     </item>
     
     <item>
       <title>BackTrack 4 is unleashed ! Watch the dog !</title>
-      <link>https://geojoy.me/post---copy/backtrack-4-is-unleashed-watch-the-dog/</link>
+      <link>http://geojoy.me/post---copy/backtrack-4-is-unleashed-watch-the-dog/</link>
       <pubDate>Fri, 13 Mar 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/backtrack-4-is-unleashed-watch-the-dog/</guid>
+      <guid>http://geojoy.me/post---copy/backtrack-4-is-unleashed-watch-the-dog/</guid>
       <description>Halte aux paraskevidékatriaphobe ! Savez vous que BackTrack 4 est sortie ? Sinon je vous l&amp;rsquo;annonce !
 En plus du changement de version, il y a aussi un changement de distribution de base, avant BackTrack était une variante gonflée (comme vahiné) de Slax, qui était une version modulaire et portable (dans le sens USB) de Slackware.
 Elle est basée aujourd&amp;rsquo;hui sur une debian un peu modifiée, pour les audits de sécurité (intégration des modules d&amp;rsquo;injection 802.</description>
@@ -172,29 +172,29 @@ Elle est basée aujourd&amp;rsquo;hui sur une debian un peu modifiée, pour les 
     
     <item>
       <title>Le der des der ...</title>
-      <link>https://geojoy.me/post---copy/le-der-des-der/</link>
+      <link>http://geojoy.me/post---copy/le-der-des-der/</link>
       <pubDate>Wed, 09 Jul 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/le-der-des-der/</guid>
+      <guid>http://geojoy.me/post---copy/le-der-des-der/</guid>
       <description>Bon ben voila c&amp;rsquo;est fait ! c&amp;rsquo;est fini ! Une nouvelle vie qui commence ! Au revoir l&amp;rsquo;étudiant, bonjour l&amp;rsquo;ingénieur sécurité !</description>
     </item>
     
     <item>
       <title>gpgAuth - GnuPG Web Authentication</title>
-      <link>https://geojoy.me/post---copy/gpgauth-gnupg-web-authentication/</link>
+      <link>http://geojoy.me/post---copy/gpgauth-gnupg-web-authentication/</link>
       <pubDate>Wed, 19 Dec 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/gpgauth-gnupg-web-authentication/</guid>
+      <guid>http://geojoy.me/post---copy/gpgauth-gnupg-web-authentication/</guid>
       <description>Après mon article sur FireGPG (extension firefox permettant l&amp;rsquo;intégration de GPG), voici un système d&amp;rsquo;authentification basé sur le système clé privée / clé publique. En effet il suffit de s&amp;rsquo;enregistrer sur le site (site exemple), d&amp;rsquo;importer la clé publique du service, leur donner notre clé publique, et voila FireGPG fait le reste.
 Il existe une implémentation coté serveur utilisant python, pour intégrer le processus dans vos sites. Cependant ce n&amp;rsquo;est compatible qu&amp;rsquo;avec Firefox + FireGPG.</description>
     </item>
     
     <item>
       <title>FireGPG, use GPG easily !</title>
-      <link>https://geojoy.me/post---copy/firegpg-use-gpg-easily/</link>
+      <link>http://geojoy.me/post---copy/firegpg-use-gpg-easily/</link>
       <pubDate>Sun, 04 Nov 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/firegpg-use-gpg-easily/</guid>
+      <guid>http://geojoy.me/post---copy/firegpg-use-gpg-easily/</guid>
       <description>&amp;mdash;&amp;ndash;BEGIN PGP SIGNED MESSAGE&amp;mdash;&amp;ndash; Hash: SHA1
 Voici une extension Firefox, très sympathique, en effet elle permet de signer/crypter/décrypter un contenu selectionné avec une clé GPG, très pratique quand on utilise souvent le webmail, bon il y atoujours le problème qu&amp;rsquo;il faut avoir la clé sous la main ! C&amp;rsquo;est pour quand la signature intégrée dans gmail ? ^^ lastmod: 2017-03-01T11:27:22+01:00 &amp;mdash;&amp;ndash;BEGIN PGP SIGNATURE&amp;mdash;&amp;ndash; Version: GnuPG v2.0.4-svn0 (GNU/Linux) Comment: http://firegpg.tuxfamily.org
 iD8DBQFHLaHnc2paTy/WK7sRAo5FAJwJkTuelNlJSBPjgng5D9j2spRG9gCghtUA Fivys6P68whFpCS1FlJH3yM= =ASJE &amp;mdash;&amp;ndash;END PGP SIGNATURE&amp;mdash;&amp;ndash;</description>
@@ -202,38 +202,38 @@ iD8DBQFHLaHnc2paTy/WK7sRAo5FAJwJkTuelNlJSBPjgng5D9j2spRG9gCghtUA Fivys6P68whFpCS
     
     <item>
       <title>Damn Vulnerable Linux</title>
-      <link>https://geojoy.me/post---copy/damn-vulnerable-linux/</link>
+      <link>http://geojoy.me/post---copy/damn-vulnerable-linux/</link>
       <pubDate>Mon, 29 Oct 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/damn-vulnerable-linux/</guid>
+      <guid>http://geojoy.me/post---copy/damn-vulnerable-linux/</guid>
       <description>DVL (DeViL) est une distribution linux, qui étend les fonctionnalités de BackTrack 2.0 (autre distribution orientée sécurité). Le principe de cette distribution est de mettre à disposition tout un tas d&amp;rsquo;environnement destiné à l&amp;rsquo;application directes d&amp;rsquo;attaques sur du code, des sites vulnérables, etc &amp;hellip; (pour ceux qui n&amp;rsquo;avaient jamais vu une SQL injection en directe par exemple ^^). Elle rassemble bcp de tuto binaires, quand je dis tuto c&amp;rsquo;est un grand mot, car c&amp;rsquo;est du demerde-yourself-ware !</description>
     </item>
     
     <item>
       <title>OpenID, la nouvelle technologie d&#39;authentification</title>
-      <link>https://geojoy.me/post---copy/openid-la-nouvelle-technologie-dauthentification/</link>
+      <link>http://geojoy.me/post---copy/openid-la-nouvelle-technologie-dauthentification/</link>
       <pubDate>Wed, 17 Oct 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/openid-la-nouvelle-technologie-dauthentification/</guid>
+      <guid>http://geojoy.me/post---copy/openid-la-nouvelle-technologie-dauthentification/</guid>
       <description>OpenID est un système d’authentification décentralisé qui permet l’authentification unique, ainsi que le partage d’attributs. Il permet à un utilisateur de s’authentifier auprès de plusieurs sites (devant prendre en charge cette technologie) sans avoir à retenir un identifiant pour chacun d’eux mais en utilisant à chaque fois un unique identifiant OpenID. Le modèle OpenID se base sur des liens de confiance préalablement établis entre les fournisseurs de services (sites web utilisant OpenID par exemple) et les fournisseurs d’identité (OpenID providers).</description>
     </item>
     
     <item>
       <title>IWHAX - News</title>
-      <link>https://geojoy.me/post---copy/iwhax-news/</link>
+      <link>http://geojoy.me/post---copy/iwhax-news/</link>
       <pubDate>Thu, 01 Sep 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/iwhax-news/</guid>
+      <guid>http://geojoy.me/post---copy/iwhax-news/</guid>
       <description>J&amp;rsquo;ai testé une distribution Linux, basée sur une Slackware Live. Cette distribution est une concentration d&amp;rsquo;outils sympatique, pour faire mumuse avec le réseau, les paquets &amp;hellip; . Franchement bien faite, y a même le drivers ipw2200, et des outils comme Kismet, aircrack, fragroute &amp;hellip; Enfin un bonne distrib de HaXoR.
 IWHAX - News</description>
     </item>
     
     <item>
       <title>Home - Ciphire Labs</title>
-      <link>https://geojoy.me/post---copy/home-ciphire-labs/</link>
+      <link>http://geojoy.me/post---copy/home-ciphire-labs/</link>
       <pubDate>Sun, 28 Aug 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://geojoy.me/post---copy/home-ciphire-labs/</guid>
+      <guid>http://geojoy.me/post---copy/home-ciphire-labs/</guid>
       <description>Ciphire Labs Un logiciel pour les paranos (lol pour moi donc !). Un programme de signature de message comme pgp ou gnupg (pour le linuxiens toi encore moi décidement on perle que de moi !). Non sérieusement très simple à mettre en place y a rien à faire !. Cela marche comme un proxy mail sur sa propre machine. A tester ! Moi j&amp;rsquo;ai adopté !</description>
     </item>
     
