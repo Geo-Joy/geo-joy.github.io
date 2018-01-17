@@ -3,7 +3,7 @@ section: post
 date: "2018-01-17"
 title: "How a software developer re-focused his life to learn artificial intelligence"
 description: "Why would a young man quit his comfortable life and enjoyable career to „survive on benefits“ while studying a new field without any certainty as to where it may lead him? Tune in to hear Tuatini Godard's story and life philosophy."
-slug: Why would a young man quit his comfortable life and enjoyable career to „survive on benefits“ while studying a new field without any certainty as to where it may lead him? Tune in to hear Tuatini Godard's story and life philosophy.
+slug: "how-a-software-developer-re-focused-his-life-to-learn-artificial-intelligence"
 tags:
  - podcast
  - Artificial Intelligence
