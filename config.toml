@@ -1,0 +1,93 @@
+baseurl = "https://geojoy.me"
+
+languageCode = "en-us"
+title = "Geo'z Blog"
+paginate = 10
+theme = "ginimal"
+
+PygmentsStyle = "paraiso-dark"
+PygmentsUseClasses = false
+PygmentsCodeFences = true
+
+SectionPagesMenu = "Main"
+
+[permalinks]
+  post = "/post/:year/:month/:day/:slug/"
+  project = "/project/:year/:month/:day/:slug/"
+
+[indexes]
+  tag = "tags"
+  topic = "topics"
+
+[params]
+  # Warning Keys are case sensitives
+  Subtitle = "My Life! My Way!"
+  description1 = "I’m passionate about all things tech and I taught myself all that I got to know to become a cyber architect. This journey began back when I started playing The Cycles on MS DOS and has continued to thrill me ever since. I’m currently residing in Bangalore where I co-founded – T.I.G.E.R. Innovations in 2013 & Paper Rocket Labs in 2017, a company with fresh and dynamic attitude."
+  description2 = "For me, both design and development go hand in hand. I find immense pleasure in bringing designs to life through development, which is why I could never really classify myself as a “hardcore developer” but instead one that can bridge two philosophies and ways of thinking. With the ever changing demands of work, my focus shifts gears accordingly, allowing me to explore different areas and hone my skills. Exploring new concepts and ideas besides work satiates my hunger for learning and sharing."
+  description3 = "At work, I am known for my love for extracurricular activities! Pet-projects allow me to share something new with the community and engage with new people on a regular basis. Expanding my knowledge base through work or otherwise has now become a way of life."
+  cover = "https://geojoy.me/images/cover.jpg"
+
+  # Google analytics
+  googleAnalyticsUserID = "UA-8114245-4"
+  domainVerification = "fc173d84e3a4de948ed4bda2908afd3e"
+  disqus = "geojoy-me"
+
+  accent = "green"
+  showBorder = true
+  backgroundColor = "white"
+  font = "Source Sans Pro" # should match the name on Google Fonts!
+  highlight = false
+  highlightStyle = "solarized-dark"
+  highlightLanguages = ["go"]
+
+  [params.author]
+    firstName = "Geo"
+    lastName = "Joy"
+    gender = "male"
+    userName = "Geo-Joy"
+    image = "https://geojoy.me/images/avatar.jpg"
+    website = "http://geojoy.me"
+    twitter = "megeojoy"
+    github = "Geo-Joy"
+    facebook = "me.geojoy"
+    linkedin = "geojoy"  
+
+[[menu.main]]
+    url = "/"
+    name = "Home"
+    weight = 1
+
+[[menu.main]]
+    url = "/post/"
+    name = "Posts"
+    weight = 2
+
+[[menu.main]]
+    url = "/project/"
+    name = "Projects"
+    weight = 3
+
+[[menu.icon]]
+    url = "/resume/"
+    name = "user"
+    weight = 1
+
+[[menu.icon]]
+    url = "http://www.google.com/recaptcha/mailhide/d?k=01IIc-s5LNYiS-CG_gthn4PA==&c=r5Ctx8RMDz422qmYESfk1g=="
+    name = "envelope"
+    weight = 2
+
+[[menu.icon]]
+    url = "https://github.com/Geo-Joy"
+    name = "github-alt"
+    weight = 3
+
+[[menu.icon]]
+    url = "https://twitter.com/megeojoy"
+    name = "twitter"
+    weight = 4
+
+[[menu.icon]]
+    url = "https://www.linkedin.com/in/geojoy/"
+    name = "linkedin"
+    weight = 5
