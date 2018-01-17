@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en-us" class="wf-loading">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <meta name="HandheldFriendly" content="True" />
+        <meta name="MobileOptimized" content="320" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="preload" href="https://geojoy.mejs/main.js" as="script" />
+        <link rel="preload" href="https://geojoy.mecss/main.css" as="style" />
+
+        <title>Backbone.js &amp; CoffeeScript</title>
+        <meta name="generator" content="Hugo 0.32.4" />
+        
+        <link rel="preconnect" href="https://ajax.googleapis.com/" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+        <meta property="og:title" content="Backbone.js &amp; CoffeeScript" />
+<meta property="og:description" content="Cet article va traiter de l&rsquo;utilisation de CoffeeScript dans le cadre de la réalisation d&rsquo;une application Backbone.js.
+Dans un premier, j&rsquo;aborderai très rapidement le langage CoffeeScript, puis dans un second temps son utilisation dans l&rsquo;écriture de script JavaScript.
+CoffeeScript - &ldquo;It&rsquo;s just javascript !&rdquo; Le CoffeeScript est un langage de programmation, qui une fois compilé produit du code Javascript. Le but principal de ce langage est de fournir à l&rsquo;utilisateur une notation type POO (Programmation Orienté Objet), avec des mots clés comme extends, super, ainsi que de simplifier la syntaxe du Javascript." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://geojoy.me/post---copy/backbone-dot-js-and-coffeescript/" />
+
+
+
+<meta property="article:published_time" content="2012-04-07T00:00:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2017-03-01T11:27:28&#43;01:00"/>
+
+
+
+
+
+
+
+
+
+
+
+    
+        <meta property="og:type" content="article" />
+        <meta property="og:article:published_time" content="2012-04-07T00:00:00Z" />
+        <meta property="og:article:tag" content="backbone.js" />
+        <meta property="og:article:tag" content="coffeescript" />
+        
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@megeojoy" />
+        <meta name="twitter:creator" content="@megeojoy" />
+        <meta name="twitter:title" content="Backbone.js &amp; CoffeeScript" />
+        <meta name="twitter:description" content="" />
+        <meta name="twitter:url" content="https://geojoy.me/post---copy/backbone-dot-js-and-coffeescript/" />
+        
+    
+
+    
+        <meta name="p:domain_verify" content="fc173d84e3a4de948ed4bda2908afd3e"/>
+    
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Thibault NORMAND",
+      "url": "http://zenithar.org",
+      "sameAs": [
+        "https://twitter.com/zenithar/",
+        "https://www.linkedin.com/in/zenithar/",
+        "https://github.com/Zenithar/",
+        "https://plus.google.com/u/0/+ThibaultNormand"
+      ],
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://geojoy.me/images/avatar.jpg",
+        "height": 80,
+        "width": 80
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "@id": "https://geojoy.me",
+      "name": "Geo&#39;z Blog",
+      "url": "https://geojoy.me",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://geojoy.me/images/avatar.jpg",
+        "height": 80,
+        "width": 80
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "url": "https://geojoy.me",
+      "name": "Geo&#39;z Blog",
+      "author": {
+        "@type": "Person",
+        "name": "Geo Joy"
+      },
+      "description": ""
+    }
+    </script>
+
+      
+      <script type="application/ld+json">
+      {
+          "@context": "http://schema.org",
+          "@type": "BlogPosting",
+          "headline": "Backbone.js &amp; CoffeeScript",
+          "description": "",
+          "author": {
+              "@type": "Person",
+              "name": "Geo Joy"
+          },
+          "publisher": {
+              "@type": "Organization",
+              "name": "Geo&#39;z Blog",
+              "logo": "https://geojoy.me/images/avatar.jpg"
+          },
+          
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://geojoy.me/images/avatar.jpg",
+            "height": 80,
+            "width": 80
+          },
+          "datePublished": "2012-04-07",
+          "dateModified": "2017-03-01",
+          "wordCount": 1264
+          ,
+          "keywords": ["backbone.js","coffeescript"] 
+      }
+    </script>
+  
+
+    <style>
+body{margin:0}main,nav{display:block}a{background-color:transparent}h1{margin:.67em 0;font-size:2em}img{border:0}code,kbd{font-family:monospace,monospace;font-size:1em}button{margin:0;font:inherit;color:inherit}button{overflow:visible}button{text-transform:none}button{-webkit-appearance:button}button::-moz-focus-inner{padding:0;border:0}*{-webkit-box-sizing:border-box;box-sizing:border-box}:after,:before{-webkit-box-sizing:border-box;box-sizing:border-box}html{font-size:10px}body{font-family:"Raleway",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333;background-color:#fff}button{font-family:inherit;font-size:inherit;line-height:inherit}a{color:#337ab7;text-decoration:none}img{vertical-align:middle}h1,h4,h5{font-family:inherit;font-weight:500;line-height:1.1;color:inherit}h1{margin-top:20px;margin-bottom:10px}h4,h5{margin-top:10px;margin-bottom:10px}h1{font-size:36px}h4{font-size:18px}h5{font-size:14px}p{margin:0 0 10px}.text-justify{text-align:justify}ul{margin-top:0;margin-bottom:10px}blockquote{padding:10px 20px;margin:0 0 20px;font-size:17.5px;border-left:5px solid #eee}blockquote p:last-child{margin-bottom:0}code,kbd{font-family:Menlo,Monaco,Consolas,"Courier New",monospace}code{padding:2px 4px;font-size:90%;color:#c7254e;background-color:#f9f2f4;border-radius:4px}kbd{padding:2px 4px;font-size:90%;color:#fff;background-color:#333;border-radius:3px;-webkit-box-shadow:inset 0 -1px 0 rgba(0,0,0,.25);box-shadow:inset 0 -1px 0 rgba(0,0,0,.25)}.container{padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}@media (min-width:768px){.container{width:750px}}@media (min-width:992px){.container{width:970px}}@media (min-width:1200px){.container{width:1170px}}.collapse{display:none}.nav{padding-left:0;margin-bottom:0;list-style:none}.nav>li{position:relative;display:block}.nav>li>a{position:relative;display:block;padding:10px 15px}.navbar{position:relative;min-height:50px;margin-bottom:20px;border:1px solid transparent}@media (min-width:768px){.navbar{border-radius:4px}}@media (min-width:768px){.navbar-header{float:left}}.navbar-collapse{padding-right:15px;padding-left:15px;overflow-x:visible;-webkit-overflow-scrolling:touch;border-top:1px solid transparent;-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,.1);box-shadow:inset 0 1px 0 rgba(255,255,255,.1)}@media (min-width:768px){.navbar-collapse{width:auto;border-top:0;-webkit-box-shadow:none;box-shadow:none}.navbar-collapse.collapse{display:block !important;height:auto !important;padding-bottom:0;overflow:visible !important}.navbar-fixed-top .navbar-collapse{padding-right:0;padding-left:0}}.navbar-fixed-top .navbar-collapse{max-height:340px}@media (max-device-width:480px) and (orientation:landscape){.navbar-fixed-top .navbar-collapse{max-height:200px}}.container>.navbar-collapse,.container>.navbar-header{margin-right:-15px;margin-left:-15px}@media (min-width:768px){.container>.navbar-collapse,.container>.navbar-header{margin-right:0;margin-left:0}}.navbar-fixed-top{position:fixed;right:0;left:0;z-index:1030}@media (min-width:768px){.navbar-fixed-top{border-radius:0}}.navbar-fixed-top{top:0;border-width:0 0 1px}.navbar-brand{float:left;height:50px;padding:15px 15px;font-size:18px;line-height:20px}@media (min-width:768px){.navbar>.container .navbar-brand{margin-left:-15px}}.navbar-toggle{position:relative;float:right;padding:9px 10px;margin-top:8px;margin-right:15px;margin-bottom:8px;background-color:transparent;background-image:none;border:1px solid transparent;border-radius:4px}.navbar-toggle .icon-bar{display:block;width:22px;height:2px;border-radius:1px}.navbar-toggle .icon-bar+.icon-bar{margin-top:4px}@media (min-width:768px){.navbar-toggle{display:none}}.navbar-nav{margin:7.5px -15px}.navbar-nav>li>a{padding-top:10px;padding-bottom:10px;line-height:20px}@media (min-width:768px){.navbar-nav{float:left;margin:0}.navbar-nav>li{float:left}.navbar-nav>li>a{padding-top:15px;padding-bottom:15px}}@media (min-width:768px){.navbar-right{float:right !important;margin-right:-15px}}.navbar-default{background-color:#f8f8f8;border-color:#e7e7e7}.navbar-default .navbar-brand{color:#777}.navbar-default .navbar-nav>li>a{color:#777}.navbar-default .navbar-toggle{border-color:#ddd}.navbar-default .navbar-toggle .icon-bar{background-color:#888}.navbar-default .navbar-collapse{border-color:#e7e7e7}.container:after,.container:before,.nav:after,.nav:before,.navbar-collapse:after,.navbar-collapse:before,.navbar-header:after,.navbar-header:before,.navbar:after,.navbar:before{display:table;content:" "}.container:after,.nav:after,.navbar-collapse:after,.navbar-header:after,.navbar:after{clear:both}@-ms-viewport{width:device-width}.visible-xs{display:none !important}@media (max-width:767px){.visible-xs{display:block !important}}html{height:100%}body{height:100%;padding-top:55px;display:-webkit-box;display:-ms-flexbox;display:flex;text-align:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;font-size:16px !important}main{margin:auto;padding:25px;max-width:750px}a:link,a:visited{color:green}.item{padding:10px 0}.item-tag{background-color:green}.navbar-icon{font-size:125%;display:inline-block !important}.navbar.navbar-default{border-top:5px solid green}img{max-width:100%}.fade-in{opacity:0}
+.wf-loading p, .wf-loading h1, .wf-loading h2, .wf-loading h3, .wf-loading h4, .wf-loading a {visibility: hidden;}.wf-active  p, .wf-active h1, .wf-active h2, .wf-active h3, .wf-active h4, .wf-active a {visibility: visible;}.wf-inactive    p, .wf-inactive h1, .wf-inactive h2, .wf-inactive h3, .wf-inactive h4, wf-inactive a {visibility: visible;}
+</style>
+
+    </head>
+
+    <body>
+      
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQ3JDPK"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Backbone.js &amp; CoffeeScript</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Posts</a></li>
+                            
+                                <li><a href="/project/">Projects</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="/resume/"><i class="fa fa-user"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="http://www.google.com/recaptcha/mailhide/d?k=01IIc-s5LNYiS-CG_gthn4PA==&amp;c=r5Ctx8RMDz422qmYESfk1g=="><i class="fa fa-envelope"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/Geo-Joy"><i class="fa fa-github-alt"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/megeojoy"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/geojoy/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main class="fade-in">
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a itemprop="url" href="/post---copy/backbone-dot-js-and-coffeescript/">
+      <span itemprop="name">Backbone.js &amp; CoffeeScript</span>
+    </a></h4>
+
+    April 7, 2012
+    <h5>April 7, 2012</h5>
+     <a href="../../../../../tags/backbone.js"><kbd class="item-tag">backbone.js</kbd></a>  <a href="../../../../../tags/coffeescript"><kbd class="item-tag">coffeescript</kbd></a> 
+
+</div>
+
+
+    <br> <div class="text-justify">
+
+<p>Cet article va traiter de l&rsquo;utilisation de CoffeeScript dans le cadre de la réalisation d&rsquo;une application Backbone.js.</p>
+
+<p>Dans un premier, j&rsquo;aborderai très rapidement le langage CoffeeScript, puis dans un second temps son utilisation dans l&rsquo;écriture de script JavaScript.</p>
+
+<h2 id="coffeescript-it-s-just-javascript">CoffeeScript - &ldquo;It&rsquo;s just javascript !&rdquo;</h2>
+
+<p>Le CoffeeScript est un langage de programmation, qui une fois compilé produit du code Javascript. Le but principal de ce langage est de fournir à l&rsquo;utilisateur une notation type POO (Programmation Orienté Objet), avec des mots clés comme <em>extends</em>, <em>super</em>, ainsi que de simplifier la syntaxe du Javascript.</p>
+
+<p>En effet Javascript, n&rsquo;est pas vraiment un langage objet, l&rsquo;héritage se fait par manipulation du prototype[<a href="http://javascript.info/tutorial/inheritance">1</a>]. Ce qui rends la programmation objet pas très facile avec Javascript.</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-coffeescript" data-lang="coffeescript"><span style="color:#815ba4">class</span> <span style="color:#06b6ef">Animal</span>
+  <span style="color:#ef6155">constructor: </span><span style="color:#06b6ef">(@name) -&gt;</span>
+
+  <span style="color:#ef6155">move: </span><span style="color:#06b6ef">(meters) -&gt;</span>
+    <span style="color:#06b6ef">alert</span> <span style="color:#06b6ef">@name</span> <span style="color:#5bc4bf">+</span> <span style="color:#48b685">&#34; moved </span><span style="color:#f99b15">#{</span><span style="color:#06b6ef">meters</span><span style="color:#f99b15">}</span><span style="color:#48b685">m.&#34;</span>
+
+<span style="color:#815ba4">class</span> <span style="color:#06b6ef">Snake</span> <span style="color:#815ba4">extends</span> <span style="color:#06b6ef">Animal</span>
+  <span style="color:#ef6155">move: </span><span style="color:#06b6ef">-&gt;</span>
+    <span style="color:#06b6ef">alert</span> <span style="color:#48b685">&#34;Slithering...&#34;</span>
+    <span style="color:#815ba4">super</span> <span style="color:#f99b15">5</span>
+
+<span style="color:#815ba4">class</span> <span style="color:#06b6ef">Horse</span> <span style="color:#815ba4">extends</span> <span style="color:#06b6ef">Animal</span>
+  <span style="color:#ef6155">move: </span><span style="color:#06b6ef">-&gt;</span>
+    <span style="color:#06b6ef">alert</span> <span style="color:#48b685">&#34;Galloping...&#34;</span>
+    <span style="color:#815ba4">super</span> <span style="color:#f99b15">45</span>
+
+<span style="color:#ef6155">sam = </span><span style="color:#815ba4">new</span> <span style="color:#06b6ef">Snake</span> <span style="color:#48b685">&#34;Sammy the Python&#34;</span>
+<span style="color:#ef6155">tom = </span><span style="color:#815ba4">new</span> <span style="color:#06b6ef">Horse</span> <span style="color:#48b685">&#34;Tommy the Palomino&#34;</span></code></pre></div>
+<p>Ce qui va donner après compilation via CoffeeScript :</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#815ba4">var</span> <span style="color:#06b6ef">Animal</span>, <span style="color:#06b6ef">Horse</span>, <span style="color:#06b6ef">sam</span>, <span style="color:#06b6ef">tom</span>,
+  <span style="color:#06b6ef">__hasProp</span> <span style="color:#5bc4bf">=</span> {}.<span style="color:#06b6ef">hasOwnProperty</span>,
+  <span style="color:#06b6ef">__extends</span> <span style="color:#5bc4bf">=</span> <span style="color:#815ba4">function</span>(<span style="color:#06b6ef">child</span>, <span style="color:#06b6ef">parent</span>) { <span style="color:#815ba4">for</span> (<span style="color:#815ba4">var</span> <span style="color:#06b6ef">key</span> <span style="color:#815ba4">in</span> <span style="color:#06b6ef">parent</span>) { <span style="color:#815ba4">if</span> (<span style="color:#06b6ef">__hasProp</span>.<span style="color:#06b6ef">call</span>(<span style="color:#06b6ef">parent</span>, <span style="color:#06b6ef">key</span>)) <span style="color:#06b6ef">child</span>[<span style="color:#06b6ef">key</span>] <span style="color:#5bc4bf">=</span> <span style="color:#06b6ef">parent</span>[<span style="color:#06b6ef">key</span>]; } <span style="color:#815ba4">function</span> <span style="color:#06b6ef">ctor</span>() { <span style="color:#815ba4">this</span>.<span style="color:#06b6ef">constructor</span> <span style="color:#5bc4bf">=</span> <span style="color:#06b6ef">child</span>; } <span style="color:#06b6ef">ctor</span>.<span style="color:#06b6ef">prototype</span> <span style="color:#5bc4bf">=</span> <span style="color:#06b6ef">parent</span>.<span style="color:#06b6ef">prototype</span>; <span style="color:#06b6ef">child</span>.<span style="color:#06b6ef">prototype</span> <span style="color:#5bc4bf">=</span> <span style="color:#815ba4">new</span> <span style="color:#06b6ef">ctor</span>; <span style="color:#06b6ef">child</span>.<span style="color:#06b6ef">__super__</span> <span style="color:#5bc4bf">=</span> <span style="color:#06b6ef">parent</span>.<span style="color:#06b6ef">prototype</span>; <span style="color:#815ba4">return</span> <span style="color:#06b6ef">child</span>; };
+
+<span style="color:#06b6ef">Animal</span> <span style="color:#5bc4bf">=</span> (<span style="color:#815ba4">function</span>() {
+  <span style="color:#06b6ef">Animal</span>.<span style="color:#06b6ef">name</span> <span style="color:#5bc4bf">=</span> <span style="color:#48b685">&#39;Animal&#39;</span>;
+  <span style="color:#815ba4">function</span> <span style="color:#06b6ef">Animal</span>(<span style="color:#06b6ef">name</span>) {
+    <span style="color:#815ba4">this</span>.<span style="color:#06b6ef">name</span> <span style="color:#5bc4bf">=</span> <span style="color:#06b6ef">name</span>;
+  }
+  <span style="color:#06b6ef">Animal</span>.<span style="color:#06b6ef">prototype</span>.<span style="color:#06b6ef">move</span> <span style="color:#5bc4bf">=</span> <span style="color:#815ba4">function</span>(<span style="color:#06b6ef">meters</span>) {
+    <span style="color:#815ba4">return</span> <span style="color:#06b6ef">alert</span>(<span style="color:#815ba4">this</span>.<span style="color:#06b6ef">name</span> <span style="color:#5bc4bf">+</span> (<span style="color:#48b685">&#34; moved &#34;</span> <span style="color:#5bc4bf">+</span> <span style="color:#06b6ef">meters</span> <span style="color:#5bc4bf">+</span> <span style="color:#48b685">&#34;m.&#34;</span>));
+  };
+  <span style="color:#815ba4">return</span> <span style="color:#06b6ef">Animal</span>;
+})();
+
+<span style="color:#06b6ef">Horse</span> <span style="color:#5bc4bf">=</span> (<span style="color:#815ba4">function</span>(<span style="color:#06b6ef">_super</span>) {
+  <span style="color:#06b6ef">__extends</span>(<span style="color:#06b6ef">Horse</span>, <span style="color:#06b6ef">_super</span>);
+  <span style="color:#06b6ef">Horse</span>.<span style="color:#06b6ef">name</span> <span style="color:#5bc4bf">=</span> <span style="color:#48b685">&#39;Horse&#39;</span>;
+  <span style="color:#815ba4">function</span> <span style="color:#06b6ef">Horse</span>() {
+    <span style="color:#815ba4">return</span> <span style="color:#06b6ef">Horse</span>.<span style="color:#06b6ef">__super__</span>.<span style="color:#06b6ef">constructor</span>.<span style="color:#06b6ef">apply</span>(<span style="color:#815ba4">this</span>, <span style="color:#06b6ef">arguments</span>);
+  }
+  <span style="color:#06b6ef">Horse</span>.<span style="color:#06b6ef">prototype</span>.<span style="color:#06b6ef">move</span> <span style="color:#5bc4bf">=</span> <span style="color:#815ba4">function</span>() {
+    <span style="color:#06b6ef">alert</span>(<span style="color:#48b685">&#34;Galloping...&#34;</span>);
+    <span style="color:#815ba4">return</span> <span style="color:#06b6ef">Horse</span>.<span style="color:#06b6ef">__super__</span>.<span style="color:#06b6ef">move</span>.<span style="color:#06b6ef">call</span>(<span style="color:#815ba4">this</span>, <span style="color:#f99b15">45</span>);
+  };
+  <span style="color:#815ba4">return</span> <span style="color:#06b6ef">Horse</span>;
+})(<span style="color:#06b6ef">Animal</span>);
+
+<span style="color:#06b6ef">tom</span> <span style="color:#5bc4bf">=</span> <span style="color:#815ba4">new</span> <span style="color:#06b6ef">Horse</span>(<span style="color:#48b685">&#34;Tommy the Palomino&#34;</span>);
+<span style="color:#06b6ef">tom</span>.<span style="color:#06b6ef">move</span>();</code></pre></div>
+<p>Remarquez que le code généré utilise des méthodes pour simplifier le code. Attention, pour les tatillons vous remarquerez que j&rsquo;utilise pas CoffeeScript mais un dérivé compatible IcedCoffeeScript, qui produit une sortie JavaScript plus propre. Bon c&rsquo;est un détail, mais ça compte !</p>
+
+<p>L&rsquo;utilisation de la syntaxe CoffeeScript me permet aussi d&rsquo;éliminer beaucoup de problèmes liés à la syntaxe du JavaScript.</p>
+
+<p>Je vous invite à aller consulter le site <a href="http://coffeescript.org">CoffeeScript.org</a>, pour voir toute l&rsquo;étendue de la syntaxe CoffeeScript.</p>
+
+<h3 id="outils-coffeescript">Outils CoffeeScript</h3>
+
+<p>Le langage apporte tout un ensemble d&rsquo;outils pour rendre service au développeur.</p>
+
+<ul>
+<li>Documentation :
+
+<ul>
+<li><a href="http://jashkenas.github.com/docco/">Docco</a> : Par l&rsquo;auteur du langage, permet de générer de la documentation en utilisant les commentaires du code. Le site de docco utilise docco, vous voyez donc un exemple de sortie du format de la documentation.</li>
+</ul></li>
+<li>Javascript :
+
+<ul>
+<li><a href="http://js2coffee.org/">JS2Coffee</a> : Cet outil permet de traduire vos scripts Js en script CoffeeScript.</li>
+</ul></li>
+<li>IDE :
+
+<ul>
+<li><a href="http://www.jetbrains.com/idea/">Intellj IDEA</a></li>
+<li>Vim</li>
+<li><a href="http://www.sublimetext.com/2">Sublime Text</a></li>
+<li>TextMate</li>
+<li>et bien d&rsquo;autres …</li>
+</ul></li>
+<li>Références :
+
+<ul>
+<li><a href="http://coffeescriptcookbook.com/">CoffeeScript Cookbook</a></li>
+<li><a href="http://paper.li/dmohl/1314620036">The CoffeeScript Daily</a>
+<br /></li>
+</ul></li>
+</ul>
+
+<h1 id="backbone-js-et-coffeescript">Backbone.js et CoffeeScript</h1>
+
+<p>Backbone.js et CoffeeScript ont été écrit par la même organisation DocumentCloud, ils sont &ldquo;accessoirement&rdquo; les auteurs :</p>
+
+<ul>
+<li><a href="http://documentcloud.github.com/underscore/">Underscore.js</a> : Librairie de fonction utilitaires Javascript</li>
+<li><a href="http://documentcloud.github.com/backbone/">Backbone.js</a> : Framework MVC</li>
+<li><a href="http://documentcloud.github.com/visualsearch/">VisualSearch.js</a> : Un composant de recherche visuel (Completely Awwwwwweeeeesssssommmmme !)</li>
+<li>Voir les <a href="http://www.documentcloud.org/opensource">autres&hellip;</a>
+<br /></li>
+</ul>
+
+<p>Les exemples suivants sont extraits du portage Todo App en CoffeeScript par <a href="https://github.com/JasonGiedymin/backbone-todojs-coffeescript/blob/master/todos.coffee">Jason Giedymin</a>.</p>
+
+<h2 id="les-modèles">Les modèles</h2>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-coffeescript" data-lang="coffeescript"><span style="color:#776e71"># Définition du modèle backbone
+</span><span style="color:#776e71"></span><span style="color:#815ba4">class</span> <span style="color:#06b6ef">Todo</span> <span style="color:#815ba4">extends</span> <span style="color:#06b6ef">Backbone</span>.<span style="color:#06b6ef">Model</span>
+  <span style="color:#776e71"># Attributs par défault
+</span><span style="color:#776e71"></span>  <span style="color:#ef6155">defaults:
+</span><span style="color:#ef6155"></span>    <span style="color:#776e71"># Un objet Todo possède un contenu, &#34;empty todo…&#34; sera la valeur 
+</span><span style="color:#776e71"></span>    <span style="color:#776e71"># initiale à la construction.
+</span><span style="color:#776e71"></span>    <span style="color:#ef6155">content: </span><span style="color:#48b685">&#34;empty todo...&#34;</span>
+    <span style="color:#776e71"># Un obj Todo possède un attribut indiquant qu&#39;il est fait ou non, 
+</span><span style="color:#776e71"></span>    <span style="color:#776e71"># par défaut à la construction le status sera faux (pas fait)
+</span><span style="color:#776e71"></span>    <span style="color:#ef6155">done: </span><span style="color:#815ba4">false</span>
+
+  <span style="color:#776e71"># A ne pas confondre avec le constructeur, avec backbone il y a deux
+</span><span style="color:#776e71"></span>  <span style="color:#776e71"># initialisations: la construction (via constructor), et l&#39;initialisation 
+</span><span style="color:#776e71"></span>  <span style="color:#776e71"># (via initialize), ces deux fonctions peuvent prendre en paramètre un objet
+</span><span style="color:#776e71"></span>  <span style="color:#776e71"># souvent pour définir les valeurs de les attributs du modèle.
+</span><span style="color:#776e71"></span>  <span style="color:#ef6155">initialize: </span><span style="color:#06b6ef">-&gt;</span>
+    <span style="color:#06b6ef">@set</span>({ <span style="color:#48b685">&#34;content&#34;</span><span style="color:#5bc4bf">:</span> <span style="color:#06b6ef">@defaults</span>.<span style="color:#06b6ef">content</span> }) <span style="color:#815ba4">if</span> <span style="color:#5bc4bf">!</span><span style="color:#06b6ef">@get</span>(<span style="color:#48b685">&#34;content&#34;</span>)
+    
+  <span style="color:#776e71"># Fonction utilitaire pour changer le status de la tâche
+</span><span style="color:#776e71"></span>  <span style="color:#ef6155">toggle: </span><span style="color:#06b6ef">-&gt;</span>
+    <span style="color:#06b6ef">@save</span>({ <span style="color:#ef6155">done: </span><span style="color:#5bc4bf">!</span><span style="color:#06b6ef">@get</span>(<span style="color:#48b685">&#34;done&#34;</span>) })</code></pre></div>
+<h2 id="les-collections">Les collections</h2>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-coffeescript" data-lang="coffeescript"><span style="color:#776e71"># Notez la syntaxe pour la déclaration d&#39;une classe
+</span><span style="color:#776e71"></span><span style="color:#815ba4">class</span> <span style="color:#06b6ef">TodoList</span> <span style="color:#815ba4">extends</span> <span style="color:#06b6ef">Backbone</span>.<span style="color:#06b6ef">Collection</span>
+
+  <span style="color:#776e71"># Type de la collection
+</span><span style="color:#776e71"></span>  <span style="color:#ef6155">model: </span><span style="color:#06b6ef">Todo</span>
+
+  <span style="color:#776e71"># Notez bien la différence, le &#39;=&#39; au lieu du &#39;:&#39;, cette différence va
+</span><span style="color:#776e71"></span>  <span style="color:#776e71"># générer deux codes Js différents :
+</span><span style="color:#776e71"></span>  <span style="color:#776e71">#  - &#39;:&#39; : pour des membres d&#39;instances
+</span><span style="color:#776e71"></span>  <span style="color:#776e71">#  - &#39;=&#39; : pour des membres de classes privés (fonctions statiques)
+</span><span style="color:#776e71"></span>  <span style="color:#ef6155">getDone = </span><span style="color:#06b6ef">(todo) -&gt;</span> 
+    <span style="color:#776e71"># Remarquez le &#39;?&#39;, qui va faire un appel à get, uniquement si todo != null
+</span><span style="color:#776e71"></span>    <span style="color:#776e71"># =&gt; qu&#39;est ce que j&#39;aimerais avoir ça en java !!! (vive scala …)
+</span><span style="color:#776e71"></span>    <span style="color:#815ba4">return</span> <span style="color:#06b6ef">todo</span><span style="color:#5bc4bf">?</span>.<span style="color:#06b6ef">get</span>(<span style="color:#48b685">&#34;done&#34;</span>)
+
+  <span style="color:#776e71"># Biensur cette fonction n&#39;a aucun intérêt dans le modêle.
+</span><span style="color:#776e71"></span>  <span style="color:#776e71"># Mais c&#39;est comme ça que l&#39;on déclare des fonctions statiques publiques.
+</span><span style="color:#776e71"></span>  <span style="color:#776e71"># Elles pourront être invoqués de la sorte :
+</span><span style="color:#776e71"></span>  <span style="color:#776e71"># TodoList.pouet()
+</span><span style="color:#776e71"></span>  <span style="color:#776e71">#
+</span><span style="color:#776e71"></span>  <span style="color:#776e71"># Notez que le &#34;return&#34; est implicite, en CoffeeScript la dernière instruction
+</span><span style="color:#776e71"></span>  <span style="color:#776e71"># du scope, produit toujours un &#34;return&#34;, d&#39;ailleurs attention au effet de bord.
+</span><span style="color:#776e71"></span>  @pouet = <span style="color:#06b6ef">() -&gt;</span>
+    <span style="color:#48b685">&#34;toto fait du vélo !&#34;</span>
+		
+  <span style="color:#776e71"># Utilise la méthode filter des collections Backbone (en fait Underscore),
+</span><span style="color:#776e71"></span>  <span style="color:#776e71"># avec note méthode statique privée comme prédicat.
+</span><span style="color:#776e71"></span>  <span style="color:#ef6155">done: </span><span style="color:#06b6ef">-&gt;</span>
+    <span style="color:#815ba4">return</span> <span style="color:#06b6ef">@filter</span>( <span style="color:#06b6ef">getDone</span> )
+  
+  <span style="color:#776e71"># Retourne les tâches qui ne font pas partie des tâches terminées, donc cela
+</span><span style="color:#776e71"></span>  <span style="color:#776e71"># retourne les tâches inachevées.
+</span><span style="color:#776e71"></span>  <span style="color:#ef6155">remaining: </span><span style="color:#06b6ef">-&gt;</span>
+    <span style="color:#815ba4">return</span> <span style="color:#06b6ef">@without</span>.<span style="color:#06b6ef">apply</span>( <span style="color:#815ba4">this</span>, <span style="color:#06b6ef">@done</span>() )
+  
+  <span style="color:#ef6155">nextOrder: </span><span style="color:#06b6ef">-&gt;</span>
+    <span style="color:#776e71"># Alors on apprécie ou pas cette syntaxe mais c&#39;est quand même beau !
+</span><span style="color:#776e71"></span>    <span style="color:#815ba4">return</span> <span style="color:#f99b15">1</span> <span style="color:#815ba4">if</span> <span style="color:#5bc4bf">!</span><span style="color:#06b6ef">@length</span>  
+    <span style="color:#815ba4">return</span> <span style="color:#06b6ef">@last</span>().<span style="color:#06b6ef">get</span>(<span style="color:#48b685">&#39;order&#39;</span>) <span style="color:#5bc4bf">+</span> <span style="color:#f99b15">1</span>
+
+  <span style="color:#776e71"># Function héritée de la collection Backbone utilisée pour ordonner la collection.
+</span><span style="color:#776e71"></span>  <span style="color:#ef6155">comparator: </span><span style="color:#06b6ef">(todo) -&gt;</span>
+    <span style="color:#815ba4">return</span> <span style="color:#06b6ef">todo</span>.<span style="color:#06b6ef">get</span>(<span style="color:#48b685">&#34;order&#34;</span>)</code></pre></div>
+<h2 id="les-vues">Les vues</h2>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-coffeescript" data-lang="coffeescript"><span style="color:#815ba4">class</span> <span style="color:#06b6ef">TodoView</span> <span style="color:#815ba4">extends</span> <span style="color:#06b6ef">Backbone</span>.<span style="color:#06b6ef">View</span>
+  <span style="color:#776e71"># L&#39;élément DOM de base crée par la vue sera un &lt;li&gt;, cela veut dire que
+</span><span style="color:#776e71"></span>  <span style="color:#776e71"># this.el (@el) sera &#34;&lt;li&gt;&lt;/li&gt;&#34;
+</span><span style="color:#776e71"></span>  <span style="color:#ef6155">tagName: </span> <span style="color:#48b685">&#34;li&#34;</span>
+  
+  <span style="color:#776e71"># Utlisation du moteur de template Underscore
+</span><span style="color:#776e71"></span>  <span style="color:#ef6155">template: </span><span style="color:#06b6ef">_</span>.<span style="color:#06b6ef">template</span>( <span style="color:#06b6ef">$</span>(<span style="color:#48b685">&#34;#item-template&#34;</span>).<span style="color:#06b6ef">html</span>() )
+
+  <span style="color:#776e71"># Bind des évènements DOM
+</span><span style="color:#776e71"></span>  <span style="color:#ef6155">events:
+</span><span style="color:#ef6155"></span>    <span style="color:#48b685">&#34;click .check&#34;</span>              <span style="color:#5bc4bf">:</span> <span style="color:#48b685">&#34;toggleDone&#34;</span>
+    <span style="color:#48b685">&#34;dblclick div.todo-content&#34;</span> <span style="color:#5bc4bf">:</span> <span style="color:#48b685">&#34;edit&#34;</span>
+    <span style="color:#48b685">&#34;click span.todo-destroy&#34;</span>   <span style="color:#5bc4bf">:</span> <span style="color:#48b685">&#34;clear&#34;</span>
+    <span style="color:#48b685">&#34;keypress .todo-input&#34;</span>      <span style="color:#5bc4bf">:</span> <span style="color:#48b685">&#34;updateOnEnter&#34;</span>
+    
+  <span style="color:#776e71"># Initialisation de la vue
+</span><span style="color:#776e71"></span>  <span style="color:#ef6155">initialize: </span><span style="color:#06b6ef">-&gt;</span>
+    <span style="color:#06b6ef">@model</span>.<span style="color:#815ba4">on</span> <span style="color:#48b685">&#39;change&#39;</span>, <span style="color:#815ba4">this</span>.<span style="color:#06b6ef">render</span>
+
+  <span style="color:#776e71"># Remarquez le &#39;=&gt;&#39; que l&#39;on appelle la &#39;fat arrow&#39;, c&#39;est le genre de
+</span><span style="color:#776e71"></span>  <span style="color:#776e71"># nouveauté qu&#39;apporte CoffeeScript, cela permet de sauvegarder la valeur
+</span><span style="color:#776e71"></span>  <span style="color:#776e71"># de &#39;this&#39;, et de référencer le this interne par une autre variable, permettant
+</span><span style="color:#776e71"></span>  <span style="color:#776e71"># l&#39;utilisation classique du &#39;this&#39; dans la méthode.
+</span><span style="color:#776e71"></span>  <span style="color:#776e71">#
+</span><span style="color:#776e71"></span>  <span style="color:#776e71"># On n&#39;est pas obligé d&#39;utiliser la &#39;fat arrow&#39;, il suffit de faire une fonction
+</span><span style="color:#776e71"></span>  <span style="color:#776e71"># simple &#39;-&gt;&#39;, ET ne pas oublier le &#39;_.bindAll(this, &#34;render&#34;)&#39; dans le bloc 
+</span><span style="color:#776e71"></span>  <span style="color:#776e71"># initialize. 
+</span><span style="color:#776e71"></span>  <span style="color:#ef6155">render: </span><span style="color:#06b6ef">=&gt;</span>
+    <span style="color:#776e71"># Depuis Backbone 0.9 @.$(@el) est devenu @$el
+</span><span style="color:#776e71"></span>    <span style="color:#06b6ef">@$el</span>.<span style="color:#06b6ef">html</span>( <span style="color:#06b6ef">@template</span>(<span style="color:#06b6ef">@model</span>.<span style="color:#06b6ef">toJSON</span>()) )
+    <span style="color:#06b6ef">@setContent</span>()
+    <span style="color:#776e71"># Ne pas oublier par convention render DOIT retourner &#34;this&#34;
+</span><span style="color:#776e71"></span>    <span style="color:#06b6ef">@</span>
+    
+  <span style="color:#ef6155">#</span> <span style="color:#06b6ef">Volontairement</span> <span style="color:#ef6155">é</span><span style="color:#06b6ef">courté</span> <span style="color:#ef6155">…</span></code></pre></div>
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Voila c&rsquo;est fini, pour cet article, j&rsquo;espère vous avoir donné l&rsquo;envie de continuer les recherches, et les expérimentations dans le &ldquo;nouveau&rdquo; monde du JavaScript et du HTML5.</p>
+
+<p>Il existe des alternatives sérieuses à Backbone.js :</p>
+
+<ul>
+<li><a href="http://emberjs.com/">Ember.js</a> : Qui semble être capable de rivaliser avec backbone.js dans le royaume des MVC.JS</li>
+<li><a href="http://spinejs.com/">Spine.js</a> : dans la même veine (je l&rsquo;ai découvert en bossant sur swagger-core.)</li>
+<li><a href="http://knockoutjs.com/">Knockout.js</a> : possède une approche différente, type <a href="http://fr.wikipedia.org/wiki/Mod%C3%A8le-Vue-VueMod%C3%A8le">MVVM</a>, personellement j&rsquo;accroche pas, je trouve trop compliqué, et ça me rappelle trop WPF…</li>
+<li>et bien d&rsquo;autres sortes et surf sur la vague du JS
+<br /></li>
+</ul>
+
+<p>Toutes ces nouvelles technologies ne rendront que plus agréable vos futurs développements JS, et n&rsquo;hésitez pas, foncez, c&rsquo;est pour votre bien !</p>
+
+<p>Qui plus est, la compétence Backbone.js commence à être demandée sur le marché du travail, ça fait toujours une corde de plus à son arc.</p>
+
+<h3 id="a-venir">A venir …</h3>
+
+<p>Mon prochain article parlera de l&rsquo;utilisation de Require.js au sein d&rsquo;application Backbone.js, en reprenant l&rsquo;article d&rsquo;Addy Osmani - <a href="http://addyosmani.com/writing-modular-js/">Writing modular js</a>. J&rsquo;essayerai de résumer, et d&rsquo;apporter mon retour d&rsquo;expérience.</p>
+
+<p>Sur ce, bonne soirée (enfin bonne nuit vue l&rsquo;heure !).</p>
+</div>
+
+    
+    
+
+    
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">Geo Joy &copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> hosted on <a href="https://github.com/Geo-Joy/geo-joy.github.io">Github</a></p>
+
+        </footer>
+        
+       <script async="" src="https://geojoy.mejs/main.js"></script>
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KQ3JDPK');</script>
+
+
+    </body>
+
+</html>
+

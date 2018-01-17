@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Google on Geo&#39;z Blog</title>
+    <link>https://geojoy.me/tags/google/</link>
+    <description>Recent content in Google on Geo&#39;z Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 30 Mar 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://geojoy.me/tags/google/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Pourquoi apprendre le Go(lang) ?</title>
+      <link>https://geojoy.me/post---copy/pourquoi-apprendre-go/</link>
+      <pubDate>Mon, 30 Mar 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/pourquoi-apprendre-go/</guid>
+      <description>Déjà un petit moment que je roule ma bosse avec Go, j&amp;rsquo;avoue qu&amp;rsquo;aujourd&amp;rsquo;hui c&amp;rsquo;est un peu mon python d&amp;rsquo;avant ^^
+Je vais essayer d&amp;rsquo;être impartial au possible ! Voici les raisons pour lesquelles ce langage fait partie de ma caisse à outils.
+Introduction Tout d&amp;rsquo;abord Go c&amp;rsquo;est quoi ? C&amp;rsquo;est un language relativement jeune, comparé au dinosaure comme C, C++, Java; il n&amp;rsquo;a que 5 ans. Il a été pricipalement écrit et développé par 3 personnes travaillant aujourd&amp;rsquo;hui chez Google :</description>
+    </item>
+    
+    <item>
+      <title>Google PageSpeed et la fameuse ligne de flottaison</title>
+      <link>https://geojoy.me/post---copy/google-pagespeed-ligne-flottaison/</link>
+      <pubDate>Sun, 02 Nov 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/google-pagespeed-ligne-flottaison/</guid>
+      <description>Cette règle d&amp;rsquo;optimisation est plus obscure à comprendre qu&amp;rsquo;elle n&amp;rsquo;est simple à corriger.
+Afin de pouvoir afficher le contenu de la page le navigateur doit attendre que toutes les informations de mises en page et de styles soient téléchargées et analysées. Cette attente provoque au mieux un affichage partiel de la page, mais peut aussi bloquer complètement le processus de rendu, ce qui a un impact sur l&amp;rsquo;expérience utilisateur.</description>
+    </item>
+    
+    <item>
+      <title>Google Protobuf MessageConverter pour Spring AMQP</title>
+      <link>https://geojoy.me/post---copy/spring-amqp-protobuf/</link>
+      <pubDate>Tue, 26 Mar 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/spring-amqp-protobuf/</guid>
+      <description> Je travaille actuellement pas mal avec RabbitMQ, AKKA, et surtout Protobuf. Pourquoi Protobuf et pas Jackson ? Et bien c&amp;rsquo;est simple pour la rapidité de sérialization / déserialisation, mais aussi le portage simple vers d&amp;rsquo;autres langages supportés par Protobuf Compiler : Java, C, Python par défaut.
+Mais il y en beaucoup d&amp;rsquo;autres
+Code  </description>
+    </item>
+    
+    <item>
+      <title>Premiers bugs chromés</title>
+      <link>https://geojoy.me/post---copy/premiers-bugs-chromes/</link>
+      <pubDate>Fri, 05 Sep 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/premiers-bugs-chromes/</guid>
+      <description>Avec la sortie du &amp;ldquo;nouveau&amp;rdquo; navigateur de Google qui plus est OpenSource, on voit apparaitre les premiers bugs et PoC (Proof of Concept).
+En voici un relativement dangereux : EvilFingers. Il cause la fermeture de Google Chrome avec une exception non gérée (Unhandled Exception). Ce bug constitue la première partie d&amp;rsquo;une tentative d&amp;rsquo;exécution de code malicieux sur le poste client.
+Il existe un autre bug qui permet au navigateur de télécharger un fichier vers le poste client sans l&amp;rsquo;intervention de l&amp;rsquo;utilisateur, il semblerait que ce soit plutôt un problème HTML/Javascript (la faute à WebKit?</description>
+    </item>
+    
+    <item>
+      <title>Google Chrome : Aie mes yeux !</title>
+      <link>https://geojoy.me/post---copy/google-chrome-aie-mes-yeux/</link>
+      <pubDate>Tue, 02 Sep 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/google-chrome-aie-mes-yeux/</guid>
+      <description>Cela fait un bon bout de temps que l&amp;rsquo;on entends parler du &amp;ldquo;Google browser&amp;rdquo;, et bien ça y est cette fois c&amp;rsquo;est fait !
+Google possède son propre navigateur web, basé sur le moteur de rendu KHTML (AppleWebKit) (le moteur de Safari mais aussi de Konqueror oh!). Enfin c&amp;rsquo;est un fork de KHTML, mais les premières lignes de WebKit sont issues de Qt/KDE (merci lars ^^).
+
+Donc pour résumer, il intègre Google Gears, le nouvau moteur Javascript qui compile &amp;ldquo;à la volée&amp;rdquo; pour une exécution bcp plus rapide.</description>
+    </item>
+    
+    <item>
+      <title>Google Documents</title>
+      <link>https://geojoy.me/post---copy/google-documents/</link>
+      <pubDate>Mon, 01 Oct 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/google-documents/</guid>
+      <description>Voici la solution de bureautique de Google offrant (pour l&amp;rsquo;instant) un logiciel de traitement de texte, un tableur, et un outil de présentation et le tout en ligne, avec la possibilité de partager les documents.
+C&amp;rsquo;est pour quand le support LaTeX pour Google?</description>
+    </item>
+    
+    <item>
+      <title>Quand Google fait de l&#39;écologie ...</title>
+      <link>https://geojoy.me/post---copy/quand-google-fait-de-lecologie/</link>
+      <pubDate>Tue, 18 Sep 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/quand-google-fait-de-lecologie/</guid>
+      <description>Voila Google avait décider d&amp;rsquo;installer des panneaux solaires pour alimenter leur complexe en électricité, on peut voir sur cette page l&amp;rsquo;électricité produite par les panneaux. C&amp;rsquo;est pour quand le concurrent de EDF ?
+Plus d&amp;rsquo;informations &amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>The answer to life, the universe, and everything</title>
+      <link>https://geojoy.me/post---copy/the-answer-to-life-the-universe-and-everything/</link>
+      <pubDate>Sun, 16 Sep 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/the-answer-to-life-the-universe-and-everything/</guid>
+      <description>the answer to life, the universe, and everything - Google Search
+Même Google connait la réponse ^^^(référence au Guide du voyageur intergallactique H2G2) .</description>
+    </item>
+    
+    <item>
+      <title>Google Earth’s Hidden Surprise: A Flight Simulator</title>
+      <link>https://geojoy.me/post---copy/google-earthe28099s-hidden-surprise-a-flight-simulator/</link>
+      <pubDate>Sat, 15 Sep 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/google-earthe28099s-hidden-surprise-a-flight-simulator/</guid>
+      <description>Google Earth’s Hidden Surprise: A Flight Simulator
+Juste une petite découverte en surfant via StumbleUpon, un FlightSimulator dans le logiciel Google Earth.</description>
+    </item>
+    
+    <item>
+      <title>Je fais des points des ptits points ....</title>
+      <link>https://geojoy.me/post---copy/je-fais-des-points-des-ptits-points/</link>
+      <pubDate>Fri, 27 Jul 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/je-fais-des-points-des-ptits-points/</guid>
+      <description>Suite de mon analyse des visiteurs, après 2 semaines de Blackout total due à une erreur dans le code client Google Analytics (grrrrrr).</description>
+    </item>
+    
+  </channel>
+</rss>

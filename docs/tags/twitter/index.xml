@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Twitter on Geo&#39;z Blog</title>
+    <link>https://geojoy.me/tags/twitter/</link>
+    <description>Recent content in Twitter on Geo&#39;z Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 13 Aug 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://geojoy.me/tags/twitter/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mon bootstrap en laisse !</title>
+      <link>https://geojoy.me/post---copy/mon-bootstrap-en-laisse/</link>
+      <pubDate>Mon, 13 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/mon-bootstrap-en-laisse/</guid>
+      <description>Oui, moi aussi je veux mon Bootstrap ! Voici comment le personnaliser, avec possibilités de mises à jour du framework de base.
+Avant de commencer, il vous faudra installer Git, Node.js, ainsi que les dépendances associées à Bootstrap.
+projectRoot +- bootstrap +- custom	+- grunt.js	+- package.json   bootstrap : Contiendra un sous-module Git, pointant sur le dépôt Github de Bootstrap. custom : Contiendra vos sources venant surcharger les scripts LESS de bootstrap.</description>
+    </item>
+    
+  </channel>
+</rss>

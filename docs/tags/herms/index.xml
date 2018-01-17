@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Herms on Geo&#39;z Blog</title>
+    <link>https://geojoy.me/tags/herms/</link>
+    <description>Recent content in Herms on Geo&#39;z Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 14 Aug 2005 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://geojoy.me/tags/herms/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>HermS sous linux c&#39;est possible !</title>
+      <link>https://geojoy.me/post---copy/herms-sous-linux-cest-possible/</link>
+      <pubDate>Sun, 14 Aug 2005 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/herms-sous-linux-cest-possible/</guid>
+      <description>Après une lutte acharnée pour la compilation du composant MyXaml sur mon ordinateur, la victoire vient s&amp;rsquo;offrir à nous. Je vous annonce que HermS marche sous Linux (moyennant plateforme Mono mais ça marche).</description>
+    </item>
+    
+    <item>
+      <title>Plus de python dans HermS</title>
+      <link>https://geojoy.me/post---copy/plus-de-python-dans-herms/</link>
+      <pubDate>Thu, 11 Aug 2005 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/plus-de-python-dans-herms/</guid>
+      <description>Après une journée de test, je me suis aperçu d&amp;rsquo;un problème non négociable, l&amp;rsquo;occupation du moteur python en mémoire (~80 Mo) ce qui est énorme ! Donc au revoir Python, j&amp;rsquo;ai developpé une solution 100% C#, et je pense qu&amp;rsquo;elle sera plus intuitive d&amp;rsquo;ailleurs.</description>
+    </item>
+    
+    <item>
+      <title>HermS rebirTH c&#39;est quoi ?</title>
+      <link>https://geojoy.me/post---copy/herms-rebirth-cest-quoi/</link>
+      <pubDate>Wed, 10 Aug 2005 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/herms-rebirth-cest-quoi/</guid>
+      <description>HermS rebirTH (prononcez Hérmès comme le dieu des messagers ;-)) est un projet que je traine depuis mon époque de la Terminale (2002), c&amp;rsquo;est un logiciel de messagerie instantannée comme Gaim, iChat, ou MSN (beurk ! il fallait le citer).</description>
+    </item>
+    
+    <item>
+      <title>Jabber: Open Instant Messaging and a Whole Lot More, Powered by XMPP</title>
+      <link>https://geojoy.me/post---copy/jabber-open-instant-messaging-and-a-whole-lot-more-powered-by-xmpp/</link>
+      <pubDate>Wed, 10 Aug 2005 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/jabber-open-instant-messaging-and-a-whole-lot-more-powered-by-xmpp/</guid>
+      <description>Jabber: Open Instant Messaging and a Whole Lot More, Powered by XMPP
+Avez vous déja utilisé autre chose que MSN, ou AIM ? si non pourquoi ? Personnellement, j&amp;rsquo;utilise Jabber sur le serveur [](www.fritalk.com).
+Pourquoi Jabber, parce que c&amp;rsquo;est complètement gratuit, libre, et fiable. J&amp;rsquo;ai jamais eu de bug, de virus, de spam par Jabber. J&amp;rsquo;utilise Jabber pour passer sur les réseaux propriétaires comme MSN, ou AIM / ICQ et surtout parce que c&amp;rsquo;est pas du M$.</description>
+    </item>
+    
+    <item>
+      <title>Pour vous quelles seraient les fonctions idéalles d&#39;un messenger ?</title>
+      <link>https://geojoy.me/post---copy/pour-vous-quelles-seraient-les-fonctions-idealles-dun-messenger/</link>
+      <pubDate>Wed, 10 Aug 2005 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/pour-vous-quelles-seraient-les-fonctions-idealles-dun-messenger/</guid>
+      <description>J&amp;rsquo;aimerais savoir quelles sont les fonctionnalités qu&amp;rsquo;un &amp;ldquo;Messenger&amp;rdquo; doit avoir (hormis les fonctions de bases biensûr ) si si je sais y en a qui allaient faire la remarque ?</description>
+    </item>
+    
+  </channel>
+</rss>

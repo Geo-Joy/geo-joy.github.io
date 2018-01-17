@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Suexec on Geo&#39;z Blog</title>
+    <link>https://geojoy.me/tags/suexec/</link>
+    <description>Recent content in Suexec on Geo&#39;z Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 09 Sep 2009 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://geojoy.me/tags/suexec/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mise en place d&#39;une infrastructure de service Web</title>
+      <link>https://geojoy.me/post---copy/mise-en-place-dune-infrastructure-de-service-web/</link>
+      <pubDate>Wed, 09 Sep 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/mise-en-place-dune-infrastructure-de-service-web/</guid>
+      <description>Bonsoir à tous, je me suis enfin motivé pour rédiger un multi-post, même si a mon avis un blog n&amp;rsquo;est pas fait dans cet objectif. (c&amp;rsquo;est plus le rôle d&amp;rsquo;un wiki)
+Je vais parler de la mise en service LAMP (Linux Apache MySQL PHP) avancée, en y ajoutant des contraintes de sécurité.
+Ce post sera pour une fois, orienté besoin, et non pas tartine technologique associé à un &amp;ldquo;Lego System&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>FastCGI &#43; SuEXEC, ouf !</title>
+      <link>https://geojoy.me/post---copy/fastcgi-suexec-ouf/</link>
+      <pubDate>Tue, 18 Dec 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/fastcgi-suexec-ouf/</guid>
+      <description>Ca y est j&amp;rsquo;ai enfin réussi à faire tourner la plateforme sous FastCGI + SuEXEC, pour pouvoir exécuter les virtualhosts avec des utilisateurs et groupes différents des uns des autres. Reste quelques petits problèmes à régler par ci par là ! mais ça marche !</description>
+    </item>
+    
+  </channel>
+</rss>

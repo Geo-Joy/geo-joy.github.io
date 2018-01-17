@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Golang on Geo&#39;z Blog</title>
+    <link>https://geojoy.me/tags/golang/</link>
+    <description>Recent content in Golang on Geo&#39;z Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 17 Sep 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://geojoy.me/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Anvil: Challenge / Response Forge</title>
+      <link>https://geojoy.me/project---copy/anvil-password-challenge/</link>
+      <pubDate>Sun, 17 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/project---copy/anvil-password-challenge/</guid>
+      <description>EDITO: Un certains temps que je n&amp;rsquo;ai pas posté d&amp;rsquo;articles, cela a été mouvementé pour moi depuis Avril, j&amp;rsquo;ai changé d&amp;rsquo;entreprise quittant pour le coup tout un investissement intellectuel de 3 ans. Voilà, je suis passé à autre chose ^^
+ Encore un dispositif d&amp;rsquo;identification pour Internet, pfff &amp;hellip; encore un !
+ Oui mais non ^^
+ Aujourd&amp;rsquo;hui, trop peu de développeurs prennent les précautions inhérentes au respects des règles de sécurité.</description>
+    </item>
+    
+    <item>
+      <title>Butcher : Password Hasher</title>
+      <link>https://geojoy.me/project---copy/butcher-password-hasher/</link>
+      <pubDate>Wed, 29 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/project---copy/butcher-password-hasher/</guid>
+      <description>Lorsque l&amp;rsquo;on développe des applications ayant dans la majorité des cas des utilisateurs, sans lesquels nous pouvons nous poser la question sur l&amp;rsquo;utilité de celles-ci, vient une notion de compte d&#39;accès permettant d&amp;rsquo;identifier un utilisateur.
+Cette identification nécessite un mécanisme, le plus souvent un login et un mot de passe. Bien qu&amp;rsquo;il existe d&amp;rsquo;autres moyens d&amp;rsquo;identification cela reste le plus répandu.
+En outre des recommandations sur la qualité du mot de passe lui-même, il faut se poser la question de comment le stocker dans notre application, et surtout comment faire évoluer cette stratégie dans le temps.</description>
+    </item>
+    
+    <item>
+      <title>Kubernetes Minikube avec KVM</title>
+      <link>https://geojoy.me/post---copy/minikube-avec-kvm/</link>
+      <pubDate>Fri, 24 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/minikube-avec-kvm/</guid>
+      <description>&amp;ldquo;Kubernetes est le système Open Source de Google dédié à la gestion des conteneurs Linux pour des environnements de Cloud privé, public et hybride.&amp;rdquo; source: lemagit
+Traduire : cela gère vos applications en conteneurs Docker dans un environnement distribué multi-machines.
+ Si vous connaissez déjà Rancher, ils sont concurrents.
+ Minikube Minikube est un outil permettant de mettre en place rapidement (quand tout va bien) un cluster opérationnel sur sa machine.</description>
+    </item>
+    
+    <item>
+      <title>Exposez vos packages Go.</title>
+      <link>https://geojoy.me/post---copy/exposez-package-go/</link>
+      <pubDate>Sun, 27 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/exposez-package-go/</guid>
+      <description>J&amp;rsquo;ai ouvert mon &amp;ldquo;framework&amp;ldquo; personnel sur Github, mais bon n&amp;rsquo;étant pas foncièrement attaché à Github j&amp;rsquo;ai cherché un moyen de pouvoir réécrire les packages Golang en ajoutant un &amp;ldquo;proxy&amp;rdquo;.
+Cette technique est possible, c&amp;rsquo;est une fonctionnalité de go get. Par défaut un package Go sans préfixe indique une dépendance du runtime.
+[&amp;lt;prefix&amp;gt;/]?&amp;lt;path&amp;gt;/&amp;lt;library&amp;gt; La plupart du temps les librairies sont hébergées sur un dépôt de code directement (Github, Gitlab, etc.).</description>
+    </item>
+    
+    <item>
+      <title>Utiliser Tyk comme proxy VirusTotal</title>
+      <link>https://geojoy.me/post---copy/tyk-proxy-virustotal/</link>
+      <pubDate>Fri, 15 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/tyk-proxy-virustotal/</guid>
+      <description>Tyk, serveur proxy API Tyk.io est un reverse-proxy permettant de contrôller / monitorer les accès aux API.
+Le serveur, écrit en golang, est OpenSource et gratuit, mais la documentation n&amp;rsquo;est pas très simple d&amp;rsquo;accès. Il existe un dashboard payant exploitant les données de traffic du reverse-proxy.
+Avec Tyk, vous pouvez simplement ajouter :
+ Des quotas et des limites d&amp;rsquo;accès en volume ; Des mécanismes d&amp;rsquo;authentification (Basic, JWT, HMAC, OAUTH 2.</description>
+    </item>
+    
+    <item>
+      <title>Automatisation des publications Hugo avec Caddy</title>
+      <link>https://geojoy.me/post---copy/automatisation-publication-hugo-avec-caddy/</link>
+      <pubDate>Wed, 06 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/automatisation-publication-hugo-avec-caddy/</guid>
+      <description>Nous allons mettre en place à l&amp;rsquo;aide de Hugo : générateur de site static codé en &amp;lsquo;Go&amp;rsquo;, et Caddy : serveur web très simplifié supportant notamment le HTTP/2.0; un système de publication automatisé.
+Github étant mon hébergeur de sources, il faut pouvoir connecter ce dépôt et plus précisément les événements PUSH à un dispositif tiers.
+Les webhooks Il existe pour les notifications cross-systèmes une technique que l&amp;rsquo;on nomme les webhooks, tout simplement des appels Web comme les webservices mais souvent entre systèmes.</description>
+    </item>
+    
+    <item>
+      <title>Rétrospective 2015</title>
+      <link>https://geojoy.me/post---copy/retrospective-2015/</link>
+      <pubDate>Sun, 03 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/retrospective-2015/</guid>
+      <description>Bonne année à toutes et à tous !
+2015 a été plutôt riche comme année, sur le plan professionnel et personnel. Afin de repartir sur une nouvelle base, j&amp;rsquo;ai changé le thème de mon blog plus orienté &amp;ldquo;magazine&amp;rdquo;. Il est un peu plus lourd que l&amp;rsquo;ancien crisp, mais il est plus agréable à lire.
+J&amp;rsquo;ai ouvert le dépot du thème Ghost porté sur Hugo Bleak.
+Mes projets Concrètement pour moi, c&amp;rsquo;est l&amp;rsquo;année du Go et Docker ^^</description>
+    </item>
+    
+    <item>
+      <title>Pourquoi apprendre le Go(lang) ?</title>
+      <link>https://geojoy.me/post---copy/pourquoi-apprendre-go/</link>
+      <pubDate>Mon, 30 Mar 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/pourquoi-apprendre-go/</guid>
+      <description>Déjà un petit moment que je roule ma bosse avec Go, j&amp;rsquo;avoue qu&amp;rsquo;aujourd&amp;rsquo;hui c&amp;rsquo;est un peu mon python d&amp;rsquo;avant ^^
+Je vais essayer d&amp;rsquo;être impartial au possible ! Voici les raisons pour lesquelles ce langage fait partie de ma caisse à outils.
+Introduction Tout d&amp;rsquo;abord Go c&amp;rsquo;est quoi ? C&amp;rsquo;est un language relativement jeune, comparé au dinosaure comme C, C++, Java; il n&amp;rsquo;a que 5 ans. Il a été pricipalement écrit et développé par 3 personnes travaillant aujourd&amp;rsquo;hui chez Google :</description>
+    </item>
+    
+    <item>
+      <title>De Docpad à Hugo</title>
+      <link>https://geojoy.me/post---copy/de-docpad-a-hugo/</link>
+      <pubDate>Sun, 25 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/de-docpad-a-hugo/</guid>
+      <description>Je sais ! Je migre encore de solution de génération de site static, mais bon ça s&amp;rsquo;appelle le progrès. Cette fois migration de Docpad vers Hugo, pour une raison simple : la performance.
+Avant j&amp;rsquo;avais Docpad, mais ça c&amp;rsquo;était avant ! Je suis passé :
+ de Dotclear, à Wordpress, pour des raisons de lenteur de correctifs (notamment sécurité). de Wordpress à Jekyll, parce que Wordpress faisait beaucoup trop de choses, et devenait de plus en plus statique grace à W3Total Cache, et puis il fallait PHP &amp;hellip; Jekyll à Octopress, c&amp;rsquo;est la même famille, c&amp;rsquo;est un fork &amp;ldquo;on steroid&amp;rdquo; du premier, mais trop lourd (à mon gout) pour le déploiement.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bellegarde on Geo&#39;z Blog</title>
+    <link>https://geojoy.me/tags/bellegarde/</link>
+    <description>Recent content in Bellegarde on Geo&#39;z Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 26 Nov 2007 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://geojoy.me/tags/bellegarde/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ateliers KDE - Novembre 2007</title>
+      <link>https://geojoy.me/post---copy/ateliers-kde-novembre-2007/</link>
+      <pubDate>Mon, 26 Nov 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/ateliers-kde-novembre-2007/</guid>
+      <description>L&amp;rsquo;atelier KDE de ce mois-ci a eut lieu au centre culturel de Bellegarde. Programme de la journée : bosser, bosser, bosser ! On sent que la sortie de KDE 4 est proche. Pour ma part, j&amp;rsquo;ai fait du Rails (oui je sais aucun rapport avec KDE), et j&amp;rsquo;ai aidé les étudiants sur les projets Kopete (ah voila c&amp;rsquo;est mieux !).</description>
+    </item>
+    
+  </channel>
+</rss>

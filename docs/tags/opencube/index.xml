@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Opencube on Geo&#39;z Blog</title>
+    <link>https://geojoy.me/tags/opencube/</link>
+    <description>Recent content in Opencube on Geo&#39;z Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 07 Sep 2007 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://geojoy.me/tags/opencube/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Last day of a HD boy ...</title>
+      <link>https://geojoy.me/post---copy/last-day-of-a-hd-boy/</link>
+      <pubDate>Fri, 07 Sep 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/last-day-of-a-hd-boy/</guid>
+      <description>Et voila dernier jour de stage à OpenCube Technologies, aujourd&amp;rsquo;hui, j&amp;rsquo;ai préparé mon départ, rangé mon bureau, y a plus qu&amp;rsquo;a exécuter les tâches de nettoyage, et à partir.
+Je viens de finir les dernier travaux, reste l&amp;rsquo;attente de la fatidique heure &amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Voila le rapport est validé !</title>
+      <link>https://geojoy.me/post---copy/voila-le-rapport-est-valide/</link>
+      <pubDate>Tue, 14 Aug 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/voila-le-rapport-est-valide/</guid>
+      <description>Le rapport de stage chez OpenCube vient de passer l&amp;rsquo;étape de validation, il sera expédié comme prévu.
+OpenCube_rapport.pdf [477 Ko / 39 pages] {EDIT 20/01/2009 : Retiré sur demande de l&amp;rsquo;entreprise} Soutenance [ 71 Ko ] {EDIT 20/01/2009 : Retiré sur demande de l&amp;rsquo;entreprise}</description>
+    </item>
+    
+    <item>
+      <title>Hmm ça commence à devenir intéressant ...</title>
+      <link>https://geojoy.me/post---copy/hmm-ca-commence-a-devenir-interessant/</link>
+      <pubDate>Thu, 26 Apr 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/hmm-ca-commence-a-devenir-interessant/</guid>
+      <description>Enfin, un peu d&amp;rsquo;action, je rentre dans le cadre d&amp;rsquo;un projet à grande échelle, fondé sur l&amp;rsquo;association de deux sociétés et d&amp;rsquo;une chaîne publique nationale. But de la manoeuvre créer une norme de sous-titre, enfin aidé à la validation de celle ci, faire les implémentations. Enfin un projet différents des autres &amp;hellip; pas des projets &amp;ldquo;spécial stagiaire&amp;rdquo; &amp;hellip; .
+ OpenCube NInsight Arte  </description>
+    </item>
+    
+    <item>
+      <title>2eme semaine de stage ...</title>
+      <link>https://geojoy.me/post---copy/2eme-semaine-de-stage/</link>
+      <pubDate>Tue, 17 Apr 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/2eme-semaine-de-stage/</guid>
+      <description>Voila ma 2eme semaine de stage se termine, ono programme :
+ADmIniStRaToR Strike back !!!! , oui encore et comme d&amp;rsquo;hab, des travaux d&amp;rsquo;administrations réseaux et systèmes. Cela me réconforte dans l&amp;rsquo;idée que c&amp;rsquo;est un besoin, mais m&amp;rsquo;nquiète dans le fait que les entreprises ou sociétés ne s&amp;rsquo;en rendent pas compte.
+ Audit de sécurité (aie aie aie y a du boulot ^^)
+ Migration CVS vers SVN. Intégration de Trac.</description>
+    </item>
+    
+    <item>
+      <title>Début Stage M1 ISI</title>
+      <link>https://geojoy.me/post---copy/debut-stage-m1-isi/</link>
+      <pubDate>Mon, 02 Apr 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/debut-stage-m1-isi/</guid>
+      <description>Et c&amp;rsquo;est en ce jours de grands vents, que j&amp;rsquo;annonce : premier jour chez OpenCube. On voit aussi que ce qu&amp;rsquo;on apprend en cours, n&amp;rsquo;est pas toujours inutile ( comme certains le pense hihi ), méthodologie XP, avec réunion hebdomadaire d&amp;rsquo;avancement, fiches de suivi. J&amp;rsquo;en connais qui vont être content &amp;hellip;. BC !.
+Voila du Qt, du Qt et encore du Qt, de la programmation multimédia, multiplateforme. (DirectShow, OpenGL, etc&amp;hellip;). Encore un grd merci à Ervin pour nous avoir éclairé le chemin de sa QLumiereWidget ^^ (==&amp;gt; geek !</description>
+    </item>
+    
+    <item>
+      <title>Stage Fin Master 1</title>
+      <link>https://geojoy.me/post---copy/stage-fin-master-1/</link>
+      <pubDate>Sun, 11 Mar 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/stage-fin-master-1/</guid>
+      <description>Voila, je vais effectuer mes 5 mois de stage de fin d&amp;rsquo;études de mon Master 1 chez OpenCube. Le stage se déroule en deux parties :
+ Etat de l&amp;rsquo;art des normes de sous-titres pour le HD. Réalisation d&amp;rsquo;une API pour l&amp;rsquo;exploitation, le rendu de ces sous titres dans le format MXF. Ainsi que la réalisation de logiciels d&amp;rsquo;exploitation de cette API.  Début du stage le 2 Avril &amp;hellip; que j&amp;rsquo;attends avec impatience :) .</description>
+    </item>
+    
+  </channel>
+</rss>

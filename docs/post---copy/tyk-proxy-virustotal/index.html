@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en-us" class="wf-loading">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <meta name="HandheldFriendly" content="True" />
+        <meta name="MobileOptimized" content="320" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="preload" href="https://geojoy.mejs/main.js" as="script" />
+        <link rel="preload" href="https://geojoy.mecss/main.css" as="style" />
+
+        <title>Utiliser Tyk comme proxy VirusTotal</title>
+        <meta name="generator" content="Hugo 0.32.4" />
+        
+        <link rel="preconnect" href="https://ajax.googleapis.com/" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+        <meta property="og:title" content="Utiliser Tyk comme proxy VirusTotal" />
+<meta property="og:description" content="Centraliser/Monitorer les accès aux services VT à l&#39;aide du proxy golang Tyk." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://geojoy.me/post---copy/tyk-proxy-virustotal/" />
+
+
+
+<meta property="article:published_time" content="2016-01-15T00:00:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2017-03-01T11:27:29&#43;01:00"/>
+
+
+
+
+
+
+
+
+
+
+
+    
+        <meta property="og:type" content="article" />
+        <meta property="og:article:published_time" content="2016-01-15T00:00:00Z" />
+        <meta property="og:article:tag" content="securite" />
+        <meta property="og:article:tag" content="virustotal" />
+        <meta property="og:article:tag" content="golang" />
+        
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@megeojoy" />
+        <meta name="twitter:creator" content="@megeojoy" />
+        <meta name="twitter:title" content="Utiliser Tyk comme proxy VirusTotal" />
+        <meta name="twitter:description" content="Centraliser/Monitorer les accès aux services VT à l&#39;aide du proxy golang Tyk." />
+        <meta name="twitter:url" content="https://geojoy.me/post---copy/tyk-proxy-virustotal/" />
+        
+    
+
+    
+        <meta name="p:domain_verify" content="fc173d84e3a4de948ed4bda2908afd3e"/>
+    
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Thibault NORMAND",
+      "url": "http://zenithar.org",
+      "sameAs": [
+        "https://twitter.com/zenithar/",
+        "https://www.linkedin.com/in/zenithar/",
+        "https://github.com/Zenithar/",
+        "https://plus.google.com/u/0/+ThibaultNormand"
+      ],
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://geojoy.me/images/avatar.jpg",
+        "height": 80,
+        "width": 80
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "@id": "https://geojoy.me",
+      "name": "Geo&#39;z Blog",
+      "url": "https://geojoy.me",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://geojoy.me/images/avatar.jpg",
+        "height": 80,
+        "width": 80
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "url": "https://geojoy.me",
+      "name": "Geo&#39;z Blog",
+      "author": {
+        "@type": "Person",
+        "name": "Geo Joy"
+      },
+      "description": ""
+    }
+    </script>
+
+      
+      <script type="application/ld+json">
+      {
+          "@context": "http://schema.org",
+          "@type": "BlogPosting",
+          "headline": "Utiliser Tyk comme proxy VirusTotal",
+          "description": "Centraliser/Monitorer les accès aux services VT à l&#39;aide du proxy golang Tyk.",
+          "author": {
+              "@type": "Person",
+              "name": "Geo Joy"
+          },
+          "publisher": {
+              "@type": "Organization",
+              "name": "Geo&#39;z Blog",
+              "logo": "https://geojoy.me/images/avatar.jpg"
+          },
+          
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://geojoy.me/images/avatar.jpg",
+            "height": 80,
+            "width": 80
+          },
+          "datePublished": "2016-01-15",
+          "dateModified": "2017-03-01",
+          "wordCount": 818
+          ,
+          "keywords": ["securite","virustotal","golang"] 
+      }
+    </script>
+  
+
+    <style>
+body{margin:0}main,nav{display:block}a{background-color:transparent}h1{margin:.67em 0;font-size:2em}img{border:0}code,kbd{font-family:monospace,monospace;font-size:1em}button{margin:0;font:inherit;color:inherit}button{overflow:visible}button{text-transform:none}button{-webkit-appearance:button}button::-moz-focus-inner{padding:0;border:0}*{-webkit-box-sizing:border-box;box-sizing:border-box}:after,:before{-webkit-box-sizing:border-box;box-sizing:border-box}html{font-size:10px}body{font-family:"Raleway",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333;background-color:#fff}button{font-family:inherit;font-size:inherit;line-height:inherit}a{color:#337ab7;text-decoration:none}img{vertical-align:middle}h1,h4,h5{font-family:inherit;font-weight:500;line-height:1.1;color:inherit}h1{margin-top:20px;margin-bottom:10px}h4,h5{margin-top:10px;margin-bottom:10px}h1{font-size:36px}h4{font-size:18px}h5{font-size:14px}p{margin:0 0 10px}.text-justify{text-align:justify}ul{margin-top:0;margin-bottom:10px}blockquote{padding:10px 20px;margin:0 0 20px;font-size:17.5px;border-left:5px solid #eee}blockquote p:last-child{margin-bottom:0}code,kbd{font-family:Menlo,Monaco,Consolas,"Courier New",monospace}code{padding:2px 4px;font-size:90%;color:#c7254e;background-color:#f9f2f4;border-radius:4px}kbd{padding:2px 4px;font-size:90%;color:#fff;background-color:#333;border-radius:3px;-webkit-box-shadow:inset 0 -1px 0 rgba(0,0,0,.25);box-shadow:inset 0 -1px 0 rgba(0,0,0,.25)}.container{padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}@media (min-width:768px){.container{width:750px}}@media (min-width:992px){.container{width:970px}}@media (min-width:1200px){.container{width:1170px}}.collapse{display:none}.nav{padding-left:0;margin-bottom:0;list-style:none}.nav>li{position:relative;display:block}.nav>li>a{position:relative;display:block;padding:10px 15px}.navbar{position:relative;min-height:50px;margin-bottom:20px;border:1px solid transparent}@media (min-width:768px){.navbar{border-radius:4px}}@media (min-width:768px){.navbar-header{float:left}}.navbar-collapse{padding-right:15px;padding-left:15px;overflow-x:visible;-webkit-overflow-scrolling:touch;border-top:1px solid transparent;-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,.1);box-shadow:inset 0 1px 0 rgba(255,255,255,.1)}@media (min-width:768px){.navbar-collapse{width:auto;border-top:0;-webkit-box-shadow:none;box-shadow:none}.navbar-collapse.collapse{display:block !important;height:auto !important;padding-bottom:0;overflow:visible !important}.navbar-fixed-top .navbar-collapse{padding-right:0;padding-left:0}}.navbar-fixed-top .navbar-collapse{max-height:340px}@media (max-device-width:480px) and (orientation:landscape){.navbar-fixed-top .navbar-collapse{max-height:200px}}.container>.navbar-collapse,.container>.navbar-header{margin-right:-15px;margin-left:-15px}@media (min-width:768px){.container>.navbar-collapse,.container>.navbar-header{margin-right:0;margin-left:0}}.navbar-fixed-top{position:fixed;right:0;left:0;z-index:1030}@media (min-width:768px){.navbar-fixed-top{border-radius:0}}.navbar-fixed-top{top:0;border-width:0 0 1px}.navbar-brand{float:left;height:50px;padding:15px 15px;font-size:18px;line-height:20px}@media (min-width:768px){.navbar>.container .navbar-brand{margin-left:-15px}}.navbar-toggle{position:relative;float:right;padding:9px 10px;margin-top:8px;margin-right:15px;margin-bottom:8px;background-color:transparent;background-image:none;border:1px solid transparent;border-radius:4px}.navbar-toggle .icon-bar{display:block;width:22px;height:2px;border-radius:1px}.navbar-toggle .icon-bar+.icon-bar{margin-top:4px}@media (min-width:768px){.navbar-toggle{display:none}}.navbar-nav{margin:7.5px -15px}.navbar-nav>li>a{padding-top:10px;padding-bottom:10px;line-height:20px}@media (min-width:768px){.navbar-nav{float:left;margin:0}.navbar-nav>li{float:left}.navbar-nav>li>a{padding-top:15px;padding-bottom:15px}}@media (min-width:768px){.navbar-right{float:right !important;margin-right:-15px}}.navbar-default{background-color:#f8f8f8;border-color:#e7e7e7}.navbar-default .navbar-brand{color:#777}.navbar-default .navbar-nav>li>a{color:#777}.navbar-default .navbar-toggle{border-color:#ddd}.navbar-default .navbar-toggle .icon-bar{background-color:#888}.navbar-default .navbar-collapse{border-color:#e7e7e7}.container:after,.container:before,.nav:after,.nav:before,.navbar-collapse:after,.navbar-collapse:before,.navbar-header:after,.navbar-header:before,.navbar:after,.navbar:before{display:table;content:" "}.container:after,.nav:after,.navbar-collapse:after,.navbar-header:after,.navbar:after{clear:both}@-ms-viewport{width:device-width}.visible-xs{display:none !important}@media (max-width:767px){.visible-xs{display:block !important}}html{height:100%}body{height:100%;padding-top:55px;display:-webkit-box;display:-ms-flexbox;display:flex;text-align:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;font-size:16px !important}main{margin:auto;padding:25px;max-width:750px}a:link,a:visited{color:green}.item{padding:10px 0}.item-tag{background-color:green}.navbar-icon{font-size:125%;display:inline-block !important}.navbar.navbar-default{border-top:5px solid green}img{max-width:100%}.fade-in{opacity:0}
+.wf-loading p, .wf-loading h1, .wf-loading h2, .wf-loading h3, .wf-loading h4, .wf-loading a {visibility: hidden;}.wf-active  p, .wf-active h1, .wf-active h2, .wf-active h3, .wf-active h4, .wf-active a {visibility: visible;}.wf-inactive    p, .wf-inactive h1, .wf-inactive h2, .wf-inactive h3, .wf-inactive h4, wf-inactive a {visibility: visible;}
+</style>
+
+    </head>
+
+    <body>
+      
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQ3JDPK"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Utiliser Tyk comme proxy VirusTotal</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Posts</a></li>
+                            
+                                <li><a href="/project/">Projects</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="/resume/"><i class="fa fa-user"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="http://www.google.com/recaptcha/mailhide/d?k=01IIc-s5LNYiS-CG_gthn4PA==&amp;c=r5Ctx8RMDz422qmYESfk1g=="><i class="fa fa-envelope"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/Geo-Joy"><i class="fa fa-github-alt"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/megeojoy"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/geojoy/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main class="fade-in">
+
+    <div class="item">
+
+    
+    
+    
+
+    
+      
+
+    <h4><a itemprop="url" href="/post---copy/tyk-proxy-virustotal/">
+      <span itemprop="name">Utiliser Tyk comme proxy VirusTotal</span>
+    </a></h4>
+
+    January 15, 2016
+    <h5>Centraliser/Monitorer les accès aux services VT à l&#39;aide du proxy golang Tyk.</h5>
+     <a href="../../../../../tags/securite"><kbd class="item-tag">securite</kbd></a>  <a href="../../../../../tags/virustotal"><kbd class="item-tag">virustotal</kbd></a>  <a href="../../../../../tags/golang"><kbd class="item-tag">golang</kbd></a> 
+
+</div>
+
+
+    <br> <div class="text-justify">
+
+<h1 id="tyk-serveur-proxy-api">Tyk, serveur proxy API</h1>
+
+<p><a href="https://tyk.io/">Tyk.io</a> est un reverse-proxy permettant de contrôller /
+monitorer les accès aux API.</p>
+
+<p>Le serveur, écrit en <code>golang</code>, est OpenSource et gratuit, mais la documentation
+n&rsquo;est pas très simple d&rsquo;accès. Il existe un <code>dashboard payant</code> exploitant les
+données de traffic du reverse-proxy.</p>
+
+<p>Avec Tyk, vous pouvez simplement ajouter :</p>
+
+<ul>
+<li>Des quotas et des limites d&rsquo;accès en volume ;</li>
+<li>Des mécanismes d&rsquo;authentification (Basic, JWT, HMAC, OAUTH 2.0) ;</li>
+<li>Des informations sur le comportement de vos APIs (accès, erreurs, etc.) ;</li>
+<li>Des informations sur la supervision et les performances ;</li>
+<li>Des mécanismes de notifications (email, webhook)</li>
+<li>Des chaînes de transformations de requêtes et corps associés ;</li>
+<li>Des politiques de sécurité concernant l&rsquo;accès aux API / sous-API ;</li>
+<li>La suite sur le <a href="https://tyk.io/">site</a> &hellip;</li>
+</ul>
+
+<p>Pour faire simple, si vous ne voulez pas embarquer toutes les logiques métiers
+liées à la sécurité, le monitoring, la supervision, je vous conseille de jeter
+un oeil sur Tyk.</p>
+
+<h1 id="virustotal">VirusTotal</h1>
+
+<p><a href="http://www.virustotal.com">VirusTotal</a> est un service d&rsquo;analyse en cloud pour
+les analyses de virus, ce n&rsquo;est pas une sandbox comme <a href="https://cuckoosandbox.org/">Cuckoo</a>.</p>
+
+<p>Il s&rsquo;agit d&rsquo;un système qui va faire analyser votre fichier / url par un <a href="https://www.virustotal.com/en/about/credits/">bataillon
+d&rsquo;antivirus, antimalware, d&rsquo;analyseur de fichier (ssdeep, hash)</a>.</p>
+
+<p>Ces analyses vont générer un certains nombre d&rsquo;informations (signatures, hashes, etc).</p>
+
+<p>Le service est gratuit, mais lorsque l&rsquo;on souhaite obtenir des accès API
+pour industrialisation il faut payer.
+L&rsquo;identification se fait à l&rsquo;aide d&rsquo;une <code>API KEY</code>, sous la forme d&rsquo;un héxadécimal.
+Cette clé peut être récupérée sur votre profil VirusTotal.</p>
+
+<p>Cette clé est associée à votre compte utilisateur et à la souscription que vous
+avez.</p>
+
+<blockquote>
+<p>Souscription donnant lieu principalement à une limitation en volume de requêtes.</p>
+</blockquote>
+
+<p>Lorsque l&rsquo;on monte un service en entreprise autour de VirusTotal, vous ne pouvez
+pas donner un compte à tous les utilisateurs API.</p>
+
+<p>Afin de faire des économies de requêtes, ainsi qu&rsquo;un contrôle d&rsquo;accès interne,
+je vous propose de mettre en place Tyk comme proxy aux WebServices VirusTotal.</p>
+
+<h1 id="configuration">Configuration</h1>
+
+<p>Nous allons mettre en place un proxy fournissant tous les services VT en local.
+Les requêtes vers VT seront mises en cache pour plus de réactivité.</p>
+
+<p>Le principe est :</p>
+
+<ul>
+<li>Transférer tous les appels locaux à VT ;</li>
+<li>Ajouter le paramètre <code>apikey</code> à chaque requète de manière transparente, évitant
+ainsi aux utilisateurs de connaître la clé d&rsquo;API ;</li>
+</ul>
+
+<p>Il faut commencer par déclarer une API sous Tyk.</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">{
+    <span style="color:#48b685">&#34;name&#34;</span><span style="color:#5bc4bf">:</span> <span style="color:#48b685">&#34;VirusTotal API&#34;</span>,
+    <span style="color:#48b685">&#34;use_keyless&#34;</span><span style="color:#5bc4bf">:</span> <span style="color:#815ba4">true</span>,
+    <span style="color:#48b685">&#34;version_data&#34;</span><span style="color:#5bc4bf">:</span> {
+        <span style="color:#48b685">&#34;not_versioned&#34;</span><span style="color:#5bc4bf">:</span> <span style="color:#815ba4">true</span>,
+        <span style="color:#48b685">&#34;versions&#34;</span><span style="color:#5bc4bf">:</span> {
+            <span style="color:#48b685">&#34;Default&#34;</span><span style="color:#5bc4bf">:</span> {
+                <span style="color:#48b685">&#34;name&#34;</span><span style="color:#5bc4bf">:</span> <span style="color:#48b685">&#34;Default&#34;</span>,
+                <span style="color:#48b685">&#34;expires&#34;</span><span style="color:#5bc4bf">:</span> <span style="color:#48b685">&#34;3000-01-02 15:04&#34;</span>,
+                <span style="color:#48b685">&#34;use_extended_paths&#34;</span><span style="color:#5bc4bf">:</span> <span style="color:#815ba4">true</span>,
+                <span style="color:#48b685">&#34;extended_paths&#34;</span><span style="color:#5bc4bf">:</span> {
+                    <span style="color:#48b685">&#34;cache&#34;</span><span style="color:#5bc4bf">:</span> [<span style="color:#48b685">&#34;v2&#34;</span>],
+                    <span style="color:#48b685">&#34;ignored&#34;</span><span style="color:#5bc4bf">:</span> [],
+                    <span style="color:#48b685">&#34;white_list&#34;</span><span style="color:#5bc4bf">:</span> [],
+                    <span style="color:#48b685">&#34;black_list&#34;</span><span style="color:#5bc4bf">:</span> []
+                }
+            }
+        }
+    },
+    <span style="color:#48b685">&#34;proxy&#34;</span><span style="color:#5bc4bf">:</span> {
+        <span style="color:#48b685">&#34;listen_path&#34;</span><span style="color:#5bc4bf">:</span> <span style="color:#48b685">&#34;/vtapi/&#34;</span>,
+        <span style="color:#48b685">&#34;target_url&#34;</span><span style="color:#5bc4bf">:</span> <span style="color:#48b685">&#34;https://www.virustotal.com/vtapi/&#34;</span>,
+        <span style="color:#48b685">&#34;strip_listen_path&#34;</span><span style="color:#5bc4bf">:</span> <span style="color:#815ba4">true</span>
+    },
+    <span style="color:#48b685">&#34;cache_options&#34;</span><span style="color:#5bc4bf">:</span> {
+      <span style="color:#48b685">&#34;cache_timeout&#34;</span><span style="color:#5bc4bf">:</span> <span style="color:#f99b15">10</span>,
+      <span style="color:#48b685">&#34;enable_cache&#34;</span><span style="color:#5bc4bf">:</span> <span style="color:#815ba4">true</span>,
+      <span style="color:#48b685">&#34;cache_all_safe_requests&#34;</span><span style="color:#5bc4bf">:</span> <span style="color:#815ba4">true</span>,
+      <span style="color:#48b685">&#34;enable_upstream_cache_control&#34;</span><span style="color:#5bc4bf">:</span> <span style="color:#815ba4">false</span>
+    },
+    <span style="color:#48b685">&#34;custom_middleware&#34;</span><span style="color:#5bc4bf">:</span> {
+      <span style="color:#48b685">&#34;pre&#34;</span><span style="color:#5bc4bf">:</span> [
+        {
+          <span style="color:#48b685">&#34;name&#34;</span><span style="color:#5bc4bf">:</span> <span style="color:#48b685">&#34;vtPreProcessMiddleware&#34;</span>,
+          <span style="color:#48b685">&#34;path&#34;</span><span style="color:#5bc4bf">:</span> <span style="color:#48b685">&#34;middleware/vtkey.js&#34;</span>,
+          <span style="color:#48b685">&#34;require_session&#34;</span><span style="color:#5bc4bf">:</span> <span style="color:#815ba4">false</span>
+        }
+      ]
+    },
+    <span style="color:#48b685">&#34;enable_batch_request_support&#34;</span><span style="color:#5bc4bf">:</span> <span style="color:#815ba4">false</span>
+}</code></pre></div>
+<p>La modification des requêtes via Tyk, se fait à l&rsquo;aide de <code>middlewares</code> codés en
+Javascript.</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#776e71">// ---- Sample middleware creation by end-user -----
+</span><span style="color:#776e71"></span><span style="color:#815ba4">var</span> <span style="color:#06b6ef">vtPreProcessMiddleware</span> <span style="color:#5bc4bf">=</span> <span style="color:#815ba4">new</span> <span style="color:#06b6ef">TykJS</span>.<span style="color:#06b6ef">TykMiddleware</span>.<span style="color:#06b6ef">NewMiddleware</span>({});
+
+<span style="color:#06b6ef">vtPreProcessMiddleware</span>.<span style="color:#06b6ef">NewProcessRequest</span>(<span style="color:#815ba4">function</span>(<span style="color:#06b6ef">request</span>, <span style="color:#06b6ef">session</span>) {
+    <span style="color:#776e71">// Add or delete request parmeters, these are encoded for the request as needed.
+</span><span style="color:#776e71"></span>    <span style="color:#06b6ef">request</span>.<span style="color:#06b6ef">AddParams</span>[<span style="color:#48b685">&#34;apikey&#34;</span>] <span style="color:#5bc4bf">=</span> <span style="color:#48b685">&#34;votreapikey&#34;</span>;
+    <span style="color:#776e71">// You MUST return both the request and session metadata
+</span><span style="color:#776e71"></span>    <span style="color:#815ba4">return</span> <span style="color:#06b6ef">vtPreProcessMiddleware</span>.<span style="color:#06b6ef">ReturnData</span>(<span style="color:#06b6ef">request</span>, {});
+});
+
+<span style="color:#776e71">// Ensure init with a post-declaration log message
+</span><span style="color:#776e71"></span><span style="color:#06b6ef">log</span>(<span style="color:#48b685">&#34;VirusTotal middleware initialised&#34;</span>);</code></pre></div>
+<p>N&rsquo;oubliez pas d&rsquo;activer le support de Javascript dans Tyk, dans le fichier tyk.conf :</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">...
+<span style="color:#48b685">&#34;enable_jsvm&#34;</span>: <span style="color:#815ba4">true</span>
+...</code></pre></div>
+<p>Et voilà, il suffit de lancer Tyk, puis de profiter du service VT sans utiliser
+la clé d&rsquo;API.</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#5bc4bf">[</span>zenithar:~<span style="color:#5bc4bf">]</span>$ ./tyk --conf<span style="color:#5bc4bf">=</span>./tyk.conf
+INFO<span style="color:#5bc4bf">[</span><span style="color:#f99b15">0000</span><span style="color:#5bc4bf">]</span> Hostname set:                                
+INFO<span style="color:#5bc4bf">[</span><span style="color:#f99b15">0000</span><span style="color:#5bc4bf">]</span> Connection dropped, connecting..             
+INFO<span style="color:#5bc4bf">[</span><span style="color:#f99b15">0000</span><span style="color:#5bc4bf">]</span> Setting up Server                            
+INFO<span style="color:#5bc4bf">[</span><span style="color:#f99b15">0000</span><span style="color:#5bc4bf">]</span> --&gt; Standard listener <span style="color:#5bc4bf">(</span>http<span style="color:#5bc4bf">)</span>                 
+INFO<span style="color:#5bc4bf">[</span><span style="color:#f99b15">0000</span><span style="color:#5bc4bf">]</span> Loading API Specification from apps/vt.json  
+INFO<span style="color:#5bc4bf">[</span><span style="color:#f99b15">0000</span><span style="color:#5bc4bf">]</span> Detected <span style="color:#f99b15">1</span> APIs                              
+INFO<span style="color:#5bc4bf">[</span><span style="color:#f99b15">0000</span><span style="color:#5bc4bf">]</span> --&gt; Loading API: VirusTotal API              
+INFO<span style="color:#5bc4bf">[</span><span style="color:#f99b15">0000</span><span style="color:#5bc4bf">]</span> ----&gt; Tracking: <span style="color:#5bc4bf">(</span>no host<span style="color:#5bc4bf">)</span>                    
+INFO<span style="color:#5bc4bf">[</span><span style="color:#f99b15">0000</span><span style="color:#5bc4bf">]</span> Loading JS File: middleware/vtkey.js         
+INFO<span style="color:#5bc4bf">[</span><span style="color:#f99b15">0000</span><span style="color:#5bc4bf">]</span> <span style="color:#5bc4bf">[</span>JSVM<span style="color:#5bc4bf">]</span> <span style="color:#5bc4bf">[</span>LOG<span style="color:#5bc4bf">]</span>: VirusTotal middleware initialised
+INFO<span style="color:#5bc4bf">[</span><span style="color:#f99b15">0000</span><span style="color:#5bc4bf">]</span> ----&gt; Checking security policy: Open         
+INFO<span style="color:#5bc4bf">[</span><span style="color:#f99b15">0000</span><span style="color:#5bc4bf">]</span> Loading uptime tests...                      
+INFO<span style="color:#5bc4bf">[</span><span style="color:#f99b15">0000</span><span style="color:#5bc4bf">]</span> Gateway started <span style="color:#5bc4bf">(</span>v1.9.1.1<span style="color:#5bc4bf">)</span>                   
+INFO<span style="color:#5bc4bf">[</span><span style="color:#f99b15">0000</span><span style="color:#5bc4bf">]</span> --&gt; Listening on port: <span style="color:#f99b15">8080</span>                  
+INFO<span style="color:#5bc4bf">[</span><span style="color:#f99b15">0010</span><span style="color:#5bc4bf">]</span> <span style="color:#5bc4bf">[</span>HOST CHECK MANAGER<span style="color:#5bc4bf">]</span> Starting Poller  </code></pre></div>
+<p>Le service Tyk est fonctionnel, il suffit de requêter le proxy pour consulter
+VirusTotal.</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#5bc4bf">[</span>zenithar:~<span style="color:#5bc4bf">]</span>$ curl -v http://localhost:8080/vtapi/v2/domain/report?domain<span style="color:#5bc4bf">=</span>blog.zenithar.org
+*   Trying ::1...
+* Connected to localhost <span style="color:#5bc4bf">(</span>::1<span style="color:#5bc4bf">)</span> port <span style="color:#f99b15">8080</span> <span style="color:#5bc4bf">(</span><span style="color:#776e71">#0)
+</span><span style="color:#776e71"></span>&gt; GET /vtapi/v2/domain/report?domain<span style="color:#5bc4bf">=</span>blog.zenithar.org HTTP/1.1
+&gt; Host: localhost:8080
+&gt; User-Agent: curl/7.46.0
+&gt; Accept: */*
+&gt;
+&lt; HTTP/1.1 <span style="color:#f99b15">200</span> OK
+&lt; Cache-Control: no-cache
+&lt; Content-Type: application/json
+&lt; Server: Google Frontend
+&lt; Vary: Accept-Encoding
+&lt; X-Tyk-Cached-Response: <span style="color:#f99b15">1</span>
+&lt; Content-Length: <span style="color:#f99b15">452</span>
+&lt;
+* Connection <span style="color:#776e71">#0 to host localhost left intact
+</span><span style="color:#776e71"></span><span style="color:#5bc4bf">{</span><span style="color:#48b685">&#34;BitDefender category&#34;</span>: <span style="color:#48b685">&#34;business&#34;</span>, <span style="color:#48b685">&#34;domain_siblings&#34;</span>: <span style="color:#5bc4bf">[</span><span style="color:#48b685">&#34;www.zenithar.org&#34;</span><span style="color:#5bc4bf">]</span>, <span style="color:#48b685">&#34;whois&#34;</span>: null, <span style="color:#48b685">&#34;response_code&#34;</span>: <span style="color:#f99b15">1</span>, <span style="color:#48b685">&#34;verbose_msg&#34;</span>: <span style="color:#48b685">&#34;Domain found in dataset&#34;</span>, <span style="color:#48b685">&#34;Websense ThreatSeeker category&#34;</span>: <span style="color:#48b685">&#34;uncategorized&#34;</span>, <span style="color:#48b685">&#34;Webutation domain info&#34;</span>: <span style="color:#5bc4bf">{</span><span style="color:#48b685">&#34;Verdict&#34;</span>: <span style="color:#48b685">&#34;unsure&#34;</span>, <span style="color:#48b685">&#34;Adult content&#34;</span>: <span style="color:#48b685">&#34;no&#34;</span>, <span style="color:#48b685">&#34;Safety score&#34;</span>: <span style="color:#f99b15">70</span><span style="color:#5bc4bf">}</span>, <span style="color:#48b685">&#34;resolutions&#34;</span>: <span style="color:#5bc4bf">[{</span><span style="color:#48b685">&#34;last_resolved&#34;</span>: <span style="color:#48b685">&#34;2014-11-13 00:00:00&#34;</span>, <span style="color:#48b685">&#34;ip_address&#34;</span>: <span style="color:#48b685">&#34;176.31.112.5&#34;</span><span style="color:#5bc4bf">}]</span>, <span style="color:#48b685">&#34;detected_urls&#34;</span>: <span style="color:#5bc4bf">[]</span>, <span style="color:#48b685">&#34;categories&#34;</span>: <span style="color:#5bc4bf">[</span><span style="color:#48b685">&#34;business&#34;</span>, <span style="color:#48b685">&#34;uncategorized&#34;</span><span style="color:#5bc4bf">]}</span></code></pre></div>
+<p>Notez l&rsquo;entête <code>X-Tyk-Cached-Response</code>, il indique que Tyk a répondu avec une
+réponse mise en cache.</p>
+
+<blockquote>
+<p>Attention à la mise en cache trop importante, vous risquez d&rsquo;avoir des
+problèmes trditionnels aux caches (évictions tardives, données plus valides en
+cache, etc.).</p>
+</blockquote>
+
+<p>Pour aller plus loin, et comme d&rsquo;habitude, il faudrait mieux mettre tout cela
+dans un conteneur Docker &hellip;</p>
+</div>
+
+    
+    
+
+    
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">Geo Joy &copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> hosted on <a href="https://github.com/Geo-Joy/geo-joy.github.io">Github</a></p>
+
+        </footer>
+        
+       <script async="" src="https://geojoy.mejs/main.js"></script>
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KQ3JDPK');</script>
+
+
+    </body>
+
+</html>
+

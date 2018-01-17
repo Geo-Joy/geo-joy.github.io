@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en-us" class="wf-loading">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <meta name="HandheldFriendly" content="True" />
+        <meta name="MobileOptimized" content="320" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="preload" href="https://geojoy.mejs/main.js" as="script" />
+        <link rel="preload" href="https://geojoy.mecss/main.css" as="style" />
+
+        <title>Office 365 Lync / Skype enterprise sous Linux</title>
+        <meta name="generator" content="Hugo 0.32.4" />
+        
+        <link rel="preconnect" href="https://ajax.googleapis.com/" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+        <meta property="og:title" content="Office 365 Lync / Skype enterprise sous Linux" />
+<meta property="og:description" content="Vous êtes sous Linux mais pas comme le reste de votre société, vous n&#39;avez pas accès à la messagerie instantanée interne, voici quelques solutions." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://geojoy.me/post---copy/office365-lync-skype-sous-linux/" />
+
+
+
+<meta property="article:published_time" content="2016-03-27T00:00:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2017-03-01T11:27:29&#43;01:00"/>
+
+
+
+
+
+
+
+
+
+
+
+    
+        <meta property="og:type" content="article" />
+        <meta property="og:article:published_time" content="2016-03-27T00:00:00Z" />
+        <meta property="og:article:tag" content="office365" />
+        <meta property="og:article:tag" content="lync" />
+        <meta property="og:article:tag" content="skype" />
+        <meta property="og:article:tag" content="linux" />
+        
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@megeojoy" />
+        <meta name="twitter:creator" content="@megeojoy" />
+        <meta name="twitter:title" content="Office 365 Lync / Skype enterprise sous Linux" />
+        <meta name="twitter:description" content="Vous êtes sous Linux mais pas comme le reste de votre société, vous n&#39;avez pas accès à la messagerie instantanée interne, voici quelques solutions." />
+        <meta name="twitter:url" content="https://geojoy.me/post---copy/office365-lync-skype-sous-linux/" />
+        
+    
+
+    
+        <meta name="p:domain_verify" content="fc173d84e3a4de948ed4bda2908afd3e"/>
+    
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Thibault NORMAND",
+      "url": "http://zenithar.org",
+      "sameAs": [
+        "https://twitter.com/zenithar/",
+        "https://www.linkedin.com/in/zenithar/",
+        "https://github.com/Zenithar/",
+        "https://plus.google.com/u/0/+ThibaultNormand"
+      ],
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://geojoy.me/images/avatar.jpg",
+        "height": 80,
+        "width": 80
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "@id": "https://geojoy.me",
+      "name": "Geo&#39;z Blog",
+      "url": "https://geojoy.me",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://geojoy.me/images/avatar.jpg",
+        "height": 80,
+        "width": 80
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "url": "https://geojoy.me",
+      "name": "Geo&#39;z Blog",
+      "author": {
+        "@type": "Person",
+        "name": "Geo Joy"
+      },
+      "description": ""
+    }
+    </script>
+
+      
+      <script type="application/ld+json">
+      {
+          "@context": "http://schema.org",
+          "@type": "BlogPosting",
+          "headline": "Office 365 Lync / Skype enterprise sous Linux",
+          "description": "Vous êtes sous Linux mais pas comme le reste de votre société, vous n&#39;avez pas accès à la messagerie instantanée interne, voici quelques solutions.",
+          "author": {
+              "@type": "Person",
+              "name": "Geo Joy"
+          },
+          "publisher": {
+              "@type": "Organization",
+              "name": "Geo&#39;z Blog",
+              "logo": "https://geojoy.me/images/avatar.jpg"
+          },
+          
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://geojoy.me/images/avatar.jpg",
+            "height": 80,
+            "width": 80
+          },
+          "datePublished": "2016-03-27",
+          "dateModified": "2017-03-01",
+          "wordCount": 381
+          ,
+          "keywords": ["office365","lync","skype","linux"] 
+      }
+    </script>
+  
+
+    <style>
+body{margin:0}main,nav{display:block}a{background-color:transparent}h1{margin:.67em 0;font-size:2em}img{border:0}code,kbd{font-family:monospace,monospace;font-size:1em}button{margin:0;font:inherit;color:inherit}button{overflow:visible}button{text-transform:none}button{-webkit-appearance:button}button::-moz-focus-inner{padding:0;border:0}*{-webkit-box-sizing:border-box;box-sizing:border-box}:after,:before{-webkit-box-sizing:border-box;box-sizing:border-box}html{font-size:10px}body{font-family:"Raleway",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333;background-color:#fff}button{font-family:inherit;font-size:inherit;line-height:inherit}a{color:#337ab7;text-decoration:none}img{vertical-align:middle}h1,h4,h5{font-family:inherit;font-weight:500;line-height:1.1;color:inherit}h1{margin-top:20px;margin-bottom:10px}h4,h5{margin-top:10px;margin-bottom:10px}h1{font-size:36px}h4{font-size:18px}h5{font-size:14px}p{margin:0 0 10px}.text-justify{text-align:justify}ul{margin-top:0;margin-bottom:10px}blockquote{padding:10px 20px;margin:0 0 20px;font-size:17.5px;border-left:5px solid #eee}blockquote p:last-child{margin-bottom:0}code,kbd{font-family:Menlo,Monaco,Consolas,"Courier New",monospace}code{padding:2px 4px;font-size:90%;color:#c7254e;background-color:#f9f2f4;border-radius:4px}kbd{padding:2px 4px;font-size:90%;color:#fff;background-color:#333;border-radius:3px;-webkit-box-shadow:inset 0 -1px 0 rgba(0,0,0,.25);box-shadow:inset 0 -1px 0 rgba(0,0,0,.25)}.container{padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}@media (min-width:768px){.container{width:750px}}@media (min-width:992px){.container{width:970px}}@media (min-width:1200px){.container{width:1170px}}.collapse{display:none}.nav{padding-left:0;margin-bottom:0;list-style:none}.nav>li{position:relative;display:block}.nav>li>a{position:relative;display:block;padding:10px 15px}.navbar{position:relative;min-height:50px;margin-bottom:20px;border:1px solid transparent}@media (min-width:768px){.navbar{border-radius:4px}}@media (min-width:768px){.navbar-header{float:left}}.navbar-collapse{padding-right:15px;padding-left:15px;overflow-x:visible;-webkit-overflow-scrolling:touch;border-top:1px solid transparent;-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,.1);box-shadow:inset 0 1px 0 rgba(255,255,255,.1)}@media (min-width:768px){.navbar-collapse{width:auto;border-top:0;-webkit-box-shadow:none;box-shadow:none}.navbar-collapse.collapse{display:block !important;height:auto !important;padding-bottom:0;overflow:visible !important}.navbar-fixed-top .navbar-collapse{padding-right:0;padding-left:0}}.navbar-fixed-top .navbar-collapse{max-height:340px}@media (max-device-width:480px) and (orientation:landscape){.navbar-fixed-top .navbar-collapse{max-height:200px}}.container>.navbar-collapse,.container>.navbar-header{margin-right:-15px;margin-left:-15px}@media (min-width:768px){.container>.navbar-collapse,.container>.navbar-header{margin-right:0;margin-left:0}}.navbar-fixed-top{position:fixed;right:0;left:0;z-index:1030}@media (min-width:768px){.navbar-fixed-top{border-radius:0}}.navbar-fixed-top{top:0;border-width:0 0 1px}.navbar-brand{float:left;height:50px;padding:15px 15px;font-size:18px;line-height:20px}@media (min-width:768px){.navbar>.container .navbar-brand{margin-left:-15px}}.navbar-toggle{position:relative;float:right;padding:9px 10px;margin-top:8px;margin-right:15px;margin-bottom:8px;background-color:transparent;background-image:none;border:1px solid transparent;border-radius:4px}.navbar-toggle .icon-bar{display:block;width:22px;height:2px;border-radius:1px}.navbar-toggle .icon-bar+.icon-bar{margin-top:4px}@media (min-width:768px){.navbar-toggle{display:none}}.navbar-nav{margin:7.5px -15px}.navbar-nav>li>a{padding-top:10px;padding-bottom:10px;line-height:20px}@media (min-width:768px){.navbar-nav{float:left;margin:0}.navbar-nav>li{float:left}.navbar-nav>li>a{padding-top:15px;padding-bottom:15px}}@media (min-width:768px){.navbar-right{float:right !important;margin-right:-15px}}.navbar-default{background-color:#f8f8f8;border-color:#e7e7e7}.navbar-default .navbar-brand{color:#777}.navbar-default .navbar-nav>li>a{color:#777}.navbar-default .navbar-toggle{border-color:#ddd}.navbar-default .navbar-toggle .icon-bar{background-color:#888}.navbar-default .navbar-collapse{border-color:#e7e7e7}.container:after,.container:before,.nav:after,.nav:before,.navbar-collapse:after,.navbar-collapse:before,.navbar-header:after,.navbar-header:before,.navbar:after,.navbar:before{display:table;content:" "}.container:after,.nav:after,.navbar-collapse:after,.navbar-header:after,.navbar:after{clear:both}@-ms-viewport{width:device-width}.visible-xs{display:none !important}@media (max-width:767px){.visible-xs{display:block !important}}html{height:100%}body{height:100%;padding-top:55px;display:-webkit-box;display:-ms-flexbox;display:flex;text-align:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;font-size:16px !important}main{margin:auto;padding:25px;max-width:750px}a:link,a:visited{color:green}.item{padding:10px 0}.item-tag{background-color:green}.navbar-icon{font-size:125%;display:inline-block !important}.navbar.navbar-default{border-top:5px solid green}img{max-width:100%}.fade-in{opacity:0}
+.wf-loading p, .wf-loading h1, .wf-loading h2, .wf-loading h3, .wf-loading h4, .wf-loading a {visibility: hidden;}.wf-active  p, .wf-active h1, .wf-active h2, .wf-active h3, .wf-active h4, .wf-active a {visibility: visible;}.wf-inactive    p, .wf-inactive h1, .wf-inactive h2, .wf-inactive h3, .wf-inactive h4, wf-inactive a {visibility: visible;}
+</style>
+
+    </head>
+
+    <body>
+      
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQ3JDPK"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Office 365 Lync / Skype enterprise sous Linux</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Posts</a></li>
+                            
+                                <li><a href="/project/">Projects</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="/resume/"><i class="fa fa-user"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="http://www.google.com/recaptcha/mailhide/d?k=01IIc-s5LNYiS-CG_gthn4PA==&amp;c=r5Ctx8RMDz422qmYESfk1g=="><i class="fa fa-envelope"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/Geo-Joy"><i class="fa fa-github-alt"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/megeojoy"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/geojoy/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main class="fade-in">
+
+    <div class="item">
+
+    
+    
+    
+
+    
+      
+
+    <h4><a itemprop="url" href="/post---copy/office365-lync-skype-sous-linux/">
+      <span itemprop="name">Office 365 Lync / Skype enterprise sous Linux</span>
+    </a></h4>
+
+    March 27, 2016
+    <h5>Vous êtes sous Linux mais pas comme le reste de votre société, vous n&#39;avez pas accès à la messagerie instantanée interne, voici quelques solutions.</h5>
+     <a href="../../../../../tags/office365"><kbd class="item-tag">office365</kbd></a>  <a href="../../../../../tags/lync"><kbd class="item-tag">lync</kbd></a>  <a href="../../../../../tags/skype"><kbd class="item-tag">skype</kbd></a>  <a href="../../../../../tags/linux"><kbd class="item-tag">linux</kbd></a> 
+
+</div>
+
+
+    <br> <div class="text-justify">
+
+<p>Beaucoup d&rsquo;entreprise utilise des solutions Microsoft (je ne partirai pas sur ce
+débat &hellip;). Malheureusement il y a aussi des personnes dans ces entreprises qui
+utilisent par choix ou nécessité (ou les deux) des produits souvent un peu
+hors périmètre de gestion de ces solutions d&rsquo;entreprise.</p>
+
+<p>Cet outil est très utile, il faut l&rsquo;avoué car très intégré (trop ?) dans la
+suite Office du même constructeur.
+Il est possible de :</p>
+
+<ul>
+<li>Discuter &ldquo;à la MSN&rdquo;;</li>
+<li>Organiser des points de réunion;</li>
+<li>Effectuer des appels vocaux et vidéos;</li>
+<li>en gros WebEx + Skype.</li>
+</ul>
+
+<p>Cependant sous Linux, nous sommes un peu oubliés &hellip;</p>
+
+<h2 id="sky">Sky</h2>
+
+<p><a href="https://tel.red/">Sky</a> est un produit <code>propriétaire</code> (source non disponibles),
+gratuit pour Linux.</p>
+
+<p>Ce produit offre une alternative plutôt viable, il y a presque toutes les
+fonctionnalités (voir le <a href="https://tel.red/guides/sky_features18feb2016.xlsx">tableau de fonctionnalités</a>)</p>
+
+<div style="text-align: center;">
+<img src="/images/articles/2016/sky_linux.png" alt="Sky"/>
+</div>
+
+<p>Une fois connecté vous avez accès à votre BuddyList, contenant les utilisateurs
+ayant un compte sur Lync.</p>
+
+<div style="text-align: center;">
+<img src="/images/articles/2016/sky_56013_scr.jpg" alt="Sky"/>
+</div>
+
+<p>Vous pourrez alors démarrer votre discussion comme vous le faisiez à l&rsquo;époque de
+MSN Messenger.</p>
+
+<div>
+<img src="/images/articles/2016/sky_56013_scr_uc2.jpg" alt="Sky"/>
+</div>
+
+<h3 id="installation">Installation</h3>
+
+<p>Je ne traite ici que de l&rsquo;installation ArchLinux.</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ yaourt -Ss sky linux
+aur/sky <span style="color:#f99b15">2</span>.0.471-1 <span style="color:#5bc4bf">[</span>installed<span style="color:#5bc4bf">]</span> <span style="color:#5bc4bf">(</span><span style="color:#f99b15">29</span><span style="color:#5bc4bf">)</span> <span style="color:#5bc4bf">(</span><span style="color:#f99b15">2</span>.64<span style="color:#5bc4bf">)</span>
+    Lync &amp; Skype <span style="color:#815ba4">for</span> business on Linux
+aur/skype-desktop-bin <span style="color:#f99b15">37</span>.deb39db-1 <span style="color:#5bc4bf">(</span><span style="color:#f99b15">18</span><span style="color:#5bc4bf">)</span> <span style="color:#5bc4bf">(</span><span style="color:#f99b15">7</span>.01<span style="color:#5bc4bf">)</span>
+    An unofficial client of Skype <span style="color:#815ba4">for</span> Linux, running on top of Node Webkit.
+aur/skype-electron <span style="color:#f99b15">20160101</span>-1 <span style="color:#5bc4bf">(</span><span style="color:#f99b15">4</span><span style="color:#5bc4bf">)</span> <span style="color:#5bc4bf">(</span><span style="color:#f99b15">1</span>.22<span style="color:#5bc4bf">)</span>
+    An Electron Skype app designed <span style="color:#815ba4">for</span> use on Linux systems
+aur/skypetab-ng-git v0.5.0.fixed.27.g9e5b1ed-1 <span style="color:#5bc4bf">(</span><span style="color:#f99b15">44</span><span style="color:#5bc4bf">)</span> <span style="color:#5bc4bf">(</span><span style="color:#f99b15">0</span>.47<span style="color:#5bc4bf">)</span></code></pre></div>
+<blockquote>
+<p>Yaourt est un gestionnaire de paquet sous Archlinux pour la gestion des dépôts
+utilisateur.</p>
+</blockquote>
+
+<p>Il suffit d&rsquo;installer le paquet <code>sky</code> :</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ yaourt -S sky</code></pre></div>
+<p>Pour la configuration, il suffit de remplir le formulaire de connexion, Sky fera
+le reste.</p>
+
+<p>Et voilà !</p>
+
+<h2 id="pidgin-plugin-sipe-ex-office-communicator">Pidgin + plugin Sipe (Ex Office Communicator)</h2>
+
+<p>Il est possible d&rsquo;utiliser <code>pidgin</code> pour vous connecter au réseau Lync.</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ yaourt -Ss pidgin office
+community/pidgin-sipe <span style="color:#f99b15">1</span>.20.1-1 <span style="color:#5bc4bf">[</span>installed<span style="color:#5bc4bf">]</span>
+    Third-party Pidgin plugin <span style="color:#815ba4">for</span> Microsoft Office <span style="color:#f99b15">365</span>/Lync/LCS/OCS</code></pre></div>
+<p>Avec Pidgin, c&rsquo;est un peu plus &ldquo;sportif&rdquo;.</p>
+
+<p>Il faut modifier le User-Agent du client pidgin pour pouvoir vous connecter,
+je ne sais pas vraiment pourquoi mais sans cela, cela ne se connecte pas.</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">UserAgent : UCCAPI/15.0.4420.1017 OC/15.0.4420.1017</code></pre></div>
+<p>Dans l&rsquo;onglet Basic :</p>
+
+<ul>
+<li>Mettez votre adresse email dans le champ <code>Username</code></li>
+<li>Mettez votre adresse email dans le champ <code>Login</code></li>
+</ul>
+
+<p>Si vous avez des problèmes de connexions, notamment des erreurs SSL/TLS
+&ldquo;Read Error&rdquo;, il est conseillé de désactiver les</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ export <span style="color:#ef6155">NSS_SSL_CBC_RANDOM_IV</span><span style="color:#5bc4bf">=</span><span style="color:#f99b15">0</span>
+$ pidgin</code></pre></div></div>
+
+    
+    
+
+    
+        <h4 class="page-header">Related</h4>
+        
+          <div class="item">
+
+    
+    
+    
+
+    
+      
+
+    <h4><a itemprop="url" href="/post/2018/01/17/test-description/">
+      <span itemprop="name">Test1</span>
+    </a></h4>
+
+    January 17, 2018
+    <h5>test description</h5>
+     <a href="../../../../../tags/python"><kbd class="item-tag">python</kbd></a>  <a href="../../../../../tags/mopidy"><kbd class="item-tag">mopidy</kbd></a>  <a href="../../../../../tags/raspberry"><kbd class="item-tag">raspberry</kbd></a>  <a href="../../../../../tags/linux"><kbd class="item-tag">linux</kbd></a>  <a href="../../../../../tags/spotify"><kbd class="item-tag">spotify</kbd></a> 
+
+</div>
+
+        
+    
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">Geo Joy &copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> hosted on <a href="https://github.com/Geo-Joy/geo-joy.github.io">Github</a></p>
+
+        </footer>
+        
+       <script async="" src="https://geojoy.mejs/main.js"></script>
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KQ3JDPK');</script>
+
+
+    </body>
+
+</html>
+

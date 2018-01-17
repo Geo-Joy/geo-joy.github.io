@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fedora on Geo&#39;z Blog</title>
+    <link>https://geojoy.me/tags/fedora/</link>
+    <description>Recent content in Fedora on Geo&#39;z Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 04 Jun 2007 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://geojoy.me/tags/fedora/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Fait des rats 7eme version.</title>
+      <link>https://geojoy.me/post---copy/fait-des-rats-7eme-version/</link>
+      <pubDate>Mon, 04 Jun 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/fait-des-rats-7eme-version/</guid>
+      <description>Attention on ne dit plus Fedora &amp;ldquo;Core&amp;rdquo;, du fait de la jointure des dépots &amp;ldquo;Core&amp;rdquo; &amp;amp; &amp;ldquo;Extras&amp;rdquo;, qui étaient maintenus par les développeurs RedHat pour &amp;ldquo;Core&amp;rdquo;, et des contributeurs pour &amp;ldquo;Extras&amp;rdquo;, mais Fedora 7 (moonlight).
+Cette nouvelle mouture se décline en plusieurs versions :
+ Version « Fedora », version sur DVD. x86 (2.7Go) - x86_64 (3.2Go) Version « Fedora Everything », comprenant un nombre très important de paquetages.
+ Version « Live CD » avec l&amp;rsquo;environnement Gnome.</description>
+    </item>
+    
+  </channel>
+</rss>

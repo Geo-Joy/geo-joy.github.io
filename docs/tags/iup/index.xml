@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Iup on Geo&#39;z Blog</title>
+    <link>https://geojoy.me/tags/iup/</link>
+    <description>Recent content in Iup on Geo&#39;z Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 23 Sep 2008 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://geojoy.me/tags/iup/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ruby on Rails - Cours IUP</title>
+      <link>https://geojoy.me/post---copy/ruby-on-rails-cours-iup/</link>
+      <pubDate>Tue, 23 Sep 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/ruby-on-rails-cours-iup/</guid>
+      <description>Voici la présentation de Ruby on Rails faites à l&amp;rsquo;IUP ISI Paul Sabatier, ce mardi 23 septembre.
+Bonne lecture.
+Présentation RoR 2008 (2h)</description>
+    </item>
+    
+    <item>
+      <title>Les nouveaux projets KDE encadrés commencent ...</title>
+      <link>https://geojoy.me/post---copy/les-nouveaux-projets-kde-encadres-commencent/</link>
+      <pubDate>Sun, 23 Sep 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/les-nouveaux-projets-kde-encadres-commencent/</guid>
+      <description>Pour mettre fin à cette suite de post concernant Google ^^, je reviens de la réunion de lancement du BE1 de l&amp;rsquo;IUP de Toulouse, qui relance cette année les projets KDE ainsi que le projet Wilos, et IceScrum.
+Concernant le projet Wilos : 3 équipes, IceScrum : 1 équipes, et KDE : 4 équipes. Les projets KDE sont à choisir parmis 6 projets éxistant, et 1 projet à démarrer : * KPresenter : partie présentation de la suite KOffice.</description>
+    </item>
+    
+    <item>
+      <title>M1 ISI Yesturday, tomorrow you know  ?</title>
+      <link>https://geojoy.me/post---copy/m1-isi-yesturday-tomorrow-you-know/</link>
+      <pubDate>Fri, 25 May 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/m1-isi-yesturday-tomorrow-you-know/</guid>
+      <description>Voila c&amp;rsquo;est fait, sans le stage , j&amp;rsquo;ai mon semestre, ça a été tendu, mais c&amp;rsquo;est passé ^^. Donc maintenant reste plus qu&amp;rsquo;a choisir le M2, je pense me diriger vers la modélisation, en fait j&amp;rsquo;aime ça &amp;hellip;
+J&amp;rsquo;aime plus trop coder, mais modéliser pour générer ^^
+UML2.0 est une révélation pour moi, et surtout avoir bosser pour Umbrello.</description>
+    </item>
+    
+    <item>
+      <title>Umbrello, un BE pas comme les autres ...</title>
+      <link>https://geojoy.me/post---copy/umbrello-un-be-pas-comme-les-autres/</link>
+      <pubDate>Sat, 24 Mar 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/umbrello-un-be-pas-comme-les-autres/</guid>
+      <description>Aujourd&amp;rsquo;hui, avec la dernière revue, en grande ponte, marque la fin des projets de Master 1ere année de l&amp;rsquo;IUP de Toulouse.
+ Umbrello (C++ / KDE4 / Qt) Modeleur UML, but du projet : passage à UML 2.0, refonte de l&amp;rsquo;architecture Undo / Redo.
+ KPlato (C++ / KDE4 / Qt) Outil d&amp;rsquo;aide à la gestion de projet (Méthode PERT).
+ Wilos (J2EE / Spring / Hibernate / IceFaces) Outil de gestion de projet basé sur Eclipse EPF.</description>
+    </item>
+    
+    <item>
+      <title>Vivement Vendredi ...</title>
+      <link>https://geojoy.me/post---copy/vivement-vendredi/</link>
+      <pubDate>Thu, 18 Jan 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/vivement-vendredi/</guid>
+      <description>Vivement la fin de cette semaine de M@%$. Parce que là c&amp;rsquo;est abusé tout part en sucette !</description>
+    </item>
+    
+    <item>
+      <title>Fin du malheur, début des vacances ^^</title>
+      <link>https://geojoy.me/post---copy/fin-du-malheur-debut-des-vacances/</link>
+      <pubDate>Thu, 21 Dec 2006 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/fin-du-malheur-debut-des-vacances/</guid>
+      <description>Voila les partiels sont terminés ! C&amp;rsquo;est les vancances de noyel !
+Noyeux Joyel à tchoum ! :)</description>
+    </item>
+    
+    <item>
+      <title>Début du malheur ...</title>
+      <link>https://geojoy.me/post---copy/debut-du-malheur/</link>
+      <pubDate>Mon, 18 Dec 2006 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/debut-du-malheur/</guid>
+      <description>Les partiels commencent aujourd&amp;rsquo;hui
+ Lundi : J2EE &amp;amp; IL2 (Ingénierie logiciel) Mardi : CAMO (Concept Avancé et Modélisation Objet) Mercredi : BD (Base de données) &amp;amp; C++ Jeudi : IL1 &amp;amp; SAPR (Programmation Parallèle &amp;amp; Répartie) Vendredi : Décompression &amp;hellip; Samedi : Retour à la maison  </description>
+    </item>
+    
+    <item>
+      <title>Premier commit-digest ^^</title>
+      <link>https://geojoy.me/post---copy/premier-commit-digest/</link>
+      <pubDate>Sun, 17 Dec 2006 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/premier-commit-digest/</guid>
+      <description>Voici le premier commit-digest où le groupe Umbrello/Kplato apparait.
+2006-12-17</description>
+    </item>
+    
+    <item>
+      <title>Je me fais chier alors j&#39;écris ...</title>
+      <link>https://geojoy.me/post---copy/je-me-fais-chier-alors-jecris/</link>
+      <pubDate>Wed, 15 Nov 2006 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/je-me-fais-chier-alors-jecris/</guid>
+      <description>Bonjour à tous mes lecteurs ^^, je suis actuellement en cours d&amp;rsquo;IL1 (Ingénierie Logiciel 1).
+Nous venons d&amp;rsquo;emménager ensemble ma TiTFeMMe et son TiToMe dans un appartement bien plus grand qu&amp;rsquo;avant (y a 2 pièces ^^), ça fait drôle de dire qu&amp;rsquo;on possède un appartement à 2, un appartement à nous :-X .</description>
+    </item>
+    
+    <item>
+      <title>Umbrello-FR [umbrello.free.fr]</title>
+      <link>https://geojoy.me/post---copy/umbrello-fr-umbrellofreefr/</link>
+      <pubDate>Mon, 23 Oct 2006 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/umbrello-fr-umbrellofreefr/</guid>
+      <description>Ouverture du site des suivis du projet Umbrello-FR. Ce site regroupe un blog pour les annonces journalières, un wiki pour la documentations, et un forum pour les traces de discussions.
+Maintenant en avant KDE, et que le projet avance &amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Projet KDE/Umbrello</title>
+      <link>https://geojoy.me/post---copy/projet-kdeumbrello/</link>
+      <pubDate>Mon, 16 Oct 2006 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/projet-kdeumbrello/</guid>
+      <description>Le BE du Master ISI vient de commencer, il s&amp;rsquo;agit (pour une fois) d&amp;rsquo;un sujet intéressant : nous reprenons un projet actif, développé par les contributeurs KDE Umbrello, le but du projet sera le portage vers QT/KDE 4, l&amp;rsquo;ajout des fonctionnalités pour utiliser UML 2.0.
+Pour plus d&amp;rsquo;informations, veuillez consulter le site Umbrello, et le site de suivi du projet Umbrello.</description>
+    </item>
+    
+    <item>
+      <title>Voila c&#39;est dur d&#39;être un ISI ...</title>
+      <link>https://geojoy.me/post---copy/voila-cest-dur-detre-un-isi/</link>
+      <pubDate>Thu, 05 Oct 2006 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/voila-cest-dur-detre-un-isi/</guid>
+      <description>Pourquoi on est pas comme tous les autres 20h de cours par semaine ? Non 45h ! J&amp;rsquo;en ai marre des cours, je me fais chier, l&amp;rsquo;école est trop &amp;ldquo;scolaire&amp;rdquo; même dans ma formation dites professionnalisée. Pourquoi cela ne m&amp;rsquo;intéresse plus ? Aurais-je perdu ma passion ? ou simplement un raz le bol &amp;hellip;
+Vous savez quoi mon projet d&amp;rsquo;aller élever des chèvres dans le larzac, mais j&amp;rsquo;y pense, mais j&amp;rsquo;y pense &amp;hellip; :-) .</description>
+    </item>
+    
+    <item>
+      <title>Pré soutenance OK ^^</title>
+      <link>https://geojoy.me/post---copy/pre-soutenance-ok/</link>
+      <pubDate>Thu, 31 Aug 2006 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/pre-soutenance-ok/</guid>
+      <description>Visiblement mon travail a porté ses fruits (oui la chance ne m&amp;rsquo;a pas abandonnée finalement, juste un peu délaissée quelques temps), quelques remarques sur la structuration de mon explication ^^ mais tout le monde sait que je ne suis jamais clair dans mes explications lol. Sinon voila, ça c&amp;rsquo;est bien passé ! Maintenant en attente de l&amp;rsquo;officielle, je vais bosser mon rapport et souffler un peu.</description>
+    </item>
+    
+    <item>
+      <title>Plus qu&#39;un jour, mouahahahahahahah</title>
+      <link>https://geojoy.me/post---copy/plus-quun-jour-mouahahahahahahah/</link>
+      <pubDate>Wed, 30 Aug 2006 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/plus-quun-jour-mouahahahahahahah/</guid>
+      <description>Bientôt fini mon calvaire d&amp;rsquo;universitaire : stagiaire ! Maintenant, il va falloir bosser sec, pour finir le rapport, préparer la soutenance &amp;hellip; Passer la soutenance sur un composant qui a été développé 4 fois depuis zéro de manière différentes lol et qui biensur ne fonctionnera jamais. Heureusement que je n&amp;rsquo;ai pas fait que ça !</description>
+    </item>
+    
+    <item>
+      <title>Voila partiels finaux terminés ...</title>
+      <link>https://geojoy.me/post---copy/voila-partiels-finaux-termines/</link>
+      <pubDate>Wed, 31 May 2006 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/voila-partiels-finaux-termines/</guid>
+      <description>Ouah ça fait du bien après tout ça de ce dire, j&amp;rsquo;ai fini plus de cours, plus de partiels &amp;hellip; Maintenant retour au stage !</description>
+    </item>
+    
+    <item>
+      <title>Stage ISI - vol.2</title>
+      <link>https://geojoy.me/post---copy/stage-isi-vol2/</link>
+      <pubDate>Fri, 19 May 2006 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/stage-isi-vol2/</guid>
+      <description>Voila mise en place du domaine terminé (Domaine SAMBA). Un petit changement au programme suite à une découverte : je viens de mettre la main sur un bijou pour le déploiement d&amp;rsquo;application sur environnement MS, WPKG c&amp;rsquo;est un programme permettant de déployer des applications sous forme EXE, MSI (différents installeurs supportés) au login de la personne ou par le biais d&amp;rsquo;un service qui veille et interroge périodiquement un fichier XML conservant tous les profils d&amp;rsquo;installation.</description>
+    </item>
+    
+    <item>
+      <title>Des nouvelles du stage ....</title>
+      <link>https://geojoy.me/post---copy/des-nouvelles-du-stage/</link>
+      <pubDate>Mon, 15 May 2006 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/des-nouvelles-du-stage/</guid>
+      <description>Afin de gagner de la place et surtout faire des économies d&amp;rsquo;electricité &amp;hellip;. J&amp;rsquo;ai mis en place un serveur virtualisé avec XEN et IPVS, le domaine 0 (dom0) est une gentoo hardened 2006.1 afin de tirer un maximum des performances de la machine (P4 3Ghz dual core). Sur lequel tourne 3 domaines utilisateurs (domU), 1 basé sur Debian Testing pour héberger un serveur Apache+MySQL+PHP pour le serveur intranet, 1 sur NetBSD pour les tests multi OS sur la machine, et 1 domU Debian pour test avec IPVS pour load balancing entre serveur Apache de domU différents !</description>
+    </item>
+    
+  </channel>
+</rss>

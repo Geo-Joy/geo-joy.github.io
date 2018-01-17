@@ -1,5 +1,5 @@
 baseurl = "https://geojoy.me"
-
+publishDir = "docs"
 languageCode = "en-us"
 title = "Geo'z Blog"
 paginate = 10

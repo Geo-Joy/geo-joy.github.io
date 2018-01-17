@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gpg on Geo&#39;z Blog</title>
+    <link>https://geojoy.me/tags/gpg/</link>
+    <description>Recent content in Gpg on Geo&#39;z Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 19 Dec 2007 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://geojoy.me/tags/gpg/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>gpgAuth - GnuPG Web Authentication</title>
+      <link>https://geojoy.me/post---copy/gpgauth-gnupg-web-authentication/</link>
+      <pubDate>Wed, 19 Dec 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/gpgauth-gnupg-web-authentication/</guid>
+      <description>Après mon article sur FireGPG (extension firefox permettant l&amp;rsquo;intégration de GPG), voici un système d&amp;rsquo;authentification basé sur le système clé privée / clé publique. En effet il suffit de s&amp;rsquo;enregistrer sur le site (site exemple), d&amp;rsquo;importer la clé publique du service, leur donner notre clé publique, et voila FireGPG fait le reste.
+Il existe une implémentation coté serveur utilisant python, pour intégrer le processus dans vos sites. Cependant ce n&amp;rsquo;est compatible qu&amp;rsquo;avec Firefox + FireGPG.</description>
+    </item>
+    
+    <item>
+      <title>FireGPG, use GPG easily !</title>
+      <link>https://geojoy.me/post---copy/firegpg-use-gpg-easily/</link>
+      <pubDate>Sun, 04 Nov 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/firegpg-use-gpg-easily/</guid>
+      <description>&amp;mdash;&amp;ndash;BEGIN PGP SIGNED MESSAGE&amp;mdash;&amp;ndash; Hash: SHA1
+Voici une extension Firefox, très sympathique, en effet elle permet de signer/crypter/décrypter un contenu selectionné avec une clé GPG, très pratique quand on utilise souvent le webmail, bon il y atoujours le problème qu&amp;rsquo;il faut avoir la clé sous la main ! C&amp;rsquo;est pour quand la signature intégrée dans gmail ? ^^ lastmod: 2017-03-01T11:27:22+01:00 &amp;mdash;&amp;ndash;BEGIN PGP SIGNATURE&amp;mdash;&amp;ndash; Version: GnuPG v2.0.4-svn0 (GNU/Linux) Comment: http://firegpg.tuxfamily.org
+iD8DBQFHLaHnc2paTy/WK7sRAo5FAJwJkTuelNlJSBPjgng5D9j2spRG9gCghtUA Fivys6P68whFpCS1FlJH3yM= =ASJE &amp;mdash;&amp;ndash;END PGP SIGNATURE&amp;mdash;&amp;ndash;</description>
+    </item>
+    
+  </channel>
+</rss>

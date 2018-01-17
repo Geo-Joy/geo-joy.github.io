@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wordle on Geo&#39;z Blog</title>
+    <link>https://geojoy.me/tags/wordle/</link>
+    <description>Recent content in Wordle on Geo&#39;z Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 22 May 2011 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://geojoy.me/tags/wordle/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Petites mises à jour</title>
+      <link>https://geojoy.me/post---copy/petites-mises-a-jour/</link>
+      <pubDate>Sun, 22 May 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/petites-mises-a-jour/</guid>
+      <description> Mise à jour du CV  Nouveau point d&amp;rsquo;entrée : http://zenithar.org Travaux sur le référencement pour fusionner mes &amp;ldquo;deux identités numériques&amp;rdquo;   </description>
+    </item>
+    
+  </channel>
+</rss>

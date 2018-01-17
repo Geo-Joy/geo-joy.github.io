@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tutorial on Geo&#39;z Blog</title>
+    <link>https://geojoy.me/tags/tutorial/</link>
+    <description>Recent content in Tutorial on Geo&#39;z Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 05 Mar 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://geojoy.me/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Backbone.js - Les évènements</title>
+      <link>https://geojoy.me/post---copy/backbone-dot-js-les-evenements/</link>
+      <pubDate>Mon, 05 Mar 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/backbone-dot-js-les-evenements/</guid>
+      <description>Cet article fait suite à la présentation des concepts Backbone.JS. Vous devez avoir connaissance d&amp;rsquo;une base de Javascript pour aborder de manière sereine la partie suivante.
+Dans cet article, je vais m&amp;rsquo;attacher à expliquer le fonctionnement des évènements dans Backbone.JS, ainsi que, de fait, les principes de programmation asynchrone utilisés.
+Programmation asynchrone La programmation asynchrone est le coeur de la programmation Javascript, vous avez toujours la possibilité de faire du synchrone, cependant ce serait perdre un des avantages de Javascript.</description>
+    </item>
+    
+    <item>
+      <title>Backbone.js - Présentation</title>
+      <link>https://geojoy.me/post---copy/backbone-dot-js-presentation/</link>
+      <pubDate>Sun, 04 Mar 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/backbone-dot-js-presentation/</guid>
+      <description>Cet article s&amp;rsquo;adresse aux personnes désirants découvrir ou redécouvrir, l&amp;rsquo;utilité et l&amp;rsquo;utilisation de Backbone.JS au sein d&amp;rsquo;une application Web Javascript. En effet Backbone.JS s&amp;rsquo;inscrit dans les technologies Javascript clientes (puisqu&amp;rsquo;il existe aussi un coté serveur via Node.js).
+Les concepts Chaque concept est implémenté en Javascript de telle sorte qu&amp;rsquo;ensemble ils forment votre application.
+Les modèles Les modèles Backbone sont des objets Javascript servant à représenter l&amp;rsquo;information, qui sera souvent utilisée pour l&amp;rsquo;affichage.</description>
+    </item>
+    
+  </channel>
+</rss>

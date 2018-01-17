@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Idna on Geo&#39;z Blog</title>
+    <link>https://geojoy.me/tags/idna/</link>
+    <description>Recent content in Idna on Geo&#39;z Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 21 Jan 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://geojoy.me/tags/idna/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Domain Typosquatting</title>
+      <link>https://geojoy.me/project---copy/domain-typosquatting/</link>
+      <pubDate>Sat, 21 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/project---copy/domain-typosquatting/</guid>
+      <description>Bonne Année à toutes et à tous !
+ Il existe plusieurs techniques pour avoir des domaines proches du domaine original. Le typosquatting est une manière de crédibiliser un phishing.
+Homoglyphes  Il était une fois l&amp;rsquo;ASCII &amp;hellip;
+ Avant, mais ça c&amp;rsquo;était avant, on ne pouvait enregistrer.. un domaine auprès du registrar, des noms de domains contenant que des caractères de la table ASCII.
+ Puis vint l&amp;rsquo;UTF-8 &amp;hellip;</description>
+    </item>
+    
+  </channel>
+</rss>

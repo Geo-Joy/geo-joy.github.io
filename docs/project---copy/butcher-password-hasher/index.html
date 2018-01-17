@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en-us" class="wf-loading">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <meta name="HandheldFriendly" content="True" />
+        <meta name="MobileOptimized" content="320" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="preload" href="https://geojoy.mejs/main.js" as="script" />
+        <link rel="preload" href="https://geojoy.mecss/main.css" as="style" />
+
+        <title>Butcher : Password Hasher</title>
+        <meta name="generator" content="Hugo 0.32.4" />
+        
+        <link rel="preconnect" href="https://ajax.googleapis.com/" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+        <meta property="og:title" content="Butcher : Password Hasher" />
+<meta property="og:description" content="Parce qu&#39;il ne faut pas stocker ses mots de passe en clair, ou encore simplement condensés en MD5, SHA1." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://geojoy.me/project---copy/butcher-password-hasher/" />
+
+
+
+<meta property="article:published_time" content="2017-03-29T00:00:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2017-03-29T10:25:06&#43;02:00"/>
+
+
+
+
+
+
+
+
+
+
+
+    
+        <meta property="og:type" content="article" />
+        <meta property="og:article:published_time" content="2017-03-29T00:00:00Z" />
+        <meta property="og:article:tag" content="golang" />
+        <meta property="og:article:tag" content="securite" />
+        
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@megeojoy" />
+        <meta name="twitter:creator" content="@megeojoy" />
+        <meta name="twitter:title" content="Butcher : Password Hasher" />
+        <meta name="twitter:description" content="Parce qu&#39;il ne faut pas stocker ses mots de passe en clair, ou encore simplement condensés en MD5, SHA1." />
+        <meta name="twitter:url" content="https://geojoy.me/project---copy/butcher-password-hasher/" />
+        <meta name="twitter:image" content="https://geojoy.me/images/articles/2017/steak_hashe.png">
+    
+
+    
+        <meta name="p:domain_verify" content="fc173d84e3a4de948ed4bda2908afd3e"/>
+    
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Thibault NORMAND",
+      "url": "http://zenithar.org",
+      "sameAs": [
+        "https://twitter.com/zenithar/",
+        "https://www.linkedin.com/in/zenithar/",
+        "https://github.com/Zenithar/",
+        "https://plus.google.com/u/0/+ThibaultNormand"
+      ],
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://geojoy.me/images/avatar.jpg",
+        "height": 80,
+        "width": 80
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "@id": "https://geojoy.me",
+      "name": "Geo&#39;z Blog",
+      "url": "https://geojoy.me",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://geojoy.me/images/avatar.jpg",
+        "height": 80,
+        "width": 80
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "url": "https://geojoy.me",
+      "name": "Geo&#39;z Blog",
+      "author": {
+        "@type": "Person",
+        "name": "Geo Joy"
+      },
+      "description": ""
+    }
+    </script>
+
+      
+      <script type="application/ld+json">
+      {
+          "@context": "http://schema.org",
+          "@type": "BlogPosting",
+          "headline": "Butcher : Password Hasher",
+          "description": "Parce qu&#39;il ne faut pas stocker ses mots de passe en clair, ou encore simplement condensés en MD5, SHA1.",
+          "author": {
+              "@type": "Person",
+              "name": "Geo Joy"
+          },
+          "publisher": {
+              "@type": "Organization",
+              "name": "Geo&#39;z Blog",
+              "logo": "https://geojoy.me/images/avatar.jpg"
+          },
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://geojoy.me/images/articles/2017/steak_hashe.png",
+            "height": 133,
+            "width": 200
+          },
+          "datePublished": "2017-03-29",
+          "dateModified": "2017-03-29",
+          "wordCount": 818
+          ,
+          "keywords": ["golang","securite"] 
+      }
+    </script>
+  
+
+    <style>
+body{margin:0}main,nav{display:block}a{background-color:transparent}h1{margin:.67em 0;font-size:2em}img{border:0}code,kbd{font-family:monospace,monospace;font-size:1em}button{margin:0;font:inherit;color:inherit}button{overflow:visible}button{text-transform:none}button{-webkit-appearance:button}button::-moz-focus-inner{padding:0;border:0}*{-webkit-box-sizing:border-box;box-sizing:border-box}:after,:before{-webkit-box-sizing:border-box;box-sizing:border-box}html{font-size:10px}body{font-family:"Raleway",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333;background-color:#fff}button{font-family:inherit;font-size:inherit;line-height:inherit}a{color:#337ab7;text-decoration:none}img{vertical-align:middle}h1,h4,h5{font-family:inherit;font-weight:500;line-height:1.1;color:inherit}h1{margin-top:20px;margin-bottom:10px}h4,h5{margin-top:10px;margin-bottom:10px}h1{font-size:36px}h4{font-size:18px}h5{font-size:14px}p{margin:0 0 10px}.text-justify{text-align:justify}ul{margin-top:0;margin-bottom:10px}blockquote{padding:10px 20px;margin:0 0 20px;font-size:17.5px;border-left:5px solid #eee}blockquote p:last-child{margin-bottom:0}code,kbd{font-family:Menlo,Monaco,Consolas,"Courier New",monospace}code{padding:2px 4px;font-size:90%;color:#c7254e;background-color:#f9f2f4;border-radius:4px}kbd{padding:2px 4px;font-size:90%;color:#fff;background-color:#333;border-radius:3px;-webkit-box-shadow:inset 0 -1px 0 rgba(0,0,0,.25);box-shadow:inset 0 -1px 0 rgba(0,0,0,.25)}.container{padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}@media (min-width:768px){.container{width:750px}}@media (min-width:992px){.container{width:970px}}@media (min-width:1200px){.container{width:1170px}}.collapse{display:none}.nav{padding-left:0;margin-bottom:0;list-style:none}.nav>li{position:relative;display:block}.nav>li>a{position:relative;display:block;padding:10px 15px}.navbar{position:relative;min-height:50px;margin-bottom:20px;border:1px solid transparent}@media (min-width:768px){.navbar{border-radius:4px}}@media (min-width:768px){.navbar-header{float:left}}.navbar-collapse{padding-right:15px;padding-left:15px;overflow-x:visible;-webkit-overflow-scrolling:touch;border-top:1px solid transparent;-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,.1);box-shadow:inset 0 1px 0 rgba(255,255,255,.1)}@media (min-width:768px){.navbar-collapse{width:auto;border-top:0;-webkit-box-shadow:none;box-shadow:none}.navbar-collapse.collapse{display:block !important;height:auto !important;padding-bottom:0;overflow:visible !important}.navbar-fixed-top .navbar-collapse{padding-right:0;padding-left:0}}.navbar-fixed-top .navbar-collapse{max-height:340px}@media (max-device-width:480px) and (orientation:landscape){.navbar-fixed-top .navbar-collapse{max-height:200px}}.container>.navbar-collapse,.container>.navbar-header{margin-right:-15px;margin-left:-15px}@media (min-width:768px){.container>.navbar-collapse,.container>.navbar-header{margin-right:0;margin-left:0}}.navbar-fixed-top{position:fixed;right:0;left:0;z-index:1030}@media (min-width:768px){.navbar-fixed-top{border-radius:0}}.navbar-fixed-top{top:0;border-width:0 0 1px}.navbar-brand{float:left;height:50px;padding:15px 15px;font-size:18px;line-height:20px}@media (min-width:768px){.navbar>.container .navbar-brand{margin-left:-15px}}.navbar-toggle{position:relative;float:right;padding:9px 10px;margin-top:8px;margin-right:15px;margin-bottom:8px;background-color:transparent;background-image:none;border:1px solid transparent;border-radius:4px}.navbar-toggle .icon-bar{display:block;width:22px;height:2px;border-radius:1px}.navbar-toggle .icon-bar+.icon-bar{margin-top:4px}@media (min-width:768px){.navbar-toggle{display:none}}.navbar-nav{margin:7.5px -15px}.navbar-nav>li>a{padding-top:10px;padding-bottom:10px;line-height:20px}@media (min-width:768px){.navbar-nav{float:left;margin:0}.navbar-nav>li{float:left}.navbar-nav>li>a{padding-top:15px;padding-bottom:15px}}@media (min-width:768px){.navbar-right{float:right !important;margin-right:-15px}}.navbar-default{background-color:#f8f8f8;border-color:#e7e7e7}.navbar-default .navbar-brand{color:#777}.navbar-default .navbar-nav>li>a{color:#777}.navbar-default .navbar-toggle{border-color:#ddd}.navbar-default .navbar-toggle .icon-bar{background-color:#888}.navbar-default .navbar-collapse{border-color:#e7e7e7}.container:after,.container:before,.nav:after,.nav:before,.navbar-collapse:after,.navbar-collapse:before,.navbar-header:after,.navbar-header:before,.navbar:after,.navbar:before{display:table;content:" "}.container:after,.nav:after,.navbar-collapse:after,.navbar-header:after,.navbar:after{clear:both}@-ms-viewport{width:device-width}.visible-xs{display:none !important}@media (max-width:767px){.visible-xs{display:block !important}}html{height:100%}body{height:100%;padding-top:55px;display:-webkit-box;display:-ms-flexbox;display:flex;text-align:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;font-size:16px !important}main{margin:auto;padding:25px;max-width:750px}a:link,a:visited{color:green}.item{padding:10px 0}.item-tag{background-color:green}.navbar-icon{font-size:125%;display:inline-block !important}.navbar.navbar-default{border-top:5px solid green}img{max-width:100%}.fade-in{opacity:0}
+.wf-loading p, .wf-loading h1, .wf-loading h2, .wf-loading h3, .wf-loading h4, .wf-loading a {visibility: hidden;}.wf-active  p, .wf-active h1, .wf-active h2, .wf-active h3, .wf-active h4, .wf-active a {visibility: visible;}.wf-inactive    p, .wf-inactive h1, .wf-inactive h2, .wf-inactive h3, .wf-inactive h4, wf-inactive a {visibility: visible;}
+</style>
+
+    </head>
+
+    <body>
+      
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQ3JDPK"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Butcher : Password Hasher</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Posts</a></li>
+                            
+                                <li><a href="/project/">Projects</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="/resume/"><i class="fa fa-user"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="http://www.google.com/recaptcha/mailhide/d?k=01IIc-s5LNYiS-CG_gthn4PA==&amp;c=r5Ctx8RMDz422qmYESfk1g=="><i class="fa fa-envelope"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/Geo-Joy"><i class="fa fa-github-alt"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/megeojoy"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/geojoy/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main class="fade-in">
+
+    <div class="item">
+
+    
+    
+    
+
+    
+      
+
+    <h4><a itemprop="url" href="/project---copy/butcher-password-hasher/">
+      <span itemprop="name">Butcher : Password Hasher</span>
+    </a></h4>
+
+    March 29, 2017
+    <h5>Parce qu&#39;il ne faut pas stocker ses mots de passe en clair, ou encore simplement condensés en MD5, SHA1.</h5>
+     <a href="../../../../../tags/golang"><kbd class="item-tag">golang</kbd></a>  <a href="../../../../../tags/securite"><kbd class="item-tag">securite</kbd></a> 
+
+</div>
+
+
+    <br> <div class="text-justify">
+
+<p><img src="/images/articles/2017/steak_hashe.png" alt="Steak Hashé" /></p>
+
+<p>Lorsque l&rsquo;on développe des applications ayant dans la majorité des cas des
+utilisateurs, sans lesquels nous pouvons nous poser la question sur l&rsquo;utilité
+de celles-ci, vient une notion de <code>compte d'accès</code> permettant d&rsquo;identifier un
+utilisateur.</p>
+
+<p>Cette <code>identification</code> nécessite un mécanisme, le plus souvent un <code>login</code> et un
+<code>mot de passe</code>. Bien qu&rsquo;il existe d&rsquo;autres moyens d&rsquo;identification cela reste le
+plus répandu.</p>
+
+<p>En outre des <a href="https://www.ssi.gouv.fr/guide/mot-de-passe/">recommandations</a> sur
+la qualité du mot de passe lui-même, il faut se poser la question de comment le
+stocker dans notre application, et surtout comment faire évoluer cette stratégie
+ dans le temps.</p>
+
+<p>Un mot de passe valide avec une complexité extrème (&gt; 1000) caractères,
+entropie monstrueuse, etc. ; mais le tout stocké dans un serveur
+<a href="https://www.shodan.io/search?query=mongodb">MongoDB ouvert</a> sur internet en
+clair &hellip; voilà &hellip; cela sert à rien !</p>
+
+<blockquote>
+<p>Il ne faut pas stocker les mots de passe en clair, c&rsquo;est un secret, par
+définition seul le propriétaire doit être au courant, sinon c&rsquo;est vulnérable
+<code>by design</code>.</p>
+</blockquote>
+
+<p>Qui plus est choisir des fonctions de condensat trop simples (MD5, SHA1)
+peut rendre un mot de passe complètement inutile car il existe une collision possible.
+Autrement dit, une fonction de condensat permet de transférer une image d&rsquo;un
+espace infini dans un espace fini (limité par les capacités de la fonction), ce
+qui est mathématiquement une réduction d&rsquo;espace. Cette réduction provoque
+nécessairement des collisions : une image dans l&rsquo;espace d&rsquo;arrivée avec plusieurs
+sources possibles.</p>
+
+<p>Au même titre que la collision SHA-1, prouvée par <a href="](https://security.googleblog.com/2017/02/announcing-first-sha1-collision.html)">Google</a>
+si vous utilisez le SHA-1 en condensat de mot de passe, il est possible qu&rsquo;un autre
+mote de passe ait le même condensat, aboutissant alors à la possibilité de
+pouvoir identifier l&rsquo;utilisateur avec plusieurs mots de passe différents.</p>
+
+<h2 id="librairie-butcher">Librairie Butcher</h2>
+
+<blockquote>
+<p>Butcher =&gt; Boucher =&gt; Steak haché =&gt; hash &hellip;</p>
+</blockquote>
+
+<p>La librairie <code>Golang</code> implémente des algorithmes de condensats de mot de passe
+par dérivation paramétrée.</p>
+
+<p>La liste des algorithmes supportés est la suivante :</p>
+
+<ul>
+<li>Argon2i</li>
+<li>Bcrypt+Blake2b-512</li>
+<li>PBKDF2+Blake2b-512</li>
+<li>PBKDF2+SHA512</li>
+<li>PBKDF2+SHA3-512</li>
+<li>Bcrypt+SHA512</li>
+</ul>
+
+<blockquote>
+<p>Notez que pour le moment la librairie n&rsquo;est pas <code>production ready</code>.</p>
+</blockquote>
+
+<p>Globalement, il s&rsquo;agit d&rsquo;un algorithme de dérivation, associé à une fonction de
+condensat.</p>
+
+<ul>
+<li><code>PBKDF2</code> : <em>Password Based Key Derivation Function 2</em>, est une fonction de
+dérivation de clé appliquant un algorithme de condensat un nombre
+d&rsquo;itérations determiné à l&rsquo;avance, produisant un condensat de taille
+personnalisable, principalement utilisé pour les clés de chiffrement :
+ex. dérivation de clé AES 256bits à partir du mot de passe;</li>
+<li><code>BCRYPT</code> : basé sur l&rsquo;algorithme de chiffrement Blowfish, et un coût
+d&rsquo;execution du calcul;</li>
+<li><code>ARGON2</code> : fonction de dérivation de clé paramétrée par le
+temps d&rsquo;exécution, la mémoire requise et le degré de parallélisme des calculs.</li>
+</ul>
+
+<p>Pour résumer, les fonctions de dérivation peuvent avoir des paramètres :</p>
+
+<ul>
+<li><code>iterations</code>: nombres de tour de la fonction de condensat;</li>
+<li><code>cost/time</code>: un coût minimal de calcul, comprennez le temps minimal;</li>
+<li><code>memory</code>: une allocation de mémoire nécessaire;</li>
+<li><code>parallelism</code>: combien de thread de calcul en parallèle;</li>
+</ul>
+
+<p>Ces paramètres vont introduire de la difficulté pour <code>ralentir</code> le calcul,
+permettant de limiter le calcul par force brute.</p>
+
+<p>De plus, afin de prévenir les attaques par table arc-en-ciel (rainbow table),
+j&rsquo;ai ajouté un <code>sel</code> (512 bits) à tous les algorithmes.</p>
+
+<blockquote>
+<p>La taille du sel n&rsquo;est pas un argument de sécurité dans le sens où il n&rsquo;est pas
+secret car livré avec le condensant du mot de passe. (=&gt; sujet à discussion)</p>
+</blockquote>
+
+<p>Qui plus est, pour uniformiser la sérialisation des secrets, j&rsquo;ai utilisé le
+format de <code>argon2</code> :</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">&lt;algo&gt;$&lt;version&gt;$&lt;parameters&gt;$&lt;salt|base64&gt;$&lt;hash|base64&gt;</code></pre></div>
+<blockquote>
+<p>Exemple de mot de passe &ldquo;toto&rdquo;</p>
+</blockquote>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">argon2i$v=<span style="color:#f99b15">19</span>$m=<span style="color:#f99b15">4096</span>,t=<span style="color:#f99b15">3</span>,p=<span style="color:#f99b15">1</span>$ogzBAhKqTQzqKb0RrcH/oXpJWAAdUYkvxi56helLZZwDkPPzJzrWlkjPLDvl7KOQ4xwfJUl6lThE/mCBAvdJKg$5FG9SXMmRtr6WmucA0FvTaUrlcTytPr9YcRdzUFgS5M
+bcrypt+blake2b-<span style="color:#f99b15">512</span>$$c=<span style="color:#f99b15">12</span>$/HOypkj8TUJcYSrbvFcnk26Yv9svYQOHpqnr66OrsvCjmSaKUdBX/CxMr7TKWh/LzKe07RNPow6X+Xj2b50zXw$JDJhJDEyJENZSjRWLnFXWmdQbGFIQ29DNkNhcHVpZ2tWdWhqeFVxUjhDMEo1Q2FsSVNpclBIcTc5NEh<span style="color:#f99b15">1</span>
+pbkdf<span style="color:#f99b15">2</span>+blake2b-<span style="color:#f99b15">512</span>$$i=<span style="color:#f99b15">50000</span>,l=<span style="color:#f99b15">64</span>$BVs5yEUcf<span style="color:#f99b15">16</span>+aUuQ0OceX2vnGyr6gJ+V9GfBM5abreDoTNvjdbjjKvE+ITrUJW+ePER6Nd6Xx+gkK0f4eMRUtQ$tAmYg+4mHEcs1jY1x/QduqKiILbO6oT1rxpzjMCqVO1xSmrnQTc1ApzT0XrX8nBfzYwE8amKKWz<span style="color:#f99b15">6</span>+qaRNjw70A
+pbkdf<span style="color:#f99b15">2</span>+sha<span style="color:#f99b15">3</span>-<span style="color:#f99b15">512</span>$$i=<span style="color:#f99b15">50000</span>,l=<span style="color:#f99b15">64</span>$ozRBsjR9SAcM1wlOUJlgXCLB8c1SK1JMo1geDhPHzQrgZ7QS4SU99IASOcqCgMZQi4WRxBIcMT<span style="color:#f99b15">0</span>/XPNnDlh+AQ$2Rdn9csLROjPwCDdV2gKLvdSNdYu9ZuDuTKztMETPsMnblz+UEUO3Se+StxwkH604OgyOsg7AO3WOIlrP9S1NA
+pbkdf<span style="color:#f99b15">2</span>+sha<span style="color:#f99b15">512</span>$$i=<span style="color:#f99b15">50000</span>,l=<span style="color:#f99b15">64</span>$AgwnOOpIsc+35GVqoE8i32KeAyRK1c4GMLLMbyoOc6jMPLgFL14ZWujTYG0MxxIUN9svqc67ve/+qkCIgpxBGA$99WISIpNRSABtfMolDcSe27PqSfzBSuAEyvgEzcx2iVOQFGHfNMUNMp4b6l9Bi4dBkwXSVtg02sI+gFvvOViCw
+bcrypt+sha<span style="color:#f99b15">512</span>$$c=<span style="color:#f99b15">12</span>$U8hQ/zeQyz36KE2GcoyLclZz0B82blBBKBOZ6SnfQLGBetMQ+aMIoZW7A8JBz5QyWkE7E+R0in8h<span style="color:#f99b15">6</span>+Rx204amA$JDJhJDEyJGlpTXE2WjlsOTJrS1FyTVBNOXQ1dy5uSUY2TzJkZW9tQUNxUWZWMGVqd2VDWFdzQ2wwQ0tl</code></pre></div>
+<p>L&rsquo;exécution sur banc de tests montre bien que les algorithmes coûtent plus
+ou moins cher, tout en restant raisonnable.</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ go test -bench<span style="color:#5bc4bf">=</span>. -benchtime<span style="color:#5bc4bf">=</span>60s
+BenchmarkBcryptBlake2b512-4   	     <span style="color:#f99b15">300</span>	 <span style="color:#f99b15">287734760</span> ns/op
+BenchmarkPbkdf2Blake2b512-4   	    <span style="color:#f99b15">2000</span>	  <span style="color:#f99b15">54130152</span> ns/op
+BenchmarkPbkdf2Keccac512-4    	     <span style="color:#f99b15">500</span>	 <span style="color:#f99b15">157495976</span> ns/op
+BenchmarkPbkdf2Sha512-4       	    <span style="color:#f99b15">1000</span>	 <span style="color:#f99b15">109789518</span> ns/op
+BenchmarkBcryptSha512-4       	     <span style="color:#f99b15">300</span>	 <span style="color:#f99b15">285521789</span> ns/op
+PASS
+ok  	zenithar.org/go/butcher	<span style="color:#f99b15">565</span>.618s</code></pre></div>
+<h2 id="changement-de-politique">Changement de politique</h2>
+
+<p>J&rsquo;ai ajouté une gestion des changements d&rsquo;algorithmes de condensat par défaut.</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#815ba4">func</span> (<span style="color:#06b6ef">s</span> <span style="color:#5bc4bf">*</span><span style="color:#06b6ef">IdentityService</span>) <span style="color:#06b6ef">Login</span>(<span style="color:#06b6ef">principal</span>, <span style="color:#06b6ef">password</span> <span style="color:#fec418">string</span>) (<span style="color:#fec418">string</span>, <span style="color:#fec418">error</span>) {
+  <span style="color:#776e71">// Check parameters
+</span><span style="color:#776e71"></span>  <span style="color:#5bc4bf">...</span>
+
+  <span style="color:#776e71">// Check user existence
+</span><span style="color:#776e71"></span>  <span style="color:#06b6ef">user</span>, <span style="color:#06b6ef">err</span> <span style="color:#5bc4bf">:=</span> <span style="color:#06b6ef">s</span>.<span style="color:#06b6ef">users</span>.<span style="color:#06b6ef">GetByPrincipal</span>(<span style="color:#06b6ef">principal</span>)
+  <span style="color:#815ba4">if</span> <span style="color:#06b6ef">err</span> <span style="color:#5bc4bf">!=</span> <span style="color:#815ba4">nil</span> {
+    <span style="color:#06b6ef">logrus</span>.<span style="color:#06b6ef">WithError</span>(<span style="color:#06b6ef">err</span>).<span style="color:#06b6ef">WithFields</span>(<span style="color:#06b6ef">logrus</span>.<span style="color:#06b6ef">Fields</span>{
+      <span style="color:#48b685">&#34;principal&#34;</span>: <span style="color:#06b6ef">principal</span>
+    }).<span style="color:#06b6ef">Error</span>(<span style="color:#48b685">&#34;Unable to find user identity.&#34;</span>)
+    <span style="color:#815ba4">return</span> <span style="color:#48b685">&#34;&#34;</span>, <span style="color:#06b6ef">ErrAccessDenied</span>
+  }
+
+  <span style="color:#776e71">// Do the identification
+</span><span style="color:#776e71"></span>  <span style="color:#06b6ef">ok</span>, <span style="color:#06b6ef">err</span> <span style="color:#5bc4bf">:=</span> <span style="color:#06b6ef">butcher</span>.<span style="color:#06b6ef">Verify</span>(<span style="color:#06b6ef">user</span>.<span style="color:#06b6ef">PasswordHash</span>, <span style="color:#06b6ef">password</span>)
+  <span style="color:#815ba4">if</span> <span style="color:#06b6ef">err</span> <span style="color:#5bc4bf">!=</span> <span style="color:#815ba4">nil</span> {
+    <span style="color:#06b6ef">logrus</span>.<span style="color:#06b6ef">WithError</span>(<span style="color:#06b6ef">err</span>).<span style="color:#06b6ef">WithFields</span>(<span style="color:#06b6ef">logrus</span>.<span style="color:#06b6ef">Fields</span>{
+      <span style="color:#48b685">&#34;principal&#34;</span>: <span style="color:#06b6ef">principal</span>
+    }).<span style="color:#06b6ef">Error</span>(<span style="color:#48b685">&#34;Error during password validation.&#34;</span>)
+    <span style="color:#815ba4">return</span> <span style="color:#48b685">&#34;&#34;</span>, <span style="color:#06b6ef">ErrAccessDenied</span>
+  }
+
+  <span style="color:#776e71">// Password check valid ?
+</span><span style="color:#776e71"></span>  <span style="color:#815ba4">if</span> !<span style="color:#06b6ef">ok</span> {
+    <span style="color:#06b6ef">logrus</span>.<span style="color:#06b6ef">WithError</span>(<span style="color:#06b6ef">err</span>).<span style="color:#06b6ef">WithFields</span>(<span style="color:#06b6ef">logrus</span>.<span style="color:#06b6ef">Fields</span>{
+      <span style="color:#48b685">&#34;principal&#34;</span>: <span style="color:#06b6ef">principal</span>
+    }).<span style="color:#06b6ef">Error</span>(<span style="color:#48b685">&#34;Invalid credentials.&#34;</span>)
+    <span style="color:#815ba4">return</span> <span style="color:#48b685">&#34;&#34;</span>, <span style="color:#06b6ef">ErrAccessDenied</span>
+  }
+
+  <span style="color:#776e71">// Check password upgrade
+</span><span style="color:#776e71"></span>  <span style="color:#815ba4">if</span> <span style="color:#06b6ef">butcher</span>.<span style="color:#06b6ef">NeedUpgrade</span>(<span style="color:#06b6ef">user</span>.<span style="color:#06b6ef">PasswordHash</span>) {
+    <span style="color:#776e71">// TODO: make Hash static
+</span><span style="color:#776e71"></span>    <span style="color:#06b6ef">hashedPassword</span>, <span style="color:#06b6ef">err</span> <span style="color:#5bc4bf">:=</span> <span style="color:#06b6ef">s</span>.<span style="color:#06b6ef">butcher</span>.<span style="color:#06b6ef">Hash</span>(<span style="color:#06b6ef">password</span>)
+    <span style="color:#815ba4">if</span> <span style="color:#06b6ef">err</span> <span style="color:#5bc4bf">!=</span> <span style="color:#815ba4">nil</span> {
+      <span style="color:#06b6ef">logrus</span>.<span style="color:#06b6ef">WithError</span>(<span style="color:#06b6ef">err</span>).<span style="color:#06b6ef">WithFields</span>(<span style="color:#06b6ef">logrus</span>.<span style="color:#06b6ef">Fields</span>{
+        <span style="color:#48b685">&#34;principal&#34;</span>: <span style="color:#06b6ef">principal</span>
+      }).<span style="color:#06b6ef">Error</span>(<span style="color:#48b685">&#34;Unable to update password hash policy&#34;</span>)
+      <span style="color:#815ba4">return</span> <span style="color:#48b685">&#34;&#34;</span>, <span style="color:#06b6ef">ErrAccessDenied</span>
+    }
+
+    <span style="color:#776e71">// Assign user password
+</span><span style="color:#776e71"></span>    <span style="color:#06b6ef">err</span> <span style="color:#5bc4bf">:=</span> <span style="color:#06b6ef">s</span>.<span style="color:#06b6ef">users</span>.<span style="color:#06b6ef">UpdateUserPassword</span>(<span style="color:#06b6ef">user</span>.<span style="color:#06b6ef">ID</span>, <span style="color:#06b6ef">hashedPassword</span>)
+    <span style="color:#815ba4">if</span> <span style="color:#06b6ef">err</span> <span style="color:#5bc4bf">!=</span> <span style="color:#815ba4">nil</span> {
+      <span style="color:#06b6ef">logrus</span>.<span style="color:#06b6ef">WithError</span>(<span style="color:#06b6ef">err</span>).<span style="color:#06b6ef">WithFields</span>(<span style="color:#06b6ef">logrus</span>.<span style="color:#06b6ef">Fields</span>{
+        <span style="color:#48b685">&#34;principal&#34;</span>: <span style="color:#06b6ef">principal</span>
+      }).<span style="color:#06b6ef">Error</span>(<span style="color:#48b685">&#34;Error during password polic y update.&#34;</span>)
+      <span style="color:#815ba4">return</span> <span style="color:#48b685">&#34;&#34;</span>, <span style="color:#06b6ef">ErrAccessDenied</span>
+    }
+  }
+
+  <span style="color:#776e71">// Return user identifier
+</span><span style="color:#776e71"></span>  <span style="color:#815ba4">return</span> <span style="color:#06b6ef">user</span>.<span style="color:#06b6ef">ID</span>, <span style="color:#815ba4">nil</span>
+}</code></pre></div>
+<p>Voilà un bout de code intégré dans la séquence d&rsquo;identification pour que
+le condensat mot du passe soit mis à jour en fonction des paramètres.</p>
+
+<ul>
+<li><a href="https://github.com/Zenithar/go-butcher">Github</a></li>
+</ul>
+</div>
+
+    
+    
+
+    
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">Geo Joy &copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> hosted on <a href="https://github.com/Geo-Joy/geo-joy.github.io">Github</a></p>
+
+        </footer>
+        
+       <script async="" src="https://geojoy.mejs/main.js"></script>
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KQ3JDPK');</script>
+
+
+    </body>
+
+</html>
+

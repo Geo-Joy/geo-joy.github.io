@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en-us" class="wf-loading">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <meta name="HandheldFriendly" content="True" />
+        <meta name="MobileOptimized" content="320" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="preload" href="https://geojoy.mejs/main.js" as="script" />
+        <link rel="preload" href="https://geojoy.mecss/main.css" as="style" />
+
+        <title>Automatisation des publications Hugo avec Caddy</title>
+        <meta name="generator" content="Hugo 0.32.4" />
+        
+        <link rel="preconnect" href="https://ajax.googleapis.com/" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+        <meta property="og:title" content="Automatisation des publications Hugo avec Caddy" />
+<meta property="og:description" content="Comment mettre en place les Webhooks Github pour générer le site à chaque événement du dépôt." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://geojoy.me/post---copy/automatisation-publication-hugo-avec-caddy/" />
+
+
+
+<meta property="article:published_time" content="2016-01-06T00:00:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2017-03-01T11:27:29&#43;01:00"/>
+
+
+
+
+
+
+
+
+
+
+
+    
+        <meta property="og:type" content="article" />
+        <meta property="og:article:published_time" content="2016-01-06T00:00:00Z" />
+        <meta property="og:article:tag" content="hugo" />
+        <meta property="og:article:tag" content="golang" />
+        <meta property="og:article:tag" content="docker" />
+        <meta property="og:article:tag" content="caddy" />
+        <meta property="og:article:tag" content="webhook" />
+        
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@megeojoy" />
+        <meta name="twitter:creator" content="@megeojoy" />
+        <meta name="twitter:title" content="Automatisation des publications Hugo avec Caddy" />
+        <meta name="twitter:description" content="Comment mettre en place les Webhooks Github pour générer le site à chaque événement du dépôt." />
+        <meta name="twitter:url" content="https://geojoy.me/post---copy/automatisation-publication-hugo-avec-caddy/" />
+        <meta name="twitter:image" content="https://geojoy.me/images/webhooks.jpg">
+    
+
+    
+        <meta name="p:domain_verify" content="fc173d84e3a4de948ed4bda2908afd3e"/>
+    
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Thibault NORMAND",
+      "url": "http://zenithar.org",
+      "sameAs": [
+        "https://twitter.com/zenithar/",
+        "https://www.linkedin.com/in/zenithar/",
+        "https://github.com/Zenithar/",
+        "https://plus.google.com/u/0/+ThibaultNormand"
+      ],
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://geojoy.me/images/avatar.jpg",
+        "height": 80,
+        "width": 80
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "@id": "https://geojoy.me",
+      "name": "Geo&#39;z Blog",
+      "url": "https://geojoy.me",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://geojoy.me/images/avatar.jpg",
+        "height": 80,
+        "width": 80
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "url": "https://geojoy.me",
+      "name": "Geo&#39;z Blog",
+      "author": {
+        "@type": "Person",
+        "name": "Geo Joy"
+      },
+      "description": ""
+    }
+    </script>
+
+      
+      <script type="application/ld+json">
+      {
+          "@context": "http://schema.org",
+          "@type": "BlogPosting",
+          "headline": "Automatisation des publications Hugo avec Caddy",
+          "description": "Comment mettre en place les Webhooks Github pour générer le site à chaque événement du dépôt.",
+          "author": {
+              "@type": "Person",
+              "name": "Geo Joy"
+          },
+          "publisher": {
+              "@type": "Organization",
+              "name": "Geo&#39;z Blog",
+              "logo": "https://geojoy.me/images/avatar.jpg"
+          },
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://geojoy.me/images/webhooks.jpg",
+            "height": 133,
+            "width": 200
+          },
+          "datePublished": "2016-01-06",
+          "dateModified": "2017-03-01",
+          "wordCount": 1014
+          ,
+          "keywords": ["hugo","golang","docker","caddy","webhook"] 
+      }
+    </script>
+  
+
+    <style>
+body{margin:0}main,nav{display:block}a{background-color:transparent}h1{margin:.67em 0;font-size:2em}img{border:0}code,kbd{font-family:monospace,monospace;font-size:1em}button{margin:0;font:inherit;color:inherit}button{overflow:visible}button{text-transform:none}button{-webkit-appearance:button}button::-moz-focus-inner{padding:0;border:0}*{-webkit-box-sizing:border-box;box-sizing:border-box}:after,:before{-webkit-box-sizing:border-box;box-sizing:border-box}html{font-size:10px}body{font-family:"Raleway",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333;background-color:#fff}button{font-family:inherit;font-size:inherit;line-height:inherit}a{color:#337ab7;text-decoration:none}img{vertical-align:middle}h1,h4,h5{font-family:inherit;font-weight:500;line-height:1.1;color:inherit}h1{margin-top:20px;margin-bottom:10px}h4,h5{margin-top:10px;margin-bottom:10px}h1{font-size:36px}h4{font-size:18px}h5{font-size:14px}p{margin:0 0 10px}.text-justify{text-align:justify}ul{margin-top:0;margin-bottom:10px}blockquote{padding:10px 20px;margin:0 0 20px;font-size:17.5px;border-left:5px solid #eee}blockquote p:last-child{margin-bottom:0}code,kbd{font-family:Menlo,Monaco,Consolas,"Courier New",monospace}code{padding:2px 4px;font-size:90%;color:#c7254e;background-color:#f9f2f4;border-radius:4px}kbd{padding:2px 4px;font-size:90%;color:#fff;background-color:#333;border-radius:3px;-webkit-box-shadow:inset 0 -1px 0 rgba(0,0,0,.25);box-shadow:inset 0 -1px 0 rgba(0,0,0,.25)}.container{padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}@media (min-width:768px){.container{width:750px}}@media (min-width:992px){.container{width:970px}}@media (min-width:1200px){.container{width:1170px}}.collapse{display:none}.nav{padding-left:0;margin-bottom:0;list-style:none}.nav>li{position:relative;display:block}.nav>li>a{position:relative;display:block;padding:10px 15px}.navbar{position:relative;min-height:50px;margin-bottom:20px;border:1px solid transparent}@media (min-width:768px){.navbar{border-radius:4px}}@media (min-width:768px){.navbar-header{float:left}}.navbar-collapse{padding-right:15px;padding-left:15px;overflow-x:visible;-webkit-overflow-scrolling:touch;border-top:1px solid transparent;-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,.1);box-shadow:inset 0 1px 0 rgba(255,255,255,.1)}@media (min-width:768px){.navbar-collapse{width:auto;border-top:0;-webkit-box-shadow:none;box-shadow:none}.navbar-collapse.collapse{display:block !important;height:auto !important;padding-bottom:0;overflow:visible !important}.navbar-fixed-top .navbar-collapse{padding-right:0;padding-left:0}}.navbar-fixed-top .navbar-collapse{max-height:340px}@media (max-device-width:480px) and (orientation:landscape){.navbar-fixed-top .navbar-collapse{max-height:200px}}.container>.navbar-collapse,.container>.navbar-header{margin-right:-15px;margin-left:-15px}@media (min-width:768px){.container>.navbar-collapse,.container>.navbar-header{margin-right:0;margin-left:0}}.navbar-fixed-top{position:fixed;right:0;left:0;z-index:1030}@media (min-width:768px){.navbar-fixed-top{border-radius:0}}.navbar-fixed-top{top:0;border-width:0 0 1px}.navbar-brand{float:left;height:50px;padding:15px 15px;font-size:18px;line-height:20px}@media (min-width:768px){.navbar>.container .navbar-brand{margin-left:-15px}}.navbar-toggle{position:relative;float:right;padding:9px 10px;margin-top:8px;margin-right:15px;margin-bottom:8px;background-color:transparent;background-image:none;border:1px solid transparent;border-radius:4px}.navbar-toggle .icon-bar{display:block;width:22px;height:2px;border-radius:1px}.navbar-toggle .icon-bar+.icon-bar{margin-top:4px}@media (min-width:768px){.navbar-toggle{display:none}}.navbar-nav{margin:7.5px -15px}.navbar-nav>li>a{padding-top:10px;padding-bottom:10px;line-height:20px}@media (min-width:768px){.navbar-nav{float:left;margin:0}.navbar-nav>li{float:left}.navbar-nav>li>a{padding-top:15px;padding-bottom:15px}}@media (min-width:768px){.navbar-right{float:right !important;margin-right:-15px}}.navbar-default{background-color:#f8f8f8;border-color:#e7e7e7}.navbar-default .navbar-brand{color:#777}.navbar-default .navbar-nav>li>a{color:#777}.navbar-default .navbar-toggle{border-color:#ddd}.navbar-default .navbar-toggle .icon-bar{background-color:#888}.navbar-default .navbar-collapse{border-color:#e7e7e7}.container:after,.container:before,.nav:after,.nav:before,.navbar-collapse:after,.navbar-collapse:before,.navbar-header:after,.navbar-header:before,.navbar:after,.navbar:before{display:table;content:" "}.container:after,.nav:after,.navbar-collapse:after,.navbar-header:after,.navbar:after{clear:both}@-ms-viewport{width:device-width}.visible-xs{display:none !important}@media (max-width:767px){.visible-xs{display:block !important}}html{height:100%}body{height:100%;padding-top:55px;display:-webkit-box;display:-ms-flexbox;display:flex;text-align:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;font-size:16px !important}main{margin:auto;padding:25px;max-width:750px}a:link,a:visited{color:green}.item{padding:10px 0}.item-tag{background-color:green}.navbar-icon{font-size:125%;display:inline-block !important}.navbar.navbar-default{border-top:5px solid green}img{max-width:100%}.fade-in{opacity:0}
+.wf-loading p, .wf-loading h1, .wf-loading h2, .wf-loading h3, .wf-loading h4, .wf-loading a {visibility: hidden;}.wf-active  p, .wf-active h1, .wf-active h2, .wf-active h3, .wf-active h4, .wf-active a {visibility: visible;}.wf-inactive    p, .wf-inactive h1, .wf-inactive h2, .wf-inactive h3, .wf-inactive h4, wf-inactive a {visibility: visible;}
+</style>
+
+    </head>
+
+    <body>
+      
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQ3JDPK"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Automatisation des publications Hugo avec Caddy</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Posts</a></li>
+                            
+                                <li><a href="/project/">Projects</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="/resume/"><i class="fa fa-user"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="http://www.google.com/recaptcha/mailhide/d?k=01IIc-s5LNYiS-CG_gthn4PA==&amp;c=r5Ctx8RMDz422qmYESfk1g=="><i class="fa fa-envelope"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/Geo-Joy"><i class="fa fa-github-alt"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/megeojoy"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/geojoy/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main class="fade-in">
+
+    <div class="item">
+
+    
+    
+    
+
+    
+      
+
+    <h4><a itemprop="url" href="/post---copy/automatisation-publication-hugo-avec-caddy/">
+      <span itemprop="name">Automatisation des publications Hugo avec Caddy</span>
+    </a></h4>
+
+    January 6, 2016
+    <h5>Comment mettre en place les Webhooks Github pour générer le site à chaque événement du dépôt.</h5>
+     <a href="../../../../../tags/hugo"><kbd class="item-tag">hugo</kbd></a>  <a href="../../../../../tags/golang"><kbd class="item-tag">golang</kbd></a>  <a href="../../../../../tags/docker"><kbd class="item-tag">docker</kbd></a>  <a href="../../../../../tags/caddy"><kbd class="item-tag">caddy</kbd></a>  <a href="../../../../../tags/webhook"><kbd class="item-tag">webhook</kbd></a> 
+
+</div>
+
+
+    <br> <div class="text-justify">
+
+<p>Nous allons mettre en place à l&rsquo;aide de <a href="http://gohugo.io">Hugo</a> : générateur
+de site static codé en &lsquo;Go&rsquo;, et <a href="https://caddyserver.com">Caddy</a> : serveur web
+très simplifié supportant notamment le HTTP/2.0; un système de publication
+automatisé.</p>
+
+<p><a href="https://github.com">Github</a> étant mon hébergeur de sources, il faut pouvoir
+connecter ce dépôt et plus précisément les événements <code>PUSH</code> à un dispositif
+tiers.</p>
+
+<h1 id="les-webhooks">Les webhooks</h1>
+
+<p>Il existe pour les notifications cross-systèmes une technique que l&rsquo;on nomme les
+<a href="http://www.webhooks.org/">webhooks</a>, tout simplement des appels Web comme
+les webservices mais souvent entre systèmes.
+Ce dispositif permet la communication d&rsquo;événement divers et variés au travers de
+notre cher <code>cloud</code>.</p>
+
+<p>On en vient souvent à utiliser des dispositifs d&rsquo;orchestration plus élaborés comme :</p>
+
+<ul>
+<li><a href="https://ifttt.com/">IFTTT</a> : Gestionnaire de flot de travail (propriétaire)</li>
+<li><a href="https://github.com/cantino/huginn">Huginn</a> : Alternative IFTTT Open source</li>
+</ul>
+
+<h2 id="a-quoi-cela-sert">A quoi cela sert ?</h2>
+
+<p>La plupart du temps les webhooks sont utilisés pour
+<a href="https://github.com/integrations">les services d&rsquo;intégrations</a> :</p>
+
+<ul>
+<li>Intégration continue (travis-ci, *-ci)</li>
+<li>Déploiement (Docker registry)</li>
+<li>Analyse de code</li>
+<li>Collaboration (Mattermost, Slack, etc.)</li>
+<li>etc.</li>
+</ul>
+
+<h2 id="comment-cela-fonctionne">Comment cela fonctionne ?</h2>
+
+<p>D&rsquo;une manière générale, un webhook se caractèrise par :</p>
+
+<ul>
+<li>Un <em>serveur</em> web (HTTP / HTTPS), avec une route particulière à l&rsquo;invocation de
+la fonctionnalité liée à l&rsquo;appel</li>
+<li>Un <em>client</em>, service générateur de la notification, qui va construire via un
+protocole qui lui est propre une payload qui sera envoyée au serveur lors
+du déclenchement d&rsquo;un événement surveillé. Il s&rsquo;agit le plus souvent d&rsquo;une
+requête <code>HTTP Post</code> avec une payload en <code>JSON</code></li>
+</ul>
+
+<blockquote>
+<p>Le corps de l&rsquo;appel en JSON peut varier en fonction du client.</p>
+</blockquote>
+
+<p>Par exemple, vous pouvez développer un protocole de publication d&rsquo;informations
+à l&rsquo;aide des webhooks et laisser à la charge du receveur le traitement de
+l&rsquo;information véhiculé (Ex: publication de bulletins sécurité =&gt; affichage sur
+le portail interne et envoi de mail).</p>
+
+<blockquote>
+<p>Attention cette méthode nécessite un service en écoute, et accessible depuis
+ le service appelant.</p>
+</blockquote>
+
+<h2 id="et-la-sécurité-dans-tout-ça">Et la sécurité dans tout ça ?</h2>
+
+<p>Tout dépends de la confidence entre le <code>client</code> et le <code>serveur</code>, dans notre cas
+Github utilise un authentification <code>HMAC-SHA1</code> avec un secret prépartagé en clé.</p>
+
+<p>Github va générer un appel au service avec un token. Ce token correspond à
+l&rsquo;empreinte <code>SHA1</code> du JSON du corps de message signé avec le secret.</p>
+
+<p>Pour plus d&rsquo;informations, sur la sécurité Github des webhooks, c&rsquo;est
+<a href="https://developer.github.com/webhooks/securing/">par ici</a>.</p>
+
+<p>Si les deux parties sont développées par vos soins vous pouvez imaginer des
+dispositifs de sécurité plus forts :</p>
+
+<ul>
+<li>Certificats</li>
+<li>Assertion <a href="http://jwt.io/">JWT</a> / SAML</li>
+</ul>
+
+<h1 id="caddy-serveur-web-léger-et-fonctionnel">Caddy : Serveur web léger et fonctionnel</h1>
+
+<p>Dans les grandes lignes, <a href="https://caddyserver.com/">Caddy</a> est :</p>
+
+<ul>
+<li>Un serveur web compatible <code>HTTP/2.0</code></li>
+<li>Léger : ~4 Mo</li>
+<li>Codé en <code>Go</code> =&gt; Pas de dépendances supplémentaires</li>
+<li>Compatible avec la PKI <a href="https://letsencrypt.org/">Let&rsquo;s encrypt</a> =&gt; Gestion
+automatique du <code>HTTPS</code></li>
+<li>Très simple à utiliser</li>
+</ul>
+
+<blockquote>
+<p>Pour info, bientôt l&rsquo;indexation Google prendra en compte l&rsquo;utilisation ou non
+   du HTTPS, et favorisera votre positionnement en fonction &hellip;</p>
+</blockquote>
+
+<p>Le serveur expose des points d&rsquo;extension sous la forme de middleware, qui peuvent
+être intégré lors de la génération du package final.</p>
+
+<p>Un certains nombre de middleware sont officiellement disponibles :</p>
+
+<ul>
+<li><a href="https://caddyserver.com/docs/cors">cors</a> : Pour la gestion des entêtes <a href="https://en.wikipedia.org/wiki/Cross-origin_resource_sharing">CORS</a></li>
+<li><a href="https://caddyserver.com/docs/git">git</a> : Pour la gestion de pull depuis Git ( =&gt; utilise le Git système)</li>
+<li><a href="https://caddyserver.com/docs/hugo">hugo</a> : Pour la génération de site via hugo ( hugo est embarqué, ce qui ne
+m&rsquo;intéresse pas car dans mon cas j&rsquo;utilise des
+<a href="https://github.com/Zenithar/hugo">fonctionnalités</a> non présentes dans
+le tronc commun.)</li>
+<li><a href="https://caddyserver.com/docs/ipfilter">ipfilter</a> : pour gérer des filtrage d&rsquo;accès par IP</li>
+<li><a href="https://caddyserver.com/docs/jsonp">jsonp</a>: Permet les appels WebServices via JSONP (CORS préférable)</li>
+<li><a href="https://caddyserver.com/docs/search">search</a>: Ajoute un moteur d&rsquo;indexation et de recherche basé sur le
+moteur <a href="http://www.blevesearch.com/">Bleave</a>.</li>
+</ul>
+
+<h2 id="synchronisation-avec-git">Synchronisation avec Git</h2>
+
+<p>Caddy fonctionne à l&rsquo;aide d&rsquo;un fichier <code>Caddyfile</code>, contenant toute la
+configuration du serveur.</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#776e71"># Addresse d&#39;écoute =&gt; toutes interfaces sur le port 2015 (par défaut)</span>
+<span style="color:#f99b15">0.0</span>.<span style="color:#f99b15">0.0</span>:<span style="color:#f99b15">2015</span>
+
+<span style="color:#776e71"># Chemin vers le répertoire racine (attention pour hugo bien prendre public)</span>
+root blog.zenithar.org/public
+
+<span style="color:#776e71"># S&#39;il n&#39;y a pas d&#39;extension défini dans l&#39;url, compléter avec .html</span>
+ext .html
+<span style="color:#776e71"># Activation de la compression gzip</span>
+gzip
+
+<span style="color:#776e71"># Clone le dépot Git au lancement</span>
+git github.com/zenithar/zenithar.hugo {
+  <span style="color:#776e71"># Path relatif au docroot (public) donc il faut remonter</span>
+  path ../
+  <span style="color:#776e71"># Ajout d&#39;une route pour le déclenchement du WebHook</span>
+  <span style="color:#776e71">#    &lt;------------ URL -------------&gt; &lt;- secret -&gt;</span>
+  hook /_admin/github/hook/zenithar.org secret<span style="color:#f99b15">012345</span>
+  <span style="color:#776e71"># Exécute la commande &#34;hugo&#34; =&gt; génération du site dans public</span>
+  then hugo
+}
+
+<span style="color:#776e71"># Gestion des erreurs</span>
+errors {
+  <span style="color:#776e71"># En cas de 404, redirection sur la page du site</span>
+  <span style="color:#f99b15">404</span> <span style="color:#f99b15">404.</span>html
+}</code></pre></div>
+<p>Pour exécuter le serveur <code>Caddy</code>, il suffit de vous mettre dans le répertoire
+contenant le fichier <code>Caddyfile</code>.</p>
+
+<pre><code>#&gt; caddy
+</code></pre>
+
+<p>Le serveur va commencer par synchroniser le dépôt Git, puis invoquer <code>hugo</code>.</p>
+
+<blockquote>
+<p>Hugo doit être installé et accessible depuis votre PATH ou vous pouvez mettre
+  un chemin absolu vers l&rsquo;exécutable.</p>
+</blockquote>
+
+<h2 id="ajout-du-webhook-sur-github">Ajout du webhook sur Github</h2>
+
+<p>Le service Webhook est opérationnel, Github doit être informé pour contacter
+<code>Caddy</code> lors de push.</p>
+
+<p>Il faut aller, pour le dépôt concerné :</p>
+
+<ul>
+<li>Settings</li>
+<li>Webhooks &amp; services</li>
+<li>Add Webhook</li>
+</ul>
+
+<p>Puis saisir les informations correspondant à la configuration du <code>Caddyfile</code>:</p>
+
+<div style="text-align: center">
+<img src="/images/articles/2016/github_webhook.png" style="text-align: center" alt="Github webhook settings" />
+</div>
+
+<p>Et voilà, c&rsquo;est fini !</p>
+
+<h1 id="conclusion">Conclusion</h1>
+
+<p>Vous pouvez maintenant éditer directement sur Github vos fichiers Markdown, et
+lors du commit, le site sera regénéré.</p>
+
+<p>Petit plus sécurité, le tout peut être mis dans un conteneur <code>Docker</code></p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="color:#815ba4">FROM</span><span style="color:#48b685"> sdurrheimer/alpine-glibc:latest</span><span style="color:#ef6155">
+</span><span style="color:#ef6155"></span><span style="color:#815ba4">MAINTAINER</span><span style="color:#48b685"> Thibault NORMAND &lt;me@zenithar.org&gt;</span><span style="color:#ef6155">
+</span><span style="color:#ef6155">
+</span><span style="color:#ef6155"></span><span style="color:#815ba4">RUN</span> apk --update add git ca-certificates curl <span style="color:#f99b15">\
+</span><span style="color:#f99b15"></span>    <span style="color:#5bc4bf">&amp;&amp;</span> rm -rf /var/cache/apk/*<span style="color:#ef6155">
+</span><span style="color:#ef6155">
+</span><span style="color:#ef6155"></span><span style="color:#815ba4">RUN</span> curl -jksSL <span style="color:#48b685">&#34;https://caddyserver.com/download/build?os=linux&amp;arch=amd64&amp;features=git&#34;</span> | gunzip -c - | tar -xf - -C /tmp <span style="color:#f99b15">\
+</span><span style="color:#f99b15"></span>    <span style="color:#5bc4bf">&amp;&amp;</span> mv /tmp/caddy /usr/bin/caddy <span style="color:#f99b15">\
+</span><span style="color:#f99b15"></span>    <span style="color:#5bc4bf">&amp;&amp;</span> rm -f /tmp/*.txt<span style="color:#ef6155">
+</span><span style="color:#ef6155">
+</span><span style="color:#ef6155"></span><span style="color:#815ba4">ENV</span><span style="color:#48b685"> HUGO_VERSION 0.15</span><span style="color:#ef6155">
+</span><span style="color:#ef6155"></span><span style="color:#815ba4">RUN</span> curl -jksSL <span style="color:#48b685">&#34;https://github.com/spf13/hugo/releases/download/v</span><span style="color:#f99b15">${</span><span style="color:#ef6155">HUGO_VERSION</span><span style="color:#f99b15">}</span><span style="color:#48b685">/hugo_</span><span style="color:#f99b15">${</span><span style="color:#ef6155">HUGO_VERSION</span><span style="color:#f99b15">}</span><span style="color:#48b685">_linux_amd64.tar.gz&#34;</span> | gunzip -c - | tar -xf - -C /tmp <span style="color:#f99b15">\
+</span><span style="color:#f99b15"></span>    <span style="color:#5bc4bf">&amp;&amp;</span> mv /tmp/hugo_<span style="color:#f99b15">${</span><span style="color:#ef6155">HUGO_VERSION</span><span style="color:#f99b15">}</span>_linux_amd64/hugo_<span style="color:#f99b15">${</span><span style="color:#ef6155">HUGO_VERSION</span><span style="color:#f99b15">}</span>_linux_amd64 /usr/local/bin/hugo <span style="color:#f99b15">\
+</span><span style="color:#f99b15"></span>    <span style="color:#5bc4bf">&amp;&amp;</span> rm -rf /tmp/hugo_<span style="color:#f99b15">${</span><span style="color:#ef6155">HUGO_VERSION</span><span style="color:#f99b15">}</span>_linux_amd64<span style="color:#ef6155">
+</span><span style="color:#ef6155">
+</span><span style="color:#ef6155"></span><span style="color:#815ba4">RUN</span> adduser -D -u <span style="color:#f99b15">500</span> www <span style="color:#f99b15">\
+</span><span style="color:#f99b15"></span>    <span style="color:#5bc4bf">&amp;&amp;</span> mkdir -p /var/www <span style="color:#f99b15">\
+</span><span style="color:#f99b15"></span>    <span style="color:#5bc4bf">&amp;&amp;</span> chown -R www /var/www<span style="color:#ef6155">
+</span><span style="color:#ef6155">
+</span><span style="color:#ef6155"></span><span style="color:#815ba4">WORKDIR</span><span style="color:#48b685"> /var/www</span><span style="color:#ef6155">
+</span><span style="color:#ef6155"></span><span style="color:#815ba4">EXPOSE</span><span style="color:#48b685">  2015</span><span style="color:#ef6155">
+</span><span style="color:#ef6155"></span>USER    www<span style="color:#ef6155">
+</span><span style="color:#ef6155"></span><span style="color:#815ba4">CMD</span><span style="color:#48b685"> [ &#34;caddy&#34; ]</span></code></pre></div>
+<p>Personnellement je n&rsquo;utilise pas <code>Caddy</code> comme serveur en production, mais plutôt
+<code>nginx</code> (avec des patchs customs), pour cela il suffit de faire un volume partagé
+entre les deux docker <code>Caddy</code> qui génère et <code>Nginx</code> qui (en read only) lit le
+contenu généré.</p>
+
+<p>Voilà, c&rsquo;est tout.</p>
+
+<p>Je vous laisse imaginer en axe d&rsquo;amélioration tot ce que l&rsquo;on peut faire grâce
+aux webhooks, sachant qu&rsquo;il existe une version porté sur
+<a href="https://fr.wikipedia.org/wiki/WebSocket">WebSocket</a> permettant de palier le
+problème du service en écoute. La connexion WebSocket est bidirectionnelle ^^<br />
+Mais ceci est une autre histoire &hellip;</p>
+</div>
+
+    
+    
+
+    
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">Geo Joy &copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> hosted on <a href="https://github.com/Geo-Joy/geo-joy.github.io">Github</a></p>
+
+        </footer>
+        
+       <script async="" src="https://geojoy.mejs/main.js"></script>
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KQ3JDPK');</script>
+
+
+    </body>
+
+</html>
+

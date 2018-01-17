@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dropbox on Geo&#39;z Blog</title>
+    <link>https://geojoy.me/tags/dropbox/</link>
+    <description>Recent content in Dropbox on Geo&#39;z Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 07 Jun 2011 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://geojoy.me/tags/dropbox/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Comment bloquer DropBox ?</title>
+      <link>https://geojoy.me/post---copy/comment-bloquer-dropbox/</link>
+      <pubDate>Tue, 07 Jun 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/comment-bloquer-dropbox/</guid>
+      <description>Aujourd&amp;rsquo;hui de nombreuses solutions de stockage sur le &amp;ldquo;cloud&amp;rdquo;, sont disponibles cependant elles provoquent des problèmes de sécurité liés au fait qu&amp;rsquo;il passe les firewalls au travers du port HTTPS (443/TCP).
+Il est tout à fait possible de bloquer Dropbox, si vous avez (la chance) d&amp;rsquo;avoir un firewall DPI (Deep Packet Inspection) qui va réussir à lire la payload, cependant ce n&amp;rsquo;est pas toujours le cas avec ISA Server, ou autres soft firewalls.</description>
+    </item>
+    
+  </channel>
+</rss>

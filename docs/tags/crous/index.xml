@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Crous on Geo&#39;z Blog</title>
+    <link>https://geojoy.me/tags/crous/</link>
+    <description>Recent content in Crous on Geo&#39;z Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 13 Aug 2007 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://geojoy.me/tags/crous/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>GeeGo aka franglish : &#34;J&#39;y go&#34; (J&#39;y vais)</title>
+      <link>https://geojoy.me/post---copy/geego-aka-franglish-jy-go-jy-vais/</link>
+      <pubDate>Mon, 13 Aug 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/geego-aka-franglish-jy-go-jy-vais/</guid>
+      <description>Voici mon &amp;ldquo;nouveau&amp;rdquo; projet, enfin nouveau non, je le déterre du fond de mes archives et de mes &amp;ldquo;cahiers à idées&amp;rdquo;. Pour faire simple, un logiciel de chat muiltiplateforme (pas en Java, C++/Qt), fortement &amp;ldquo;Jabberisé&amp;rdquo; pour le protocole réseau, insertion de la libjingle pour le VoP2P, transfert de fichiers, recherche, etc &amp;hellip; . Tout ça pour un réseau local, oui pour l&amp;rsquo;instant vu ma culture dans les DHT (Distributed Hash Table), et autres méthodes pour le P2P, ça sera pas tout de suite pour l&amp;rsquo;extranet.</description>
+    </item>
+    
+    <item>
+      <title>Tjrs pas Internet ....</title>
+      <link>https://geojoy.me/post---copy/tjrs-pas-internet/</link>
+      <pubDate>Wed, 19 Oct 2005 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/tjrs-pas-internet/</guid>
+      <description>J&amp;rsquo;annonce au jour d&amp;rsquo;aujourd&amp;rsquo;hui que je n&amp;rsquo;ai tjrs pas Internet depuis 1mois 6jrs. Les autorités compétentes (devrais je dire incompétentes) donne tjrs la m^eme phrase : &amp;ldquo;ça sera fait dans la semaine !!!&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>Toujours pas Internet ....</title>
+      <link>https://geojoy.me/post---copy/toujours-pas-internet/</link>
+      <pubDate>Mon, 03 Oct 2005 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/toujours-pas-internet/</guid>
+      <description>Ouiiinnnnnnnnn, je veux internet dans ma chambreeeeee ! Sinon freebox ! Les newsgroups me manquent ! Sinon ça va bien, samedi je suis allé voir un match au Stade Toulousain. Vive Toulouse !</description>
+    </item>
+    
+    <item>
+      <title>Des nouvelles de Toulouse ....</title>
+      <link>https://geojoy.me/post---copy/des-nouvelles-de-toulouse/</link>
+      <pubDate>Wed, 21 Sep 2005 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/des-nouvelles-de-toulouse/</guid>
+      <description>Et voila après quelques problèmes divers, je suis installé à Toulouse en chambre rénové : résultats Nice = voleurs.
+Pourquoi ? Douche + Toilette + Prise réseau (Internet + LAN) + Prise internet + Chambre Neuve = 198 euros sans APL. Voila donc venez à Toulouse c&amp;rsquo;est mieux et moins cher ! Je mettrais des photos de ma chambre plus tard quand j&amp;rsquo;aurais internet dans ma chambre, c&amp;rsquo;est à dire demain (normalement !</description>
+    </item>
+    
+  </channel>
+</rss>

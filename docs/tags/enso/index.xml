@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Enso on Geo&#39;z Blog</title>
+    <link>https://geojoy.me/tags/enso/</link>
+    <description>Recent content in Enso on Geo&#39;z Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 30 Aug 2008 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://geojoy.me/tags/enso/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ubiquity, Enso pour Firefox</title>
+      <link>https://geojoy.me/post---copy/ubiquity-enso-pour-firefox/</link>
+      <pubDate>Sat, 30 Aug 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/ubiquity-enso-pour-firefox/</guid>
+      <description>Voici une extension Firefox qu&amp;rsquo;il va falloir surveiller de près, elle permet d&amp;rsquo;associer à des commandes textuelles des actions : email to (Envoyer un mail au contact via gmail), map (affiche une carte de l&amp;rsquo;adresse sélectionnée), tout comme le fait enso.
+Plus d&amp;rsquo;informations</description>
+    </item>
+    
+    <item>
+      <title>Encore mieux que Katapult ! Oui ça existe !</title>
+      <link>https://geojoy.me/post---copy/encore-mieux-que-katapult-oui-ca-existe/</link>
+      <pubDate>Wed, 13 Feb 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/encore-mieux-que-katapult-oui-ca-existe/</guid>
+      <description>Voici une application que j&amp;rsquo;ai trouvée par hasard en me perdant dans les méandres de l&amp;rsquo;Internet.
+http://www.hamunized.com/enso/
+Propose un lanceur d&amp;rsquo;application, mais pas uniquement cela ! il permet d&amp;rsquo;exécuter des opérations sur la sélection en cours : à partir d&amp;rsquo;une adresse sortir le plan GoogleMap, (mon préféré) transformer une expression LaTeX en image pendant que vous utilisez votre éditeur de texte favori, mettre en majuscule, traduire vers 7 langues, donner une définition, etc &amp;hellip; vraiment j&amp;rsquo;adore !</description>
+    </item>
+    
+  </channel>
+</rss>

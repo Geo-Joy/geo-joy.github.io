@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Acceleo on Geo&#39;z Blog</title>
+    <link>https://geojoy.me/tags/acceleo/</link>
+    <description>Recent content in Acceleo on Geo&#39;z Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 19 Mar 2011 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://geojoy.me/tags/acceleo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Acceleo 3.0 et les attributs de classe UML.</title>
+      <link>https://geojoy.me/post---copy/acceleo-3-0-et-les-attributs-de-classe-uml/</link>
+      <pubDate>Sat, 19 Mar 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/acceleo-3-0-et-les-attributs-de-classe-uml/</guid>
+      <description>Ah lala ça fait depuis quelque temps que j&amp;rsquo;utilise Acceleo pour faire pas de mal de chose (Génération de code Java, Docbook, etc.), et bon j&amp;rsquo;ai été confronté à un problème particulier. Il faut savoir que dans le métamodele UML, la liste des attributs (Property) est marqué comme unordered, ce qui a pour effet dans Acceleo suite à des générations successives de mélanger les attributs de votre classe.
+Vous me direz pas très grave pour un bean Java, mais ça devient plus compliqué quand celui-ci est un bean à persistance (type JPA).</description>
+    </item>
+    
+  </channel>
+</rss>

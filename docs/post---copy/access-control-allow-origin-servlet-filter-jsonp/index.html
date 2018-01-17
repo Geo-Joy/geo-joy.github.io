@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en-us" class="wf-loading">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <meta name="HandheldFriendly" content="True" />
+        <meta name="MobileOptimized" content="320" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="preload" href="https://geojoy.mejs/main.js" as="script" />
+        <link rel="preload" href="https://geojoy.mecss/main.css" as="style" />
+
+        <title>Access control Allow Origin Servlet Filter &amp; JSONP</title>
+        <meta name="generator" content="Hugo 0.32.4" />
+        
+        <link rel="preconnect" href="https://ajax.googleapis.com/" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+        <meta property="og:title" content="Access control Allow Origin Servlet Filter &amp; JSONP" />
+<meta property="og:description" content="Voici comment ajouter l&rsquo;entête HTTP Access-control-allow-origin, bien connu des utilisateurs de JSON, AMF ou tout simplement de service REST.
+package org.zenithar.servlet.filters; import java.io.IOException; import javax.servlet.Filter; import javax.servlet.FilterChain; import javax.servlet.FilterConfig; import javax.servlet.ServletException; import javax.servlet.ServletOutputStream; import javax.servlet.ServletRequest; import javax.servlet.ServletResponse; import javax.servlet.http.HttpServletRequest; import javax.servlet.http.HttpServletResponse; /** * Add JSONP Support to enunciate. * * @author Thibault NORMAND * */ public class JsonpFilter implements Filter { private String functionName; @Override public void destroy() { } @Override public void doFilter(ServletRequest request, ServletResponse servletResponse, FilterChain chain) throws IOException, ServletException { if (!" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://geojoy.me/post---copy/access-control-allow-origin-servlet-filter-jsonp/" />
+
+
+
+<meta property="article:published_time" content="2011-04-19T00:00:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2017-03-01T11:27:27&#43;01:00"/>
+
+
+
+
+
+
+
+
+
+
+
+    
+        <meta property="og:type" content="article" />
+        <meta property="og:article:published_time" content="2011-04-19T00:00:00Z" />
+        <meta property="og:article:tag" content="http" />
+        <meta property="og:article:tag" content="jsonp" />
+        <meta property="og:article:tag" content="servlet" />
+        <meta property="og:article:tag" content="webservices" />
+        
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@megeojoy" />
+        <meta name="twitter:creator" content="@megeojoy" />
+        <meta name="twitter:title" content="Access control Allow Origin Servlet Filter &amp; JSONP" />
+        <meta name="twitter:description" content="" />
+        <meta name="twitter:url" content="https://geojoy.me/post---copy/access-control-allow-origin-servlet-filter-jsonp/" />
+        
+    
+
+    
+        <meta name="p:domain_verify" content="fc173d84e3a4de948ed4bda2908afd3e"/>
+    
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Thibault NORMAND",
+      "url": "http://zenithar.org",
+      "sameAs": [
+        "https://twitter.com/zenithar/",
+        "https://www.linkedin.com/in/zenithar/",
+        "https://github.com/Zenithar/",
+        "https://plus.google.com/u/0/+ThibaultNormand"
+      ],
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://geojoy.me/images/avatar.jpg",
+        "height": 80,
+        "width": 80
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "@id": "https://geojoy.me",
+      "name": "Geo&#39;z Blog",
+      "url": "https://geojoy.me",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://geojoy.me/images/avatar.jpg",
+        "height": 80,
+        "width": 80
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "url": "https://geojoy.me",
+      "name": "Geo&#39;z Blog",
+      "author": {
+        "@type": "Person",
+        "name": "Geo Joy"
+      },
+      "description": ""
+    }
+    </script>
+
+      
+      <script type="application/ld+json">
+      {
+          "@context": "http://schema.org",
+          "@type": "BlogPosting",
+          "headline": "Access control Allow Origin Servlet Filter &amp; JSONP",
+          "description": "",
+          "author": {
+              "@type": "Person",
+              "name": "Geo Joy"
+          },
+          "publisher": {
+              "@type": "Organization",
+              "name": "Geo&#39;z Blog",
+              "logo": "https://geojoy.me/images/avatar.jpg"
+          },
+          
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://geojoy.me/images/avatar.jpg",
+            "height": 80,
+            "width": 80
+          },
+          "datePublished": "2011-04-19",
+          "dateModified": "2017-03-01",
+          "wordCount": 222
+          ,
+          "keywords": ["http","jsonp","servlet","webservices"] 
+      }
+    </script>
+  
+
+    <style>
+body{margin:0}main,nav{display:block}a{background-color:transparent}h1{margin:.67em 0;font-size:2em}img{border:0}code,kbd{font-family:monospace,monospace;font-size:1em}button{margin:0;font:inherit;color:inherit}button{overflow:visible}button{text-transform:none}button{-webkit-appearance:button}button::-moz-focus-inner{padding:0;border:0}*{-webkit-box-sizing:border-box;box-sizing:border-box}:after,:before{-webkit-box-sizing:border-box;box-sizing:border-box}html{font-size:10px}body{font-family:"Raleway",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333;background-color:#fff}button{font-family:inherit;font-size:inherit;line-height:inherit}a{color:#337ab7;text-decoration:none}img{vertical-align:middle}h1,h4,h5{font-family:inherit;font-weight:500;line-height:1.1;color:inherit}h1{margin-top:20px;margin-bottom:10px}h4,h5{margin-top:10px;margin-bottom:10px}h1{font-size:36px}h4{font-size:18px}h5{font-size:14px}p{margin:0 0 10px}.text-justify{text-align:justify}ul{margin-top:0;margin-bottom:10px}blockquote{padding:10px 20px;margin:0 0 20px;font-size:17.5px;border-left:5px solid #eee}blockquote p:last-child{margin-bottom:0}code,kbd{font-family:Menlo,Monaco,Consolas,"Courier New",monospace}code{padding:2px 4px;font-size:90%;color:#c7254e;background-color:#f9f2f4;border-radius:4px}kbd{padding:2px 4px;font-size:90%;color:#fff;background-color:#333;border-radius:3px;-webkit-box-shadow:inset 0 -1px 0 rgba(0,0,0,.25);box-shadow:inset 0 -1px 0 rgba(0,0,0,.25)}.container{padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}@media (min-width:768px){.container{width:750px}}@media (min-width:992px){.container{width:970px}}@media (min-width:1200px){.container{width:1170px}}.collapse{display:none}.nav{padding-left:0;margin-bottom:0;list-style:none}.nav>li{position:relative;display:block}.nav>li>a{position:relative;display:block;padding:10px 15px}.navbar{position:relative;min-height:50px;margin-bottom:20px;border:1px solid transparent}@media (min-width:768px){.navbar{border-radius:4px}}@media (min-width:768px){.navbar-header{float:left}}.navbar-collapse{padding-right:15px;padding-left:15px;overflow-x:visible;-webkit-overflow-scrolling:touch;border-top:1px solid transparent;-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,.1);box-shadow:inset 0 1px 0 rgba(255,255,255,.1)}@media (min-width:768px){.navbar-collapse{width:auto;border-top:0;-webkit-box-shadow:none;box-shadow:none}.navbar-collapse.collapse{display:block !important;height:auto !important;padding-bottom:0;overflow:visible !important}.navbar-fixed-top .navbar-collapse{padding-right:0;padding-left:0}}.navbar-fixed-top .navbar-collapse{max-height:340px}@media (max-device-width:480px) and (orientation:landscape){.navbar-fixed-top .navbar-collapse{max-height:200px}}.container>.navbar-collapse,.container>.navbar-header{margin-right:-15px;margin-left:-15px}@media (min-width:768px){.container>.navbar-collapse,.container>.navbar-header{margin-right:0;margin-left:0}}.navbar-fixed-top{position:fixed;right:0;left:0;z-index:1030}@media (min-width:768px){.navbar-fixed-top{border-radius:0}}.navbar-fixed-top{top:0;border-width:0 0 1px}.navbar-brand{float:left;height:50px;padding:15px 15px;font-size:18px;line-height:20px}@media (min-width:768px){.navbar>.container .navbar-brand{margin-left:-15px}}.navbar-toggle{position:relative;float:right;padding:9px 10px;margin-top:8px;margin-right:15px;margin-bottom:8px;background-color:transparent;background-image:none;border:1px solid transparent;border-radius:4px}.navbar-toggle .icon-bar{display:block;width:22px;height:2px;border-radius:1px}.navbar-toggle .icon-bar+.icon-bar{margin-top:4px}@media (min-width:768px){.navbar-toggle{display:none}}.navbar-nav{margin:7.5px -15px}.navbar-nav>li>a{padding-top:10px;padding-bottom:10px;line-height:20px}@media (min-width:768px){.navbar-nav{float:left;margin:0}.navbar-nav>li{float:left}.navbar-nav>li>a{padding-top:15px;padding-bottom:15px}}@media (min-width:768px){.navbar-right{float:right !important;margin-right:-15px}}.navbar-default{background-color:#f8f8f8;border-color:#e7e7e7}.navbar-default .navbar-brand{color:#777}.navbar-default .navbar-nav>li>a{color:#777}.navbar-default .navbar-toggle{border-color:#ddd}.navbar-default .navbar-toggle .icon-bar{background-color:#888}.navbar-default .navbar-collapse{border-color:#e7e7e7}.container:after,.container:before,.nav:after,.nav:before,.navbar-collapse:after,.navbar-collapse:before,.navbar-header:after,.navbar-header:before,.navbar:after,.navbar:before{display:table;content:" "}.container:after,.nav:after,.navbar-collapse:after,.navbar-header:after,.navbar:after{clear:both}@-ms-viewport{width:device-width}.visible-xs{display:none !important}@media (max-width:767px){.visible-xs{display:block !important}}html{height:100%}body{height:100%;padding-top:55px;display:-webkit-box;display:-ms-flexbox;display:flex;text-align:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;font-size:16px !important}main{margin:auto;padding:25px;max-width:750px}a:link,a:visited{color:green}.item{padding:10px 0}.item-tag{background-color:green}.navbar-icon{font-size:125%;display:inline-block !important}.navbar.navbar-default{border-top:5px solid green}img{max-width:100%}.fade-in{opacity:0}
+.wf-loading p, .wf-loading h1, .wf-loading h2, .wf-loading h3, .wf-loading h4, .wf-loading a {visibility: hidden;}.wf-active  p, .wf-active h1, .wf-active h2, .wf-active h3, .wf-active h4, .wf-active a {visibility: visible;}.wf-inactive    p, .wf-inactive h1, .wf-inactive h2, .wf-inactive h3, .wf-inactive h4, wf-inactive a {visibility: visible;}
+</style>
+
+    </head>
+
+    <body>
+      
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQ3JDPK"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Access control Allow Origin Servlet Filter &amp; JSONP</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Posts</a></li>
+                            
+                                <li><a href="/project/">Projects</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="/resume/"><i class="fa fa-user"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="http://www.google.com/recaptcha/mailhide/d?k=01IIc-s5LNYiS-CG_gthn4PA==&amp;c=r5Ctx8RMDz422qmYESfk1g=="><i class="fa fa-envelope"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/Geo-Joy"><i class="fa fa-github-alt"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/megeojoy"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/geojoy/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main class="fade-in">
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a itemprop="url" href="/post---copy/access-control-allow-origin-servlet-filter-jsonp/">
+      <span itemprop="name">Access control Allow Origin Servlet Filter &amp; JSONP</span>
+    </a></h4>
+
+    April 19, 2011
+    <h5>April 19, 2011</h5>
+     <a href="../../../../../tags/http"><kbd class="item-tag">http</kbd></a>  <a href="../../../../../tags/jsonp"><kbd class="item-tag">jsonp</kbd></a>  <a href="../../../../../tags/servlet"><kbd class="item-tag">servlet</kbd></a>  <a href="../../../../../tags/webservices"><kbd class="item-tag">webservices</kbd></a> 
+
+</div>
+
+
+    <br> <div class="text-justify"><p>Voici comment ajouter l&rsquo;entête HTTP Access-control-allow-origin, bien connu des utilisateurs de JSON, AMF ou tout simplement de service REST.</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#5bc4bf">package</span> <span style="color:#fec418">org.zenithar.servlet.filters</span><span style="color:#5bc4bf">;</span>
+
+<span style="color:#5bc4bf">import</span> <span style="color:#fec418">java.io.IOException</span><span style="color:#5bc4bf">;</span>
+<span style="color:#5bc4bf">import</span> <span style="color:#fec418">javax.servlet.Filter</span><span style="color:#5bc4bf">;</span>
+<span style="color:#5bc4bf">import</span> <span style="color:#fec418">javax.servlet.FilterChain</span><span style="color:#5bc4bf">;</span>
+<span style="color:#5bc4bf">import</span> <span style="color:#fec418">javax.servlet.FilterConfig</span><span style="color:#5bc4bf">;</span>
+<span style="color:#5bc4bf">import</span> <span style="color:#fec418">javax.servlet.ServletException</span><span style="color:#5bc4bf">;</span>
+<span style="color:#5bc4bf">import</span> <span style="color:#fec418">javax.servlet.ServletOutputStream</span><span style="color:#5bc4bf">;</span>
+<span style="color:#5bc4bf">import</span> <span style="color:#fec418">javax.servlet.ServletRequest</span><span style="color:#5bc4bf">;</span>
+<span style="color:#5bc4bf">import</span> <span style="color:#fec418">javax.servlet.ServletResponse</span><span style="color:#5bc4bf">;</span>
+<span style="color:#5bc4bf">import</span> <span style="color:#fec418">javax.servlet.http.HttpServletRequest</span><span style="color:#5bc4bf">;</span>
+<span style="color:#5bc4bf">import</span> <span style="color:#fec418">javax.servlet.http.HttpServletResponse</span><span style="color:#5bc4bf">;</span>
+
+<span style="color:#776e71">/**
+</span><span style="color:#776e71"> * Add JSONP Support to enunciate.
+</span><span style="color:#776e71"> *
+</span><span style="color:#776e71"> * @author Thibault NORMAND
+</span><span style="color:#776e71"> *
+</span><span style="color:#776e71"> */</span>
+<span style="color:#815ba4">public</span> <span style="color:#815ba4">class</span> <span style="color:#fec418">JsonpFilter</span> <span style="color:#815ba4">implements</span> Filter <span style="color:#5bc4bf">{</span>
+
+    <span style="color:#815ba4">private</span> String functionName<span style="color:#5bc4bf">;</span>
+
+    <span style="color:#5bc4bf">@Override</span>
+    <span style="color:#815ba4">public</span> <span style="color:#fec418">void</span> <span style="color:#06b6ef">destroy</span><span style="color:#5bc4bf">()</span> <span style="color:#5bc4bf">{</span>
+
+    <span style="color:#5bc4bf">}</span>
+
+    <span style="color:#5bc4bf">@Override</span>
+    <span style="color:#815ba4">public</span> <span style="color:#fec418">void</span> <span style="color:#06b6ef">doFilter</span><span style="color:#5bc4bf">(</span>ServletRequest request<span style="color:#5bc4bf">,</span> ServletResponse servletResponse<span style="color:#5bc4bf">,</span>
+                         FilterChain chain<span style="color:#5bc4bf">)</span> <span style="color:#815ba4">throws</span> IOException<span style="color:#5bc4bf">,</span> ServletException <span style="color:#5bc4bf">{</span>
+
+        <span style="color:#815ba4">if</span> <span style="color:#5bc4bf">(!(</span>request <span style="color:#815ba4">instanceof</span> HttpServletRequest<span style="color:#5bc4bf">))</span> <span style="color:#5bc4bf">{</span>
+            <span style="color:#815ba4">throw</span> <span style="color:#815ba4">new</span> ServletException<span style="color:#5bc4bf">(</span><span style="color:#48b685">&#34;This filter can &#34;</span>
+                                       <span style="color:#5bc4bf">+</span> <span style="color:#48b685">&#34; only process HttpServletRequest requests&#34;</span><span style="color:#5bc4bf">);</span>
+        <span style="color:#5bc4bf">}</span>
+
+        HttpServletRequest httpRequest <span style="color:#5bc4bf">=</span> <span style="color:#5bc4bf">(</span>HttpServletRequest<span style="color:#5bc4bf">)</span> request<span style="color:#5bc4bf">;</span>
+        HttpServletResponse response <span style="color:#5bc4bf">=</span> <span style="color:#5bc4bf">(</span>HttpServletResponse<span style="color:#5bc4bf">)</span> servletResponse<span style="color:#5bc4bf">;</span>
+
+        <span style="color:#815ba4">if</span> <span style="color:#5bc4bf">(</span>isJSONPRequest<span style="color:#5bc4bf">(</span>httpRequest<span style="color:#5bc4bf">))</span> <span style="color:#5bc4bf">{</span>
+            ServletOutputStream out <span style="color:#5bc4bf">=</span> response<span style="color:#5bc4bf">.</span><span style="color:#06b6ef">getOutputStream</span><span style="color:#5bc4bf">();</span>
+
+            out<span style="color:#5bc4bf">.</span><span style="color:#06b6ef">println</span><span style="color:#5bc4bf">(</span>getCallbackMethod<span style="color:#5bc4bf">(</span>httpRequest<span style="color:#5bc4bf">)</span> <span style="color:#5bc4bf">+</span> <span style="color:#48b685">&#34;(&#34;</span><span style="color:#5bc4bf">);</span>
+            chain<span style="color:#5bc4bf">.</span><span style="color:#06b6ef">doFilter</span><span style="color:#5bc4bf">(</span>request<span style="color:#5bc4bf">,</span> response<span style="color:#5bc4bf">);</span>
+            out<span style="color:#5bc4bf">.</span><span style="color:#06b6ef">println</span><span style="color:#5bc4bf">(</span><span style="color:#48b685">&#34;);&#34;</span><span style="color:#5bc4bf">);</span>
+
+            response<span style="color:#5bc4bf">.</span><span style="color:#06b6ef">setContentType</span><span style="color:#5bc4bf">(</span><span style="color:#48b685">&#34;text/javascript&#34;</span><span style="color:#5bc4bf">);</span>
+        <span style="color:#5bc4bf">}</span> <span style="color:#815ba4">else</span> <span style="color:#5bc4bf">{</span>
+            response<span style="color:#5bc4bf">.</span><span style="color:#06b6ef">addHeader</span><span style="color:#5bc4bf">(</span><span style="color:#48b685">&#34;Access-Control-Allow-Origin&#34;</span><span style="color:#5bc4bf">,</span> <span style="color:#48b685">&#34;*&#34;</span><span style="color:#5bc4bf">);</span>
+            chain<span style="color:#5bc4bf">.</span><span style="color:#06b6ef">doFilter</span><span style="color:#5bc4bf">(</span>request<span style="color:#5bc4bf">,</span> response<span style="color:#5bc4bf">);</span>
+        <span style="color:#5bc4bf">}</span>
+
+    <span style="color:#5bc4bf">}</span>
+
+    <span style="color:#5bc4bf">@Override</span>
+    <span style="color:#815ba4">public</span> <span style="color:#fec418">void</span> <span style="color:#06b6ef">init</span><span style="color:#5bc4bf">(</span>FilterConfig filterConfig<span style="color:#5bc4bf">)</span> <span style="color:#815ba4">throws</span> ServletException <span style="color:#5bc4bf">{</span>
+        <span style="color:#815ba4">this</span><span style="color:#5bc4bf">.</span><span style="color:#06b6ef">functionName</span> <span style="color:#5bc4bf">=</span> filterConfig<span style="color:#5bc4bf">.</span><span style="color:#06b6ef">getInitParameter</span><span style="color:#5bc4bf">(</span><span style="color:#48b685">&#34;encoding&#34;</span><span style="color:#5bc4bf">);</span>
+        <span style="color:#815ba4">if</span><span style="color:#5bc4bf">(</span><span style="color:#815ba4">this</span><span style="color:#5bc4bf">.</span><span style="color:#06b6ef">functionName</span> <span style="color:#5bc4bf">==</span> <span style="color:#815ba4">null</span> <span style="color:#5bc4bf">||</span> <span style="color:#815ba4">this</span><span style="color:#5bc4bf">.</span><span style="color:#06b6ef">functionName</span><span style="color:#5bc4bf">.</span><span style="color:#06b6ef">length</span><span style="color:#5bc4bf">()</span> <span style="color:#5bc4bf">&lt;=</span> 0<span style="color:#5bc4bf">)</span> <span style="color:#5bc4bf">{</span>
+            <span style="color:#815ba4">this</span><span style="color:#5bc4bf">.</span><span style="color:#06b6ef">functionName</span> <span style="color:#5bc4bf">=</span> <span style="color:#48b685">&#34;callback&#34;</span><span style="color:#5bc4bf">;</span>
+        <span style="color:#5bc4bf">}</span>
+    <span style="color:#5bc4bf">}</span>
+
+    <span style="color:#815ba4">private</span> String <span style="color:#06b6ef">getCallbackMethod</span><span style="color:#5bc4bf">(</span>HttpServletRequest httpRequest<span style="color:#5bc4bf">)</span> <span style="color:#5bc4bf">{</span>
+        <span style="color:#815ba4">return</span> httpRequest<span style="color:#5bc4bf">.</span><span style="color:#06b6ef">getParameter</span><span style="color:#5bc4bf">(</span><span style="color:#815ba4">this</span><span style="color:#5bc4bf">.</span><span style="color:#06b6ef">functionName</span><span style="color:#5bc4bf">);</span>
+    <span style="color:#5bc4bf">}</span>
+
+    <span style="color:#815ba4">private</span> <span style="color:#fec418">boolean</span> <span style="color:#06b6ef">isJSONPRequest</span><span style="color:#5bc4bf">(</span>HttpServletRequest httpRequest<span style="color:#5bc4bf">)</span> <span style="color:#5bc4bf">{</span>
+        String callbackMethod <span style="color:#5bc4bf">=</span> getCallbackMethod<span style="color:#5bc4bf">(</span>httpRequest<span style="color:#5bc4bf">);</span>
+        <span style="color:#815ba4">return</span> <span style="color:#5bc4bf">(</span>callbackMethod <span style="color:#5bc4bf">!=</span> <span style="color:#815ba4">null</span> <span style="color:#5bc4bf">&amp;&amp;</span> callbackMethod<span style="color:#5bc4bf">.</span><span style="color:#06b6ef">length</span><span style="color:#5bc4bf">()</span> <span style="color:#5bc4bf">&gt;</span> 0<span style="color:#5bc4bf">);</span>
+    <span style="color:#5bc4bf">}</span>
+
+<span style="color:#5bc4bf">}</span></code></pre></div>
+<p>Exemple de configuration de votre fichier web.xml</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#776e71">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
+<span style="color:#5bc4bf">&lt;web-app</span> <span style="color:#06b6ef">id=</span><span style="color:#48b685">&#34;dataservices&#34;</span> <span style="color:#06b6ef">xmlns=</span><span style="color:#48b685">&#34;http://java.sun.com/xml/ns/javaee&#34;</span>
+	<span style="color:#06b6ef">xmlns:xsi=</span><span style="color:#48b685">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span>
+	<span style="color:#06b6ef">xsi:schemaLocation=</span><span style="color:#48b685">&#34;http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd&#34;</span>
+	<span style="color:#06b6ef">version=</span><span style="color:#48b685">&#34;2.5&#34;</span><span style="color:#5bc4bf">&gt;</span>
+
+	<span style="color:#5bc4bf">&lt;display-name&gt;</span>DataServices<span style="color:#5bc4bf">&lt;/display-name&gt;</span>
+
+	<span style="color:#5bc4bf">&lt;filter&gt;</span>
+		<span style="color:#5bc4bf">&lt;filter-name&gt;</span>JSONPRequestFilter<span style="color:#5bc4bf">&lt;/filter-name&gt;</span>
+		<span style="color:#5bc4bf">&lt;filter-class&gt;</span>org.zenithar.servlet.filters.JsonpFilter<span style="color:#5bc4bf">&lt;/filter-class&gt;</span>
+		<span style="color:#5bc4bf">&lt;init-param&gt;</span>
+			<span style="color:#5bc4bf">&lt;param-name&gt;</span>functionName<span style="color:#5bc4bf">&lt;/param-name&gt;</span>
+			<span style="color:#5bc4bf">&lt;param-value&gt;</span>callback<span style="color:#5bc4bf">&lt;/param-value&gt;</span>
+		<span style="color:#5bc4bf">&lt;/init-param&gt;</span>
+	<span style="color:#5bc4bf">&lt;/filter&gt;</span>
+
+	<span style="color:#5bc4bf">&lt;filter-mapping&gt;</span>
+		<span style="color:#5bc4bf">&lt;filter-name&gt;</span>JSONPRequestFilter<span style="color:#5bc4bf">&lt;/filter-name&gt;</span>
+		<span style="color:#5bc4bf">&lt;url-pattern&gt;</span>/json/*<span style="color:#5bc4bf">&lt;/url-pattern&gt;</span>
+	<span style="color:#5bc4bf">&lt;/filter-mapping&gt;</span>
+<span style="color:#5bc4bf">&lt;/web-app&gt;</span></code></pre></div>
+<p>Et voila, bon code !
+<a href="http://jira.codehaus.org/browse/ENUNCIATE-482">[ENUNCIATE-482]</a></p>
+</div>
+
+    
+    
+
+    
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">Geo Joy &copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> hosted on <a href="https://github.com/Geo-Joy/geo-joy.github.io">Github</a></p>
+
+        </footer>
+        
+       <script async="" src="https://geojoy.mejs/main.js"></script>
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KQ3JDPK');</script>
+
+
+    </body>
+
+</html>
+

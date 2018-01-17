@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rails on Geo&#39;z Blog</title>
+    <link>https://geojoy.me/tags/rails/</link>
+    <description>Recent content in Rails on Geo&#39;z Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 07 Jan 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://geojoy.me/tags/rails/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Oui j&#39;utilise Node.js au boulot, et alors ?</title>
+      <link>https://geojoy.me/post---copy/oui-jutilise-nodejs-au-boulot-et-alors/</link>
+      <pubDate>Tue, 07 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/oui-jutilise-nodejs-au-boulot-et-alors/</guid>
+      <description>Voila n&amp;rsquo;ayons pas honte de dire :
+ &amp;lsquo;Oui j&amp;rsquo;utilise Node.js dans un milieu professionnel !&amp;lsquo;, et non ce n&amp;rsquo;est pas pour faire joujou !
+ Contexte Il est important de présenter le contexte pour bien comprendre les choix que j&amp;rsquo;ai fait. Aujourd&amp;rsquo;hui j&amp;rsquo;utilise la stack MEAN (Mongo, Express, AngularJS, Node, Yeoman), dans 2 projets professionnels.
+Je ne me suis pas de suite dirigé vers Node, je suis passé par Rails, Django, Scala (via Play).</description>
+    </item>
+    
+    <item>
+      <title>Ruby on Rails - Cours IUP</title>
+      <link>https://geojoy.me/post---copy/ruby-on-rails-cours-iup/</link>
+      <pubDate>Tue, 23 Sep 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/ruby-on-rails-cours-iup/</guid>
+      <description>Voici la présentation de Ruby on Rails faites à l&amp;rsquo;IUP ISI Paul Sabatier, ce mardi 23 septembre.
+Bonne lecture.
+Présentation RoR 2008 (2h)</description>
+    </item>
+    
+    <item>
+      <title>Présentation Ruby on Rails - Toulibre</title>
+      <link>https://geojoy.me/post---copy/presentation-ruby-on-rails-toulibre/</link>
+      <pubDate>Wed, 28 May 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/presentation-ruby-on-rails-toulibre/</guid>
+      <description>Voila ça c&amp;rsquo;est fait ! Ouf une tâche en moins dans mon rtm (remember the milk) ^^
+Promis je mets les transparents demain, dès que je me lève ! Je mettrais aussi les sources du beamer.
+Présentation (Source LaTeX)</description>
+    </item>
+    
+    <item>
+      <title>Ruby on Rails = Ruby &#43; Rails</title>
+      <link>https://geojoy.me/post---copy/ruby-on-rails-ruby-rails/</link>
+      <pubDate>Mon, 12 May 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/ruby-on-rails-ruby-rails/</guid>
+      <description>Je suis en train d&amp;rsquo;écrire ma présentation pour le 28 mai à Toulibre, et voici ce qu&amp;rsquo;on peut trouver sur le web :
+ Ruby est un langage, et Rails un environnement de travail pour Ruby Le nom Ruby n&amp;rsquo;est pas un acronyme mais un jeu de mots sur Perl. Ruby est un langage de script entièrement orienté objet. Il est relativement récent (première version publiée en 1995), ce qui lui permet de s&amp;rsquo;affranchir des lourdeurs syntaxiques des langages héritant du C (tels Java, C#, Perl, PHP&amp;hellip;).</description>
+    </item>
+    
+    <item>
+      <title>XMI-G : XMI Generator</title>
+      <link>https://geojoy.me/post---copy/xmi-g-xmi-generator/</link>
+      <pubDate>Fri, 08 Feb 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/xmi-g-xmi-generator/</guid>
+      <description>Deuxieme plugin pour RoR, permettant cette fois de produire une application RoR, directement depuis un modèle UML exporté en XMI. J&amp;rsquo;ai défini un profil XMI, ajoutant ainsi des extensions au méta modèle. Le générateur utilise ces informations dans le but d&amp;rsquo;initialiser les modèles, controleurs, et vues (c&amp;rsquo;est possible aussi) RoR (Validations automatiques, génération des tests Rspec, etc. ). Bon pour l&amp;rsquo;instant c&amp;rsquo;est correct dans le texte, c&amp;rsquo;est fonctionnel en partie, reste plus qu&amp;rsquo;à intégrer le tout.</description>
+    </item>
+    
+    <item>
+      <title>Acts as metamodel</title>
+      <link>https://geojoy.me/post---copy/acts-as-metamodel/</link>
+      <pubDate>Sun, 27 Jan 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/acts-as-metamodel/</guid>
+      <description>Voici mon premier plugin pour ruby / rails : acts_as_metamodel. Le but de ce plugin est de fournir la possibilité d&amp;rsquo;avoir un modèle dynamique, et non pas statiquement définit lors de la création. Il offre la possibilité de modifier le modèle pendant son utilisation, tout en assurant la persistance de la modification, et des informations associées aux attributs virtuels.
+Acts as metamodel sur RubyForge</description>
+    </item>
+    
+    <item>
+      <title>RoR - Tutoriel 1 : Installation</title>
+      <link>https://geojoy.me/post---copy/ror-tutoriel-1-installation/</link>
+      <pubDate>Sun, 02 Dec 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/ror-tutoriel-1-installation/</guid>
+      <description>Ce tutoriel traite de la mise en place d&amp;rsquo;un serveur d&amp;rsquo;application Ruby on Rails. Nous allons écrire un logiciel de gestion de recettes de cuisine (Kuisine ^^) mais en ruby avec RoR, au menu :
+ Installation, et mise en service de votre première application RoR Déploiement de la base de données (MySQL, SqlLite3) Conception du modèle métier Génération des contrôleurs et des vues Personnalisation de l&amp;rsquo;interface (vues) utilisateurs Utiliation de plugin (OpenID, AjaxScaffold, etc &amp;hellip;)  Chapitre 1 : Installation, et mise en service de votre première application RoR Pour faire fonctionner ruby on rails sur votre environnement de developpement, vous devez dans un premier temps disposer de l&amp;rsquo;interpréteur Ruby Ruby on Rails</description>
+    </item>
+    
+    <item>
+      <title>Du dévelopement sur des rails !</title>
+      <link>https://geojoy.me/post---copy/du-developement-sur-des-rails/</link>
+      <pubDate>Thu, 15 Nov 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/du-developement-sur-des-rails/</guid>
+      <description>Je suis en train de lire le hors série N° 33 de Linux Magazine traitant de RoR (Ruby on Rails), c&amp;rsquo;est monstrueux ce framework, en moins de 5 minutes, on a une application Web dîtes 2.0 (Ajax, Xml, etc &amp;hellip;) avec très peu de lignes de codes. Beaucoup de génération, et peu de bidouillages ^^
+Ce qui est vraiment pas mal, ce le dispositif clé en main, &amp;ldquo;setup, start, and use&amp;rdquo; pour une application web.</description>
+    </item>
+    
+  </channel>
+</rss>

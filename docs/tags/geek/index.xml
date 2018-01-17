@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Geek on Geo&#39;z Blog</title>
+    <link>https://geojoy.me/tags/geek/</link>
+    <description>Recent content in Geek on Geo&#39;z Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 05 Apr 2007 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://geojoy.me/tags/geek/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Virtualisons ensemble mes amis ...</title>
+      <link>https://geojoy.me/post---copy/virtualisons-ensemble-mes-amis/</link>
+      <pubDate>Thu, 05 Apr 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/virtualisons-ensemble-mes-amis/</guid>
+      <description>J&amp;rsquo;ai découvert une alternative très intéressante à VMWare, elle se nomme VirtualBox, en effet cet émulateur fonctionne très bien et en plus il est sous licence GPL ^^. A suivre &amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Travaux ...</title>
+      <link>https://geojoy.me/post---copy/travaux/</link>
+      <pubDate>Sun, 11 Mar 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/travaux/</guid>
+      <description> Migration de la base du site sur PostGreSQL  Passage en Béta6 Changement de thème (LoadFoo) Ajout de Google Analytics Réferencement.   </description>
+    </item>
+    
+    <item>
+      <title>Migration vers Dotclear 2.0 ...</title>
+      <link>https://geojoy.me/post---copy/migration-vers-dotclear-20/</link>
+      <pubDate>Sun, 04 Feb 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/migration-vers-dotclear-20/</guid>
+      <description>Puisqu&amp;rsquo;il fallait mettre à jour DotClear car trop ancien donc vulnérable, j&amp;rsquo;ai donc pris la décision de migrer mon blog vers DotClear 2.0.</description>
+    </item>
+    
+    <item>
+      <title>Mon portable sous Vista ...</title>
+      <link>https://geojoy.me/post---copy/mon-portable-sous-vista/</link>
+      <pubDate>Wed, 15 Nov 2006 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/mon-portable-sous-vista/</guid>
+      <description>Oui hérésie, non pas complètement j&amp;rsquo;ai ma Gentoo aussi dessus OW ! Alors pour ceux qui vont dire que je fais mon G33k (sisi y en a au moins une ^^ gros bisous), et bien voici une capture d&amp;rsquo;écran. Voici mes impressions :
+ C&amp;rsquo;est joli. C&amp;rsquo;est gourmand en ressources. Mais c&amp;rsquo;est joli ^^. Il y a un vrai effort sur la sécurité de la part de M$, ça fait plaisir de voir un VRAI firewall, un système anti-intrusion (peut être trop intrusif ^^)  </description>
+    </item>
+    
+  </channel>
+</rss>

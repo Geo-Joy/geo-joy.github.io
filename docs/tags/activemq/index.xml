@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Activemq on Geo&#39;z Blog</title>
+    <link>https://geojoy.me/tags/activemq/</link>
+    <description>Recent content in Activemq on Geo&#39;z Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 21 May 2011 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://geojoy.me/tags/activemq/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ZeroMQ, ça roxe du poney !</title>
+      <link>https://geojoy.me/post---copy/zeromq-ca-roxe-du-poney/</link>
+      <pubDate>Sat, 21 May 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/zeromq-ca-roxe-du-poney/</guid>
+      <description>Voici un broker peu traditionnel, car ils sont souvent distribués sous la forme d&amp;rsquo;une application complète (ActiveMQ, RabbitMQ, etc.), ici il s&amp;rsquo;agit d&amp;rsquo;une librairie C (~2Mo) LGPL et il existe plus d&amp;rsquo;une vingtaine de bindings (C++, Java, Ruby, Node.JS, &amp;hellip;).
+Je vous invite à regarder les présentations à cette adresse : Read the manual
+Il faut savoir qu&amp;rsquo;il est possible d&amp;rsquo;implémenter plus d&amp;rsquo;une dizaine de topologies différentes : REQ/REPL, PUB/SUB, etc&amp;hellip; mais aussi il est possible de tout mélanger pour obtenir des topologies personnalisées.</description>
+    </item>
+    
+    <item>
+      <title>De ActiveMQ vers XMPP : mais pourquoi j&#39;y ai pas pensé plus tôt ?</title>
+      <link>https://geojoy.me/post---copy/de-activemq-vers-xmpp-mais-pourquoi-jy-ai-pas-pense-plus-tot/</link>
+      <pubDate>Tue, 24 Feb 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/de-activemq-vers-xmpp-mais-pourquoi-jy-ai-pas-pense-plus-tot/</guid>
+      <description>Suite à des projets personnels et professionnels, j&amp;rsquo;ai été confronté à une problématique de communication inter-processus (temps réel ou pas !). Ces agents devaient effectuer un traitement bien spécifique sur l&amp;rsquo;information qui transitait sur le bus de distribution du message.
+Je travaille sur un système de monitoring multiple ressources, multisites, et surtout multiple-évènements. J&amp;rsquo;utilisais comme transport sur mon bus d&amp;rsquo;évènement une file Apache ActiveMQ, cependant je me suis retrouvé dans le cas où je devais programmer des fonctions de monitoring inter-agents.</description>
+    </item>
+    
+  </channel>
+</rss>

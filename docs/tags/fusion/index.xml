@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fusion on Geo&#39;z Blog</title>
+    <link>https://geojoy.me/tags/fusion/</link>
+    <description>Recent content in Fusion on Geo&#39;z Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 21 Aug 2007 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://geojoy.me/tags/fusion/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Un peu d&#39;inutile, mais tellement beau !</title>
+      <link>https://geojoy.me/post---copy/un-peu-dinutile-mais-tellement-beau/</link>
+      <pubDate>Tue, 21 Aug 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/un-peu-dinutile-mais-tellement-beau/</guid>
+      <description>Une vidéo mettant en oeuvre le nouveau Compize-Fusion, (ex Beryl) sur une Ubuntu.
+[coolplayer]http://www.youtube.com/watch?v=E4Fbk52Mk1w[/coolplayer]</description>
+    </item>
+    
+  </channel>
+</rss>

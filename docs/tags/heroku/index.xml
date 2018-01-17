@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Heroku on Geo&#39;z Blog</title>
+    <link>https://geojoy.me/tags/heroku/</link>
+    <description>Recent content in Heroku on Geo&#39;z Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 10 Jun 2008 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://geojoy.me/tags/heroku/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Application rails &#34;Easy as a Pie&#34;</title>
+      <link>https://geojoy.me/post---copy/application-rails-easy-as-a-pie/</link>
+      <pubDate>Tue, 10 Jun 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/application-rails-easy-as-a-pie/</guid>
+      <description>Voici un site qui vous permettra de développer une application rails depuis le serveur distant, et en local. Tout est automatisé, reste plus qu&amp;rsquo;a coder &amp;hellip; C&amp;rsquo;est pour quand la génération d&amp;rsquo;application depuis une description textuelle, voir orale ?
+Heroku</description>
+    </item>
+    
+  </channel>
+</rss>

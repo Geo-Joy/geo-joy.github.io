@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Geo&#39;z Blog</title>
+    <link>https://geojoy.me/post/</link>
+    <description>Recent content in Posts on Geo&#39;z Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 17 Jan 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://geojoy.me/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Test1</title>
+      <link>https://geojoy.me/post/2018/01/17/test-description/</link>
+      <pubDate>Wed, 17 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post/2018/01/17/test-description/</guid>
+      <description>Hello! Welcome to my blog! Please come back some other time when I&amp;rsquo;ve written something worth yout time.</description>
+    </item>
+    
+  </channel>
+</rss>

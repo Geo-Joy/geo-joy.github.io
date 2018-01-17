@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nginx on Geo&#39;z Blog</title>
+    <link>https://geojoy.me/tags/nginx/</link>
+    <description>Recent content in Nginx on Geo&#39;z Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 10 Mar 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://geojoy.me/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Dockerification : NGINX &#43; SSL &#43; SPDY</title>
+      <link>https://geojoy.me/post---copy/dockerification-nginx-ssl-spdy/</link>
+      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/dockerification-nginx-ssl-spdy/</guid>
+      <description>On entend beaucoup parler de Docker en ce moment que ce soit sur les réseaux sociaux modernes ou plus anciens. Il est clair que cela buzz pas mal autour de cette technologie basé sur LXC (LinuX Container), sorte de super chroot portable.
+Nous allons mettre en oeuvre un container docker contenant NGiNX configuré pour faire du SSL/SPDY. NGiNX sera compilé à partir des sources depuis une image de construction, puis exporté sous la forme d&amp;rsquo;un container docker allégé.</description>
+    </item>
+    
+    <item>
+      <title>Mise en place d&#39;une infrastructure de service Web</title>
+      <link>https://geojoy.me/post---copy/mise-en-place-dune-infrastructure-de-service-web/</link>
+      <pubDate>Wed, 09 Sep 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/mise-en-place-dune-infrastructure-de-service-web/</guid>
+      <description>Bonsoir à tous, je me suis enfin motivé pour rédiger un multi-post, même si a mon avis un blog n&amp;rsquo;est pas fait dans cet objectif. (c&amp;rsquo;est plus le rôle d&amp;rsquo;un wiki)
+Je vais parler de la mise en service LAMP (Linux Apache MySQL PHP) avancée, en y ajoutant des contraintes de sécurité.
+Ce post sera pour une fois, orienté besoin, et non pas tartine technologique associé à un &amp;ldquo;Lego System&amp;rdquo;.</description>
+    </item>
+    
+  </channel>
+</rss>

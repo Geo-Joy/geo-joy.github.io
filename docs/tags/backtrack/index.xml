@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Backtrack on Geo&#39;z Blog</title>
+    <link>https://geojoy.me/tags/backtrack/</link>
+    <description>Recent content in Backtrack on Geo&#39;z Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 13 Mar 2009 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://geojoy.me/tags/backtrack/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>BackTrack 4 is unleashed ! Watch the dog !</title>
+      <link>https://geojoy.me/post---copy/backtrack-4-is-unleashed-watch-the-dog/</link>
+      <pubDate>Fri, 13 Mar 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/backtrack-4-is-unleashed-watch-the-dog/</guid>
+      <description>Halte aux paraskevidékatriaphobe ! Savez vous que BackTrack 4 est sortie ? Sinon je vous l&amp;rsquo;annonce !
+En plus du changement de version, il y a aussi un changement de distribution de base, avant BackTrack était une variante gonflée (comme vahiné) de Slax, qui était une version modulaire et portable (dans le sens USB) de Slackware.
+Elle est basée aujourd&amp;rsquo;hui sur une debian un peu modifiée, pour les audits de sécurité (intégration des modules d&amp;rsquo;injection 802.</description>
+    </item>
+    
+    <item>
+      <title>Sortie de Damn Vulnerable Linux 1.5</title>
+      <link>https://geojoy.me/post---copy/sortie-de-damn-vulnerable-linux-15/</link>
+      <pubDate>Mon, 13 Oct 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/sortie-de-damn-vulnerable-linux-15/</guid>
+      <description>Infectious Desease (Community Edition) is now final. We fixed several bugs and added some more development tools. Now included Lazarus IDE for Free Pascal, ArgoUML, BlueJ to teach Java. As well we updated the Firefox plugins and the Metasploit Database. We will inform now the Mirrors and will release finally to public in 1-2 weeks. From now on we will concentrate on training, videos and extension packages.
+ Je ne l&amp;rsquo;ai pas encore testé, on verra ce soir ^^</description>
+    </item>
+    
+    <item>
+      <title>FastTrack / Metasploit</title>
+      <link>https://geojoy.me/post---copy/fasttrack-metasploit/</link>
+      <pubDate>Sat, 30 Aug 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/fasttrack-metasploit/</guid>
+      <description>Voici un outil plus qu&amp;rsquo;utile pour nos amis auditeurs, &amp;amp; pentesters. C&amp;rsquo;est un script d&amp;rsquo;automatisation d&amp;rsquo;audit de vulnérabilités et exploitation via metasploit.
+Pour ceux qui connaissent c&amp;rsquo;est une surcouche à autopwn, permettant de mettre à jour la base milw0rm d&amp;rsquo;exploits, mise à jour des versions des outils utilisés (nikto, w3af, metaspoit, &amp;hellip;), le tout présenté sous forme d&amp;rsquo;une interface Web, simple à utiliser ! (encore).
+Biensûr il faut être conscient des risques que l&amp;rsquo;on prends à l&amp;rsquo;utilisation de ces logiciels envers une tierce personne non informée.</description>
+    </item>
+    
+  </channel>
+</rss>

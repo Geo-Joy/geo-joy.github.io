@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Spring Mvc on Geo&#39;z Blog</title>
+    <link>https://geojoy.me/tags/spring-mvc/</link>
+    <description>Recent content in Spring Mvc on Geo&#39;z Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 26 Mar 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://geojoy.me/tags/spring-mvc/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Google Protobuf MessageConverter pour Spring AMQP</title>
+      <link>https://geojoy.me/post---copy/spring-amqp-protobuf/</link>
+      <pubDate>Tue, 26 Mar 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/spring-amqp-protobuf/</guid>
+      <description> Je travaille actuellement pas mal avec RabbitMQ, AKKA, et surtout Protobuf. Pourquoi Protobuf et pas Jackson ? Et bien c&amp;rsquo;est simple pour la rapidité de sérialization / déserialisation, mais aussi le portage simple vers d&amp;rsquo;autres langages supportés par Protobuf Compiler : Java, C, Python par défaut.
+Mais il y en beaucoup d&amp;rsquo;autres
+Code  </description>
+    </item>
+    
+  </channel>
+</rss>

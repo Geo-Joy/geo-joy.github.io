@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Play on Geo&#39;z Blog</title>
+    <link>https://geojoy.me/tags/play/</link>
+    <description>Recent content in Play on Geo&#39;z Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 07 Jan 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://geojoy.me/tags/play/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Oui j&#39;utilise Node.js au boulot, et alors ?</title>
+      <link>https://geojoy.me/post---copy/oui-jutilise-nodejs-au-boulot-et-alors/</link>
+      <pubDate>Tue, 07 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/oui-jutilise-nodejs-au-boulot-et-alors/</guid>
+      <description>Voila n&amp;rsquo;ayons pas honte de dire :
+ &amp;lsquo;Oui j&amp;rsquo;utilise Node.js dans un milieu professionnel !&amp;lsquo;, et non ce n&amp;rsquo;est pas pour faire joujou !
+ Contexte Il est important de présenter le contexte pour bien comprendre les choix que j&amp;rsquo;ai fait. Aujourd&amp;rsquo;hui j&amp;rsquo;utilise la stack MEAN (Mongo, Express, AngularJS, Node, Yeoman), dans 2 projets professionnels.
+Je ne me suis pas de suite dirigé vers Node, je suis passé par Rails, Django, Scala (via Play).</description>
+    </item>
+    
+  </channel>
+</rss>

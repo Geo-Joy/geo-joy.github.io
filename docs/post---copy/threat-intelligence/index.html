@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en-us" class="wf-loading">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <meta name="HandheldFriendly" content="True" />
+        <meta name="MobileOptimized" content="320" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="preload" href="https://geojoy.mejs/main.js" as="script" />
+        <link rel="preload" href="https://geojoy.mecss/main.css" as="style" />
+
+        <title>La &#39;Threat Intelligence&#39; technique: Attention !</title>
+        <meta name="generator" content="Hugo 0.32.4" />
+        
+        <link rel="preconnect" href="https://ajax.googleapis.com/" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+        <meta property="og:title" content="La &#39;Threat Intelligence&#39; technique: Attention !" />
+<meta property="og:description" content="Retours sur expérience sur la réalisation d&#39;une solution de CTI" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://geojoy.me/post---copy/threat-intelligence/" />
+
+
+
+<meta property="article:published_time" content="2017-04-13T00:00:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2017-03-29T10:25:06&#43;02:00"/>
+
+
+
+
+
+
+
+
+
+
+
+    
+        <meta property="og:type" content="article" />
+        <meta property="og:article:published_time" content="2017-04-13T00:00:00Z" />
+        <meta property="og:article:tag" content="cyber" />
+        <meta property="og:article:tag" content="securite" />
+        <meta property="og:article:tag" content="bigdata" />
+        
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@megeojoy" />
+        <meta name="twitter:creator" content="@megeojoy" />
+        <meta name="twitter:title" content="La &#39;Threat Intelligence&#39; technique: Attention !" />
+        <meta name="twitter:description" content="Retours sur expérience sur la réalisation d&#39;une solution de CTI" />
+        <meta name="twitter:url" content="https://geojoy.me/post---copy/threat-intelligence/" />
+        <meta name="twitter:image" content="https://geojoy.me/images/articles/2017/threat-intelligence.jpg">
+    
+
+    
+        <meta name="p:domain_verify" content="fc173d84e3a4de948ed4bda2908afd3e"/>
+    
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Thibault NORMAND",
+      "url": "http://zenithar.org",
+      "sameAs": [
+        "https://twitter.com/zenithar/",
+        "https://www.linkedin.com/in/zenithar/",
+        "https://github.com/Zenithar/",
+        "https://plus.google.com/u/0/+ThibaultNormand"
+      ],
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://geojoy.me/images/avatar.jpg",
+        "height": 80,
+        "width": 80
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "@id": "https://geojoy.me",
+      "name": "Geo&#39;z Blog",
+      "url": "https://geojoy.me",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://geojoy.me/images/avatar.jpg",
+        "height": 80,
+        "width": 80
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "url": "https://geojoy.me",
+      "name": "Geo&#39;z Blog",
+      "author": {
+        "@type": "Person",
+        "name": "Geo Joy"
+      },
+      "description": ""
+    }
+    </script>
+
+      
+      <script type="application/ld+json">
+      {
+          "@context": "http://schema.org",
+          "@type": "BlogPosting",
+          "headline": "La &#39;Threat Intelligence&#39; technique: Attention !",
+          "description": "Retours sur expérience sur la réalisation d&#39;une solution de CTI",
+          "author": {
+              "@type": "Person",
+              "name": "Geo Joy"
+          },
+          "publisher": {
+              "@type": "Organization",
+              "name": "Geo&#39;z Blog",
+              "logo": "https://geojoy.me/images/avatar.jpg"
+          },
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://geojoy.me/images/articles/2017/threat-intelligence.jpg",
+            "height": 133,
+            "width": 200
+          },
+          "datePublished": "2017-04-13",
+          "dateModified": "2017-03-29",
+          "wordCount": 2680
+          ,
+          "keywords": ["cyber","securite","bigdata"] 
+      }
+    </script>
+  
+
+    <style>
+body{margin:0}main,nav{display:block}a{background-color:transparent}h1{margin:.67em 0;font-size:2em}img{border:0}code,kbd{font-family:monospace,monospace;font-size:1em}button{margin:0;font:inherit;color:inherit}button{overflow:visible}button{text-transform:none}button{-webkit-appearance:button}button::-moz-focus-inner{padding:0;border:0}*{-webkit-box-sizing:border-box;box-sizing:border-box}:after,:before{-webkit-box-sizing:border-box;box-sizing:border-box}html{font-size:10px}body{font-family:"Raleway",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333;background-color:#fff}button{font-family:inherit;font-size:inherit;line-height:inherit}a{color:#337ab7;text-decoration:none}img{vertical-align:middle}h1,h4,h5{font-family:inherit;font-weight:500;line-height:1.1;color:inherit}h1{margin-top:20px;margin-bottom:10px}h4,h5{margin-top:10px;margin-bottom:10px}h1{font-size:36px}h4{font-size:18px}h5{font-size:14px}p{margin:0 0 10px}.text-justify{text-align:justify}ul{margin-top:0;margin-bottom:10px}blockquote{padding:10px 20px;margin:0 0 20px;font-size:17.5px;border-left:5px solid #eee}blockquote p:last-child{margin-bottom:0}code,kbd{font-family:Menlo,Monaco,Consolas,"Courier New",monospace}code{padding:2px 4px;font-size:90%;color:#c7254e;background-color:#f9f2f4;border-radius:4px}kbd{padding:2px 4px;font-size:90%;color:#fff;background-color:#333;border-radius:3px;-webkit-box-shadow:inset 0 -1px 0 rgba(0,0,0,.25);box-shadow:inset 0 -1px 0 rgba(0,0,0,.25)}.container{padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}@media (min-width:768px){.container{width:750px}}@media (min-width:992px){.container{width:970px}}@media (min-width:1200px){.container{width:1170px}}.collapse{display:none}.nav{padding-left:0;margin-bottom:0;list-style:none}.nav>li{position:relative;display:block}.nav>li>a{position:relative;display:block;padding:10px 15px}.navbar{position:relative;min-height:50px;margin-bottom:20px;border:1px solid transparent}@media (min-width:768px){.navbar{border-radius:4px}}@media (min-width:768px){.navbar-header{float:left}}.navbar-collapse{padding-right:15px;padding-left:15px;overflow-x:visible;-webkit-overflow-scrolling:touch;border-top:1px solid transparent;-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,.1);box-shadow:inset 0 1px 0 rgba(255,255,255,.1)}@media (min-width:768px){.navbar-collapse{width:auto;border-top:0;-webkit-box-shadow:none;box-shadow:none}.navbar-collapse.collapse{display:block !important;height:auto !important;padding-bottom:0;overflow:visible !important}.navbar-fixed-top .navbar-collapse{padding-right:0;padding-left:0}}.navbar-fixed-top .navbar-collapse{max-height:340px}@media (max-device-width:480px) and (orientation:landscape){.navbar-fixed-top .navbar-collapse{max-height:200px}}.container>.navbar-collapse,.container>.navbar-header{margin-right:-15px;margin-left:-15px}@media (min-width:768px){.container>.navbar-collapse,.container>.navbar-header{margin-right:0;margin-left:0}}.navbar-fixed-top{position:fixed;right:0;left:0;z-index:1030}@media (min-width:768px){.navbar-fixed-top{border-radius:0}}.navbar-fixed-top{top:0;border-width:0 0 1px}.navbar-brand{float:left;height:50px;padding:15px 15px;font-size:18px;line-height:20px}@media (min-width:768px){.navbar>.container .navbar-brand{margin-left:-15px}}.navbar-toggle{position:relative;float:right;padding:9px 10px;margin-top:8px;margin-right:15px;margin-bottom:8px;background-color:transparent;background-image:none;border:1px solid transparent;border-radius:4px}.navbar-toggle .icon-bar{display:block;width:22px;height:2px;border-radius:1px}.navbar-toggle .icon-bar+.icon-bar{margin-top:4px}@media (min-width:768px){.navbar-toggle{display:none}}.navbar-nav{margin:7.5px -15px}.navbar-nav>li>a{padding-top:10px;padding-bottom:10px;line-height:20px}@media (min-width:768px){.navbar-nav{float:left;margin:0}.navbar-nav>li{float:left}.navbar-nav>li>a{padding-top:15px;padding-bottom:15px}}@media (min-width:768px){.navbar-right{float:right !important;margin-right:-15px}}.navbar-default{background-color:#f8f8f8;border-color:#e7e7e7}.navbar-default .navbar-brand{color:#777}.navbar-default .navbar-nav>li>a{color:#777}.navbar-default .navbar-toggle{border-color:#ddd}.navbar-default .navbar-toggle .icon-bar{background-color:#888}.navbar-default .navbar-collapse{border-color:#e7e7e7}.container:after,.container:before,.nav:after,.nav:before,.navbar-collapse:after,.navbar-collapse:before,.navbar-header:after,.navbar-header:before,.navbar:after,.navbar:before{display:table;content:" "}.container:after,.nav:after,.navbar-collapse:after,.navbar-header:after,.navbar:after{clear:both}@-ms-viewport{width:device-width}.visible-xs{display:none !important}@media (max-width:767px){.visible-xs{display:block !important}}html{height:100%}body{height:100%;padding-top:55px;display:-webkit-box;display:-ms-flexbox;display:flex;text-align:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;font-size:16px !important}main{margin:auto;padding:25px;max-width:750px}a:link,a:visited{color:green}.item{padding:10px 0}.item-tag{background-color:green}.navbar-icon{font-size:125%;display:inline-block !important}.navbar.navbar-default{border-top:5px solid green}img{max-width:100%}.fade-in{opacity:0}
+.wf-loading p, .wf-loading h1, .wf-loading h2, .wf-loading h3, .wf-loading h4, .wf-loading a {visibility: hidden;}.wf-active  p, .wf-active h1, .wf-active h2, .wf-active h3, .wf-active h4, .wf-active a {visibility: visible;}.wf-inactive    p, .wf-inactive h1, .wf-inactive h2, .wf-inactive h3, .wf-inactive h4, wf-inactive a {visibility: visible;}
+</style>
+
+    </head>
+
+    <body>
+      
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQ3JDPK"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">La &#39;Threat Intelligence&#39; technique: Attention !</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Posts</a></li>
+                            
+                                <li><a href="/project/">Projects</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="/resume/"><i class="fa fa-user"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="http://www.google.com/recaptcha/mailhide/d?k=01IIc-s5LNYiS-CG_gthn4PA==&amp;c=r5Ctx8RMDz422qmYESfk1g=="><i class="fa fa-envelope"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/Geo-Joy"><i class="fa fa-github-alt"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/megeojoy"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/geojoy/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main class="fade-in">
+
+    <div class="item">
+
+    
+    
+    
+
+    
+      
+
+    <h4><a itemprop="url" href="/post---copy/threat-intelligence/">
+      <span itemprop="name">La &#39;Threat Intelligence&#39; technique: Attention !</span>
+    </a></h4>
+
+    April 13, 2017
+    <h5>Retours sur expérience sur la réalisation d&#39;une solution de CTI</h5>
+     <a href="../../../../../tags/cyber"><kbd class="item-tag">cyber</kbd></a>  <a href="../../../../../tags/securite"><kbd class="item-tag">securite</kbd></a>  <a href="../../../../../tags/bigdata"><kbd class="item-tag">bigdata</kbd></a> 
+
+</div>
+
+
+    <br> <div class="text-justify">
+
+<p><img src="/images/articles/2017/threat-intelligence.jpg" alt="Threat Intelligence" /></p>
+
+<p>Je travaille dans le domaine de la cybersécurité dans l&rsquo;objectif de réaliser
+des produits pour une entreprise fournissant des services autour de la
+cybersécurité.</p>
+
+<p>J&rsquo;ai réalisé un certains nombre de produits visant à outiller un <code>SOC</code> (Security
+  Operations Center), et un <code>CERT</code> (Computer Emergency Response Team) de cette
+même société.</p>
+
+<p>Lors de la réalisation des services, j&rsquo;ai été confronté à la demande de pouvoir
+aggréger de l&rsquo;information provenant de sources diverses et variées, et de confiance
+tout autant diverse et variée, afin de faciliter les intégrations dans les
+équipements sécurité, ainsi que l&rsquo;interrogation de dépôt de données.</p>
+
+<p>C&rsquo;est ainsi que je me suis penché sur ce <code>buzz word</code> que représente la <code>threat
+intelligence</code>.</p>
+
+<h1 id="définition">Définition</h1>
+
+<blockquote>
+<p>La <code>threat intelligence</code> est l’information clé définissant le contexte, les
+mécanismes et les indicateurs permettant d’anticiper les menaces à l’encontre
+du SI et de riposter de manière actionnable face à celles-ci. (Gartner)</p>
+</blockquote>
+
+<p>La <code>threat intelligence</code> technique ou opérationnelle, vise à fournir des
+informations techniques (IP, FQDN, Hash, etc.) appelés <code>Observables</code>, si
+ceux-ci participe à un ou plusieurs scénarios malicieux, ils sont appelés
+indicateurs de compromission (<code>IoC</code> en anglais).</p>
+
+<h1 id="chaîne-de-traitement">Chaîne de traitement</h1>
+
+<p>Afin de produire un <code>data warehouse</code> traditionnel, il faut mettre en place une
+chaîne de traitement basée sur <code>ETL</code> (Extract / Transform / Load). La nature de
+la donnée étant brute, il faut procéder à un ensemble de traitement visant à
+affiner la valeur de l&rsquo;information.</p>
+
+<blockquote>
+<p>A ne pas confondre avec un <code>data lake</code>, les données sont traitées <strong>AVANT</strong>
+l&rsquo;écriture donc <code>data warehouse</code>.</p>
+</blockquote>
+
+<p>Je vais concentrer mon analyse sur les problèmes et les observations réalisées
+lors de la création du système.</p>
+
+<h2 id="collecter">Collecter</h2>
+
+<h3 id="sources-externes">Sources Externes</h3>
+
+<h4 id="sources-publiques">Sources Publiques</h4>
+
+<p>Il existe de nombreuses sources d&rsquo;informations publiques disponibles, nous en
+avions identifiés <code>plus de 150</code>.</p>
+
+<p>Voici les problèmes rencontrés :</p>
+
+<ul>
+<li><code>Accès à l'information</code>: fichier sur serveur WEB / FTP, page HTML,
+consommation API;</li>
+<li><code>Gestion des fichiers</code>: en outre du format de l&rsquo;information (TXT, CSV, XML,
+&hellip;), il y a aussi la compression (TAR, ZIP, etc.);</li>
+<li><code>Format non hétérogène</code>: pas de spécification unique pour gérer des listes
+d&rsquo;observables. Il faut définir des stratégies de collecte paramétrables, ce
+qui rends le développement du composant de collecte plus complexe. Il existe
+bien des initiatives comme <a href="https://oasis-open.github.io/cti-documentation/">STIX</a>
+ou <a href="http://www.openioc.org/">OpenIOC</a> mais cela reste encore trop peu
+utilisées, c&rsquo;est souvent trop lourd et le plus souvent c&rsquo;est un simple CSV;</li>
+<li><code>Pas de garantie de disponibilité</code>: la source peut avoir des soucis de
+disponibilité, rendant la collecte impossible le temps de la résolution
+du/des problème(s) =&gt; rendant aveugle le temps d&rsquo;indisponibilité;</li>
+<li><code>Questionnement sur la fiabilité</code>: quel niveau de confiance associé à la
+source ?</li>
+<li><code>Pas de contrôle d'intégrité</code>: il est rare de voir une signature numérique
+associée prouvant l&rsquo;intégrité et la provenance du fichier collecté;</li>
+<li><code>Continuation de service</code>: c&rsquo;est un service gratuit, rien ne prouve qu&rsquo;il va
+le rester, et souvent les sources sont gérées en <code>best-effort</code>.</li>
+</ul>
+
+<h4 id="sources-privées">Sources Privées</h4>
+
+<p>Certaines entreprises ayant compris la difficulté à corréler les informations
+publiques, vendent des <code>feeds</code> d&rsquo;informations traitées et uniformisés.</p>
+
+<p>Voici les problèmes rencontrés :</p>
+
+<ul>
+<li><code>Eparse</code>: peu de sources privées au final;</li>
+<li><code>Payantes et chères</code>: ces sources sont souvent <code>très</code> chères;</li>
+<li><code>Peu de valeur ajoutée</code>: il faut avouer qu&rsquo;il est difficile d&rsquo;avoir de
+l&rsquo;information pertinente quand on est pas un fabriquant de solution de
+sécurité, ce qui a pour effet de produire des services autour de
+l&rsquo;uniformisation des informations provenant de sources publiques, ainsi on
+peut s&rsquo;apercevoir qu&rsquo;il s&rsquo;agit simplement d&rsquo;un formattage de plusieurs
+sources publiques qui est vendu, compréhensible si explicité et assumé.</li>
+</ul>
+
+<h3 id="sources-internes">Sources Internes</h3>
+
+<p>Il est possible aussi d&rsquo;exploiter les sources d&rsquo;informations internes comme :</p>
+
+<ul>
+<li><code>Logs des équipements</code>: IDS / IPS produisent des observables qui peuvent
+être qualifiés <code>IoC</code> par analyse statistique simple des fréquences;</li>
+<li><code>Les incidents detectés / traités</code>: peuvent aussi servir à alimenter en
+observables, même si ce sont des faux-positifs, il est intéressant de tracer
+ce fait;</li>
+<li><code>Plateforme de soumission</code>: il est possible de mettre en place des services
+de soumission pour transférer des fichiers suspicieux nécessitant analyse;</li>
+<li><code>SMTP Blackhole</code>: recupération des campagnes de SPAM, par l&rsquo;installation de
+services mail volontairement configurés en <code>Open-Relay</code> mais controllés;</li>
+<li><code>HoneyPot</code>: pour la collecter des malwares, mais aussi des tendances de
+connexions;</li>
+<li><code>Quarantaine Antivirus</code>: les espaces de quarantaines des antivirus sont des
+viviés a malware, et permettent d&rsquo;identifier des tendances d&rsquo;infections.</li>
+</ul>
+
+<p>Voici les problèmes rencontrés :</p>
+
+<ul>
+<li><code>Interaction de services nécessaire</code>: il n&rsquo;est pas toujours possible d&rsquo;avoir
+accès à toutes les informations d&rsquo;un SI;</li>
+<li><code>Le HoneyPots</code>: la mise en place de tels dispositifs est simple à faire,
+mais garantir qu&rsquo;il n&rsquo;est pas utilisé comme système de rebond pour
+attaquer les machines légitimes est beaucoup plus complexe;</li>
+<li><code>Analyse de malwares</code>: pour analyser les fichiers collectés, il faut mettre
+en place tout une infrastructure ou déléguer cette tâche d&rsquo;analyse à un
+service. Il faut savoir que l&rsquo;<code>analyse dynamique</code> ne fonctionne pas toujours
+ à cause des contre-mesures possibles du malware qui va par exemple détecter
+qu&rsquo;il est dans une VM, et au mieux ne se lancera pas, ou au pire aura un
+comportement complètement différent. On aboutira rapidement à une analyse
+statique manuelle, ne pouvant pas faire face à la volumétrie;</li>
+<li><code>Coût de l'infrastructure de traitement</code>: nécessite la connaissance et
+l&rsquo;administration des systèmes d&rsquo;analyses pour produire des données utiles.
+Cette infrastructure est un coût masqué servant simplement à ajouter
+une ou deux étiquettes à un observable.</li>
+</ul>
+
+<h2 id="normaliser">Normaliser</h2>
+
+<p>Afin de pouvoir traiter l&rsquo;information collectée, il faut la normaliser, c-à-d
+la faire correspondre à un modêle de données la rendant :</p>
+
+<ul>
+<li>Identifiable;</li>
+<li>Comparable;</li>
+<li>Historisable;</li>
+<li>et surtout requêtable.</li>
+</ul>
+
+<p>Nous avons choisi de mettre en place un dispositif de traitement distribuable
+avec une gestion de <code>back pressure</code> pour gérer la pression d&rsquo;intégration par
+rapport au différentes vitesses que composent notre système.</p>
+
+<p>Voici les problèmes rencontrés :</p>
+
+<ul>
+<li><code>Modèle Acteurs Distribués</code>: un problème est déjà difficile à résoudre dans un
+seul système, mais en plus si celui-ci est distribué c&rsquo;est encore plus
+complexe;</li>
+<li><code>Définir un langage inter-composant</code>: les éléments du système doivent tous
+être capable de comprendre l&rsquo;information qu&rsquo;il va traiter indépendamment de
+l&rsquo;étape à laquelle il est appelé;</li>
+<li><code>Modèle unique et extensible</code>: il faut être capable de transmettre
+l&rsquo;information provenant des collecteurs de la manière la plus pure possible;</li>
+<li><code>Meta-modélisation</code>: en ingénierie des modèles, il faut savoir créer des
+modèles pour définir des modèles, c&rsquo;est ce qui a été fait pour exprimer la
+valeur de la données, et la garder tout au lon d processus d&rsquo;analyse;</li>
+<li><code>Sérialisation et transport</code>: comment transporter l&rsquo;information dans le
+modèle, tout en sachant que ce modêle peut évoluer;</li>
+<li><code>Compression des unités de travail</code>: les acteurs travaillent indépendamment
+des uns des autres, à leur rythme, la file d&rsquo;intégration peut contenir beaucoup
+de messages, pour optimiser cela nous avons compressé ces unités de travail;</li>
+<li><code>Pouvoir évoluer avec les versions</code>: il ne faut pas se retrouver à devoir
+faire une migration de base de données complète parce qu&rsquo;on a changé un
+type de donnée, et parce qu&rsquo;il est impossible de tout prévoir à la conception.</li>
+</ul>
+
+<h2 id="améliorer">Améliorer</h2>
+
+<p>Les <code>observables</code> sont à présent normalisés et prêt à être intégrés. Les
+améliorations agissent sur la valeur de l&rsquo;information et son contexte.</p>
+
+<p>Lorsque l&rsquo;on travaille sur des informations techniques pures, il est rare qu&rsquo;elles
+se suffisent à elles-mêmes, il faut pour cela créer des liens entre elles. La
+création de ces liens est ce que nous appelons: l&rsquo;amélioration.</p>
+
+<p>Voici les problèmes rencontrés :</p>
+
+<ul>
+<li><code>Résolution DNS</code>: les résolutions DNS sont cruciales c&rsquo;est le seul moyen
+pour obtenir d&rsquo;un FQDN, le ou les IP associées. Cependant l&rsquo;inverse n&rsquo;est pas
+toujours possibles, il faut utiliser des services d&rsquo;historisation de
+résolutions pour être capable d&rsquo;avoir dans le temps les résolutions différentes.
+Il existe des fournisseurs de services pour cela, mais comme d&rsquo;habitude aux vues
+de la volumétrie, ces services sont inabordables. Il faut donc faire faire
+les résolutions par le système à l&rsquo;intégration;</li>
+<li><code>Détecter les domaines et sous-domaines</code>: les sources fournissent des observables
+qualifiés de domaines, mais il s&rsquo;agit de sous-domaines, leur prédicat n&rsquo;est pas
+faux mais il faut pouvoir le detecté, et trouver le domaine parent, sans compter
+qu&rsquo;un FQDN peut aussi se cacher derrière ce domaine. Ex: <code>zenithar.org</code> mon domaine,
+mais c&rsquo;est aussi un FQDN <code>zenithar.org</code> =&gt; site hébergeant mon CV;</li>
+<li><code>Interrogation WHOIS</code>: le <code>Whois</code> est très utile pour extraire les informations
+d&rsquo;un domaine, mais le protocole est loin d&rsquo;être respecté. Il n&rsquo;a de normé
+que l&rsquo;alphabet qui sert à écrire son nom, et son port de communication (TCP 43).
+On se retrouve vite à écrire autant de parser qu&rsquo;il y a des fournisseurs de
+whois : logiquement un par TLD, soit aujourd&rsquo;hui plus de 1500 &hellip;;</li>
+<li><code>Décomposer des URLs</code>: sur le papier cela semble simple, mais il n&rsquo;existe pas
+vraiment de RegExp permettant d&rsquo;extraire et de valider une URL, sans compter
+IDNA et l&rsquo;UNICODE;</li>
+<li><code>Géolocalisation des IPs</code>: Attention c&rsquo;est pas un système fiable, il ne faut
+pas avoir une confiance aveugle, et dire : &lsquo;les chinois nous attaquent par
+votre voisin utilise un noeud TOR de sortie en chine &hellip;&lsquo;;</li>
+<li><code>Détecter les erreurs de classification</code>: les sources n&rsquo;ont pas toujours une
+confiance absolue, il faut avouer que ce sont des traitements informatiques
+qui font le travail, scripts développés par un humain qui peut faire des
+erreurs. Nous avions souvent le cas d&rsquo;URL extraite depuis le code HTML, qui
+contenaient des simples quotes en fin d&rsquo;URL. C&rsquo;est une problèmatique récurrente
+liée au <code>web scrapping</code>; Autre cas les sandboxes qui renvoient les appels de fonction
+sous le format suivant <code>getlogicalprocessorinformation@kernel32.dll</code>, format qui
+peut être considéré comme une adresse email syntaxiquement valide !</li>
+<li><code>Améliorer vite !</code>: il ne faut pas ajouter une latence de traitement à
+l&rsquo;information, si nous mettons plus de 24h à traiter un évènement sur 15
+minutes, l&rsquo;intérêt peut être du coup limité, et générer dans le pire des cas
+de la fausse information. Internet est vivant, il n&rsquo;attends pas que vous
+ayez fini vos traitements pour muter / évoluer (ex: bail IP dynamique =&gt;
+assignation d&rsquo;une étiquette attaquant à l&rsquo;IP alors que la personne ne
+possède plus le bail );</li>
+<li><code>Gestion du cache distribué</code>: un observable déjà augmenté ne doit pas faire
+perdre du temps à toute l&rsquo;intégration, il doit être ignoré s&rsquo;il vient
+d&rsquo;être traité. Cependant l&rsquo;introduction d&rsquo;un cache peut aussi faire qu&rsquo;un
+changement passe inaperçu car la valeur a changée avant l&rsquo;éviction du cache.</li>
+</ul>
+
+<h2 id="stocker">Stocker</h2>
+
+<p>Le stockage des <code>observables</code> est aussi très important puisque l&rsquo;objectif est
+de pouvoir construire un <code>data warehouse</code>, contenant les informations traitées
+par notre infrastructure de <code>data wrangling</code>.</p>
+
+<p>Voici les problèmes rencontrés :</p>
+
+<ul>
+<li><code>Volumétrie</code>: il s&rsquo;agit de traiter des millions d&rsquo;informations par jour,
+plusieurs fois par jour. Un parle bien de <code>Big Data</code>, ce n&rsquo;est pas un
+ensemble de macros Excel qui passe sur un classeur à 10 000 lignes &hellip;;</li>
+<li><code>Stockage Hybride</code>: pouvoir requêter de manière complexe tout en gardant
+de performance d&rsquo;écriture acceptable;</li>
+<li><code>Big Data == Big Infra</code>: parce que 3 Raspberry PI en réseau ne suffisent
+pas, les fonctionnements en cluster nécessitent souvent des nombres de
+participants impairs (supérieur à 1), 3 machines pour la base de données, 3
+machines pour l&rsquo;index de recherche, etc.;</li>
+<li><code>Modification parallèle et incrémentale</code>: La nature distribuée du travail
+fait que l&rsquo;ordre des traitements sur la donnée finale ne doit faire
+qu&rsquo;améliorer la valeur de celle-ci, une opération ne peut pas dévaluer un
+observable parce qu&rsquo;il s&rsquo;est produit une erreur;</li>
+<li><code>Amlérioration par fusion</code>: les observables sont améliorés par le système
+de base de données, pas de lecture =&gt; fusion =&gt; écriture;</li>
+<li><code>Version community VS enterprise</code>: beaucoup de produit propose gratuitement
+leurs outils n&rsquo;ayant que peu de différences sur le papier, mais la réalité
+est tout autre, nous avons eu des problèmes liés à la volumétrie seule,
+cette limitation n&rsquo;est pas indiquée clairement. De plus les versions
+<code>enterprise</code> sont inaccessibles financierement parlant &hellip;;</li>
+<li><code>Suivi de version en version community</code>: en utilisant la version grand
+public vous n&rsquo;êtes pas à l&rsquo;abrit que certaines fonctionnalités disparaissent
+pour être intégrées en version enterprise uniquement. Tout en sachant qu&rsquo;il
+n&rsquo;existe pas d&rsquo;alternative viable, ce qui s&rsquo;appelle du <code>hold-up
+ commercial</code>;</li>
+<li><code>Mr Bricolage</code>: les mouvements de fonctionnalités, quand on a pas les moyens
+d&rsquo;acheter, cela donne lieu à des bricolages architecturaux, on ajoute un
+composant pour pallier à la disparition, on comble avec d&rsquo;autres outils.
+Augmentant la complexité de l&rsquo;infrastructure et donc les probabilités de
+pannes, bugs, etc;</li>
+<li><code>Historisation des modifications</code>: c&rsquo;est une fonctionnalité très importante
+mais elle occasionne un impact très important en infrastucture.
+Nous avions utlisé une stratégie CoW (Copy on Write) pour garantir l&rsquo;
+intégrité, mais sont arrivés les problèmatiques de rétention de données.
+Nous avons choisi de garder la dernière version de l&rsquo;observable.</li>
+<li><code>Sauvegarde</code>: Plus il y a de données plus la sauvegarde est importante.</li>
+</ul>
+
+<h2 id="analyser">Analyser</h2>
+
+<p>Le dépot de données est construit, il faut maintenant l&rsquo;exploiter.</p>
+
+<p>Voici les problèmes rencontrés :</p>
+
+<ul>
+<li><code>Data Scientist c'est un métier</code>: il est très difficile d&rsquo;analyser des
+données sans formation adaptée. Nous avons construis un dépôt contenant des
+millions d&rsquo;enregistrements reliés dans un hypergrahe, ces données sont
+exploitables noeuds par noeuds, mais il faut être capable de concevoir des
+algorithmes exploitant la structure de l&rsquo;information;</li>
+<li><code>Peu de théorisation</code>: nous avons choisi d&rsquo;utiliser une structure graphe
+pour stocker nos observables, il existe des outils mathématiques pour analyser
+des graphes, mais ils sont encore à l&rsquo;état de thèse, ou utilisés pour des cas
+précis (moteur de recommendation, etc.);</li>
+<li><code>Taux de recopie entre les sources</code>: plus on augmente le nombre de sources
+plus on s&rsquo;aperçoit que les sources se recopient entre-elles, visible par
+analyse des clusters;</li>
+<li><code>Gestion de la confidentialité des observables</code>: effectivement les
+observables sont liés à l&rsquo;analyse du malware qui lui est contenu dans un
+document parfois officiel, faut-il par extension rendre confidentiel ces
+<code>observables</code> ? ou séparer les niveaux de confidentialité ? Il existe un
+protocole appelé le <a href="http://blog.marcfredericgomez.fr/ssi-traffic-light-protocol/">TLP</a> (<code>Traffic Light Protocol</code>), indiquant le niveau de
+confidentialité à respecter pour l&rsquo;échange de l&rsquo;information. Il définit 4 niveaux de
+confidentialité, mais n&rsquo;explique pas les logiques de régressions entre un
+observable qualifié par deux entités différentes à des niveaux différents:
+on pourrait dire que la priorité est la confidentialité, donc plus c&rsquo;est haut
+mieux c&rsquo;est. Mais, en mon sens, l&rsquo;objectif de la <code>threat intelligence</code> est le
+partage, contrôlé certes, où encore un fois la confiance rentre en jeu; Si
+une source publique fiable indique un TLP White (information publique), mais
+qu&rsquo;une source privée peu fiable indique Amber (diffusion restreinte), pourquoi appliquer
+Amber ? Souvent on invoque le GBS (Gros Bon Sens);</li>
+<li><code>Scorer un observable</code>: la volumétrie fait qu&rsquo;il faut prioriser les analyses,
+il faut pour cela produire un score permettant d&rsquo;identifier les observables
+importants des moins importants. Cependant, un calcul trop simple risque de
+ne pas remonter les bonnes interprétations, et trop compliqué sera difficile
+à comprendre, donc expliquer et maintenir;</li>
+</ul>
+
+<h2 id="exploiter">Exploiter</h2>
+
+<p>Nous avons analysé l&rsquo;information pour lui donner sa valeur maximale, il faut
+maintenant passer à l&rsquo;exploitation technique.</p>
+
+<p>Voici les problèmes rencontrés :</p>
+
+<ul>
+<li><code>Capacité des produits</code>: nous pouvons exporter des <code>data-sets</code> depuis la
+base de données, mais malheureusement les outils de surveillance ne sont
+souvent pas capables de contenir l&rsquo;ensemble de l&rsquo;export;</li>
+<li><code>Confiance déléguée</code>: nous avons observé un transfert de confiance au produit
+de collecte et d&rsquo;analyse mais il faut toujours avoir un oeil critique sur
+la source de l&rsquo;information. Tout traitement informatique ne peut remplacer
+la capacité de jugement et d&rsquo;adaptabilité d&rsquo;un être humain (pour le moment);</li>
+<li><code>Supervision</code>: ce système est distribué sur plusieurs machines qui doivent
+être supervisés sur le plan matériel, réseaux, mais aussi applicatif: absence
+de collecte, collecte identique depuis quelques jours, pas de résolutions DNS,
+etc;</li>
+<li><code>Couplage avec le réseau important</code>: le moindre problème a un impact
+sur le système, le rendant indisponible, produisant du retard d&rsquo;intégration,
+ etc.</li>
+</ul>
+
+<h1 id="conclusion">Conclusion</h1>
+
+<p>Voici une liste non-exhaustive des problèmes et réflexions qu&rsquo;il faut prendre en
+concidération; si vous envisagez de construire une telle solution. Un système
+de <code>Cyber Threat Intelligence</code> technique nécessite des moyens techniques,
+financiers, mais aussi en ressources humaines importants.</p>
+
+<p>Depuis 3 ans, il existe de nombreuses solutions OpenSource, éliminant la charge
+de développement de la solution, tout en gardant une charge pour adapter, mais
+ne supprimera en aucun cas le besoin en infrastructure.</p>
+
+<blockquote>
+<p>Je n&rsquo;irai pas jusqu&rsquo;à justifier les prix pratiqués par des solutions commerciales
+mais il faut comprendre pourquoi c&rsquo;est aussi cher.</p>
+
+<p>C&rsquo;est le commerce de l&rsquo;information ! On ne vends pas le produit mais l&rsquo;information
+qu&rsquo;il a traité.</p>
+</blockquote>
+</div>
+
+    
+    
+
+    
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">Geo Joy &copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> hosted on <a href="https://github.com/Geo-Joy/geo-joy.github.io">Github</a></p>
+
+        </footer>
+        
+       <script async="" src="https://geojoy.mejs/main.js"></script>
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KQ3JDPK');</script>
+
+
+    </body>
+
+</html>
+

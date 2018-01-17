@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en-us" class="wf-loading">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <meta name="HandheldFriendly" content="True" />
+        <meta name="MobileOptimized" content="320" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="preload" href="https://geojoy.mejs/main.js" as="script" />
+        <link rel="preload" href="https://geojoy.mecss/main.css" as="style" />
+
+        <title>De Docpad à Hugo</title>
+        <meta name="generator" content="Hugo 0.32.4" />
+        
+        <link rel="preconnect" href="https://ajax.googleapis.com/" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+        <meta property="og:title" content="De Docpad à Hugo" />
+<meta property="og:description" content="Je migre mon blog vers un autre générateur static appelé Hugo écrit en Go, et surtout 100 fois plus rapide que Docpad." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://geojoy.me/post---copy/de-docpad-a-hugo/" />
+
+
+
+<meta property="article:published_time" content="2014-05-25T00:00:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2017-03-01T11:27:29&#43;01:00"/>
+
+
+
+
+
+
+
+
+
+
+
+    
+        <meta property="og:type" content="article" />
+        <meta property="og:article:published_time" content="2014-05-25T00:00:00Z" />
+        <meta property="og:article:tag" content="node.js" />
+        <meta property="og:article:tag" content="golang" />
+        <meta property="og:article:tag" content="docpad" />
+        <meta property="og:article:tag" content="hugo" />
+        <meta property="og:article:tag" content="tfidf" />
+        
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@megeojoy" />
+        <meta name="twitter:creator" content="@megeojoy" />
+        <meta name="twitter:title" content="De Docpad à Hugo" />
+        <meta name="twitter:description" content="Je migre mon blog vers un autre générateur static appelé Hugo écrit en Go, et surtout 100 fois plus rapide que Docpad." />
+        <meta name="twitter:url" content="https://geojoy.me/post---copy/de-docpad-a-hugo/" />
+        
+    
+
+    
+        <meta name="p:domain_verify" content="fc173d84e3a4de948ed4bda2908afd3e"/>
+    
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Thibault NORMAND",
+      "url": "http://zenithar.org",
+      "sameAs": [
+        "https://twitter.com/zenithar/",
+        "https://www.linkedin.com/in/zenithar/",
+        "https://github.com/Zenithar/",
+        "https://plus.google.com/u/0/+ThibaultNormand"
+      ],
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://geojoy.me/images/avatar.jpg",
+        "height": 80,
+        "width": 80
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "@id": "https://geojoy.me",
+      "name": "Geo&#39;z Blog",
+      "url": "https://geojoy.me",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://geojoy.me/images/avatar.jpg",
+        "height": 80,
+        "width": 80
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "url": "https://geojoy.me",
+      "name": "Geo&#39;z Blog",
+      "author": {
+        "@type": "Person",
+        "name": "Geo Joy"
+      },
+      "description": ""
+    }
+    </script>
+
+      
+      <script type="application/ld+json">
+      {
+          "@context": "http://schema.org",
+          "@type": "BlogPosting",
+          "headline": "De Docpad à Hugo",
+          "description": "Je migre mon blog vers un autre générateur static appelé Hugo écrit en Go, et surtout 100 fois plus rapide que Docpad.",
+          "author": {
+              "@type": "Person",
+              "name": "Geo Joy"
+          },
+          "publisher": {
+              "@type": "Organization",
+              "name": "Geo&#39;z Blog",
+              "logo": "https://geojoy.me/images/avatar.jpg"
+          },
+          
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://geojoy.me/images/avatar.jpg",
+            "height": 80,
+            "width": 80
+          },
+          "datePublished": "2014-05-25",
+          "dateModified": "2017-03-01",
+          "wordCount": 489
+          ,
+          "keywords": ["node.js","golang","docpad","hugo","tfidf"] 
+      }
+    </script>
+  
+
+    <style>
+body{margin:0}main,nav{display:block}a{background-color:transparent}h1{margin:.67em 0;font-size:2em}img{border:0}code,kbd{font-family:monospace,monospace;font-size:1em}button{margin:0;font:inherit;color:inherit}button{overflow:visible}button{text-transform:none}button{-webkit-appearance:button}button::-moz-focus-inner{padding:0;border:0}*{-webkit-box-sizing:border-box;box-sizing:border-box}:after,:before{-webkit-box-sizing:border-box;box-sizing:border-box}html{font-size:10px}body{font-family:"Raleway",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333;background-color:#fff}button{font-family:inherit;font-size:inherit;line-height:inherit}a{color:#337ab7;text-decoration:none}img{vertical-align:middle}h1,h4,h5{font-family:inherit;font-weight:500;line-height:1.1;color:inherit}h1{margin-top:20px;margin-bottom:10px}h4,h5{margin-top:10px;margin-bottom:10px}h1{font-size:36px}h4{font-size:18px}h5{font-size:14px}p{margin:0 0 10px}.text-justify{text-align:justify}ul{margin-top:0;margin-bottom:10px}blockquote{padding:10px 20px;margin:0 0 20px;font-size:17.5px;border-left:5px solid #eee}blockquote p:last-child{margin-bottom:0}code,kbd{font-family:Menlo,Monaco,Consolas,"Courier New",monospace}code{padding:2px 4px;font-size:90%;color:#c7254e;background-color:#f9f2f4;border-radius:4px}kbd{padding:2px 4px;font-size:90%;color:#fff;background-color:#333;border-radius:3px;-webkit-box-shadow:inset 0 -1px 0 rgba(0,0,0,.25);box-shadow:inset 0 -1px 0 rgba(0,0,0,.25)}.container{padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}@media (min-width:768px){.container{width:750px}}@media (min-width:992px){.container{width:970px}}@media (min-width:1200px){.container{width:1170px}}.collapse{display:none}.nav{padding-left:0;margin-bottom:0;list-style:none}.nav>li{position:relative;display:block}.nav>li>a{position:relative;display:block;padding:10px 15px}.navbar{position:relative;min-height:50px;margin-bottom:20px;border:1px solid transparent}@media (min-width:768px){.navbar{border-radius:4px}}@media (min-width:768px){.navbar-header{float:left}}.navbar-collapse{padding-right:15px;padding-left:15px;overflow-x:visible;-webkit-overflow-scrolling:touch;border-top:1px solid transparent;-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,.1);box-shadow:inset 0 1px 0 rgba(255,255,255,.1)}@media (min-width:768px){.navbar-collapse{width:auto;border-top:0;-webkit-box-shadow:none;box-shadow:none}.navbar-collapse.collapse{display:block !important;height:auto !important;padding-bottom:0;overflow:visible !important}.navbar-fixed-top .navbar-collapse{padding-right:0;padding-left:0}}.navbar-fixed-top .navbar-collapse{max-height:340px}@media (max-device-width:480px) and (orientation:landscape){.navbar-fixed-top .navbar-collapse{max-height:200px}}.container>.navbar-collapse,.container>.navbar-header{margin-right:-15px;margin-left:-15px}@media (min-width:768px){.container>.navbar-collapse,.container>.navbar-header{margin-right:0;margin-left:0}}.navbar-fixed-top{position:fixed;right:0;left:0;z-index:1030}@media (min-width:768px){.navbar-fixed-top{border-radius:0}}.navbar-fixed-top{top:0;border-width:0 0 1px}.navbar-brand{float:left;height:50px;padding:15px 15px;font-size:18px;line-height:20px}@media (min-width:768px){.navbar>.container .navbar-brand{margin-left:-15px}}.navbar-toggle{position:relative;float:right;padding:9px 10px;margin-top:8px;margin-right:15px;margin-bottom:8px;background-color:transparent;background-image:none;border:1px solid transparent;border-radius:4px}.navbar-toggle .icon-bar{display:block;width:22px;height:2px;border-radius:1px}.navbar-toggle .icon-bar+.icon-bar{margin-top:4px}@media (min-width:768px){.navbar-toggle{display:none}}.navbar-nav{margin:7.5px -15px}.navbar-nav>li>a{padding-top:10px;padding-bottom:10px;line-height:20px}@media (min-width:768px){.navbar-nav{float:left;margin:0}.navbar-nav>li{float:left}.navbar-nav>li>a{padding-top:15px;padding-bottom:15px}}@media (min-width:768px){.navbar-right{float:right !important;margin-right:-15px}}.navbar-default{background-color:#f8f8f8;border-color:#e7e7e7}.navbar-default .navbar-brand{color:#777}.navbar-default .navbar-nav>li>a{color:#777}.navbar-default .navbar-toggle{border-color:#ddd}.navbar-default .navbar-toggle .icon-bar{background-color:#888}.navbar-default .navbar-collapse{border-color:#e7e7e7}.container:after,.container:before,.nav:after,.nav:before,.navbar-collapse:after,.navbar-collapse:before,.navbar-header:after,.navbar-header:before,.navbar:after,.navbar:before{display:table;content:" "}.container:after,.nav:after,.navbar-collapse:after,.navbar-header:after,.navbar:after{clear:both}@-ms-viewport{width:device-width}.visible-xs{display:none !important}@media (max-width:767px){.visible-xs{display:block !important}}html{height:100%}body{height:100%;padding-top:55px;display:-webkit-box;display:-ms-flexbox;display:flex;text-align:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;font-size:16px !important}main{margin:auto;padding:25px;max-width:750px}a:link,a:visited{color:green}.item{padding:10px 0}.item-tag{background-color:green}.navbar-icon{font-size:125%;display:inline-block !important}.navbar.navbar-default{border-top:5px solid green}img{max-width:100%}.fade-in{opacity:0}
+.wf-loading p, .wf-loading h1, .wf-loading h2, .wf-loading h3, .wf-loading h4, .wf-loading a {visibility: hidden;}.wf-active  p, .wf-active h1, .wf-active h2, .wf-active h3, .wf-active h4, .wf-active a {visibility: visible;}.wf-inactive    p, .wf-inactive h1, .wf-inactive h2, .wf-inactive h3, .wf-inactive h4, wf-inactive a {visibility: visible;}
+</style>
+
+    </head>
+
+    <body>
+      
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQ3JDPK"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">De Docpad à Hugo</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Posts</a></li>
+                            
+                                <li><a href="/project/">Projects</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="/resume/"><i class="fa fa-user"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="http://www.google.com/recaptcha/mailhide/d?k=01IIc-s5LNYiS-CG_gthn4PA==&amp;c=r5Ctx8RMDz422qmYESfk1g=="><i class="fa fa-envelope"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/Geo-Joy"><i class="fa fa-github-alt"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/megeojoy"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/geojoy/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main class="fade-in">
+
+    <div class="item">
+
+    
+    
+    
+
+    
+      
+
+    <h4><a itemprop="url" href="/post---copy/de-docpad-a-hugo/">
+      <span itemprop="name">De Docpad à Hugo</span>
+    </a></h4>
+
+    May 25, 2014
+    <h5>Je migre mon blog vers un autre générateur static appelé Hugo écrit en Go, et surtout 100 fois plus rapide que Docpad.</h5>
+     <a href="../../../../../tags/node.js"><kbd class="item-tag">node.js</kbd></a>  <a href="../../../../../tags/golang"><kbd class="item-tag">golang</kbd></a>  <a href="../../../../../tags/docpad"><kbd class="item-tag">docpad</kbd></a>  <a href="../../../../../tags/hugo"><kbd class="item-tag">hugo</kbd></a>  <a href="../../../../../tags/tfidf"><kbd class="item-tag">tfidf</kbd></a> 
+
+</div>
+
+
+    <br> <div class="text-justify">
+
+<p>Je sais ! Je migre encore de solution de génération de site static, mais bon ça s&rsquo;appelle le progrès. Cette fois migration de Docpad vers Hugo, pour une raison simple : la performance.</p>
+
+<h2 id="avant-j-avais-docpad-mais-ça-c-était-avant">Avant j&rsquo;avais Docpad, mais ça c&rsquo;était avant !</h2>
+
+<p>Je suis passé :</p>
+
+<ul>
+<li>de <a href="http://fr.dotclear.org/">Dotclear</a>, à Wordpress, pour des raisons de lenteur de correctifs (notamment sécurité).</li>
+<li>de <a href="http://www.wordpress.org">Wordpress</a> à <a href="http://jekyllrb.com">Jekyll</a>, parce que Wordpress faisait beaucoup trop de choses, et devenait de plus en plus statique grace à <a href="https://wordpress.org/plugins/w3-total-cache/">W3Total Cache</a>, et puis il fallait PHP &hellip;</li>
+<li>Jekyll à <a href="http://octopress.org/">Octopress</a>, c&rsquo;est la même famille, c&rsquo;est un fork &ldquo;on steroid&rdquo; du premier, mais trop lourd (à mon gout) pour le déploiement.</li>
+<li>Octopress à <a href="http://docpad.org/">Docpad</a>, pour la vitesse, et le coté <code>hipe</code> de nodejs.</li>
+<li>Et aujourd&rsquo;hui, de Docpad à <a href="http://hugo.spf13.com">Hugo</a>, générateur écrit en <a href="http://golang.org">Golang</a>, qui au bas mot va 100 fois plus vite pour générer ce site.</li>
+</ul>
+
+<h2 id="un-générateur-de-site-statique-c-est-quoi">Un générateur de site statique c&rsquo;est quoi ?</h2>
+
+<p>Pourquoi utiliser un générateur de site statique ? Réponse simple : pour simplifier l&rsquo;hébergement ! Plus besoin d&rsquo;une stack PHP + Base de données, plus de code dynamique, donc moins de possibilité d&rsquo;exploitation.
+L&rsquo;inconvénient majeur est que le site doit être regénéré entièrement à chaque ajout d&rsquo;articles.</p>
+
+<p>Ce qui a pour effet d&rsquo;être inévitablement de plus en plus lent en fonction des opérations à effectuer lors de la création / rendu de l&rsquo;article (gestions des tags, calculs de similarités pour proposition, etc.)</p>
+
+<p>Le principe est simple, plus de partie administration, on écrit les articles dans un language pivot type wiki; les plus connus étant Markdown (md), AsciiDoc (adoc), RestructeredText (rst). Le moteur va ensuite générer le code souhaité (HTML, XML, JSON), à l&rsquo;aide de templates rédigés par l&rsquo;auteur.</p>
+
+<p>L&rsquo;exécution du moteur sur le contenu, à l&rsquo;aide des templates, produit une arborescence qui constitu le site final. Il suffit d&rsquo;envoyer le tout sur votre serveur web via FTP, RSYNC, SFTP, etc.</p>
+
+<h2 id="quelques-changements-dans-hugo">Quelques changements dans Hugo</h2>
+
+<p>Afin de pouvoir générer mon blog, j&rsquo;ai ajouté 2 fonctionnalités, et modifié la fonction de calcul de résumé.</p>
+
+<ul>
+<li>Génération d&rsquo;une couleur en fonction d&rsquo;une chaine de caractère</li>
+<li>Génération du résumé par extraction du premier paragraphe de l&rsquo;article</li>
+<li>Construction du graphe de proposition (Related Documents) en fonction du <code>score</code> lié à l&rsquo;utilisation des tags, grace à l&rsquo;algorithme <a href="http://fr.wikipedia.org/wiki/TF-IDF">TF/IDF</a>.</li>
+</ul>
+
+<h2 id="le-mot-de-la-fin">Le mot de la fin</h2>
+
+<p>Au niveau de la génération avec Hugo, je passe à 1400ms pour TOUT générer contre plus de 4 minutes avant ! Je ne suis plus obligé de limiter l&rsquo;affichage lors de rendus intermédiaires, pour voir comment s&rsquo;affiche l&rsquo;article par ex.</p>
+
+<p>Le fait de travailler sur Hugo m&rsquo;a permis d&rsquo;apprendre le langage Go qui est, selon moi, prometteur. J&rsquo;aime vraiment la simplicité de déploiement, la possiblitité de générer les binaires directement depuis la plateforme de développement.</p>
+
+<p>Docpad n&rsquo;est pas un mauvais produit, mais simplement il ne correspond plus à mes besoins. J&rsquo;utilise toujours Node.js dans la pile de génération, mais plus dans une optique de gestion des ressources Web (via gulp).</p>
+</div>
+
+    
+    
+
+    
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">Geo Joy &copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> hosted on <a href="https://github.com/Geo-Joy/geo-joy.github.io">Github</a></p>
+
+        </footer>
+        
+       <script async="" src="https://geojoy.mejs/main.js"></script>
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KQ3JDPK');</script>
+
+
+    </body>
+
+</html>
+

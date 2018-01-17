@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C&#43;&#43; on Geo&#39;z Blog</title>
+    <link>https://geojoy.me/tags/c&#43;&#43;/</link>
+    <description>Recent content in C&#43;&#43; on Geo&#39;z Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 21 May 2011 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://geojoy.me/tags/c++/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ZeroMQ, ça roxe du poney !</title>
+      <link>https://geojoy.me/post---copy/zeromq-ca-roxe-du-poney/</link>
+      <pubDate>Sat, 21 May 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/zeromq-ca-roxe-du-poney/</guid>
+      <description>Voici un broker peu traditionnel, car ils sont souvent distribués sous la forme d&amp;rsquo;une application complète (ActiveMQ, RabbitMQ, etc.), ici il s&amp;rsquo;agit d&amp;rsquo;une librairie C (~2Mo) LGPL et il existe plus d&amp;rsquo;une vingtaine de bindings (C++, Java, Ruby, Node.JS, &amp;hellip;).
+Je vous invite à regarder les présentations à cette adresse : Read the manual
+Il faut savoir qu&amp;rsquo;il est possible d&amp;rsquo;implémenter plus d&amp;rsquo;une dizaine de topologies différentes : REQ/REPL, PUB/SUB, etc&amp;hellip; mais aussi il est possible de tout mélanger pour obtenir des topologies personnalisées.</description>
+    </item>
+    
+  </channel>
+</rss>

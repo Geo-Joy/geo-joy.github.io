@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kubernetes on Geo&#39;z Blog</title>
+    <link>https://geojoy.me/tags/kubernetes/</link>
+    <description>Recent content in Kubernetes on Geo&#39;z Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 24 Mar 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://geojoy.me/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Kubernetes Minikube avec KVM</title>
+      <link>https://geojoy.me/post---copy/minikube-avec-kvm/</link>
+      <pubDate>Fri, 24 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/minikube-avec-kvm/</guid>
+      <description>&amp;ldquo;Kubernetes est le système Open Source de Google dédié à la gestion des conteneurs Linux pour des environnements de Cloud privé, public et hybride.&amp;rdquo; source: lemagit
+Traduire : cela gère vos applications en conteneurs Docker dans un environnement distribué multi-machines.
+ Si vous connaissez déjà Rancher, ils sont concurrents.
+ Minikube Minikube est un outil permettant de mettre en place rapidement (quand tout va bien) un cluster opérationnel sur sa machine.</description>
+    </item>
+    
+  </channel>
+</rss>

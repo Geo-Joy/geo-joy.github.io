@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docpad on Geo&#39;z Blog</title>
+    <link>https://geojoy.me/tags/docpad/</link>
+    <description>Recent content in Docpad on Geo&#39;z Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 25 May 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://geojoy.me/tags/docpad/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>De Docpad à Hugo</title>
+      <link>https://geojoy.me/post---copy/de-docpad-a-hugo/</link>
+      <pubDate>Sun, 25 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/de-docpad-a-hugo/</guid>
+      <description>Je sais ! Je migre encore de solution de génération de site static, mais bon ça s&amp;rsquo;appelle le progrès. Cette fois migration de Docpad vers Hugo, pour une raison simple : la performance.
+Avant j&amp;rsquo;avais Docpad, mais ça c&amp;rsquo;était avant ! Je suis passé :
+ de Dotclear, à Wordpress, pour des raisons de lenteur de correctifs (notamment sécurité). de Wordpress à Jekyll, parce que Wordpress faisait beaucoup trop de choses, et devenait de plus en plus statique grace à W3Total Cache, et puis il fallait PHP &amp;hellip; Jekyll à Octopress, c&amp;rsquo;est la même famille, c&amp;rsquo;est un fork &amp;ldquo;on steroid&amp;rdquo; du premier, mais trop lourd (à mon gout) pour le déploiement.</description>
+    </item>
+    
+    <item>
+      <title>Git FTP</title>
+      <link>https://geojoy.me/post---copy/git-ftp/</link>
+      <pubDate>Thu, 17 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/git-ftp/</guid>
+      <description>Petite astuce pour ceux qui comme moi utilise un serveur mutualisé sans accès SSH et donc pas de Git ou rsync pour la publication des fichiers : git-ftp.
+Cela permet d&amp;rsquo;envoyer uniquement les fichiers qui ont été modifiés lors de la génération du site statique.
+Pour l&amp;rsquo;installation c&amp;rsquo;est tout simple sous Unix :
+$ git clone https://github.com/git-ftp/git-ftp.git $ cd git-ftp $ git checkout master $ sudo make install Pour Mac, c&amp;rsquo;est plus simple si vous avez Homebrew :</description>
+    </item>
+    
+    <item>
+      <title>Suivons la mode</title>
+      <link>https://geojoy.me/post---copy/suivons-la-mode/</link>
+      <pubDate>Sun, 18 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/suivons-la-mode/</guid>
+      <description>Encore une fois, je change de thème, bon cette fois je reste avec docpad.
+Je suis parti d&amp;rsquo;un nouveau framework CSS YUI PureCSS, j&amp;rsquo;utilisais Bootstrap Twitter, cependant je cherchais un thème type Flat.
+J&amp;rsquo;ai essayé d&amp;rsquo;adapter Bootstrap 3, mais je trouve que les changements sont trop importantq, et la philosophie `mobile first, j&amp;rsquo;ai du mal. J&amp;rsquo;ai donc pris la décision de changer le framework css, beaucoup plus léger.
+Du coup, refonte complète.</description>
+    </item>
+    
+    <item>
+      <title>De Octopress vers DocPad</title>
+      <link>https://geojoy.me/post---copy/de-octopress-vers-docpad/</link>
+      <pubDate>Thu, 03 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/de-octopress-vers-docpad/</guid>
+      <description>Il y a quelques temps, j&amp;rsquo;ai fait la migration de Worpress vers Octopress, cependant je n&amp;rsquo;étais pas vraiment satisfait.
+C&amp;rsquo;est un bon logiciel, forké de Jekyll, cependant je trouve qu&amp;rsquo;il est difficile à personnaliser et l&amp;rsquo;on se trouve souvent à avoir un blog qui ressemble à tous les utilisateurs d&amp;rsquo;Octopress.
+J&amp;rsquo;ai donc pris la décison de migrer (encore une fois), vers une autre solution de publication basé Markdown. Cette fois ce sera DocPad.</description>
+    </item>
+    
+  </channel>
+</rss>

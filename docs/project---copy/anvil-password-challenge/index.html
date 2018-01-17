@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en-us" class="wf-loading">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <meta name="HandheldFriendly" content="True" />
+        <meta name="MobileOptimized" content="320" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="preload" href="https://geojoy.mejs/main.js" as="script" />
+        <link rel="preload" href="https://geojoy.mecss/main.css" as="style" />
+
+        <title>Anvil: Challenge / Response Forge</title>
+        <meta name="generator" content="Hugo 0.32.4" />
+        
+        <link rel="preconnect" href="https://ajax.googleapis.com/" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+        <meta property="og:title" content="Anvil: Challenge / Response Forge" />
+<meta property="og:description" content="Utilisation des algorithmes Blake2s et Ed25519 afin d&#39;identifier des accès sans transférer le mot de passe &#34;en clair&#34; sur le réseau." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://geojoy.me/project---copy/anvil-password-challenge/" />
+
+
+
+<meta property="article:published_time" content="2017-09-17T00:00:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2017-03-29T10:25:06&#43;02:00"/>
+
+
+
+
+
+
+
+
+
+
+
+    
+        <meta property="og:type" content="article" />
+        <meta property="og:article:published_time" content="2017-09-17T00:00:00Z" />
+        <meta property="og:article:tag" content="golang" />
+        <meta property="og:article:tag" content="ed25519" />
+        <meta property="og:article:tag" content="blake2s" />
+        <meta property="og:article:tag" content="password" />
+        <meta property="og:article:tag" content="securite" />
+        
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@megeojoy" />
+        <meta name="twitter:creator" content="@megeojoy" />
+        <meta name="twitter:title" content="Anvil: Challenge / Response Forge" />
+        <meta name="twitter:description" content="Utilisation des algorithmes Blake2s et Ed25519 afin d&#39;identifier des accès sans transférer le mot de passe &#34;en clair&#34; sur le réseau." />
+        <meta name="twitter:url" content="https://geojoy.me/project---copy/anvil-password-challenge/" />
+        
+    
+
+    
+        <meta name="p:domain_verify" content="fc173d84e3a4de948ed4bda2908afd3e"/>
+    
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Thibault NORMAND",
+      "url": "http://zenithar.org",
+      "sameAs": [
+        "https://twitter.com/zenithar/",
+        "https://www.linkedin.com/in/zenithar/",
+        "https://github.com/Zenithar/",
+        "https://plus.google.com/u/0/+ThibaultNormand"
+      ],
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://geojoy.me/images/avatar.jpg",
+        "height": 80,
+        "width": 80
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "@id": "https://geojoy.me",
+      "name": "Geo&#39;z Blog",
+      "url": "https://geojoy.me",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://geojoy.me/images/avatar.jpg",
+        "height": 80,
+        "width": 80
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "url": "https://geojoy.me",
+      "name": "Geo&#39;z Blog",
+      "author": {
+        "@type": "Person",
+        "name": "Geo Joy"
+      },
+      "description": ""
+    }
+    </script>
+
+      
+      <script type="application/ld+json">
+      {
+          "@context": "http://schema.org",
+          "@type": "BlogPosting",
+          "headline": "Anvil: Challenge / Response Forge",
+          "description": "Utilisation des algorithmes Blake2s et Ed25519 afin d&#39;identifier des accès sans transférer le mot de passe &#34;en clair&#34; sur le réseau.",
+          "author": {
+              "@type": "Person",
+              "name": "Geo Joy"
+          },
+          "publisher": {
+              "@type": "Organization",
+              "name": "Geo&#39;z Blog",
+              "logo": "https://geojoy.me/images/avatar.jpg"
+          },
+          
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://geojoy.me/images/avatar.jpg",
+            "height": 80,
+            "width": 80
+          },
+          "datePublished": "2017-09-17",
+          "dateModified": "2017-03-29",
+          "wordCount": 763
+          ,
+          "keywords": ["golang","ed25519","blake2s","password","securite"] 
+      }
+    </script>
+  
+
+    <style>
+body{margin:0}main,nav{display:block}a{background-color:transparent}h1{margin:.67em 0;font-size:2em}img{border:0}code,kbd{font-family:monospace,monospace;font-size:1em}button{margin:0;font:inherit;color:inherit}button{overflow:visible}button{text-transform:none}button{-webkit-appearance:button}button::-moz-focus-inner{padding:0;border:0}*{-webkit-box-sizing:border-box;box-sizing:border-box}:after,:before{-webkit-box-sizing:border-box;box-sizing:border-box}html{font-size:10px}body{font-family:"Raleway",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333;background-color:#fff}button{font-family:inherit;font-size:inherit;line-height:inherit}a{color:#337ab7;text-decoration:none}img{vertical-align:middle}h1,h4,h5{font-family:inherit;font-weight:500;line-height:1.1;color:inherit}h1{margin-top:20px;margin-bottom:10px}h4,h5{margin-top:10px;margin-bottom:10px}h1{font-size:36px}h4{font-size:18px}h5{font-size:14px}p{margin:0 0 10px}.text-justify{text-align:justify}ul{margin-top:0;margin-bottom:10px}blockquote{padding:10px 20px;margin:0 0 20px;font-size:17.5px;border-left:5px solid #eee}blockquote p:last-child{margin-bottom:0}code,kbd{font-family:Menlo,Monaco,Consolas,"Courier New",monospace}code{padding:2px 4px;font-size:90%;color:#c7254e;background-color:#f9f2f4;border-radius:4px}kbd{padding:2px 4px;font-size:90%;color:#fff;background-color:#333;border-radius:3px;-webkit-box-shadow:inset 0 -1px 0 rgba(0,0,0,.25);box-shadow:inset 0 -1px 0 rgba(0,0,0,.25)}.container{padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}@media (min-width:768px){.container{width:750px}}@media (min-width:992px){.container{width:970px}}@media (min-width:1200px){.container{width:1170px}}.collapse{display:none}.nav{padding-left:0;margin-bottom:0;list-style:none}.nav>li{position:relative;display:block}.nav>li>a{position:relative;display:block;padding:10px 15px}.navbar{position:relative;min-height:50px;margin-bottom:20px;border:1px solid transparent}@media (min-width:768px){.navbar{border-radius:4px}}@media (min-width:768px){.navbar-header{float:left}}.navbar-collapse{padding-right:15px;padding-left:15px;overflow-x:visible;-webkit-overflow-scrolling:touch;border-top:1px solid transparent;-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,.1);box-shadow:inset 0 1px 0 rgba(255,255,255,.1)}@media (min-width:768px){.navbar-collapse{width:auto;border-top:0;-webkit-box-shadow:none;box-shadow:none}.navbar-collapse.collapse{display:block !important;height:auto !important;padding-bottom:0;overflow:visible !important}.navbar-fixed-top .navbar-collapse{padding-right:0;padding-left:0}}.navbar-fixed-top .navbar-collapse{max-height:340px}@media (max-device-width:480px) and (orientation:landscape){.navbar-fixed-top .navbar-collapse{max-height:200px}}.container>.navbar-collapse,.container>.navbar-header{margin-right:-15px;margin-left:-15px}@media (min-width:768px){.container>.navbar-collapse,.container>.navbar-header{margin-right:0;margin-left:0}}.navbar-fixed-top{position:fixed;right:0;left:0;z-index:1030}@media (min-width:768px){.navbar-fixed-top{border-radius:0}}.navbar-fixed-top{top:0;border-width:0 0 1px}.navbar-brand{float:left;height:50px;padding:15px 15px;font-size:18px;line-height:20px}@media (min-width:768px){.navbar>.container .navbar-brand{margin-left:-15px}}.navbar-toggle{position:relative;float:right;padding:9px 10px;margin-top:8px;margin-right:15px;margin-bottom:8px;background-color:transparent;background-image:none;border:1px solid transparent;border-radius:4px}.navbar-toggle .icon-bar{display:block;width:22px;height:2px;border-radius:1px}.navbar-toggle .icon-bar+.icon-bar{margin-top:4px}@media (min-width:768px){.navbar-toggle{display:none}}.navbar-nav{margin:7.5px -15px}.navbar-nav>li>a{padding-top:10px;padding-bottom:10px;line-height:20px}@media (min-width:768px){.navbar-nav{float:left;margin:0}.navbar-nav>li{float:left}.navbar-nav>li>a{padding-top:15px;padding-bottom:15px}}@media (min-width:768px){.navbar-right{float:right !important;margin-right:-15px}}.navbar-default{background-color:#f8f8f8;border-color:#e7e7e7}.navbar-default .navbar-brand{color:#777}.navbar-default .navbar-nav>li>a{color:#777}.navbar-default .navbar-toggle{border-color:#ddd}.navbar-default .navbar-toggle .icon-bar{background-color:#888}.navbar-default .navbar-collapse{border-color:#e7e7e7}.container:after,.container:before,.nav:after,.nav:before,.navbar-collapse:after,.navbar-collapse:before,.navbar-header:after,.navbar-header:before,.navbar:after,.navbar:before{display:table;content:" "}.container:after,.nav:after,.navbar-collapse:after,.navbar-header:after,.navbar:after{clear:both}@-ms-viewport{width:device-width}.visible-xs{display:none !important}@media (max-width:767px){.visible-xs{display:block !important}}html{height:100%}body{height:100%;padding-top:55px;display:-webkit-box;display:-ms-flexbox;display:flex;text-align:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;font-size:16px !important}main{margin:auto;padding:25px;max-width:750px}a:link,a:visited{color:green}.item{padding:10px 0}.item-tag{background-color:green}.navbar-icon{font-size:125%;display:inline-block !important}.navbar.navbar-default{border-top:5px solid green}img{max-width:100%}.fade-in{opacity:0}
+.wf-loading p, .wf-loading h1, .wf-loading h2, .wf-loading h3, .wf-loading h4, .wf-loading a {visibility: hidden;}.wf-active  p, .wf-active h1, .wf-active h2, .wf-active h3, .wf-active h4, .wf-active a {visibility: visible;}.wf-inactive    p, .wf-inactive h1, .wf-inactive h2, .wf-inactive h3, .wf-inactive h4, wf-inactive a {visibility: visible;}
+</style>
+
+    </head>
+
+    <body>
+      
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQ3JDPK"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Anvil: Challenge / Response Forge</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Posts</a></li>
+                            
+                                <li><a href="/project/">Projects</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="/resume/"><i class="fa fa-user"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="http://www.google.com/recaptcha/mailhide/d?k=01IIc-s5LNYiS-CG_gthn4PA==&amp;c=r5Ctx8RMDz422qmYESfk1g=="><i class="fa fa-envelope"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/Geo-Joy"><i class="fa fa-github-alt"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/megeojoy"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/geojoy/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main class="fade-in">
+
+    <div class="item">
+
+    
+    
+    
+
+    
+      
+
+    <h4><a itemprop="url" href="/project---copy/anvil-password-challenge/">
+      <span itemprop="name">Anvil: Challenge / Response Forge</span>
+    </a></h4>
+
+    September 17, 2017
+    <h5>Utilisation des algorithmes Blake2s et Ed25519 afin d&#39;identifier des accès sans transférer le mot de passe &#34;en clair&#34; sur le réseau.</h5>
+     <a href="../../../../../tags/golang"><kbd class="item-tag">golang</kbd></a>  <a href="../../../../../tags/ed25519"><kbd class="item-tag">ed25519</kbd></a>  <a href="../../../../../tags/blake2s"><kbd class="item-tag">blake2s</kbd></a>  <a href="../../../../../tags/password"><kbd class="item-tag">password</kbd></a>  <a href="../../../../../tags/securite"><kbd class="item-tag">securite</kbd></a> 
+
+</div>
+
+
+    <br> <div class="text-justify">
+
+<blockquote>
+<p>EDITO:
+Un certains temps que je n&rsquo;ai pas posté d&rsquo;articles, cela a été mouvementé
+pour moi depuis Avril, j&rsquo;ai changé d&rsquo;entreprise quittant pour le coup tout un
+investissement intellectuel de 3 ans.
+Voilà, je suis passé à autre chose ^^</p>
+</blockquote>
+
+<p>Encore un dispositif d&rsquo;identification pour Internet, pfff &hellip; encore un !</p>
+
+<blockquote>
+<p>Oui mais non ^^</p>
+</blockquote>
+
+<p>Aujourd&rsquo;hui, trop peu de développeurs prennent les précautions inhérentes au
+respects des règles de sécurité.</p>
+
+<p>Souvent la <code>Sécurité</code> est un domaine perçu comme difficile, obscur, voir
+contraignant. Laissant la sécurité être gérée par des contre-mesures
+périmétriques (Firewall, WAF, etc.), cependant le code est le premier lieu pour
+contrôler les risques.</p>
+
+<blockquote>
+<p>Auth Basic over HTTP =&gt; la Base 64 n&rsquo;est pas un algorithme de chiffrement &hellip;</p>
+</blockquote>
+
+<p>Partant de ce constat, j&rsquo;ai implémenté un dispositif de challenge / response basé
+sur la dérivation de clés.</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ go get -u -v go.zenithar.org/anvil</code></pre></div>
+<p><a href="https://github.com/Zenithar/go-anvil">Github</a></p>
+
+<h2 id="l-idée">L&rsquo;idée</h2>
+
+<p>Le principe est simple utiliser le secret <code>Login / Mot de passe</code> pour
+en dériver une paire de clés cryptographiques, et effectuer une signature d&rsquo;un
+challenge partagé.</p>
+
+<p>Séquence :</p>
+
+<ul>
+<li>Le client utilise la clé publique comme <code>login</code>;</li>
+<li>Le client demande un <code>challenge</code> au serveur;</li>
+<li>Le client signe avec la clé privée, le challenge généré par le serveur;</li>
+<li>Le client envoie la clé publique, le challenge, et la signature au serveur;</li>
+<li>Le serveur recherche l&rsquo;utilisateur par la clé publique;</li>
+<li>Le serveur vérifie la signature et la validité du challenge.</li>
+</ul>
+
+<blockquote>
+<p>Pouvoir faire une identification complète sans déléguer la sécurité au
+transport (TLS / mTLS / etc.).</p>
+</blockquote>
+
+<h2 id="l-algorithme">L&rsquo;algorithme</h2>
+
+<p><img src="/images/articles/2017/anvil-flow.png" alt="Anvil" /></p>
+
+<h3 id="dérivation-de-clés">Dérivation de clés</h3>
+
+<p>Nous allons utiliser l&rsquo;algorithme <a href="https://blake2.net/">Blake2s</a> pour condenser
+le mot de passe. Le <code>login</code> sera utilisé comme salaison à l&rsquo;algorithme de
+dérivation de clés <a href="https://fr.wikipedia.org/wiki/Scrypt">scrypt</a>. La dérivation
+est configurée pour générer un tampon de 32 octets déterministe, ce tampon
+permet de créer une paire de clés <code>x25519</code> (256 bits) pour effectuer des
+signatures <code>ed25519</code>.</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#776e71">// Hash password using Blake2s (32byte)
+</span><span style="color:#776e71"></span><span style="color:#06b6ef">key</span> <span style="color:#5bc4bf">:=</span> <span style="color:#06b6ef">blake2s</span>.<span style="color:#06b6ef">Sum256</span>([]byte(<span style="color:#06b6ef">password</span>))
+
+<span style="color:#776e71">// Use login as salt
+</span><span style="color:#776e71"></span><span style="color:#06b6ef">salt</span> <span style="color:#5bc4bf">:=</span> []byte(<span style="color:#06b6ef">principal</span>)
+
+<span style="color:#776e71">// Prepare scrypt parameters
+</span><span style="color:#776e71"></span><span style="color:#06b6ef">N</span> <span style="color:#5bc4bf">:=</span> int(<span style="color:#06b6ef">math</span>.<span style="color:#06b6ef">Pow</span>(<span style="color:#f99b15">2</span>, <span style="color:#f99b15">17</span>)) <span style="color:#776e71">// CPU/Cost
+</span><span style="color:#776e71"></span><span style="color:#06b6ef">r</span> <span style="color:#5bc4bf">:=</span> <span style="color:#f99b15">8</span> <span style="color:#776e71">// Block size parameter
+</span><span style="color:#776e71"></span><span style="color:#06b6ef">p</span> <span style="color:#5bc4bf">:=</span> <span style="color:#f99b15">1</span> <span style="color:#776e71">// Parallelism
+</span><span style="color:#776e71"></span><span style="color:#06b6ef">keyLen</span> <span style="color:#5bc4bf">:=</span> <span style="color:#f99b15">32</span> <span style="color:#776e71">// Derived key length
+</span><span style="color:#776e71"></span>
+<span style="color:#776e71">// Generate 32 bytes from login/password using scrypt derivation
+</span><span style="color:#776e71"></span><span style="color:#06b6ef">keyRaw</span>, <span style="color:#06b6ef">err</span> <span style="color:#5bc4bf">:=</span> <span style="color:#06b6ef">scrypt</span>.<span style="color:#06b6ef">Key</span>(<span style="color:#06b6ef">key</span>[:], <span style="color:#06b6ef">salt</span>, <span style="color:#06b6ef">N</span>, <span style="color:#06b6ef">r</span>, <span style="color:#06b6ef">p</span>, <span style="color:#06b6ef">keyLen</span>)
+<span style="color:#5bc4bf">...</span>
+
+<span style="color:#776e71">// Prepare ed25519 keys from 32 bytes generated buffer
+</span><span style="color:#776e71"></span><span style="color:#06b6ef">read</span> <span style="color:#5bc4bf">:=</span> <span style="color:#06b6ef">bytes</span>.<span style="color:#06b6ef">NewReader</span>(<span style="color:#06b6ef">keyRaw</span>)
+<span style="color:#06b6ef">pub</span>, <span style="color:#06b6ef">priv</span>, <span style="color:#06b6ef">err</span> <span style="color:#5bc4bf">:=</span> <span style="color:#06b6ef">ed25519</span>.<span style="color:#06b6ef">GenerateKey</span>(<span style="color:#06b6ef">read</span>)</code></pre></div>
+<blockquote>
+<p>Cette opération est faite sur le client, sans échange, le secret réside sur la
+génération et la conservation de la clé privée.</p>
+</blockquote>
+
+<h3 id="enregistrement-de-l-utilisateur">Enregistrement de l&rsquo;utilisateur</h3>
+
+<p>Pour enregistrer un utilisateur, il faut dériver la paire de clés sur le client
+et transmettre la clé publique au serveur.</p>
+
+<h3 id="identification">Identification</h3>
+
+<p>L&rsquo;identification commence par la dérivation de la paire de clés à partir du
+<code>Login / Mot de passe</code>.</p>
+
+<p>Pour commencer le processus d&rsquo;identification, il faut 2 phases :</p>
+
+<ul>
+<li>Obtenir un challenge associé au <code>login</code>, le serveur génère un challenge
+<code>intelligent</code> contenant le login, une date de génération, une date
+d&rsquo;expiration, ainsi qu&rsquo;un identifiant de challenge;</li>
+</ul>
+
+<blockquote>
+<p>Les challenges doivent être générés sans vérifier l&rsquo;existence de l&rsquo;utilisateur
+(Time-Attack / User Enumeration)</p>
+</blockquote>
+
+<ul>
+<li>Le challenge est signé avec la clé privée dérivée, puis le tout est
+retransmis au serveur. Le serveur vérifie l&rsquo;existence de l&rsquo;identifiant de
+challenge dans un cache interne, puis récupère l&rsquo;utilisateur associé par la
+clé publique transmise. Cette clé est alors utilisée pour vérifier la
+signature.</li>
+</ul>
+
+<blockquote>
+<p>La vérification du challenge et des paramètres de la signature doivent être
+fait en temps constant, sans oublier le traitement de la vérification de
+l&rsquo;existence de l&rsquo;utilisateur ne doit pas non plus être statistiquement
+identifiable (Time-Attack / User Enumeration)</p>
+</blockquote>
+
+<h2 id="pour-aller-plus-loin">Pour aller plus loin</h2>
+
+<p>Il est tout à fait possible d&rsquo;utiliser des <code>box</code> NaCL avec des clés asymétriques
+jetables.</p>
+
+<ul>
+<li>Le client dérive 2 clés (2 * 32 octets =&gt; keyLen := 64), une pour signer et
+une pour chiffrer la box NaCL;</li>
+<li>Lors de la demande du challenge au serveur, un bi-clés peut être généré puis
+stocker en cache avec le challenge, la clé publique de la box serveur est alors transmise au client;</li>
+<li>Le client assemble la réponse dans la <code>box</code> en la fermant en utilisant la clé
+publique du serveur.</li>
+<li>Le client envoi la box et l&rsquo;identifiant de session au serveur;</li>
+<li>Le serveur vérifie l&rsquo;identifiant de session, récupère la clé privée éphémère
+et ouvre la box, puis reprends le processus normal de vérification.</li>
+</ul>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Voilà, j&rsquo;espère ne pas vous avoir perdu ^^ C&rsquo;est une méthode d&rsquo;identification
+qui évite le transport du mot de passe en clair sur le réseau. Je pourrais
+aborder plus en détails la séquence d&rsquo;identification <code>out-of-band</code> imaginé
+mêlant authentification multi-facteur et anvil mais cela sera un prochain
+article.</p>
+</div>
+
+    
+    
+
+    
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">Geo Joy &copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> hosted on <a href="https://github.com/Geo-Joy/geo-joy.github.io">Github</a></p>
+
+        </footer>
+        
+       <script async="" src="https://geojoy.mejs/main.js"></script>
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KQ3JDPK');</script>
+
+
+    </body>
+
+</html>
+

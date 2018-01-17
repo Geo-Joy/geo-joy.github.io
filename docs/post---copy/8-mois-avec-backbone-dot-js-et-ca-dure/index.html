@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en-us" class="wf-loading">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <meta name="HandheldFriendly" content="True" />
+        <meta name="MobileOptimized" content="320" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="preload" href="https://geojoy.mejs/main.js" as="script" />
+        <link rel="preload" href="https://geojoy.mecss/main.css" as="style" />
+
+        <title>8 mois avec Backbone.js et ça dure !</title>
+        <meta name="generator" content="Hugo 0.32.4" />
+        
+        <link rel="preconnect" href="https://ajax.googleapis.com/" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+        <meta property="og:title" content="8 mois avec Backbone.js et ça dure !" />
+<meta property="og:description" content="Cela fait quelques temps déjà que j&rsquo;utilise Backbone.JS and Friends, et bon je vais essayer de rester objectif sur le retour d&rsquo;expérience que je compte développer.
+Tout d&rsquo;abord, ça roxe du poney (avis tout à fait objectif !) par rapport au développement classique d&rsquo;IHM web (struts, dojo, etc.). Ceux qui me lisent et/ou me connaissent (en vrai) savent tout mon amour que je porte au développement Web (hum), qui plus est développement web avec des technologies compatibles IE2 (ActiveX sur Serveur jBoss par exemple) … voir IE tout court … hum hum :-)" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://geojoy.me/post---copy/8-mois-avec-backbone-dot-js-et-ca-dure/" />
+
+
+
+<meta property="article:published_time" content="2012-08-06T00:00:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2017-03-01T11:27:28&#43;01:00"/>
+
+
+
+
+
+
+
+
+
+
+
+    
+        <meta property="og:type" content="article" />
+        <meta property="og:article:published_time" content="2012-08-06T00:00:00Z" />
+        <meta property="og:article:tag" content="backbone.js" />
+        <meta property="og:article:tag" content="coffeescript" />
+        
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@megeojoy" />
+        <meta name="twitter:creator" content="@megeojoy" />
+        <meta name="twitter:title" content="8 mois avec Backbone.js et ça dure !" />
+        <meta name="twitter:description" content="" />
+        <meta name="twitter:url" content="https://geojoy.me/post---copy/8-mois-avec-backbone-dot-js-et-ca-dure/" />
+        
+    
+
+    
+        <meta name="p:domain_verify" content="fc173d84e3a4de948ed4bda2908afd3e"/>
+    
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Thibault NORMAND",
+      "url": "http://zenithar.org",
+      "sameAs": [
+        "https://twitter.com/zenithar/",
+        "https://www.linkedin.com/in/zenithar/",
+        "https://github.com/Zenithar/",
+        "https://plus.google.com/u/0/+ThibaultNormand"
+      ],
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://geojoy.me/images/avatar.jpg",
+        "height": 80,
+        "width": 80
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "@id": "https://geojoy.me",
+      "name": "Geo&#39;z Blog",
+      "url": "https://geojoy.me",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://geojoy.me/images/avatar.jpg",
+        "height": 80,
+        "width": 80
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "url": "https://geojoy.me",
+      "name": "Geo&#39;z Blog",
+      "author": {
+        "@type": "Person",
+        "name": "Geo Joy"
+      },
+      "description": ""
+    }
+    </script>
+
+      
+      <script type="application/ld+json">
+      {
+          "@context": "http://schema.org",
+          "@type": "BlogPosting",
+          "headline": "8 mois avec Backbone.js et ça dure !",
+          "description": "",
+          "author": {
+              "@type": "Person",
+              "name": "Geo Joy"
+          },
+          "publisher": {
+              "@type": "Organization",
+              "name": "Geo&#39;z Blog",
+              "logo": "https://geojoy.me/images/avatar.jpg"
+          },
+          
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://geojoy.me/images/avatar.jpg",
+            "height": 80,
+            "width": 80
+          },
+          "datePublished": "2012-08-06",
+          "dateModified": "2017-03-01",
+          "wordCount": 1599
+          ,
+          "keywords": ["backbone.js","coffeescript"] 
+      }
+    </script>
+  
+
+    <style>
+body{margin:0}main,nav{display:block}a{background-color:transparent}h1{margin:.67em 0;font-size:2em}img{border:0}code,kbd{font-family:monospace,monospace;font-size:1em}button{margin:0;font:inherit;color:inherit}button{overflow:visible}button{text-transform:none}button{-webkit-appearance:button}button::-moz-focus-inner{padding:0;border:0}*{-webkit-box-sizing:border-box;box-sizing:border-box}:after,:before{-webkit-box-sizing:border-box;box-sizing:border-box}html{font-size:10px}body{font-family:"Raleway",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333;background-color:#fff}button{font-family:inherit;font-size:inherit;line-height:inherit}a{color:#337ab7;text-decoration:none}img{vertical-align:middle}h1,h4,h5{font-family:inherit;font-weight:500;line-height:1.1;color:inherit}h1{margin-top:20px;margin-bottom:10px}h4,h5{margin-top:10px;margin-bottom:10px}h1{font-size:36px}h4{font-size:18px}h5{font-size:14px}p{margin:0 0 10px}.text-justify{text-align:justify}ul{margin-top:0;margin-bottom:10px}blockquote{padding:10px 20px;margin:0 0 20px;font-size:17.5px;border-left:5px solid #eee}blockquote p:last-child{margin-bottom:0}code,kbd{font-family:Menlo,Monaco,Consolas,"Courier New",monospace}code{padding:2px 4px;font-size:90%;color:#c7254e;background-color:#f9f2f4;border-radius:4px}kbd{padding:2px 4px;font-size:90%;color:#fff;background-color:#333;border-radius:3px;-webkit-box-shadow:inset 0 -1px 0 rgba(0,0,0,.25);box-shadow:inset 0 -1px 0 rgba(0,0,0,.25)}.container{padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}@media (min-width:768px){.container{width:750px}}@media (min-width:992px){.container{width:970px}}@media (min-width:1200px){.container{width:1170px}}.collapse{display:none}.nav{padding-left:0;margin-bottom:0;list-style:none}.nav>li{position:relative;display:block}.nav>li>a{position:relative;display:block;padding:10px 15px}.navbar{position:relative;min-height:50px;margin-bottom:20px;border:1px solid transparent}@media (min-width:768px){.navbar{border-radius:4px}}@media (min-width:768px){.navbar-header{float:left}}.navbar-collapse{padding-right:15px;padding-left:15px;overflow-x:visible;-webkit-overflow-scrolling:touch;border-top:1px solid transparent;-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,.1);box-shadow:inset 0 1px 0 rgba(255,255,255,.1)}@media (min-width:768px){.navbar-collapse{width:auto;border-top:0;-webkit-box-shadow:none;box-shadow:none}.navbar-collapse.collapse{display:block !important;height:auto !important;padding-bottom:0;overflow:visible !important}.navbar-fixed-top .navbar-collapse{padding-right:0;padding-left:0}}.navbar-fixed-top .navbar-collapse{max-height:340px}@media (max-device-width:480px) and (orientation:landscape){.navbar-fixed-top .navbar-collapse{max-height:200px}}.container>.navbar-collapse,.container>.navbar-header{margin-right:-15px;margin-left:-15px}@media (min-width:768px){.container>.navbar-collapse,.container>.navbar-header{margin-right:0;margin-left:0}}.navbar-fixed-top{position:fixed;right:0;left:0;z-index:1030}@media (min-width:768px){.navbar-fixed-top{border-radius:0}}.navbar-fixed-top{top:0;border-width:0 0 1px}.navbar-brand{float:left;height:50px;padding:15px 15px;font-size:18px;line-height:20px}@media (min-width:768px){.navbar>.container .navbar-brand{margin-left:-15px}}.navbar-toggle{position:relative;float:right;padding:9px 10px;margin-top:8px;margin-right:15px;margin-bottom:8px;background-color:transparent;background-image:none;border:1px solid transparent;border-radius:4px}.navbar-toggle .icon-bar{display:block;width:22px;height:2px;border-radius:1px}.navbar-toggle .icon-bar+.icon-bar{margin-top:4px}@media (min-width:768px){.navbar-toggle{display:none}}.navbar-nav{margin:7.5px -15px}.navbar-nav>li>a{padding-top:10px;padding-bottom:10px;line-height:20px}@media (min-width:768px){.navbar-nav{float:left;margin:0}.navbar-nav>li{float:left}.navbar-nav>li>a{padding-top:15px;padding-bottom:15px}}@media (min-width:768px){.navbar-right{float:right !important;margin-right:-15px}}.navbar-default{background-color:#f8f8f8;border-color:#e7e7e7}.navbar-default .navbar-brand{color:#777}.navbar-default .navbar-nav>li>a{color:#777}.navbar-default .navbar-toggle{border-color:#ddd}.navbar-default .navbar-toggle .icon-bar{background-color:#888}.navbar-default .navbar-collapse{border-color:#e7e7e7}.container:after,.container:before,.nav:after,.nav:before,.navbar-collapse:after,.navbar-collapse:before,.navbar-header:after,.navbar-header:before,.navbar:after,.navbar:before{display:table;content:" "}.container:after,.nav:after,.navbar-collapse:after,.navbar-header:after,.navbar:after{clear:both}@-ms-viewport{width:device-width}.visible-xs{display:none !important}@media (max-width:767px){.visible-xs{display:block !important}}html{height:100%}body{height:100%;padding-top:55px;display:-webkit-box;display:-ms-flexbox;display:flex;text-align:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;font-size:16px !important}main{margin:auto;padding:25px;max-width:750px}a:link,a:visited{color:green}.item{padding:10px 0}.item-tag{background-color:green}.navbar-icon{font-size:125%;display:inline-block !important}.navbar.navbar-default{border-top:5px solid green}img{max-width:100%}.fade-in{opacity:0}
+.wf-loading p, .wf-loading h1, .wf-loading h2, .wf-loading h3, .wf-loading h4, .wf-loading a {visibility: hidden;}.wf-active  p, .wf-active h1, .wf-active h2, .wf-active h3, .wf-active h4, .wf-active a {visibility: visible;}.wf-inactive    p, .wf-inactive h1, .wf-inactive h2, .wf-inactive h3, .wf-inactive h4, wf-inactive a {visibility: visible;}
+</style>
+
+    </head>
+
+    <body>
+      
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQ3JDPK"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">8 mois avec Backbone.js et ça dure !</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Posts</a></li>
+                            
+                                <li><a href="/project/">Projects</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="/resume/"><i class="fa fa-user"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="http://www.google.com/recaptcha/mailhide/d?k=01IIc-s5LNYiS-CG_gthn4PA==&amp;c=r5Ctx8RMDz422qmYESfk1g=="><i class="fa fa-envelope"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/Geo-Joy"><i class="fa fa-github-alt"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/megeojoy"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/geojoy/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main class="fade-in">
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a itemprop="url" href="/post---copy/8-mois-avec-backbone-dot-js-et-ca-dure/">
+      <span itemprop="name">8 mois avec Backbone.js et ça dure !</span>
+    </a></h4>
+
+    August 6, 2012
+    <h5>August 6, 2012</h5>
+     <a href="../../../../../tags/backbone.js"><kbd class="item-tag">backbone.js</kbd></a>  <a href="../../../../../tags/coffeescript"><kbd class="item-tag">coffeescript</kbd></a> 
+
+</div>
+
+
+    <br> <div class="text-justify">
+
+<p>Cela fait quelques temps déjà que j&rsquo;utilise Backbone.JS and Friends, et bon je vais essayer de rester objectif sur le retour d&rsquo;expérience que je compte développer.</p>
+
+<p>Tout d&rsquo;abord, ça roxe du poney (avis tout à fait objectif !) par rapport au développement classique d&rsquo;IHM web (struts, dojo, etc.). Ceux qui me lisent et/ou me connaissent (en vrai) savent tout mon amour que je porte au développement Web (hum), qui plus est développement web avec des technologies compatibles IE2 (ActiveX sur Serveur jBoss par exemple) … voir IE tout court … hum hum :-)</p>
+
+<p>Personnellement, ce que je n&rsquo;aime pas dans le développement Web, c&rsquo;est le Web lui même, qui ressemble plus à un ensemble bricolé qui tombait en marche sur tous les navigateurs du marché (sauf un, devinez :-) ).</p>
+
+<p>Beaucoup d&rsquo;application dites Web 2.0, ne le sont pas ! Notamment, on croit que faire un include de plusieurs librairies JavaScript, permet comme par magie de faire du Web 2.0. Mais j&rsquo;ai eu l&rsquo;occasion de découvrir toutes la puissance des &ldquo;vraies&rdquo; applications JavaScript via Backbone.js.</p>
+
+<h1 id="découverte">Découverte</h1>
+
+<p>Comment suis-je arrivé à connaitre Backbone.js, et bien à cause de <a href="http://nodejs.org/">Node.js</a> ! Vous ne connaissez pas ? C&rsquo;est, selon moi, celui qui a accéléré les choses, RoR/Django ont essuyés les plâtres, mais <a href="http://nodejs.org/">Node.js</a> a tout refait mais en mieux.</p>
+
+<p>Le problème de ces technologies, c&rsquo;est qu&rsquo;elles ne sont pas guidées (est-ce vraiment un inconvénient ?), et j&rsquo;ai du prendre en bloc tout ce qui est venu avec c-à-d :</p>
+
+<ul>
+<li>JavaScript, que je ne connaissais pas si puissant (comme bcp de monde d&rsquo;ailleurs)</li>
+<li><a href="http://jquery.com/">jQuery</a></li>
+<li>puis <a href="http://coffeescript.org">CoffeeScript</a>, pour simplifier le JavaScript</li>
+<li>et enfin <a href="http://backbonejs.org">Backbone.js</a></li>
+</ul>
+
+<p>J&rsquo;ai du me mettre au JS, par nécessité d&rsquo;interactivité tout simplement, je suis passé du simple <code>$(&quot;#foo&quot;).hide()</code> à une organisation du code en modules, classes, composants.</p>
+
+<p><a href="http://jquery.com/">jQuery</a> m&rsquo;a surtout permit de gérer les problèmes de navigateurs, ainsi que les manipulations DOM; premier plugin un diagramme de Gantt basé sur des <code>&lt;tr&gt;</code>, <code>&lt;td&gt;</code>, et css (Ouh que c&rsquo;était dégueulasse !).</p>
+
+<p><a href="http://coffeescript.org">CoffeeScript</a> n&rsquo;était pas encore présent (Décembre 2011) dans ma caisse à outils. Cependant ce qui m&rsquo;a fait migrer, c&rsquo;est la génération du code JS valide sur tous les navigateurs (Gestion des &lsquo;var&rsquo;, &lsquo;;&rsquo;, etc.). Pour moi CoffeeScript c&rsquo;était ça au début, puis j&rsquo;ai découvert les classes Objet et pas par Prototype.</p>
+
+<h1 id="problèmes-rencontrés">Problèmes rencontrés</h1>
+
+<p>C&rsquo;est bien beau toutes ces nouvelles technologies, mais comment les intégrer ? Voici les problèmes rencontrés :</p>
+
+<h2 id="intégration-au-processus-de-génération-java">Intégration au processus de génération Java</h2>
+
+<p>Un des problèmes majeurs est l&rsquo;intégration au système de build de l&rsquo;application Java/J2EE que ce soit Maven ou Ant, il y a un gros vide. J&rsquo;ai donc pris la décision d&rsquo;utiliser Node.js dans la chaine de compilation.</p>
+
+<h2 id="mise-en-place-d-une-architecture-orientée-service">Mise en place d&rsquo;une architecture orientée service</h2>
+
+<p>Malheureusement, le découplage fonctionnel n&rsquo;est pas naturel pour tous les développeurs, il a fallut mettre en place par le biais de service Web REST/JSON, une interface d&rsquo;accès au système.</p>
+
+<p>Nous avons mis en évidence aussi la présence de fonctionnel métier présent dans la vue (formulaire), ce qui a impliqué une longue phase de refactoring, qui est traitée au fur et à mesure de l&rsquo;avancement de la migration. Cette phase consiste à déplacer le fonctionnel métier dans un module partagé entre la vue (action struts2) et le service.</p>
+
+<h2 id="export-fonctionnel-client">Export fonctionnel client</h2>
+
+<p>Le fait d&rsquo;exporter une partie du fonctionnel coté client (navigateur) a impliqué beaucoup de travail annexe, notamment tout ce qui concerne le domaine &ldquo;statique&rdquo; applicatif tels que les typologies, les paramètres.</p>
+
+<p>L&rsquo;objectif majeur était d&rsquo;éliminer les interactions serveurs &ldquo;inutiles&rdquo;, d&rsquo;où le besoin d&rsquo;exporter les logiques métiers coté client, pour présenter une information pré-machée au serveur, sans pour autant faire confiance, d&rsquo;où le doublon de code.</p>
+
+<h2 id="sécurité">Sécurité</h2>
+
+<p>L&rsquo;export fonctionnel apporte des problématiques de gestion de la Sécurité (Qui me tient à coeur, car trop souvent négligée !). &ldquo;Normalement&rdquo;, il y a coté serveur des contrôles d&rsquo;accès sur les  fonctions, et le code exposé.</p>
+
+<p>En JavaScript, tout est modifiable par l&rsquo;utilisateur, seule la norme ECMASCRIPT 5 (ça aussi découvert pendant l&rsquo;apprentissage !) apporte des mécanismes de scellements via <code>Object.seal</code>, ou de vérrouillage via <code>Object.freeze</code>. Qui plus est beaucoup de développeurs n&rsquo;utilisent pas les namespaces, et le module pattern pour protéger leurs codes privés. Il devient alors très facile d&rsquo;écraser un contrôle client, qui n&rsquo;est pas vérifié coté serveur.</p>
+
+<p>Nous avons mis en place un système de facades, permettant via un bootstrap applicatif, de récupérer coté client les permissions de l&rsquo;utilisateur. Les méthodes de la facade sous forme de &ldquo;can*&rdquo; exposent les permissions à l&rsquo;application JavaScript.
+Nous avons repris et adapté le pattern &ldquo;<a href="http://addyosmani.com/largescalejavascript/">Large Scale JavaScript Application</a>&rdquo; d&rsquo;Addy Osmani à nos besoins.</p>
+
+<h2 id="gestion-des-modules">Gestion des modules</h2>
+
+<p>Avec la multiplication des modules JS (CoffeeScript compilé), il a fallut mettre en place un système de gestion de dépendances, chose il faut le dire, ce n&rsquo;est pas necessairement naturel pour un néophyte du JavaScript, qui a l&rsquo;habitude du bon vieux <code>&lt;script src='…'&gt;</code> dans l&rsquo;entête.</p>
+
+<p>Il a fallut comprendre la différence entre <a href="http://wiki.commonjs.org/">CommonJS</a> et AMD, pour comprendre que c&rsquo;est la même chose, en fait <a href="http://wiki.commonjs.org/wiki/Modules/AsynchronousDefinition">AMD</a> est un gestionnaire <a href="http://wiki.commonjs.org/">CommonJS</a>, mais avec le chargement asynchrone (via réseau par exemple).</p>
+
+<p>Nous nous sommes tournés vers <a href="http://requirejs.org/">Require.js</a> qui est un des chargeurs <a href="http://wiki.commonjs.org/wiki/Modules/AsynchronousDefinition">AMD</a>, permettant au travers du module pattern d&rsquo;organiser le code, et surtout la gestion de l&rsquo;exposition des fonctions (privées / publiques).</p>
+
+<p>La partie cliente est composée de :</p>
+
+<ul>
+<li>Framework : Abstraction des librairies (Notifications, Validations), etc.</li>
+<li>Modèles (Backbone)</li>
+<li>Collections (Backbone)</li>
+<li>Facades</li>
+<li>Views (Backbone)</li>
+<li>Templates (Handlebars)</li>
+<li>Widgets</li>
+<li>Services : Pour les communications serveurs hors Backbone.</li>
+</ul>
+
+<p>Le tout articulé via Require.js (AMD), hormis le framework qui est sous la forme d&rsquo;extension d&rsquo;espace de nom via le plugin namespace de CoffeeScript simplement concaténé.</p>
+
+<code data-gist-id="2318881"></code>
+
+
+<h2 id="beaucoup-de-connaissances-à-acquérir">Beaucoup de connaissances à acquérir</h2>
+
+<p>Il n&rsquo;est pas possible de prendre en partie toute la connaissance nécessaire pour contrôler ces nouveaux outils, ils sont tous reliés. De ce fait on a souvent le sentiment de se disperser.
+Qui plus est, liés aux buzzs, beaucoup d&rsquo;autres choses intéressantes viennent polluer les choix.</p>
+
+<h1 id="avantages">Avantages</h1>
+
+<p>Biensûr beaucoup d&rsquo;inconvénients majeurs liés à la migration d&rsquo;un projet, tout cela ne sont au final que des pré-requis à l&rsquo;utilisation d&rsquo;IHM JS, donc effectivement si ce n&rsquo;est pas le cas, et bien il faut mettre en place l&rsquo;infrastructure d&rsquo;accueil.</p>
+
+<h2 id="modularité-et-réutilisabilité">Modularité et réutilisabilité</h2>
+
+<p>On obtient bon nombre de modules, qui en fonction de la sensibilité (/ compétences) de développeur peuvent être réutilisable. Backbone.js est pour moi une librairie de concept qui peuvent être tous (ou pas) utilisés, voir complété par extensions.</p>
+
+<p>Personnellement, j&rsquo;utilise <a href="https://github.com/chaplinjs/chaplin">Chaplin</a>, qui se veut être un framework qui utilise Backbone.js. Cela permet d&rsquo;ajouter et de prendre en charge les problématiques que l&rsquo;ont rencontre assez rapidement en cas de développement IHM JS (Gestion des sessions, gestion des vues, mise en page). Il ajoute à la manière de Rails, des conventions permettant de simplifier la configuration, et donc le développement.</p>
+
+<h2 id="testabilité">Testabilité</h2>
+
+<p>La testabilité devient de plus en plus le mot d&rsquo;ordre pour les entreprises d&rsquo;aujourd&rsquo;hui, il est très important de pouvoir tester son code de manière efficace et surtout rapide.</p>
+
+<p>Le fait de découper son application cliente en modules fonctionnels testables, permets d&rsquo;utiliser tous les mécanismes de tests &ldquo;coté serveur&rdquo;, mais &ldquo;coté client&rdquo;, en utilisant des framework comme <a href="http://visionmedia.github.com/mocha/">Mocha</a> (mon préféré ! surtout le <a href="http://tjholowaychuk.com/post/25314967097/mocha-1-2-0-now-with-more-nyan">mode nyan cat</a> ! heu non en fait …)</p>
+
+<h2 id="interactivité-rapidité">Interactivité / Rapidité</h2>
+
+<p>Autre avantage, l&rsquo;interactivité ! L&rsquo;utilisateur veut améliorer son expérience (cette fameuse expérience utilisateur : UX en anglais, dont <a href="https://www.google.fr/search?q=CV%20UX">les spécialistes fleurissent sur Internet</a> )</p>
+
+<p>Le fait d&rsquo;utiliser les ressources du client (navigateur) pour générer les pages, les modifier sans le fameux &ldquo;click&rdquo; d&rsquo;IE signifiant un chargement, aller-retour serveurs, l&rsquo;utilisation de techniques de templates clients (Handlebars, et bien d&rsquo;autres) instrumenté via JSON pour limiter les informations au strict nécessaire, permettent d&rsquo;améliorer la rapidité et donc la satisfaction de l&rsquo;utilisateur.</p>
+
+<p>Fini les aller-retours pour cocher une case à cocher, fini les aller-retours pour valider un formulaire, fini les allés-retours pour changer un CSS, le Javascript est la pour ça.</p>
+
+<h2 id="conception-offline">Conception offline</h2>
+
+<p>Cette approche permet un développement centré sur l&rsquo;IHM, c-à-d ce qui va être le plus jugé par l&rsquo;utilisateur final. Il est conseillé de concevoir l&rsquo;application JavaScript comme une application Offline puis la connecté à l&rsquo;infrastructure via les DataServices.</p>
+
+<p>Ce modèle fait que l&rsquo;application devient cliente de l&rsquo;infrastructure, ce qui permet d&rsquo;avoir une infrastructure ouverte et extensible.</p>
+
+<p>J&rsquo;ai essayé de garder un point objectif sur mon utilisation de Backbone.js, dons le cadre d&rsquo;une migration de socle applicatif. J&rsquo;espère vous avoir donné quelques éléments permettant de vous préparer, si comme moi vous êtes aussi fou pour tenter la migration (Mais bon je suis loin d&rsquo;avoir fini, prochaine étape : les websockets pour élminer le polling !).</p>
+
+<h1 id="conclusion">Conclusion</h1>
+
+<p>La migration d&rsquo;une application Web 1.5, vers une application Web 2.5 (2.0 + HTML5) permet d&rsquo;améliorer dans un premier temps la satisfaction du client, via une expérience utilisateur plus proche de lui, mais aussi la satisfaction du développeur souvent négligée au profit de la satisfaction du client.</p>
+
+<p>L&rsquo;introduction de &ldquo;Backbone.js And Friends&rdquo; dans les projets n&rsquo;est pas simple du fait de la frilosité des entreprises à investir sur des technologies nouvelles. Choses assez paradoxales puisque ces mêmes entreprises vont investir sur le HTML5, qui je rappelle est une technologie encore en cours de spécification. Pour moi, Backbone.js, *.js sont issues de la génèse de HTML5, et je pense qu&rsquo;on a pas fini d&rsquo;en voir.</p>
+
+<p>J&rsquo;avoue être curieux, et admiratif de toutes ces personnalités émérgentes du HTML5 et dérivés, je pense à <a href="http://addyosmani.com/blog/">Addy Osmani</a> (<a href="http://yeoman.io/">Yeoman</a> c&rsquo;est pour quand ?), <a href="https://github.com/jashkenas/">Jeremy Ashkenas</a>, <a href="http://ejohn.org/">John Resig</a>, et bien d&rsquo;autres. Et je me pose une question simple utilisez vous vos propres technologies ? ou deviennent elles publiques par manquent de confiance de vos sociétés respectives ? (TROOOOOLLLLLLLLLLL)</p>
+
+<p>En tout cas merci !</p>
+</div>
+
+    
+    
+
+    
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">Geo Joy &copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> hosted on <a href="https://github.com/Geo-Joy/geo-joy.github.io">Github</a></p>
+
+        </footer>
+        
+       <script async="" src="https://geojoy.mejs/main.js"></script>
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KQ3JDPK');</script>
+
+
+    </body>
+
+</html>
+

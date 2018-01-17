@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Etudiant on Geo&#39;z Blog</title>
+    <link>https://geojoy.me/tags/etudiant/</link>
+    <description>Recent content in Etudiant on Geo&#39;z Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 09 Jul 2008 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://geojoy.me/tags/etudiant/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Le der des der ...</title>
+      <link>https://geojoy.me/post---copy/le-der-des-der/</link>
+      <pubDate>Wed, 09 Jul 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/le-der-des-der/</guid>
+      <description>Bon ben voila c&amp;rsquo;est fait ! c&amp;rsquo;est fini ! Une nouvelle vie qui commence ! Au revoir l&amp;rsquo;étudiant, bonjour l&amp;rsquo;ingénieur sécurité !</description>
+    </item>
+    
+  </channel>
+</rss>

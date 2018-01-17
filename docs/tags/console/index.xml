@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Console on Geo&#39;z Blog</title>
+    <link>https://geojoy.me/tags/console/</link>
+    <description>Recent content in Console on Geo&#39;z Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 24 Feb 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://geojoy.me/tags/console/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Copier / Coller depuis la console</title>
+      <link>https://geojoy.me/post---copy/copier-coller-depuis-la-console/</link>
+      <pubDate>Fri, 24 Feb 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/copier-coller-depuis-la-console/</guid>
+      <description>Petite découverte de la journée, j&amp;rsquo;ai eu le besoin de copier un fichier de la console vers un programme &amp;ldquo;graphique&amp;rdquo;.
+Xsel, est l&amp;rsquo;outil qu&amp;rsquo;il faut pour ça ! Il permet de manipuler le clipboard depuis la console.
+&amp;gt; cat file | xsel --clipboard Je vous invite à aller sur le site pour plus d&amp;rsquo;exemples, vraiment pas mal, il fallait y penser et il l&amp;rsquo;a fait ^^</description>
+    </item>
+    
+  </channel>
+</rss>

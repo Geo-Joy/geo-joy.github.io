@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Openid on Geo&#39;z Blog</title>
+    <link>https://geojoy.me/tags/openid/</link>
+    <description>Recent content in Openid on Geo&#39;z Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 17 Oct 2007 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://geojoy.me/tags/openid/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>OpenID, la nouvelle technologie d&#39;authentification</title>
+      <link>https://geojoy.me/post---copy/openid-la-nouvelle-technologie-dauthentification/</link>
+      <pubDate>Wed, 17 Oct 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/openid-la-nouvelle-technologie-dauthentification/</guid>
+      <description>OpenID est un système d’authentification décentralisé qui permet l’authentification unique, ainsi que le partage d’attributs. Il permet à un utilisateur de s’authentifier auprès de plusieurs sites (devant prendre en charge cette technologie) sans avoir à retenir un identifiant pour chacun d’eux mais en utilisant à chaque fois un unique identifiant OpenID. Le modèle OpenID se base sur des liens de confiance préalablement établis entre les fournisseurs de services (sites web utilisant OpenID par exemple) et les fournisseurs d’identité (OpenID providers).</description>
+    </item>
+    
+  </channel>
+</rss>

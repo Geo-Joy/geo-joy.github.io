@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en-us" class="wf-loading">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <meta name="HandheldFriendly" content="True" />
+        <meta name="MobileOptimized" content="320" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="preload" href="https://geojoy.mejs/main.js" as="script" />
+        <link rel="preload" href="https://geojoy.mecss/main.css" as="style" />
+
+        <title>Backbone.js - Les évènements</title>
+        <meta name="generator" content="Hugo 0.32.4" />
+        
+        <link rel="preconnect" href="https://ajax.googleapis.com/" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+        <meta property="og:title" content="Backbone.js - Les évènements" />
+<meta property="og:description" content="Cet article fait suite à la présentation des concepts Backbone.JS. Vous devez avoir connaissance d&rsquo;une base de Javascript pour aborder de manière sereine la partie suivante.
+Dans cet article, je vais m&rsquo;attacher à expliquer le fonctionnement des évènements dans Backbone.JS, ainsi que, de fait, les principes de programmation asynchrone utilisés.
+Programmation asynchrone La programmation asynchrone est le coeur de la programmation Javascript, vous avez toujours la possibilité de faire du synchrone, cependant ce serait perdre un des avantages de Javascript." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://geojoy.me/post---copy/backbone-dot-js-les-evenements/" />
+
+
+
+<meta property="article:published_time" content="2012-03-05T00:00:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2017-03-01T11:27:27&#43;01:00"/>
+
+
+
+
+
+
+
+
+
+
+
+    
+        <meta property="og:type" content="article" />
+        <meta property="og:article:published_time" content="2012-03-05T00:00:00Z" />
+        <meta property="og:article:tag" content="backbone.js" />
+        <meta property="og:article:tag" content="node.js" />
+        <meta property="og:article:tag" content="tutorial" />
+        
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@megeojoy" />
+        <meta name="twitter:creator" content="@megeojoy" />
+        <meta name="twitter:title" content="Backbone.js - Les évènements" />
+        <meta name="twitter:description" content="" />
+        <meta name="twitter:url" content="https://geojoy.me/post---copy/backbone-dot-js-les-evenements/" />
+        
+    
+
+    
+        <meta name="p:domain_verify" content="fc173d84e3a4de948ed4bda2908afd3e"/>
+    
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Thibault NORMAND",
+      "url": "http://zenithar.org",
+      "sameAs": [
+        "https://twitter.com/zenithar/",
+        "https://www.linkedin.com/in/zenithar/",
+        "https://github.com/Zenithar/",
+        "https://plus.google.com/u/0/+ThibaultNormand"
+      ],
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://geojoy.me/images/avatar.jpg",
+        "height": 80,
+        "width": 80
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "@id": "https://geojoy.me",
+      "name": "Geo&#39;z Blog",
+      "url": "https://geojoy.me",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://geojoy.me/images/avatar.jpg",
+        "height": 80,
+        "width": 80
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "url": "https://geojoy.me",
+      "name": "Geo&#39;z Blog",
+      "author": {
+        "@type": "Person",
+        "name": "Geo Joy"
+      },
+      "description": ""
+    }
+    </script>
+
+      
+      <script type="application/ld+json">
+      {
+          "@context": "http://schema.org",
+          "@type": "BlogPosting",
+          "headline": "Backbone.js - Les évènements",
+          "description": "",
+          "author": {
+              "@type": "Person",
+              "name": "Geo Joy"
+          },
+          "publisher": {
+              "@type": "Organization",
+              "name": "Geo&#39;z Blog",
+              "logo": "https://geojoy.me/images/avatar.jpg"
+          },
+          
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://geojoy.me/images/avatar.jpg",
+            "height": 80,
+            "width": 80
+          },
+          "datePublished": "2012-03-05",
+          "dateModified": "2017-03-01",
+          "wordCount": 1256
+          ,
+          "keywords": ["backbone.js","node.js","tutorial"] 
+      }
+    </script>
+  
+
+    <style>
+body{margin:0}main,nav{display:block}a{background-color:transparent}h1{margin:.67em 0;font-size:2em}img{border:0}code,kbd{font-family:monospace,monospace;font-size:1em}button{margin:0;font:inherit;color:inherit}button{overflow:visible}button{text-transform:none}button{-webkit-appearance:button}button::-moz-focus-inner{padding:0;border:0}*{-webkit-box-sizing:border-box;box-sizing:border-box}:after,:before{-webkit-box-sizing:border-box;box-sizing:border-box}html{font-size:10px}body{font-family:"Raleway",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333;background-color:#fff}button{font-family:inherit;font-size:inherit;line-height:inherit}a{color:#337ab7;text-decoration:none}img{vertical-align:middle}h1,h4,h5{font-family:inherit;font-weight:500;line-height:1.1;color:inherit}h1{margin-top:20px;margin-bottom:10px}h4,h5{margin-top:10px;margin-bottom:10px}h1{font-size:36px}h4{font-size:18px}h5{font-size:14px}p{margin:0 0 10px}.text-justify{text-align:justify}ul{margin-top:0;margin-bottom:10px}blockquote{padding:10px 20px;margin:0 0 20px;font-size:17.5px;border-left:5px solid #eee}blockquote p:last-child{margin-bottom:0}code,kbd{font-family:Menlo,Monaco,Consolas,"Courier New",monospace}code{padding:2px 4px;font-size:90%;color:#c7254e;background-color:#f9f2f4;border-radius:4px}kbd{padding:2px 4px;font-size:90%;color:#fff;background-color:#333;border-radius:3px;-webkit-box-shadow:inset 0 -1px 0 rgba(0,0,0,.25);box-shadow:inset 0 -1px 0 rgba(0,0,0,.25)}.container{padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}@media (min-width:768px){.container{width:750px}}@media (min-width:992px){.container{width:970px}}@media (min-width:1200px){.container{width:1170px}}.collapse{display:none}.nav{padding-left:0;margin-bottom:0;list-style:none}.nav>li{position:relative;display:block}.nav>li>a{position:relative;display:block;padding:10px 15px}.navbar{position:relative;min-height:50px;margin-bottom:20px;border:1px solid transparent}@media (min-width:768px){.navbar{border-radius:4px}}@media (min-width:768px){.navbar-header{float:left}}.navbar-collapse{padding-right:15px;padding-left:15px;overflow-x:visible;-webkit-overflow-scrolling:touch;border-top:1px solid transparent;-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,.1);box-shadow:inset 0 1px 0 rgba(255,255,255,.1)}@media (min-width:768px){.navbar-collapse{width:auto;border-top:0;-webkit-box-shadow:none;box-shadow:none}.navbar-collapse.collapse{display:block !important;height:auto !important;padding-bottom:0;overflow:visible !important}.navbar-fixed-top .navbar-collapse{padding-right:0;padding-left:0}}.navbar-fixed-top .navbar-collapse{max-height:340px}@media (max-device-width:480px) and (orientation:landscape){.navbar-fixed-top .navbar-collapse{max-height:200px}}.container>.navbar-collapse,.container>.navbar-header{margin-right:-15px;margin-left:-15px}@media (min-width:768px){.container>.navbar-collapse,.container>.navbar-header{margin-right:0;margin-left:0}}.navbar-fixed-top{position:fixed;right:0;left:0;z-index:1030}@media (min-width:768px){.navbar-fixed-top{border-radius:0}}.navbar-fixed-top{top:0;border-width:0 0 1px}.navbar-brand{float:left;height:50px;padding:15px 15px;font-size:18px;line-height:20px}@media (min-width:768px){.navbar>.container .navbar-brand{margin-left:-15px}}.navbar-toggle{position:relative;float:right;padding:9px 10px;margin-top:8px;margin-right:15px;margin-bottom:8px;background-color:transparent;background-image:none;border:1px solid transparent;border-radius:4px}.navbar-toggle .icon-bar{display:block;width:22px;height:2px;border-radius:1px}.navbar-toggle .icon-bar+.icon-bar{margin-top:4px}@media (min-width:768px){.navbar-toggle{display:none}}.navbar-nav{margin:7.5px -15px}.navbar-nav>li>a{padding-top:10px;padding-bottom:10px;line-height:20px}@media (min-width:768px){.navbar-nav{float:left;margin:0}.navbar-nav>li{float:left}.navbar-nav>li>a{padding-top:15px;padding-bottom:15px}}@media (min-width:768px){.navbar-right{float:right !important;margin-right:-15px}}.navbar-default{background-color:#f8f8f8;border-color:#e7e7e7}.navbar-default .navbar-brand{color:#777}.navbar-default .navbar-nav>li>a{color:#777}.navbar-default .navbar-toggle{border-color:#ddd}.navbar-default .navbar-toggle .icon-bar{background-color:#888}.navbar-default .navbar-collapse{border-color:#e7e7e7}.container:after,.container:before,.nav:after,.nav:before,.navbar-collapse:after,.navbar-collapse:before,.navbar-header:after,.navbar-header:before,.navbar:after,.navbar:before{display:table;content:" "}.container:after,.nav:after,.navbar-collapse:after,.navbar-header:after,.navbar:after{clear:both}@-ms-viewport{width:device-width}.visible-xs{display:none !important}@media (max-width:767px){.visible-xs{display:block !important}}html{height:100%}body{height:100%;padding-top:55px;display:-webkit-box;display:-ms-flexbox;display:flex;text-align:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;font-size:16px !important}main{margin:auto;padding:25px;max-width:750px}a:link,a:visited{color:green}.item{padding:10px 0}.item-tag{background-color:green}.navbar-icon{font-size:125%;display:inline-block !important}.navbar.navbar-default{border-top:5px solid green}img{max-width:100%}.fade-in{opacity:0}
+.wf-loading p, .wf-loading h1, .wf-loading h2, .wf-loading h3, .wf-loading h4, .wf-loading a {visibility: hidden;}.wf-active  p, .wf-active h1, .wf-active h2, .wf-active h3, .wf-active h4, .wf-active a {visibility: visible;}.wf-inactive    p, .wf-inactive h1, .wf-inactive h2, .wf-inactive h3, .wf-inactive h4, wf-inactive a {visibility: visible;}
+</style>
+
+    </head>
+
+    <body>
+      
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQ3JDPK"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Backbone.js - Les évènements</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Posts</a></li>
+                            
+                                <li><a href="/project/">Projects</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="/resume/"><i class="fa fa-user"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="http://www.google.com/recaptcha/mailhide/d?k=01IIc-s5LNYiS-CG_gthn4PA==&amp;c=r5Ctx8RMDz422qmYESfk1g=="><i class="fa fa-envelope"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/Geo-Joy"><i class="fa fa-github-alt"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/megeojoy"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/geojoy/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main class="fade-in">
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a itemprop="url" href="/post---copy/backbone-dot-js-les-evenements/">
+      <span itemprop="name">Backbone.js - Les évènements</span>
+    </a></h4>
+
+    March 5, 2012
+    <h5>March 5, 2012</h5>
+     <a href="../../../../../tags/backbone.js"><kbd class="item-tag">backbone.js</kbd></a>  <a href="../../../../../tags/node.js"><kbd class="item-tag">node.js</kbd></a>  <a href="../../../../../tags/tutorial"><kbd class="item-tag">tutorial</kbd></a> 
+
+</div>
+
+
+    <br> <div class="text-justify">
+
+<p>Cet article fait suite à la <a href="http://blog.zenithar.org/articles/2012-03-04-backbone-dot-js-presentation.html">présentation des concepts Backbone.JS</a>. Vous devez avoir connaissance d&rsquo;une base de Javascript pour aborder de manière sereine la partie suivante.</p>
+
+<p>Dans cet article, je vais m&rsquo;attacher à expliquer le fonctionnement des évènements dans Backbone.JS, ainsi que, de fait, les principes de programmation asynchrone utilisés.</p>
+
+<h2 id="programmation-asynchrone">Programmation asynchrone</h2>
+
+<p>La programmation asynchrone est le coeur de la programmation Javascript, vous avez toujours la possibilité de faire du synchrone, cependant ce serait perdre un des avantages de Javascript.</p>
+
+<p>Le principe est simple :</p>
+
+<blockquote>
+<p>On sait quand on appelle la fonction, mais on ne sait pas quand elle sera traitée !</p>
+</blockquote>
+
+<p>De ce fait, cela induit des modes de programmation qui ne sont pas forcément habituels :</p>
+
+<p>Si on prend l&rsquo;exemple suivant (Node.js) :</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#815ba4">var</span> <span style="color:#06b6ef">fs</span> <span style="color:#5bc4bf">=</span> <span style="color:#06b6ef">require</span>(<span style="color:#48b685">&#34;fs&#34;</span>);
+<span style="color:#06b6ef">fs</span>.<span style="color:#06b6ef">readFile</span>(<span style="color:#48b685">&#34;fichier.txt&#34;</span>, <span style="color:#815ba4">function</span>(<span style="color:#06b6ef">err</span>, <span style="color:#06b6ef">content</span>) {
+  <span style="color:#815ba4">if</span> (<span style="color:#06b6ef">err</span>) {
+    <span style="color:#06b6ef">console</span>.<span style="color:#06b6ef">err</span>(<span style="color:#06b6ef">err</span>);
+  } <span style="color:#815ba4">else</span> {
+    <span style="color:#06b6ef">console</span>.<span style="color:#06b6ef">log</span>(<span style="color:#48b685">&#34;file read: &#34;</span> <span style="color:#5bc4bf">+</span> <span style="color:#06b6ef">content</span>.<span style="color:#06b6ef">length</span> <span style="color:#5bc4bf">+</span> <span style="color:#48b685">&#34; bytes&#34;</span>);
+  }
+}
+<span style="color:#06b6ef">console</span>.<span style="color:#06b6ef">log</span>(<span style="color:#48b685">&#34;after readFile&#34;</span>);</code></pre></div>
+<p>Produira la sortie suivante :</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">&gt; node file.js
+after readFile
+file read: <span style="color:#f99b15">234</span> bytes</code></pre></div>
+<p>On peut remarquer une particularité, la fonction d&rsquo;appel à la lecture du fichier &ldquo;fichier.txt&rdquo;, prends en paramètre une fonction dîtes &ldquo;anonyme&rdquo; (sans nom).</p>
+
+<p>Cette fonction sera exécutée comme un &ldquo;callback&rdquo;, lors de la lecture du fichier.</p>
+
+<p>Il est très important de comprendre ce mécanisme pour la suite de l&rsquo;article.</p>
+
+<h2 id="evènements-backbone-js">Evènements Backbone.JS</h2>
+
+<p>Les évènements Backbone.JS sont aussi traités de manière asynchrone, on enregistre des &ldquo;handlers&rdquo;, sur des évènements qui peuvent intervenir n&rsquo;importe quand.</p>
+
+<p>Une bonne application Backbone.JS est une application complètement décorellée et évènementielle. Les composants sont implémentés, et reliés par des messages (event).</p>
+
+<p>Et je vais encore une fois citer Addy Osmani, pour son article expliquant comment construire une application Web Javascript &ldquo;scalable&rdquo;, et découplée :</p>
+
+<ul>
+<li><a href="http://addyosmani.com/blog/jqcon-largescalejs-2012/">Slides: Building Decoupled Large-Scale Applications With JavaScript And jQuery</a></li>
+</ul>
+
+<h3 id="gestion-des-évènements">Gestion des évènements</h3>
+
+<p>La gestion des évènements avec Backbone.JS se fait comme pour jQuery, avec les fonctions &ldquo;<a href="http://documentcloud.github.com/backbone/#Events-on">on</a>&rdquo;, &ldquo;<a href="http://documentcloud.github.com/backbone/#Events-off">off</a>&rdquo;.</p>
+
+<p>Les évènements sont gérés sous la forme d&rsquo;un modèle de conception très bien connu aujourd&rsquo;hui, le modèle Publish / Subscribe (Producteur / Consommateur).
+Le bus de dispatch utilisé pour la communication entre les composants se nomme le <strong>médiateur</strong>.</p>
+
+<p>Tous les concepts de Backbone.JS peuvent être à la fois producteur et consommateur. Cependant certains concepts possèdent des mécanismes déjà implémentés de publication.
+Il n&rsquo;y a pas de consommateur par défaut.</p>
+
+<h3 id="les-modèles-backbone-model-http-documentcloud-github-com-backbone-model">Les modèles : <a href="http://documentcloud.github.com/backbone/#Model">Backbone.Model</a></h3>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#815ba4">var</span> <span style="color:#06b6ef">Sidebar</span> <span style="color:#5bc4bf">=</span> <span style="color:#06b6ef">Backbone</span>.<span style="color:#06b6ef">Model</span>.<span style="color:#06b6ef">extend</span>({
+  <span style="color:#06b6ef">promptColor</span><span style="color:#5bc4bf">:</span> <span style="color:#815ba4">function</span>() {
+    <span style="color:#815ba4">var</span> <span style="color:#06b6ef">cssColor</span> <span style="color:#5bc4bf">=</span> <span style="color:#06b6ef">prompt</span>(<span style="color:#48b685">&#34;Please enter a CSS color:&#34;</span>);
+    <span style="color:#776e71">// Publication de l&#39;évènement &#34;change:color&#34;
+</span><span style="color:#776e71"></span>    <span style="color:#815ba4">this</span>.<span style="color:#06b6ef">set</span>({<span style="color:#06b6ef">color</span><span style="color:#5bc4bf">:</span> <span style="color:#06b6ef">cssColor</span>});
+  }
+});
+
+window.<span style="color:#06b6ef">sidebar</span> <span style="color:#5bc4bf">=</span> <span style="color:#815ba4">new</span> <span style="color:#06b6ef">Sidebar</span>;
+
+<span style="color:#776e71">// Enregistre un callback, sur l&#39;évènement &#34;change:color&#34;, la fonction
+</span><span style="color:#776e71">// sera appelée dès que quelqu&#39;un publiera l&#39;évènement.
+</span><span style="color:#776e71"></span><span style="color:#06b6ef">sidebar</span>.<span style="color:#06b6ef">on</span>(<span style="color:#48b685">&#39;change:color&#39;</span>, <span style="color:#815ba4">function</span>(<span style="color:#06b6ef">model</span>, <span style="color:#06b6ef">color</span>) {
+  <span style="color:#06b6ef">$</span>(<span style="color:#48b685">&#39;#sidebar&#39;</span>).<span style="color:#06b6ef">css</span>({<span style="color:#06b6ef">background</span><span style="color:#5bc4bf">:</span> <span style="color:#06b6ef">color</span>});
+});
+
+<span style="color:#776e71">// Modification de l&#39;attribut, publication automatique de l&#39;évènement
+</span><span style="color:#776e71">// &#34;change:&lt;attribute-name&gt;&#34;.
+</span><span style="color:#776e71"></span><span style="color:#06b6ef">sidebar</span>.<span style="color:#06b6ef">set</span>({<span style="color:#06b6ef">color</span><span style="color:#5bc4bf">:</span> <span style="color:#48b685">&#39;white&#39;</span>});
+
+<span style="color:#776e71">// On demande une couleur
+</span><span style="color:#776e71"></span><span style="color:#06b6ef">sidebar</span>.<span style="color:#06b6ef">promptColor</span>();
+
+<span style="color:#776e71">// On annule toutes les inscriptions sur l&#39;évènement
+</span><span style="color:#776e71"></span><span style="color:#06b6ef">sidebar</span>.<span style="color:#06b6ef">off</span>(<span style="color:#48b685">&#39;change:color&#39;</span>);</code></pre></div>
+<table class="inpost">
+    <thead>
+        <tr><th style="width:7em">Evènements</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr><td>change:attribute</td><td>Emis lors de la modification d'un attribut du modèle.</td></tr>
+        <tr><td>error</td><td>Emis par la validation du modèle s'il y a des erreurs.</td></tr>
+        <tr><td>destroy</td><td>Emis quand l'objet a été détruit.</td></tr>
+        <tr><td>sync</td><td>Emis quand l'objet a été synchronisé.</td></tr>
+    </tbody>
+</table>
+
+<h3 id="les-collections-backbone-collection-http-documentcloud-github-com-backbone-collection">Les collections : <a href="http://documentcloud.github.com/backbone/#Collection">Backbone.Collection</a></h3>
+
+<p>Par convention, tous les évènements émis d&rsquo;un modèle peuvent être capturé par la collection.</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#815ba4">var</span> <span style="color:#06b6ef">ships</span> <span style="color:#5bc4bf">=</span> <span style="color:#815ba4">new</span> <span style="color:#06b6ef">Backbone</span>.<span style="color:#06b6ef">Collection</span>;
+
+<span style="color:#06b6ef">ships</span>.<span style="color:#06b6ef">on</span>(<span style="color:#48b685">&#34;add&#34;</span>, <span style="color:#815ba4">function</span>(<span style="color:#06b6ef">ship</span>) {
+  <span style="color:#06b6ef">alert</span>(<span style="color:#48b685">&#34;Ahoy &#34;</span> <span style="color:#5bc4bf">+</span> <span style="color:#06b6ef">ship</span>.<span style="color:#06b6ef">get</span>(<span style="color:#48b685">&#34;name&#34;</span>) <span style="color:#5bc4bf">+</span> <span style="color:#48b685">&#34;!&#34;</span>);
+});
+
+<span style="color:#06b6ef">ships</span>.<span style="color:#06b6ef">add</span>([
+  {<span style="color:#06b6ef">name</span><span style="color:#5bc4bf">:</span> <span style="color:#48b685">&#34;Flying Dutchman&#34;</span>},
+  {<span style="color:#06b6ef">name</span><span style="color:#5bc4bf">:</span> <span style="color:#48b685">&#34;Black Pearl&#34;</span>}
+]);</code></pre></div>
+<table class="inpost">
+    <thead>
+        <tr><th style="width:7em">Evènements</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr><td>add</td><td>Emis lors de l'ajout d'un modèle à la collection.</td></tr>
+        <tr><td>remove</td><td>Emis lors de la suppression d'un modèle de la collection.</td></tr>
+        <tr><td>reset</td><td>Emis lors de la réinitialisation de la collection.</td></tr>
+    </tbody>
+</table>
+
+<h3 id="les-routeurs-backbone-router-http-documentcloud-github-com-backbone-router">Les routeurs : <a href="http://documentcloud.github.com/backbone/#Router">Backbone.Router</a></h3>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#815ba4">var</span> <span style="color:#06b6ef">Workspace</span> <span style="color:#5bc4bf">=</span> <span style="color:#06b6ef">Backbone</span>.<span style="color:#06b6ef">Router</span>.<span style="color:#06b6ef">extend</span>({
+
+  <span style="color:#06b6ef">routes</span><span style="color:#5bc4bf">:</span> {
+    <span style="color:#48b685">&#34;help&#34;</span><span style="color:#5bc4bf">:</span>                 <span style="color:#48b685">&#34;help&#34;</span>,    <span style="color:#776e71">// #help
+</span><span style="color:#776e71"></span>    <span style="color:#48b685">&#34;search/:query&#34;</span><span style="color:#5bc4bf">:</span>        <span style="color:#48b685">&#34;search&#34;</span>,  <span style="color:#776e71">// #search/kiwis
+</span><span style="color:#776e71"></span>    <span style="color:#48b685">&#34;search/:query/p:page&#34;</span><span style="color:#5bc4bf">:</span> <span style="color:#48b685">&#34;search&#34;</span>   <span style="color:#776e71">// #search/kiwis/p7
+</span><span style="color:#776e71"></span>  },
+
+  <span style="color:#06b6ef">help</span><span style="color:#5bc4bf">:</span> <span style="color:#815ba4">function</span>() {
+    ...
+  },
+
+  <span style="color:#06b6ef">search</span><span style="color:#5bc4bf">:</span> <span style="color:#815ba4">function</span>(<span style="color:#06b6ef">query</span>, <span style="color:#06b6ef">page</span>) {
+    ...
+  }
+
+});
+
+<span style="color:#06b6ef">router</span>.<span style="color:#06b6ef">on</span>(<span style="color:#48b685">&#34;route:help&#34;</span>, <span style="color:#815ba4">function</span>(<span style="color:#06b6ef">page</span>) {
+  ...
+});</code></pre></div>
+<table class="inpost">
+    <thead>
+        <tr><th style="width:7em">Evènements</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr><td>route:&lt;name&gt;</td><td>Emis lors de l'activation de la route "name".</td></tr>
+    </tbody>
+</table>
+
+<h3 id="les-vues-backbone-view-http-documentcloud-github-com-backbone-view">Les vues : <a href="http://documentcloud.github.com/backbone/#View">Backbone.View</a></h3>
+
+<p>Les évènements de la vue sont un peu particuliers car ils symbolisent des actions DOM (click, mouseOver, etc.)</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#815ba4">var</span> <span style="color:#06b6ef">DocumentView</span> <span style="color:#5bc4bf">=</span> <span style="color:#06b6ef">Backbone</span>.<span style="color:#06b6ef">View</span>.<span style="color:#06b6ef">extend</span>({
+
+  <span style="color:#06b6ef">events</span><span style="color:#5bc4bf">:</span> {
+    <span style="color:#776e71">// Appel &#34;open&#34; s&#39;il y a un doubleclick sur l&#39;élément contenant la vue
+</span><span style="color:#776e71"></span>    <span style="color:#48b685">&#34;dblclick&#34;</span>                <span style="color:#5bc4bf">:</span> <span style="color:#48b685">&#34;open&#34;</span>,
+    <span style="color:#776e71">// Appel &#34;select&#34; s&#39;il y a un click gauche sur les sous éléments du contenant
+</span><span style="color:#776e71"></span>    <span style="color:#776e71">// dont la classe est &#34;doc&#34; et sont fils d&#39;élements dont la classe est
+</span><span style="color:#776e71"></span>    <span style="color:#776e71">// .icon
+</span><span style="color:#776e71"></span>    <span style="color:#48b685">&#34;click .icon.doc&#34;</span>         <span style="color:#5bc4bf">:</span> <span style="color:#48b685">&#34;select&#34;</span>,
+    <span style="color:#776e71">// Appel &#34;showMenu&#34; sur un click droit
+</span><span style="color:#776e71"></span>    <span style="color:#48b685">&#34;contextmenu .icon.doc&#34;</span>   <span style="color:#5bc4bf">:</span> <span style="color:#48b685">&#34;showMenu&#34;</span>,
+    <span style="color:#48b685">&#34;click .show_notes&#34;</span>       <span style="color:#5bc4bf">:</span> <span style="color:#48b685">&#34;toggleNotes&#34;</span>,
+    <span style="color:#48b685">&#34;click .title .lock&#34;</span>      <span style="color:#5bc4bf">:</span> <span style="color:#48b685">&#34;editAccessLevel&#34;</span>,
+    <span style="color:#776e71">// Appel &#34;showTooltip&#34; lorsque la souris se trouve sur l&#39;élément sélectionné
+</span><span style="color:#776e71"></span>    <span style="color:#48b685">&#34;mouseover .title .date&#34;</span>  <span style="color:#5bc4bf">:</span> <span style="color:#48b685">&#34;showTooltip&#34;</span>
+  },
+
+  <span style="color:#06b6ef">initialize</span><span style="color:#5bc4bf">:</span> <span style="color:#815ba4">function</span>() {
+  	<span style="color:#776e71">// Très importante cette ligne, elle permet de définir le this dans les fonctions
+</span><span style="color:#776e71"></span>  	<span style="color:#776e71">// callback, n&#39;oubliez pas tout est asynchrone, donc le this n&#39;est pas forcément
+</span><span style="color:#776e71"></span>  	<span style="color:#776e71">// celui qu&#39;on croit quand on l&#39;utilise.
+</span><span style="color:#776e71"></span>  	<span style="color:#06b6ef">_</span>.<span style="color:#06b6ef">bindAll</span>(<span style="color:#815ba4">this</span>, <span style="color:#48b685">&#34;render&#34;</span>,<span style="color:#48b685">&#34;open&#34;</span>,<span style="color:#48b685">&#34;select&#34;</span>);
+  },
+
+  <span style="color:#06b6ef">render</span><span style="color:#5bc4bf">:</span> <span style="color:#815ba4">function</span>() {
+    <span style="color:#06b6ef">$</span>(<span style="color:#815ba4">this</span>.<span style="color:#06b6ef">el</span>).<span style="color:#06b6ef">html</span>(<span style="color:#815ba4">this</span>.<span style="color:#06b6ef">template</span>(<span style="color:#815ba4">this</span>.<span style="color:#06b6ef">model</span>.<span style="color:#06b6ef">toJSON</span>()));
+    <span style="color:#815ba4">return</span> <span style="color:#815ba4">this</span>;
+  },
+
+  <span style="color:#06b6ef">open</span><span style="color:#5bc4bf">:</span> <span style="color:#815ba4">function</span>() {
+    window.<span style="color:#06b6ef">open</span>(<span style="color:#815ba4">this</span>.<span style="color:#06b6ef">model</span>.<span style="color:#06b6ef">get</span>(<span style="color:#48b685">&#34;viewer_url&#34;</span>));
+  },
+
+  <span style="color:#06b6ef">select</span><span style="color:#5bc4bf">:</span> <span style="color:#815ba4">function</span>() {
+    <span style="color:#815ba4">this</span>.<span style="color:#06b6ef">model</span>.<span style="color:#06b6ef">set</span>({<span style="color:#06b6ef">selected</span><span style="color:#5bc4bf">:</span> <span style="color:#815ba4">true</span>});
+  },
+
+  ...
+
+});</code></pre></div>
+<h3 id="les-évènements-personnalisés-backbone-events-http-documentcloud-github-com-backbone-events">Les évènements personnalisés : <a href="http://documentcloud.github.com/backbone/#Events">Backbone.Events</a></h3>
+
+<p>Il est tout à fait possible d&rsquo;ajouter des évènements à tous les objets en utilisant le Mixin Events.</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#815ba4">var</span> <span style="color:#06b6ef">object</span> <span style="color:#5bc4bf">=</span> {};
+
+<span style="color:#06b6ef">_</span>.<span style="color:#06b6ef">extend</span>(<span style="color:#06b6ef">object</span>, <span style="color:#06b6ef">Backbone</span>.<span style="color:#06b6ef">Events</span>);
+
+<span style="color:#06b6ef">object</span>.<span style="color:#06b6ef">on</span>(<span style="color:#48b685">&#34;alert&#34;</span>, <span style="color:#815ba4">function</span>(<span style="color:#06b6ef">msg</span>) {
+  <span style="color:#06b6ef">alert</span>(<span style="color:#48b685">&#34;Triggered &#34;</span> <span style="color:#5bc4bf">+</span> <span style="color:#06b6ef">msg</span>);
+});
+
+<span style="color:#06b6ef">object</span>.<span style="color:#06b6ef">trigger</span>(<span style="color:#48b685">&#34;alert&#34;</span>, <span style="color:#48b685">&#34;an event&#34;</span>);</code></pre></div>
+<p>Tout d&rsquo;abord qu&rsquo;est qu&rsquo;un <a href="http://en.wikipedia.org/wiki/Mixin">mixin</a> ? Comme son nom l&rsquo;indique, il s&rsquo;agit d&rsquo;une chose (un objet) qui pourra être mélangé à un autre. Alors vous me direz, &ldquo;ok mais et l&rsquo;héritage alors ?&rdquo;, et bien si y a deux termes c&rsquo;est que (normalement) il y a des différences.</p>
+
+<p>Un héritage sert à rendre commun un morceau de code, des propriétés à toute un hiérarchie, alors qu&rsquo;un mixin peut être utilisé sur des objets qui n&rsquo;ont pas forcément de rapport.</p>
+
+<p>Bref, pour revenir à nos moutons, Backbone.Events est un mixin, que l&rsquo;on peut injecter dans n&rsquo;importe quel objet JS.</p>
+
+<p>D&rsquo;ailleurs, il est fort conseillé si vous utilisez les Events, de définir votre propre  <strong>médiateur</strong>. Et pour une approche, modulaire et extensible de votre application, vous pouvez utiliser ce qu&rsquo;on appelle un <a href="http://lostechies.com/derickbailey/2011/07/19/references-routing-and-the-event-aggregator-coordinating-views-in-backbone-js/">&ldquo;Event Aggregator&rdquo;</a>.</p>
+
+<h3 id="event-aggregator-pattern">Event Aggregator Pattern</h3>
+
+<p>Ou comment découpler au maximum les objets et leurs interactions.</p>
+<div class="highlight"><pre style="color:#e7e9db;background-color:#2f1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#815ba4">var</span> <span style="color:#06b6ef">AddEditView</span> <span style="color:#5bc4bf">=</span> <span style="color:#06b6ef">Backbone</span>.<span style="color:#06b6ef">View</span>.<span style="color:#06b6ef">extend</span>({
+
+  <span style="color:#776e71">// On initialise la vue avec le ventilator
+</span><span style="color:#776e71"></span>  <span style="color:#06b6ef">initialize</span><span style="color:#5bc4bf">:</span> <span style="color:#815ba4">function</span>(<span style="color:#06b6ef">options</span>){
+    <span style="color:#06b6ef">_</span>.<span style="color:#06b6ef">bindAll</span>(<span style="color:#815ba4">this</span>, <span style="color:#48b685">&#34;editMedication&#34;</span>);
+
+    <span style="color:#776e71">// On connecte un évènement &#34;editMedication&#34;
+</span><span style="color:#776e71"></span>    <span style="color:#06b6ef">options</span>.<span style="color:#06b6ef">vent</span>.<span style="color:#06b6ef">bind</span>(<span style="color:#48b685">&#34;editMedication&#34;</span>, <span style="color:#815ba4">this</span>.<span style="color:#06b6ef">editMedication</span>);
+  },
+
+  <span style="color:#06b6ef">editMedication</span><span style="color:#5bc4bf">:</span> <span style="color:#815ba4">function</span>(<span style="color:#06b6ef">medication</span>){
+    <span style="color:#815ba4">this</span>.<span style="color:#06b6ef">model</span> <span style="color:#5bc4bf">=</span> <span style="color:#06b6ef">medication</span>;
+    <span style="color:#815ba4">this</span>.<span style="color:#06b6ef">render</span>();
+  }
+});
+
+<span style="color:#815ba4">var</span> <span style="color:#06b6ef">MedicationView</span> <span style="color:#5bc4bf">=</span> <span style="color:#06b6ef">Backbone</span>.<span style="color:#06b6ef">View</span>.<span style="color:#06b6ef">extend</span>({
+  <span style="color:#06b6ef">events</span><span style="color:#5bc4bf">:</span> {
+    <span style="color:#48b685">&#34;click #edit&#34;</span><span style="color:#5bc4bf">:</span> <span style="color:#48b685">&#34;editMedication&#34;</span>
+  },
+
+  <span style="color:#776e71">// On initialise la vue avec le ventilator
+</span><span style="color:#776e71"></span>  <span style="color:#06b6ef">initialize</span><span style="color:#5bc4bf">:</span> <span style="color:#815ba4">function</span>(<span style="color:#06b6ef">options</span>){
+    <span style="color:#815ba4">this</span>.<span style="color:#06b6ef">vent</span> <span style="color:#5bc4bf">=</span> <span style="color:#06b6ef">options</span>.<span style="color:#06b6ef">vent</span>;
+  },
+
+  <span style="color:#776e71">// On envoie des évènements au ventilator, qui se chargera
+</span><span style="color:#776e71"></span>  <span style="color:#776e71">// de distribuer aux destinataires le message.
+</span><span style="color:#776e71"></span>  <span style="color:#06b6ef">editMedication</span><span style="color:#5bc4bf">:</span> <span style="color:#815ba4">function</span>(){
+    <span style="color:#776e71">// Un évènement est émis via le ventilator &#34;editMedication&#34;
+</span><span style="color:#776e71"></span>    <span style="color:#815ba4">this</span>.<span style="color:#06b6ef">vent</span>.<span style="color:#06b6ef">trigger</span>(<span style="color:#48b685">&#34;editMedication&#34;</span>, <span style="color:#815ba4">this</span>.<span style="color:#06b6ef">model</span>);
+  }
+});
+
+<span style="color:#776e71">// Initialisation de l&#39;application, et connexion des évènements
+</span><span style="color:#776e71">// en utilisant l&#34;event aggregator&#34;.
+</span><span style="color:#776e71"></span>
+<span style="color:#815ba4">var</span> <span style="color:#06b6ef">vent</span> <span style="color:#5bc4bf">=</span> <span style="color:#06b6ef">_</span>.<span style="color:#06b6ef">extend</span>({}, <span style="color:#06b6ef">Backbone</span>.<span style="color:#06b6ef">Events</span>);
+
+<span style="color:#815ba4">var</span> <span style="color:#06b6ef">addEditView</span> <span style="color:#5bc4bf">=</span> <span style="color:#815ba4">new</span> <span style="color:#06b6ef">AddEditView</span>({<span style="color:#06b6ef">vent</span><span style="color:#5bc4bf">:</span> <span style="color:#06b6ef">vent</span>});
+
+<span style="color:#06b6ef">medicationList</span>.<span style="color:#06b6ef">each</span>(<span style="color:#815ba4">function</span>(<span style="color:#06b6ef">med</span>){
+  <span style="color:#815ba4">new</span> <span style="color:#06b6ef">MedicationView</span>({<span style="color:#06b6ef">model</span><span style="color:#5bc4bf">:</span> <span style="color:#06b6ef">med</span>, <span style="color:#06b6ef">vent</span><span style="color:#5bc4bf">:</span> <span style="color:#06b6ef">vent</span>});
+});</code></pre></div>
+<p>Cette dernière partie est un peu brutale, je sais, mais c&rsquo;est pour finir en beauté. Comme je l&rsquo;ai déjà dit, le principal avantage de Backbone.JS, c&rsquo;est de fournir à l&rsquo;utilisateur un moyen de bien développer, par la structuration du code, les concepts de séparation de responsabilité, etc.</p>
+
+<p>Cela permet aussi d&rsquo;utiliser des patrons de conception déjà éprouvés dans le monde de l&rsquo;informatique au sein du navigateur (et aussi du serveur) avec JavaScript.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Voila cet article terminé sur la gestion des évènements Backbone.JS. Comme toujours, j&rsquo;espère avoir été clair, enfin plus clair que la documentation sur le sujet, ou au moins avoir levé un peu du voile que l&rsquo;on affronte quand on arrive sur Backbone et tous les JS friends.</p>
+
+<p>Mon prochain article parlera de l&rsquo;utilisation de CoffeeScript avec Backbone.JS, pour simplifier l&rsquo;écriture du code.</p>
+
+<p>Bonne soirée à toutes et à tous.</p>
+
+<p>PS : Un grand merci à <a href="http://jekyllrb.com/">jekyll</a>, <a href="http://octopress.org/">octopress</a> et Git, qui rendent l&rsquo;écriture des articles sur mon blog vraiment agréable.</p>
+</div>
+
+    
+    
+
+    
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">Geo Joy &copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> hosted on <a href="https://github.com/Geo-Joy/geo-joy.github.io">Github</a></p>
+
+        </footer>
+        
+       <script async="" src="https://geojoy.mejs/main.js"></script>
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KQ3JDPK');</script>
+
+
+    </body>
+
+</html>
+

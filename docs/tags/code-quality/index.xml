@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Code Quality on Geo&#39;z Blog</title>
+    <link>https://geojoy.me/tags/code-quality/</link>
+    <description>Recent content in Code Quality on Geo&#39;z Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 28 Mar 2008 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://geojoy.me/tags/code-quality/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Une autre dans le même esprit.</title>
+      <link>https://geojoy.me/post---copy/une-autre-dans-le-meme-esprit/</link>
+      <pubDate>Fri, 28 Mar 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/une-autre-dans-le-meme-esprit/</guid>
+      <description>Je suis en pleine période : analyse statique, complexité cyclomatique, etc &amp;hellip; .
+[WTF = What the fuck =&amp;gt; Mais c&amp;rsquo;est quoi cette m&amp;hellip; (dans ce contexte)]</description>
+    </item>
+    
+  </channel>
+</rss>

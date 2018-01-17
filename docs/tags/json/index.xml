@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Json on Geo&#39;z Blog</title>
+    <link>https://geojoy.me/tags/json/</link>
+    <description>Recent content in Json on Geo&#39;z Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 20 Feb 2008 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://geojoy.me/tags/json/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Xul &#43; Rails = Wouaouh</title>
+      <link>https://geojoy.me/post---copy/xul-rails-wouaouh/</link>
+      <pubDate>Wed, 20 Feb 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/xul-rails-wouaouh/</guid>
+      <description>Je cherchais à faire une application dite &amp;ldquo;Web 2.0&amp;rdquo; mais avec une interface type &amp;ldquo;Desktop&amp;rdquo;, c&amp;rsquo;est à ce moment que j&amp;rsquo;ai découvert les RDA (Rich Desktop Application). Le principe est d&amp;rsquo;apporter les avantages d&amp;rsquo;une application Web sur le bureau de l&amp;rsquo;utilisateur. Cela permet une meilleure intégration de celle-ci avec le systême client. J&amp;rsquo;ai donc cherché les technologies d&amp;rsquo;application de ce concept. A l&amp;rsquo;appel :
+ Apollo (AIR Adobe) Flex (Adobe aussi) XUL (Mozilla)  Mon choix c&amp;rsquo;est arrété sur Xul, car peu de publicité et surtout ouvert !</description>
+    </item>
+    
+  </channel>
+</rss>

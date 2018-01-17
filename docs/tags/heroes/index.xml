@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Heroes on Geo&#39;z Blog</title>
+    <link>https://geojoy.me/tags/heroes/</link>
+    <description>Recent content in Heroes on Geo&#39;z Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 13 Sep 2007 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://geojoy.me/tags/heroes/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Everyone has heroes no ?</title>
+      <link>https://geojoy.me/post---copy/everyone-has-heroes-no/</link>
+      <pubDate>Thu, 13 Sep 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/everyone-has-heroes-no/</guid>
+      <description>Voici les photographies des &amp;ldquo;héros&amp;rdquo; de l&amp;rsquo;informatique.
+http://www.seo-expert-blog.com/blog/geeks-are-sexy</description>
+    </item>
+    
+  </channel>
+</rss>

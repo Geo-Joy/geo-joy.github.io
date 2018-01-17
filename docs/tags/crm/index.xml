@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Crm on Geo&#39;z Blog</title>
+    <link>https://geojoy.me/tags/crm/</link>
+    <description>Recent content in Crm on Geo&#39;z Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 29 Aug 2007 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://geojoy.me/tags/crm/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>vTiger : Module Project</title>
+      <link>https://geojoy.me/post---copy/vtiger-module-project/</link>
+      <pubDate>Wed, 29 Aug 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/vtiger-module-project/</guid>
+      <description>During my training period i had to install vTigerCRM with Project management module, but it&amp;rsquo;s not compatible with PHP 5.2.X, so i made a patch ^^
+Download the patch
+Pendant mon stage j&amp;rsquo;ai du mettre en place un système CRM (Customer Relationship Manager) basé sur vTigerCRM, cependant le module de gestion de projet n&amp;rsquo;est pas compatible avec la version 5.2.X de PHP. Donc voici le patch ^^
+Télécharger le patch</description>
+    </item>
+    
+  </channel>
+</rss>

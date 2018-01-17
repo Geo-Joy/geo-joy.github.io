@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kuisine on Geo&#39;z Blog</title>
+    <link>https://geojoy.me/tags/kuisine/</link>
+    <description>Recent content in Kuisine on Geo&#39;z Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 02 Dec 2007 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://geojoy.me/tags/kuisine/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>RoR - Tutoriel 1 : Installation</title>
+      <link>https://geojoy.me/post---copy/ror-tutoriel-1-installation/</link>
+      <pubDate>Sun, 02 Dec 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/ror-tutoriel-1-installation/</guid>
+      <description>Ce tutoriel traite de la mise en place d&amp;rsquo;un serveur d&amp;rsquo;application Ruby on Rails. Nous allons écrire un logiciel de gestion de recettes de cuisine (Kuisine ^^) mais en ruby avec RoR, au menu :
+ Installation, et mise en service de votre première application RoR Déploiement de la base de données (MySQL, SqlLite3) Conception du modèle métier Génération des contrôleurs et des vues Personnalisation de l&amp;rsquo;interface (vues) utilisateurs Utiliation de plugin (OpenID, AjaxScaffold, etc &amp;hellip;)  Chapitre 1 : Installation, et mise en service de votre première application RoR Pour faire fonctionner ruby on rails sur votre environnement de developpement, vous devez dans un premier temps disposer de l&amp;rsquo;interpréteur Ruby Ruby on Rails</description>
+    </item>
+    
+    <item>
+      <title>Kuisine : KDE &#34;meat&#34; Cuisine</title>
+      <link>https://geojoy.me/post---copy/kuisine-kde-meat-cuisine/</link>
+      <pubDate>Fri, 31 Aug 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/kuisine-kde-meat-cuisine/</guid>
+      <description>N&amp;rsquo;avez vous pas raz le bol de manger toujours pareil, de ne pas savoir quoi manger alors qu&amp;rsquo;il y a matière dans votre réfrigérateur (ou celui de votre voisin ^^), ou peu de temps pour préparer ?
+Pourquoi ne pas avoir un programme dans lequel on entre les ingrédients, le temps disponible, et celui ci vous propose une recette vite faite avec historique pour éviter la &amp;ldquo;redondance cuisinique&amp;rdquo; (lol).
+Je vois bien une interface Kuisine (KDE + Cuisine), qui serait un client à un webservice qui fournirait les recettes à une base de données hors ligne, mais qui pourrait être agrémentée par les utilisateurs.</description>
+    </item>
+    
+  </channel>
+</rss>

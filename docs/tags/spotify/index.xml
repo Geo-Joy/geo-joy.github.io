@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Spotify on Geo&#39;z Blog</title>
+    <link>https://geojoy.me/tags/spotify/</link>
+    <description>Recent content in Spotify on Geo&#39;z Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 17 Jan 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://geojoy.me/tags/spotify/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Test1</title>
+      <link>https://geojoy.me/post/2018/01/17/test-description/</link>
+      <pubDate>Wed, 17 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post/2018/01/17/test-description/</guid>
+      <description>Hello! Welcome to my blog! Please come back some other time when I&amp;rsquo;ve written something worth yout time.</description>
+    </item>
+    
+    <item>
+      <title>Spotify your Mopidy</title>
+      <link>https://geojoy.me/post---copy/spotify-your-mopidy/</link>
+      <pubDate>Mon, 12 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/spotify-your-mopidy/</guid>
+      <description>Mopidy est un serveur de musique, il permet de lancer de la musique via un protocole de communication et d&amp;rsquo;une application cliente (Desktop, Mobile, etc.). La musique peut provenir d&amp;rsquo;un disque, d&amp;rsquo;un stream radio ou d&amp;rsquo;un flux cloud (Spotify, SoundCloud, Google Play Music).
+Vous pouvez par exemple l&amp;rsquo;utiliser sur un mini PC (RPI, ODROID, etc.) connecté à votre kit son domestique, pour diffuser de la musique sans avoir un ordinateur allumé.</description>
+    </item>
+    
+  </channel>
+</rss>

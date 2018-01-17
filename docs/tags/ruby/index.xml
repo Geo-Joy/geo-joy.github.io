@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ruby on Geo&#39;z Blog</title>
+    <link>https://geojoy.me/tags/ruby/</link>
+    <description>Recent content in Ruby on Geo&#39;z Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 12 May 2008 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://geojoy.me/tags/ruby/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ruby on Rails = Ruby &#43; Rails</title>
+      <link>https://geojoy.me/post---copy/ruby-on-rails-ruby-rails/</link>
+      <pubDate>Mon, 12 May 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/ruby-on-rails-ruby-rails/</guid>
+      <description>Je suis en train d&amp;rsquo;écrire ma présentation pour le 28 mai à Toulibre, et voici ce qu&amp;rsquo;on peut trouver sur le web :
+ Ruby est un langage, et Rails un environnement de travail pour Ruby Le nom Ruby n&amp;rsquo;est pas un acronyme mais un jeu de mots sur Perl. Ruby est un langage de script entièrement orienté objet. Il est relativement récent (première version publiée en 1995), ce qui lui permet de s&amp;rsquo;affranchir des lourdeurs syntaxiques des langages héritant du C (tels Java, C#, Perl, PHP&amp;hellip;).</description>
+    </item>
+    
+    <item>
+      <title>Acts as metamodel</title>
+      <link>https://geojoy.me/post---copy/acts-as-metamodel/</link>
+      <pubDate>Sun, 27 Jan 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/acts-as-metamodel/</guid>
+      <description>Voici mon premier plugin pour ruby / rails : acts_as_metamodel. Le but de ce plugin est de fournir la possibilité d&amp;rsquo;avoir un modèle dynamique, et non pas statiquement définit lors de la création. Il offre la possibilité de modifier le modèle pendant son utilisation, tout en assurant la persistance de la modification, et des informations associées aux attributs virtuels.
+Acts as metamodel sur RubyForge</description>
+    </item>
+    
+    <item>
+      <title>Gof en Ruby</title>
+      <link>https://geojoy.me/post---copy/gof-en-ruby/</link>
+      <pubDate>Thu, 24 Jan 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/gof-en-ruby/</guid>
+      <description>Voici un document très utile surtout en ce moment pour moi ^^, l&amp;rsquo;implémentation du gof (bible des &amp;ldquo;design patterns&amp;rdquo;) mais en ruby, avec pour chaque DP un exemple.
+Plus d&amp;rsquo;informations</description>
+    </item>
+    
+    <item>
+      <title>RoR - Tutoriel 1 : Installation</title>
+      <link>https://geojoy.me/post---copy/ror-tutoriel-1-installation/</link>
+      <pubDate>Sun, 02 Dec 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/ror-tutoriel-1-installation/</guid>
+      <description>Ce tutoriel traite de la mise en place d&amp;rsquo;un serveur d&amp;rsquo;application Ruby on Rails. Nous allons écrire un logiciel de gestion de recettes de cuisine (Kuisine ^^) mais en ruby avec RoR, au menu :
+ Installation, et mise en service de votre première application RoR Déploiement de la base de données (MySQL, SqlLite3) Conception du modèle métier Génération des contrôleurs et des vues Personnalisation de l&amp;rsquo;interface (vues) utilisateurs Utiliation de plugin (OpenID, AjaxScaffold, etc &amp;hellip;)  Chapitre 1 : Installation, et mise en service de votre première application RoR Pour faire fonctionner ruby on rails sur votre environnement de developpement, vous devez dans un premier temps disposer de l&amp;rsquo;interpréteur Ruby Ruby on Rails</description>
+    </item>
+    
+    <item>
+      <title>Du dévelopement sur des rails !</title>
+      <link>https://geojoy.me/post---copy/du-developement-sur-des-rails/</link>
+      <pubDate>Thu, 15 Nov 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/du-developement-sur-des-rails/</guid>
+      <description>Je suis en train de lire le hors série N° 33 de Linux Magazine traitant de RoR (Ruby on Rails), c&amp;rsquo;est monstrueux ce framework, en moins de 5 minutes, on a une application Web dîtes 2.0 (Ajax, Xml, etc &amp;hellip;) avec très peu de lignes de codes. Beaucoup de génération, et peu de bidouillages ^^
+Ce qui est vraiment pas mal, ce le dispositif clé en main, &amp;ldquo;setup, start, and use&amp;rdquo; pour une application web.</description>
+    </item>
+    
+  </channel>
+</rss>

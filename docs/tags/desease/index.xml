@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Desease on Geo&#39;z Blog</title>
+    <link>https://geojoy.me/tags/desease/</link>
+    <description>Recent content in Desease on Geo&#39;z Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 13 Oct 2008 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://geojoy.me/tags/desease/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Sortie de Damn Vulnerable Linux 1.5</title>
+      <link>https://geojoy.me/post---copy/sortie-de-damn-vulnerable-linux-15/</link>
+      <pubDate>Mon, 13 Oct 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/sortie-de-damn-vulnerable-linux-15/</guid>
+      <description>Infectious Desease (Community Edition) is now final. We fixed several bugs and added some more development tools. Now included Lazarus IDE for Free Pascal, ArgoUML, BlueJ to teach Java. As well we updated the Firefox plugins and the Metasploit Database. We will inform now the Mirrors and will release finally to public in 1-2 weeks. From now on we will concentrate on training, videos and extension packages.
+ Je ne l&amp;rsquo;ai pas encore testé, on verra ce soir ^^</description>
+    </item>
+    
+  </channel>
+</rss>

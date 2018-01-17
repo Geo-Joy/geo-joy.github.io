@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cyber on Geo&#39;z Blog</title>
+    <link>https://geojoy.me/tags/cyber/</link>
+    <description>Recent content in Cyber on Geo&#39;z Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 13 Apr 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://geojoy.me/tags/cyber/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>La &#39;Threat Intelligence&#39; technique: Attention !</title>
+      <link>https://geojoy.me/post---copy/threat-intelligence/</link>
+      <pubDate>Thu, 13 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/threat-intelligence/</guid>
+      <description>Je travaille dans le domaine de la cybersécurité dans l&amp;rsquo;objectif de réaliser des produits pour une entreprise fournissant des services autour de la cybersécurité.
+J&amp;rsquo;ai réalisé un certains nombre de produits visant à outiller un SOC (Security Operations Center), et un CERT (Computer Emergency Response Team) de cette même société.
+Lors de la réalisation des services, j&amp;rsquo;ai été confronté à la demande de pouvoir aggréger de l&amp;rsquo;information provenant de sources diverses et variées, et de confiance tout autant diverse et variée, afin de faciliter les intégrations dans les équipements sécurité, ainsi que l&amp;rsquo;interrogation de dépôt de données.</description>
+    </item>
+    
+  </channel>
+</rss>

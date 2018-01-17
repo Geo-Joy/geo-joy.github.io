@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gof on Geo&#39;z Blog</title>
+    <link>https://geojoy.me/tags/gof/</link>
+    <description>Recent content in Gof on Geo&#39;z Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 08 Aug 2008 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://geojoy.me/tags/gof/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Design Patterns Cheat Sheet</title>
+      <link>https://geojoy.me/post---copy/design-patterns-cheat-sheet/</link>
+      <pubDate>Fri, 08 Aug 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/design-patterns-cheat-sheet/</guid>
+      <description>On va encore dire que je suis obsédé par les &amp;ldquo;design patterns&amp;rdquo; je sais ! Mais bon j&amp;rsquo;ai toujours pas trouvé une fiche avec les DP bien présentés, je sens que je vais en faire une comme ça, j&amp;rsquo;aurais ce que je veux &amp;hellip;
+En attendant en voici une qui s&amp;rsquo;approche de ce que je souhaite.
+[ PDF ]</description>
+    </item>
+    
+    <item>
+      <title>Gof en Ruby</title>
+      <link>https://geojoy.me/post---copy/gof-en-ruby/</link>
+      <pubDate>Thu, 24 Jan 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/gof-en-ruby/</guid>
+      <description>Voici un document très utile surtout en ce moment pour moi ^^, l&amp;rsquo;implémentation du gof (bible des &amp;ldquo;design patterns&amp;rdquo;) mais en ruby, avec pour chaque DP un exemple.
+Plus d&amp;rsquo;informations</description>
+    </item>
+    
+  </channel>
+</rss>

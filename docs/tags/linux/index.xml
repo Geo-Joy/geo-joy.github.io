@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on Geo&#39;z Blog</title>
+    <link>https://geojoy.me/tags/linux/</link>
+    <description>Recent content in Linux on Geo&#39;z Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 17 Jan 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://geojoy.me/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Test1</title>
+      <link>https://geojoy.me/post/2018/01/17/test-description/</link>
+      <pubDate>Wed, 17 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post/2018/01/17/test-description/</guid>
+      <description>Hello! Welcome to my blog! Please come back some other time when I&amp;rsquo;ve written something worth yout time.</description>
+    </item>
+    
+    <item>
+      <title>Kubernetes Minikube avec KVM</title>
+      <link>https://geojoy.me/post---copy/minikube-avec-kvm/</link>
+      <pubDate>Fri, 24 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/minikube-avec-kvm/</guid>
+      <description>&amp;ldquo;Kubernetes est le système Open Source de Google dédié à la gestion des conteneurs Linux pour des environnements de Cloud privé, public et hybride.&amp;rdquo; source: lemagit
+Traduire : cela gère vos applications en conteneurs Docker dans un environnement distribué multi-machines.
+ Si vous connaissez déjà Rancher, ils sont concurrents.
+ Minikube Minikube est un outil permettant de mettre en place rapidement (quand tout va bien) un cluster opérationnel sur sa machine.</description>
+    </item>
+    
+    <item>
+      <title>NPM / YARN sans sudo</title>
+      <link>https://geojoy.me/post---copy/npm-yarn-sans-sudo/</link>
+      <pubDate>Mon, 20 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/npm-yarn-sans-sudo/</guid>
+      <description>NPM pour Node Package Manager est un gestionnaire de dépendances de NodeJS, puisqu&amp;rsquo;aujourd&amp;rsquo;hui il est existe plusieurs (notamment YARN).
+NPM $ npm config set prefix $HOME/.npmroot Cette commande va modifier votre fichier de configuration ~/.npmrc.
+Ajoutant la directive définissant le répertoire concerné par les installations globales -g.
+$ npm install -g ionic cordova ... /home/zenithar/.npmroot/bin/cordova -&amp;gt; /home/zenithar/.npmroot/lib/node_modules/cordova/bin/cordova /home/zenithar/.npmroot/bin/ionic -&amp;gt; /home/zenithar/.npmroot/lib/node_modules/ionic/bin/ionic ... Il faut à présent ajouter le répertoire ~/.npmroot/bin dans le PATH pour pouvoir profiter des scripts.</description>
+    </item>
+    
+    <item>
+      <title>Ma configuration i3</title>
+      <link>https://geojoy.me/post---copy/configuration-i3/</link>
+      <pubDate>Tue, 13 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/configuration-i3/</guid>
+      <description>Cela fait quelques temps que je regarde pour changer d&amp;rsquo;environnement graphique. J&amp;rsquo;ai quasiment toujours été sous KDE, c&amp;rsquo;est un environnement &amp;ldquo;Komplet&amp;rdquo; que j&amp;rsquo;apprécie pour son côté justement complet.
+Mais bon avec le temps, j&amp;rsquo;aime de plus en plus le minimalisme et surtout le tiling window manager c&amp;rsquo;est l&amp;rsquo;avenir pour les gens comme moi qui ouvrent 200 consoles car ils doivent, en même temps, construire des docker, les déployer sur Kubernetes, implémenter un webservices en Go, et pendant que tout ça se fait écrire les tests, et l&amp;rsquo;IHM en Javascript avec votre framework préféré.</description>
+    </item>
+    
+    <item>
+      <title>Spotify your Mopidy</title>
+      <link>https://geojoy.me/post---copy/spotify-your-mopidy/</link>
+      <pubDate>Mon, 12 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/spotify-your-mopidy/</guid>
+      <description>Mopidy est un serveur de musique, il permet de lancer de la musique via un protocole de communication et d&amp;rsquo;une application cliente (Desktop, Mobile, etc.). La musique peut provenir d&amp;rsquo;un disque, d&amp;rsquo;un stream radio ou d&amp;rsquo;un flux cloud (Spotify, SoundCloud, Google Play Music).
+Vous pouvez par exemple l&amp;rsquo;utiliser sur un mini PC (RPI, ODROID, etc.) connecté à votre kit son domestique, pour diffuser de la musique sans avoir un ordinateur allumé.</description>
+    </item>
+    
+    <item>
+      <title>Souriez au Photobooth !</title>
+      <link>https://geojoy.me/post---copy/photobooth/</link>
+      <pubDate>Sat, 11 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/photobooth/</guid>
+      <description>Voici le code du photobooth que j&amp;rsquo;ai développé pour mon mariage. RaspiBooth
+Environnement  Raspberry Pi 3 (Archlinux arm7h) RPi Camera v2 (8MP) Imprimante photo (ie: Canon SELPHY CP910) Une tablette pour l&amp;rsquo;IHM  Principe Le raspberry PI héberge un point d&amp;rsquo;accès WiFi (Hostap), et un serveur Web (Flask).
+Le service Web possède deux opérations :
+ Prendre une capture d&amp;rsquo;essai Envoyer à l&amp;rsquo;imprimante (via cups)  Bootstrap Mettez à jour le système et installez toutes les dépendances</description>
+    </item>
+    
+    <item>
+      <title>Archlinux et Raspberry PI 3</title>
+      <link>https://geojoy.me/post---copy/archlinux-raspberry-pi/</link>
+      <pubDate>Fri, 03 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/archlinux-raspberry-pi/</guid>
+      <description>TL;DR =&amp;gt; Si vous voulez simplement récupérer l&amp;rsquo;image, c&amp;rsquo;est par ici (2016-06-01).
+ Avant de commencer J&amp;rsquo;utilise Archlinux pour générer l&amp;rsquo;image pour mon RaspberryPI. Il faut commencer par installer ce qu&amp;rsquo;il manque :
+$&amp;gt; yaourt -S pv  pv : ajoute une barre de progression lors de l&amp;rsquo;utilisation via des pipes, trés util pour &amp;ldquo;voir&amp;rdquo; l&amp;rsquo;avancement d&amp;rsquo;un transfers de flux;  Construction de l&amp;rsquo;image Tout d&amp;rsquo;abord, allez récupérer l&amp;rsquo;archive contenant le système pour votre plateforme :</description>
+    </item>
+    
+    <item>
+      <title>Office 365 Lync / Skype enterprise sous Linux</title>
+      <link>https://geojoy.me/post---copy/office365-lync-skype-sous-linux/</link>
+      <pubDate>Sun, 27 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/office365-lync-skype-sous-linux/</guid>
+      <description>Beaucoup d&amp;rsquo;entreprise utilise des solutions Microsoft (je ne partirai pas sur ce débat &amp;hellip;). Malheureusement il y a aussi des personnes dans ces entreprises qui utilisent par choix ou nécessité (ou les deux) des produits souvent un peu hors périmètre de gestion de ces solutions d&amp;rsquo;entreprise.
+Cet outil est très utile, il faut l&amp;rsquo;avoué car très intégré (trop ?) dans la suite Office du même constructeur. Il est possible de :</description>
+    </item>
+    
+    <item>
+      <title>Archlinux sur un SSD avec LUKS / LVM2 / BTRFS</title>
+      <link>https://geojoy.me/post---copy/archlinux-ssd-luks-lvm-btrfs/</link>
+      <pubDate>Sun, 24 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/archlinux-ssd-luks-lvm-btrfs/</guid>
+      <description>J&amp;rsquo;utilise Archlinux depuis plus de 3 ans maintenant comme système d&amp;rsquo;exploitation principal au boulot. Le but de cet article est de créer une configuration qui fonctionne ! Je vais essayer d&amp;rsquo;expliquer toutes les étapes et les configurations.
+Préparation de l&amp;rsquo;image L&amp;rsquo;image d&amp;rsquo;installation est une image ISO, qui peut être simplement gravée sur un CD, ou sur une clé USB.
+La procédure est documentée ici.
+Démarrage Vous venez de créer le média d&amp;rsquo;installation.</description>
+    </item>
+    
+    <item>
+      <title>Balsamiq Mockups sous Linux</title>
+      <link>https://geojoy.me/post---copy/balsamiq-mockups-sous-linux/</link>
+      <pubDate>Fri, 08 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/balsamiq-mockups-sous-linux/</guid>
+      <description>Balsamiq Mockups est un outil plus que sympatique lorsque vous devez concevoir des applications avec une forte intéraction utilisateur.
+   Le but est de se focaliser sur les idées et la conception de l&amp;rsquo;IHM sans pour autant passer du temps sur les détails (couleurs, icônes).
+ Se concentrer sur les séquences et les fonctionnalités d&amp;rsquo;une interface au lieu de négocier les îcones et les couleurs en réunion.</description>
+    </item>
+    
+    <item>
+      <title>Migration Yosemite Aïe Aïe Aïe !</title>
+      <link>https://geojoy.me/post---copy/migration-yosemite-aie-aie-aie/</link>
+      <pubDate>Thu, 16 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/migration-yosemite-aie-aie-aie/</guid>
+      <description>Bon voilà, après un certains nombre de bétas, le voilà l&amp;rsquo;OS nouveau est arrivé ! Cependant il est comme le beaujolais nouveau : tant attendu, mais pas très appréciable une fois gouté &amp;hellip;
+Pour être plus sérieux j&amp;rsquo;ai du faire face pour la première fois de ma vie d&amp;rsquo; &amp;ldquo;Apple User&amp;rdquo; à une Windowzerie &amp;hellip;
+Début de l&amp;rsquo;installation, sans problème, téléchargement de l&amp;rsquo;image d&amp;rsquo;installation (environ 4Go) 45min, démarrage de l&amp;rsquo;installation, 25min estimé &amp;hellip; puis les fameuses 3 minutes restantes les plus longues de toute ma vie ^^</description>
+    </item>
+    
+    <item>
+      <title>Git FTP</title>
+      <link>https://geojoy.me/post---copy/git-ftp/</link>
+      <pubDate>Thu, 17 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/git-ftp/</guid>
+      <description>Petite astuce pour ceux qui comme moi utilise un serveur mutualisé sans accès SSH et donc pas de Git ou rsync pour la publication des fichiers : git-ftp.
+Cela permet d&amp;rsquo;envoyer uniquement les fichiers qui ont été modifiés lors de la génération du site statique.
+Pour l&amp;rsquo;installation c&amp;rsquo;est tout simple sous Unix :
+$ git clone https://github.com/git-ftp/git-ftp.git $ cd git-ftp $ git checkout master $ sudo make install Pour Mac, c&amp;rsquo;est plus simple si vous avez Homebrew :</description>
+    </item>
+    
+    <item>
+      <title>Vagrant / VirtualBox</title>
+      <link>https://geojoy.me/post---copy/vagrant-et-virtualbox/</link>
+      <pubDate>Tue, 15 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/vagrant-et-virtualbox/</guid>
+      <description>Vagrant est un outil de gestion d&amp;rsquo;environnement virtualisé, il utilise un script (DSL) pour décrire la configuration de la machine virtuelle qu&amp;rsquo;il gère. Il est capable de gérer des systèmes de virtualisation gratuits comme VirtualBox, QEmu, mais aussi des commerciaux comme VMWare, ainsi que plus récemment des infrastructures type cloud comme OpenStack et bien d&amp;rsquo;autres.
+Ce système est ouvert et extensible par plugin, donc vous m&amp;rsquo;avez compris, il y a forcément quelqu&amp;rsquo;un qui a déja codé la fonctionnalité que vous recherchez.</description>
+    </item>
+    
+    <item>
+      <title>Copier / Coller depuis la console</title>
+      <link>https://geojoy.me/post---copy/copier-coller-depuis-la-console/</link>
+      <pubDate>Fri, 24 Feb 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/copier-coller-depuis-la-console/</guid>
+      <description>Petite découverte de la journée, j&amp;rsquo;ai eu le besoin de copier un fichier de la console vers un programme &amp;ldquo;graphique&amp;rdquo;.
+Xsel, est l&amp;rsquo;outil qu&amp;rsquo;il faut pour ça ! Il permet de manipuler le clipboard depuis la console.
+&amp;gt; cat file | xsel --clipboard Je vous invite à aller sur le site pour plus d&amp;rsquo;exemples, vraiment pas mal, il fallait y penser et il l&amp;rsquo;a fait ^^</description>
+    </item>
+    
+    <item>
+      <title>Minecraft : Compiler Mineserver sous Linux/MacOSX</title>
+      <link>https://geojoy.me/post---copy/minecraft-compiler-mineserver-sous-linuxmacosx/</link>
+      <pubDate>Sun, 03 Apr 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/minecraft-compiler-mineserver-sous-linuxmacosx/</guid>
+      <description>Suite au précédent article, concernant libnoise, je me suis penché sur la compilation du projet sous MacOSX. Cependant même problème, le support est incomplet à la compilation.
+Il suffit d&amp;rsquo;ajouter les flags au compilateur dans les deux fichiers CMakeLists.txt du projet libnoise et mineserver.
+IF(APPLE) set(CMAKE_CXX_FLAGS &amp;#34;-W -Wall -Wno-unused -pedantic&amp;#34;) set(CMAKE_CXX_FLAGS_DEBUG &amp;#34;-DDEBUG -g&amp;#34;) set(CMAKE_CXX_FLAGS_RELEASE &amp;#34;-O3 -fomit-frame-pointer -fPIC -DNDEBUG&amp;#34;)ENDIF() Puis tout recompiler :
+ libnoise sh $ wget http://static.zenithar.org/wp-content/uploads/2011/04/CMakeLists.txt $ vi CMakeLists.</description>
+    </item>
+    
+    <item>
+      <title>Mise en place d&#39;une infrastructure de service Web</title>
+      <link>https://geojoy.me/post---copy/mise-en-place-dune-infrastructure-de-service-web/</link>
+      <pubDate>Wed, 09 Sep 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/mise-en-place-dune-infrastructure-de-service-web/</guid>
+      <description>Bonsoir à tous, je me suis enfin motivé pour rédiger un multi-post, même si a mon avis un blog n&amp;rsquo;est pas fait dans cet objectif. (c&amp;rsquo;est plus le rôle d&amp;rsquo;un wiki)
+Je vais parler de la mise en service LAMP (Linux Apache MySQL PHP) avancée, en y ajoutant des contraintes de sécurité.
+Ce post sera pour une fois, orienté besoin, et non pas tartine technologique associé à un &amp;ldquo;Lego System&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>BackTrack 4 is unleashed ! Watch the dog !</title>
+      <link>https://geojoy.me/post---copy/backtrack-4-is-unleashed-watch-the-dog/</link>
+      <pubDate>Fri, 13 Mar 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/backtrack-4-is-unleashed-watch-the-dog/</guid>
+      <description>Halte aux paraskevidékatriaphobe ! Savez vous que BackTrack 4 est sortie ? Sinon je vous l&amp;rsquo;annonce !
+En plus du changement de version, il y a aussi un changement de distribution de base, avant BackTrack était une variante gonflée (comme vahiné) de Slax, qui était une version modulaire et portable (dans le sens USB) de Slackware.
+Elle est basée aujourd&amp;rsquo;hui sur une debian un peu modifiée, pour les audits de sécurité (intégration des modules d&amp;rsquo;injection 802.</description>
+    </item>
+    
+    <item>
+      <title>ZeroWine &amp; les malwares</title>
+      <link>https://geojoy.me/post---copy/zerowine-les-malwares/</link>
+      <pubDate>Fri, 13 Mar 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/zerowine-les-malwares/</guid>
+      <description>Et bien non ce n&amp;rsquo;est pas un nouvel épisode de Martine. C&amp;rsquo;est une distribution linux configurée pour l&amp;rsquo;analyse de malware Windows.
+Elle s&amp;rsquo;exécute au travers de QEmu. Il suffit delancer la machine virtuelle, et de se connecter via le navigateur. Un formulaire vous propose d&amp;rsquo;uploader votre malware. Il va l&amp;rsquo;exécuter avec Wine (Windows Emulator) pour en ressortir la trace d&amp;rsquo;execution.
+Vous pourrez par la suite effectuer un analyse forensic du malware sur votre Linux.</description>
+    </item>
+    
+    <item>
+      <title>En route vers OpenSUSE 11.1</title>
+      <link>https://geojoy.me/post---copy/en-route-vers-opensuse-111/</link>
+      <pubDate>Thu, 06 Nov 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/en-route-vers-opensuse-111/</guid>
+      <description>openSUSE 11.1 est la prochaine version qui incorporera de nouvelles fonctionnalités issues de la communauté ainsi que des développements internes. Elle sera disponible pour les plateformes x86, x86-64 et PPC.
+Les principaux travaux qui seront effectués concernent:
+  GNOME 2.24 KDE: KDE 4.1.1 (avec optionnellement KDE 3.5.10) OpenOffice.org 3.0 Amélioration continue du système de gestion des paquets Noyau Linux 2.6.27 (ou plus récent)  Voila ne reste plus qu&amp;rsquo;a attendre ^^.</description>
+    </item>
+    
+    <item>
+      <title>Ateliers KDE - Novembre 2007</title>
+      <link>https://geojoy.me/post---copy/ateliers-kde-novembre-2007/</link>
+      <pubDate>Mon, 26 Nov 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/ateliers-kde-novembre-2007/</guid>
+      <description>L&amp;rsquo;atelier KDE de ce mois-ci a eut lieu au centre culturel de Bellegarde. Programme de la journée : bosser, bosser, bosser ! On sent que la sortie de KDE 4 est proche. Pour ma part, j&amp;rsquo;ai fait du Rails (oui je sais aucun rapport avec KDE), et j&amp;rsquo;ai aidé les étudiants sur les projets Kopete (ah voila c&amp;rsquo;est mieux !).</description>
+    </item>
+    
+    <item>
+      <title>Damn Vulnerable Linux</title>
+      <link>https://geojoy.me/post---copy/damn-vulnerable-linux/</link>
+      <pubDate>Mon, 29 Oct 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/damn-vulnerable-linux/</guid>
+      <description>DVL (DeViL) est une distribution linux, qui étend les fonctionnalités de BackTrack 2.0 (autre distribution orientée sécurité). Le principe de cette distribution est de mettre à disposition tout un tas d&amp;rsquo;environnement destiné à l&amp;rsquo;application directes d&amp;rsquo;attaques sur du code, des sites vulnérables, etc &amp;hellip; (pour ceux qui n&amp;rsquo;avaient jamais vu une SQL injection en directe par exemple ^^). Elle rassemble bcp de tuto binaires, quand je dis tuto c&amp;rsquo;est un grand mot, car c&amp;rsquo;est du demerde-yourself-ware !</description>
+    </item>
+    
+    <item>
+      <title>Un peu d&#39;inutile, mais tellement beau !</title>
+      <link>https://geojoy.me/post---copy/un-peu-dinutile-mais-tellement-beau/</link>
+      <pubDate>Tue, 21 Aug 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/un-peu-dinutile-mais-tellement-beau/</guid>
+      <description>Une vidéo mettant en oeuvre le nouveau Compize-Fusion, (ex Beryl) sur une Ubuntu.
+[coolplayer]http://www.youtube.com/watch?v=E4Fbk52Mk1w[/coolplayer]</description>
+    </item>
+    
+    <item>
+      <title>IceCream, ou l&#39;outil indispensable pour KDE.</title>
+      <link>https://geojoy.me/post---copy/icecream-ou-loutil-indispensable-pour-kde/</link>
+      <pubDate>Mon, 02 Jul 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/icecream-ou-loutil-indispensable-pour-kde/</guid>
+      <description>IceCream est un système permettant la compilation distribuée, c&amp;rsquo;est à dire qu&amp;rsquo;elle permet de cumuler la puissance des ordinateurs disponibles pour accélérer la compilation, en exécutant des build parallèles. Voici ce que donne un réseau disposant de icecream.</description>
+    </item>
+    
+    <item>
+      <title>Demain, premier jour des tribulations d&#39;un fréjusien toulousan, exporté à Glasgow.</title>
+      <link>https://geojoy.me/post---copy/demain-premier-jour-des-tribulations-dun-frejusien-toulousan-exporte-a-glasgow/</link>
+      <pubDate>Thu, 28 Jun 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/demain-premier-jour-des-tribulations-dun-frejusien-toulousan-exporte-a-glasgow/</guid>
+      <description>Et voila, mon départ pour Glasgow, pour la aKademy 2007, j&amp;rsquo;ai fait ma valise, tout est prêt (enfin presque reste plus que la conversion de devises). J&amp;rsquo;essayerais de vous tenir au courant jours après jours de mes activités à ce rassemblement.
+aKademy 2007 : Glasgow
+PS : Je veux un iPhone ^^</description>
+    </item>
+    
+    <item>
+      <title>Fait des rats 7eme version.</title>
+      <link>https://geojoy.me/post---copy/fait-des-rats-7eme-version/</link>
+      <pubDate>Mon, 04 Jun 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/fait-des-rats-7eme-version/</guid>
+      <description>Attention on ne dit plus Fedora &amp;ldquo;Core&amp;rdquo;, du fait de la jointure des dépots &amp;ldquo;Core&amp;rdquo; &amp;amp; &amp;ldquo;Extras&amp;rdquo;, qui étaient maintenus par les développeurs RedHat pour &amp;ldquo;Core&amp;rdquo;, et des contributeurs pour &amp;ldquo;Extras&amp;rdquo;, mais Fedora 7 (moonlight).
+Cette nouvelle mouture se décline en plusieurs versions :
+ Version « Fedora », version sur DVD. x86 (2.7Go) - x86_64 (3.2Go) Version « Fedora Everything », comprenant un nombre très important de paquetages.
+ Version « Live CD » avec l&amp;rsquo;environnement Gnome.</description>
+    </item>
+    
+    <item>
+      <title>Debian 4.0 Etch.</title>
+      <link>https://geojoy.me/post---copy/debian-40-etch/</link>
+      <pubDate>Fri, 01 Jun 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/debian-40-etch/</guid>
+      <description>Après un crash système de mon serveur, installé sous OpenSuSE 10.2, j&amp;rsquo;ai décidé de redonné une chance à Debian, qui faut quand même l&amp;rsquo;avouer et LA distribution adaptée pour les installs type serveur. J&amp;rsquo;ai essayé Ubuntu, je trouve inadapté, OpenSuSE, un peu trop orienté desktop (même critique pour Ubuntu d&amp;rsquo;ailleurs), Gentoo, (dommage ma machine est trop faible pour la compilation, mais j&amp;rsquo;admet avec attends des records de stabilité, plus de 5 Mois sans reboot, ni crash !</description>
+    </item>
+    
+    <item>
+      <title>Objecteering : Modeleur UML basé sur MDA.</title>
+      <link>https://geojoy.me/post---copy/objecteering-modeleur-uml-base-sur-mda/</link>
+      <pubDate>Wed, 09 May 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/objecteering-modeleur-uml-base-sur-mda/</guid>
+      <description>http://www.objecteering.com/
+Au programme :
+ Génération de code (C++ / Java / Corba / Fortran &amp;hellip;) Gestion des exigences Production de documentation Gestion des métriques  Que du bonheur, pour analyste programmeur &amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>aKademy 2007, etape 1 passée !!!</title>
+      <link>https://geojoy.me/post---copy/akademy-2007-etape-1-passee/</link>
+      <pubDate>Fri, 20 Apr 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/akademy-2007-etape-1-passee/</guid>
+      <description>Oui, ça y est j&amp;rsquo;ai reçu la confirmation du vol, la confirmation de la chambre, maintenant j&amp;rsquo;attends le billet électronique ^^ et j&amp;rsquo;aurais tout pour Glasgow !</description>
+    </item>
+    
+    <item>
+      <title>aKademy 2007, étape 2, étape 1 en attente ....</title>
+      <link>https://geojoy.me/post---copy/akademy-2007-etape-2-etape-1-en-attente/</link>
+      <pubDate>Tue, 17 Apr 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/akademy-2007-etape-2-etape-1-en-attente/</guid>
+      <description>Tiens ça me rappelle mon abonnement internet ^^.
+La chambre est réservée pour 10 jours, voila mais toujours pas de nouvelles des billets d&amp;rsquo;avion :( . Mais que font ils ?</description>
+    </item>
+    
+    <item>
+      <title>Va y avoir de la viande sur les murs !!!!</title>
+      <link>https://geojoy.me/post---copy/va-y-avoir-de-la-viande-sur-les-murs/</link>
+      <pubDate>Mon, 09 Apr 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/va-y-avoir-de-la-viande-sur-les-murs/</guid>
+      <description>Bon le moment tant redouté &amp;ldquo;Ze MERGE&amp;rdquo;, Kde est passé sur Qt4.3, le tronc compile (ou compilait plus à l&amp;rsquo;heure du message), je finirais le merge demain sur la branche isi-umbrello, puis après grand saut de l&amp;rsquo;ange !! sur trunk (hum&amp;hellip;)</description>
+    </item>
+    
+    <item>
+      <title>Virtualisons ensemble mes amis ...</title>
+      <link>https://geojoy.me/post---copy/virtualisons-ensemble-mes-amis/</link>
+      <pubDate>Thu, 05 Apr 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/virtualisons-ensemble-mes-amis/</guid>
+      <description>J&amp;rsquo;ai découvert une alternative très intéressante à VMWare, elle se nomme VirtualBox, en effet cet émulateur fonctionne très bien et en plus il est sous licence GPL ^^. A suivre &amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>aKademy 2007, me voila !</title>
+      <link>https://geojoy.me/post---copy/akademy-2007-me-voila/</link>
+      <pubDate>Mon, 02 Apr 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/akademy-2007-me-voila/</guid>
+      <description>Voila c&amp;rsquo;est confirmé, je pars en Ecosse à Glasgow pour la aKademy 2007. Mes jours de congés sont posés, le premier jour de mon stage ^^
+Plus d&amp;rsquo;informations &amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Hakin&#39; Session Mars</title>
+      <link>https://geojoy.me/post---copy/hakin-session-mars/</link>
+      <pubDate>Sat, 17 Mar 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/hakin-session-mars/</guid>
+      <description>Cette Hackin&amp;rsquo; Session marque la fin de la participation aux projets KDE de l&amp;rsquo;IUP. Umbrello possède un nouveau framework Undo/Redo (basé Qt), quelques fonctionnalités UML2.0 (Diagrammes de séquences, diagramme d&amp;rsquo;activités complets).
+ ISI-Umbrello Umbrello  </description>
+    </item>
+    
+    <item>
+      <title>Quelques trucs sous Linux ....</title>
+      <link>https://geojoy.me/post---copy/quelques-trucs-sous-linux/</link>
+      <pubDate>Sun, 04 Mar 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/quelques-trucs-sous-linux/</guid>
+      <description>Voici quelques utilitaires que j&amp;rsquo;utilise sous Linux :
+ KoolDock : simule le dock de OSX, fonctionne très bien, peu gourmand en ressources.   Katapult : augmente l&amp;rsquo;accessibilté du menu en ajouter une recherche indexée pour le lancement de vos programmes, et autres documents.   Yakuake : Ajout un emulateur de terminel accessible à tous moments par la touche F12 (configurable). J&amp;rsquo;adore !!!!  </description>
+    </item>
+    
+    <item>
+      <title>Hakin&#39; Session Fevrier</title>
+      <link>https://geojoy.me/post---copy/hakin-session-fevrier/</link>
+      <pubDate>Wed, 21 Feb 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/hakin-session-fevrier/</guid>
+      <description>Voila ma première Hakin&amp;rsquo; Session, résultat ambiance très bon enfant.
+http://annma.blogspot.com/2007/02/h&amp;hellip;
+http://ervin.ipsquad.net/index.php/&amp;hellip;
+http://luxtin.thefilou.com/blog/ind&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Il existe moins bien mais c&#39;est plus cher :)</title>
+      <link>https://geojoy.me/post---copy/il-existe-moins-bien-mais-cest-plus-cher/</link>
+      <pubDate>Tue, 02 Jan 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/il-existe-moins-bien-mais-cest-plus-cher/</guid>
+      <description>Résolution 2007 n°1 : ça y est c&amp;rsquo;est fait ! Je suis passé complètement sous Linux, fini Windows, pourquoi ? Après le test de Vista ! J&amp;rsquo;aime bien ce système cependant, je le trouve vraiment chiant à l&amp;rsquo;utilisation quotidienne. J&amp;rsquo;ai donc choisi le &amp;ldquo;vista killer&amp;rdquo; OpenSUSE 10.2 comme système alternatif.
+Parce que y en a marre de payer pour installer, payer pour utiliser, payer pour planter !
+&amp;ldquo;Software is like sex better when it&amp;rsquo;s free&amp;rdquo; (L.</description>
+    </item>
+    
+    <item>
+      <title>C&#39;est la célébrité qui commence ...</title>
+      <link>https://geojoy.me/post---copy/cest-la-celebrite-qui-commence/</link>
+      <pubDate>Sun, 03 Dec 2006 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/cest-la-celebrite-qui-commence/</guid>
+      <description>Il ya toujours un début à tout non ? Même à la célébrité ! Voici l&amp;rsquo;article concernant nos travaux sur les projets Umbrello et KPlato.
+Article sur dot.kde.org</description>
+    </item>
+    
+    <item>
+      <title>Umbrello-FR [umbrello.free.fr]</title>
+      <link>https://geojoy.me/post---copy/umbrello-fr-umbrellofreefr/</link>
+      <pubDate>Mon, 23 Oct 2006 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/umbrello-fr-umbrellofreefr/</guid>
+      <description>Ouverture du site des suivis du projet Umbrello-FR. Ce site regroupe un blog pour les annonces journalières, un wiki pour la documentations, et un forum pour les traces de discussions.
+Maintenant en avant KDE, et que le projet avance &amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Projet KDE/Umbrello</title>
+      <link>https://geojoy.me/post---copy/projet-kdeumbrello/</link>
+      <pubDate>Mon, 16 Oct 2006 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/projet-kdeumbrello/</guid>
+      <description>Le BE du Master ISI vient de commencer, il s&amp;rsquo;agit (pour une fois) d&amp;rsquo;un sujet intéressant : nous reprenons un projet actif, développé par les contributeurs KDE Umbrello, le but du projet sera le portage vers QT/KDE 4, l&amp;rsquo;ajout des fonctionnalités pour utiliser UML 2.0.
+Pour plus d&amp;rsquo;informations, veuillez consulter le site Umbrello, et le site de suivi du projet Umbrello.</description>
+    </item>
+    
+    <item>
+      <title>Passage sous FreeBSD !</title>
+      <link>https://geojoy.me/post---copy/passage-sous-freebsd/</link>
+      <pubDate>Mon, 26 Dec 2005 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/passage-sous-freebsd/</guid>
+      <description>C&amp;rsquo;est dommage mais je trouve qu&amp;rsquo;en ce moment Gentoo commence à s&amp;rsquo;essouffler au niveau mises à jour, correctifs et autres. C&amp;rsquo;est dans cette optique que j&amp;rsquo;ai décidé de changer de branche Linux -&amp;gt; BSD. Mais c&amp;rsquo;est un test &amp;hellip; Réputée plus sure, plus rapide, plus orientée services réseaux : FreeBSD 6.0.</description>
+    </item>
+    
+    <item>
+      <title>Hula Project - Hula</title>
+      <link>https://geojoy.me/post---copy/hula-project-hula/</link>
+      <pubDate>Sat, 03 Sep 2005 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/hula-project-hula/</guid>
+      <description>Après avoir travaillé sur Exchange 2003, on a envie d&amp;rsquo;un vent de fraicheur et de nouveautés, pour éliminer le stress accumulé par les rapports de bugs. Voici, un projet qui combine un calendrier, un webmail en un seul programme. Il a l&amp;rsquo;avantage d&amp;rsquo;être très simple, joli, OpenSource. Ce groupware est developpé par Novell, et par des informaticiens passionnés qui veulent contribuer au projet. Pourquoi je vous parle de Hula (a ne pas confondre avec ULLA ;-) ), parce que sur le serveur jabber fritalk, ils sont en train d&amp;rsquo;intégrer les services à Hula.</description>
+    </item>
+    
+    <item>
+      <title>IWHAX - News</title>
+      <link>https://geojoy.me/post---copy/iwhax-news/</link>
+      <pubDate>Thu, 01 Sep 2005 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/iwhax-news/</guid>
+      <description>J&amp;rsquo;ai testé une distribution Linux, basée sur une Slackware Live. Cette distribution est une concentration d&amp;rsquo;outils sympatique, pour faire mumuse avec le réseau, les paquets &amp;hellip; . Franchement bien faite, y a même le drivers ipw2200, et des outils comme Kismet, aircrack, fragroute &amp;hellip; Enfin un bonne distrib de HaXoR.
+IWHAX - News</description>
+    </item>
+    
+    <item>
+      <title>MLdonkey World</title>
+      <link>https://geojoy.me/post---copy/mldonkey-world/</link>
+      <pubDate>Sun, 28 Aug 2005 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/mldonkey-world/</guid>
+      <description>MLdonkey World
+Je viens de découvrir un programme génial, fini le : &amp;ldquo;J&amp;rsquo;aimerais bien avoir le core d&amp;rsquo;emule en service et le gui à part&amp;rdquo; . Bien ça existe, et c&amp;rsquo;est (encore) un produit libre (et gratuit biensûr), ce programme est composé de deux parties un Core (le daemon : coeur du système de téléchargement), et d&amp;rsquo;un GUI qui peut être n&amp;rsquo;importe quoi tout en sachant qu&amp;rsquo;il y a déja une interface web et un serveur telnet.</description>
+    </item>
+    
+    <item>
+      <title>HermS sous linux c&#39;est possible !</title>
+      <link>https://geojoy.me/post---copy/herms-sous-linux-cest-possible/</link>
+      <pubDate>Sun, 14 Aug 2005 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/herms-sous-linux-cest-possible/</guid>
+      <description>Après une lutte acharnée pour la compilation du composant MyXaml sur mon ordinateur, la victoire vient s&amp;rsquo;offrir à nous. Je vous annonce que HermS marche sous Linux (moyennant plateforme Mono mais ça marche).</description>
+    </item>
+    
+    <item>
+      <title>Gentoo Linux -- Where to Get Gentoo Linux</title>
+      <link>https://geojoy.me/post---copy/gentoo-linux-where-to-get-gentoo-linux/</link>
+      <pubDate>Thu, 11 Aug 2005 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/gentoo-linux-where-to-get-gentoo-linux/</guid>
+      <description>Gentoo Linux &amp;ndash; Where to Get Gentoo Linux
+Gentoo 2005.1 est sortit à vos Flashget et autres &amp;hellip;. Perso je suis en train de faire la maj du Firewall &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.. lol</description>
+    </item>
+    
+  </channel>
+</rss>

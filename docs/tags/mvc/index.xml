@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mvc on Geo&#39;z Blog</title>
+    <link>https://geojoy.me/tags/mvc/</link>
+    <description>Recent content in Mvc on Geo&#39;z Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 04 Dec 2011 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://geojoy.me/tags/mvc/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Donnez un coup de jeune à vos applications Web !</title>
+      <link>https://geojoy.me/post---copy/donnez-un-coup-de-jeune-a-vos-applications-web/</link>
+      <pubDate>Sun, 04 Dec 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/donnez-un-coup-de-jeune-a-vos-applications-web/</guid>
+      <description>Le développement d&amp;rsquo;application Web a bien évolué avec l&amp;rsquo;essor émergeant des nouvelles technologies (HTML5, JS, etc.). Autrefois, la complexité des applications étaient déportée sur le serveur hébergeant le service, avec la montée en puissance des navigateurs et technologies clientes, il est possible d&amp;rsquo;effectuer une partie du travaille dans le navigateur :
+ Mise en forme. Conditionnement technologique. (j&amp;rsquo;espère que cela va disparaitre ou au moins se réduire &amp;hellip;) Traiter l&amp;rsquo;information avant validation par le serveur pour éliminer le plus d&amp;rsquo;échange possible.</description>
+    </item>
+    
+    <item>
+      <title>Pourquoi je n&#39;utiliserai plus Struts 2 à l&#39;avenir ...</title>
+      <link>https://geojoy.me/post---copy/pourquoi-je-nutiliserai-plus-struts-2-a-lavenir/</link>
+      <pubDate>Fri, 06 May 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/pourquoi-je-nutiliserai-plus-struts-2-a-lavenir/</guid>
+      <description>Voila ça fait 2 ans que je l&amp;rsquo;utilise et que je cherche à le mettre à la porte ! Toi développeur, je te déconseille fortement ce framework Web dit MVC &amp;hellip; Parce que c&amp;rsquo;est un mensonge . Surtout si comme moi tu viens du monde RoR / Node.JS, oublies-le ! Pauvre fou !
+C&amp;rsquo;est un framework Web 2.0 qui n&amp;rsquo;a que de 2.0 sa version de Struts.
+Voici une liste de principaux défauts :</description>
+    </item>
+    
+  </channel>
+</rss>

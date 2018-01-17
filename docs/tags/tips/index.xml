@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tips on Geo&#39;z Blog</title>
+    <link>https://geojoy.me/tags/tips/</link>
+    <description>Recent content in Tips on Geo&#39;z Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 02 Nov 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://geojoy.me/tags/tips/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Google PageSpeed et la fameuse ligne de flottaison</title>
+      <link>https://geojoy.me/post---copy/google-pagespeed-ligne-flottaison/</link>
+      <pubDate>Sun, 02 Nov 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/google-pagespeed-ligne-flottaison/</guid>
+      <description>Cette règle d&amp;rsquo;optimisation est plus obscure à comprendre qu&amp;rsquo;elle n&amp;rsquo;est simple à corriger.
+Afin de pouvoir afficher le contenu de la page le navigateur doit attendre que toutes les informations de mises en page et de styles soient téléchargées et analysées. Cette attente provoque au mieux un affichage partiel de la page, mais peut aussi bloquer complètement le processus de rendu, ce qui a un impact sur l&amp;rsquo;expérience utilisateur.</description>
+    </item>
+    
+  </channel>
+</rss>

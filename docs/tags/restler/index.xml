@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Restler on Geo&#39;z Blog</title>
+    <link>https://geojoy.me/tags/restler/</link>
+    <description>Recent content in Restler on Geo&#39;z Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 05 Feb 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://geojoy.me/tags/restler/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Exporter les tâches IceScrum avec Node.js</title>
+      <link>https://geojoy.me/post---copy/exporter-les-taches-icescrum-avec-nodejs/</link>
+      <pubDate>Tue, 05 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/exporter-les-taches-icescrum-avec-nodejs/</guid>
+      <description>Voici un petit outil permettant d&amp;rsquo;exporter les tâches associées aux stories d&amp;rsquo;un sprint pour un projet donné, depuis IceScrum vers un format imprimable : postit HTML en l&amp;rsquo;occurence.
+Code  Explication Rien de bien sorcier, vous trouverez des références aux projets annexes : - Restler : Librairie utilisée pour la communication HTTP - Async.js : Librairie utilisée pour simplifier l&amp;rsquo;asynchronisme - Underscore.js : Véritable caisse à outils du Javascript, utilisée pour filtrer, ainsi que la gestion du template.</description>
+    </item>
+    
+  </channel>
+</rss>

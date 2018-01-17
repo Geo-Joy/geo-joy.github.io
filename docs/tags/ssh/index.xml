@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ssh on Geo&#39;z Blog</title>
+    <link>https://geojoy.me/tags/ssh/</link>
+    <description>Recent content in Ssh on Geo&#39;z Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 13 Nov 2008 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://geojoy.me/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Une commande pour les contrôler tous !</title>
+      <link>https://geojoy.me/post---copy/une-commande-pour-les-controler-tous/</link>
+      <pubDate>Thu, 13 Nov 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/une-commande-pour-les-controler-tous/</guid>
+      <description>It has been a long time, that i was searching a solution to execute a command on multiple SSH server simultaneously. This is UbuntuGeek who gave me the solution.Cela fait plusieurs temps que je cherche un moyen d&amp;rsquo;exécuter une commande SSH sur plusieurs serveurs à la fois, et c&amp;rsquo;est UbuntuGeek qui m&amp;rsquo;a donné la solution.
+Au travers d&amp;rsquo;un des trois outils :[](http://www.theether.org/pssh/)
+ PSSh : Parallel SSH
+ Cluster SSH Multixterm  </description>
+    </item>
+    
+    <item>
+      <title>PortKnocking : la solution !</title>
+      <link>https://geojoy.me/post---copy/portknocking-la-solution/</link>
+      <pubDate>Mon, 03 Sep 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/portknocking-la-solution/</guid>
+      <description>En consultant mes logs, et surtout avec le retour des étudiants, j&amp;rsquo;ai pris soin de la sécurité de mon serveur. En effet j&amp;rsquo;ai pas mal de tentatives de connexion sur le port tcp/22 (cad SSH), même certains essaye de se logger, ce qui me semble déja difficile (PermitRootLogin no, Authentification par PubKey uniquement). Enfin, pour lutter contre ces attaques, j&amp;rsquo;ai trouvé une technique qu&amp;rsquo;on appelle de Port Knocking, littérallement frapper à la porte.</description>
+    </item>
+    
+  </channel>
+</rss>

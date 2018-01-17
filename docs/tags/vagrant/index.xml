@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vagrant on Geo&#39;z Blog</title>
+    <link>https://geojoy.me/tags/vagrant/</link>
+    <description>Recent content in Vagrant on Geo&#39;z Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 21 Oct 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://geojoy.me/tags/vagrant/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Vagrant, VirtualBox, et Docker/LXC sont dans un bateau ...</title>
+      <link>https://geojoy.me/post---copy/vagrant-virtualbox-docker-lxc-sont-dans-un-bateau/</link>
+      <pubDate>Mon, 21 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/vagrant-virtualbox-docker-lxc-sont-dans-un-bateau/</guid>
+      <description>Voici une recette Vagrant Vagrantfile, permettant de déployer une machine virtuelle utilisant Ubuntu 13.04 (raring), configurée pour héberger des containers LXC.
+Vagrantfile Voici le code à mettre dans un fichier Vagrantfile :
+ Pour faire simple :
+ Vagrant est un gestionnaire d&amp;rsquo;environnements virtualisés, il permet le déploiement et la gestion du provisionning (installation des applications) au travers de Puppet ou Chef. VirtualBox est un système de virtualisation (Oracle), gratuit et open-source.</description>
+    </item>
+    
+    <item>
+      <title>Vagrant / VirtualBox</title>
+      <link>https://geojoy.me/post---copy/vagrant-et-virtualbox/</link>
+      <pubDate>Tue, 15 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://geojoy.me/post---copy/vagrant-et-virtualbox/</guid>
+      <description>Vagrant est un outil de gestion d&amp;rsquo;environnement virtualisé, il utilise un script (DSL) pour décrire la configuration de la machine virtuelle qu&amp;rsquo;il gère. Il est capable de gérer des systèmes de virtualisation gratuits comme VirtualBox, QEmu, mais aussi des commerciaux comme VMWare, ainsi que plus récemment des infrastructures type cloud comme OpenStack et bien d&amp;rsquo;autres.
+Ce système est ouvert et extensible par plugin, donc vous m&amp;rsquo;avez compris, il y a forcément quelqu&amp;rsquo;un qui a déja codé la fonctionnalité que vous recherchez.</description>
+    </item>
+    
+  </channel>
+</rss>
