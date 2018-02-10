@@ -5,7 +5,7 @@ title = "Geo'z Blog"
 paginate = 10
 theme = "ginimal"
 
-PygmentsStyle = "paraiso-dark"
+PygmentsStyle = "fruity"
 PygmentsUseClasses = false
 PygmentsCodeFences = true
 
