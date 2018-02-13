@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>101 on Geo&#39;z Blog</title>
+    <link>http://geojoy.me/tags/101/</link>
+    <description>Recent content in 101 on Geo&#39;z Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 27 Jan 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://geojoy.me/tags/101/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Basics to get started with Tensorflow</title>
+      <link>http://geojoy.me/post/2018/01/27/basics-to-get-started-with-tensorflow/</link>
+      <pubDate>Sat, 27 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://geojoy.me/post/2018/01/27/basics-to-get-started-with-tensorflow/</guid>
+      <description>1. What is Tensor  Just a fancy word for an n-dimentional matrix Or an advanced array Holds only single type They are the standard way of representing data in tensorflow.  2. Tensor Data Types    python type&amp;nbsp;&amp;nbsp;&amp;nbsp; Description     tf.float32 32 bits floating point   tf.float64 64 bits floating point   tf.int8 8 bits signed integer   tf.int16 16 bits signed integer   tf.</description>
+    </item>
+    
+    <item>
+      <title>Matrix Math and Numpy Refresher</title>
+      <link>http://geojoy.me/post/2018/01/21/matrix-math-and-numpy-refresher/</link>
+      <pubDate>Sun, 21 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://geojoy.me/post/2018/01/21/matrix-math-and-numpy-refresher/</guid>
+      <description>image borrowed from UDACITY
+Data Dimentions We fist need to understand how we represent the data specifically the shape the data can have.
+Eg: we can have a number representing a person height or a list of numbers for height, weight, age etc. May be a display picture represented as grid having rows and columns of each individual pixels and each pixels having its color value for RED, BLUE, GREEN.</description>
+    </item>
+    
+    <item>
+      <title>Core Programming Principles</title>
+      <link>http://geojoy.me/post/2018/01/20/core-programming-principles/</link>
+      <pubDate>Sat, 20 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://geojoy.me/post/2018/01/20/core-programming-principles/</guid>
+      <description>#integer x = 2x 2  #float y = 2.5y 2.5  #string a = &amp;#34;hello&amp;#34; b = &amp;#39;hello2&amp;#39;a b hello hello2  #logical / boolean q1 = Trueq True  </description>
+    </item>
+    
+  </channel>
+</rss>

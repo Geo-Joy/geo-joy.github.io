@@ -400,23 +400,3 @@ for length in range(1,25+1): # upper bound is excluded in python so to get 25 ad
 ---
 
 continued
-## PART-4. Building the Seq2Seq model
-
-Here we will start using TendorFlow library to do all our deep learning stuffs.
-
-In TensorFlow we first write out our logic and later run using a session. So we need to create some variable holder which will accept variables when we run it in session. For this we use TensorFlow Placeholder. It is basic an advanced datastructure that can contain tensors and also other features.
-
-```html
-Definition : placeholder(dtype, shape=None, name=None)
-```
-
-```py
-# creating placeholders for the inputs and the targets
-
-def model_inputs():
-    inputs = tf.placeholder(tf.int32, [None,None], name='inputs') # dtype of sorted_clean_questions is integer, shape is a 2 dimentional array with padding
-    targets = tf.placeholder(tf.int32, [None,None], name='targets')
-    lr = tf.placeholder(tf.float32, name='learning_rate') #learning rate - no matrix as its a hyper parameter
-    keep_prob = tf.placeholder(tf.float32, name='keep_prob') #keep probe used to control the drop off rate usually 20% neurons are deactivated
-    return inputs, targets, lr, keep_prob
-```

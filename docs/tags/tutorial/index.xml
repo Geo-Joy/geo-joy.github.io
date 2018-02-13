@@ -6,10 +6,20 @@
     <description>Recent content in Tutorial on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 10 Feb 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 11 Feb 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://geojoy.me/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Building a Chatbot with Deep Natural Language Processing using Tensorflow [PART-4-5-6]</title>
+      <link>http://geojoy.me/post/2018/02/11/building-a-chatbot-with-deep-natural-language-processing-using-tensorflow-part-4-5-6/</link>
+      <pubDate>Sun, 11 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://geojoy.me/post/2018/02/11/building-a-chatbot-with-deep-natural-language-processing-using-tensorflow-part-4-5-6/</guid>
+      <description>This tutorial is divided into the following parts  Installing and configuring Anaconda Getting the Dataset Data Preprocessing Building the Seq2Seq model Training the Seq2Seq model Testing the Seq2Seq model Other Implementation  Lets Start PART-4. Building the Seq2Seq model Here we will start using TendorFlow library to do all our deep learning stuffs.
+In TensorFlow we first write out our logic and later run using a session. So we need to create some variable holder which will accept variables when we run it in session.</description>
+    </item>
     
     <item>
       <title>Building a Chatbot with Deep Natural Language Processing using Tensorflow [PART-1-2-3]</title>

@@ -1,10 +1,9 @@
 ---
 section: post
-date: "2018-02-10"
+date: "2018-01-27"
 title: "Basics to get started with Tensorflow"
 description: "Things to learn before starting up with Tensorflow"
 slug: "basics-to-get-started-with-tensorflow"
-draft: true
 tags:
  - 101
  - TensorFlow
@@ -13,7 +12,7 @@ tags:
 ![TensorFlow Basics](/images/articles/2018/TensorFlow-banner.jpg "TensorFlow-banner.jpg")
 
 # 1. What is Tensor
- - An n-dimentional matrix
+ - Just a fancy word for an n-dimentional matrix
  - Or an advanced array
  - Holds only single type
  - They are the standard way of representing data in tensorflow.
@@ -44,7 +43,18 @@ tags:
 
 # 5. What are placeholders
  - A placeholder is a promise to provide a value later.
+ - Use the **feed_dict** parameter in **tf.session.run()** to set the placeholder tensor.
+ - They are initially empty and are used to feed in the actual raining examples.
+ - Need to declare the required type as **tf.float32** and shape as optional.
 
 # 6. What are variables
+ - They need to be initialized
  - Values that keeps on changing
  - They are in memory buffers
+ - use **tf.global_variables_initializer** to initialize the variables before running the session.
+
+# 7.TensorFlow Graphs
+ - Graphs are sets of connected nodes(vertices)
+ - THe connections are referred to as edges.
+ - In TensorFlow each node is an operation with possible inputs that can supply some output.
+ - Its like we construct a graph and execute it.

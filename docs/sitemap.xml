@@ -3,8 +3,38 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://geojoy.me/post/2018/02/11/building-a-chatbot-with-deep-natural-language-processing-using-tensorflow-part-4-5-6/</loc>
+    <lastmod>2018-02-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://geojoy.me/post/2018/02/10/building-a-chatbot-with-deep-natural-language-processing-using-tensorflow-part-1-2-3/</loc>
     <lastmod>2018-02-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://geojoy.me/post/2018/02/03/predicting-stock-price-using-recurrent-neural-network/</loc>
+    <lastmod>2018-02-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://geojoy.me/post/2018/01/28/intro-to-recurrent-neural-network-rnn/</loc>
+    <lastmod>2018-01-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://geojoy.me/post/2018/01/27/basics-to-get-started-with-tensorflow/</loc>
+    <lastmod>2018-01-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://geojoy.me/post/2018/01/21/matrix-math-and-numpy-refresher/</loc>
+    <lastmod>2018-01-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://geojoy.me/post/2018/01/20/core-programming-principles/</loc>
+    <lastmod>2018-01-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -13,32 +43,56 @@
   </url>
   
   <url>
+    <loc>http://geojoy.me/tags/101/</loc>
+    <lastmod>2018-01-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://geojoy.me/tags/artificial-intelligence/</loc>
-    <lastmod>2018-02-10T00:00:00+00:00</lastmod>
+    <lastmod>2018-02-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://geojoy.me/tags/chatbot/</loc>
-    <lastmod>2018-02-10T00:00:00+00:00</lastmod>
+    <lastmod>2018-02-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://geojoy.me/tags/deep-learning/</loc>
-    <lastmod>2018-02-10T00:00:00+00:00</lastmod>
+    <lastmod>2018-02-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://geojoy.me/tags/deeplearning/</loc>
+    <lastmod>2018-01-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://geojoy.me/</loc>
-    <lastmod>2018-02-10T00:00:00+00:00</lastmod>
+    <lastmod>2018-02-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://geojoy.me/tags/mathematics/</loc>
+    <lastmod>2018-01-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://geojoy.me/tags/nlp/</loc>
-    <lastmod>2018-02-10T00:00:00+00:00</lastmod>
+    <lastmod>2018-02-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://geojoy.me/tags/numpy/</loc>
+    <lastmod>2018-01-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -50,25 +104,43 @@
   
   <url>
     <loc>http://geojoy.me/post/</loc>
-    <lastmod>2018-02-10T00:00:00+00:00</lastmod>
+    <lastmod>2018-02-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://geojoy.me/tags/practical/</loc>
+    <lastmod>2018-02-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://geojoy.me/tags/programming/</loc>
+    <lastmod>2018-01-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://geojoy.me/tags/project/</loc>
-    <lastmod>2018-02-10T00:00:00+00:00</lastmod>
+    <lastmod>2018-02-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://geojoy.me/tags/rnn/</loc>
+    <lastmod>2018-02-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://geojoy.me/tags/</loc>
-    <lastmod>2018-02-10T00:00:00+00:00</lastmod>
+    <lastmod>2018-01-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://geojoy.me/tags/tensorflow/</loc>
-    <lastmod>2018-02-10T00:00:00+00:00</lastmod>
+    <lastmod>2018-02-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -79,7 +151,7 @@
   
   <url>
     <loc>http://geojoy.me/tags/tutorial/</loc>
-    <lastmod>2018-02-10T00:00:00+00:00</lastmod>
+    <lastmod>2018-02-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

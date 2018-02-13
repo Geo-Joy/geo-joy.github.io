@@ -137,7 +137,7 @@
           },
           "datePublished": "2018-02-10",
           "dateModified": "2018-02-10",
-          "wordCount": 2191
+          "wordCount": 2044
           ,
           "keywords": ["Chatbot","NLP","TensorFlow","Project","Deep Learning","Artificial Intelligence","Tutorial"] 
       }
@@ -680,7 +680,8 @@
 
                 <div class="navbar-header">
 
-                    <a class="navbar-brand visible-xs" href="#">Building a Chatbot with Deep Natural Language Processing using Tensorflow [PART-1-2-3]</a>
+                    
+                    <a class="navbar-brand visible-xs" href="#">geojoy.me</a>
 
                     <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
                         <span class="icon-bar"></span>
@@ -1078,26 +1079,53 @@ sorted_clean_answers = []
 <hr />
 
 <p>continued</p>
-
-<h2 id="part-4-building-the-seq2seq-model">PART-4. Building the Seq2Seq model</h2>
-
-<p>Here we will start using TendorFlow library to do all our deep learning stuffs.</p>
-
-<p>In TensorFlow we first write out our logic and later run using a session. So we need to create some variable holder which will accept variables when we run it in session. For this we use TensorFlow Placeholder. It is basic an advanced datastructure that can contain tensors and also other features.</p>
-<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">Definition : placeholder(dtype, shape=None, name=None)</code></pre></div><div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic"># creating placeholders for the inputs and the targets</span>
-
-<span style="color:#fb660a;font-weight:bold">def</span> <span style="color:#ff0086;font-weight:bold">model_inputs</span>():
-    inputs = tf.placeholder(tf.int32, [None,None], name=<span style="color:#0086d2"></span><span style="color:#0086d2">&#39;inputs&#39;</span>) <span style="color:#080;background-color:#0f140f;font-style:italic"># dtype of sorted_clean_questions is integer, shape is a 2 dimentional array with padding</span>
-    targets = tf.placeholder(tf.int32, [None,None], name=<span style="color:#0086d2"></span><span style="color:#0086d2">&#39;targets&#39;</span>)
-    lr = tf.placeholder(tf.float32, name=<span style="color:#0086d2"></span><span style="color:#0086d2">&#39;learning_rate&#39;</span>) <span style="color:#080;background-color:#0f140f;font-style:italic">#learning rate - no matrix as its a hyper parameter</span>
-    keep_prob = tf.placeholder(tf.float32, name=<span style="color:#0086d2"></span><span style="color:#0086d2">&#39;keep_prob&#39;</span>) <span style="color:#080;background-color:#0f140f;font-style:italic">#keep probe used to control the drop off rate usually 20% neurons are deactivated</span>
-    <span style="color:#fb660a;font-weight:bold">return</span> inputs, targets, lr, keep_prob</code></pre></div></div>
+</div>
 
     
     
 
     
         <h4 class="page-header">Related</h4>
+        
+          <div class="item">
+
+    
+    
+    
+
+    
+      
+
+    <h4><a itemprop="url" href="/post/2018/02/11/building-a-chatbot-with-deep-natural-language-processing-using-tensorflow-part-4-5-6/">
+      <span itemprop="name">Building a Chatbot with Deep Natural Language Processing using Tensorflow [PART-4-5-6]</span>
+    </a></h4>
+
+    February 11, 2018
+    <h5>Using tensorflow to build a chatbot demonstrating the power of Deep Natural Language Processing</h5>
+     <a href="../../../../../tags/Chatbot"><kbd class="item-tag">Chatbot</kbd></a>  <a href="../../../../../tags/NLP"><kbd class="item-tag">NLP</kbd></a>  <a href="../../../../../tags/TensorFlow"><kbd class="item-tag">TensorFlow</kbd></a>  <a href="../../../../../tags/Project"><kbd class="item-tag">Project</kbd></a>  <a href="../../../../../tags/Deep%20Learning"><kbd class="item-tag">Deep Learning</kbd></a>  <a href="../../../../../tags/Artificial%20Intelligence"><kbd class="item-tag">Artificial Intelligence</kbd></a>  <a href="../../../../../tags/Tutorial"><kbd class="item-tag">Tutorial</kbd></a> 
+
+</div>
+
+        
+          <div class="item">
+
+    
+    
+    
+
+    
+      
+
+    <h4><a itemprop="url" href="/post/2018/01/27/basics-to-get-started-with-tensorflow/">
+      <span itemprop="name">Basics to get started with Tensorflow</span>
+    </a></h4>
+
+    January 27, 2018
+    <h5>Things to learn before starting up with Tensorflow</h5>
+     <a href="../../../../../tags/101"><kbd class="item-tag">101</kbd></a>  <a href="../../../../../tags/TensorFlow"><kbd class="item-tag">TensorFlow</kbd></a> 
+
+</div>
+
         
           <div class="item">
 

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Deeplearning on Geo&#39;z Blog</title>
+    <link>http://geojoy.me/tags/deeplearning/</link>
+    <description>Recent content in Deeplearning on Geo&#39;z Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 28 Jan 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://geojoy.me/tags/deeplearning/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Intro to Recurrent Neural Network (RNN)</title>
+      <link>http://geojoy.me/post/2018/01/28/intro-to-recurrent-neural-network-rnn/</link>
+      <pubDate>Sun, 28 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://geojoy.me/post/2018/01/28/intro-to-recurrent-neural-network-rnn/</guid>
+      <description>image borrowed from UDACITY
+Recurrent Neural Network is one of the advanced algorithms that existed in the wold of supervised deep learning.
+Prelude In ANN and CNN we use neural network that takes few inputs, propagates it forward through hidden layers to the output layer. This is termed as a FEED FORWARD NETWORK. In this network there is no sence of order in the inputs.
+OK now lets bring some order to the network.</description>
+    </item>
+    
+  </channel>
+</rss>
