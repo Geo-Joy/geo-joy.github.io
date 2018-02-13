@@ -1,5 +1,3 @@
-# zenithar.hugo
+# Just a blog with dark theme
 
-Myblog using Hugo static website generator
-
-https://blog.zenithar.org
+visit geojoy.me to check it out :)
