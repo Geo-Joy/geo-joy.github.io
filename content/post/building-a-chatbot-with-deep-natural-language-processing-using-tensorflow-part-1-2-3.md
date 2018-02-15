@@ -28,7 +28,7 @@ tags:
 
 # Lets Start
 
-## PART-1. Installing and configuring Anacond
+## PART-1. Installing and configuring Anaconda
 
 ### 1a. Installing Anaconda
 

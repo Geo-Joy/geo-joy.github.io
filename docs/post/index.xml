@@ -6,20 +6,10 @@
     <description>Recent content in Posts on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 11 Feb 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 10 Feb 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://geojoy.me/post/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Building a Chatbot with Deep Natural Language Processing using Tensorflow [PART-4-5-6]</title>
-      <link>http://geojoy.me/post/2018/02/11/building-a-chatbot-with-deep-natural-language-processing-using-tensorflow-part-4-5-6/</link>
-      <pubDate>Sun, 11 Feb 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://geojoy.me/post/2018/02/11/building-a-chatbot-with-deep-natural-language-processing-using-tensorflow-part-4-5-6/</guid>
-      <description>This tutorial is divided into the following parts  Installing and configuring Anaconda Getting the Dataset Data Preprocessing Building the Seq2Seq model Training the Seq2Seq model Testing the Seq2Seq model Other Implementation  Lets Start PART-4. Building the Seq2Seq model Here we will start using TendorFlow library to do all our deep learning stuffs.
-In TensorFlow we first write out our logic and later run using a session. So we need to create some variable holder which will accept variables when we run it in session.</description>
-    </item>
     
     <item>
       <title>Building a Chatbot with Deep Natural Language Processing using Tensorflow [PART-1-2-3]</title>
@@ -27,8 +17,21 @@ In TensorFlow we first write out our logic and later run using a session. So we 
       <pubDate>Sat, 10 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>http://geojoy.me/post/2018/02/10/building-a-chatbot-with-deep-natural-language-processing-using-tensorflow-part-1-2-3/</guid>
-      <description>This tutorial is divided into the following parts  Installing and configuring Anaconda Getting the Dataset Data Preprocessing Building the Seq2Seq model Training the Seq2Seq model Testing the Seq2Seq model Other Implementation  Lets Start PART-1. Installing and configuring Anacond 1a. Installing Anaconda From anaconda.com/what-is-anaconda/
+      <description>This tutorial is divided into the following parts  Installing and configuring Anaconda Getting the Dataset Data Preprocessing Building the Seq2Seq model Training the Seq2Seq model Testing the Seq2Seq model Other Implementation  Lets Start PART-1. Installing and configuring Anaconda 1a. Installing Anaconda From anaconda.com/what-is-anaconda/
  With over 6 million users, the open source Anaconda Distribution is the easiest way to do Python data science and machine learning. It includes hundreds of popular &amp;gt; data science packages and the conda package and virtual environment manager for Windows, Linux, and MacOS.</description>
+    </item>
+    
+    <item>
+      <title>Object Detection using Single Shot Detection Algorithms</title>
+      <link>http://geojoy.me/post/2018/02/05/object-detection-using-single-shot-detection-algorithms/</link>
+      <pubDate>Mon, 05 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://geojoy.me/post/2018/02/05/object-detection-using-single-shot-detection-algorithms/</guid>
+      <description>image borrowed from Intel Developer Site
+Addon Prelude Read the article from intel developers zone. https://software.intel.com/en-us/articles/a-closer-look-at-object-detection-recognition-and-tracking
+Prelude I have taken the explanation from towardsdatascience.com - Understanding SSD MultiBox — Real-Time Object Detection In Deep Learning and further simplified it for much better understanding. Especially for the slow ones like me :P
+Architecture of SSD image borrowed from https://arxiv.org/pdf/1512.02325.pdf
+mean Average Precision (mAP) Lets try to understand what is Average Precision:e.</description>
     </item>
     
     <item>

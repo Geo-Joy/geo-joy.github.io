@@ -23,7 +23,7 @@
     <item>
       <title>Artificial Intelligence</title>
       <link>http://geojoy.me/tags/artificial-intelligence/</link>
-      <pubDate>Sun, 11 Feb 2018 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 10 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>http://geojoy.me/tags/artificial-intelligence/</guid>
       <description></description>
@@ -32,18 +32,36 @@
     <item>
       <title>Chatbot</title>
       <link>http://geojoy.me/tags/chatbot/</link>
-      <pubDate>Sun, 11 Feb 2018 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 10 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>http://geojoy.me/tags/chatbot/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>Computer_vision</title>
+      <link>http://geojoy.me/tags/computer_vision/</link>
+      <pubDate>Mon, 05 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://geojoy.me/tags/computer_vision/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Deep Learning</title>
       <link>http://geojoy.me/tags/deep-learning/</link>
-      <pubDate>Sun, 11 Feb 2018 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 10 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>http://geojoy.me/tags/deep-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Deep_learning</title>
+      <link>http://geojoy.me/tags/deep_learning/</link>
+      <pubDate>Mon, 05 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://geojoy.me/tags/deep_learning/</guid>
       <description></description>
     </item>
     
@@ -68,7 +86,7 @@
     <item>
       <title>Nlp</title>
       <link>http://geojoy.me/tags/nlp/</link>
-      <pubDate>Sun, 11 Feb 2018 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 10 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>http://geojoy.me/tags/nlp/</guid>
       <description></description>
@@ -113,7 +131,7 @@
     <item>
       <title>Project</title>
       <link>http://geojoy.me/tags/project/</link>
-      <pubDate>Sun, 11 Feb 2018 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 10 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>http://geojoy.me/tags/project/</guid>
       <description></description>
@@ -129,9 +147,18 @@
     </item>
     
     <item>
+      <title>Ssd</title>
+      <link>http://geojoy.me/tags/ssd/</link>
+      <pubDate>Mon, 05 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://geojoy.me/tags/ssd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Tensorflow</title>
       <link>http://geojoy.me/tags/tensorflow/</link>
-      <pubDate>Sun, 11 Feb 2018 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 10 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>http://geojoy.me/tags/tensorflow/</guid>
       <description></description>
@@ -140,7 +167,7 @@
     <item>
       <title>Tutorial</title>
       <link>http://geojoy.me/tags/tutorial/</link>
-      <pubDate>Sun, 11 Feb 2018 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 10 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>http://geojoy.me/tags/tutorial/</guid>
       <description></description>

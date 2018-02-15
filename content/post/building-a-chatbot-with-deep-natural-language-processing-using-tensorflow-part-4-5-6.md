@@ -4,6 +4,7 @@ date: "2018-02-11"
 title: "Building a Chatbot with Deep Natural Language Processing using Tensorflow [PART-4-5-6]"
 description: "Using tensorflow to build a chatbot demonstrating the power of Deep Natural Language Processing"
 slug: "building-a-chatbot-with-deep-natural-language-processing-using-tensorflow-part-4-5-6"
+draft: true
 tags:
  - Chatbot
  - NLP
@@ -18,9 +19,9 @@ tags:
 ![Chat Bot](/images/articles/2018/chat-bot-intro-image.jpg "Chatbot")
 
 #### This tutorial is divided into the following parts
-1. Installing and configuring Anaconda
-2. Getting the Dataset
-3. Data Preprocessing
+
+continued from previous tutorial.
+
 4. Building the Seq2Seq model
 5. Training the Seq2Seq model
 6. Testing the Seq2Seq model

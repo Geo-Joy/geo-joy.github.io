@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ssd on Geo&#39;z Blog</title>
+    <link>http://geojoy.me/tags/ssd/</link>
+    <description>Recent content in Ssd on Geo&#39;z Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 05 Feb 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://geojoy.me/tags/ssd/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Object Detection using Single Shot Detection Algorithms</title>
+      <link>http://geojoy.me/post/2018/02/05/object-detection-using-single-shot-detection-algorithms/</link>
+      <pubDate>Mon, 05 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://geojoy.me/post/2018/02/05/object-detection-using-single-shot-detection-algorithms/</guid>
+      <description>image borrowed from Intel Developer Site
+Addon Prelude Read the article from intel developers zone. https://software.intel.com/en-us/articles/a-closer-look-at-object-detection-recognition-and-tracking
+Prelude I have taken the explanation from towardsdatascience.com - Understanding SSD MultiBox — Real-Time Object Detection In Deep Learning and further simplified it for much better understanding. Especially for the slow ones like me :P
+Architecture of SSD image borrowed from https://arxiv.org/pdf/1512.02325.pdf
+mean Average Precision (mAP) Lets try to understand what is Average Precision:e.</description>
+    </item>
+    
+  </channel>
+</rss>
