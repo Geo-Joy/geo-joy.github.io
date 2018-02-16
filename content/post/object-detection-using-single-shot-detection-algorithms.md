@@ -118,11 +118,92 @@ frame_transformed = transform(frame)[0] # returns 2 elements. we need only the t
 ```py
 x = torch.from_numpy(frame_transformed).permute(2,0,1) # the pre-trained SSD model was done in GRB format not in RGB. Hence the conversion.
 ```
-2.
+3.The neural network cannot accept single input vector or image it only accepts in batches.
+So now we need to create a structure with the first dimension as the batch and other dimension as the input.
 ```py
-x = Variable(x.unsqueeze(0)) # 
+(x.unsqueeze(0) # 0 is the index of the batch and batch should be the first index in the tensor.
+```
+4.Convert this batch of torch tensor of inputs to a torch variable.
+<br/> A torch variable is a highly advanced variable that containes both a tensor and the gradient.<br/> This torch variable will become an element of the dynamic graph which will conpute the gradients very efficiently of any backpropagation 
+```py
+
 ```
 
+Its time to feed our ``torch variable`` to the SSD Neural Network
+
+```py
+y = net(x)
+```
+
+Now we have the output ``y``. This y directly does not contain what we are interested in i.e the result of the detection wheather we have a dog or a human in frame. So to get the specific information from y we need to use the ``data`` attribute from y
+
+```py
+detections = y.data
+```
+Now we need to create a new tensor which will have dimention as [width, height, width, height].<br/> This is because the position of the detected object inside the image has to be normalized between 0 & 1 and to do this normalization we will need this scaled tensor with these 4 dimensions.
+
+The first 2 width & height corresponds to the scalar values of the upper left corner
+
+```py
+scale = torch.Tensor([width, height, width, height])
+```
+
+The detection tensor contains 4 elements
+batch: we created the fake dimension with unsqueeze
+number of classes: the objects that can be detected like dog, place, boat, car
+number of occurance of the class: count of the previous classes. like 2 dogs in a frame.
+tuple: 5 element tuple - score, x0, y0, x1, y1 - for each occurance we get a score and its cordinates upper left corner and lower right corner. score(threshold) > 0.6 to be found.
+
+```py
+for i in range(detections.size(1)): #detection(size(i)) is the number of classes
+    j = 0 # occurances of class i
+    while detections[0, i, j, 0] >= 0.6: # for score >= 0.6 [batch,class,occurance, score]
+        points = (detections[0, i, j, 1:] * scale).numpy() #here we are not interested in score but the cordinates hence 1: - scale(normalize) and convert to numpy array for openCV
+        #draw rectangle - frame color red - thickness of 2
+        cv2.rectangle(frame, (int(points[0]), int(points[1])), (int(points[2]), int(points[3])), (255, 0, 0), 2)
+        #print the label - labelmap (to get the class text)is the dictionary from VOC_CLASSES we imported - i-1 is for phthon index 0 - then font - size - color - continues text not dots.
+        cv2.putText(frame, labelmap[i-1], (int(points[0]), int(points[1])), cv2.FONT_HERSHEY_SIMPLEX, 2, (255, 255, 255), 2, cv2.LINE_AA)
+        j += 1 # increment j
+return frame # return of the for loop.
+```
+
+# Creating the SSD Neural Network
+
+```py
+net = build_ssd('test') # test phase as we are using a pre-trained model from .pth file next.
+```
+
+# load the weights from already pretrained NN
+ssd300_mAP_77.43_v2.pth is pre-trained of about 30-40 objects.
+
+```py
+#to open a tensor containing weights
+net.load_state_dict(torch.load('ssd300_mAP_77.43_v2.pth', map_location = lambda storage, loc: storage))
+```
+
+#Transformation
+
+```py
+#Making the frame is compatible with the neural network.
+transform = BaseTransform(net.size, (104/256.0, 117/256.0, 123/126.0)) #net.size is  the target size of the images, tupple of 3 arguments - taken from the pretrained network (under certain convention for color values.)
+```
+
+# Doing object detection in video
+
+```py
+reader = imageio.get_reader('funny_dog.mp4')
+fps = reader.get_meta_data()['fps']
+writer = imageio.get_writer('output.mp4', fps = fps)
+for i, frame in enumerate(reader):
+    processed_frame = detect(frame, net.eval(), transform)
+    writer.append_data(processed_frame)
+    print(i)
+writer.close()
+```
+
+# Final Output
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/n7z0Y3BHiVY?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 
 
