@@ -1,9 +1,9 @@
 ---
 section: post
 date: "2018-02-05"
-title: "Object Detection using Single Shot Detection Algorithms"
+title: "Object Detection using Single Shot Detection Algorithm"
 description: "Using tensorflow to build a chatbot demonstrating the power of Deep Natural Language Processing"
-slug: "object-detection-using-single-shot-detection-algorithms"
+slug: "object-detection-using-single-shot-detection-algorithm"
 tags:
  - computer_vision
  - ssd
@@ -203,7 +203,10 @@ writer.close()
 
 # Final Output
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/n7z0Y3BHiVY?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/n7z0Y3BHiVY?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe><center>
+
+# Source Code
+<center> <a href="https://goo.gl/rXCEPB"><img src="/images/GitHub.jpg"></a> </center>
 
 
 
