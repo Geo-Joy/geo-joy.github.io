@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Artificial Intelligence on Geo&#39;z Blog</title>
-    <link>http://geojoy.me/tags/artificial-intelligence/</link>
-    <description>Recent content in Artificial Intelligence on Geo&#39;z Blog</description>
+    <title>Artificial Intelligence on its Geo</title>
+    <link>https://itsg.dev/tags/artificial-intelligence/</link>
+    <description>Recent content in Artificial Intelligence on its Geo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 10 Feb 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://geojoy.me/tags/artificial-intelligence/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://itsg.dev/tags/artificial-intelligence/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Building a Chatbot with Deep Natural Language Processing using Tensorflow [PART-1-2-3]</title>
-      <link>http://geojoy.me/post/2018/02/10/building-a-chatbot-with-deep-natural-language-processing-using-tensorflow-part-1-2-3/</link>
+      <link>https://itsg.dev/post/2018/02/10/building-a-chatbot-with-deep-natural-language-processing-using-tensorflow-part-1-2-3/</link>
       <pubDate>Sat, 10 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://geojoy.me/post/2018/02/10/building-a-chatbot-with-deep-natural-language-processing-using-tensorflow-part-1-2-3/</guid>
+      <guid>https://itsg.dev/post/2018/02/10/building-a-chatbot-with-deep-natural-language-processing-using-tensorflow-part-1-2-3/</guid>
       <description>This tutorial is divided into the following parts  Installing and configuring Anaconda Getting the Dataset Data Preprocessing Building the Seq2Seq model Training the Seq2Seq model Testing the Seq2Seq model Other Implementation  Lets Start PART-1. Installing and configuring Anaconda 1a. Installing Anaconda From anaconda.com/what-is-anaconda/
  With over 6 million users, the open source Anaconda Distribution is the easiest way to do Python data science and machine learning. It includes hundreds of popular &amp;gt; data science packages and the conda package and virtual environment manager for Windows, Linux, and MacOS.</description>
     </item>
     
     <item>
       <title>How a software developer re-focused his life to learn artificial intelligence</title>
-      <link>http://geojoy.me/post/2018/01/17/how-a-software-developer-re-focused-his-life-to-learn-artificial-intelligence/</link>
+      <link>https://itsg.dev/post/2018/01/17/how-a-software-developer-re-focused-his-life-to-learn-artificial-intelligence/</link>
       <pubDate>Wed, 17 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://geojoy.me/post/2018/01/17/how-a-software-developer-re-focused-his-life-to-learn-artificial-intelligence/</guid>
+      <guid>https://itsg.dev/post/2018/01/17/how-a-software-developer-re-focused-his-life-to-learn-artificial-intelligence/</guid>
       <description>Why would a young man quit his comfortable life and enjoyable career to „survive on benefits“ while studying a new field without any certainty as to where it may lead him? Tune in to hear Tuatini Godard&amp;rsquo;s story and life philosophy.
 Along the way, you will hear us discuss the wide range of tools and ideas within the space of deep learning and AI, as well as our in depth discussion about the current state of hardware technology for deep learning and where it is headed.</description>
     </item>

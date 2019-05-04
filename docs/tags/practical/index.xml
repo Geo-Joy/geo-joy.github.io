@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Practical on Geo&#39;z Blog</title>
-    <link>http://geojoy.me/tags/practical/</link>
-    <description>Recent content in Practical on Geo&#39;z Blog</description>
+    <title>Practical on its Geo</title>
+    <link>https://itsg.dev/tags/practical/</link>
+    <description>Recent content in Practical on its Geo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 03 Feb 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://geojoy.me/tags/practical/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://itsg.dev/tags/practical/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Predicting Stock Price using Recurrent Neural Network</title>
-      <link>http://geojoy.me/post/2018/02/03/predicting-stock-price-using-recurrent-neural-network/</link>
+      <link>https://itsg.dev/post/2018/02/03/predicting-stock-price-using-recurrent-neural-network/</link>
       <pubDate>Sat, 03 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://geojoy.me/post/2018/02/03/predicting-stock-price-using-recurrent-neural-network/</guid>
+      <guid>https://itsg.dev/post/2018/02/03/predicting-stock-price-using-recurrent-neural-network/</guid>
       <description>Prelude Brownian Motion stats that the future variations of the stock price are independent from the past.
 So it is actually impossible to predict the future stock price but one thing we can do or predict is the trend.
 So in the tutorial we will try to predict the upward and downward trend on Google Stock Price using LSTM

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Topics on Geo&#39;z Blog</title>
-    <link>http://geojoy.me/topics/</link>
-    <description>Recent content in Topics on Geo&#39;z Blog</description>
+    <title>Topics on its Geo</title>
+    <link>https://itsg.dev/topics/</link>
+    <description>Recent content in Topics on its Geo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="http://geojoy.me/topics/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://itsg.dev/topics/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

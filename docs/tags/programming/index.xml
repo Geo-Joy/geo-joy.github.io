@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Programming on Geo&#39;z Blog</title>
-    <link>http://geojoy.me/tags/programming/</link>
-    <description>Recent content in Programming on Geo&#39;z Blog</description>
+    <title>Programming on its Geo</title>
+    <link>https://itsg.dev/tags/programming/</link>
+    <description>Recent content in Programming on its Geo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 21 Jan 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://geojoy.me/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://itsg.dev/tags/programming/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Matrix Math and Numpy Refresher</title>
-      <link>http://geojoy.me/post/2018/01/21/matrix-math-and-numpy-refresher/</link>
+      <link>https://itsg.dev/post/2018/01/21/matrix-math-and-numpy-refresher/</link>
       <pubDate>Sun, 21 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://geojoy.me/post/2018/01/21/matrix-math-and-numpy-refresher/</guid>
+      <guid>https://itsg.dev/post/2018/01/21/matrix-math-and-numpy-refresher/</guid>
       <description>image borrowed from UDACITY
 Data Dimentions We fist need to understand how we represent the data specifically the shape the data can have.
 Eg: we can have a number representing a person height or a list of numbers for height, weight, age etc. May be a display picture represented as grid having rows and columns of each individual pixels and each pixels having its color value for RED, BLUE, GREEN.</description>
@@ -24,10 +24,10 @@ Eg: we can have a number representing a person height or a list of numbers for h
     
     <item>
       <title>Core Programming Principles</title>
-      <link>http://geojoy.me/post/2018/01/20/core-programming-principles/</link>
+      <link>https://itsg.dev/post/2018/01/20/core-programming-principles/</link>
       <pubDate>Sat, 20 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://geojoy.me/post/2018/01/20/core-programming-principles/</guid>
+      <guid>https://itsg.dev/post/2018/01/20/core-programming-principles/</guid>
       <description>#integer x = 2x 2  #float y = 2.5y 2.5  #string a = &amp;#34;hello&amp;#34; b = &amp;#39;hello2&amp;#39;a b hello hello2  #logical / boolean q1 = Trueq True  </description>
     </item>
     

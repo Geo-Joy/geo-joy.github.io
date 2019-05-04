@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Geo&#39;z Blog</title>
-    <link>http://geojoy.me/post/</link>
-    <description>Recent content in Posts on Geo&#39;z Blog</description>
+    <title>Posts on its Geo</title>
+    <link>https://itsg.dev/post/</link>
+    <description>Recent content in Posts on its Geo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 06 Mar 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://geojoy.me/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://itsg.dev/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Machine Learning &amp; Deep learning Terms</title>
-      <link>http://geojoy.me/post/2018/03/06/machine-learning-and-deep-learning-terms/</link>
+      <link>https://itsg.dev/post/2018/03/06/machine-learning-and-deep-learning-terms/</link>
       <pubDate>Tue, 06 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://geojoy.me/post/2018/03/06/machine-learning-and-deep-learning-terms/</guid>
+      <guid>https://itsg.dev/post/2018/03/06/machine-learning-and-deep-learning-terms/</guid>
       <description>The Machine Learning Landscape 1. What is Machine Learning?  It is the field of study that gives computers the ability to learn without being explicitly programmed.  2. Types of Machine Learning  Whether or not they are trained with human supervision  Supervised Learning Unsupervised Learning Semisupervised Learning Reinforcement Learning  Whether or not they can learn incrementally on the fly  Online Learning Batch Learning  Whether they work by simly comparing new data points to known data points, or instead detect patterns in the training data and build a predictive model, much like scientists do.</description>
     </item>
     
     <item>
       <title>Building a Chatbot with Deep Natural Language Processing using Tensorflow [PART-1-2-3]</title>
-      <link>http://geojoy.me/post/2018/02/10/building-a-chatbot-with-deep-natural-language-processing-using-tensorflow-part-1-2-3/</link>
+      <link>https://itsg.dev/post/2018/02/10/building-a-chatbot-with-deep-natural-language-processing-using-tensorflow-part-1-2-3/</link>
       <pubDate>Sat, 10 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://geojoy.me/post/2018/02/10/building-a-chatbot-with-deep-natural-language-processing-using-tensorflow-part-1-2-3/</guid>
+      <guid>https://itsg.dev/post/2018/02/10/building-a-chatbot-with-deep-natural-language-processing-using-tensorflow-part-1-2-3/</guid>
       <description>This tutorial is divided into the following parts  Installing and configuring Anaconda Getting the Dataset Data Preprocessing Building the Seq2Seq model Training the Seq2Seq model Testing the Seq2Seq model Other Implementation  Lets Start PART-1. Installing and configuring Anaconda 1a. Installing Anaconda From anaconda.com/what-is-anaconda/
  With over 6 million users, the open source Anaconda Distribution is the easiest way to do Python data science and machine learning. It includes hundreds of popular &amp;gt; data science packages and the conda package and virtual environment manager for Windows, Linux, and MacOS.</description>
     </item>
     
     <item>
       <title>Object Detection using Single Shot Detection Algorithm</title>
-      <link>http://geojoy.me/post/2018/02/05/object-detection-using-single-shot-detection-algorithm/</link>
+      <link>https://itsg.dev/post/2018/02/05/object-detection-using-single-shot-detection-algorithm/</link>
       <pubDate>Mon, 05 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://geojoy.me/post/2018/02/05/object-detection-using-single-shot-detection-algorithm/</guid>
+      <guid>https://itsg.dev/post/2018/02/05/object-detection-using-single-shot-detection-algorithm/</guid>
       <description>image borrowed from Intel Developer Site
 Addon Prelude Read the article from intel developers zone. https://software.intel.com/en-us/articles/a-closer-look-at-object-detection-recognition-and-tracking
 Prelude I have taken the explanation from towardsdatascience.com - Understanding SSD MultiBox — Real-Time Object Detection In Deep Learning and further simplified it for much better understanding. Especially for the slow ones like me :P
@@ -45,10 +45,10 @@ mean Average Precision (mAP) Lets try to understand what is Average Precision:e.
     
     <item>
       <title>Predicting Stock Price using Recurrent Neural Network</title>
-      <link>http://geojoy.me/post/2018/02/03/predicting-stock-price-using-recurrent-neural-network/</link>
+      <link>https://itsg.dev/post/2018/02/03/predicting-stock-price-using-recurrent-neural-network/</link>
       <pubDate>Sat, 03 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://geojoy.me/post/2018/02/03/predicting-stock-price-using-recurrent-neural-network/</guid>
+      <guid>https://itsg.dev/post/2018/02/03/predicting-stock-price-using-recurrent-neural-network/</guid>
       <description>Prelude Brownian Motion stats that the future variations of the stock price are independent from the past.
 So it is actually impossible to predict the future stock price but one thing we can do or predict is the trend.
 So in the tutorial we will try to predict the upward and downward trend on Google Stock Price using LSTM
@@ -57,10 +57,10 @@ Going about  We will try to get a better understand on the usage of LSTMs.</desc
     
     <item>
       <title>Intro to Recurrent Neural Network (RNN)</title>
-      <link>http://geojoy.me/post/2018/01/28/intro-to-recurrent-neural-network-rnn/</link>
+      <link>https://itsg.dev/post/2018/01/28/intro-to-recurrent-neural-network-rnn/</link>
       <pubDate>Sun, 28 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://geojoy.me/post/2018/01/28/intro-to-recurrent-neural-network-rnn/</guid>
+      <guid>https://itsg.dev/post/2018/01/28/intro-to-recurrent-neural-network-rnn/</guid>
       <description>image borrowed from UDACITY
 Recurrent Neural Network is one of the advanced algorithms that existed in the wold of supervised deep learning.
 Prelude In ANN and CNN we use neural network that takes few inputs, propagates it forward through hidden layers to the output layer. This is termed as a FEED FORWARD NETWORK. In this network there is no sence of order in the inputs.
@@ -69,19 +69,19 @@ OK now lets bring some order to the network.</description>
     
     <item>
       <title>Basics to get started with Tensorflow</title>
-      <link>http://geojoy.me/post/2018/01/27/basics-to-get-started-with-tensorflow/</link>
+      <link>https://itsg.dev/post/2018/01/27/basics-to-get-started-with-tensorflow/</link>
       <pubDate>Sat, 27 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://geojoy.me/post/2018/01/27/basics-to-get-started-with-tensorflow/</guid>
+      <guid>https://itsg.dev/post/2018/01/27/basics-to-get-started-with-tensorflow/</guid>
       <description>1. What is Tensor  Just a fancy word for an n-dimentional matrix Or an advanced array Holds only single type They are the standard way of representing data in tensorflow.  2. Tensor Data Types    python type&amp;nbsp;&amp;nbsp;&amp;nbsp; Description     tf.float32 32 bits floating point   tf.float64 64 bits floating point   tf.int8 8 bits signed integer   tf.int16 16 bits signed integer   tf.</description>
     </item>
     
     <item>
       <title>Matrix Math and Numpy Refresher</title>
-      <link>http://geojoy.me/post/2018/01/21/matrix-math-and-numpy-refresher/</link>
+      <link>https://itsg.dev/post/2018/01/21/matrix-math-and-numpy-refresher/</link>
       <pubDate>Sun, 21 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://geojoy.me/post/2018/01/21/matrix-math-and-numpy-refresher/</guid>
+      <guid>https://itsg.dev/post/2018/01/21/matrix-math-and-numpy-refresher/</guid>
       <description>image borrowed from UDACITY
 Data Dimentions We fist need to understand how we represent the data specifically the shape the data can have.
 Eg: we can have a number representing a person height or a list of numbers for height, weight, age etc. May be a display picture represented as grid having rows and columns of each individual pixels and each pixels having its color value for RED, BLUE, GREEN.</description>
@@ -89,19 +89,19 @@ Eg: we can have a number representing a person height or a list of numbers for h
     
     <item>
       <title>Core Programming Principles</title>
-      <link>http://geojoy.me/post/2018/01/20/core-programming-principles/</link>
+      <link>https://itsg.dev/post/2018/01/20/core-programming-principles/</link>
       <pubDate>Sat, 20 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://geojoy.me/post/2018/01/20/core-programming-principles/</guid>
+      <guid>https://itsg.dev/post/2018/01/20/core-programming-principles/</guid>
       <description>#integer x = 2x 2  #float y = 2.5y 2.5  #string a = &amp;#34;hello&amp;#34; b = &amp;#39;hello2&amp;#39;a b hello hello2  #logical / boolean q1 = Trueq True  </description>
     </item>
     
     <item>
       <title>How a software developer re-focused his life to learn artificial intelligence</title>
-      <link>http://geojoy.me/post/2018/01/17/how-a-software-developer-re-focused-his-life-to-learn-artificial-intelligence/</link>
+      <link>https://itsg.dev/post/2018/01/17/how-a-software-developer-re-focused-his-life-to-learn-artificial-intelligence/</link>
       <pubDate>Wed, 17 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://geojoy.me/post/2018/01/17/how-a-software-developer-re-focused-his-life-to-learn-artificial-intelligence/</guid>
+      <guid>https://itsg.dev/post/2018/01/17/how-a-software-developer-re-focused-his-life-to-learn-artificial-intelligence/</guid>
       <description>Why would a young man quit his comfortable life and enjoyable career to „survive on benefits“ while studying a new field without any certainty as to where it may lead him? Tune in to hear Tuatini Godard&amp;rsquo;s story and life philosophy.
 Along the way, you will hear us discuss the wide range of tools and ideas within the space of deep learning and AI, as well as our in depth discussion about the current state of hardware technology for deep learning and where it is headed.</description>
     </item>
