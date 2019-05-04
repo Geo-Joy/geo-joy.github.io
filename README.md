@@ -1,3 +1,3 @@
 # Just a blog with dark theme
 
-visit geojoy.me to check it out :)
+visit https://itsG.dev to check it out :)
