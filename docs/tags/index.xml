@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Geo&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 27 Jan 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 06 Mar 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://geojoy.me/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>101</title>
       <link>http://geojoy.me/tags/101/</link>
-      <pubDate>Sat, 27 Jan 2018 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 06 Mar 2018 00:00:00 +0000</pubDate>
       
       <guid>http://geojoy.me/tags/101/</guid>
       <description></description>
@@ -71,6 +71,15 @@
       <pubDate>Sun, 28 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>http://geojoy.me/tags/deeplearning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Machine_learning</title>
+      <link>http://geojoy.me/tags/machine_learning/</link>
+      <pubDate>Tue, 06 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://geojoy.me/tags/machine_learning/</guid>
       <description></description>
     </item>
     

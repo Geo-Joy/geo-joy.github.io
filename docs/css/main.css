@@ -1594,7 +1594,15 @@ h1 {
 
 .h2,
 h2 {
-    font-size: 30px
+    font-size: 30px;
+    h2 {      font-size: 30px;
+    color: #eac608;  }
+    h2 {      font-size: 30px;
+    color: #eac608;  }
+    h2 {      font-size: 30px;
+    color: #eac608;  }
+    color:;
+    color: #ead008;
 }
 
 .h3,
