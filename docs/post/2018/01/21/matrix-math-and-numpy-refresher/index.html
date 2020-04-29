@@ -1,4 +1,134 @@
-<!doctype html><html lang="en-us" class="wf-loading"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="HandheldFriendly" content="True"><meta name="MobileOptimized" content="320"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preload" href="https://itsg.dev/js/main.js" as="script"><link rel="preload" href="https://itsg.dev/css/main.css" as="style"><title>Matrix Math and Numpy Refresher</title><meta name="generator" content="Hugo 0.32.4"><link rel="preconnect" href="https://ajax.googleapis.com/" crossorigin><link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><meta property="og:title" content="Matrix Math and Numpy Refresher"><meta property="og:description" content="This tutorial provides a short refresher on what is needed to know for doing deeplearning, along with some guidance for using the NumPy library to work efficiently with matrices in Python."><meta property="og:type" content="article"><meta property="og:url" content="https://itsg.dev/post/2018/01/21/matrix-math-and-numpy-refresher/"><meta property="article:published_time" content="2018-01-21T00:00:00+00:00"><meta property="article:modified_time" content="2018-01-21T00:00:00+00:00"><meta property="og:type" content="article"><meta property="og:article:published_time" content="2018-01-21T00:00:00Z"><meta property="og:article:tag" content="101"><meta property="og:article:tag" content="programming"><meta property="og:article:tag" content="numpy"><meta property="og:article:tag" content="mathematics"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@megeojoy"><meta name="twitter:creator" content="@megeojoy"><meta name="twitter:title" content="Matrix Math and Numpy Refresher"><meta name="twitter:description" content="This tutorial provides a short refresher on what is needed to know for doing deeplearning, along with some guidance for using the NumPy library to work efficiently with matrices in Python."><meta name="twitter:url" content="https://itsg.dev/post/2018/01/21/matrix-math-and-numpy-refresher/"><meta name="p:domain_verify" content="58lHJFznHgioHOIv2NvLfobc8XEUUZSKm016uFFO4vE"><script type="application/ld+json">{ "@context": "http://schema.org", "@type": "Person", "name": "Geo Joy", "url": "http://itsG.dev", "sameAs": [ "https://twitter.com/megeojoy", "https://www.linkedin.com/in/geojoy/", "https://github.com/Geo-Joy", ], "image": { "@type": "ImageObject", "url": "https://graph.facebook.com/10207052454221714/picture?type=large", "height": 80, "width": 80 } }</script><script type="application/ld+json">{ "@context": "http://schema.org", "@type": "Organization", "@id": "https://itsg.dev", "name": "its Geo", "url": "https://itsg.dev", "logo": { "@type": "ImageObject", "url": "https://graph.facebook.com/10207052454221714/picture?type=large", "height": 80, "width": 80 } }</script><script type="application/ld+json">{ "@context": "http://schema.org", "@type": "WebSite", "url": "https://itsg.dev", "name": "its Geo", "author": { "@type": "Person", "name": "Geo Joy" }, "description": "" }</script><script type="application/ld+json">{ "@context": "http://schema.org", "@type": "BlogPosting", "headline": "Matrix Math and Numpy Refresher", "description": "This tutorial provides a short refresher on what is needed to know for doing deeplearning, along with some guidance for using the NumPy library to work efficiently with matrices in Python.", "author": { "@type": "Person", "name": "Geo Joy" }, "publisher": { "@type": "Organization", "name": "its Geo", "logo": "https://graph.facebook.com/10207052454221714/picture?type=large" }, "image": { "@type": "ImageObject", "url": "https://graph.facebook.com/10207052454221714/picture?type=large", "height": 80, "width": 80 }, "datePublished": "2018-01-21", "dateModified": "2018-01-21", "wordCount": 1333 , "keywords": ["101","programming","numpy","mathematics"] }</script><style>body {
+<!DOCTYPE html>
+<html lang="en-us" class="wf-loading">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <meta name="HandheldFriendly" content="True" />
+        <meta name="MobileOptimized" content="320" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="preload" href="https://itsg.dev/js/main.js" as="script" />
+        <link rel="preload" href="https://itsg.dev/css/main.css" as="style" />
+
+        <title>Matrix Math and Numpy Refresher</title>
+        <meta name="generator" content="Hugo 0.69.2" />
+        
+        <link rel="preconnect" href="https://ajax.googleapis.com/" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+        <meta property="og:title" content="Matrix Math and Numpy Refresher" />
+<meta property="og:description" content="This tutorial provides a short refresher on what is needed to know for doing deeplearning, along with some guidance for using the NumPy library to work efficiently with matrices in Python." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://itsg.dev/post/2018/01/21/matrix-math-and-numpy-refresher/" />
+<meta property="article:published_time" content="2018-01-21T00:00:00+00:00" />
+<meta property="article:modified_time" content="2018-01-21T00:00:00+00:00" />
+
+    
+        <meta property="og:type" content="article" />
+        <meta property="og:article:published_time" content="2018-01-21T00:00:00Z" />
+        <meta property="og:article:tag" content="101" />
+        <meta property="og:article:tag" content="programming" />
+        <meta property="og:article:tag" content="numpy" />
+        <meta property="og:article:tag" content="mathematics" />
+        
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@megeojoy" />
+        <meta name="twitter:creator" content="@megeojoy" />
+        <meta name="twitter:title" content="Matrix Math and Numpy Refresher" />
+        <meta name="twitter:description" content="This tutorial provides a short refresher on what is needed to know for doing deeplearning, along with some guidance for using the NumPy library to work efficiently with matrices in Python." />
+        <meta name="twitter:url" content="https://itsg.dev/post/2018/01/21/matrix-math-and-numpy-refresher/" />
+        
+    
+
+    
+        <meta name="p:domain_verify" content="58lHJFznHgioHOIv2NvLfobc8XEUUZSKm016uFFO4vE"/>
+    
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Geo Joy",
+      "url": "http://itsG.dev",
+      "sameAs": [
+        "https://twitter.com/megeojoy",
+        "https://www.linkedin.com/in/geojoy/",
+        "https://github.com/Geo-Joy",
+      ],
+      "image": {
+        "@type": "ImageObject",
+        "url": "https:\/\/graph.facebook.com\/10207052454221714\/picture?type=large",
+        "height": 80,
+        "width": 80
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "@id": "https:\/\/itsg.dev",
+      "name": "its Geo",
+      "url": "https:\/\/itsg.dev",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https:\/\/graph.facebook.com\/10207052454221714\/picture?type=large",
+        "height": 80,
+        "width": 80
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "url": "https:\/\/itsg.dev",
+      "name": "its Geo",
+      "author": {
+        "@type": "Person",
+        "name": "Geo Joy"
+      },
+      "description": ""
+    }
+    </script>
+
+      
+      <script type="application/ld+json">
+      {
+          "@context": "http://schema.org",
+          "@type": "BlogPosting",
+          "headline": "Matrix Math and Numpy Refresher",
+          "description": "This tutorial provides a short refresher on what is needed to know for doing deeplearning, along with some guidance for using the NumPy library to work efficiently with matrices in Python.",
+          "author": {
+              "@type": "Person",
+              "name": "Geo Joy"
+          },
+          "publisher": {
+              "@type": "Organization",
+              "name": "its Geo",
+              "logo": "https:\/\/graph.facebook.com\/10207052454221714\/picture?type=large"
+          },
+          
+          "image": {
+            "@type": "ImageObject",
+            "url": "https:\/\/graph.facebook.com\/10207052454221714\/picture?type=large",
+            "height": 80,
+            "width": 80
+          },
+          "datePublished": "2018-01-21",
+          "dateModified": "2018-01-21",
+          "wordCount":  1278 
+          ,
+          "keywords": "[\"101\",\"programming\",\"numpy\",\"mathematics\"]" 
+      }
+    </script>
+  
+
+    <style>
+    body {
         margin: 0
     }
 
@@ -517,34 +647,188 @@
     .wf-inactive h4,
     wf-inactive a {
         visibility: visible;
-    }</style><meta name="theme-color" content="#08ea08"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"></head><body bgcolor="#000"><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQ3JDPK" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><nav class="navbar navbar-default navbar-fixed-top"><div class="container"><div class="navbar-header"><a class="navbar-brand visible-xs" href="#">Its Geo</a> <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button></div><div class="collapse navbar-collapse"><ul class="nav navbar-nav"><li><a href="/">Home</a></li><li><a href="/post/">Posts</a></li><li><a href="/project/">Projects</a></li></ul><ul class="nav navbar-nav navbar-right"><li class="navbar-icon"><a href="/resume/"><i class="fa fa-user"></i></a></li><li class="navbar-icon"><a href="http://www.google.com/recaptcha/mailhide/d?k=01IIc-s5LNYiS-CG_gthn4PA==&c=r5Ctx8RMDz422qmYESfk1g=="><i class="fa fa-envelope"></i></a></li><li class="navbar-icon"><a href="https://github.com/Geo-Joy"><i class="fa fa-github-alt"></i></a></li><li class="navbar-icon"><a href="https://twitter.com/megeojoy"><i class="fa fa-twitter"></i></a></li><li class="navbar-icon"><a href="https://www.linkedin.com/in/geojoy/"><i class="fa fa-linkedin"></i></a></li></ul></div></div></nav><main class="fade-in"><h4><a itemprop="url" href="/post/2018/01/21/matrix-math-and-numpy-refresher/"><span itemprop="name">Matrix Math and Numpy Refresher</span></a></h4>January 21, 2018<br><a href="../../../../../tags/101"><kbd class="item-tag">101</kbd></a> <a href="../../../../../tags/programming"><kbd class="item-tag">programming</kbd></a> <a href="../../../../../tags/numpy"><kbd class="item-tag">numpy</kbd></a> <a href="../../../../../tags/mathematics"><kbd class="item-tag">mathematics</kbd></a><br><hr><br><div class="text-justify"><p><img src="/images/articles/2018/matrix-math.jpg" alt="matrix-math.jpg" title="matrix-math.jpg"> image borrowed from <a href="udacity.com">UDACITY</a></p><h1 id="data-dimentions">Data Dimentions</h1><p>We fist need to understand how we represent the data specifically the shape the data can have.</p><p>Eg: we can have a number representing a person height or a list of numbers for height, weight, age etc. May be a display picture represented as grid having rows and columns of each individual pixels and each pixels having its color value for RED, BLUE, GREEN.</p><p>We describe this data in terms of number of dimentions.</p><p>First we have the smallest simplest shape called <code>SCALARS</code> (single value) eg: 1, -5, 8.9 etc</p><p>It is said that scalars have zero dimentions.</p><p>So from the previous example of the person the height, weight and age are all scalar.</p><p><br></p><p>Then there are lists of values called <code>VECTORS</code>.</p><p>They are of two types <code>row vector</code> and <code>column vector</code></p><div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic"># row vector</span>
+    }
+</style>
+    <meta name="theme-color" content="#08ea08">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    </head>
+
+    <body bgcolor="#000">
+      
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQ3JDPK"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    
+                    <a class="navbar-brand visible-xs" href="#">Its Geo</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Posts</a></li>
+                            
+                                <li><a href="/project/">Projects</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="/resume/"><i class="fa fa-user"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="http://www.google.com/recaptcha/mailhide/d?k=01IIc-s5LNYiS-CG_gthn4PA==&amp;c=r5Ctx8RMDz422qmYESfk1g=="><i class="fa fa-envelope"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/Geo-Joy"><i class="fa fa-github-alt"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/megeojoy"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/geojoy/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main class="fade-in">
+
+    
+    <h4><a itemprop="url" href="/post/2018/01/21/matrix-math-and-numpy-refresher/">
+        <span itemprop="name">Matrix Math and Numpy Refresher</span>
+      </a></h4>
+  
+      January 21, 2018 
+      <br>
+       <a href="../../../../../tags/101"><kbd class="item-tag">101</kbd></a>  <a href="../../../../../tags/programming"><kbd class="item-tag">programming</kbd></a>  <a href="../../../../../tags/numpy"><kbd class="item-tag">numpy</kbd></a>  <a href="../../../../../tags/mathematics"><kbd class="item-tag">mathematics</kbd></a> 
+      <br>
+      <hr>
+
+    <br> <div class="text-justify"><p><img src="/images/articles/2018/matrix-math.jpg" alt="matrix-math.jpg" title="matrix-math.jpg">
+image borrowed from <!-- raw HTML omitted -->UDACITY<!-- raw HTML omitted --></p>
+<h1 id="data-dimentions">Data Dimentions</h1>
+<p>We fist need to understand how we represent the data specifically the shape the data can have.</p>
+<p>Eg: we can have a number representing a person height or a list of numbers for height, weight, age etc. May be a display picture represented as grid having rows and columns of each individual pixels and each pixels having its color value for RED, BLUE, GREEN.</p>
+<p>We describe this data in terms of number of dimentions.</p>
+<p>First we have the smallest simplest shape called <code>SCALARS</code> (single value)
+eg: 1, -5, 8.9 etc</p>
+<p>It is said that scalars have zero dimentions.</p>
+<p>So from the previous example of the person the height, weight and age are all scalar.</p>
+<!-- raw HTML omitted -->
+<p>Then there are lists of values called <code>VECTORS</code>.</p>
+<p>They are of two types <code>row vector</code> and <code>column vector</code></p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic"># row vector</span>
 [<span style="color:#0086f7;font-weight:bold">1</span>,<span style="color:#0086f7;font-weight:bold">2</span>,<span style="color:#0086f7;font-weight:bold">3</span>]
 
 <span style="color:#080;background-color:#0f140f;font-style:italic"># column vector</span>
 [<span style="color:#0086f7;font-weight:bold">1</span>
 <span style="color:#0086f7;font-weight:bold">2</span>
-<span style="color:#0086f7;font-weight:bold">3</span>]</code></pre></div><p><strong>Vectors</strong> are said to have 1 dimention called length.</p><p>So from the previous example we have store the persons height, weight and age as Vector [height, weight, age]</p><p><br></p><p>Then we have <code>MATRICS</code>. Its a 2-dimentional grid of value.</p><div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">[[<span style="color:#0086f7;font-weight:bold">1</span>,<span style="color:#0086f7;font-weight:bold">2</span>,<span style="color:#0086f7;font-weight:bold">3</span>]
-[<span style="color:#0086f7;font-weight:bold">4</span>,<span style="color:#0086f7;font-weight:bold">5</span>,<span style="color:#0086f7;font-weight:bold">6</span>]]</code></pre></div><p>The above code snippet shows a 2x3( two cross three ) matrix ie. 2 rows and 3 columns.</p><p><br></p><p>Finally there are tensors named for a collection of n-dimentional values.</p><p><img src="/images/articles/2018/tensor-data-shape.png" alt="tensor-data-shape.png" title="tensor-data-shape.png"> image borrowed from <a href="udacity.com">UDACITY</a></p><p><br></p><p>Mostly everyone uses the terms SCALAR and MATRICES for all tutorials. VECTORS are hereby considered are a MATRIX having either of its row or column (dimentions) as size 1.</p><p><br></p><p>To get values from a matrix we use indexes. Indexes start from a11, a12, a21 etc.<br><code>But in programming most languages have indexes starting from 0. So we have indexes as a00, a01, a10 etc</code></p><p><img src="/images/articles/2018/matrix-indexes.jpg" alt="matrix-indexes.jpg" title="matrix-indexes.jpg"> image borrowed from <a href="udacity.com">UDACITY</a> and modified by me :)</p><hr><p><br></p><h1 id="numpy-and-its-data-in-python">Numpy and its Data in Python</h1><p>Python is convenient, but it can also be slow. However, it does allow us to access libraries that execute faster code written in languages like C. NumPy is one such library: it provides fast alternatives to math operations in Python and is designed to work efficiently with groups of numbers - like matrices.</p><h2 id="data-types-and-shapes">Data Types and Shapes</h2><p>The most common way to work with numbers in NumPy is through ndarray objects.</p><pre><code>https://docs.scipy.org/doc/numpy/reference/arrays.html
-</code></pre><p><br></p><h3 id="scalars-in-numpy">SCALARS in Numpy</h3><p>Python language has basic data types are int, float, boolean, string. But Numpy, since it is written in C language, has additional datatypes like uint8, int8, uint16, int16 and so on.</p><p>These datatypes are important because every object we make (vectors, matrices, tensors) eventually stores scalars.</p><p><code>Do note that every item in an array must have the same data type.</code></p><div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#fb660a;font-weight:bold">import</span> numpy <span style="color:#fb660a;font-weight:bold">as</span> np</code></pre></div><div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic"># to create a numpy array that stores a scalar</span>
-scalar_array = np.array(<span style="color:#0086f7;font-weight:bold">8</span>)</code></pre></div><p>To get the shape of this array we use the arribute <code>shape</code>.</p><div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">scalar_array.shape</code></pre></div><p>Here we get the output as <code>()</code>. This means that it has zero dimension.</p><p><br></p><h3 id="vectors-in-numpy">VECTORS in Numpy</h3><p>Vectors are created by passing a python list [1,2,3] to the numpy array.</p><div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">vector_array = np.array([<span style="color:#0086f7;font-weight:bold">1</span>,<span style="color:#0086f7;font-weight:bold">2</span>,<span style="color:#0086f7;font-weight:bold">3</span>])</code></pre></div><p>to check its shape</p><div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">vector_array.shape</code></pre></div><p>The above snippet returns <code>(3,)</code>. This is a tuple having the dimension of 1 and a comma suffixed.</p><pre><code>https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences
-</code></pre><p>We can access an element within a vector as</p><div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">x = vector_array[<span style="color:#0086f7;font-weight:bold">1</span>]
+<span style="color:#0086f7;font-weight:bold">3</span>]
+</code></pre></div><p><strong>Vectors</strong> are said to have 1 dimention called length.</p>
+<p>So from the previous example we have store the persons height, weight and age as Vector [height, weight, age]</p>
+<!-- raw HTML omitted -->
+<p>Then we have <code>MATRICS</code>. Its a 2-dimentional grid of value.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">[[<span style="color:#0086f7;font-weight:bold">1</span>,<span style="color:#0086f7;font-weight:bold">2</span>,<span style="color:#0086f7;font-weight:bold">3</span>]
+[<span style="color:#0086f7;font-weight:bold">4</span>,<span style="color:#0086f7;font-weight:bold">5</span>,<span style="color:#0086f7;font-weight:bold">6</span>]]
+</code></pre></div><p>The above code snippet shows a 2x3( two cross three ) matrix ie. 2 rows and 3 columns.</p>
+<!-- raw HTML omitted -->
+<p>Finally there are tensors named for a collection of n-dimentional values.</p>
+<p><img src="/images/articles/2018/tensor-data-shape.png" alt="tensor-data-shape.png" title="tensor-data-shape.png">
+image borrowed from <!-- raw HTML omitted -->UDACITY<!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<p>Mostly everyone uses the terms SCALAR and MATRICES for all tutorials.
+VECTORS are hereby considered are a MATRIX having either of its row or column (dimentions) as size 1.</p>
+<!-- raw HTML omitted -->
+<p>To get values from a matrix we use indexes. Indexes start from a11, a12, a21 etc. <!-- raw HTML omitted -->
+<code>But in programming most languages have indexes starting from 0. So we have indexes as a00, a01, a10 etc</code></p>
+<p><img src="/images/articles/2018/matrix-indexes.jpg" alt="matrix-indexes.jpg" title="matrix-indexes.jpg">
+image borrowed from <!-- raw HTML omitted -->UDACITY<!-- raw HTML omitted --> and modified by me :)</p>
+<hr>
+<!-- raw HTML omitted -->
+<h1 id="numpy-and-its-data-in-python">Numpy and its Data in Python</h1>
+<p>Python is convenient, but it can also be slow. However, it does allow us to access libraries that execute faster code written in languages like C. NumPy is one such library: it provides fast alternatives to math operations in Python and is designed to work efficiently with groups of numbers - like matrices.</p>
+<h2 id="data-types-and-shapes">Data Types and Shapes</h2>
+<p>The most common way to work with numbers in NumPy is through ndarray objects.</p>
+<pre><code>https://docs.scipy.org/doc/numpy/reference/arrays.html
+</code></pre><!-- raw HTML omitted -->
+<p>These datatypes are important because every object we make (vectors, matrices, tensors) eventually stores scalars.</p>
+<p><code>Do note that every item in an array must have the same data type.</code></p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#fb660a;font-weight:bold">import</span> numpy <span style="color:#fb660a;font-weight:bold">as</span> np
+</code></pre></div><div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic"># to create a numpy array that stores a scalar</span>
+scalar_array = np.array(<span style="color:#0086f7;font-weight:bold">8</span>)
+</code></pre></div><p>To get the shape of this array we use the arribute <code>shape</code>.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">scalar_array.shape
+</code></pre></div><p>Here we get the output as <code>()</code>. This means that it has zero dimension.</p>
+<!-- raw HTML omitted -->
+<p>Vectors are created by passing a python list [1,2,3] to the numpy array.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">vector_array = np.array([<span style="color:#0086f7;font-weight:bold">1</span>,<span style="color:#0086f7;font-weight:bold">2</span>,<span style="color:#0086f7;font-weight:bold">3</span>])
+</code></pre></div><p>to check its shape</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">vector_array.shape
+</code></pre></div><p>The above snippet returns <code>(3,)</code>. This is a tuple having the dimension of 1 and a comma suffixed.</p>
+<pre><code>https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences
+</code></pre><p>We can access an element within a vector as</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">x = vector_array[<span style="color:#0086f7;font-weight:bold">1</span>]
 <span style="color:#080;background-color:#0f140f;font-style:italic"># which gives x as 1</span>
 
 <span style="color:#080;background-color:#0f140f;font-style:italic"># to get all elements from second element we use</span>
-x = vector_array[<span style="color:#0086f7;font-weight:bold">1</span>:]</code></pre></div><p><br></p><h3 id="matrices-in-numpy">MATRICES in Numpy</h3><p>To create a matrix using numpy array we just need to pass lists of lists, where each list represents a row. So to create a 3x3 matrix we do as</p><div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">matrix_33 = np.array([<span style="color:#0086f7;font-weight:bold">1</span>,<span style="color:#0086f7;font-weight:bold">2</span>,<span style="color:#0086f7;font-weight:bold">3</span>], [<span style="color:#0086f7;font-weight:bold">4</span>,<span style="color:#0086f7;font-weight:bold">5</span>,<span style="color:#0086f7;font-weight:bold">6</span>], [<span style="color:#0086f7;font-weight:bold">7</span>,<span style="color:#0086f7;font-weight:bold">8</span>,<span style="color:#0086f7;font-weight:bold">9</span>])</code></pre></div><p>checking the shape we get tuple <code>(3,3)</code> indicating it has 2 dimentions, each length of 3.</p><p><br></p><h3 id="tensors-in-numpy">TENSORS in Numpy</h3><p>Same as matrices, here tensors can have n-dimensions.</p><div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">tensor = np.array([[[[<span style="color:#0086f7;font-weight:bold">1</span>],[<span style="color:#0086f7;font-weight:bold">2</span>]],[[<span style="color:#0086f7;font-weight:bold">3</span>],[<span style="color:#0086f7;font-weight:bold">4</span>]],[[<span style="color:#0086f7;font-weight:bold">5</span>],[<span style="color:#0086f7;font-weight:bold">6</span>]]],[[[<span style="color:#0086f7;font-weight:bold">7</span>],[<span style="color:#0086f7;font-weight:bold">8</span>]],[[<span style="color:#0086f7;font-weight:bold">9</span>],[<span style="color:#0086f7;font-weight:bold">10</span>]],[[<span style="color:#0086f7;font-weight:bold">11</span>],[<span style="color:#0086f7;font-weight:bold">12</span>]]],[[[<span style="color:#0086f7;font-weight:bold">13</span>],[<span style="color:#0086f7;font-weight:bold">14</span>]],[[<span style="color:#0086f7;font-weight:bold">15</span>],[<span style="color:#0086f7;font-weight:bold">16</span>]],[[<span style="color:#0086f7;font-weight:bold">17</span>],[<span style="color:#0086f7;font-weight:bold">17</span>]]]])</code></pre></div><p>This returns <code>(3, 3, 2, 1)</code>. Which says <code>4</code> dimensions and each number represents the <code>length of each lists</code> in tensor.</p><p><br></p><h3 id="changing-shape-of-a-matrix">Changing shape of a matrix</h3><p>Sometimes we’ll need to change the shape of our data without actually changing its contents. Eg: you may have a vector, which is one-dimensional, but need a matrix, which is two-dimensional.</p><div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">v = np.array([<span style="color:#0086f7;font-weight:bold">1</span>,<span style="color:#0086f7;font-weight:bold">2</span>,<span style="color:#0086f7;font-weight:bold">3</span>,<span style="color:#0086f7;font-weight:bold">4</span>])
+x = vector_array[<span style="color:#0086f7;font-weight:bold">1</span>:]
+</code></pre></div><!-- raw HTML omitted -->
+<p>To create a matrix using numpy array we just need to pass lists of lists, where each list represents a row. So to create a 3x3 matrix we do as</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">matrix_33 = np.array([<span style="color:#0086f7;font-weight:bold">1</span>,<span style="color:#0086f7;font-weight:bold">2</span>,<span style="color:#0086f7;font-weight:bold">3</span>], [<span style="color:#0086f7;font-weight:bold">4</span>,<span style="color:#0086f7;font-weight:bold">5</span>,<span style="color:#0086f7;font-weight:bold">6</span>], [<span style="color:#0086f7;font-weight:bold">7</span>,<span style="color:#0086f7;font-weight:bold">8</span>,<span style="color:#0086f7;font-weight:bold">9</span>])
+</code></pre></div><p>checking the shape we get tuple <code>(3,3)</code> indicating it has 2 dimentions, each length of 3.</p>
+<!-- raw HTML omitted -->
+<p>Same as matrices, here tensors can have n-dimensions.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">tensor = np.array([[[[<span style="color:#0086f7;font-weight:bold">1</span>],[<span style="color:#0086f7;font-weight:bold">2</span>]],[[<span style="color:#0086f7;font-weight:bold">3</span>],[<span style="color:#0086f7;font-weight:bold">4</span>]],[[<span style="color:#0086f7;font-weight:bold">5</span>],[<span style="color:#0086f7;font-weight:bold">6</span>]]],[[[<span style="color:#0086f7;font-weight:bold">7</span>],[<span style="color:#0086f7;font-weight:bold">8</span>]],[[<span style="color:#0086f7;font-weight:bold">9</span>],[<span style="color:#0086f7;font-weight:bold">10</span>]],[[<span style="color:#0086f7;font-weight:bold">11</span>],[<span style="color:#0086f7;font-weight:bold">12</span>]]],[[[<span style="color:#0086f7;font-weight:bold">13</span>],[<span style="color:#0086f7;font-weight:bold">14</span>]],[[<span style="color:#0086f7;font-weight:bold">15</span>],[<span style="color:#0086f7;font-weight:bold">16</span>]],[[<span style="color:#0086f7;font-weight:bold">17</span>],[<span style="color:#0086f7;font-weight:bold">17</span>]]]])
+</code></pre></div><p>This returns <code>(3, 3, 2, 1)</code>. Which says <code>4</code> dimensions and each number represents the <code>length of each lists</code> in tensor.</p>
+<!-- raw HTML omitted -->
+<p>Sometimes we&rsquo;ll need to change the shape of our data without actually changing its contents. Eg: you may have a vector, which is one-dimensional, but need a matrix, which is two-dimensional.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">v = np.array([<span style="color:#0086f7;font-weight:bold">1</span>,<span style="color:#0086f7;font-weight:bold">2</span>,<span style="color:#0086f7;font-weight:bold">3</span>,<span style="color:#0086f7;font-weight:bold">4</span>])
 
 <span style="color:#080;background-color:#0f140f;font-style:italic"># v.shape returns (4,)</span>
 
 <span style="color:#080;background-color:#0f140f;font-style:italic"># to change shape we use the reshape function </span>
 x = v.reshape(<span style="color:#0086f7;font-weight:bold">1</span>,<span style="color:#0086f7;font-weight:bold">4</span>)
 
-<span style="color:#080;background-color:#0f140f;font-style:italic"># x.shape returns (1,4)</span></code></pre></div><p>Experienced users do it the following way.</p><div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">x = v[None, :]
+<span style="color:#080;background-color:#0f140f;font-style:italic"># x.shape returns (1,4)</span>
+</code></pre></div><p>Experienced users do it the following way.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">x = v[None, :]
 
-<span style="color:#080;background-color:#0f140f;font-style:italic"># x.shape returns (1,4)</span></code></pre></div><p><br></p><h3 id="element-wise-operator">Element-wise Operator</h3><p>Suppose we wanted to add a value to every element in the list</p><div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">values = [<span style="color:#0086f7;font-weight:bold">1</span>,<span style="color:#0086f7;font-weight:bold">2</span>,<span style="color:#0086f7;font-weight:bold">3</span>,<span style="color:#0086f7;font-weight:bold">4</span>,<span style="color:#0086f7;font-weight:bold">5</span>]
+<span style="color:#080;background-color:#0f140f;font-style:italic"># x.shape returns (1,4)</span>
+</code></pre></div><!-- raw HTML omitted -->
+<p>Suppose we wanted to add a value to every element in the list</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">values = [<span style="color:#0086f7;font-weight:bold">1</span>,<span style="color:#0086f7;font-weight:bold">2</span>,<span style="color:#0086f7;font-weight:bold">3</span>,<span style="color:#0086f7;font-weight:bold">4</span>,<span style="color:#0086f7;font-weight:bold">5</span>]
 values = np.array(values) + <span style="color:#0086f7;font-weight:bold">5</span>
 
-<span style="color:#080;background-color:#0f140f;font-style:italic"># value gives [6,7,8,9,10]</span></code></pre></div><p>Similarly numpy has function for addition, subtraction, multiplication, division etc.</p><div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">x = np.multiply(some_array, <span style="color:#0086f7;font-weight:bold">5</span>)
-x = some_array * <span style="color:#0086f7;font-weight:bold">5</span></code></pre></div><p><br></p><h3 id="element-wise-matrix-operation">Element-wise Matrix Operation</h3><p>The same functions and operators that work with scalars and matrices also work with other dimensions. We just need to make sure that the items we perform the operation on have compatible shapes.</p><div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">a = np.array([[<span style="color:#0086f7;font-weight:bold">1</span>,<span style="color:#0086f7;font-weight:bold">3</span>],[<span style="color:#0086f7;font-weight:bold">5</span>,<span style="color:#0086f7;font-weight:bold">7</span>]])
+<span style="color:#080;background-color:#0f140f;font-style:italic"># value gives [6,7,8,9,10]</span>
+</code></pre></div><p>Similarly numpy has function for addition, subtraction, multiplication, division etc.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">x = np.multiply(some_array, <span style="color:#0086f7;font-weight:bold">5</span>)
+x = some_array * <span style="color:#0086f7;font-weight:bold">5</span>
+</code></pre></div><!-- raw HTML omitted -->
+<p>The same functions and operators that work with scalars and matrices also work with other dimensions. We just need to make sure that the items we perform the operation on have compatible shapes.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">a = np.array([[<span style="color:#0086f7;font-weight:bold">1</span>,<span style="color:#0086f7;font-weight:bold">3</span>],[<span style="color:#0086f7;font-weight:bold">5</span>,<span style="color:#0086f7;font-weight:bold">7</span>]])
 a
 <span style="color:#080;background-color:#0f140f;font-style:italic"># displays the following result:</span>
 <span style="color:#080;background-color:#0f140f;font-style:italic"># array([[1, 3],</span>
@@ -559,7 +843,10 @@ b
 a + b
 <span style="color:#080;background-color:#0f140f;font-style:italic"># displays the following result</span>
 <span style="color:#080;background-color:#0f140f;font-style:italic">#      array([[ 3,  7],</span>
-<span style="color:#080;background-color:#0f140f;font-style:italic">#             [11, 15]])</span></code></pre></div><p>And if we try working with incompatible shapes, we’d get an error:</p><div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">a = np.array([[<span style="color:#0086f7;font-weight:bold">1</span>,<span style="color:#0086f7;font-weight:bold">3</span>],[<span style="color:#0086f7;font-weight:bold">5</span>,<span style="color:#0086f7;font-weight:bold">7</span>]])
+<span style="color:#080;background-color:#0f140f;font-style:italic">#             [11, 15]])</span>
+
+</code></pre></div><p>And if we try working with incompatible shapes, we&rsquo;d get an error:</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">a = np.array([[<span style="color:#0086f7;font-weight:bold">1</span>,<span style="color:#0086f7;font-weight:bold">3</span>],[<span style="color:#0086f7;font-weight:bold">5</span>,<span style="color:#0086f7;font-weight:bold">7</span>]])
 a
 <span style="color:#080;background-color:#0f140f;font-style:italic"># displays the following result:</span>
 <span style="color:#080;background-color:#0f140f;font-style:italic"># array([[1, 3],</span>
@@ -581,7 +868,19 @@ c.shape
 
 a + c
 <span style="color:#080;background-color:#0f140f;font-style:italic"># displays the following error:</span>
-<span style="color:#080;background-color:#0f140f;font-style:italic"># ValueError: operands could not be broadcast together with shapes (2,2) (3,3)</span></code></pre></div><h3 id="important-reminders-about-matrix-multiplication">Important Reminders About Matrix Multiplication</h3><ul><li>The <strong>number</strong> of <strong>columns</strong> in the <strong>left</strong> matrix <strong>must equal</strong> the <strong>number</strong> of <strong>rows</strong> in the <strong>right</strong> matrix.</li><li>The <strong>answer</strong> matrix <strong>always has</strong> the <strong>same number</strong> of <strong>rows</strong> as the <strong>left</strong> matrix and the <strong>same number</strong> of <strong>columns</strong> as the <strong>right</strong> matrix.</li><li><strong>Order matters</strong>. Multiplying <strong>A•B</strong> is not the same as multiplying <strong>B•A</strong>.</li><li>Data in the <strong>left</strong> matrix <strong>should be</strong> arranged as <strong>rows</strong>., while data in the <strong>right</strong> matrix <strong>should be</strong> arranged as <strong>columns</strong>.</li></ul><p>If we keep these four points in mind, you should always be able to figure out how to properly arrange your matrix multiplications when building a neural network.</p><h3 id="numpy-matrix-multiplication">NumPy Matrix Multiplication</h3><p>It’s important to know that NumPy supports several types of matrix multiplication.</p><p>To find the matrix product, you use NumPy’s matmul function.</p><div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">a = np.array([[<span style="color:#0086f7;font-weight:bold">1</span>,<span style="color:#0086f7;font-weight:bold">2</span>,<span style="color:#0086f7;font-weight:bold">3</span>,<span style="color:#0086f7;font-weight:bold">4</span>],[<span style="color:#0086f7;font-weight:bold">5</span>,<span style="color:#0086f7;font-weight:bold">6</span>,<span style="color:#0086f7;font-weight:bold">7</span>,<span style="color:#0086f7;font-weight:bold">8</span>]])
+<span style="color:#080;background-color:#0f140f;font-style:italic"># ValueError: operands could not be broadcast together with shapes (2,2) (3,3)</span>
+</code></pre></div><h3 id="important-reminders-about-matrix-multiplication">Important Reminders About Matrix Multiplication</h3>
+<ul>
+<li>The <strong>number</strong> of <strong>columns</strong> in the <strong>left</strong> matrix <strong>must equal</strong> the <strong>number</strong> of <strong>rows</strong> in the <strong>right</strong> matrix.</li>
+<li>The <strong>answer</strong> matrix <strong>always has</strong> the <strong>same number</strong> of <strong>rows</strong> as the <strong>left</strong> matrix and the <strong>same number</strong> of <strong>columns</strong> as the <strong>right</strong> matrix.</li>
+<li><strong>Order matters</strong>. Multiplying <strong>A•B</strong> is not the same as multiplying <strong>B•A</strong>.</li>
+<li>Data in the <strong>left</strong> matrix <strong>should be</strong> arranged as <strong>rows</strong>., while data in the <strong>right</strong> matrix <strong>should be</strong> arranged as <strong>columns</strong>.</li>
+</ul>
+<p>If we keep these four points in mind, you should always be able to figure out how to properly arrange your matrix multiplications when building a neural network.</p>
+<h3 id="numpy-matrix-multiplication">NumPy Matrix Multiplication</h3>
+<p>It&rsquo;s important to know that NumPy supports several types of matrix multiplication.</p>
+<p>To find the matrix product, you use NumPy&rsquo;s matmul function.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">a = np.array([[<span style="color:#0086f7;font-weight:bold">1</span>,<span style="color:#0086f7;font-weight:bold">2</span>,<span style="color:#0086f7;font-weight:bold">3</span>,<span style="color:#0086f7;font-weight:bold">4</span>],[<span style="color:#0086f7;font-weight:bold">5</span>,<span style="color:#0086f7;font-weight:bold">6</span>,<span style="color:#0086f7;font-weight:bold">7</span>,<span style="color:#0086f7;font-weight:bold">8</span>]])
 a
 <span style="color:#080;background-color:#0f140f;font-style:italic"># displays the following result:</span>
 <span style="color:#080;background-color:#0f140f;font-style:italic"># array([[1, 2, 3, 4],</span>
@@ -608,7 +907,9 @@ c
 <span style="color:#080;background-color:#0f140f;font-style:italic">#        [158, 184, 210]])</span>
 c.shape
 <span style="color:#080;background-color:#0f140f;font-style:italic"># displays the following result:</span>
-<span style="color:#080;background-color:#0f140f;font-style:italic"># (2, 3)</span></code></pre></div><p>We may sometimes see NumPy’s dot function in places where you would expect a matmul. It turns out that the results of dot and matmul are the same if the matrices are two dimensional.</p><div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">a = np.array([[<span style="color:#0086f7;font-weight:bold">1</span>,<span style="color:#0086f7;font-weight:bold">2</span>],[<span style="color:#0086f7;font-weight:bold">3</span>,<span style="color:#0086f7;font-weight:bold">4</span>]])
+<span style="color:#080;background-color:#0f140f;font-style:italic"># (2, 3)</span>
+</code></pre></div><p>We may sometimes see NumPy&rsquo;s dot function in places where you would expect a matmul. It turns out that the results of dot and matmul are the same if the matrices are two dimensional.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">a = np.array([[<span style="color:#0086f7;font-weight:bold">1</span>,<span style="color:#0086f7;font-weight:bold">2</span>],[<span style="color:#0086f7;font-weight:bold">3</span>,<span style="color:#0086f7;font-weight:bold">4</span>]])
 a
 <span style="color:#080;background-color:#0f140f;font-style:italic"># displays the following result:</span>
 <span style="color:#080;background-color:#0f140f;font-style:italic"># array([[1, 2],</span>
@@ -626,7 +927,10 @@ a.dot(a)  <span style="color:#080;background-color:#0f140f;font-style:italic"># 
 
 np.matmul(a,a)
 <span style="color:#080;background-color:#0f140f;font-style:italic"># array([[ 7, 10],</span>
-<span style="color:#080;background-color:#0f140f;font-style:italic">#        [15, 22]])</span></code></pre></div><h3 id="transpose">Transpose</h3><p>This is used to convert a row to column and viceversa. Do note that numpy transpose simply changes the way it indexes the original matrix. It does not create a new matrix.</p><div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">m = np.array([[<span style="color:#0086f7;font-weight:bold">1</span>,<span style="color:#0086f7;font-weight:bold">2</span>,<span style="color:#0086f7;font-weight:bold">3</span>,<span style="color:#0086f7;font-weight:bold">4</span>], [<span style="color:#0086f7;font-weight:bold">5</span>,<span style="color:#0086f7;font-weight:bold">6</span>,<span style="color:#0086f7;font-weight:bold">7</span>,<span style="color:#0086f7;font-weight:bold">8</span>], [<span style="color:#0086f7;font-weight:bold">9</span>,<span style="color:#0086f7;font-weight:bold">10</span>,<span style="color:#0086f7;font-weight:bold">11</span>,<span style="color:#0086f7;font-weight:bold">12</span>]])
+<span style="color:#080;background-color:#0f140f;font-style:italic">#        [15, 22]])</span>
+</code></pre></div><h3 id="transpose">Transpose</h3>
+<p>This is used to convert a row to column and viceversa. Do note that numpy transpose simply changes the way it indexes the original matrix. It does not create a new matrix.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">m = np.array([[<span style="color:#0086f7;font-weight:bold">1</span>,<span style="color:#0086f7;font-weight:bold">2</span>,<span style="color:#0086f7;font-weight:bold">3</span>,<span style="color:#0086f7;font-weight:bold">4</span>], [<span style="color:#0086f7;font-weight:bold">5</span>,<span style="color:#0086f7;font-weight:bold">6</span>,<span style="color:#0086f7;font-weight:bold">7</span>,<span style="color:#0086f7;font-weight:bold">8</span>], [<span style="color:#0086f7;font-weight:bold">9</span>,<span style="color:#0086f7;font-weight:bold">10</span>,<span style="color:#0086f7;font-weight:bold">11</span>,<span style="color:#0086f7;font-weight:bold">12</span>]])
 m
 <span style="color:#080;background-color:#0f140f;font-style:italic"># displays the following result:</span>
 <span style="color:#080;background-color:#0f140f;font-style:italic"># array([[ 1,  2,  3,  4],</span>
@@ -638,4 +942,97 @@ m.T
 <span style="color:#080;background-color:#0f140f;font-style:italic"># array([[ 1,  5,  9],</span>
 <span style="color:#080;background-color:#0f140f;font-style:italic">#        [ 2,  6, 10],</span>
 <span style="color:#080;background-color:#0f140f;font-style:italic">#        [ 3,  7, 11],</span>
-<span style="color:#080;background-color:#0f140f;font-style:italic">#        [ 4,  8, 12]])</span></code></pre></div></div><h4 class="page-header">Related</h4><div class="item"><h4><a itemprop="url" href="/post/2018/03/06/machine-learning-and-deep-learning-terms/"><span itemprop="name">Machine Learning & Deep learning Terms</span></a></h4>March 6, 2018<h5>Important terms to remember in the field of machine learning with deep learning.</h5><a href="../../../../../tags/101"><kbd class="item-tag">101</kbd></a> <a href="../../../../../tags/Machine_Learning"><kbd class="item-tag">Machine_Learning</kbd></a></div><div class="item"><h4><a itemprop="url" href="/post/2018/01/27/basics-to-get-started-with-tensorflow/"><span itemprop="name">Basics to get started with Tensorflow</span></a></h4>January 27, 2018<h5>Things to learn before starting up with Tensorflow</h5><a href="../../../../../tags/101"><kbd class="item-tag">101</kbd></a> <a href="../../../../../tags/TensorFlow"><kbd class="item-tag">TensorFlow</kbd></a></div><div class="item"><h4><a itemprop="url" href="/post/2018/01/20/core-programming-principles/"><span itemprop="name">Core Programming Principles</span></a></h4>January 20, 2018<h5>Get the sense on the basic things to keep in mind before putting yourselfs into programming.</h5><a href="../../../../../tags/101"><kbd class="item-tag">101</kbd></a> <a href="../../../../../tags/programming"><kbd class="item-tag">programming</kbd></a></div></main><footer><p class="copyright text-muted">Geo Joy © All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> hosted on <a href="https://github.com/Geo-Joy/geo-joy.github.io">Github</a></p></footer><script async src="https://itsg.dev/js/main.js"></script><script>!function(e,t,a,n,g){e[n]=e[n]||[],e[n].push({"gtm.start":(new Date).getTime(),event:"gtm.js"});var m=t.getElementsByTagName(a)[0],r=t.createElement(a);r.async=!0,r.src="https://www.googletagmanager.com/gtm.js?id=GTM-KQ3JDPK",m.parentNode.insertBefore(r,m)}(window,document,"script","dataLayer")</script></body></html>
+<span style="color:#080;background-color:#0f140f;font-style:italic">#        [ 4,  8, 12]])</span>
+</code></pre></div></div>
+
+    
+    
+
+    
+        <h4 class="page-header">Related</h4>
+        
+          <div class="item">
+
+    
+    
+    
+
+    
+      
+
+    <h4><a itemprop="url" href="/post/2018/03/06/machine-learning-and-deep-learning-terms/">
+      <span itemprop="name">Machine Learning &amp; Deep learning Terms</span>
+    </a></h4>
+
+    March 6, 2018
+    <h5>Important terms to remember in the field of machine learning with deep learning.</h5>
+     <a href="../../../../../tags/101"><kbd class="item-tag">101</kbd></a>  <a href="../../../../../tags/Machine_Learning"><kbd class="item-tag">Machine_Learning</kbd></a> 
+
+</div>
+
+        
+          <div class="item">
+
+    
+    
+    
+
+    
+      
+
+    <h4><a itemprop="url" href="/post/2018/01/27/basics-to-get-started-with-tensorflow/">
+      <span itemprop="name">Basics to get started with Tensorflow</span>
+    </a></h4>
+
+    January 27, 2018
+    <h5>Things to learn before starting up with Tensorflow</h5>
+     <a href="../../../../../tags/101"><kbd class="item-tag">101</kbd></a>  <a href="../../../../../tags/TensorFlow"><kbd class="item-tag">TensorFlow</kbd></a> 
+
+</div>
+
+        
+          <div class="item">
+
+    
+    
+    
+
+    
+      
+
+    <h4><a itemprop="url" href="/post/2018/01/20/core-programming-principles/">
+      <span itemprop="name">Core Programming Principles</span>
+    </a></h4>
+
+    January 20, 2018
+    <h5>Get the sense on the basic things to keep in mind before putting yourselfs into programming.</h5>
+     <a href="../../../../../tags/101"><kbd class="item-tag">101</kbd></a>  <a href="../../../../../tags/programming"><kbd class="item-tag">programming</kbd></a> 
+
+</div>
+
+        
+    
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">Geo Joy © All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> hosted on <a href="https://github.com/Geo-Joy/geo-joy.github.io">Github</a></p>
+
+        </footer>
+        
+       <script async="" src="https://itsg.dev/js/main.js"></script>
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KQ3JDPK');</script>
+
+
+    </body>
+
+</html>
+

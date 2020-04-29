@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Computer_vision on its Geo</title>
+    <title>computer_vision on its Geo</title>
     <link>https://itsg.dev/tags/computer_vision/</link>
-    <description>Recent content in Computer_vision on its Geo</description>
+    <description>Recent content in computer_vision on its Geo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 05 Feb 2018 00:00:00 +0000</lastBuildDate>
@@ -17,11 +17,9 @@
       <pubDate>Mon, 05 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>https://itsg.dev/post/2018/02/05/object-detection-using-single-shot-detection-algorithm/</guid>
-      <description>image borrowed from Intel Developer Site
-Addon Prelude Read the article from intel developers zone. https://software.intel.com/en-us/articles/a-closer-look-at-object-detection-recognition-and-tracking
-Prelude I have taken the explanation from towardsdatascience.com - Understanding SSD MultiBox — Real-Time Object Detection In Deep Learning and further simplified it for much better understanding. Especially for the slow ones like me :P
-Architecture of SSD image borrowed from https://arxiv.org/pdf/1512.02325.pdf
-mean Average Precision (mAP) Lets try to understand what is Average Precision:e.</description>
+      <description>Addon Prelude Read the article from intel developers zone.https://software.intel.com/en-us/articles/a-closer-look-at-object-detection-recognition-and-tracking
+ Prelude I have taken the explanation from towardsdatascience.com - Understanding SSD MultiBox — Real-Time Object Detection In Deep Learningand further simplified it for much better understanding. Especially for the slow ones like me :P
+Architecture of SSD mean Average Precision (mAP) Lets try to understand what is Average Precision:e.g. Let’s say, we recommended 7 products to a customer and the 1st, 4th, 5th, 6th product recommended was correct.</description>
     </item>
     
   </channel>

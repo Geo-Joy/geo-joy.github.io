@@ -1,4 +1,133 @@
-<!doctype html><html lang="en-us" class="wf-loading"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="HandheldFriendly" content="True"><meta name="MobileOptimized" content="320"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preload" href="https://itsg.dev/js/main.js" as="script"><link rel="preload" href="https://itsg.dev/css/main.css" as="style"><title>Predicting Stock Price using Recurrent Neural Network</title><meta name="generator" content="Hugo 0.32.4"><link rel="preconnect" href="https://ajax.googleapis.com/" crossorigin><link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><meta property="og:title" content="Predicting Stock Price using Recurrent Neural Network"><meta property="og:description" content="A practical implementation of RNN in predicting the stock price."><meta property="og:type" content="article"><meta property="og:url" content="https://itsg.dev/post/2018/02/03/predicting-stock-price-using-recurrent-neural-network/"><meta property="article:published_time" content="2018-02-03T00:00:00+00:00"><meta property="article:modified_time" content="2018-02-03T00:00:00+00:00"><meta property="og:type" content="article"><meta property="og:article:published_time" content="2018-02-03T00:00:00Z"><meta property="og:article:tag" content="practical"><meta property="og:article:tag" content="rnn"><meta property="og:article:tag" content="project"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@megeojoy"><meta name="twitter:creator" content="@megeojoy"><meta name="twitter:title" content="Predicting Stock Price using Recurrent Neural Network"><meta name="twitter:description" content="A practical implementation of RNN in predicting the stock price."><meta name="twitter:url" content="https://itsg.dev/post/2018/02/03/predicting-stock-price-using-recurrent-neural-network/"><meta name="p:domain_verify" content="58lHJFznHgioHOIv2NvLfobc8XEUUZSKm016uFFO4vE"><script type="application/ld+json">{ "@context": "http://schema.org", "@type": "Person", "name": "Geo Joy", "url": "http://itsG.dev", "sameAs": [ "https://twitter.com/megeojoy", "https://www.linkedin.com/in/geojoy/", "https://github.com/Geo-Joy", ], "image": { "@type": "ImageObject", "url": "https://graph.facebook.com/10207052454221714/picture?type=large", "height": 80, "width": 80 } }</script><script type="application/ld+json">{ "@context": "http://schema.org", "@type": "Organization", "@id": "https://itsg.dev", "name": "its Geo", "url": "https://itsg.dev", "logo": { "@type": "ImageObject", "url": "https://graph.facebook.com/10207052454221714/picture?type=large", "height": 80, "width": 80 } }</script><script type="application/ld+json">{ "@context": "http://schema.org", "@type": "WebSite", "url": "https://itsg.dev", "name": "its Geo", "author": { "@type": "Person", "name": "Geo Joy" }, "description": "" }</script><script type="application/ld+json">{ "@context": "http://schema.org", "@type": "BlogPosting", "headline": "Predicting Stock Price using Recurrent Neural Network", "description": "A practical implementation of RNN in predicting the stock price.", "author": { "@type": "Person", "name": "Geo Joy" }, "publisher": { "@type": "Organization", "name": "its Geo", "logo": "https://graph.facebook.com/10207052454221714/picture?type=large" }, "image": { "@type": "ImageObject", "url": "https://graph.facebook.com/10207052454221714/picture?type=large", "height": 80, "width": 80 }, "datePublished": "2018-02-03", "dateModified": "2018-02-03", "wordCount": 912 , "keywords": ["practical","rnn","project"] }</script><style>body {
+<!DOCTYPE html>
+<html lang="en-us" class="wf-loading">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <meta name="HandheldFriendly" content="True" />
+        <meta name="MobileOptimized" content="320" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="preload" href="https://itsg.dev/js/main.js" as="script" />
+        <link rel="preload" href="https://itsg.dev/css/main.css" as="style" />
+
+        <title>Predicting Stock Price using Recurrent Neural Network</title>
+        <meta name="generator" content="Hugo 0.69.2" />
+        
+        <link rel="preconnect" href="https://ajax.googleapis.com/" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+        <meta property="og:title" content="Predicting Stock Price using Recurrent Neural Network" />
+<meta property="og:description" content="A practical implementation of RNN in predicting the stock price." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://itsg.dev/post/2018/02/03/predicting-stock-price-using-recurrent-neural-network/" />
+<meta property="article:published_time" content="2018-02-03T00:00:00+00:00" />
+<meta property="article:modified_time" content="2018-02-03T00:00:00+00:00" />
+
+    
+        <meta property="og:type" content="article" />
+        <meta property="og:article:published_time" content="2018-02-03T00:00:00Z" />
+        <meta property="og:article:tag" content="practical" />
+        <meta property="og:article:tag" content="rnn" />
+        <meta property="og:article:tag" content="project" />
+        
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@megeojoy" />
+        <meta name="twitter:creator" content="@megeojoy" />
+        <meta name="twitter:title" content="Predicting Stock Price using Recurrent Neural Network" />
+        <meta name="twitter:description" content="A practical implementation of RNN in predicting the stock price." />
+        <meta name="twitter:url" content="https://itsg.dev/post/2018/02/03/predicting-stock-price-using-recurrent-neural-network/" />
+        
+    
+
+    
+        <meta name="p:domain_verify" content="58lHJFznHgioHOIv2NvLfobc8XEUUZSKm016uFFO4vE"/>
+    
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Geo Joy",
+      "url": "http://itsG.dev",
+      "sameAs": [
+        "https://twitter.com/megeojoy",
+        "https://www.linkedin.com/in/geojoy/",
+        "https://github.com/Geo-Joy",
+      ],
+      "image": {
+        "@type": "ImageObject",
+        "url": "https:\/\/graph.facebook.com\/10207052454221714\/picture?type=large",
+        "height": 80,
+        "width": 80
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "@id": "https:\/\/itsg.dev",
+      "name": "its Geo",
+      "url": "https:\/\/itsg.dev",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https:\/\/graph.facebook.com\/10207052454221714\/picture?type=large",
+        "height": 80,
+        "width": 80
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "url": "https:\/\/itsg.dev",
+      "name": "its Geo",
+      "author": {
+        "@type": "Person",
+        "name": "Geo Joy"
+      },
+      "description": ""
+    }
+    </script>
+
+      
+      <script type="application/ld+json">
+      {
+          "@context": "http://schema.org",
+          "@type": "BlogPosting",
+          "headline": "Predicting Stock Price using Recurrent Neural Network",
+          "description": "A practical implementation of RNN in predicting the stock price.",
+          "author": {
+              "@type": "Person",
+              "name": "Geo Joy"
+          },
+          "publisher": {
+              "@type": "Organization",
+              "name": "its Geo",
+              "logo": "https:\/\/graph.facebook.com\/10207052454221714\/picture?type=large"
+          },
+          
+          "image": {
+            "@type": "ImageObject",
+            "url": "https:\/\/graph.facebook.com\/10207052454221714\/picture?type=large",
+            "height": 80,
+            "width": 80
+          },
+          "datePublished": "2018-02-03",
+          "dateModified": "2018-02-03",
+          "wordCount":  903 
+          ,
+          "keywords": "[\"practical\",\"rnn\",\"project\"]" 
+      }
+    </script>
+  
+
+    <style>
+    body {
         margin: 0
     }
 
@@ -517,31 +646,179 @@
     .wf-inactive h4,
     wf-inactive a {
         visibility: visible;
-    }</style><meta name="theme-color" content="#08ea08"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"></head><body bgcolor="#000"><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQ3JDPK" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><nav class="navbar navbar-default navbar-fixed-top"><div class="container"><div class="navbar-header"><a class="navbar-brand visible-xs" href="#">Its Geo</a> <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button></div><div class="collapse navbar-collapse"><ul class="nav navbar-nav"><li><a href="/">Home</a></li><li><a href="/post/">Posts</a></li><li><a href="/project/">Projects</a></li></ul><ul class="nav navbar-nav navbar-right"><li class="navbar-icon"><a href="/resume/"><i class="fa fa-user"></i></a></li><li class="navbar-icon"><a href="http://www.google.com/recaptcha/mailhide/d?k=01IIc-s5LNYiS-CG_gthn4PA==&c=r5Ctx8RMDz422qmYESfk1g=="><i class="fa fa-envelope"></i></a></li><li class="navbar-icon"><a href="https://github.com/Geo-Joy"><i class="fa fa-github-alt"></i></a></li><li class="navbar-icon"><a href="https://twitter.com/megeojoy"><i class="fa fa-twitter"></i></a></li><li class="navbar-icon"><a href="https://www.linkedin.com/in/geojoy/"><i class="fa fa-linkedin"></i></a></li></ul></div></div></nav><main class="fade-in"><h4><a itemprop="url" href="/post/2018/02/03/predicting-stock-price-using-recurrent-neural-network/"><span itemprop="name">Predicting Stock Price using Recurrent Neural Network</span></a></h4>February 3, 2018<br><a href="../../../../../tags/practical"><kbd class="item-tag">practical</kbd></a> <a href="../../../../../tags/rnn"><kbd class="item-tag">rnn</kbd></a> <a href="../../../../../tags/project"><kbd class="item-tag">project</kbd></a><br><hr><br><div class="text-justify"><p><img src="/images/articles/2018/RNN/predicting-stock-price-intro.jpg" alt="predicting-stock-price-intro.jpg" title="predicting-stock-price-intro.jpg"></p><h1 id="prelude">Prelude</h1><p><code>Brownian Motion</code> stats that the future variations of the stock price are <code>independent from the past</code>.</p><p>So it is actually <code>impossible to predict</code> the future stock price but one thing we can do or <code>predict is the trend</code>.</p><p>So in the tutorial we will <code>try to predict</code> the upward and downward trend on <code>Google Stock Price</code> using <code>LSTM</code></p><h1 id="going-about">Going about</h1><ul><li>We will try to get a better understand on the usage of LSTMs.</li><li>This LSTM will be trained with <code>6yrs</code> of google stock price <code>(2013-2017)</code></li><li>Predict the <code>open of stock</code> for first month of <code>2018</code></li><li>NB: There is no <code>SATURDAY</code> and <code>SUNDAY</code> data in the dataset.</li></ul><h1 id="downloading-the-dataset">Downloading the Dataset</h1><h3 id="trainset">TrainSet</h3><p><a href="https://finance.yahoo.com/quote/GOOG/history?period1=1356978600&period2=1514658600&interval=1d&filter=history&frequency=1d">https://finance.yahoo.com/quote/GOOG/history?period1=1356978600&period2=1514658600&interval=1d&filter=history&frequency=1d</a></p><ul><li>01 Jan 2013 to 31 Dec 2017</li></ul><p><img src="/images/articles/2018/RNN/google-stock-train.png" alt="google-stock-train.png" title="google-stock-train.png"> <img src="/images/articles/2018/RNN/google-stock-train-graph.png" alt="google-stock-train.png" title="google-stock-train.png"></p><h3 id="testset">TestSet</h3><p><a href="https://finance.yahoo.com/quote/GOOG/history?period1=1514745000&period2=1517337000&interval=1d&filter=history&frequency=1d">https://finance.yahoo.com/quote/GOOG/history?period1=1514745000&period2=1517337000&interval=1d&filter=history&frequency=1d</a></p><ul><li>01 Jan 2018 to 31 Jan 2018</li></ul><p><img src="/images/articles/2018/RNN/google-stock-test.png" alt="google-stock-test.png" title="google-stock-test.png"> <img src="/images/articles/2018/RNN/google-stock-test-graph.png" alt="google-stock-test.png" title="google-stock-test.png"></p><hr><p><br></p><h1 id="data-preprocessing">Data Preprocessing</h1><div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic">## Data Preprocessing</span>
+    }
+</style>
+    <meta name="theme-color" content="#08ea08">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    </head>
+
+    <body bgcolor="#000">
+      
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQ3JDPK"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    
+                    <a class="navbar-brand visible-xs" href="#">Its Geo</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Posts</a></li>
+                            
+                                <li><a href="/project/">Projects</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="/resume/"><i class="fa fa-user"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="http://www.google.com/recaptcha/mailhide/d?k=01IIc-s5LNYiS-CG_gthn4PA==&amp;c=r5Ctx8RMDz422qmYESfk1g=="><i class="fa fa-envelope"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/Geo-Joy"><i class="fa fa-github-alt"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/megeojoy"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/geojoy/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main class="fade-in">
+
+    
+    <h4><a itemprop="url" href="/post/2018/02/03/predicting-stock-price-using-recurrent-neural-network/">
+        <span itemprop="name">Predicting Stock Price using Recurrent Neural Network</span>
+      </a></h4>
+  
+      February 3, 2018 
+      <br>
+       <a href="../../../../../tags/practical"><kbd class="item-tag">practical</kbd></a>  <a href="../../../../../tags/rnn"><kbd class="item-tag">rnn</kbd></a>  <a href="../../../../../tags/project"><kbd class="item-tag">project</kbd></a> 
+      <br>
+      <hr>
+
+    <br> <div class="text-justify"><p><img src="/images/articles/2018/RNN/predicting-stock-price-intro.jpg" alt="predicting-stock-price-intro.jpg" title="predicting-stock-price-intro.jpg"></p>
+<h1 id="prelude">Prelude</h1>
+<p><code>Brownian Motion</code> stats that the future variations of the stock price are <code>independent from the past</code>.</p>
+<p>So it is actually <code>impossible to predict</code> the future stock price but one thing we can do or <code>predict is the trend</code>.</p>
+<p>So in the tutorial we will <code>try to predict</code> the upward and downward trend on <code>Google Stock Price</code> using <code>LSTM</code></p>
+<h1 id="going-about">Going about</h1>
+<ul>
+<li>We will try to get a better understand on the usage of LSTMs.</li>
+<li>This LSTM will be trained with <code>6yrs</code> of google stock price <code>(2013-2017)</code></li>
+<li>Predict the <code>open of stock</code> for first month of <code>2018</code></li>
+<li>NB: There is no <code>SATURDAY</code> and <code>SUNDAY</code> data in the dataset.</li>
+</ul>
+<h1 id="downloading-the-dataset">Downloading the Dataset</h1>
+<h3 id="trainset">TrainSet</h3>
+<p><a href="https://finance.yahoo.com/quote/GOOG/history?period1=1356978600&amp;period2=1514658600&amp;interval=1d&amp;filter=history&amp;frequency=1d">https://finance.yahoo.com/quote/GOOG/history?period1=1356978600&amp;period2=1514658600&amp;interval=1d&amp;filter=history&amp;frequency=1d</a></p>
+<ul>
+<li>01 Jan 2013 to 31 Dec 2017</li>
+</ul>
+<p><img src="/images/articles/2018/RNN/google-stock-train.png" alt="google-stock-train.png" title="google-stock-train.png">
+<img src="/images/articles/2018/RNN/google-stock-train-graph.png" alt="google-stock-train.png" title="google-stock-train.png"></p>
+<h3 id="testset">TestSet</h3>
+<p><a href="https://finance.yahoo.com/quote/GOOG/history?period1=1514745000&amp;period2=1517337000&amp;interval=1d&amp;filter=history&amp;frequency=1d">https://finance.yahoo.com/quote/GOOG/history?period1=1514745000&amp;period2=1517337000&amp;interval=1d&amp;filter=history&amp;frequency=1d</a></p>
+<ul>
+<li>01 Jan 2018 to 31 Jan 2018</li>
+</ul>
+<p><img src="/images/articles/2018/RNN/google-stock-test.png" alt="google-stock-test.png" title="google-stock-test.png">
+<img src="/images/articles/2018/RNN/google-stock-test-graph.png" alt="google-stock-test.png" title="google-stock-test.png"></p>
+<hr>
+<!-- raw HTML omitted -->
+<h1 id="data-preprocessing">Data Preprocessing</h1>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic">## Data Preprocessing</span>
 <span style="color:#fb660a;font-weight:bold">import</span> numpy <span style="color:#fb660a;font-weight:bold">as</span> np <span style="color:#080;background-color:#0f140f;font-style:italic">#allow us to do array manipulation</span>
 <span style="color:#fb660a;font-weight:bold">import</span> matplotlib.pyplot <span style="color:#fb660a;font-weight:bold">as</span> plt <span style="color:#080;background-color:#0f140f;font-style:italic">#to visualize the data</span>
-<span style="color:#fb660a;font-weight:bold">import</span> pandas <span style="color:#fb660a;font-weight:bold">as</span> pd <span style="color:#080;background-color:#0f140f;font-style:italic">#to import and manage the dataset</span></code></pre></div><h2 id="importing-data">Importing Data</h2><p>To import the data from the excel we downloaded, we will use the pandas <code>read_csv</code> function.</p><p>read_csv imports data as a <code>DataFrame</code></p><h4 id="dataframe">Dataframe</h4><p><a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html">https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html</a></p><blockquote><p>A DataFrame is a two-dimentional labeled data structures with columns of potentially different types.<br>check out: <a href="https://www.youtube.com/watch?time_continue=44&v=CLoNO-XxNXU">https://www.youtube.com/watch?time_continue=44&v=CLoNO-XxNXU</a></p></blockquote><div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic">## Importing the training set</span>
+<span style="color:#fb660a;font-weight:bold">import</span> pandas <span style="color:#fb660a;font-weight:bold">as</span> pd <span style="color:#080;background-color:#0f140f;font-style:italic">#to import and manage the dataset</span>
+</code></pre></div><h2 id="importing-data">Importing Data</h2>
+<p>To import the data from the excel we downloaded, we will use the pandas <code>read_csv</code> function.</p>
+<p>read_csv imports data as a <code>DataFrame</code></p>
+<h4 id="dataframe">Dataframe</h4>
+<p><a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html">https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html</a></p>
+<blockquote>
+<p>A DataFrame is a two-dimentional labeled data structures with columns of potentially different types.<!-- raw HTML omitted -->
+check out: <a href="https://www.youtube.com/watch?time_continue=44&amp;v=CLoNO-XxNXU">https://www.youtube.com/watch?time_continue=44&amp;v=CLoNO-XxNXU</a></p>
+</blockquote>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic">## Importing the training set</span>
 <span style="color:#080;background-color:#0f140f;font-style:italic"># importing as dataframe using pandas</span>
-dataset_train = pd.read_csv(<span style="color:#0086d2"></span><span style="color:#0086d2">'Google_Stock_Price_Train_2013-2017.csv'</span>);
+dataset_train = pd.read_csv(<span style="color:#0086d2">&#39;Google_Stock_Price_Train_2013-2017.csv&#39;</span>);
 <span style="color:#080;background-color:#0f140f;font-style:italic"># Select the required column using iloc method and .values converts dataframe to array</span>
 <span style="color:#080;background-color:#0f140f;font-style:italic"># .iloc[all_columns: only 1 row (open stock)]</span>
 <span style="color:#080;background-color:#0f140f;font-style:italic"># convert the dataset to numpy array as neural network accepts only arrays as inputs</span>
-training_set = dataset_train.iloc[:,<span style="color:#0086f7;font-weight:bold">1</span>:<span style="color:#0086f7;font-weight:bold">2</span>].values <span style="color:#080;background-color:#0f140f;font-style:italic"># should give as range if we give [:,1] we just get a vector what we need is numpy array</span></code></pre></div><p><img src="/images/articles/2018/RNN/stock_dataframe.png" alt="stock_dataframe.png" title="stock_dataframe.png"><br><img src="/images/articles/2018/RNN/stock_training_set.png" alt="stock_training_set.png" title="stock_training_set.png"></p><h2 id="feature-scaling">Feature Scaling</h2><p>Feature Scaling can be done in two methods 1. Standardisation 2. Normalisation</p><p>Here we will use Normalisation as we are using a sigmoid function as an activation function in output layer.</p><p>For this we will use the MinMaxScalar class from the pre-processing module in scikit learn library.</p><div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#fb660a;font-weight:bold">from</span> sklearn.preprocessing <span style="color:#fb660a;font-weight:bold">import</span> MinMaxScaler</code></pre></div><p><img src="/images/articles/2018/RNN/feature_scaling.png" alt="feature_scaling.png" title="feature_scaling.png"><center>image borrowed from <a href="https://www.superdatascience.com">Super Data Science</a></center></p><p><br></p><div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic"># Feature Scaling</span>
+training_set = dataset_train.iloc[:,<span style="color:#0086f7;font-weight:bold">1</span>:<span style="color:#0086f7;font-weight:bold">2</span>].values <span style="color:#080;background-color:#0f140f;font-style:italic"># should give as range if we give [:,1] we just get a vector what we need is numpy array</span>
+</code></pre></div><p><img src="/images/articles/2018/RNN/stock_dataframe.png" alt="stock_dataframe.png" title="stock_dataframe.png">
+<!-- raw HTML omitted -->
+<img src="/images/articles/2018/RNN/stock_training_set.png" alt="stock_training_set.png" title="stock_training_set.png"></p>
+<h2 id="feature-scaling">Feature Scaling</h2>
+<p>Feature Scaling can be done in two methods</p>
+<ol>
+<li>Standardisation</li>
+<li>Normalisation</li>
+</ol>
+<p>Here we will use Normalisation as we are using a sigmoid function as an activation function in output layer.</p>
+<p>For this we will use the MinMaxScalar class from the pre-processing module in scikit learn library.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#fb660a;font-weight:bold">from</span> sklearn.preprocessing <span style="color:#fb660a;font-weight:bold">import</span> MinMaxScaler
+</code></pre></div><p><img src="/images/articles/2018/RNN/feature_scaling.png" alt="feature_scaling.png" title="feature_scaling.png"></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic"># Feature Scaling</span>
 <span style="color:#fb660a;font-weight:bold">from</span> sklearn.preprocessing <span style="color:#fb660a;font-weight:bold">import</span> MinMaxScaler
-sc = MinMaxScaler(feature_range = (<span style="color:#0086f7;font-weight:bold">0</span>,<span style="color:#0086f7;font-weight:bold">1</span>)) <span style="color:#080;background-color:#0f140f;font-style:italic"># to get all stock price between 0 & 1</span>
+sc = MinMaxScaler(feature_range = (<span style="color:#0086f7;font-weight:bold">0</span>,<span style="color:#0086f7;font-weight:bold">1</span>)) <span style="color:#080;background-color:#0f140f;font-style:italic"># to get all stock price between 0 &amp; 1</span>
 <span style="color:#080;background-color:#0f140f;font-style:italic"># apply this sc object on our data</span>
-training_set_scaled = sc.fit_transform(training_set) <span style="color:#080;background-color:#0f140f;font-style:italic"># fit_transform is used to convert all data between 0 & 1</span></code></pre></div><p><img src="/images/articles/2018/RNN/stock_scaled.png" alt="stock_scaled.png" title="stock_scaled.png"></p><h2 id="creating-datastructure-for-the-rnn">Creating DataStructure for the RNN</h2><p>Here we tell the RNN to take 60 timesteps and predict 1 output.</p><p>That is at time <code>t</code> the RNN looks back <code>60</code> stock prices before time <code>t</code> and based on the trends its capture it trys to predict the output at <code>t+1</code></p><p>This is to prevent <code>OVERFITTING</code> and <code>UNDERFITTING</code></p><div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic">## Creating data structure with 60 timesteps and 1 output</span>
+training_set_scaled = sc.fit_transform(training_set) <span style="color:#080;background-color:#0f140f;font-style:italic"># fit_transform is used to convert all data between 0 &amp; 1</span>
+</code></pre></div><p><img src="/images/articles/2018/RNN/stock_scaled.png" alt="stock_scaled.png" title="stock_scaled.png"></p>
+<h2 id="creating-datastructure-for-the-rnn">Creating DataStructure for the RNN</h2>
+<p>Here we tell the RNN to take 60 timesteps and predict 1 output.</p>
+<p>That is at time <code>t</code> the RNN looks back <code>60</code> stock prices before time <code>t</code> and based on the trends its capture it trys to predict the output at <code>t+1</code></p>
+<p>This is to prevent <code>OVERFITTING</code> and <code>UNDERFITTING</code></p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic">## Creating data structure with 60 timesteps and 1 output</span>
 X_train = []
 y_train = []
 
 <span style="color:#fb660a;font-weight:bold">for</span> i in range(<span style="color:#0086f7;font-weight:bold">60</span>, <span style="color:#0086f7;font-weight:bold">1260</span>): <span style="color:#080;background-color:#0f140f;font-style:italic"># 60 inputs till the total range of the dataset</span>
     X_train.append(training_set_scaled[i-<span style="color:#0086f7;font-weight:bold">60</span>:i, <span style="color:#0086f7;font-weight:bold">0</span>]) <span style="color:#080;background-color:#0f140f;font-style:italic"># 60-60 = 0 so 0 to 60 indexes ,0 is for the column(we have only 1 column now :P)</span>
-    y_train.append(training_set_scaled[i, <span style="color:#0086f7;font-weight:bold">0</span>]) <span style="color:#080;background-color:#0f140f;font-style:italic"># index starts at 0 :P</span></code></pre></div><p>converting X_train and Y_train to numpy array sinse they are now a list</p><div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">X_train, y_train = np.array(X_train), np.array(y_train)</code></pre></div><p>reshaping to be compatible to the neural network</p><div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic"># Reshaping - to add additional dimentions</span>
+    y_train.append(training_set_scaled[i, <span style="color:#0086f7;font-weight:bold">0</span>]) <span style="color:#080;background-color:#0f140f;font-style:italic"># index starts at 0 :P</span>
+</code></pre></div><p>converting X_train and Y_train to numpy array sinse they are now a list</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">X_train, y_train = np.array(X_train), np.array(y_train)
+</code></pre></div><p>reshaping to be compatible to the neural network</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic"># Reshaping - to add additional dimentions</span>
 <span style="color:#080;background-color:#0f140f;font-style:italic"># (batch_size, timesteps, input_dim)</span>
 <span style="color:#080;background-color:#0f140f;font-style:italic"># batch_size : total number of stock prices #X_train.shape[0] = gets the total rows </span>
 <span style="color:#080;background-color:#0f140f;font-style:italic"># timesteps which is 60 # X_train.shape[0] = gets the total columns</span>
 <span style="color:#080;background-color:#0f140f;font-style:italic"># input_dim = 1 since we are using only 1 indicator</span>
-X_train = np.reshape(X_train, (X_train.shape[<span style="color:#0086f7;font-weight:bold">0</span>], X_train.shape[<span style="color:#0086f7;font-weight:bold">1</span>], <span style="color:#0086f7;font-weight:bold">1</span>)) <span style="color:#080;background-color:#0f140f;font-style:italic">#(batch_size, timesteps, input_dim)</span></code></pre></div><h1 id="building-the-rnn">Building the RNN</h1><div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic">## Building the RNN</span>
+X_train = np.reshape(X_train, (X_train.shape[<span style="color:#0086f7;font-weight:bold">0</span>], X_train.shape[<span style="color:#0086f7;font-weight:bold">1</span>], <span style="color:#0086f7;font-weight:bold">1</span>)) <span style="color:#080;background-color:#0f140f;font-style:italic">#(batch_size, timesteps, input_dim)</span>
+</code></pre></div><h1 id="building-the-rnn">Building the RNN</h1>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic">## Building the RNN</span>
 
 <span style="color:#fb660a;font-weight:bold">from</span> keras.models <span style="color:#fb660a;font-weight:bold">import</span> Sequential
 <span style="color:#fb660a;font-weight:bold">from</span> keras.layers <span style="color:#fb660a;font-weight:bold">import</span> Dense
@@ -576,18 +853,20 @@ regressor.add(Dense(units = <span style="color:#0086f7;font-weight:bold">1</span
 
 
 <span style="color:#080;background-color:#0f140f;font-style:italic">## Compiling the RNN with loss function</span>
-regressor.compile(optimizer = <span style="color:#0086d2"></span><span style="color:#0086d2">'adam'</span>, loss = <span style="color:#0086d2"></span><span style="color:#0086d2">'mean_squared_error'</span>)
+regressor.compile(optimizer = <span style="color:#0086d2">&#39;adam&#39;</span>, loss = <span style="color:#0086d2">&#39;mean_squared_error&#39;</span>)
 
 <span style="color:#080;background-color:#0f140f;font-style:italic">## Fitting the RNN to the training set</span>
-regressor.fit(X_train, y_train, epochs = <span style="color:#0086f7;font-weight:bold">100</span>, batch_size = <span style="color:#0086f7;font-weight:bold">32</span>)</code></pre></div><p>When we run the above code we start the training process. After completion we need to follow the same steps on the <code>test dataset</code></p><div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic">## P3 - Making the prediction and visualising the results</span>
+regressor.fit(X_train, y_train, epochs = <span style="color:#0086f7;font-weight:bold">100</span>, batch_size = <span style="color:#0086f7;font-weight:bold">32</span>)
+</code></pre></div><p>When we run the above code we start the training process. After completion we need to follow the same steps on the <code>test dataset</code></p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic">## P3 - Making the prediction and visualising the results</span>
 
 <span style="color:#080;background-color:#0f140f;font-style:italic"># Getting the real stock price of 2018</span>
-dataset_test = pd.read_csv(<span style="color:#0086d2"></span><span style="color:#0086d2">'Google_Stock_Price_Test_2018-2018.csv'</span>);
+dataset_test = pd.read_csv(<span style="color:#0086d2">&#39;Google_Stock_Price_Test_2018-2018.csv&#39;</span>);
 real_stock_price = dataset_test.iloc[:,<span style="color:#0086f7;font-weight:bold">1</span>:<span style="color:#0086f7;font-weight:bold">2</span>].values
 
 <span style="color:#080;background-color:#0f140f;font-style:italic"># Getting the predicted stock price</span>
 <span style="color:#080;background-color:#0f140f;font-style:italic">#concatenating both the train and test sets</span>
-dataset_total = pd.concat((dataset_train[<span style="color:#0086d2"></span><span style="color:#0086d2">'Open'</span>], dataset_test[<span style="color:#0086d2"></span><span style="color:#0086d2">'Open'</span>]), axis = <span style="color:#0086f7;font-weight:bold">0</span>); <span style="color:#080;background-color:#0f140f;font-style:italic"># 1 for horizontal concatenation & 0 for vertical</span>
+dataset_total = pd.concat((dataset_train[<span style="color:#0086d2">&#39;Open&#39;</span>], dataset_test[<span style="color:#0086d2">&#39;Open&#39;</span>]), axis = <span style="color:#0086f7;font-weight:bold">0</span>); <span style="color:#080;background-color:#0f140f;font-style:italic"># 1 for horizontal concatenation &amp; 0 for vertical</span>
 <span style="color:#080;background-color:#0f140f;font-style:italic"># getting the new inputs fo each financial day</span>
 inputs = dataset_total[len(dataset_total)-len(dataset_test) - <span style="color:#0086f7;font-weight:bold">60</span>:].values
 inputs = inputs.reshape(-<span style="color:#0086f7;font-weight:bold">1</span>, <span style="color:#0086f7;font-weight:bold">1</span>)
@@ -601,10 +880,88 @@ X_test = np.array(X_test)
 <span style="color:#080;background-color:#0f140f;font-style:italic"># for the 3D structure</span>
 X_test = np.reshape(X_test, (X_test.shape[<span style="color:#0086f7;font-weight:bold">0</span>], X_test.shape[<span style="color:#0086f7;font-weight:bold">1</span>], <span style="color:#0086f7;font-weight:bold">1</span>))
 predicted_stock_price = regressor.predict(X_test)
-predicted_stock_price = sc.inverse_transform(predicted_stock_price);</code></pre></div><h1 id="visualising-the-results">Visualising the results</h1><p>We use <code>pyplot</code> method from matplotlib for visualising</p><div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">plt.plot(real_stock_price, color = <span style="color:#0086d2"></span><span style="color:#0086d2">'red'</span>, label = <span style="color:#0086d2"></span><span style="color:#0086d2">'Real Google Stock Price'</span>)
-plt.plot(predicted_stock_price, color = <span style="color:#0086d2"></span><span style="color:#0086d2">'blue'</span>, label = <span style="color:#0086d2"></span><span style="color:#0086d2">'Predicted Google Stock Price'</span>)
-plt.title(<span style="color:#0086d2"></span><span style="color:#0086d2">'Google Stock Price Prediction'</span>)
-plt.xlabel(<span style="color:#0086d2"></span><span style="color:#0086d2">'Time'</span>)
-plt.ylabel(<span style="color:#0086d2"></span><span style="color:#0086d2">'Google Stock Price'</span>)
+predicted_stock_price = sc.inverse_transform(predicted_stock_price);
+</code></pre></div><h1 id="visualising-the-results">Visualising the results</h1>
+<p>We use <code>pyplot</code> method from matplotlib for visualising</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">plt.plot(real_stock_price, color = <span style="color:#0086d2">&#39;red&#39;</span>, label = <span style="color:#0086d2">&#39;Real Google Stock Price&#39;</span>)
+plt.plot(predicted_stock_price, color = <span style="color:#0086d2">&#39;blue&#39;</span>, label = <span style="color:#0086d2">&#39;Predicted Google Stock Price&#39;</span>)
+plt.title(<span style="color:#0086d2">&#39;Google Stock Price Prediction&#39;</span>)
+plt.xlabel(<span style="color:#0086d2">&#39;Time&#39;</span>)
+plt.ylabel(<span style="color:#0086d2">&#39;Google Stock Price&#39;</span>)
 plt.legend()
-plt.show()</code></pre></div><p><img src="/images/articles/2018/RNN/google-stock-predicted.png" alt="google-stock-predicted.png" title="google-stock-predicted.png"></p><p><code>We have successfully implemented our stock price predictor for 2018</code></p></div><h4 class="page-header">Related</h4><div class="item"><h4><a itemprop="url" href="/post/2018/02/05/object-detection-using-single-shot-detection-algorithm/"><span itemprop="name">Object Detection using Single Shot Detection Algorithm</span></a></h4>February 5, 2018<h5>Using tensorflow to build a chatbot demonstrating the power of Deep Natural Language Processing</h5><a href="../../../../../tags/computer_vision"><kbd class="item-tag">computer_vision</kbd></a> <a href="../../../../../tags/ssd"><kbd class="item-tag">ssd</kbd></a> <a href="../../../../../tags/tensorflow"><kbd class="item-tag">tensorflow</kbd></a> <a href="../../../../../tags/project"><kbd class="item-tag">project</kbd></a> <a href="../../../../../tags/deep_learning"><kbd class="item-tag">deep_learning</kbd></a> <a href="../../../../../tags/tutorial"><kbd class="item-tag">tutorial</kbd></a></div><div class="item"><h4><a itemprop="url" href="/post/2018/01/28/intro-to-recurrent-neural-network-rnn/"><span itemprop="name">Intro to Recurrent Neural Network (RNN)</span></a></h4>January 28, 2018<h5>Recurrent neural networks are able to learn from sequences of data. In this tutorial, we'll learn the concepts behind recurrent networks.</h5><a href="../../../../../tags/rnn"><kbd class="item-tag">rnn</kbd></a> <a href="../../../../../tags/deeplearning"><kbd class="item-tag">deeplearning</kbd></a></div></main><footer><p class="copyright text-muted">Geo Joy © All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> hosted on <a href="https://github.com/Geo-Joy/geo-joy.github.io">Github</a></p></footer><script async src="https://itsg.dev/js/main.js"></script><script>!function(e,t,a,n,g){e[n]=e[n]||[],e[n].push({"gtm.start":(new Date).getTime(),event:"gtm.js"});var m=t.getElementsByTagName(a)[0],r=t.createElement(a);r.async=!0,r.src="https://www.googletagmanager.com/gtm.js?id=GTM-KQ3JDPK",m.parentNode.insertBefore(r,m)}(window,document,"script","dataLayer")</script></body></html>
+plt.show()
+</code></pre></div><p><img src="/images/articles/2018/RNN/google-stock-predicted.png" alt="google-stock-predicted.png" title="google-stock-predicted.png"></p>
+<p><code>We have successfully implemented our stock price predictor for 2018</code></p>
+</div>
+
+    
+    
+
+    
+        <h4 class="page-header">Related</h4>
+        
+          <div class="item">
+
+    
+    
+    
+
+    
+      
+
+    <h4><a itemprop="url" href="/post/2018/02/05/object-detection-using-single-shot-detection-algorithm/">
+      <span itemprop="name">Object Detection using Single Shot Detection Algorithm</span>
+    </a></h4>
+
+    February 5, 2018
+    <h5>Using tensorflow to build a chatbot demonstrating the power of Deep Natural Language Processing</h5>
+     <a href="../../../../../tags/computer_vision"><kbd class="item-tag">computer_vision</kbd></a>  <a href="../../../../../tags/ssd"><kbd class="item-tag">ssd</kbd></a>  <a href="../../../../../tags/tensorflow"><kbd class="item-tag">tensorflow</kbd></a>  <a href="../../../../../tags/project"><kbd class="item-tag">project</kbd></a>  <a href="../../../../../tags/deep_learning"><kbd class="item-tag">deep_learning</kbd></a>  <a href="../../../../../tags/tutorial"><kbd class="item-tag">tutorial</kbd></a> 
+
+</div>
+
+        
+          <div class="item">
+
+    
+    
+    
+
+    
+      
+
+    <h4><a itemprop="url" href="/post/2018/01/28/intro-to-recurrent-neural-network-rnn/">
+      <span itemprop="name">Intro to Recurrent Neural Network (RNN)</span>
+    </a></h4>
+
+    January 28, 2018
+    <h5>Recurrent neural networks are able to learn from sequences of data. In this tutorial, we&#39;ll learn the concepts behind recurrent networks.</h5>
+     <a href="../../../../../tags/rnn"><kbd class="item-tag">rnn</kbd></a>  <a href="../../../../../tags/deeplearning"><kbd class="item-tag">deeplearning</kbd></a> 
+
+</div>
+
+        
+    
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">Geo Joy © All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a> hosted on <a href="https://github.com/Geo-Joy/geo-joy.github.io">Github</a></p>
+
+        </footer>
+        
+       <script async="" src="https://itsg.dev/js/main.js"></script>
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KQ3JDPK');</script>
+
+
+    </body>
+
+</html>
+

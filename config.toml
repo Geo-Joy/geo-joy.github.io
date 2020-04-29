@@ -3,7 +3,7 @@ publishDir = "docs"
 languageCode = "en-us"
 title = "its Geo"
 paginate = 10
-theme = "ginimal"
+theme = "archie2"
 
 PygmentsStyle = "fruity"
 PygmentsUseClasses = false
