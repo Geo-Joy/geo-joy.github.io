@@ -1,4 +1,4 @@
-# About Me
+# Profile
 
 ### Experience
 - *SEP 2019 - Present*: **Solutions Lead**, MResult
