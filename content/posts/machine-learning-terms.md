@@ -9,7 +9,7 @@ tags:
  - Machine_Learning
 ---
 
-![machine-Learning-terms.jpg](/images/articles/2018/machine-Learning-terms.jpg "machine-Learning-terms.jpg")
+![machine-Learning-terms.jpg](/images/articles/2018/machine-Learning-terms.jpg )
 
 # The Machine Learning Landscape
 
@@ -135,7 +135,7 @@ tags:
 - Is the average squared loss per example.
 - MSE is calculated by dividing the squared loss by the number of examples.
 
-![machine-Learning-terms.jpg](/images/articles/2018/MSE.jpg"machine-Learning-terms.jpg")
+![machine-Learning-terms.jpg](/images/articles/2018/MSE.jpg)
 
 - x is the set of features (for example, temperature, age, and mating success) that the model uses to make predictions
 - y is the example's label
@@ -143,10 +143,10 @@ tags:
 - D is a data set containing many labeled examples which are (x,y) pairs
 - N is the number of examples in D
 
-![machine-Learning-terms.jpg](/images/articles/2018/MCEDescendingIntoMLRight.png"machine-Learning-terms.jpg")
+![machine-Learning-terms.jpg](/images/articles/2018/MCEDescendingIntoMLRight.png)
 
 - The eight examples on the line incur a total loss of 0. However, although only two points lay off the line, both of those points are twice as far off the line as the outlier points in the left figure. Squared loss amplifies those differences, so an offset of two incurs a loss four times greater than an offset of one.
-![machine-Learning-terms.jpg](/images/articles/2018/MSP311bb3d60a26dc5e7b00002575ca91hgi8ge85.jpg"machine-Learning-terms.jpg")
+![machine-Learning-terms.jpg](/images/articles/2018/MSP311bb3d60a26dc5e7b00002575ca91hgi8ge85.jpg)
 
 ## Loss function vs Cost Function
 - Both are almost mean the same
@@ -167,7 +167,7 @@ tags:
 -  We iterate until overall loss stops changing or at least changes extremely slowly. When this happens, we say that the model has converged.
 
 ## Ploting loss vs weight 
-![machine-Learning-terms.jpg](/images/articles/2018/lossVSweight.png"machine-Learning-terms.jpg")
+![machine-Learning-terms.jpg](/images/articles/2018/lossVSweight.png)
 
 - When we plot loss vs weights of a regression problem we get the above shown graph which is shaped like a bowl/convex shape.
 - Convex problems have only one minimum; that is, only one place where the slope is exactly 0. That minimum is where the loss function converges.
@@ -316,7 +316,7 @@ tags:
 ## Classification Threshold
 - A scalar-value criterion that is applied to a model's predicted score in order to separate the positive class from the negative class. Used when mapping logistic regression results to binary classification. For example, consider a logistic regression model that determines the probability of a given email message being spam. If the classification threshold is 0.9, then logistic regression values above 0.9 are classified as spam and those below 0.9 are classified as not spam.
 
-![machine-Learning-terms.jpg](/images/articles/2018/confusion_matric_wolf.PNG"machine-Learning-terms.jpg")
+![machine-Learning-terms.jpg](/images/articles/2018/confusion_matric_wolf.PNG)
 
 ## Confusion Matrix
 - An NxN table that summarizes how successful a classification model's predictions were; that is, the correlation between the label and the model's classification. One axis of a confusion matrix is the label that the model predicted, and the other axis is the actual label. N represents the number of classes. In a binary classification problem, N=2.
@@ -335,18 +335,18 @@ Non-Tumor (actual)&nbsp;&nbsp;&nbsp;&nbsp;| 6 |&nbsp;&nbsp;&nbsp;&nbsp;452
 
 ## Accuracy
 - The fraction of predictions that a classification model got right. In multi-class classification, accuracy is defined as follows:
-![machine-Learning-terms.jpg](/images/articles/2018/MSP01bb3i5d249207aed000042d82gi907c3h8d8.jpg"machine-Learning-terms.jpg")
+![machine-Learning-terms.jpg](/images/articles/2018/MSP01bb3i5d249207aed000042d82gi907c3h8d8.jpg)
 - In binary classification, accuracy has the following definition:
-![machine-Learning-terms.jpg](/images/articles/2018/MSP11bb3i5d249207aed00002cc94d911df050b0.jpg"machine-Learning-terms.jpg")
+![machine-Learning-terms.jpg](/images/articles/2018/MSP11bb3i5d249207aed00002cc94d911df050b0.jpg)
 
 ## Precision
 - A metric for classification models.
 - Precision identifies the frequency with which a model was correct when predicting the positive class.
-![machine-Learning-terms.jpg](/images/articles/2018/MSP41bb3i5d249207aed00006144643b463f0ic3.jpg"machine-Learning-terms.jpg")
+![machine-Learning-terms.jpg](/images/articles/2018/MSP41bb3i5d249207aed00006144643b463f0ic3.jpg)
 
 ## Recall
 - Out of all the possible positive labels, how many did the model correctly identify?
-![machine-Learning-terms.jpg](/images/articles/2018/MSP31bb3i5d249207aed000034d4c5073776c1f6.jpg"machine-Learning-terms.jpg")
+![machine-Learning-terms.jpg](/images/articles/2018/MSP31bb3i5d249207aed000034d4c5073776c1f6.jpg)
 
 ## ROC (receiver operating characteristic) Curve
 A curve of true positive rate vs. false positive rate at different classification thresholds.
@@ -354,11 +354,11 @@ A curve of true positive rate vs. false positive rate at different classificatio
 ## True Positive Rate (TP rate)
 - Synonym for recall.
 - True positive rate is the y-axis in an ROC curve.
-![machine-Learning-terms.jpg](/images/articles/2018/MSP511bb3d60a26dc5e7b00003b9eb0cd8id767if.jpg"machine-Learning-terms.jpg")
+![machine-Learning-terms.jpg](/images/articles/2018/MSP511bb3d60a26dc5e7b00003b9eb0cd8id767if.jpg)
 
 ## False Positive Rate (FP rate)
 - The x-axis in an ROC curve. The FP rate is defined as follows
-![machine-Learning-terms.jpg](/images/articles/2018/MSP521bb3d60a26dc5e7b000036e5080df65ie42a.jpg"machine-Learning-terms.jpg")
+![machine-Learning-terms.jpg](/images/articles/2018/MSP521bb3d60a26dc5e7b000036e5080df65ie42a.jpg)
 
 ## Prediction Bias
 - A value indicating how far apart the average of predictions is from the average of labels in the data set.

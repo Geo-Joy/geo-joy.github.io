@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Project on its Geo</title>
@@ -13,33 +13,31 @@
     
     <item>
       <title>Building a Chatbot with Deep Natural Language Processing using Tensorflow [PART-1-2-3]</title>
-      <link>https://itsg.dev/post/2018/02/10/building-a-chatbot-with-deep-natural-language-processing-using-tensorflow-part-1-2-3/</link>
+      <link>https://itsg.dev/posts/building-a-chatbot-with-deep-natural-language-processing-using-tensorflow-part-1-2-3/</link>
       <pubDate>Sat, 10 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://itsg.dev/post/2018/02/10/building-a-chatbot-with-deep-natural-language-processing-using-tensorflow-part-1-2-3/</guid>
+      <guid>https://itsg.dev/posts/building-a-chatbot-with-deep-natural-language-processing-using-tensorflow-part-1-2-3/</guid>
       <description>This tutorial is divided into the following parts  Installing and configuring Anaconda Getting the Dataset Data Preprocessing Building the Seq2Seq model Training the Seq2Seq model Testing the Seq2Seq model Other Implementation  Lets Start PART-1. Installing and configuring Anaconda 1a. Installing Anaconda From anaconda.com/what-is-anaconda/
  With over 6 million users, the open source Anaconda Distribution is the easiest way to do Python data science and machine learning. It includes hundreds of popular &amp;gt; data science packages and the conda package and virtual environment manager for Windows, Linux, and MacOS.</description>
     </item>
     
     <item>
       <title>Object Detection using Single Shot Detection Algorithm</title>
-      <link>https://itsg.dev/post/2018/02/05/object-detection-using-single-shot-detection-algorithm/</link>
+      <link>https://itsg.dev/posts/object-detection-using-single-shot-detection-algorithm/</link>
       <pubDate>Mon, 05 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://itsg.dev/post/2018/02/05/object-detection-using-single-shot-detection-algorithm/</guid>
-      <description>image borrowed from Intel Developer Site
-Addon Prelude Read the article from intel developers zone. https://software.intel.com/en-us/articles/a-closer-look-at-object-detection-recognition-and-tracking
-Prelude I have taken the explanation from towardsdatascience.com - Understanding SSD MultiBox — Real-Time Object Detection In Deep Learning and further simplified it for much better understanding. Especially for the slow ones like me :P
-Architecture of SSD image borrowed from https://arxiv.org/pdf/1512.02325.pdf
-mean Average Precision (mAP) Lets try to understand what is Average Precision:e.</description>
+      <guid>https://itsg.dev/posts/object-detection-using-single-shot-detection-algorithm/</guid>
+      <description>Addon Prelude Read the article from intel developers zone.https://software.intel.com/en-us/articles/a-closer-look-at-object-detection-recognition-and-tracking
+ Prelude I have taken the explanation from towardsdatascience.com - Understanding SSD MultiBox — Real-Time Object Detection In Deep Learningand further simplified it for much better understanding. Especially for the slow ones like me :P
+Architecture of SSD mean Average Precision (mAP) Lets try to understand what is Average Precision:e.g. Let’s say, we recommended 7 products to a customer and the 1st, 4th, 5th, 6th product recommended was correct.</description>
     </item>
     
     <item>
       <title>Predicting Stock Price using Recurrent Neural Network</title>
-      <link>https://itsg.dev/post/2018/02/03/predicting-stock-price-using-recurrent-neural-network/</link>
+      <link>https://itsg.dev/posts/predicting-stock-price-using-recurrent-neural-network/</link>
       <pubDate>Sat, 03 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://itsg.dev/post/2018/02/03/predicting-stock-price-using-recurrent-neural-network/</guid>
+      <guid>https://itsg.dev/posts/predicting-stock-price-using-recurrent-neural-network/</guid>
       <description>Prelude Brownian Motion stats that the future variations of the stock price are independent from the past.
 So it is actually impossible to predict the future stock price but one thing we can do or predict is the trend.
 So in the tutorial we will try to predict the upward and downward trend on Google Stock Price using LSTM

@@ -1,187 +1,164 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://itsg.dev/post/2018/03/06/machine-learning-and-deep-learning-terms/</loc>
-    <lastmod>2018-03-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://itsg.dev/post/2018/02/10/building-a-chatbot-with-deep-natural-language-processing-using-tensorflow-part-1-2-3/</loc>
-    <lastmod>2018-02-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://itsg.dev/post/2018/02/05/object-detection-using-single-shot-detection-algorithm/</loc>
-    <lastmod>2018-02-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://itsg.dev/post/2018/02/03/predicting-stock-price-using-recurrent-neural-network/</loc>
-    <lastmod>2018-02-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://itsg.dev/post/2018/01/28/intro-to-recurrent-neural-network-rnn/</loc>
-    <lastmod>2018-01-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://itsg.dev/post/2018/01/27/basics-to-get-started-with-tensorflow/</loc>
-    <lastmod>2018-01-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://itsg.dev/post/2018/01/21/matrix-math-and-numpy-refresher/</loc>
-    <lastmod>2018-01-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://itsg.dev/post/2018/01/20/core-programming-principles/</loc>
-    <lastmod>2018-01-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://itsg.dev/post/2018/01/17/how-a-software-developer-re-focused-his-life-to-learn-artificial-intelligence/</loc>
-    <lastmod>2018-01-17T11:27:30+05:30</lastmod>
-  </url>
-  
-  <url>
     <loc>https://itsg.dev/tags/101/</loc>
     <lastmod>2018-03-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://itsg.dev/tags/artificial-intelligence/</loc>
-    <lastmod>2018-02-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://itsg.dev/tags/chatbot/</loc>
-    <lastmod>2018-02-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://itsg.dev/tags/computer_vision/</loc>
-    <lastmod>2018-02-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://itsg.dev/tags/deep-learning/</loc>
-    <lastmod>2018-02-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://itsg.dev/tags/deep_learning/</loc>
-    <lastmod>2018-02-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://itsg.dev/tags/deeplearning/</loc>
-    <lastmod>2018-01-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://itsg.dev/tags/machine_learning/</loc>
-    <lastmod>2018-03-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://itsg.dev/tags/mathematics/</loc>
-    <lastmod>2018-01-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://itsg.dev/tags/nlp/</loc>
-    <lastmod>2018-02-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://itsg.dev/tags/numpy/</loc>
-    <lastmod>2018-01-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://itsg.dev/tags/podcast/</loc>
-    <lastmod>2018-01-17T11:27:30+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://itsg.dev/post/</loc>
-    <lastmod>2018-03-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://itsg.dev/tags/practical/</loc>
-    <lastmod>2018-02-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://itsg.dev/tags/programming/</loc>
-    <lastmod>2018-01-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://itsg.dev/tags/project/</loc>
-    <lastmod>2018-02-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://itsg.dev/tags/rnn/</loc>
-    <lastmod>2018-02-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://itsg.dev/tags/ssd/</loc>
-    <lastmod>2018-02-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://itsg.dev/tags/</loc>
-    <lastmod>2018-03-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://itsg.dev/tags/tensorflow/</loc>
-    <lastmod>2018-02-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://itsg.dev/topics/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://itsg.dev/tags/tutorial/</loc>
-    <lastmod>2018-02-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://itsg.dev/</loc>
     <lastmod>2018-03-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://itsg.dev/posts/machine-learning-and-deep-learning-terms/</loc>
+    <lastmod>2018-03-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://itsg.dev/tags/machine_learning/</loc>
+    <lastmod>2018-03-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://itsg.dev/posts/</loc>
+    <lastmod>2018-03-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://itsg.dev/tags/</loc>
+    <lastmod>2018-03-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://itsg.dev/tags/artificial-intelligence/</loc>
+    <lastmod>2018-02-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://itsg.dev/posts/building-a-chatbot-with-deep-natural-language-processing-using-tensorflow-part-1-2-3/</loc>
+    <lastmod>2018-02-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://itsg.dev/tags/chatbot/</loc>
+    <lastmod>2018-02-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://itsg.dev/tags/deep-learning/</loc>
+    <lastmod>2018-02-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://itsg.dev/tags/nlp/</loc>
+    <lastmod>2018-02-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://itsg.dev/tags/project/</loc>
+    <lastmod>2018-02-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://itsg.dev/tags/tensorflow/</loc>
+    <lastmod>2018-02-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://itsg.dev/tags/tutorial/</loc>
+    <lastmod>2018-02-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://itsg.dev/tags/computer_vision/</loc>
+    <lastmod>2018-02-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://itsg.dev/tags/deep_learning/</loc>
+    <lastmod>2018-02-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://itsg.dev/posts/object-detection-using-single-shot-detection-algorithm/</loc>
+    <lastmod>2018-02-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://itsg.dev/tags/ssd/</loc>
+    <lastmod>2018-02-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://itsg.dev/tags/practical/</loc>
+    <lastmod>2018-02-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://itsg.dev/posts/predicting-stock-price-using-recurrent-neural-network/</loc>
+    <lastmod>2018-02-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://itsg.dev/tags/rnn/</loc>
+    <lastmod>2018-02-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://itsg.dev/tags/deeplearning/</loc>
+    <lastmod>2018-01-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://itsg.dev/posts/intro-to-recurrent-neural-network-rnn/</loc>
+    <lastmod>2018-01-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://itsg.dev/posts/basics-to-get-started-with-tensorflow/</loc>
+    <lastmod>2018-01-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://itsg.dev/tags/mathematics/</loc>
+    <lastmod>2018-01-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://itsg.dev/posts/matrix-math-and-numpy-refresher/</loc>
+    <lastmod>2018-01-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://itsg.dev/tags/numpy/</loc>
+    <lastmod>2018-01-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://itsg.dev/tags/programming/</loc>
+    <lastmod>2018-01-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://itsg.dev/posts/core-programming-principles/</loc>
+    <lastmod>2018-01-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://itsg.dev/posts/how-a-software-developer-re-focused-his-life-to-learn-artificial-intelligence/</loc>
+    <lastmod>2018-01-17T11:27:30+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://itsg.dev/tags/podcast/</loc>
+    <lastmod>2018-01-17T11:27:30+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://itsg.dev/topics/</loc>
   </url>
   
 </urlset>

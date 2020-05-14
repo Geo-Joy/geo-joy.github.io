@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="male https://graph.facebook.com/10207052454221714/picture?type=large Geo Joy Geo-Joy ">
+<meta name="description" content="image borrowed from UDACITYData Dimentions We fist need to understand how we represent the data specifically the shape the data can have.
+Eg: we can have a number representing a person height or a list of numbers for height, weight, age etc. May be a display picture represented as grid having rows and columns of each individual pixels and each pixels having its color value for RED, BLUE, GREEN.
+We describe this data in terms of number of dimentions." />
+<meta name="keywords" content=", 101, programming, numpy, mathematics" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="https://itsg.dev/posts/matrix-math-and-numpy-refresher/" />
+
+
+    <title>
+        
+            Matrix Math and Numpy Refresher :: its Geo  — Artificial Intelligence // Microservices // Web Architect // Mentor
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="/main.min.753fac8f03736f0edc9be411eb20cee875dd7bb8e73c8155fbf6a629c863f4ca.css">
+
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="msapplication-TileColor" content="#252627">
+    <meta name="theme-color" content="#252627">
+
+
+
+<meta itemprop="name" content="Matrix Math and Numpy Refresher">
+<meta itemprop="description" content="This tutorial provides a short refresher on what is needed to know for doing deeplearning, along with some guidance for using the NumPy library to work efficiently with matrices in Python.">
+<meta itemprop="datePublished" content="2018-01-21T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-01-21T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="1278">
+
+
+
+<meta itemprop="keywords" content="101,programming,numpy,mathematics," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Matrix Math and Numpy Refresher"/>
+<meta name="twitter:description" content="This tutorial provides a short refresher on what is needed to know for doing deeplearning, along with some guidance for using the NumPy library to work efficiently with matrices in Python."/>
+
+
+
+
+
+
+
+    <meta property="article:published_time" content="2018-01-21 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">$ cd /itsG/</span>
+            <span class="logo__cursor" style=
+                  "
+                   background-color:#51fe5fa6;
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://itsg.dev/">Home</a></li><li><a href="https://itsg.dev/posts/">Posts</a></li><li><a href="https://itsg.dev/project/">Projects</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>6 minutes
+
+            
+
+            </p>
+        </div>
+
+        <article>
+            <h1 class="post-title">
+                <a href="https://itsg.dev/posts/matrix-math-and-numpy-refresher/">Matrix Math and Numpy Refresher</a>
+            </h1>
+
+            
+
+            <div class="post-content">
+                <p><img src="/images/articles/2018/matrix-math.jpg" alt="matrix-math.jpg" title="matrix-math.jpg">
+image borrowed from <!-- raw HTML omitted -->UDACITY<!-- raw HTML omitted --></p>
+<h1 id="data-dimentions">Data Dimentions</h1>
+<p>We fist need to understand how we represent the data specifically the shape the data can have.</p>
+<p>Eg: we can have a number representing a person height or a list of numbers for height, weight, age etc. May be a display picture represented as grid having rows and columns of each individual pixels and each pixels having its color value for RED, BLUE, GREEN.</p>
+<p>We describe this data in terms of number of dimentions.</p>
+<p>First we have the smallest simplest shape called <code>SCALARS</code> (single value)
+eg: 1, -5, 8.9 etc</p>
+<p>It is said that scalars have zero dimentions.</p>
+<p>So from the previous example of the person the height, weight and age are all scalar.</p>
+<!-- raw HTML omitted -->
+<p>Then there are lists of values called <code>VECTORS</code>.</p>
+<p>They are of two types <code>row vector</code> and <code>column vector</code></p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic"># row vector</span>
+[<span style="color:#0086f7;font-weight:bold">1</span>,<span style="color:#0086f7;font-weight:bold">2</span>,<span style="color:#0086f7;font-weight:bold">3</span>]
+
+<span style="color:#080;background-color:#0f140f;font-style:italic"># column vector</span>
+[<span style="color:#0086f7;font-weight:bold">1</span>
+<span style="color:#0086f7;font-weight:bold">2</span>
+<span style="color:#0086f7;font-weight:bold">3</span>]
+</code></pre></div><p><strong>Vectors</strong> are said to have 1 dimention called length.</p>
+<p>So from the previous example we have store the persons height, weight and age as Vector [height, weight, age]</p>
+<!-- raw HTML omitted -->
+<p>Then we have <code>MATRICS</code>. Its a 2-dimentional grid of value.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">[[<span style="color:#0086f7;font-weight:bold">1</span>,<span style="color:#0086f7;font-weight:bold">2</span>,<span style="color:#0086f7;font-weight:bold">3</span>]
+[<span style="color:#0086f7;font-weight:bold">4</span>,<span style="color:#0086f7;font-weight:bold">5</span>,<span style="color:#0086f7;font-weight:bold">6</span>]]
+</code></pre></div><p>The above code snippet shows a 2x3( two cross three ) matrix ie. 2 rows and 3 columns.</p>
+<!-- raw HTML omitted -->
+<p>Finally there are tensors named for a collection of n-dimentional values.</p>
+<p><img src="/images/articles/2018/tensor-data-shape.png" alt="tensor-data-shape.png" title="tensor-data-shape.png">
+image borrowed from <!-- raw HTML omitted -->UDACITY<!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<p>Mostly everyone uses the terms SCALAR and MATRICES for all tutorials.
+VECTORS are hereby considered are a MATRIX having either of its row or column (dimentions) as size 1.</p>
+<!-- raw HTML omitted -->
+<p>To get values from a matrix we use indexes. Indexes start from a11, a12, a21 etc. <!-- raw HTML omitted -->
+<code>But in programming most languages have indexes starting from 0. So we have indexes as a00, a01, a10 etc</code></p>
+<p><img src="/images/articles/2018/matrix-indexes.jpg" alt="matrix-indexes.jpg" title="matrix-indexes.jpg">
+image borrowed from <!-- raw HTML omitted -->UDACITY<!-- raw HTML omitted --> and modified by me :)</p>
+<hr>
+<!-- raw HTML omitted -->
+<h1 id="numpy-and-its-data-in-python">Numpy and its Data in Python</h1>
+<p>Python is convenient, but it can also be slow. However, it does allow us to access libraries that execute faster code written in languages like C. NumPy is one such library: it provides fast alternatives to math operations in Python and is designed to work efficiently with groups of numbers - like matrices.</p>
+<h2 id="data-types-and-shapes">Data Types and Shapes</h2>
+<p>The most common way to work with numbers in NumPy is through ndarray objects.</p>
+<pre><code>https://docs.scipy.org/doc/numpy/reference/arrays.html
+</code></pre><!-- raw HTML omitted -->
+<p>These datatypes are important because every object we make (vectors, matrices, tensors) eventually stores scalars.</p>
+<p><code>Do note that every item in an array must have the same data type.</code></p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#fb660a;font-weight:bold">import</span> numpy <span style="color:#fb660a;font-weight:bold">as</span> np
+</code></pre></div><div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic"># to create a numpy array that stores a scalar</span>
+scalar_array = np.array(<span style="color:#0086f7;font-weight:bold">8</span>)
+</code></pre></div><p>To get the shape of this array we use the arribute <code>shape</code>.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">scalar_array.shape
+</code></pre></div><p>Here we get the output as <code>()</code>. This means that it has zero dimension.</p>
+<!-- raw HTML omitted -->
+<p>Vectors are created by passing a python list [1,2,3] to the numpy array.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">vector_array = np.array([<span style="color:#0086f7;font-weight:bold">1</span>,<span style="color:#0086f7;font-weight:bold">2</span>,<span style="color:#0086f7;font-weight:bold">3</span>])
+</code></pre></div><p>to check its shape</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">vector_array.shape
+</code></pre></div><p>The above snippet returns <code>(3,)</code>. This is a tuple having the dimension of 1 and a comma suffixed.</p>
+<pre><code>https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences
+</code></pre><p>We can access an element within a vector as</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">x = vector_array[<span style="color:#0086f7;font-weight:bold">1</span>]
+<span style="color:#080;background-color:#0f140f;font-style:italic"># which gives x as 1</span>
+
+<span style="color:#080;background-color:#0f140f;font-style:italic"># to get all elements from second element we use</span>
+x = vector_array[<span style="color:#0086f7;font-weight:bold">1</span>:]
+</code></pre></div><!-- raw HTML omitted -->
+<p>To create a matrix using numpy array we just need to pass lists of lists, where each list represents a row. So to create a 3x3 matrix we do as</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">matrix_33 = np.array([<span style="color:#0086f7;font-weight:bold">1</span>,<span style="color:#0086f7;font-weight:bold">2</span>,<span style="color:#0086f7;font-weight:bold">3</span>], [<span style="color:#0086f7;font-weight:bold">4</span>,<span style="color:#0086f7;font-weight:bold">5</span>,<span style="color:#0086f7;font-weight:bold">6</span>], [<span style="color:#0086f7;font-weight:bold">7</span>,<span style="color:#0086f7;font-weight:bold">8</span>,<span style="color:#0086f7;font-weight:bold">9</span>])
+</code></pre></div><p>checking the shape we get tuple <code>(3,3)</code> indicating it has 2 dimentions, each length of 3.</p>
+<!-- raw HTML omitted -->
+<p>Same as matrices, here tensors can have n-dimensions.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">tensor = np.array([[[[<span style="color:#0086f7;font-weight:bold">1</span>],[<span style="color:#0086f7;font-weight:bold">2</span>]],[[<span style="color:#0086f7;font-weight:bold">3</span>],[<span style="color:#0086f7;font-weight:bold">4</span>]],[[<span style="color:#0086f7;font-weight:bold">5</span>],[<span style="color:#0086f7;font-weight:bold">6</span>]]],[[[<span style="color:#0086f7;font-weight:bold">7</span>],[<span style="color:#0086f7;font-weight:bold">8</span>]],[[<span style="color:#0086f7;font-weight:bold">9</span>],[<span style="color:#0086f7;font-weight:bold">10</span>]],[[<span style="color:#0086f7;font-weight:bold">11</span>],[<span style="color:#0086f7;font-weight:bold">12</span>]]],[[[<span style="color:#0086f7;font-weight:bold">13</span>],[<span style="color:#0086f7;font-weight:bold">14</span>]],[[<span style="color:#0086f7;font-weight:bold">15</span>],[<span style="color:#0086f7;font-weight:bold">16</span>]],[[<span style="color:#0086f7;font-weight:bold">17</span>],[<span style="color:#0086f7;font-weight:bold">17</span>]]]])
+</code></pre></div><p>This returns <code>(3, 3, 2, 1)</code>. Which says <code>4</code> dimensions and each number represents the <code>length of each lists</code> in tensor.</p>
+<!-- raw HTML omitted -->
+<p>Sometimes we&rsquo;ll need to change the shape of our data without actually changing its contents. Eg: you may have a vector, which is one-dimensional, but need a matrix, which is two-dimensional.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">v = np.array([<span style="color:#0086f7;font-weight:bold">1</span>,<span style="color:#0086f7;font-weight:bold">2</span>,<span style="color:#0086f7;font-weight:bold">3</span>,<span style="color:#0086f7;font-weight:bold">4</span>])
+
+<span style="color:#080;background-color:#0f140f;font-style:italic"># v.shape returns (4,)</span>
+
+<span style="color:#080;background-color:#0f140f;font-style:italic"># to change shape we use the reshape function </span>
+x = v.reshape(<span style="color:#0086f7;font-weight:bold">1</span>,<span style="color:#0086f7;font-weight:bold">4</span>)
+
+<span style="color:#080;background-color:#0f140f;font-style:italic"># x.shape returns (1,4)</span>
+</code></pre></div><p>Experienced users do it the following way.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">x = v[None, :]
+
+<span style="color:#080;background-color:#0f140f;font-style:italic"># x.shape returns (1,4)</span>
+</code></pre></div><!-- raw HTML omitted -->
+<p>Suppose we wanted to add a value to every element in the list</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">values = [<span style="color:#0086f7;font-weight:bold">1</span>,<span style="color:#0086f7;font-weight:bold">2</span>,<span style="color:#0086f7;font-weight:bold">3</span>,<span style="color:#0086f7;font-weight:bold">4</span>,<span style="color:#0086f7;font-weight:bold">5</span>]
+values = np.array(values) + <span style="color:#0086f7;font-weight:bold">5</span>
+
+<span style="color:#080;background-color:#0f140f;font-style:italic"># value gives [6,7,8,9,10]</span>
+</code></pre></div><p>Similarly numpy has function for addition, subtraction, multiplication, division etc.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">x = np.multiply(some_array, <span style="color:#0086f7;font-weight:bold">5</span>)
+x = some_array * <span style="color:#0086f7;font-weight:bold">5</span>
+</code></pre></div><!-- raw HTML omitted -->
+<p>The same functions and operators that work with scalars and matrices also work with other dimensions. We just need to make sure that the items we perform the operation on have compatible shapes.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">a = np.array([[<span style="color:#0086f7;font-weight:bold">1</span>,<span style="color:#0086f7;font-weight:bold">3</span>],[<span style="color:#0086f7;font-weight:bold">5</span>,<span style="color:#0086f7;font-weight:bold">7</span>]])
+a
+<span style="color:#080;background-color:#0f140f;font-style:italic"># displays the following result:</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># array([[1, 3],</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic">#        [5, 7]])</span>
+
+b = np.array([[<span style="color:#0086f7;font-weight:bold">2</span>,<span style="color:#0086f7;font-weight:bold">4</span>],[<span style="color:#0086f7;font-weight:bold">6</span>,<span style="color:#0086f7;font-weight:bold">8</span>]])
+b
+<span style="color:#080;background-color:#0f140f;font-style:italic"># displays the following result:</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># array([[2, 4],</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic">#        [6, 8]])</span>
+
+a + b
+<span style="color:#080;background-color:#0f140f;font-style:italic"># displays the following result</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic">#      array([[ 3,  7],</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic">#             [11, 15]])</span>
+
+</code></pre></div><p>And if we try working with incompatible shapes, we&rsquo;d get an error:</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">a = np.array([[<span style="color:#0086f7;font-weight:bold">1</span>,<span style="color:#0086f7;font-weight:bold">3</span>],[<span style="color:#0086f7;font-weight:bold">5</span>,<span style="color:#0086f7;font-weight:bold">7</span>]])
+a
+<span style="color:#080;background-color:#0f140f;font-style:italic"># displays the following result:</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># array([[1, 3],</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic">#        [5, 7]])</span>
+c = np.array([[<span style="color:#0086f7;font-weight:bold">2</span>,<span style="color:#0086f7;font-weight:bold">3</span>,<span style="color:#0086f7;font-weight:bold">6</span>],[<span style="color:#0086f7;font-weight:bold">4</span>,<span style="color:#0086f7;font-weight:bold">5</span>,<span style="color:#0086f7;font-weight:bold">9</span>],[<span style="color:#0086f7;font-weight:bold">1</span>,<span style="color:#0086f7;font-weight:bold">8</span>,<span style="color:#0086f7;font-weight:bold">7</span>]])
+c
+<span style="color:#080;background-color:#0f140f;font-style:italic"># displays the following result:</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># array([[2, 3, 6],</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic">#        [4, 5, 9],</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic">#        [1, 8, 7]])</span>
+
+a.shape
+<span style="color:#080;background-color:#0f140f;font-style:italic"># displays the following result:</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic">#  (2, 2)</span>
+
+c.shape
+<span style="color:#080;background-color:#0f140f;font-style:italic"># displays the following result:</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic">#  (3, 3)</span>
+
+a + c
+<span style="color:#080;background-color:#0f140f;font-style:italic"># displays the following error:</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># ValueError: operands could not be broadcast together with shapes (2,2) (3,3)</span>
+</code></pre></div><h3 id="important-reminders-about-matrix-multiplication">Important Reminders About Matrix Multiplication</h3>
+<ul>
+<li>The <strong>number</strong> of <strong>columns</strong> in the <strong>left</strong> matrix <strong>must equal</strong> the <strong>number</strong> of <strong>rows</strong> in the <strong>right</strong> matrix.</li>
+<li>The <strong>answer</strong> matrix <strong>always has</strong> the <strong>same number</strong> of <strong>rows</strong> as the <strong>left</strong> matrix and the <strong>same number</strong> of <strong>columns</strong> as the <strong>right</strong> matrix.</li>
+<li><strong>Order matters</strong>. Multiplying <strong>A•B</strong> is not the same as multiplying <strong>B•A</strong>.</li>
+<li>Data in the <strong>left</strong> matrix <strong>should be</strong> arranged as <strong>rows</strong>., while data in the <strong>right</strong> matrix <strong>should be</strong> arranged as <strong>columns</strong>.</li>
+</ul>
+<p>If we keep these four points in mind, you should always be able to figure out how to properly arrange your matrix multiplications when building a neural network.</p>
+<h3 id="numpy-matrix-multiplication">NumPy Matrix Multiplication</h3>
+<p>It&rsquo;s important to know that NumPy supports several types of matrix multiplication.</p>
+<p>To find the matrix product, you use NumPy&rsquo;s matmul function.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">a = np.array([[<span style="color:#0086f7;font-weight:bold">1</span>,<span style="color:#0086f7;font-weight:bold">2</span>,<span style="color:#0086f7;font-weight:bold">3</span>,<span style="color:#0086f7;font-weight:bold">4</span>],[<span style="color:#0086f7;font-weight:bold">5</span>,<span style="color:#0086f7;font-weight:bold">6</span>,<span style="color:#0086f7;font-weight:bold">7</span>,<span style="color:#0086f7;font-weight:bold">8</span>]])
+a
+<span style="color:#080;background-color:#0f140f;font-style:italic"># displays the following result:</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># array([[1, 2, 3, 4],</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic">#        [5, 6, 7, 8]])</span>
+a.shape
+<span style="color:#080;background-color:#0f140f;font-style:italic"># displays the following result:</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># (2, 4)</span>
+
+b = np.array([[<span style="color:#0086f7;font-weight:bold">1</span>,<span style="color:#0086f7;font-weight:bold">2</span>,<span style="color:#0086f7;font-weight:bold">3</span>],[<span style="color:#0086f7;font-weight:bold">4</span>,<span style="color:#0086f7;font-weight:bold">5</span>,<span style="color:#0086f7;font-weight:bold">6</span>],[<span style="color:#0086f7;font-weight:bold">7</span>,<span style="color:#0086f7;font-weight:bold">8</span>,<span style="color:#0086f7;font-weight:bold">9</span>],[<span style="color:#0086f7;font-weight:bold">10</span>,<span style="color:#0086f7;font-weight:bold">11</span>,<span style="color:#0086f7;font-weight:bold">12</span>]])
+b
+<span style="color:#080;background-color:#0f140f;font-style:italic"># displays the following result:</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># array([[ 1,  2,  3],</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic">#        [ 4,  5,  6],</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic">#        [ 7,  8,  9],</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic">#        [10, 11, 12]])</span>
+b.shape
+<span style="color:#080;background-color:#0f140f;font-style:italic"># displays the following result:</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># (4, 3)</span>
+
+c = np.matmul(a, b)
+c
+<span style="color:#080;background-color:#0f140f;font-style:italic"># displays the following result:</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># array([[ 70,  80,  90],</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic">#        [158, 184, 210]])</span>
+c.shape
+<span style="color:#080;background-color:#0f140f;font-style:italic"># displays the following result:</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># (2, 3)</span>
+</code></pre></div><p>We may sometimes see NumPy&rsquo;s dot function in places where you would expect a matmul. It turns out that the results of dot and matmul are the same if the matrices are two dimensional.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">a = np.array([[<span style="color:#0086f7;font-weight:bold">1</span>,<span style="color:#0086f7;font-weight:bold">2</span>],[<span style="color:#0086f7;font-weight:bold">3</span>,<span style="color:#0086f7;font-weight:bold">4</span>]])
+a
+<span style="color:#080;background-color:#0f140f;font-style:italic"># displays the following result:</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># array([[1, 2],</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic">#        [3, 4]])</span>
+
+np.dot(a,a)
+<span style="color:#080;background-color:#0f140f;font-style:italic"># displays the following result:</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># array([[ 7, 10],</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic">#        [15, 22]])</span>
+
+a.dot(a)  <span style="color:#080;background-color:#0f140f;font-style:italic"># you can call `dot` directly on the `ndarray`</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># displays the following result:</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># array([[ 7, 10],</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic">#        [15, 22]])</span>
+
+np.matmul(a,a)
+<span style="color:#080;background-color:#0f140f;font-style:italic"># array([[ 7, 10],</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic">#        [15, 22]])</span>
+</code></pre></div><h3 id="transpose">Transpose</h3>
+<p>This is used to convert a row to column and viceversa. Do note that numpy transpose simply changes the way it indexes the original matrix. It does not create a new matrix.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">m = np.array([[<span style="color:#0086f7;font-weight:bold">1</span>,<span style="color:#0086f7;font-weight:bold">2</span>,<span style="color:#0086f7;font-weight:bold">3</span>,<span style="color:#0086f7;font-weight:bold">4</span>], [<span style="color:#0086f7;font-weight:bold">5</span>,<span style="color:#0086f7;font-weight:bold">6</span>,<span style="color:#0086f7;font-weight:bold">7</span>,<span style="color:#0086f7;font-weight:bold">8</span>], [<span style="color:#0086f7;font-weight:bold">9</span>,<span style="color:#0086f7;font-weight:bold">10</span>,<span style="color:#0086f7;font-weight:bold">11</span>,<span style="color:#0086f7;font-weight:bold">12</span>]])
+m
+<span style="color:#080;background-color:#0f140f;font-style:italic"># displays the following result:</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># array([[ 1,  2,  3,  4],</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic">#        [ 5,  6,  7,  8],</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic">#        [ 9, 10, 11, 12]])</span>
+
+m.T
+<span style="color:#080;background-color:#0f140f;font-style:italic"># displays the following result:</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># array([[ 1,  5,  9],</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic">#        [ 2,  6, 10],</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic">#        [ 3,  7, 11],</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic">#        [ 4,  8, 12]])</span>
+</code></pre></div>
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://itsg.dev/tags/101">101</a></span><span class="tag"><a href="https://itsg.dev/tags/programming">programming</a></span><span class="tag"><a href="https://itsg.dev/tags/numpy">numpy</a></span><span class="tag"><a href="https://itsg.dev/tags/mathematics">mathematics</a></span>
+                </p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>1278 Words</p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2018-01-21 05:30 &#43;0530</p>
+        </div>
+
+        
+            <div class="pagination">
+                <div class="pagination__title">
+                    <span class="pagination__title-h"></span>
+                    <hr />
+                </div>
+
+                <div class="pagination__buttons">
+                    
+                        <span class="button previous">
+                            <a href="https://itsg.dev/posts/basics-to-get-started-with-tensorflow/">
+                                <span class="button__icon">←</span>
+                                <span class="button__text">Basics to get started with Tensorflow</span>
+                            </a>
+                        </span>
+                    
+
+                    
+                        <span class="button next">
+                            <a href="https://itsg.dev/posts/core-programming-principles/">
+                                <span class="button__text">Core Programming Principles</span>
+                                <span class="button__icon">→</span>
+                            </a>
+                        </span>
+                    
+                </div>
+            </div>
+        
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2020</span>
+            
+                <span><a href="https://itsg.dev">Geo Joy</a></span>
+            
+            
+            <span> <a href="https://itsg.dev/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>with &#10084; from Bangalore, India</a></span>
+            <span>theme inspiration from  <a href="https://github.com/rhazdon/hugo-theme-hello-friend-ng">hello-friend</a></span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="/bundle.min.dc716e9092c9820b77f96da294d0120aeeb189b5bcea9752309ebea27fd53bbe6b13cffb2aca8ecf32525647ceb7001f76091de4199ac5a3caa432c070247f5b.js" integrity="sha512-3HFukJLJggt3&#43;W2ilNASCu6xibW86pdSMJ6&#43;on/VO75rE8/7KsqOzzJSVkfOtwAfdgkd5BmaxaPKpDLAcCR/Ww=="></script>
+
+
+
+    </body>
+</html>

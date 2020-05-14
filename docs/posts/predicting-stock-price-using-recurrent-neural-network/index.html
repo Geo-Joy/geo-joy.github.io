@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="male https://graph.facebook.com/10207052454221714/picture?type=large Geo Joy Geo-Joy ">
+<meta name="description" content="Prelude Brownian Motion stats that the future variations of the stock price are independent from the past.
+So it is actually impossible to predict the future stock price but one thing we can do or predict is the trend.
+So in the tutorial we will try to predict the upward and downward trend on Google Stock Price using LSTM
+Going about  We will try to get a better understand on the usage of LSTMs." />
+<meta name="keywords" content=", practical, rnn, project" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="https://itsg.dev/posts/predicting-stock-price-using-recurrent-neural-network/" />
+
+
+    <title>
+        
+            Predicting Stock Price using Recurrent Neural Network :: its Geo  — Artificial Intelligence // Microservices // Web Architect // Mentor
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="/main.min.753fac8f03736f0edc9be411eb20cee875dd7bb8e73c8155fbf6a629c863f4ca.css">
+
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="msapplication-TileColor" content="#252627">
+    <meta name="theme-color" content="#252627">
+
+
+
+<meta itemprop="name" content="Predicting Stock Price using Recurrent Neural Network">
+<meta itemprop="description" content="A practical implementation of RNN in predicting the stock price.">
+<meta itemprop="datePublished" content="2018-02-03T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-02-03T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="903">
+
+
+
+<meta itemprop="keywords" content="practical,rnn,project," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Predicting Stock Price using Recurrent Neural Network"/>
+<meta name="twitter:description" content="A practical implementation of RNN in predicting the stock price."/>
+
+
+
+
+
+
+
+    <meta property="article:published_time" content="2018-02-03 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">$ cd /itsG/</span>
+            <span class="logo__cursor" style=
+                  "
+                   background-color:#51fe5fa6;
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://itsg.dev/">Home</a></li><li><a href="https://itsg.dev/posts/">Posts</a></li><li><a href="https://itsg.dev/project/">Projects</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>5 minutes
+
+            
+
+            </p>
+        </div>
+
+        <article>
+            <h1 class="post-title">
+                <a href="https://itsg.dev/posts/predicting-stock-price-using-recurrent-neural-network/">Predicting Stock Price using Recurrent Neural Network</a>
+            </h1>
+
+            
+
+            <div class="post-content">
+                <p><img src="/images/articles/2018/RNN/predicting-stock-price-intro.jpg" alt="predicting-stock-price-intro.jpg" title="predicting-stock-price-intro.jpg"></p>
+<h1 id="prelude">Prelude</h1>
+<p><code>Brownian Motion</code> stats that the future variations of the stock price are <code>independent from the past</code>.</p>
+<p>So it is actually <code>impossible to predict</code> the future stock price but one thing we can do or <code>predict is the trend</code>.</p>
+<p>So in the tutorial we will <code>try to predict</code> the upward and downward trend on <code>Google Stock Price</code> using <code>LSTM</code></p>
+<h1 id="going-about">Going about</h1>
+<ul>
+<li>We will try to get a better understand on the usage of LSTMs.</li>
+<li>This LSTM will be trained with <code>6yrs</code> of google stock price <code>(2013-2017)</code></li>
+<li>Predict the <code>open of stock</code> for first month of <code>2018</code></li>
+<li>NB: There is no <code>SATURDAY</code> and <code>SUNDAY</code> data in the dataset.</li>
+</ul>
+<h1 id="downloading-the-dataset">Downloading the Dataset</h1>
+<h3 id="trainset">TrainSet</h3>
+<p><a href="https://finance.yahoo.com/quote/GOOG/history?period1=1356978600&amp;period2=1514658600&amp;interval=1d&amp;filter=history&amp;frequency=1d">https://finance.yahoo.com/quote/GOOG/history?period1=1356978600&amp;period2=1514658600&amp;interval=1d&amp;filter=history&amp;frequency=1d</a></p>
+<ul>
+<li>01 Jan 2013 to 31 Dec 2017</li>
+</ul>
+<p><img src="/images/articles/2018/RNN/google-stock-train.png" alt="google-stock-train.png" title="google-stock-train.png">
+<img src="/images/articles/2018/RNN/google-stock-train-graph.png" alt="google-stock-train.png" title="google-stock-train.png"></p>
+<h3 id="testset">TestSet</h3>
+<p><a href="https://finance.yahoo.com/quote/GOOG/history?period1=1514745000&amp;period2=1517337000&amp;interval=1d&amp;filter=history&amp;frequency=1d">https://finance.yahoo.com/quote/GOOG/history?period1=1514745000&amp;period2=1517337000&amp;interval=1d&amp;filter=history&amp;frequency=1d</a></p>
+<ul>
+<li>01 Jan 2018 to 31 Jan 2018</li>
+</ul>
+<p><img src="/images/articles/2018/RNN/google-stock-test.png" alt="google-stock-test.png" title="google-stock-test.png">
+<img src="/images/articles/2018/RNN/google-stock-test-graph.png" alt="google-stock-test.png" title="google-stock-test.png"></p>
+<hr>
+<!-- raw HTML omitted -->
+<h1 id="data-preprocessing">Data Preprocessing</h1>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic">## Data Preprocessing</span>
+<span style="color:#fb660a;font-weight:bold">import</span> numpy <span style="color:#fb660a;font-weight:bold">as</span> np <span style="color:#080;background-color:#0f140f;font-style:italic">#allow us to do array manipulation</span>
+<span style="color:#fb660a;font-weight:bold">import</span> matplotlib.pyplot <span style="color:#fb660a;font-weight:bold">as</span> plt <span style="color:#080;background-color:#0f140f;font-style:italic">#to visualize the data</span>
+<span style="color:#fb660a;font-weight:bold">import</span> pandas <span style="color:#fb660a;font-weight:bold">as</span> pd <span style="color:#080;background-color:#0f140f;font-style:italic">#to import and manage the dataset</span>
+</code></pre></div><h2 id="importing-data">Importing Data</h2>
+<p>To import the data from the excel we downloaded, we will use the pandas <code>read_csv</code> function.</p>
+<p>read_csv imports data as a <code>DataFrame</code></p>
+<h4 id="dataframe">Dataframe</h4>
+<p><a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html">https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html</a></p>
+<blockquote>
+<p>A DataFrame is a two-dimentional labeled data structures with columns of potentially different types.<!-- raw HTML omitted -->
+check out: <a href="https://www.youtube.com/watch?time_continue=44&amp;v=CLoNO-XxNXU">https://www.youtube.com/watch?time_continue=44&amp;v=CLoNO-XxNXU</a></p>
+</blockquote>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic">## Importing the training set</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># importing as dataframe using pandas</span>
+dataset_train = pd.read_csv(<span style="color:#0086d2">&#39;Google_Stock_Price_Train_2013-2017.csv&#39;</span>);
+<span style="color:#080;background-color:#0f140f;font-style:italic"># Select the required column using iloc method and .values converts dataframe to array</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># .iloc[all_columns: only 1 row (open stock)]</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># convert the dataset to numpy array as neural network accepts only arrays as inputs</span>
+training_set = dataset_train.iloc[:,<span style="color:#0086f7;font-weight:bold">1</span>:<span style="color:#0086f7;font-weight:bold">2</span>].values <span style="color:#080;background-color:#0f140f;font-style:italic"># should give as range if we give [:,1] we just get a vector what we need is numpy array</span>
+</code></pre></div><p><img src="/images/articles/2018/RNN/stock_dataframe.png" alt="stock_dataframe.png" title="stock_dataframe.png">
+<!-- raw HTML omitted -->
+<img src="/images/articles/2018/RNN/stock_training_set.png" alt="stock_training_set.png" title="stock_training_set.png"></p>
+<h2 id="feature-scaling">Feature Scaling</h2>
+<p>Feature Scaling can be done in two methods</p>
+<ol>
+<li>Standardisation</li>
+<li>Normalisation</li>
+</ol>
+<p>Here we will use Normalisation as we are using a sigmoid function as an activation function in output layer.</p>
+<p>For this we will use the MinMaxScalar class from the pre-processing module in scikit learn library.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#fb660a;font-weight:bold">from</span> sklearn.preprocessing <span style="color:#fb660a;font-weight:bold">import</span> MinMaxScaler
+</code></pre></div><p><img src="/images/articles/2018/RNN/feature_scaling.png" alt="feature_scaling.png" title="feature_scaling.png"></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic"># Feature Scaling</span>
+<span style="color:#fb660a;font-weight:bold">from</span> sklearn.preprocessing <span style="color:#fb660a;font-weight:bold">import</span> MinMaxScaler
+sc = MinMaxScaler(feature_range = (<span style="color:#0086f7;font-weight:bold">0</span>,<span style="color:#0086f7;font-weight:bold">1</span>)) <span style="color:#080;background-color:#0f140f;font-style:italic"># to get all stock price between 0 &amp; 1</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># apply this sc object on our data</span>
+training_set_scaled = sc.fit_transform(training_set) <span style="color:#080;background-color:#0f140f;font-style:italic"># fit_transform is used to convert all data between 0 &amp; 1</span>
+</code></pre></div><p><img src="/images/articles/2018/RNN/stock_scaled.png" alt="stock_scaled.png" title="stock_scaled.png"></p>
+<h2 id="creating-datastructure-for-the-rnn">Creating DataStructure for the RNN</h2>
+<p>Here we tell the RNN to take 60 timesteps and predict 1 output.</p>
+<p>That is at time <code>t</code> the RNN looks back <code>60</code> stock prices before time <code>t</code> and based on the trends its capture it trys to predict the output at <code>t+1</code></p>
+<p>This is to prevent <code>OVERFITTING</code> and <code>UNDERFITTING</code></p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic">## Creating data structure with 60 timesteps and 1 output</span>
+X_train = []
+y_train = []
+
+<span style="color:#fb660a;font-weight:bold">for</span> i in range(<span style="color:#0086f7;font-weight:bold">60</span>, <span style="color:#0086f7;font-weight:bold">1260</span>): <span style="color:#080;background-color:#0f140f;font-style:italic"># 60 inputs till the total range of the dataset</span>
+    X_train.append(training_set_scaled[i-<span style="color:#0086f7;font-weight:bold">60</span>:i, <span style="color:#0086f7;font-weight:bold">0</span>]) <span style="color:#080;background-color:#0f140f;font-style:italic"># 60-60 = 0 so 0 to 60 indexes ,0 is for the column(we have only 1 column now :P)</span>
+    y_train.append(training_set_scaled[i, <span style="color:#0086f7;font-weight:bold">0</span>]) <span style="color:#080;background-color:#0f140f;font-style:italic"># index starts at 0 :P</span>
+</code></pre></div><p>converting X_train and Y_train to numpy array sinse they are now a list</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">X_train, y_train = np.array(X_train), np.array(y_train)
+</code></pre></div><p>reshaping to be compatible to the neural network</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic"># Reshaping - to add additional dimentions</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># (batch_size, timesteps, input_dim)</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># batch_size : total number of stock prices #X_train.shape[0] = gets the total rows </span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># timesteps which is 60 # X_train.shape[0] = gets the total columns</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># input_dim = 1 since we are using only 1 indicator</span>
+X_train = np.reshape(X_train, (X_train.shape[<span style="color:#0086f7;font-weight:bold">0</span>], X_train.shape[<span style="color:#0086f7;font-weight:bold">1</span>], <span style="color:#0086f7;font-weight:bold">1</span>)) <span style="color:#080;background-color:#0f140f;font-style:italic">#(batch_size, timesteps, input_dim)</span>
+</code></pre></div><h1 id="building-the-rnn">Building the RNN</h1>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic">## Building the RNN</span>
+
+<span style="color:#fb660a;font-weight:bold">from</span> keras.models <span style="color:#fb660a;font-weight:bold">import</span> Sequential
+<span style="color:#fb660a;font-weight:bold">from</span> keras.layers <span style="color:#fb660a;font-weight:bold">import</span> Dense
+<span style="color:#fb660a;font-weight:bold">from</span> keras.layers <span style="color:#fb660a;font-weight:bold">import</span> LSTM
+<span style="color:#fb660a;font-weight:bold">from</span> keras.layers <span style="color:#fb660a;font-weight:bold">import</span> Dropout
+
+<span style="color:#080;background-color:#0f140f;font-style:italic"># Initialising th RNN</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># Classification is for predicting a category or a cass</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># Regression is for predicting a continuous value</span>
+regressor = Sequential()
+
+<span style="color:#080;background-color:#0f140f;font-style:italic"># Adding the first LSTM layer and some dropout reqularisation (to avoid overfitting)</span>
+regressor.add(LSTM(units = <span style="color:#0086f7;font-weight:bold">50</span>, return_sequences = True, input_shape = (X_train.shape[<span style="color:#0086f7;font-weight:bold">1</span>], <span style="color:#0086f7;font-weight:bold">1</span>)))
+<span style="color:#080;background-color:#0f140f;font-style:italic"># for the dropout</span>
+regressor.add(Dropout(<span style="color:#0086f7;font-weight:bold">0.2</span>)) <span style="color:#080;background-color:#0f140f;font-style:italic"># 20% dropout - neurons in LSTM will be ignored in each iteration of the training</span>
+
+<span style="color:#080;background-color:#0f140f;font-style:italic">#second layer</span>
+regressor.add(LSTM(units = <span style="color:#0086f7;font-weight:bold">50</span>, return_sequences = True))
+regressor.add(Dropout(<span style="color:#0086f7;font-weight:bold">0.2</span>))
+
+<span style="color:#080;background-color:#0f140f;font-style:italic">#third layer</span>
+regressor.add(LSTM(units = <span style="color:#0086f7;font-weight:bold">50</span>, return_sequences = True))
+regressor.add(Dropout(<span style="color:#0086f7;font-weight:bold">0.2</span>))
+
+<span style="color:#080;background-color:#0f140f;font-style:italic">#forth layer</span>
+regressor.add(LSTM(units = <span style="color:#0086f7;font-weight:bold">50</span>))
+regressor.add(Dropout(<span style="color:#0086f7;font-weight:bold">0.2</span>))
+
+
+<span style="color:#080;background-color:#0f140f;font-style:italic">## Adding the Output Layer</span>
+regressor.add(Dense(units = <span style="color:#0086f7;font-weight:bold">1</span>))
+
+
+<span style="color:#080;background-color:#0f140f;font-style:italic">## Compiling the RNN with loss function</span>
+regressor.compile(optimizer = <span style="color:#0086d2">&#39;adam&#39;</span>, loss = <span style="color:#0086d2">&#39;mean_squared_error&#39;</span>)
+
+<span style="color:#080;background-color:#0f140f;font-style:italic">## Fitting the RNN to the training set</span>
+regressor.fit(X_train, y_train, epochs = <span style="color:#0086f7;font-weight:bold">100</span>, batch_size = <span style="color:#0086f7;font-weight:bold">32</span>)
+</code></pre></div><p>When we run the above code we start the training process. After completion we need to follow the same steps on the <code>test dataset</code></p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic">## P3 - Making the prediction and visualising the results</span>
+
+<span style="color:#080;background-color:#0f140f;font-style:italic"># Getting the real stock price of 2018</span>
+dataset_test = pd.read_csv(<span style="color:#0086d2">&#39;Google_Stock_Price_Test_2018-2018.csv&#39;</span>);
+real_stock_price = dataset_test.iloc[:,<span style="color:#0086f7;font-weight:bold">1</span>:<span style="color:#0086f7;font-weight:bold">2</span>].values
+
+<span style="color:#080;background-color:#0f140f;font-style:italic"># Getting the predicted stock price</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic">#concatenating both the train and test sets</span>
+dataset_total = pd.concat((dataset_train[<span style="color:#0086d2">&#39;Open&#39;</span>], dataset_test[<span style="color:#0086d2">&#39;Open&#39;</span>]), axis = <span style="color:#0086f7;font-weight:bold">0</span>); <span style="color:#080;background-color:#0f140f;font-style:italic"># 1 for horizontal concatenation &amp; 0 for vertical</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># getting the new inputs fo each financial day</span>
+inputs = dataset_total[len(dataset_total)-len(dataset_test) - <span style="color:#0086f7;font-weight:bold">60</span>:].values
+inputs = inputs.reshape(-<span style="color:#0086f7;font-weight:bold">1</span>, <span style="color:#0086f7;font-weight:bold">1</span>)
+inputs = sc.transform(inputs)
+
+X_test = []
+<span style="color:#fb660a;font-weight:bold">for</span> i in range(<span style="color:#0086f7;font-weight:bold">60</span>, <span style="color:#0086f7;font-weight:bold">80</span>):
+    X_test.append(inputs[i-<span style="color:#0086f7;font-weight:bold">60</span>:i, <span style="color:#0086f7;font-weight:bold">0</span>])
+    
+X_test = np.array(X_test)
+<span style="color:#080;background-color:#0f140f;font-style:italic"># for the 3D structure</span>
+X_test = np.reshape(X_test, (X_test.shape[<span style="color:#0086f7;font-weight:bold">0</span>], X_test.shape[<span style="color:#0086f7;font-weight:bold">1</span>], <span style="color:#0086f7;font-weight:bold">1</span>))
+predicted_stock_price = regressor.predict(X_test)
+predicted_stock_price = sc.inverse_transform(predicted_stock_price);
+</code></pre></div><h1 id="visualising-the-results">Visualising the results</h1>
+<p>We use <code>pyplot</code> method from matplotlib for visualising</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">plt.plot(real_stock_price, color = <span style="color:#0086d2">&#39;red&#39;</span>, label = <span style="color:#0086d2">&#39;Real Google Stock Price&#39;</span>)
+plt.plot(predicted_stock_price, color = <span style="color:#0086d2">&#39;blue&#39;</span>, label = <span style="color:#0086d2">&#39;Predicted Google Stock Price&#39;</span>)
+plt.title(<span style="color:#0086d2">&#39;Google Stock Price Prediction&#39;</span>)
+plt.xlabel(<span style="color:#0086d2">&#39;Time&#39;</span>)
+plt.ylabel(<span style="color:#0086d2">&#39;Google Stock Price&#39;</span>)
+plt.legend()
+plt.show()
+</code></pre></div><p><img src="/images/articles/2018/RNN/google-stock-predicted.png" alt="google-stock-predicted.png" title="google-stock-predicted.png"></p>
+<p><code>We have successfully implemented our stock price predictor for 2018</code></p>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://itsg.dev/tags/practical">practical</a></span><span class="tag"><a href="https://itsg.dev/tags/rnn">rnn</a></span><span class="tag"><a href="https://itsg.dev/tags/project">project</a></span>
+                </p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>903 Words</p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2018-02-03 05:30 &#43;0530</p>
+        </div>
+
+        
+            <div class="pagination">
+                <div class="pagination__title">
+                    <span class="pagination__title-h"></span>
+                    <hr />
+                </div>
+
+                <div class="pagination__buttons">
+                    
+                        <span class="button previous">
+                            <a href="https://itsg.dev/posts/object-detection-using-single-shot-detection-algorithm/">
+                                <span class="button__icon">←</span>
+                                <span class="button__text">Object Detection using Single Shot Detection Algorithm</span>
+                            </a>
+                        </span>
+                    
+
+                    
+                        <span class="button next">
+                            <a href="https://itsg.dev/posts/intro-to-recurrent-neural-network-rnn/">
+                                <span class="button__text">Intro to Recurrent Neural Network (RNN)</span>
+                                <span class="button__icon">→</span>
+                            </a>
+                        </span>
+                    
+                </div>
+            </div>
+        
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2020</span>
+            
+                <span><a href="https://itsg.dev">Geo Joy</a></span>
+            
+            
+            <span> <a href="https://itsg.dev/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>with &#10084; from Bangalore, India</a></span>
+            <span>theme inspiration from  <a href="https://github.com/rhazdon/hugo-theme-hello-friend-ng">hello-friend</a></span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="/bundle.min.dc716e9092c9820b77f96da294d0120aeeb189b5bcea9752309ebea27fd53bbe6b13cffb2aca8ecf32525647ceb7001f76091de4199ac5a3caa432c070247f5b.js" integrity="sha512-3HFukJLJggt3&#43;W2ilNASCu6xibW86pdSMJ6&#43;on/VO75rE8/7KsqOzzJSVkfOtwAfdgkd5BmaxaPKpDLAcCR/Ww=="></script>
+
+
+
+    </body>
+</html>

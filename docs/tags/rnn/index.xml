@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Rnn on its Geo</title>
+    <title>rnn on its Geo</title>
     <link>https://itsg.dev/tags/rnn/</link>
-    <description>Recent content in Rnn on its Geo</description>
+    <description>Recent content in rnn on its Geo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 03 Feb 2018 00:00:00 +0000</lastBuildDate>
@@ -13,10 +13,10 @@
     
     <item>
       <title>Predicting Stock Price using Recurrent Neural Network</title>
-      <link>https://itsg.dev/post/2018/02/03/predicting-stock-price-using-recurrent-neural-network/</link>
+      <link>https://itsg.dev/posts/predicting-stock-price-using-recurrent-neural-network/</link>
       <pubDate>Sat, 03 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://itsg.dev/post/2018/02/03/predicting-stock-price-using-recurrent-neural-network/</guid>
+      <guid>https://itsg.dev/posts/predicting-stock-price-using-recurrent-neural-network/</guid>
       <description>Prelude Brownian Motion stats that the future variations of the stock price are independent from the past.
 So it is actually impossible to predict the future stock price but one thing we can do or predict is the trend.
 So in the tutorial we will try to predict the upward and downward trend on Google Stock Price using LSTM
@@ -25,12 +25,11 @@ Going about  We will try to get a better understand on the usage of LSTMs.</desc
     
     <item>
       <title>Intro to Recurrent Neural Network (RNN)</title>
-      <link>https://itsg.dev/post/2018/01/28/intro-to-recurrent-neural-network-rnn/</link>
+      <link>https://itsg.dev/posts/intro-to-recurrent-neural-network-rnn/</link>
       <pubDate>Sun, 28 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://itsg.dev/post/2018/01/28/intro-to-recurrent-neural-network-rnn/</guid>
-      <description>image borrowed from UDACITY
-Recurrent Neural Network is one of the advanced algorithms that existed in the wold of supervised deep learning.
+      <guid>https://itsg.dev/posts/intro-to-recurrent-neural-network-rnn/</guid>
+      <description>image borrowed from UDACITYRecurrent Neural Network is one of the advanced algorithms that existed in the wold of supervised deep learning.
 Prelude In ANN and CNN we use neural network that takes few inputs, propagates it forward through hidden layers to the output layer. This is termed as a FEED FORWARD NETWORK. In this network there is no sence of order in the inputs.
 OK now lets bring some order to the network.</description>
     </item>

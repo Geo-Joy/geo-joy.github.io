@@ -3,7 +3,7 @@ publishDir = "docs"
 languageCode = "en-us"
 title = "its Geo"
 paginate = 10
-theme = "ginimal"
+theme = "hello-friend-ng"
 
 PygmentsStyle = "fruity"
 PygmentsUseClasses = false
@@ -12,8 +12,8 @@ PygmentsCodeFences = true
 SectionPagesMenu = "Main"
 
 [permalinks]
-  post = "/post/:year/:month/:day/:slug/"
-  project = "/project/:year/:month/:day/:slug/"
+  post = "/post/:slug/"
+  project = "/project/:slug/"
 
 [indexes]
   tag = "tags"
@@ -21,7 +21,7 @@ SectionPagesMenu = "Main"
 
 [params]
   # Warning Keys are case sensitives
-  Subtitle = "My Life! My Way!"
+  Subtitle = "Artificial Intelligence // Microservices // Web Architect // Mentor"
   description1 = "I’m passionate about all things tech and I taught myself all that I got to know to become a cyber architect. This journey began back when I started playing The Cycles on MS DOS and has continued to thrill me ever since. I’m currently residing in Bangalore where I co-founded – T.I.G.E.R. Innovations in 2013 & Paper Rocket Labs in 2017, a company with fresh and dynamic attitude."
   description2 = "For me, both design and development go hand in hand. I find immense pleasure in bringing designs to life through development, which is why I could never really classify myself as a “hardcore developer” but instead one that can bridge two philosophies and ways of thinking. With the ever changing demands of work, my focus shifts gears accordingly, allowing me to explore different areas and hone my skills. Exploring new concepts and ideas besides work satiates my hunger for learning and sharing."
   description3 = "At work, I am known for my love for extracurricular activities! Pet-projects allow me to share something new with the community and engage with new people on a regular basis. Expanding my knowledge base through work or otherwise has now become a way of life."
@@ -39,18 +39,65 @@ SectionPagesMenu = "Main"
   highlight = false
   highlightStyle = "solarized-dark"
   highlightLanguages = ["go"]
+  
+  # Directory name of your blog content (default is `content/posts`)
+  contentTypeName = "posts"
 
-  [params.author]
-    firstName = "Geo"
-    lastName = "Joy"
+
+    
+
+  # Prefix of link to the git commit detail page. GitInfo must be enabled.
+  # gitUrl = ""
+
+  # Set disableReadOtherPosts to true in order to hide the links to other posts.
+  disableReadOtherPosts = false
+
+  # Integrate Javascript files or stylesheets by adding the url to the external assets or by
+  # linking local files with their path relative to the static folder, e.g. "css/styles.css"
+  customCSS = []
+  customJS  = []
+
+  # Toggle this option need to rebuild SCSS, requires extended version of Hugo
+  justifyContent = false  # Set "text-align: justify" to .content.
+
+
+
+PygmentsCodeFences = true
+PygmentsStyle = "monokai"
+
+paginate  = 20
+rssLimit  = 10  # Maximum number of items in the RSS feed.
+copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License." # This message is only used by the RSS template.
+
+# googleAnalytics = ""
+# disqusShortname = ""
+
+archetypeDir = "archetypes"
+contentDir   = "content"
+dataDir      = "data"
+layoutDir    = "layouts"
+publishDir   = "public"
+
+buildDrafts  = false
+buildFuture  = false
+buildExpired = false
+canonifyURLs = true
+
+enableRobotsTXT = true
+enableGitInfo   = false
+enableEmoji     = true
+enableMissingTranslationPlaceholders = false
+disableRSS     = false
+disableSitemap = false
+disable404     = false
+disableHugoGeneratorInject = false
+
+  [author]
+    name = "Geo Joy"
     gender = "male"
     userName = "Geo-Joy"
     image = "https://graph.facebook.com/10207052454221714/picture?type=large"
-    website = "http://itsg.dev"
-    twitter = "megeojoy"
-    github = "Geo-Joy"
-    facebook = "me.geojoy"
-    linkedin = "geojoy"  
+    
 
 [[menu.main]]
     url = "/"
@@ -58,7 +105,7 @@ SectionPagesMenu = "Main"
     weight = 1
 
 [[menu.main]]
-    url = "/post/"
+    url = "posts/"
     name = "Posts"
     weight = 2
 
@@ -72,22 +119,47 @@ SectionPagesMenu = "Main"
     name = "user"
     weight = 1
 
-[[menu.icon]]
-    url = "http://www.google.com/recaptcha/mailhide/d?k=01IIc-s5LNYiS-CG_gthn4PA==&c=r5Ctx8RMDz422qmYESfk1g=="
-    name = "envelope"
-    weight = 2
 
-[[menu.icon]]
-    url = "https://github.com/Geo-Joy"
-    name = "github-alt"
-    weight = 3
+    # Social icons
+    [[params.social]]
+        name = "twitter"
+        url  = "https://twitter.com/megeojoy"
 
-[[menu.icon]]
-    url = "https://twitter.com/megeojoy"
-    name = "twitter"
-    weight = 4
+    [[params.social]]
+        name = "email"
+        url  = "mailto:me.geojoy@gmail.com"
 
-[[menu.icon]]
-    url = "https://www.linkedin.com/in/geojoy/"
-    name = "linkedin"
-    weight = 5
+    [[params.social]]
+        name = "github"
+        url  = "https://github.com/Geo-Joy"
+
+    [[params.social]]
+        name = "linkedin"
+        url  = "https://www.linkedin.com/in/geojoy/"
+
+    [[params.social]]
+        name = "stackoverflow"
+        url  = "https://stackoverflow.com/users/3345764/geo-joy"
+
+
+    [params.logo]
+    logoText     = "$ cd /itsG/"
+    logoHomeLink = "/"
+    # Set true to remove the logo cursor entirely.
+    # logoCursorDisabled = false
+    # Set to a valid CSS color to change the cursor in the logo.
+    logoCursorColor    = "#51fe5fa6"#"#fe5186"
+    # Set to a valid CSS time value to change the animation duration, "0s" to disable.
+    # logoCursorAnimate  = "2s"
+
+  # Default theme "light" or "dark"
+  defaultTheme = "dark"
+  themeColor = "#252627"
+
+  # Colors for favicons
+  [params.favicon.color]
+    mask = "#252627"
+    msapplication = "#252627"
+    theme = "#252627"
+
+

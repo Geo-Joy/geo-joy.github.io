@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="male https://graph.facebook.com/10207052454221714/picture?type=large Geo Joy Geo-Joy ">
+<meta name="description" content="image borrowed from UDACITYRecurrent Neural Network is one of the advanced algorithms that existed in the wold of supervised deep learning.
+Prelude In ANN and CNN we use neural network that takes few inputs, propagates it forward through hidden layers to the output layer. This is termed as a FEED FORWARD NETWORK. In this network there is no sence of order in the inputs.
+OK now lets bring some order to the network." />
+<meta name="keywords" content=", rnn, deeplearning" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="https://itsg.dev/posts/intro-to-recurrent-neural-network-rnn/" />
+
+
+    <title>
+        
+            Intro to Recurrent Neural Network (RNN) :: its Geo  — Artificial Intelligence // Microservices // Web Architect // Mentor
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="/main.min.753fac8f03736f0edc9be411eb20cee875dd7bb8e73c8155fbf6a629c863f4ca.css">
+
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="msapplication-TileColor" content="#252627">
+    <meta name="theme-color" content="#252627">
+
+
+
+<meta itemprop="name" content="Intro to Recurrent Neural Network (RNN)">
+<meta itemprop="description" content="Recurrent neural networks are able to learn from sequences of data. In this tutorial, we&#39;ll learn the concepts behind recurrent networks.">
+<meta itemprop="datePublished" content="2018-01-28T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-01-28T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="639">
+
+
+
+<meta itemprop="keywords" content="rnn,deeplearning," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Intro to Recurrent Neural Network (RNN)"/>
+<meta name="twitter:description" content="Recurrent neural networks are able to learn from sequences of data. In this tutorial, we&#39;ll learn the concepts behind recurrent networks."/>
+
+
+
+
+
+
+
+    <meta property="article:published_time" content="2018-01-28 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">$ cd /itsG/</span>
+            <span class="logo__cursor" style=
+                  "
+                   background-color:#51fe5fa6;
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://itsg.dev/">Home</a></li><li><a href="https://itsg.dev/posts/">Posts</a></li><li><a href="https://itsg.dev/project/">Projects</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>3 minutes
+
+            
+
+            </p>
+        </div>
+
+        <article>
+            <h1 class="post-title">
+                <a href="https://itsg.dev/posts/intro-to-recurrent-neural-network-rnn/">Intro to Recurrent Neural Network (RNN)</a>
+            </h1>
+
+            
+
+            <div class="post-content">
+                <p><img src="/images/articles/2018/RNN/rnn-lstm-intro.jpg" alt="rnn-lstm-intro.jpg" title="rnn-lstm-intro.jpg">
+image borrowed from <!-- raw HTML omitted -->UDACITY<!-- raw HTML omitted --></p>
+<p>Recurrent Neural Network is one of the advanced algorithms that existed in the wold of <code>supervised deep learning</code>.</p>
+<h1 id="prelude">Prelude</h1>
+<p>In ANN and CNN we use neural network that takes few inputs, propagates it forward through hidden layers to the output layer. This is termed as a <code>FEED FORWARD NETWORK</code>. In this network there is no sence of order in the inputs.</p>
+<p>OK now lets bring some order to the network.</p>
+<!-- raw HTML omitted -->
+<p>Lets take an example data and go forward.</p>
+<pre><code>&quot;STEEP&quot;
+</code></pre><p><img src="/images/articles/2018/RNN/feedforward_ex1.png" alt="feedforward_ex1.png" title="feedforward_ex1.png"></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>Our goal is to make the network predict the next letter to the sequence.</p>
+<ul>
+<li>First we feed <code>s</code> to the network and our desired output is <code>t</code>.</li>
+<li>Then we feed <code>t</code> to the network and our desired output is <code>e</code>.</li>
+<li>Next we feed the previous <code>e</code> to the network and our desired output should <code>e</code> or <code>p</code>.</li>
+<li>But this feed forward network does not have the information about the which character to predict next as it does not know about the previous letters <code>s</code> <code>t</code> <code>e</code>.</li>
+</ul>
+<p>To include this information in the network we just need to add the previous hidden layer output to the hidden layer in the next step to carry forward the information about the sequence.</p>
+<p>This architecture is know as Recurrent Neural Network or RNN</p>
+<p><img src="/images/articles/2018/RNN/rnn-representation.png" alt="rnn-representation.png" title="rnn-representation.png"></p>
+<!-- raw HTML omitted -->
+<p>The above image is the standard representation of RNN</p>
+<p><img src="/images/articles/2018/RNN/rnn-representation-time.png" alt="rnn-representation.png" title="rnn-representation.png"></p>
+<!-- raw HTML omitted -->
+<p>The above image shows RNN expanded in TIME.</p>
+<h1 id="examples-of-rnns">Examples of RNNs</h1>
+<h2 id="one-to-many-relationship">One to Many Relationship</h2>
+<p><img src="/images/articles/2018/RNN/rnn-one-many.png" alt="rnn-one-many.png" title="rnn-one-many.png"></p>
+<!-- raw HTML omitted -->
+<p><img src="/images/articles/2018/RNN/rnn-one-many-example.png" alt="rnn-one-many.png" title="rnn-one-many.png"></p>
+<!-- raw HTML omitted -->
+<p>Here there is only one input and multiple outputs. For example the image is the input to tht CNN network and then into a RNN then the computer will come up with the word describing the image.</p>
+<p><img src="/images/articles/2018/RNN/rnn-many-one.png" alt="rnn-one-many.png" title="rnn-one-many.png"></p>
+<!-- raw HTML omitted -->
+<p><img src="/images/articles/2018/RNN/rnn-many-one-example.png" alt="rnn-one-many.png" title="rnn-one-many.png"></p>
+<!-- raw HTML omitted -->
+<p>Mostly for sentiment analysis from lot of texts like comments etc.</p>
+<p><img src="/images/articles/2018/RNN/rnn-many-many.png" alt="rnn-one-many.png" title="rnn-one-many.png"></p>
+<!-- raw HTML omitted -->
+<p><img src="/images/articles/2018/RNN/rnn-many-many-example.png" alt="rnn-one-many.png" title="rnn-one-many.png"></p>
+<!-- raw HTML omitted -->
+<p>Can be used in a translator system. Having reference to genders and tense to reframe the translated text.</p>
+<p><img src="/images/articles/2018/RNN/rnn-many-many2.png" alt="rnn-one-many.png" title="rnn-one-many.png"></p>
+<!-- raw HTML omitted -->
+<p><img src="/images/articles/2018/RNN/rnn-many-many2-example.png" alt="rnn-one-many.png" title="rnn-one-many.png"></p>
+<!-- raw HTML omitted -->
+<p>For subtitling movies. Get the information from previous frame to get the context to subtitle other scenes.</p>
+<h1 id="vanishing-gradient">Vanishing Gradient</h1>
+<p>This problem was first discovered by Seph Hochreiter in 1991 later by Joshua Benjio in 1994.</p>
+<p>In Simple words:</p>
+<p>Previously we saw that in the feedback loop through time, we pass in weights to and fro to adjust the cost function as to minimize the gradients. Here randomly assigned weights may be large or small. During forward and backward propagation we are multiplying these weights together. Multipling large weights with each other results in another larger valued weight and multipling smaller weights results in a small value. This make the gradients going through the network really small and vanishing and large causing it to explode. This also causes imbalance in the network where few nodes are trained properly and others very low. Also since these trained information is carried to other nodes over time, the heavily trained nodes are indirectly trained by the information from the less trained node. Which causes erroneous results at the end.</p>
+<p>This is termed as vanishing and exploding gradients or simply Vanishing Gradients.</p>
+<h1 id="solutions-for-vanishing-gradient">Solutions for Vanishing Gradient</h1>
+<p>For Exploding gradient</p>
+<ul>
+<li>Truncated Backpropagation: Here we stop the backpropagation after certain point. (Its not optimal as we are not updating all the weights)</li>
+<li>Penalties: Gradients been penalized and manually reduced</li>
+<li>Gradient Clipping: Max value for gradient</li>
+</ul>
+<p>For Vanishing Gradient</p>
+<ul>
+<li>Weight Initialization: Be smart enought to initial weights to minimize the vanishing gradient problem</li>
+<li>Echo State Networks They some how manage to solve</li>
+<li>Long Short-Term Memory (LSTM)</li>
+</ul>
+<h1 id="lstms-and-its-varients">LSTMs and its Varients</h1>
+<p>One of the best place to understand LSTM is to read the blogpost at <a href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/">http://colah.github.io/posts/2015-08-Understanding-LSTMs/</a></p>
+<p>For My Reference:
+<img src="/images/articles/2018/RNN/LSTM3-chain.png" alt="LSTM3-chain.png" title="LSTM3-chain.png"></p>
+<!-- raw HTML omitted -->
+<h2 id="gru---gated-recurrent-network">GRU - Gated Recurrent Network</h2>
+<p><img src="/images/articles/2018/RNN/LSTM3-var-GRU.png" alt="LSTM3-var-GRU.png" title="LSTM3-var-GRU.png"></p>
+<!-- raw HTML omitted -->
+<h1 id="attentions">Attentions</h1>
+<p>The idea is to let every step of an RNN pick information to look at from some larger collection of information. For example, if you are using an RNN to create a caption describing an image, it might pick a part of the image to look at for every word it outputs.</p>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://itsg.dev/tags/rnn">rnn</a></span><span class="tag"><a href="https://itsg.dev/tags/deeplearning">deeplearning</a></span>
+                </p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>639 Words</p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2018-01-28 05:30 &#43;0530</p>
+        </div>
+
+        
+            <div class="pagination">
+                <div class="pagination__title">
+                    <span class="pagination__title-h"></span>
+                    <hr />
+                </div>
+
+                <div class="pagination__buttons">
+                    
+                        <span class="button previous">
+                            <a href="https://itsg.dev/posts/predicting-stock-price-using-recurrent-neural-network/">
+                                <span class="button__icon">←</span>
+                                <span class="button__text">Predicting Stock Price using Recurrent Neural Network</span>
+                            </a>
+                        </span>
+                    
+
+                    
+                        <span class="button next">
+                            <a href="https://itsg.dev/posts/basics-to-get-started-with-tensorflow/">
+                                <span class="button__text">Basics to get started with Tensorflow</span>
+                                <span class="button__icon">→</span>
+                            </a>
+                        </span>
+                    
+                </div>
+            </div>
+        
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2020</span>
+            
+                <span><a href="https://itsg.dev">Geo Joy</a></span>
+            
+            
+            <span> <a href="https://itsg.dev/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>with &#10084; from Bangalore, India</a></span>
+            <span>theme inspiration from  <a href="https://github.com/rhazdon/hugo-theme-hello-friend-ng">hello-friend</a></span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="/bundle.min.dc716e9092c9820b77f96da294d0120aeeb189b5bcea9752309ebea27fd53bbe6b13cffb2aca8ecf32525647ceb7001f76091de4199ac5a3caa432c070247f5b.js" integrity="sha512-3HFukJLJggt3&#43;W2ilNASCu6xibW86pdSMJ6&#43;on/VO75rE8/7KsqOzzJSVkfOtwAfdgkd5BmaxaPKpDLAcCR/Ww=="></script>
+
+
+
+    </body>
+</html>

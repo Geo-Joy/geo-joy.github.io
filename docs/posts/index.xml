@@ -1,0 +1,1699 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Posts on its Geo</title>
+        <link>https://itsg.dev/posts/</link>
+        <description>Recent content in Posts on its Geo</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Tue, 06 Mar 2018 00:00:00 +0000</lastBuildDate>
+        <atom:link href="https://itsg.dev/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Machine Learning &amp; Deep learning Terms</title>
+            <link>https://itsg.dev/posts/machine-learning-and-deep-learning-terms/</link>
+            <pubDate>Tue, 06 Mar 2018 00:00:00 +0000</pubDate>
+            
+            <guid>https://itsg.dev/posts/machine-learning-and-deep-learning-terms/</guid>
+            <description>The Machine Learning Landscape 1. What is Machine Learning?  It is the field of study that gives computers the ability to learn without being explicitly programmed.  2. Types of Machine Learning  Whether or not they are trained with human supervision  Supervised Learning Unsupervised Learning Semisupervised Learning Reinforcement Learning   Whether or not they can learn incrementally on the fly  Online Learning Batch Learning   Whether they work by simly comparing new data points to known data points, or instead detect patterns in the training data and build a predictive model, much like scientists do.</description>
+            <content type="html"><![CDATA[<p><img src="/images/articles/2018/machine-Learning-terms.jpg" alt="machine-Learning-terms.jpg"></p>
+<h1 id="the-machine-learning-landscape">The Machine Learning Landscape</h1>
+<h2 id="1-what-is-machine-learning">1. What is Machine Learning?</h2>
+<ul>
+<li>It is the field of study that gives computers the ability to learn without being explicitly programmed.</li>
+</ul>
+<h2 id="2-types-of-machine-learning">2. Types of Machine Learning</h2>
+<ul>
+<li>Whether or not they are trained with human supervision
+<ul>
+<li>Supervised Learning</li>
+<li>Unsupervised Learning</li>
+<li>Semisupervised Learning</li>
+<li>Reinforcement Learning</li>
+</ul>
+</li>
+<li>Whether or not they can learn incrementally on the fly
+<ul>
+<li>Online Learning</li>
+<li>Batch Learning</li>
+</ul>
+</li>
+<li>Whether they work by simly comparing new data points to known data points, or instead detect patterns in the training data and build a predictive model, much like scientists do.
+<ul>
+<li>Instance based Learning</li>
+<li>Model Based Learning</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-whats-is-a-labeled-training-set">3. Whats is a labeled training set?</h2>
+<ul>
+<li>They are dataset containing the desired solution.</li>
+<li>A label is the thing we&rsquo;re predicting—the <code>y</code> variable in simple linear regression. The label could be the future price of wheat, the kind of animal shown in a picture, the meaning of an audio clip, or just about anything.</li>
+</ul>
+<h2 id="4-supervised-learning">4. Supervised Learning</h2>
+<ul>
+<li>In supervised learning the training data (features) fed to the algorithm includes the desired solutions called labels.</li>
+</ul>
+<h2 id="5-feature">5 Feature?</h2>
+<ul>
+<li>Features are the way we represent the data. eg: Age, height, location, words in an email etc.</li>
+<li>A feature is an input variable—the x variable in simple linear regression. A simple machine learning project might use a single feature, while a more sophisticated machine learning project could use millions of features.</li>
+</ul>
+<h2 id="feature-set">Feature Set</h2>
+<ul>
+<li>The group of features your machine learning model trains on. For example, postal code, property size, and property condition might comprise a simple feature set for a model that predicts housing prices.</li>
+</ul>
+<h2 id="6-network">6. Network?</h2>
+<ul>
+<li>Networks as untrained artificial neural networks (basically just raw data)</li>
+</ul>
+<h2 id="7-model">7. Model?</h2>
+<ul>
+<li>Models as what networks become once they are trained (through exposure to data).</li>
+<li>A model defines the relationship between features and label. For example, a spam detection model might associate certain features strongly with &ldquo;spam&rdquo;.</li>
+</ul>
+<h2 id="8-training">8. Training</h2>
+<ul>
+<li>Training means creating or learning the model. That is, you show the model labeled examples and enable the model to gradually learn the relationships between features and label.</li>
+<li>The process of determining the ideal parameters comprising a model.</li>
+</ul>
+<h2 id="what-is-the-goal-of-training-a-model">What is the goal of training a model</h2>
+<ul>
+<li>The goal of training a model is to find a set of weights and biases that have low loss, on average, across all examples.</li>
+</ul>
+<h2 id="9-what-are-the-two-most-common-supervised-tasks">9. What are the two most common supervised tasks?</h2>
+<ul>
+<li>Regression</li>
+<li>Classification</li>
+</ul>
+<h2 id="12-regression">12. Regression</h2>
+<ul>
+<li>A regression model predicts continuous values. For example, regression models make predictions that answer questions like the following:
+<ul>
+<li>What is the value of a house in California?</li>
+<li>What is the probability that a user will click on this ad?</li>
+</ul>
+</li>
+</ul>
+<h2 id="11-classification">11. Classification</h2>
+<ul>
+<li>A classification model predicts discrete values. For example, classification models make predictions that answer questions like the following:
+<ul>
+<li>Is a given email message spam or not spam?</li>
+<li>Is this an image of a dog, a cat, or a hamster?</li>
+</ul>
+</li>
+</ul>
+<h2 id="12-list-some-of-the-important-supervised-learning-algorithms">12. List some of the important supervised learning algorithms.</h2>
+<ul>
+<li>K-Nearest Neighbors</li>
+<li>Linear Regression</li>
+<li>Logistic Regression</li>
+<li>Support Vector Machines (SVMs)</li>
+<li>Decision Tree and Random Forests</li>
+<li>Neural Networks</li>
+</ul>
+<h2 id="13-unsupervised-learning">13. Unsupervised Learning</h2>
+<ul>
+<li>Here the training data is unlabeled.</li>
+</ul>
+<h2 id="14-name-4-common-unsupervised-tasks">14. Name 4 common unsupervised tasks</h2>
+<ul>
+<li>Clustering Algorithms</li>
+<li>Visualization Algorithms</li>
+<li>Dimentionality Reduction</li>
+<li>Anamoly Detection</li>
+<li>Association Rule Learning</li>
+</ul>
+<h2 id="15-semi-supervised-learning">15. Semi-Supervised Learning</h2>
+<ul>
+<li>Some algorithms  can deal with partially labeled training data, usually a lot of unlabeled data and a little bit of labeled data. This is called semisupervised learning.</li>
+<li>eg: Google Photos: It recognizes that the same person A shows up in photos 1,5 and 11, while another persion B shows up inphotos 2,5 and 7.</li>
+</ul>
+<h2 id="16-reinforcement-learning">16. Reinforcement Learning</h2>
+<ul>
+<li></li>
+</ul>
+<h2 id="linear-regression">Linear Regression</h2>
+<ul>
+<li>It is a method for finding the straight line or hyperplane that best fits a set of points.</li>
+<li>A type of regression model that outputs a continuous value from a linear combination of input features.</li>
+<li>y = wx + b</li>
+</ul>
+<!-- raw HTML omitted -->
+<h2 id="bias">Bias</h2>
+<ul>
+<li>An intercept or offset from an origin. Bias (also known as the bias term) is referred to as b or w0 in machine learning models.</li>
+</ul>
+<h2 id="inference">Inference</h2>
+<ul>
+<li>In machine learning, often refers to the process of making predictions by applying the trained model to unlabeled examples.</li>
+</ul>
+<h2 id="weights">Weights</h2>
+<ul>
+<li>A coefficient for a feature in a linear model, or an edge in a deep network. The goal of training a linear model is to determine the ideal weight for each feature. If a weight is 0, then its corresponding feature does not contribute to the model.</li>
+</ul>
+<h2 id="empirical-risk-minimization">Empirical Risk Minimization.</h2>
+<ul>
+<li>In supervised learning, a machine learning algorithm builds a model by examining many examples and attempting to find a model that minimizes loss; this process is called empirical risk minimization.</li>
+</ul>
+<!-- raw HTML omitted -->
+<h2 id="loss">Loss</h2>
+<ul>
+<li>Loss is a number indicating how bad the model&rsquo;s prediction was on a single example. If the model&rsquo;s prediction is perfect, the loss is zero; otherwise, the loss is greater.</li>
+</ul>
+<h2 id="l1-loss">L1 Loss</h2>
+<ul>
+<li>Loss function based on the absolute value of the difference between the values that a model is predicting and the actual values of the labels. L1 loss is less sensitive to outliers than L2 loss.</li>
+</ul>
+<h2 id="l2-loss-or-squared-loss">L2 Loss or squared loss</h2>
+<ul>
+<li>It is also called as squared loss</li>
+<li>Its the difference between prediction and label</li>
+<li>(observation - prediction)^2</li>
+<li>This function calculates the squares of the difference between a model&rsquo;s predicted value for a labeled example and the actual value of the label. Due to squaring, this loss function amplifies the influence of bad predictions. That is, squared loss reacts more strongly to outliers than L1 loss.</li>
+</ul>
+<!-- raw HTML omitted -->
+<h2 id="mean-square-error-mse--crossentropy">Mean square error (MSE) | CrossEntropy</h2>
+<ul>
+<li>Is the average squared loss per example.</li>
+<li>MSE is calculated by dividing the squared loss by the number of examples.</li>
+</ul>
+<p><img src="/images/articles/2018/MSE.jpg" alt="machine-Learning-terms.jpg"></p>
+<ul>
+<li>x is the set of features (for example, temperature, age, and mating success) that the model uses to make predictions</li>
+<li>y is the example&rsquo;s label</li>
+<li>prediction(x) is a function o the weights and bias in combination with the set of features</li>
+<li>D is a data set containing many labeled examples which are (x,y) pairs</li>
+<li>N is the number of examples in D</li>
+</ul>
+<p><img src="/images/articles/2018/MCEDescendingIntoMLRight.png" alt="machine-Learning-terms.jpg"></p>
+<ul>
+<li>The eight examples on the line incur a total loss of 0. However, although only two points lay off the line, both of those points are twice as far off the line as the outlier points in the left figure. Squared loss amplifies those differences, so an offset of two incurs a loss four times greater than an offset of one.
+<img src="/images/articles/2018/MSP311bb3d60a26dc5e7b00002575ca91hgi8ge85.jpg" alt="machine-Learning-terms.jpg"></li>
+</ul>
+<h2 id="loss-function-vs-cost-function">Loss function vs Cost Function</h2>
+<ul>
+<li>Both are almost mean the same</li>
+<li>Loss function is usually a function defined on a data point, prediction and label, and measures the penalty
+<ul>
+<li>square loss used in linear regression</li>
+<li>hinge loss used in SVM</li>
+<li>0/1 loss used in theoretical analysis and definition of accuracy</li>
+</ul>
+</li>
+<li>Cost function is usually more general. It might be a sum of loss functions over your training set
+<ul>
+<li>Mean Squared Error</li>
+<li>SVM cost function</li>
+</ul>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<h2 id="convergence">Convergence</h2>
+<ul>
+<li>Informally, often refers to a state reached during training in which training loss and validation loss change very little or not at all with each iteration after a certain number of iterations. In other words, a model reaches convergence when additional training on the current data will not improve the model. In deep learning, loss values sometimes stay constant or nearly so for many iterations before finally descending, temporarily producing a false sense of convergence.</li>
+</ul>
+<h2 id="when-do-we-say-a-model-has-converged">When do we say a model has converged?</h2>
+<ul>
+<li>We iterate until overall loss stops changing or at least changes extremely slowly. When this happens, we say that the model has converged.</li>
+</ul>
+<h2 id="ploting-loss-vs-weight">Ploting loss vs weight</h2>
+<p><img src="/images/articles/2018/lossVSweight.png" alt="machine-Learning-terms.jpg"></p>
+<ul>
+<li>When we plot loss vs weights of a regression problem we get the above shown graph which is shaped like a bowl/convex shape.</li>
+<li>Convex problems have only one minimum; that is, only one place where the slope is exactly 0. That minimum is where the loss function converges.</li>
+</ul>
+<h2 id="gradient-descent">Gradient Descent</h2>
+<ul>
+<li>A mechanism to calculate the point of convergence(local/global minima) is called Gradient Descent.</li>
+<li>a gradient is a vector of partial derivatives having both direction and magnitude.</li>
+<li>The gradient always points in the direction of steepest increase in the loss function.</li>
+<li>The gradient descent algorithm takes a step in the direction of the negative gradient in order to reduce loss as quickly as possible.</li>
+<li>To determine the next point along the loss function curve, the gradient descent algorithm adds some fraction of the gradient&rsquo;s magnitude to the starting point.</li>
+<li>The gradient descent then repeats this process, edging ever closer to the minimum</li>
+<li>A technique to minimize loss by computing the gradients of loss with respect to the model&rsquo;s parameters, conditioned on training data.</li>
+<li>Informally, gradient descent iteratively adjusts parameters, gradually finding the best combination of weights and bias to minimize loss.</li>
+</ul>
+<h2 id="gradient-step">Gradient Step</h2>
+<ul>
+<li>A forward and backward evaluation of one batch.</li>
+</ul>
+<h2 id="learning-rate-or-step-size">learning rate or Step Size</h2>
+<ul>
+<li>Gradient descent algorithms multiply the gradient by a scalar known as the learning rate (also sometimes called step size) to determine the next point.</li>
+<li>For example, if the gradient magnitude is 2.5 and the learning rate is 0.01, then the gradient descent algorithm will pick the next point 0.025 away from the previous point.</li>
+<li>A scalar used to train a model via gradient descent. During each iteration, the gradient descent algorithm multiplies the learning rate by the gradient. The resulting product is called the gradient step.</li>
+</ul>
+<h2 id="hyperparameters">Hyperparameters</h2>
+<ul>
+<li>The &ldquo;knobs&rdquo; that you tweak during successive runs of training a model. For example, learning rate is a hyperparameter.</li>
+</ul>
+<h2 id="batch">Batch</h2>
+<ul>
+<li>The set of examples used in one iteration (that is, one gradient update) of model training.</li>
+</ul>
+<h2 id="batch-size">Batch Size</h2>
+<ul>
+<li>The number of examples in a batch. For example, the batch size of SGD is 1, while the batch size of a mini-batch is usually between 10 and 1000. Batch size is usually fixed during training and inference; however, TensorFlow does permit dynamic batch sizes.</li>
+</ul>
+<h2 id="stochastic-gradient-descent-sgd">Stochastic gradient descent (SGD)</h2>
+<ul>
+<li>A gradient descent algorithm in which the batch size is one.</li>
+<li>In other words, SGD relies on a single example chosen uniformly at random from a data set to calculate an estimate of the gradient at each step.</li>
+</ul>
+<h2 id="mini-batch">mini-batch</h2>
+<ul>
+<li>A small, randomly selected subset of the entire batch of examples run together in a single iteration of training or inference. The batch size of a mini-batch is usually between 10 and 1,000. It is much more efficient to calculate the loss on a mini-batch than on the full training data.</li>
+</ul>
+<h2 id="mini-batch-stochastic-gradient-descent-mini-batch-sgd">Mini-batch stochastic gradient descent (mini-batch SGD)</h2>
+<ul>
+<li>It is a compromise between full-batch iteration and SGD.</li>
+<li>A mini-batch is typically between 10 and 1,000 examples, chosen at random.</li>
+<li>Mini-batch SGD reduces the amount of noise in SGD but is still more efficient than full-batch.</li>
+<li>A gradient descent algorithm that uses mini-batches. In other words, mini-batch SGD estimates the gradient based on a small subset of the training data. Vanilla SGD uses a mini-batch of size 1.</li>
+</ul>
+<h2 id="generalization">Generalization</h2>
+<ul>
+<li>Refers to your model&rsquo;s ability to make correct predictions on new, previously unseen data as opposed to the data used to train the model.</li>
+</ul>
+<h2 id="overfitting">Overfitting</h2>
+<ul>
+<li>Creating a model that matches the training data so closely that the model fails to make correct predictions on new data.</li>
+</ul>
+<h2 id="validation-set">Validation Set</h2>
+<ul>
+<li>A subset of the data set—disjunct from the training set—that you use to adjust hyperparameters.</li>
+</ul>
+<h2 id="feature-engineering">Feature Engineering</h2>
+<ul>
+<li>The process of determining which features might be useful in training a model, and then converting raw data from log files and other sources into said features.</li>
+</ul>
+<h2 id="discrete-feature">Discrete Feature</h2>
+<ul>
+<li>A feature with a finite set of possible values. For example, a feature whose values may only be animal, vegetable, or mineral is a discrete (or categorical) feature</li>
+</ul>
+<!-- raw HTML omitted -->
+<h2 id="one-hot-encoding">One-Hot Encoding</h2>
+<ul>
+<li>A sparse vector in which:
+<ul>
+<li>One element is set to 1.</li>
+<li>All other elements are set to 0.
+-One-hot encoding is commonly used to represent strings or identifiers that have a finite set of possible values. For example, suppose a given botany data set chronicles 15,000 different species, each denoted with a unique string identifier. As part of feature engineering, you&rsquo;ll probably encode those string identifiers as one-hot vectors in which the vector has a size of 15,000.</li>
+</ul>
+</li>
+</ul>
+<h2 id="outliers">Outliers</h2>
+<ul>
+<li>Values distant from most other values. In machine learning, any of the following are outliers:
+<ul>
+<li>Weights with high absolute values.</li>
+<li>Predicted values relatively far away from the actual values.</li>
+<li>Input data whose values are more than roughly 3 standard deviations from the mean.</li>
+</ul>
+</li>
+</ul>
+<h2 id="scaling">Scaling</h2>
+<ul>
+<li>A commonly used practice in feature engineering to tame a feature&rsquo;s range of values to match the range of other features in the data set. For example, suppose that you want all floating-point features in the data set to have a range of 0 to 1. Given a particular feature&rsquo;s range of 0 to 500, you could scale that feature by dividing each value by 500.</li>
+</ul>
+<h2 id="advantages-of-scaling">Advantages of scaling</h2>
+<ul>
+<li>Helps gradient descent converge more quickly.</li>
+<li>Helps avoid the &ldquo;NaN trap,&rdquo; in which one number in the model becomes a NaN.</li>
+<li>Helps the model learn appropriate weights for each feature. Without feature scaling, the model will pay too much attention to the features having a wider range.</li>
+</ul>
+<h2 id="binning-or-bucketing">Binning or Bucketing</h2>
+<ul>
+<li>Converting a (usually continuous) feature into multiple binary features called buckets or bins, typically based on value range. For example, instead of representing temperature as a single continuous floating-point feature, you could chop ranges of temperatures into discrete bins. Given temperature data sensitive to a tenth of a degree, all temperatures between 0.0 and 15.0 degrees could be put into one bin, 15.1 to 30.0 degrees could be a second bin, and 30.1 to 50.0 degrees could be a third bin.</li>
+</ul>
+<h2 id="nan-trap">NaN trap</h2>
+<ul>
+<li>When one number in your model becomes a NaN during training, which causes many or all other numbers in your model to eventually become a NaN (e.g., when a value exceeds the floating-point precision limit during training), and—due to math operations—every other number in the model also eventually becomes a NaN.</li>
+<li>NaN is an abbreviation for &ldquo;Not a Number.&rdquo;</li>
+</ul>
+<h2 id="synthetic-feature">Synthetic Feature</h2>
+<ul>
+<li>A feature that is not present among the input features, but is derived from one or more of them.</li>
+</ul>
+<h2 id="feature-cross">Feature Cross</h2>
+<ul>
+<li>A feature cross is a synthetic feature formed by multiplying (crossing) two or more features.</li>
+<li>Crossing combinations of features can provide predictive abilities beyond what those features can provide individually.</li>
+</ul>
+<h2 id="regularization">Regularization</h2>
+<ul>
+<li>The penalty on a model&rsquo;s complexity. Regularization helps prevent overfitting.
+<ul>
+<li>L1 regularization</li>
+<li>L2 regularization</li>
+<li>dropout regularization</li>
+<li>early stopping (this is not a formal regularization method, but can effectively limit overfitting)</li>
+</ul>
+</li>
+</ul>
+<h2 id="structural-risk-minimization-srm">Structural Risk Minimization (SRM)</h2>
+<ul>
+<li>An algorithm that balances two goals:
+<ul>
+<li>The desire to build the most predictive model (for example, lowest loss).</li>
+<li>The desire to keep the model as simple as possible (for example, strong regularization).</li>
+</ul>
+</li>
+<li>For example, a model function that minimizes loss+regularization on the training set is a structural risk minimization algorithm.</li>
+</ul>
+<h2 id="l1-regularization">L1 regularization</h2>
+<ul>
+<li>A type of regularization that penalizes weights in proportion to the sum of the absolute values of the weights. In models relying on sparse features, L1 regularization helps drive the weights of irrelevant or barely relevant features to exactly 0, which removes those features from the model. Contrast with L2 regularization.</li>
+<li>L1 regularization reduces the model size.</li>
+</ul>
+<h2 id="l2-regularization">L2 regularization</h2>
+<ul>
+<li>A type of regularization that penalizes weights in proportion to the sum of the squares of the weights. L2 regularization helps drive outlier weights (those with high positive or low negative values) closer to 0 but not quite to 0. (Contrast with L1 regularization.) L2 regularization always improves generalization in linear models.</li>
+</ul>
+<h2 id="regularization-rate-lambda">Regularization Rate (Lambda)</h2>
+<ul>
+<li>A scalar value, represented as lambda, specifying the relative importance of the regularization function.</li>
+<li>Raising the regularization rate reduces overfitting but may make the model less accurate.</li>
+<li>If your lambda value is too high, your model will be simple, but you run the risk of underfitting your data. Your model won&rsquo;t learn enough about the training data to make useful predictions.</li>
+<li>If your lambda value is too low, your model will be more complex, and you run the risk of overfitting your data. Your model will learn too much about the particularities of the training data, and won&rsquo;t be able to generalize to new data.</li>
+</ul>
+<h2 id="early-stopping">Early Stopping</h2>
+<ul>
+<li>A method for regularization that involves ending model training before training loss finishes decreasing. In early stopping, you end model training when the loss on a validation data set starts to increase, that is, when generalization performance worsens.</li>
+</ul>
+<h2 id="classification">classification</h2>
+<ul>
+<li>A type of classification task that outputs one of two mutually exclusive classes. For example, a machine learning model that evaluates email messages and outputs either &ldquo;spam&rdquo; or &ldquo;not spam&rdquo; is a binary classifier.</li>
+</ul>
+<h2 id="logistic-regression">Logistic Regression</h2>
+<ul>
+<li>A model that generates a probability for each possible discrete label value in classification problems by applying a sigmoid function to a linear prediction. Although logistic regression is often used in binary classification problems, it can also be used in multi-class classification problems (where it becomes called multi-class logistic regression or multinomial regression).</li>
+</ul>
+<h2 id="sigmoid-function">Sigmoid Function</h2>
+<ul>
+<li>A function that maps logistic or multinomial regression output (log odds) to probabilities, returning a value between 0 and 1.</li>
+<li>In other words, the sigmoid function converts sigma(sum of bias, weights and features) into a probability between 0 and 1.</li>
+<li>In some neural networks, the sigmoid function acts as the activation function.</li>
+</ul>
+<h2 id="log-loss">Log Loss</h2>
+<ul>
+<li>The loss function for logistic regression is Log Loss</li>
+<li>The loss function for linear regression is squared loss.</li>
+</ul>
+<h2 id="binary-classification">Binary Classification</h2>
+<ul>
+<li>A type of classification task that outputs one of two mutually exclusive classes. For example, a machine learning model that evaluates email messages and outputs either &ldquo;spam&rdquo; or &ldquo;not spam&rdquo; is a binary classifier.</li>
+</ul>
+<h2 id="classification-model">Classification Model</h2>
+<ul>
+<li>A type of machine learning model for distinguishing among two or more discrete classes. For example, a natural language processing classification model could determine whether an input sentence was in French, Spanish, or Italian.</li>
+</ul>
+<h2 id="classification-threshold">Classification Threshold</h2>
+<ul>
+<li>A scalar-value criterion that is applied to a model&rsquo;s predicted score in order to separate the positive class from the negative class. Used when mapping logistic regression results to binary classification. For example, consider a logistic regression model that determines the probability of a given email message being spam. If the classification threshold is 0.9, then logistic regression values above 0.9 are classified as spam and those below 0.9 are classified as not spam.</li>
+</ul>
+<p><img src="/images/articles/2018/confusion_matric_wolf.PNG" alt="machine-Learning-terms.jpg"></p>
+<h2 id="confusion-matrix">Confusion Matrix</h2>
+<ul>
+<li>An NxN table that summarizes how successful a classification model&rsquo;s predictions were; that is, the correlation between the label and the model&rsquo;s classification. One axis of a confusion matrix is the label that the model predicted, and the other axis is the actual label. N represents the number of classes. In a binary classification problem, N=2.</li>
+<li>Confusion matrices contain sufficient information to calculate a variety of performance metrics, including precision and recall.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Tumor (predicted)</th>
+<th>     Non-Tumor (predicted)</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tumor (actual)    </td>
+<td>18</td>
+<td>    1</td>
+</tr>
+<tr>
+<td>Non-Tumor (actual)    </td>
+<td>6</td>
+<td>    452</td>
+</tr>
+<tr>
+<td><!-- raw HTML omitted --></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>The preceding confusion matrix shows that of the 19 samples that actually had tumors, the model correctly classified 18 as having tumors (18 true positives), and incorrectly classified 1 as not having a tumor (1 false negative). Similarly, of 458 samples that actually did not have tumors, 452 were correctly classified (452 true negatives) and 6 were incorrectly classified (6 false positives).</li>
+</ul>
+<h2 id="class-imbalanced-data-set">Class-Imbalanced Data Set</h2>
+<ul>
+<li>A binary classification problem in which the labels for the two classes have significantly different frequencies. For example, a disease data set in which 0.0001 of examples have positive labels and 0.9999 have negative labels is a class-imbalanced problem, but a football game predictor in which 0.51 of examples label one team winning and 0.49 label the other team winning is not a class-imbalanced problem.</li>
+</ul>
+<h2 id="accuracy">Accuracy</h2>
+<ul>
+<li>The fraction of predictions that a classification model got right. In multi-class classification, accuracy is defined as follows:
+<img src="/images/articles/2018/MSP01bb3i5d249207aed000042d82gi907c3h8d8.jpg" alt="machine-Learning-terms.jpg"></li>
+<li>In binary classification, accuracy has the following definition:
+<img src="/images/articles/2018/MSP11bb3i5d249207aed00002cc94d911df050b0.jpg" alt="machine-Learning-terms.jpg"></li>
+</ul>
+<h2 id="precision">Precision</h2>
+<ul>
+<li>A metric for classification models.</li>
+<li>Precision identifies the frequency with which a model was correct when predicting the positive class.
+<img src="/images/articles/2018/MSP41bb3i5d249207aed00006144643b463f0ic3.jpg" alt="machine-Learning-terms.jpg"></li>
+</ul>
+<h2 id="recall">Recall</h2>
+<ul>
+<li>Out of all the possible positive labels, how many did the model correctly identify?
+<img src="/images/articles/2018/MSP31bb3i5d249207aed000034d4c5073776c1f6.jpg" alt="machine-Learning-terms.jpg"></li>
+</ul>
+<h2 id="roc-receiver-operating-characteristic-curve">ROC (receiver operating characteristic) Curve</h2>
+<p>A curve of true positive rate vs. false positive rate at different classification thresholds.</p>
+<h2 id="true-positive-rate-tp-rate">True Positive Rate (TP rate)</h2>
+<ul>
+<li>Synonym for recall.</li>
+<li>True positive rate is the y-axis in an ROC curve.
+<img src="/images/articles/2018/MSP511bb3d60a26dc5e7b00003b9eb0cd8id767if.jpg" alt="machine-Learning-terms.jpg"></li>
+</ul>
+<h2 id="false-positive-rate-fp-rate">False Positive Rate (FP rate)</h2>
+<ul>
+<li>The x-axis in an ROC curve. The FP rate is defined as follows
+<img src="/images/articles/2018/MSP521bb3d60a26dc5e7b000036e5080df65ie42a.jpg" alt="machine-Learning-terms.jpg"></li>
+</ul>
+<h2 id="prediction-bias">Prediction Bias</h2>
+<ul>
+<li>A value indicating how far apart the average of predictions is from the average of labels in the data set.</li>
+</ul>
+<h2 id="neural-network">Neural Network</h2>
+<p>A model that, taking inspiration from the brain, is composed of layers (at least one of which is hidden) consisting of simple connected units or neurons followed by nonlinearities.</p>
+<h2 id="neuron">Neuron</h2>
+<p>A node in a neural network, typically taking in multiple input values and generating one output value. The neuron calculates the output value by applying an activation function (nonlinear transformation) to a weighted sum of input values.</p>
+<h2 id="rectified-linear-unit-relu">Rectified Linear Unit (ReLU)</h2>
+<ul>
+<li>An activation function with the following rules:
+<ul>
+<li>If input is negative or zero, output is 0.</li>
+<li>If input is positive, output is equal to input.</li>
+</ul>
+</li>
+</ul>
+<h2 id="sigmoid-function-1">Sigmoid Function</h2>
+<ul>
+<li>A function that maps logistic or multinomial regression output (log odds) to probabilities, returning a value between 0 and 1.</li>
+</ul>
+<h2 id="hidden-layer">Hidden Layer</h2>
+<p>A synthetic layer in a neural network between the input layer (that is, the features) and the output layer (the prediction). A neural network contains one or more hidden layers.</p>
+<h2 id="backpropagation">Backpropagation</h2>
+<p>The primary algorithm for performing gradient descent on neural networks. First, the output values of each node are calculated (and cached) in a forward pass. Then, the partial derivative of the error with respect to each parameter is calculated in a backward pass through the graph.</p>
+<h2 id="vanishing-gradients">Vanishing Gradients</h2>
+<ul>
+<li>The gradients for the lower layers (closer to the input) can become very small. In deep networks, computing these gradients can involve taking the product of many small terms.</li>
+<li>When the gradients vanish toward 0 for the lower layers, these layers train very slowly, or not at all.</li>
+<li>The ReLU activation function can help prevent vanishing gradients.</li>
+</ul>
+<h2 id="exploding-gradients">Exploding Gradients</h2>
+<ul>
+<li>If the weights in a network are very large, then the gradients for the lower layers involve products of many large terms. In this case you can have exploding gradients: gradients that get too large to converge.</li>
+<li>Batch normalization can help prevent exploding gradients, as can lowering the learning rate.</li>
+</ul>
+<h2 id="dead-relu-units">Dead ReLU Units</h2>
+<ul>
+<li>Once the weighted sum for a ReLU unit falls below 0, the ReLU unit can get stuck. It outputs 0 activation, contributing nothing to the network&rsquo;s output, and gradients can no longer flow through it during backpropagation.</li>
+<li>Lowering the learning rate can help keep ReLU units from dying.</li>
+</ul>
+<h2 id="dropout-regularization">Dropout Regularization</h2>
+<ul>
+<li>A form of regularization useful in training neural networks. Dropout regularization works by removing a random selection of a fixed number of the units in a network layer for a single gradient step. The more units dropped out, the stronger the regularization.</li>
+</ul>
+<h2 id="multi-class-classification">Multi-Class Classification</h2>
+<ul>
+<li>Classification problems that distinguish among more than two classes. For example, there are approximately 128 species of maple trees, so a model that categorized maple tree species would be multi-class. Conversely, a model that divided emails into only two categories (spam and not spam) would be a binary classification model.</li>
+</ul>
+<h2 id="multi-class-classification-1">Multi-Class Classification</h2>
+<p>Classification problems that distinguish among more than two classes. For example, there are approximately 128 species of maple trees, so a model that categorized maple tree species would be multi-class. Conversely, a model that divided emails into only two categories (spam and not spam) would be a binary classification model.</p>
+<h2 id="softmax">Softmax</h2>
+<ul>
+<li>A function that provides probabilities for each possible class in a multi-class classification model. The probabilities add up to exactly 1.0. For example, softmax might determine that the probability of a particular image being a dog at 0.9, a cat at 0.08, and a horse at 0.02. (Also called full softmax.)</li>
+</ul>
+<h2 id="candidate-sampling">Candidate Sampling</h2>
+<ul>
+<li>A training-time optimization in which a probability is calculated for all the positive labels, using, for example, softmax, but only for a random sample of negative labels. For example, if we have an example labeled beagle and dog candidate sampling computes the predicted probabilities and corresponding loss terms for the beagle and dog class outputs in addition to a random subset of the remaining classes (cat, lollipop, fence). The idea is that the negative classes can learn from less frequent negative reinforcement as long as positive classes always get proper positive reinforcement, and this is indeed observed empirically. The motivation for candidate sampling is a computational efficiency win from not computing predictions for all negatives.</li>
+</ul>
+<h2 id="one-label-vs-many-labels">One Label vs. Many Labels</h2>
+<ul>
+<li>Softmax assumes that each example is a member of exactly one class. Some examples, however, can simultaneously be a member of multiple classes. For such examples:
+<ul>
+<li>You may not use Softmax.</li>
+<li>You must rely on multiple logistic regressions.</li>
+</ul>
+</li>
+<li>For example, suppose your examples are images containing exactly one item—a piece of fruit. Softmax can determine the likelihood of that one item being a pear, an orange, an apple, and so on. If your examples are images containing all sorts of things—bowls of different kinds of fruit—then you&rsquo;ll have to use multiple logistic regressions instead.</li>
+</ul>
+<h2 id="sparse-feature">Sparse Feature</h2>
+<ul>
+<li>Feature vector whose values are predominately zero or empty. For example, a vector containing a single 1 value and a million 0 values is sparse. As another example, words in a search query could also be a sparse feature—there are many possible words in a given language, but only a few of them occur in a given query.</li>
+</ul>
+<h2 id="embeddings">Embeddings</h2>
+<ul>
+<li>A categorical feature represented as a continuous-valued feature.</li>
+<li>Typically, an embedding is a translation of a high-dimensional vector into a low-dimensional space. For example, you can represent the words in an English sentence in either of the following two ways:
+<ul>
+<li>As a million-element (high-dimensional) sparse vector in which all elements are integers. Each cell in the vector represents a separate English word; the value in a cell represents the number of times that word appears in a sentence. Since a single English sentence is unlikely to contain more than 50 words, nearly every cell in the vector will contain a 0. The few cells that aren&rsquo;t 0 will contain a low integer (usually 1) representing the number of times that word appeared in the sentence.</li>
+<li>As a several-hundred-element (low-dimensional) dense vector in which each element holds a floating-point value between 0 and 1. This is an embedding.</li>
+</ul>
+</li>
+</ul>
+<h2 id="standard-dimensionality-reduction-techniques">Standard Dimensionality Reduction Techniques</h2>
+<h2 id="word2vec">Word2vec</h2>
+<h2 id="static-model">static model</h2>
+<p>-A model that is trained offline.</p>
+<h2 id="dynamic-model">dynamic model</h2>
+<ul>
+<li>A model that is trained online in a continuously updating fashion. That is, data is continuously entering the model.</li>
+</ul>
+<h2 id="online-inference">online inference</h2>
+<ul>
+<li>Generating predictions on demand. Contrast with offline inference.
+<ul>
+<li>Pro: Can make a prediction on any new item as it comes in — great for long tail.</li>
+<li>Con: Compute intensive, latency sensitive—may limit model complexity.</li>
+<li>Con: Monitoring needs are more intensive.</li>
+</ul>
+</li>
+</ul>
+<h2 id="offline-inference">offline inference</h2>
+<ul>
+<li>Generating a group of predictions, storing those predictions, and then retrieving those predictions on demand. Contrast with online inference.</li>
+<li>meaning that you make all possible predictions in a batch, using a MapReduce or something similar. You then write the predictions to an SSTable or Bigtable, and then feed these to a cache/lookup table.
+<ul>
+<li>Pro: Don’t need to worry much about cost of inference.</li>
+<li>Pro: Can likely use batch quota or some giant MapReduce.</li>
+<li>Pro: Can do post-verification of predictions before pushing.</li>
+<li>Con: Can only predict things we know about — bad for long tail.</li>
+<li>Con: Update latency is likely measured in hours or days.</li>
+</ul>
+</li>
+</ul>
+<h2 id="heading"></h2>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Building a Chatbot with Deep Natural Language Processing using Tensorflow [PART-1-2-3]</title>
+            <link>https://itsg.dev/posts/building-a-chatbot-with-deep-natural-language-processing-using-tensorflow-part-1-2-3/</link>
+            <pubDate>Sat, 10 Feb 2018 00:00:00 +0000</pubDate>
+            
+            <guid>https://itsg.dev/posts/building-a-chatbot-with-deep-natural-language-processing-using-tensorflow-part-1-2-3/</guid>
+            <description>This tutorial is divided into the following parts  Installing and configuring Anaconda Getting the Dataset Data Preprocessing Building the Seq2Seq model Training the Seq2Seq model Testing the Seq2Seq model Other Implementation  Lets Start PART-1. Installing and configuring Anaconda 1a. Installing Anaconda From anaconda.com/what-is-anaconda/
+ With over 6 million users, the open source Anaconda Distribution is the easiest way to do Python data science and machine learning. It includes hundreds of popular &amp;gt; data science packages and the conda package and virtual environment manager for Windows, Linux, and MacOS.</description>
+            <content type="html"><![CDATA[<!-- raw HTML omitted -->
+<p><img src="/images/articles/2018/chat-bot-intro-image.jpg" alt="Chat Bot" title="Chatbot"></p>
+<h4 id="this-tutorial-is-divided-into-the-following-parts">This tutorial is divided into the following parts</h4>
+<ol>
+<li>Installing and configuring Anaconda</li>
+<li>Getting the Dataset</li>
+<li>Data Preprocessing</li>
+<li>Building the Seq2Seq model</li>
+<li>Training the Seq2Seq model</li>
+<li>Testing the Seq2Seq model</li>
+<li>Other Implementation</li>
+</ol>
+<h1 id="lets-start">Lets Start</h1>
+<h2 id="part-1-installing-and-configuring-anaconda">PART-1. Installing and configuring Anaconda</h2>
+<h3 id="1a-installing-anaconda">1a. Installing Anaconda</h3>
+<p><img src="/images/articles/2018/anaconda-logo-dark.png" alt="Anaconda Logo" title="Anaconda IDE"></p>
+<p><a href="https://www.anaconda.com/what-is-anaconda/">From anaconda.com/what-is-anaconda/</a></p>
+<blockquote>
+<p>With over 6 million users, the open source Anaconda Distribution is the easiest way to do Python data science and machine learning. It includes hundreds of popular &gt; data science packages and the conda package and virtual environment manager for Windows, Linux, and MacOS. Conda makes it quick and easy to install, run, and upgrade complex data science and machine learning environments like Scikit-learn, TensorFlow, and SciPy. Anaconda Distribution is the foundation of millions of data science projects as well as Amazon Web Services&rsquo; Machine Learning AMIs and Anaconda for Microsoft on Azure and Windows.</p>
+</blockquote>
+<p><a href="https://www.anaconda.com/download/">Download for latest python version</a></p>
+<h3 id="1b-configuring-anaconda--creating-virtual-environment">1b. Configuring Anaconda &amp; Creating Virtual Environment</h3>
+<blockquote>
+<p>A virtual environment is a named, isolated, working copy of Python that that maintains its own files, directories, and paths so that you can work with specific versions of libraries or Python itself without affecting other Python projects. Virtual environmets make it easy to cleanly separate different projects and avoid problems with different dependencies and version requiremetns across components. The conda command is the preferred interface for managing intstallations and virtual environments with the Anaconda Python distribution. If you have a vanilla Python installation or other Python distribution see virtualenv</p>
+</blockquote>
+<p>I will name the virtual environment as <strong>chatbot</strong></p>
+<p>Open terminal / Command Prompt and type.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">conda create -n chatbot python=<span style="color:#0086f7;font-weight:bold">3.5</span> anaconda
+</code></pre></div><p>After finishing the download we need to activate our newly created environment. To do this type</p>
+<p>For mac /linux users</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">source activate chatbot
+</code></pre></div><p>For windows users (Powershell users - try to activate using Command prompt. )</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">activate chatbot
+</code></pre></div><p><img src="/images/articles/2018/activate-chatbot.png" alt="Activating source" title="Activating source"></p>
+<h3 id="1c-installing-tensorflow">1c. Installing TensorFlow</h3>
+<p>Now after activating our virtual environment named <strong>chatbot</strong>. We now have to install tensorflow library.
+I will be using v1.0.0 of tensorflow for this tutorial.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">pip install tensorflow==<span style="color:#0086f7;font-weight:bold">1.0</span>.<span style="color:#0086f7;font-weight:bold">0</span>
+</code></pre></div><p><img src="/images/articles/2018/activate-chatbot-tensorflow.png" alt="Installing Tensorflow" title="Installing Tensorflow"></p>
+<h3 id="1d-finalizing-setup">1d. Finalizing setup.</h3>
+<p>Its time to open our installed anaconda program (Anaconda Navigator).
+After opening Anaconda Navigator, we need to switch the application to use the virtual environment that we have created.
+To do this use the dropdown menu on top left corner - near to <strong>Application on</strong> and select <strong>chatbot</strong> from the list.</p>
+<p><img src="/images/articles/2018/anaconda-switch-env.png" alt="Switch Env" title="Switch Env"></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted -->
+Now select &ldquo;SPYDER&rdquo; to start our development IDE.</p>
+<blockquote>
+<p>Spyder is a powerful interactive development environment for the Python language with advanced editing, interactive testing, debugging and introspection features. Additionally, Spyder is a numerical computing environment thanks to the support of IPython and popular Python libraries such as NumPy, SciPy, or matplotlib.</p>
+</blockquote>
+<p><img src="/images/articles/2018/anaconda-spyder.png" alt="Spyder" title="Spyder"></p>
+<p>In FileExplorer select a working directory for this project.</p>
+<p><img src="/images/articles/2018/spyder-file-explorer.png" alt="spyder-file-explorer" title="spyder-file-explorer"></p>
+<hr>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="part-2-getting-the-dataset">PART-2. Getting the Dataset</h2>
+<p>Download the dataset from - <a href="http://www.cs.cornell.edu/~cristian/data/cornell_movie_dialogs_corpus.zip">cornell_movie_dialogs_corpus.zip</a></p>
+<p>This corpus contains a large metadata-rich collection of fictional conversations extracted from raw movie scripts:</p>
+<ul>
+<li>220,579 conversational exchanges between 10,292 pairs of movie characters</li>
+<li>involves 9,035 characters from 617 movies</li>
+<li>in total 304,713 utterances</li>
+<li>movie metadata included:
+<ul>
+<li>genres</li>
+<li>release year</li>
+<li>IMDB rating</li>
+<li>number of IMDB votes</li>
+<li>IMDB rating</li>
+</ul>
+</li>
+<li>character metadata included:
+<ul>
+<li>gender (for 3,774 characters)</li>
+<li>position on movie credits (3,321 characters)</li>
+</ul>
+</li>
+<li>see README.txt (included) for details</li>
+</ul>
+<p>We are interested only in two files from the downloaded zip.</p>
+<ol>
+<li>movie_conversations.txt
+<ul>
+<li>each row has one single <strong>conversations</strong> between characters. <!-- raw HTML omitted -->u0 +++$+++ u2 +++$+++ m0 +++$+++ [&lsquo;L194&rsquo;, &lsquo;L195&rsquo;, &lsquo;L196&rsquo;, &lsquo;L197&rsquo;]</li>
+</ul>
+</li>
+<li>movie_lines.txt
+<ul>
+<li>contains some extract from movies. <!-- raw HTML omitted --> L1045 +++$+++ u0 +++$+++ m0 +++$+++ BIANCA +++$+++ They do not!<!-- raw HTML omitted -->L1044 +++$+++ u2 +++$+++ m0 +++$+++ CAMERON +++$+++ They do to!
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted --><!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ol>
+<h4 id="dataset-explanation">DATAset explanation</h4>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">movie_lines.txt
+L1045 +++$+++ u0 +++$+++ m0 +++$+++ BIANCA +++$+++ They do not!
+L1044 +++$+++ u2 +++$+++ m0 +++$+++ CAMERON +++$+++ 
+</code></pre></div><p><strong>+++$+++</strong>: column splitter<!-- raw HTML omitted -->
+<strong>L1045</strong>: Just an ID for the column<!-- raw HTML omitted -->
+<strong>u0</strong>: id of user 0<!-- raw HTML omitted -->
+<strong>m0</strong>: if of movie 0<!-- raw HTML omitted -->
+<strong>BIANCA</strong>: name of user 0<!-- raw HTML omitted -->
+<strong>They do not!</strong>: dialog of user0 BIANCA<!-- raw HTML omitted --></p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">movie_conversations.txt
+u0 +++$+++ u2 +++$+++ m0 +++$+++ [<span style="color:#0086d2">&#39;L194&#39;</span>, <span style="color:#0086d2">&#39;L195&#39;</span>, <span style="color:#0086d2">&#39;L196&#39;</span>, <span style="color:#0086d2">&#39;L197&#39;</span>]
+</code></pre></div><p><strong>+++$+++</strong>: column splitter<!-- raw HTML omitted -->
+<strong>u0</strong>: id of user 0<!-- raw HTML omitted -->
+<strong>u2</strong>: id of user 2<!-- raw HTML omitted -->
+<strong>m0</strong>: if of movie 0<!-- raw HTML omitted -->
+<strong>L194, L195</strong>: row id reference to movie_lines.txt<!-- raw HTML omitted --></p>
+<hr>
+<!-- raw HTML omitted -->
+<h2 id="part-3-data-preprocessing">PART-3. Data Preprocessing</h2>
+<p>Importing the necessary libraries</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic"># Importing the libraries</span>
+
+<span style="color:#fb660a;font-weight:bold">import</span> numpy <span style="color:#fb660a;font-weight:bold">as</span> np <span style="color:#080;background-color:#0f140f;font-style:italic"># to work with array</span>
+<span style="color:#fb660a;font-weight:bold">import</span> tensorflow <span style="color:#fb660a;font-weight:bold">as</span> tf <span style="color:#080;background-color:#0f140f;font-style:italic"># to do all the deep learning stuffs</span>
+<span style="color:#fb660a;font-weight:bold">import</span> re <span style="color:#080;background-color:#0f140f;font-style:italic"># to clear the text and replace</span>
+<span style="color:#fb660a;font-weight:bold">import</span> time <span style="color:#080;background-color:#0f140f;font-style:italic"># to measure the training time</span>
+
+</code></pre></div><p>To run the above code - select the four lines and press CMD+ENTER / CTRL+ENTER and find the below results in the iPython console.
+<img src="/images/articles/2018/ipython_run.png" alt="ipython_run" title="ipython_run.png"></p>
+<p><strong>Make sure you get no error to continue further.</strong></p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic">## importing the dataset ##</span>
+
+<span style="color:#080;background-color:#0f140f;font-style:italic">## giving a reference for the conversatons and movie lines ##</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># open and read a file with utf-8 encoding and ignore all errors then split all observations by lines</span>
+
+movie_lines = open(<span style="color:#0086d2">&#39;movie_lines.txt&#39;</span>, encoding = <span style="color:#0086d2">&#39;utf-8&#39;</span>, errors = <span style="color:#0086d2">&#39;ignore&#39;</span>).read().split(<span style="color:#0086d2">&#39;</span><span style="color:#0086d2">\n</span><span style="color:#0086d2">&#39;</span>)
+movie_conversations = open(<span style="color:#0086d2">&#39;movie_conversations.txt&#39;</span>, encoding = <span style="color:#0086d2">&#39;utf-8&#39;</span>, errors = <span style="color:#0086d2">&#39;ignore&#39;</span>).read().split(<span style="color:#0086d2">&#39;</span><span style="color:#0086d2">\n</span><span style="color:#0086d2">&#39;</span>)
+</code></pre></div><p>run and check variable explorer for the results
+<img src="/images/articles/2018/variable_explorer_import.png" alt="variable_explorer_import" title="variable_explorer_import"></p>
+<!-- raw HTML omitted -->
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic">## creating a dictionary to map each line identifier(id) with its line conversation.</span>
+id2line = {} <span style="color:#080;background-color:#0f140f;font-style:italic">#initialize a dict with {}</span>
+<span style="color:#fb660a;font-weight:bold">for</span> line in movie_lines: <span style="color:#080;background-color:#0f140f;font-style:italic">#line is a reference to each line in movie_line.txt</span>
+    _line = line.split(<span style="color:#0086d2">&#39; +++$+++ &#39;</span>) <span style="color:#080;background-color:#0f140f;font-style:italic">#be careful and add the extra space with +++$+++ &amp; _line is a temp variable inside for loop</span>
+    <span style="color:#fb660a;font-weight:bold">if</span> len( _line ) == <span style="color:#0086f7;font-weight:bold">5</span> : <span style="color:#080;background-color:#0f140f;font-style:italic"># just to check if there are 5 elements after split.</span>
+        id2line[ _line[<span style="color:#0086f7;font-weight:bold">0</span>] ] = _line[<span style="color:#0086f7;font-weight:bold">4</span>] <span style="color:#080;background-color:#0f140f;font-style:italic">#index in python starts from 0</span>
+</code></pre></div><p><img src="/images/articles/2018/variable_explorer_id2line1.png" alt="variable_explorer_id2line1" title="variable_explorer_id2line1">
+<img src="/images/articles/2018/variable_explorer_id2line2.png" alt="variable_explorer_id2line2" title="variable_explorer_id2line2"></p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic">## cleaning up the list of all conversations</span>
+conversations_ids = []
+<span style="color:#fb660a;font-weight:bold">for</span> conversation in movie_conversations[:-<span style="color:#0086f7;font-weight:bold">1</span>]: <span style="color:#080;background-color:#0f140f;font-style:italic">#last row is empty so skipping</span>
+    <span style="color:#080;background-color:#0f140f;font-style:italic">#split and get the last element either use 4 or -1 to get the last element directly </span>
+    <span style="color:#080;background-color:#0f140f;font-style:italic">#then remove the square brackets on both end </span>
+    <span style="color:#080;background-color:#0f140f;font-style:italic">#then replace single quote with nothing</span>
+    <span style="color:#080;background-color:#0f140f;font-style:italic">#then replace the space between words with nothing</span>
+    _conversation = conversation.split(<span style="color:#0086d2">&#39; +++$+++ &#39;</span>)[-<span style="color:#0086f7;font-weight:bold">1</span>][<span style="color:#0086f7;font-weight:bold">1</span>:-<span style="color:#0086f7;font-weight:bold">1</span>].replace(<span style="color:#0086d2">&#34;&#39;&#34;</span>,<span style="color:#0086d2">&#34;&#34;</span>).replace(<span style="color:#0086d2">&#34; &#34;</span>,<span style="color:#0086d2">&#34;&#34;</span>)
+    <span style="color:#080;background-color:#0f140f;font-style:italic"># now we have the list as string - split each by comma to convert from string.</span>
+    conversations_ids.append(_conversation.split(<span style="color:#0086d2">&#39;,&#39;</span>))
+</code></pre></div><p><img src="/images/articles/2018/conversation_compare.png" alt="comparing two lists" title="variable_explorer_id2line2"></p>
+<!-- raw HTML omitted -->
+<p>Now we have to convert our conversations ids to relevant questions and answers taking ID from <strong>conversations_ids</strong> and its text from <strong>id2lines</strong>. <!-- raw HTML omitted --></p>
+<p>Refer the image below. Here <strong>L194</strong> will be treated as question and next <strong>L195</strong> as answer. Then <strong>L195</strong> becomes question for <strong>L196</strong> and so on.</p>
+<p><img src="/images/articles/2018/conversation_compare_idea.png" alt="conversation_compare_idea" title="conversation_compare_idea.png"></p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic">## Getting the questions and answers from our conversation_ids and pairing it with id2line to get the actual texts</span>
+questions = [] <span style="color:#080;background-color:#0f140f;font-style:italic"># creating a array holder for the questions</span>
+answers = [] <span style="color:#080;background-color:#0f140f;font-style:italic"># creating an array holder for the answers</span>
+<span style="color:#fb660a;font-weight:bold">for</span> conversation in conversations_ids: <span style="color:#080;background-color:#0f140f;font-style:italic"># conversation local variable for lopping inside conversations_ids</span>
+    <span style="color:#fb660a;font-weight:bold">for</span> i in range(len(conversation) - <span style="color:#0086f7;font-weight:bold">1</span>): <span style="color:#080;background-color:#0f140f;font-style:italic"># i refering to the size of each individual array in list</span>
+        questions.append(id2line[conversation[i]]) <span style="color:#080;background-color:#0f140f;font-style:italic"># refering the i value from id2line dictionary to get the actual text.</span>
+        answers.append(id2line[conversation[i+<span style="color:#0086f7;font-weight:bold">1</span>]]) <span style="color:#080;background-color:#0f140f;font-style:italic"># first value of i will be treated as question then next i+1 for answer and later i+1 as question</span>
+</code></pre></div><p>Lets clean the text now. We will convert all the text to smallcase and change all short hand words to its actual form. Also remove some unwanted characters.
+I hav&rsquo;nt removed <strong>!(exclamation symbol)</strong> so that this dataset will help in sentiment analysis :P</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic">## doing the cleaning of text -</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># converting all texts to smallcase</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># converting that&#39;s to that is and so on.</span>
+<span style="color:#fb660a;font-weight:bold">def</span> <span style="color:#ff0086;font-weight:bold">clean_text</span>(text):
+    text = text.lower() <span style="color:#080;background-color:#0f140f;font-style:italic">#to lowercase</span>
+    text = re.sub(<span style="color:#0086d2">r</span><span style="color:#0086d2">&#34;i&#39;m&#34;</span>, <span style="color:#0086d2">&#34;i am&#34;</span>, text)
+    text = re.sub(<span style="color:#0086d2">r</span><span style="color:#0086d2">&#34;he&#39;s&#34;</span>, <span style="color:#0086d2">&#34;he is&#34;</span>, text)
+    text = re.sub(<span style="color:#0086d2">r</span><span style="color:#0086d2">&#34;she&#39;s&#34;</span>, <span style="color:#0086d2">&#34;she is&#34;</span>, text)
+    text = re.sub(<span style="color:#0086d2">r</span><span style="color:#0086d2">&#34;that&#39;s&#34;</span>, <span style="color:#0086d2">&#34;that is&#34;</span>, text)
+    text = re.sub(<span style="color:#0086d2">r</span><span style="color:#0086d2">&#34;what&#39;s&#34;</span>, <span style="color:#0086d2">&#34;what is&#34;</span>, text)
+    text = re.sub(<span style="color:#0086d2">r</span><span style="color:#0086d2">&#34;where&#39;s&#34;</span>, <span style="color:#0086d2">&#34;where is&#34;</span>, text)
+    text = re.sub(<span style="color:#0086d2">r</span><span style="color:#0086d2">&#34;\&#39;ll&#34;</span>, <span style="color:#0086d2">&#34; will&#34;</span>, text) <span style="color:#080;background-color:#0f140f;font-style:italic"># carefull with space he&#39;ll to he will</span>
+    text = re.sub(<span style="color:#0086d2">r</span><span style="color:#0086d2">&#34;\&#39;ve&#34;</span>, <span style="color:#0086d2">&#34; have&#34;</span>, text)
+    text = re.sub(<span style="color:#0086d2">r</span><span style="color:#0086d2">&#34;\&#39;re&#34;</span>, <span style="color:#0086d2">&#34; are&#34;</span>, text)
+    text = re.sub(<span style="color:#0086d2">r</span><span style="color:#0086d2">&#34;\&#39;d&#34;</span>, <span style="color:#0086d2">&#34; would&#34;</span>, text)
+    text = re.sub(<span style="color:#0086d2">r</span><span style="color:#0086d2">&#34;won&#39;t&#34;</span>, <span style="color:#0086d2">&#34;will not&#34;</span>, text)
+    text = re.sub(<span style="color:#0086d2">r</span><span style="color:#0086d2">&#34;can&#39;t&#34;</span>, <span style="color:#0086d2">&#34;cannot&#34;</span>, text)
+    text = re.sub(<span style="color:#0086d2">r</span><span style="color:#0086d2">&#34;[-()</span><span style="color:#0086d2">\&#34;</span><span style="color:#0086d2">#/@;:&lt;&gt;{}+=~|.?,]&#34;</span>, <span style="color:#0086d2">&#34;&#34;</span>, text)
+    <span style="color:#fb660a;font-weight:bold">return</span> text
+</code></pre></div><div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic">## cleaning the question</span>
+clean_questions = []
+<span style="color:#fb660a;font-weight:bold">for</span> question in questions:
+     clean_questions.append(clean_text(question))
+     
+<span style="color:#080;background-color:#0f140f;font-style:italic">## cleaning the answers</span>
+clean_answers = []
+<span style="color:#fb660a;font-weight:bold">for</span> answer in answers:
+     clean_answers.append(clean_text(answer))  
+</code></pre></div><p><img src="/images/articles/2018/clean_answer.png" alt="clean_answer" title="clean_answer.png"></p>
+<p>Now lets remove the non-frequently used words from the question and answer so that we can optimize the training session.<!-- raw HTML omitted -->
+To do this we need to create a dictionary that has word as the key and number of occurances as the value.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic">## creating a dictionary to map the number of occurances</span>
+word2count = {} <span style="color:#080;background-color:#0f140f;font-style:italic"># creating a new dictionary</span>
+<span style="color:#fb660a;font-weight:bold">for</span> question in clean_questions: <span style="color:#080;background-color:#0f140f;font-style:italic">#question as the local variable to iterate from the clean_questions list</span>
+    <span style="color:#fb660a;font-weight:bold">for</span> word in question.split():   <span style="color:#080;background-color:#0f140f;font-style:italic">#word local variable to iterate throught each clean_questions</span>
+        <span style="color:#fb660a;font-weight:bold">if</span> word not in word2count:  <span style="color:#080;background-color:#0f140f;font-style:italic"># to check if the word exists in the dictionary</span>
+            word2count[word] = <span style="color:#0086f7;font-weight:bold">1</span> <span style="color:#080;background-color:#0f140f;font-style:italic"># adds the word to dictionary and assigns a value of 1</span>
+        <span style="color:#fb660a;font-weight:bold">else</span>:
+            word2count[word] += <span style="color:#0086f7;font-weight:bold">1</span> <span style="color:#080;background-color:#0f140f;font-style:italic"># if word exists in dict then increment its value</span>
+     
+<span style="color:#fb660a;font-weight:bold">for</span> answer in clean_answers: <span style="color:#080;background-color:#0f140f;font-style:italic">#answer as the local variable to iterate from the clean_answers list</span>
+    <span style="color:#fb660a;font-weight:bold">for</span> word in answer.split(): <span style="color:#080;background-color:#0f140f;font-style:italic">#word local variable to iterate throught each clean_answers</span>
+        <span style="color:#fb660a;font-weight:bold">if</span> word not in word2count:  <span style="color:#080;background-color:#0f140f;font-style:italic"># to check if the word exists in the dictionary</span>
+            word2count[word] = <span style="color:#0086f7;font-weight:bold">1</span> <span style="color:#080;background-color:#0f140f;font-style:italic"># adds the word to dictionary and assigns a value of 1</span>
+        <span style="color:#fb660a;font-weight:bold">else</span>:
+            word2count[word] += <span style="color:#0086f7;font-weight:bold">1</span> <span style="color:#080;background-color:#0f140f;font-style:italic"># if word exists in dict then increment its value     </span>
+</code></pre></div><!-- raw HTML omitted -->
+<p>Now lets create two dictionaries that map each word of all the questions to a unique integer and vice versa for answers and while creating this dictionary we will check if the word has higher than a certain threshold to be included in the list else remove those words.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic">## tokenization (unique number for each word)</span>
+threshold = <span style="color:#0086f7;font-weight:bold">20</span>
+questionswords2int = {}
+word_number = <span style="color:#0086f7;font-weight:bold">0</span>
+<span style="color:#fb660a;font-weight:bold">for</span> word, count in word2count.items(): <span style="color:#080;background-color:#0f140f;font-style:italic"># get words and count from dictionary separately</span>
+    <span style="color:#fb660a;font-weight:bold">if</span> count &gt;= threshold:
+        questionswords2int[word] = word_number;
+        word_number += <span style="color:#0086f7;font-weight:bold">1</span>;
+        
+answerswords2int = {}
+word_number = <span style="color:#0086f7;font-weight:bold">0</span>
+<span style="color:#fb660a;font-weight:bold">for</span> word, count in word2count.items(): <span style="color:#080;background-color:#0f140f;font-style:italic"># get words and count from dictionary separately</span>
+    <span style="color:#fb660a;font-weight:bold">if</span> count &gt;= threshold:
+        answerswords2int[word] = word_number;
+        word_number += <span style="color:#0086f7;font-weight:bold">1</span>;
+</code></pre></div><p>Adding the last tokens to the above two dictionaries - useful for the encoder and decoder in SEQ2SEQ.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic"># &lt;PAD&gt; : to match the length of question and answer dict</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># &lt;EOS&gt; : End of String</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># &lt;OUT&gt; : to replace it with the removed words previously</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># &lt;SOS&gt; : Start of String</span>
+tokens = [<span style="color:#0086d2">&#39;&lt;PAD&gt;&#39;</span>, <span style="color:#0086d2">&#39;&lt;EOS&gt;&#39;</span>, <span style="color:#0086d2">&#39;&lt;OUT&gt;&#39;</span>, <span style="color:#0086d2">&#39;&lt;SOS&gt;&#39;</span>] <span style="color:#080;background-color:#0f140f;font-style:italic"># use the same format do not change the order</span>
+<span style="color:#fb660a;font-weight:bold">for</span> token in tokens:
+    questionswords2int[token] = len(questionswords2int) + <span style="color:#0086f7;font-weight:bold">1</span>
+<span style="color:#fb660a;font-weight:bold">for</span> token in tokens:
+    answerswords2int[token] = len(answerswords2int) + <span style="color:#0086f7;font-weight:bold">1</span>
+</code></pre></div><p>Creating the inverse dictionary of the answerswords2int dictionary. We will need the inverse mapping from the intergers to answers in the seq2seq model only for the answers</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic"># w_i is the loop variable (integers of the words )</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># w key identifiers of the dictionary</span>
+answersints2word = { w_i:w <span style="color:#fb660a;font-weight:bold">for</span> w, w_i in answerswords2int.items()} <span style="color:#080;background-color:#0f140f;font-style:italic"># inverse mapping shortcut !important!!!</span>
+</code></pre></div><p><img src="/images/articles/2018/ansint2words.png" alt="ansint2words.png" title="ansint2words.png"></p>
+<p>Now we need to add the &lt; EOS &gt; token to the end of every answers. This is to detect the end of sentense.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic">## Adding EOS at the end of every answers.</span>
+<span style="color:#fb660a;font-weight:bold">for</span> i in range(len(clean_answers)):
+    clean_answers[i] += <span style="color:#0086d2">&#39; &lt;EOS&gt;&#39;</span> <span style="color:#080;background-color:#0f140f;font-style:italic"># careful to add the space to seperate the last word woth EOS</span>
+</code></pre></div><p><img src="/images/articles/2018/eos_clean_answer.png" alt="eos_clean_answer" title="eos_clean_answer.png"></p>
+<p>Translating all words in the clean_answers and clean_questions to their respective interger.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">questions_to_int = []
+<span style="color:#fb660a;font-weight:bold">for</span> question in clean_questions:
+    ints = []
+    <span style="color:#fb660a;font-weight:bold">for</span> word in question.split():
+        <span style="color:#fb660a;font-weight:bold">if</span> word not in questionswords2int:
+            ints.append(questionswords2int[<span style="color:#0086d2">&#39;&lt;OUT&gt;&#39;</span>])
+        <span style="color:#fb660a;font-weight:bold">else</span>:
+            ints.append(questionswords2int[word])
+            
+    questions_to_int.append(ints);
+            
+answers_to_int = []
+<span style="color:#fb660a;font-weight:bold">for</span> answer in clean_questions:
+    ints = []
+    <span style="color:#fb660a;font-weight:bold">for</span> word in question.split():
+        <span style="color:#fb660a;font-weight:bold">if</span> word not in answerswords2int:
+            ints.append(answerswords2int[<span style="color:#0086d2">&#39;&lt;OUT&gt;&#39;</span>])
+        <span style="color:#fb660a;font-weight:bold">else</span>:
+            ints.append(answerswords2int[word])
+    answers_to_int.append(ints);
+    
+</code></pre></div><p><img src="/images/articles/2018/qa_to_int.png" alt="qa_to_int" title="qa_to_int.png"></p>
+<p>Sorting questions and answers by the length of questions will speed up the training also we will remove the amount of padding during training.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">sorted_clean_questions = []
+sorted_clean_answers = []
+
+<span style="color:#fb660a;font-weight:bold">for</span> length in range(<span style="color:#0086f7;font-weight:bold">1</span>,<span style="color:#0086f7;font-weight:bold">25</span>+<span style="color:#0086f7;font-weight:bold">1</span>): <span style="color:#080;background-color:#0f140f;font-style:italic"># upper bound is excluded in python so to get 25 add 1 - For why 25 (dont want the questions too long )</span>
+    <span style="color:#fb660a;font-weight:bold">for</span> i in enumerate(questions_to_int):
+        <span style="color:#fb660a;font-weight:bold">if</span> len(i[<span style="color:#0086f7;font-weight:bold">1</span>]) == length: <span style="color:#080;background-color:#0f140f;font-style:italic"># because i is a couple with index and the question as we used enumerate function</span>
+            sorted_clean_questions.append(questions_to_int[i[<span style="color:#0086f7;font-weight:bold">0</span>]]) <span style="color:#080;background-color:#0f140f;font-style:italic"># use index 0 to get its value</span>
+            sorted_clean_answers.append(answers_to_int[i[<span style="color:#0086f7;font-weight:bold">0</span>]]) <span style="color:#080;background-color:#0f140f;font-style:italic"># to align questions and answers</span>
+     
+</code></pre></div><p><img src="/images/articles/2018/sorted_clean_questions.png" alt="sorted_clean_questions.png" title="sorted_clean_questions.png"></p>
+<hr>
+<p>continued</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Object Detection using Single Shot Detection Algorithm</title>
+            <link>https://itsg.dev/posts/object-detection-using-single-shot-detection-algorithm/</link>
+            <pubDate>Mon, 05 Feb 2018 00:00:00 +0000</pubDate>
+            
+            <guid>https://itsg.dev/posts/object-detection-using-single-shot-detection-algorithm/</guid>
+            <description>Addon Prelude Read the article from intel developers zone.https://software.intel.com/en-us/articles/a-closer-look-at-object-detection-recognition-and-tracking
+ Prelude I have taken the explanation from towardsdatascience.com - Understanding SSD MultiBox — Real-Time Object Detection In Deep Learningand further simplified it for much better understanding. Especially for the slow ones like me :P
+Architecture of SSD mean Average Precision (mAP) Lets try to understand what is Average Precision:e.g. Let’s say, we recommended 7 products to a customer and the 1st, 4th, 5th, 6th product recommended was correct.</description>
+            <content type="html"><![CDATA[<!-- raw HTML omitted -->
+<p><img src="/images/articles/2018/computer_vision/object-detection-recognition-and-tracking-intro.jpg" alt="Computer Vision" title="Computer Vision Intro"></p>
+<!-- raw HTML omitted -->
+<h1 id="addon-prelude">Addon Prelude</h1>
+<p><code>Read the article from intel developers zone.</code><!-- raw HTML omitted -->
+<a href="https://software.intel.com/en-us/articles/a-closer-look-at-object-detection-recognition-and-tracking">https://software.intel.com/en-us/articles/a-closer-look-at-object-detection-recognition-and-tracking</a></p>
+<hr>
+<h1 id="prelude">Prelude</h1>
+<p>I have taken the explanation from <!-- raw HTML omitted -->towardsdatascience.com - Understanding SSD MultiBox — Real-Time Object Detection In Deep Learning<!-- raw HTML omitted --> and further simplified it for much better understanding. Especially for the slow ones like me :P</p>
+<h2 id="architecture-of-ssd">Architecture of SSD</h2>
+<p><img src="/images/articles/2018/computer_vision/som_architecture.png" alt="som_architecture.png" title="som_architecture.png"></p>
+<!-- raw HTML omitted -->
+<h3 id="mean-average-precision-map">mean Average Precision (mAP)</h3>
+<p>Lets try to understand what is Average Precision:<!-- raw HTML omitted -->e.g. Let’s say, we recommended 7 products to a customer and the 1st, 4th, 5th, 6th product recommended was correct. So now the result would look like - 1, 0, 0, 1, 1, 1, 0. <!-- raw HTML omitted --></p>
+<p>In this case,</p>
+<ul>
+<li>The precision at 1 will be: 1/1 = 1</li>
+<li>The precision at 2 will be: 0/2 = 0</li>
+<li>The precision at 3 will be: 0/3 = 0</li>
+<li>The precision at 4 will be: 2/4 = 0.5</li>
+<li>The precision at 5 will be: 3/5 = 0.6</li>
+<li>The precision at 6 will be: 4/6 = 0.66</li>
+<li>The precision at 7 will be: 0/7 = 0</li>
+</ul>
+<p>Average Precision will be: 1 + 0 + 0 + 0.5 + 0.6 + 0.66 + 0 /4 = 0.69 — Please note that here we always sum over the correct images, hence we are <code>dividing by 4 and not 7</code>.
+MAP is just an extension, where the mean is taken across all AP scores.</p>
+<p><a href="https://medium.com/@pds.bangalore/mean-average-precision-abd77d0b9a7e">thanks to Pallavi Sahoo</a></p>
+<p>The paper about <a href="https://arxiv.org/abs/1512.02325">SSD: Single Shot MultiBox Detector</a> (by C. Szegedy et al.) was released at the end of November 2016 and reached new records in terms of performance and precision for object detection tasks, scoring over 74% mAP (mean Average Precision) at 59 frames per second on standard datasets such as <a href="http://host.robots.ox.ac.uk/pascal/VOC/">PascalVOC</a> and <a href="http://cocodataset.org/#home">COCO</a>. To better understand SSD, let’s start by explaining where the name of this architecture comes from:</p>
+<h1 id="lets-start">Lets Start!</h1>
+<hr>
+<h1 id="importing-libraries">Importing Libraries</h1>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#fb660a;font-weight:bold">import</span> torch
+<span style="color:#fb660a;font-weight:bold">from</span> torch.autograd <span style="color:#fb660a;font-weight:bold">import</span> Variable
+<span style="color:#fb660a;font-weight:bold">import</span> cv2
+<span style="color:#fb660a;font-weight:bold">from</span> data <span style="color:#fb660a;font-weight:bold">import</span> BaseTransform, VOC_CLASSES <span style="color:#fb660a;font-weight:bold">as</span> labelmap
+<span style="color:#fb660a;font-weight:bold">from</span> ssd <span style="color:#fb660a;font-weight:bold">import</span> build_ssd
+<span style="color:#fb660a;font-weight:bold">import</span> imageio
+</code></pre></div><ul>
+<li><code>Torch</code>: Library that cointain <code>PyTorch</code> - it contains the dynamic graphs for efficient calculation of the gradient of composition functions in backpropagation(computing weights).</li>
+<li><code>torch.autograd</code>: module responsible for gradient decent</li>
+<li><code>torch.autograd import Variable</code>: used to convert Tensors into Torch Variables that contains both the tensor and the gradient.</li>
+<li><code>cv2</code>: to draw rectangles on images not the detection</li>
+<li><code>data</code>: is just a folder containing the classes BaseTransform, VOC_CLASSES (pretrained model using CUDA)</li>
+<li><code>BaseTransform</code>: is a class for image transformationns making the input images compatible with neural network</li>
+<li><code>VOC_CLASSES</code>: for encoding of classes eg: planes as 1, dogs as 2 so we can work with numbers and not texts</li>
+<li><code>ssd</code>: library of the single shot multibox detector</li>
+<li><code>build_ssd</code>: is the constructor to build the architecture of single shot multibo xarchitecture.</li>
+<li><code>imageio</code>: library to process the images of the video (an alternative to <a href="https://pillow.readthedocs.io/en/latest/">PIL</a>)</li>
+</ul>
+<h1 id="building-a-function-for-object-detection">Building a Function for Object Detection</h1>
+<p>Now we are going to do a frame by frame detection i.e we user <code>imageio</code> library to extract all the frames calculating <code>fps</code> (frames per second) - then do the object detection and stitch back all frames to a video.</p>
+<p>We will create a function to do all there operation called <code>detect</code> which will return the <code>frame</code> containing the rectangle on the detected image and its label,</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#fb660a;font-weight:bold">def</span> <span style="color:#ff0086;font-weight:bold">detect</span>(frame, net, transform):
+</code></pre></div><ul>
+<li><code>frame</code>: image on which the detect function will be applied</li>
+<li><code>net</code>: this will be the single shot multibox detector nueral network</li>
+<li><code>transform</code>: transform the input images so that they are compatible with the network</li>
+</ul>
+<p>Now lets work on the first input the <code>frame</code>.</p>
+<p>We need to get the height and weight of the image. We need to take this from the frame and it has as attribute <code>.shape</code> which returns a vector of three elements [height, weight, number_of_channels(1 for black and white &amp; 3 for color)]</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">height, width = frame.shape[:<span style="color:#0086f7;font-weight:bold">2</span>] <span style="color:#080;background-color:#0f140f;font-style:italic">#range 0 to 2 except 2</span>
+</code></pre></div><h1 id="image-transformations">Image Transformations</h1>
+<p>There are 4 transformations that we need to apply on to the image(frame)</p>
+<p>i.e original image(frame) =&gt; Torch varible compatible with Nueral Network.</p>
+<ol>
+<li>
+<p>Is to apply the <code>transform</code> transformation to make sure the image has the right dimensions and color value.</p>
+</li>
+<li>
+<p>Convert this transformed frame from <code>numpy array</code> to <code>torch_tensor</code></p>
+</li>
+<li>
+<p>Add a fake dimention to <code>torch_tensor</code> for batch</p>
+</li>
+<li>
+<p>Convert it to a torch variable(both tensor and gradient)</p>
+</li>
+<li></li>
+</ol>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">frame_transformed = transform(frame)[<span style="color:#0086f7;font-weight:bold">0</span>] <span style="color:#080;background-color:#0f140f;font-style:italic"># returns 2 elements. we need only the transformed frame of index [0]</span>
+</code></pre></div><ol start="2">
+<li></li>
+</ol>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">x = torch.from_numpy(frame_transformed).permute(<span style="color:#0086f7;font-weight:bold">2</span>,<span style="color:#0086f7;font-weight:bold">0</span>,<span style="color:#0086f7;font-weight:bold">1</span>) <span style="color:#080;background-color:#0f140f;font-style:italic"># the pre-trained SSD model was done in GRB format not in RGB. Hence the conversion.</span>
+</code></pre></div><p>3.The neural network cannot accept single input vector or image it only accepts in batches.
+So now we need to create a structure with the first dimension as the batch and other dimension as the input.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">(x.unsqueeze(<span style="color:#0086f7;font-weight:bold">0</span>) <span style="color:#080;background-color:#0f140f;font-style:italic"># 0 is the index of the batch and batch should be the first index in the tensor.</span>
+</code></pre></div><p>4.Convert this batch of torch tensor of inputs to a torch variable.
+<!-- raw HTML omitted --> A torch variable is a highly advanced variable that containes both a tensor and the gradient.<!-- raw HTML omitted --> This torch variable will become an element of the dynamic graph which will conpute the gradients very efficiently of any backpropagation</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">
+</code></pre></div><p>Its time to feed our <code>torch variable</code> to the SSD Neural Network</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">y = net(x)
+</code></pre></div><p>Now we have the output <code>y</code>. This y directly does not contain what we are interested in i.e the result of the detection wheather we have a dog or a human in frame. So to get the specific information from y we need to use the <code>data</code> attribute from y</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">detections = y.data
+</code></pre></div><p>Now we need to create a new tensor which will have dimention as [width, height, width, height].<!-- raw HTML omitted --> This is because the position of the detected object inside the image has to be normalized between 0 &amp; 1 and to do this normalization we will need this scaled tensor with these 4 dimensions.</p>
+<p>The first 2 width &amp; height corresponds to the scalar values of the upper left corner</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">scale = torch.Tensor([width, height, width, height])
+</code></pre></div><p>The detection tensor contains 4 elements
+batch: we created the fake dimension with unsqueeze
+number of classes: the objects that can be detected like dog, place, boat, car
+number of occurance of the class: count of the previous classes. like 2 dogs in a frame.
+tuple: 5 element tuple - score, x0, y0, x1, y1 - for each occurance we get a score and its cordinates upper left corner and lower right corner. score(threshold) &gt; 0.6 to be found.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#fb660a;font-weight:bold">for</span> i in range(detections.size(<span style="color:#0086f7;font-weight:bold">1</span>)): <span style="color:#080;background-color:#0f140f;font-style:italic">#detection(size(i)) is the number of classes</span>
+    j = <span style="color:#0086f7;font-weight:bold">0</span> <span style="color:#080;background-color:#0f140f;font-style:italic"># occurances of class i</span>
+    <span style="color:#fb660a;font-weight:bold">while</span> detections[<span style="color:#0086f7;font-weight:bold">0</span>, i, j, <span style="color:#0086f7;font-weight:bold">0</span>] &gt;= <span style="color:#0086f7;font-weight:bold">0.6</span>: <span style="color:#080;background-color:#0f140f;font-style:italic"># for score &gt;= 0.6 [batch,class,occurance, score]</span>
+        points = (detections[<span style="color:#0086f7;font-weight:bold">0</span>, i, j, <span style="color:#0086f7;font-weight:bold">1</span>:] * scale).numpy() <span style="color:#080;background-color:#0f140f;font-style:italic">#here we are not interested in score but the cordinates hence 1: - scale(normalize) and convert to numpy array for openCV</span>
+        <span style="color:#080;background-color:#0f140f;font-style:italic">#draw rectangle - frame color red - thickness of 2</span>
+        cv2.rectangle(frame, (int(points[<span style="color:#0086f7;font-weight:bold">0</span>]), int(points[<span style="color:#0086f7;font-weight:bold">1</span>])), (int(points[<span style="color:#0086f7;font-weight:bold">2</span>]), int(points[<span style="color:#0086f7;font-weight:bold">3</span>])), (<span style="color:#0086f7;font-weight:bold">255</span>, <span style="color:#0086f7;font-weight:bold">0</span>, <span style="color:#0086f7;font-weight:bold">0</span>), <span style="color:#0086f7;font-weight:bold">2</span>)
+        <span style="color:#080;background-color:#0f140f;font-style:italic">#print the label - labelmap (to get the class text)is the dictionary from VOC_CLASSES we imported - i-1 is for phthon index 0 - then font - size - color - continues text not dots.</span>
+        cv2.putText(frame, labelmap[i-<span style="color:#0086f7;font-weight:bold">1</span>], (int(points[<span style="color:#0086f7;font-weight:bold">0</span>]), int(points[<span style="color:#0086f7;font-weight:bold">1</span>])), cv2.FONT_HERSHEY_SIMPLEX, <span style="color:#0086f7;font-weight:bold">2</span>, (<span style="color:#0086f7;font-weight:bold">255</span>, <span style="color:#0086f7;font-weight:bold">255</span>, <span style="color:#0086f7;font-weight:bold">255</span>), <span style="color:#0086f7;font-weight:bold">2</span>, cv2.LINE_AA)
+        j += <span style="color:#0086f7;font-weight:bold">1</span> <span style="color:#080;background-color:#0f140f;font-style:italic"># increment j</span>
+<span style="color:#fb660a;font-weight:bold">return</span> frame <span style="color:#080;background-color:#0f140f;font-style:italic"># return of the for loop.</span>
+</code></pre></div><h1 id="creating-the-ssd-neural-network">Creating the SSD Neural Network</h1>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">net = build_ssd(<span style="color:#0086d2">&#39;test&#39;</span>) <span style="color:#080;background-color:#0f140f;font-style:italic"># test phase as we are using a pre-trained model from .pth file next.</span>
+</code></pre></div><h1 id="load-the-weights-from-already-pretrained-nn">load the weights from already pretrained NN</h1>
+<p>ssd300_mAP_77.43_v2.pth is pre-trained of about 30-40 objects.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic">#to open a tensor containing weights</span>
+net.load_state_dict(torch.load(<span style="color:#0086d2">&#39;ssd300_mAP_77.43_v2.pth&#39;</span>, map_location = <span style="color:#fb660a;font-weight:bold">lambda</span> storage, loc: storage))
+</code></pre></div><p>#Transformation</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic">#Making the frame is compatible with the neural network.</span>
+transform = BaseTransform(net.size, (<span style="color:#0086f7;font-weight:bold">104</span>/<span style="color:#0086f7;font-weight:bold">256.0</span>, <span style="color:#0086f7;font-weight:bold">117</span>/<span style="color:#0086f7;font-weight:bold">256.0</span>, <span style="color:#0086f7;font-weight:bold">123</span>/<span style="color:#0086f7;font-weight:bold">126.0</span>)) <span style="color:#080;background-color:#0f140f;font-style:italic">#net.size is  the target size of the images, tupple of 3 arguments - taken from the pretrained network (under certain convention for color values.)</span>
+</code></pre></div><h1 id="doing-object-detection-in-video">Doing object detection in video</h1>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">reader = imageio.get_reader(<span style="color:#0086d2">&#39;funny_dog.mp4&#39;</span>)
+fps = reader.get_meta_data()[<span style="color:#0086d2">&#39;fps&#39;</span>]
+writer = imageio.get_writer(<span style="color:#0086d2">&#39;output.mp4&#39;</span>, fps = fps)
+<span style="color:#fb660a;font-weight:bold">for</span> i, frame in enumerate(reader):
+    processed_frame = detect(frame, net.eval(), transform)
+    writer.append_data(processed_frame)
+    <span style="color:#fb660a;font-weight:bold">print</span>(i)
+writer.close()
+</code></pre></div><h1 id="final-output">Final Output</h1>
+<!-- raw HTML omitted -->
+<h1 id="source-code">Source Code</h1>
+<!-- raw HTML omitted -->
+]]></content>
+        </item>
+        
+        <item>
+            <title>Predicting Stock Price using Recurrent Neural Network</title>
+            <link>https://itsg.dev/posts/predicting-stock-price-using-recurrent-neural-network/</link>
+            <pubDate>Sat, 03 Feb 2018 00:00:00 +0000</pubDate>
+            
+            <guid>https://itsg.dev/posts/predicting-stock-price-using-recurrent-neural-network/</guid>
+            <description>Prelude Brownian Motion stats that the future variations of the stock price are independent from the past.
+So it is actually impossible to predict the future stock price but one thing we can do or predict is the trend.
+So in the tutorial we will try to predict the upward and downward trend on Google Stock Price using LSTM
+Going about  We will try to get a better understand on the usage of LSTMs.</description>
+            <content type="html"><![CDATA[<p><img src="/images/articles/2018/RNN/predicting-stock-price-intro.jpg" alt="predicting-stock-price-intro.jpg" title="predicting-stock-price-intro.jpg"></p>
+<h1 id="prelude">Prelude</h1>
+<p><code>Brownian Motion</code> stats that the future variations of the stock price are <code>independent from the past</code>.</p>
+<p>So it is actually <code>impossible to predict</code> the future stock price but one thing we can do or <code>predict is the trend</code>.</p>
+<p>So in the tutorial we will <code>try to predict</code> the upward and downward trend on <code>Google Stock Price</code> using <code>LSTM</code></p>
+<h1 id="going-about">Going about</h1>
+<ul>
+<li>We will try to get a better understand on the usage of LSTMs.</li>
+<li>This LSTM will be trained with <code>6yrs</code> of google stock price <code>(2013-2017)</code></li>
+<li>Predict the <code>open of stock</code> for first month of <code>2018</code></li>
+<li>NB: There is no <code>SATURDAY</code> and <code>SUNDAY</code> data in the dataset.</li>
+</ul>
+<h1 id="downloading-the-dataset">Downloading the Dataset</h1>
+<h3 id="trainset">TrainSet</h3>
+<p><a href="https://finance.yahoo.com/quote/GOOG/history?period1=1356978600&amp;period2=1514658600&amp;interval=1d&amp;filter=history&amp;frequency=1d">https://finance.yahoo.com/quote/GOOG/history?period1=1356978600&amp;period2=1514658600&amp;interval=1d&amp;filter=history&amp;frequency=1d</a></p>
+<ul>
+<li>01 Jan 2013 to 31 Dec 2017</li>
+</ul>
+<p><img src="/images/articles/2018/RNN/google-stock-train.png" alt="google-stock-train.png" title="google-stock-train.png">
+<img src="/images/articles/2018/RNN/google-stock-train-graph.png" alt="google-stock-train.png" title="google-stock-train.png"></p>
+<h3 id="testset">TestSet</h3>
+<p><a href="https://finance.yahoo.com/quote/GOOG/history?period1=1514745000&amp;period2=1517337000&amp;interval=1d&amp;filter=history&amp;frequency=1d">https://finance.yahoo.com/quote/GOOG/history?period1=1514745000&amp;period2=1517337000&amp;interval=1d&amp;filter=history&amp;frequency=1d</a></p>
+<ul>
+<li>01 Jan 2018 to 31 Jan 2018</li>
+</ul>
+<p><img src="/images/articles/2018/RNN/google-stock-test.png" alt="google-stock-test.png" title="google-stock-test.png">
+<img src="/images/articles/2018/RNN/google-stock-test-graph.png" alt="google-stock-test.png" title="google-stock-test.png"></p>
+<hr>
+<!-- raw HTML omitted -->
+<h1 id="data-preprocessing">Data Preprocessing</h1>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic">## Data Preprocessing</span>
+<span style="color:#fb660a;font-weight:bold">import</span> numpy <span style="color:#fb660a;font-weight:bold">as</span> np <span style="color:#080;background-color:#0f140f;font-style:italic">#allow us to do array manipulation</span>
+<span style="color:#fb660a;font-weight:bold">import</span> matplotlib.pyplot <span style="color:#fb660a;font-weight:bold">as</span> plt <span style="color:#080;background-color:#0f140f;font-style:italic">#to visualize the data</span>
+<span style="color:#fb660a;font-weight:bold">import</span> pandas <span style="color:#fb660a;font-weight:bold">as</span> pd <span style="color:#080;background-color:#0f140f;font-style:italic">#to import and manage the dataset</span>
+</code></pre></div><h2 id="importing-data">Importing Data</h2>
+<p>To import the data from the excel we downloaded, we will use the pandas <code>read_csv</code> function.</p>
+<p>read_csv imports data as a <code>DataFrame</code></p>
+<h4 id="dataframe">Dataframe</h4>
+<p><a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html">https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html</a></p>
+<blockquote>
+<p>A DataFrame is a two-dimentional labeled data structures with columns of potentially different types.<!-- raw HTML omitted -->
+check out: <a href="https://www.youtube.com/watch?time_continue=44&amp;v=CLoNO-XxNXU">https://www.youtube.com/watch?time_continue=44&amp;v=CLoNO-XxNXU</a></p>
+</blockquote>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic">## Importing the training set</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># importing as dataframe using pandas</span>
+dataset_train = pd.read_csv(<span style="color:#0086d2">&#39;Google_Stock_Price_Train_2013-2017.csv&#39;</span>);
+<span style="color:#080;background-color:#0f140f;font-style:italic"># Select the required column using iloc method and .values converts dataframe to array</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># .iloc[all_columns: only 1 row (open stock)]</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># convert the dataset to numpy array as neural network accepts only arrays as inputs</span>
+training_set = dataset_train.iloc[:,<span style="color:#0086f7;font-weight:bold">1</span>:<span style="color:#0086f7;font-weight:bold">2</span>].values <span style="color:#080;background-color:#0f140f;font-style:italic"># should give as range if we give [:,1] we just get a vector what we need is numpy array</span>
+</code></pre></div><p><img src="/images/articles/2018/RNN/stock_dataframe.png" alt="stock_dataframe.png" title="stock_dataframe.png">
+<!-- raw HTML omitted -->
+<img src="/images/articles/2018/RNN/stock_training_set.png" alt="stock_training_set.png" title="stock_training_set.png"></p>
+<h2 id="feature-scaling">Feature Scaling</h2>
+<p>Feature Scaling can be done in two methods</p>
+<ol>
+<li>Standardisation</li>
+<li>Normalisation</li>
+</ol>
+<p>Here we will use Normalisation as we are using a sigmoid function as an activation function in output layer.</p>
+<p>For this we will use the MinMaxScalar class from the pre-processing module in scikit learn library.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#fb660a;font-weight:bold">from</span> sklearn.preprocessing <span style="color:#fb660a;font-weight:bold">import</span> MinMaxScaler
+</code></pre></div><p><img src="/images/articles/2018/RNN/feature_scaling.png" alt="feature_scaling.png" title="feature_scaling.png"></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic"># Feature Scaling</span>
+<span style="color:#fb660a;font-weight:bold">from</span> sklearn.preprocessing <span style="color:#fb660a;font-weight:bold">import</span> MinMaxScaler
+sc = MinMaxScaler(feature_range = (<span style="color:#0086f7;font-weight:bold">0</span>,<span style="color:#0086f7;font-weight:bold">1</span>)) <span style="color:#080;background-color:#0f140f;font-style:italic"># to get all stock price between 0 &amp; 1</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># apply this sc object on our data</span>
+training_set_scaled = sc.fit_transform(training_set) <span style="color:#080;background-color:#0f140f;font-style:italic"># fit_transform is used to convert all data between 0 &amp; 1</span>
+</code></pre></div><p><img src="/images/articles/2018/RNN/stock_scaled.png" alt="stock_scaled.png" title="stock_scaled.png"></p>
+<h2 id="creating-datastructure-for-the-rnn">Creating DataStructure for the RNN</h2>
+<p>Here we tell the RNN to take 60 timesteps and predict 1 output.</p>
+<p>That is at time <code>t</code> the RNN looks back <code>60</code> stock prices before time <code>t</code> and based on the trends its capture it trys to predict the output at <code>t+1</code></p>
+<p>This is to prevent <code>OVERFITTING</code> and <code>UNDERFITTING</code></p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic">## Creating data structure with 60 timesteps and 1 output</span>
+X_train = []
+y_train = []
+
+<span style="color:#fb660a;font-weight:bold">for</span> i in range(<span style="color:#0086f7;font-weight:bold">60</span>, <span style="color:#0086f7;font-weight:bold">1260</span>): <span style="color:#080;background-color:#0f140f;font-style:italic"># 60 inputs till the total range of the dataset</span>
+    X_train.append(training_set_scaled[i-<span style="color:#0086f7;font-weight:bold">60</span>:i, <span style="color:#0086f7;font-weight:bold">0</span>]) <span style="color:#080;background-color:#0f140f;font-style:italic"># 60-60 = 0 so 0 to 60 indexes ,0 is for the column(we have only 1 column now :P)</span>
+    y_train.append(training_set_scaled[i, <span style="color:#0086f7;font-weight:bold">0</span>]) <span style="color:#080;background-color:#0f140f;font-style:italic"># index starts at 0 :P</span>
+</code></pre></div><p>converting X_train and Y_train to numpy array sinse they are now a list</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">X_train, y_train = np.array(X_train), np.array(y_train)
+</code></pre></div><p>reshaping to be compatible to the neural network</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic"># Reshaping - to add additional dimentions</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># (batch_size, timesteps, input_dim)</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># batch_size : total number of stock prices #X_train.shape[0] = gets the total rows </span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># timesteps which is 60 # X_train.shape[0] = gets the total columns</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># input_dim = 1 since we are using only 1 indicator</span>
+X_train = np.reshape(X_train, (X_train.shape[<span style="color:#0086f7;font-weight:bold">0</span>], X_train.shape[<span style="color:#0086f7;font-weight:bold">1</span>], <span style="color:#0086f7;font-weight:bold">1</span>)) <span style="color:#080;background-color:#0f140f;font-style:italic">#(batch_size, timesteps, input_dim)</span>
+</code></pre></div><h1 id="building-the-rnn">Building the RNN</h1>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic">## Building the RNN</span>
+
+<span style="color:#fb660a;font-weight:bold">from</span> keras.models <span style="color:#fb660a;font-weight:bold">import</span> Sequential
+<span style="color:#fb660a;font-weight:bold">from</span> keras.layers <span style="color:#fb660a;font-weight:bold">import</span> Dense
+<span style="color:#fb660a;font-weight:bold">from</span> keras.layers <span style="color:#fb660a;font-weight:bold">import</span> LSTM
+<span style="color:#fb660a;font-weight:bold">from</span> keras.layers <span style="color:#fb660a;font-weight:bold">import</span> Dropout
+
+<span style="color:#080;background-color:#0f140f;font-style:italic"># Initialising th RNN</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># Classification is for predicting a category or a cass</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># Regression is for predicting a continuous value</span>
+regressor = Sequential()
+
+<span style="color:#080;background-color:#0f140f;font-style:italic"># Adding the first LSTM layer and some dropout reqularisation (to avoid overfitting)</span>
+regressor.add(LSTM(units = <span style="color:#0086f7;font-weight:bold">50</span>, return_sequences = True, input_shape = (X_train.shape[<span style="color:#0086f7;font-weight:bold">1</span>], <span style="color:#0086f7;font-weight:bold">1</span>)))
+<span style="color:#080;background-color:#0f140f;font-style:italic"># for the dropout</span>
+regressor.add(Dropout(<span style="color:#0086f7;font-weight:bold">0.2</span>)) <span style="color:#080;background-color:#0f140f;font-style:italic"># 20% dropout - neurons in LSTM will be ignored in each iteration of the training</span>
+
+<span style="color:#080;background-color:#0f140f;font-style:italic">#second layer</span>
+regressor.add(LSTM(units = <span style="color:#0086f7;font-weight:bold">50</span>, return_sequences = True))
+regressor.add(Dropout(<span style="color:#0086f7;font-weight:bold">0.2</span>))
+
+<span style="color:#080;background-color:#0f140f;font-style:italic">#third layer</span>
+regressor.add(LSTM(units = <span style="color:#0086f7;font-weight:bold">50</span>, return_sequences = True))
+regressor.add(Dropout(<span style="color:#0086f7;font-weight:bold">0.2</span>))
+
+<span style="color:#080;background-color:#0f140f;font-style:italic">#forth layer</span>
+regressor.add(LSTM(units = <span style="color:#0086f7;font-weight:bold">50</span>))
+regressor.add(Dropout(<span style="color:#0086f7;font-weight:bold">0.2</span>))
+
+
+<span style="color:#080;background-color:#0f140f;font-style:italic">## Adding the Output Layer</span>
+regressor.add(Dense(units = <span style="color:#0086f7;font-weight:bold">1</span>))
+
+
+<span style="color:#080;background-color:#0f140f;font-style:italic">## Compiling the RNN with loss function</span>
+regressor.compile(optimizer = <span style="color:#0086d2">&#39;adam&#39;</span>, loss = <span style="color:#0086d2">&#39;mean_squared_error&#39;</span>)
+
+<span style="color:#080;background-color:#0f140f;font-style:italic">## Fitting the RNN to the training set</span>
+regressor.fit(X_train, y_train, epochs = <span style="color:#0086f7;font-weight:bold">100</span>, batch_size = <span style="color:#0086f7;font-weight:bold">32</span>)
+</code></pre></div><p>When we run the above code we start the training process. After completion we need to follow the same steps on the <code>test dataset</code></p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic">## P3 - Making the prediction and visualising the results</span>
+
+<span style="color:#080;background-color:#0f140f;font-style:italic"># Getting the real stock price of 2018</span>
+dataset_test = pd.read_csv(<span style="color:#0086d2">&#39;Google_Stock_Price_Test_2018-2018.csv&#39;</span>);
+real_stock_price = dataset_test.iloc[:,<span style="color:#0086f7;font-weight:bold">1</span>:<span style="color:#0086f7;font-weight:bold">2</span>].values
+
+<span style="color:#080;background-color:#0f140f;font-style:italic"># Getting the predicted stock price</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic">#concatenating both the train and test sets</span>
+dataset_total = pd.concat((dataset_train[<span style="color:#0086d2">&#39;Open&#39;</span>], dataset_test[<span style="color:#0086d2">&#39;Open&#39;</span>]), axis = <span style="color:#0086f7;font-weight:bold">0</span>); <span style="color:#080;background-color:#0f140f;font-style:italic"># 1 for horizontal concatenation &amp; 0 for vertical</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># getting the new inputs fo each financial day</span>
+inputs = dataset_total[len(dataset_total)-len(dataset_test) - <span style="color:#0086f7;font-weight:bold">60</span>:].values
+inputs = inputs.reshape(-<span style="color:#0086f7;font-weight:bold">1</span>, <span style="color:#0086f7;font-weight:bold">1</span>)
+inputs = sc.transform(inputs)
+
+X_test = []
+<span style="color:#fb660a;font-weight:bold">for</span> i in range(<span style="color:#0086f7;font-weight:bold">60</span>, <span style="color:#0086f7;font-weight:bold">80</span>):
+    X_test.append(inputs[i-<span style="color:#0086f7;font-weight:bold">60</span>:i, <span style="color:#0086f7;font-weight:bold">0</span>])
+    
+X_test = np.array(X_test)
+<span style="color:#080;background-color:#0f140f;font-style:italic"># for the 3D structure</span>
+X_test = np.reshape(X_test, (X_test.shape[<span style="color:#0086f7;font-weight:bold">0</span>], X_test.shape[<span style="color:#0086f7;font-weight:bold">1</span>], <span style="color:#0086f7;font-weight:bold">1</span>))
+predicted_stock_price = regressor.predict(X_test)
+predicted_stock_price = sc.inverse_transform(predicted_stock_price);
+</code></pre></div><h1 id="visualising-the-results">Visualising the results</h1>
+<p>We use <code>pyplot</code> method from matplotlib for visualising</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">plt.plot(real_stock_price, color = <span style="color:#0086d2">&#39;red&#39;</span>, label = <span style="color:#0086d2">&#39;Real Google Stock Price&#39;</span>)
+plt.plot(predicted_stock_price, color = <span style="color:#0086d2">&#39;blue&#39;</span>, label = <span style="color:#0086d2">&#39;Predicted Google Stock Price&#39;</span>)
+plt.title(<span style="color:#0086d2">&#39;Google Stock Price Prediction&#39;</span>)
+plt.xlabel(<span style="color:#0086d2">&#39;Time&#39;</span>)
+plt.ylabel(<span style="color:#0086d2">&#39;Google Stock Price&#39;</span>)
+plt.legend()
+plt.show()
+</code></pre></div><p><img src="/images/articles/2018/RNN/google-stock-predicted.png" alt="google-stock-predicted.png" title="google-stock-predicted.png"></p>
+<p><code>We have successfully implemented our stock price predictor for 2018</code></p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Intro to Recurrent Neural Network (RNN)</title>
+            <link>https://itsg.dev/posts/intro-to-recurrent-neural-network-rnn/</link>
+            <pubDate>Sun, 28 Jan 2018 00:00:00 +0000</pubDate>
+            
+            <guid>https://itsg.dev/posts/intro-to-recurrent-neural-network-rnn/</guid>
+            <description>image borrowed from UDACITYRecurrent Neural Network is one of the advanced algorithms that existed in the wold of supervised deep learning.
+Prelude In ANN and CNN we use neural network that takes few inputs, propagates it forward through hidden layers to the output layer. This is termed as a FEED FORWARD NETWORK. In this network there is no sence of order in the inputs.
+OK now lets bring some order to the network.</description>
+            <content type="html"><![CDATA[<p><img src="/images/articles/2018/RNN/rnn-lstm-intro.jpg" alt="rnn-lstm-intro.jpg" title="rnn-lstm-intro.jpg">
+image borrowed from <!-- raw HTML omitted -->UDACITY<!-- raw HTML omitted --></p>
+<p>Recurrent Neural Network is one of the advanced algorithms that existed in the wold of <code>supervised deep learning</code>.</p>
+<h1 id="prelude">Prelude</h1>
+<p>In ANN and CNN we use neural network that takes few inputs, propagates it forward through hidden layers to the output layer. This is termed as a <code>FEED FORWARD NETWORK</code>. In this network there is no sence of order in the inputs.</p>
+<p>OK now lets bring some order to the network.</p>
+<!-- raw HTML omitted -->
+<p>Lets take an example data and go forward.</p>
+<pre><code>&quot;STEEP&quot;
+</code></pre><p><img src="/images/articles/2018/RNN/feedforward_ex1.png" alt="feedforward_ex1.png" title="feedforward_ex1.png"></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>Our goal is to make the network predict the next letter to the sequence.</p>
+<ul>
+<li>First we feed <code>s</code> to the network and our desired output is <code>t</code>.</li>
+<li>Then we feed <code>t</code> to the network and our desired output is <code>e</code>.</li>
+<li>Next we feed the previous <code>e</code> to the network and our desired output should <code>e</code> or <code>p</code>.</li>
+<li>But this feed forward network does not have the information about the which character to predict next as it does not know about the previous letters <code>s</code> <code>t</code> <code>e</code>.</li>
+</ul>
+<p>To include this information in the network we just need to add the previous hidden layer output to the hidden layer in the next step to carry forward the information about the sequence.</p>
+<p>This architecture is know as Recurrent Neural Network or RNN</p>
+<p><img src="/images/articles/2018/RNN/rnn-representation.png" alt="rnn-representation.png" title="rnn-representation.png"></p>
+<!-- raw HTML omitted -->
+<p>The above image is the standard representation of RNN</p>
+<p><img src="/images/articles/2018/RNN/rnn-representation-time.png" alt="rnn-representation.png" title="rnn-representation.png"></p>
+<!-- raw HTML omitted -->
+<p>The above image shows RNN expanded in TIME.</p>
+<h1 id="examples-of-rnns">Examples of RNNs</h1>
+<h2 id="one-to-many-relationship">One to Many Relationship</h2>
+<p><img src="/images/articles/2018/RNN/rnn-one-many.png" alt="rnn-one-many.png" title="rnn-one-many.png"></p>
+<!-- raw HTML omitted -->
+<p><img src="/images/articles/2018/RNN/rnn-one-many-example.png" alt="rnn-one-many.png" title="rnn-one-many.png"></p>
+<!-- raw HTML omitted -->
+<p>Here there is only one input and multiple outputs. For example the image is the input to tht CNN network and then into a RNN then the computer will come up with the word describing the image.</p>
+<p><img src="/images/articles/2018/RNN/rnn-many-one.png" alt="rnn-one-many.png" title="rnn-one-many.png"></p>
+<!-- raw HTML omitted -->
+<p><img src="/images/articles/2018/RNN/rnn-many-one-example.png" alt="rnn-one-many.png" title="rnn-one-many.png"></p>
+<!-- raw HTML omitted -->
+<p>Mostly for sentiment analysis from lot of texts like comments etc.</p>
+<p><img src="/images/articles/2018/RNN/rnn-many-many.png" alt="rnn-one-many.png" title="rnn-one-many.png"></p>
+<!-- raw HTML omitted -->
+<p><img src="/images/articles/2018/RNN/rnn-many-many-example.png" alt="rnn-one-many.png" title="rnn-one-many.png"></p>
+<!-- raw HTML omitted -->
+<p>Can be used in a translator system. Having reference to genders and tense to reframe the translated text.</p>
+<p><img src="/images/articles/2018/RNN/rnn-many-many2.png" alt="rnn-one-many.png" title="rnn-one-many.png"></p>
+<!-- raw HTML omitted -->
+<p><img src="/images/articles/2018/RNN/rnn-many-many2-example.png" alt="rnn-one-many.png" title="rnn-one-many.png"></p>
+<!-- raw HTML omitted -->
+<p>For subtitling movies. Get the information from previous frame to get the context to subtitle other scenes.</p>
+<h1 id="vanishing-gradient">Vanishing Gradient</h1>
+<p>This problem was first discovered by Seph Hochreiter in 1991 later by Joshua Benjio in 1994.</p>
+<p>In Simple words:</p>
+<p>Previously we saw that in the feedback loop through time, we pass in weights to and fro to adjust the cost function as to minimize the gradients. Here randomly assigned weights may be large or small. During forward and backward propagation we are multiplying these weights together. Multipling large weights with each other results in another larger valued weight and multipling smaller weights results in a small value. This make the gradients going through the network really small and vanishing and large causing it to explode. This also causes imbalance in the network where few nodes are trained properly and others very low. Also since these trained information is carried to other nodes over time, the heavily trained nodes are indirectly trained by the information from the less trained node. Which causes erroneous results at the end.</p>
+<p>This is termed as vanishing and exploding gradients or simply Vanishing Gradients.</p>
+<h1 id="solutions-for-vanishing-gradient">Solutions for Vanishing Gradient</h1>
+<p>For Exploding gradient</p>
+<ul>
+<li>Truncated Backpropagation: Here we stop the backpropagation after certain point. (Its not optimal as we are not updating all the weights)</li>
+<li>Penalties: Gradients been penalized and manually reduced</li>
+<li>Gradient Clipping: Max value for gradient</li>
+</ul>
+<p>For Vanishing Gradient</p>
+<ul>
+<li>Weight Initialization: Be smart enought to initial weights to minimize the vanishing gradient problem</li>
+<li>Echo State Networks They some how manage to solve</li>
+<li>Long Short-Term Memory (LSTM)</li>
+</ul>
+<h1 id="lstms-and-its-varients">LSTMs and its Varients</h1>
+<p>One of the best place to understand LSTM is to read the blogpost at <a href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/">http://colah.github.io/posts/2015-08-Understanding-LSTMs/</a></p>
+<p>For My Reference:
+<img src="/images/articles/2018/RNN/LSTM3-chain.png" alt="LSTM3-chain.png" title="LSTM3-chain.png"></p>
+<!-- raw HTML omitted -->
+<h2 id="gru---gated-recurrent-network">GRU - Gated Recurrent Network</h2>
+<p><img src="/images/articles/2018/RNN/LSTM3-var-GRU.png" alt="LSTM3-var-GRU.png" title="LSTM3-var-GRU.png"></p>
+<!-- raw HTML omitted -->
+<h1 id="attentions">Attentions</h1>
+<p>The idea is to let every step of an RNN pick information to look at from some larger collection of information. For example, if you are using an RNN to create a caption describing an image, it might pick a part of the image to look at for every word it outputs.</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Basics to get started with Tensorflow</title>
+            <link>https://itsg.dev/posts/basics-to-get-started-with-tensorflow/</link>
+            <pubDate>Sat, 27 Jan 2018 00:00:00 +0000</pubDate>
+            
+            <guid>https://itsg.dev/posts/basics-to-get-started-with-tensorflow/</guid>
+            <description>1. What is Tensor  Just a fancy word for an n-dimentional matrix Or an advanced array Holds only single type They are the standard way of representing data in tensorflow.  2. Tensor Data Types    python type  Description     tf.float32 32 bits floating point   tf.float64 64 bits floating point   tf.int8 8 bits signed integer   tf.int16 16 bits signed integer   tf.</description>
+            <content type="html"><![CDATA[<p><img src="/images/articles/2018/TensorFlow-banner.jpg" alt="TensorFlow Basics" title="TensorFlow-banner.jpg"></p>
+<h1 id="1-what-is-tensor">1. What is Tensor</h1>
+<ul>
+<li>Just a fancy word for an n-dimentional matrix</li>
+<li>Or an advanced array</li>
+<li>Holds only single type</li>
+<li>They are the standard way of representing data in tensorflow.</li>
+</ul>
+<h1 id="2-tensor-data-types">2. Tensor Data Types</h1>
+<table>
+<thead>
+<tr>
+<th>python type   </th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tf.float32</td>
+<td>32 bits floating point</td>
+</tr>
+<tr>
+<td>tf.float64</td>
+<td>64 bits floating point</td>
+</tr>
+<tr>
+<td>tf.int8</td>
+<td>8 bits signed integer</td>
+</tr>
+<tr>
+<td>tf.int16</td>
+<td>16 bits signed integer</td>
+</tr>
+<tr>
+<td>tf.int32</td>
+<td>32 bits signed integer</td>
+</tr>
+<tr>
+<td>tf.int64</td>
+<td>64 bits signed integer</td>
+</tr>
+<tr>
+<td>tf.uint8</td>
+<td>8 bits signed integer</td>
+</tr>
+<tr>
+<td>tf.string</td>
+<td>Variable length byte array</td>
+</tr>
+<tr>
+<td>tf.bool</td>
+<td>Boolean</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>DataTypes need not be explicitly mentioned it get automatically assigned by the tensorflor library.</li>
+<li>Only mention it if you need to save few memory of tensor</li>
+</ul>
+<h1 id="3-what-is-tensorflow">3. What is TensorFlow</h1>
+<ul>
+<li>Open Source library released by Google in 2015</li>
+<li>It works by first defining and describing a model and later run in a session</li>
+</ul>
+<h1 id="4-what-are-constant">4. What are constant</h1>
+<ul>
+<li>It takes no inputs and cannot change the value stored in it</li>
+</ul>
+<h1 id="5-what-are-placeholders">5. What are placeholders</h1>
+<ul>
+<li>A placeholder is a promise to provide a value later.</li>
+<li>Use the <strong>feed_dict</strong> parameter in <strong>tf.session.run()</strong> to set the placeholder tensor.</li>
+<li>They are initially empty and are used to feed in the actual raining examples.</li>
+<li>Need to declare the required type as <strong>tf.float32</strong> and shape as optional.</li>
+</ul>
+<h1 id="6-what-are-variables">6. What are variables</h1>
+<ul>
+<li>They need to be initialized</li>
+<li>Values that keeps on changing</li>
+<li>They are in memory buffers</li>
+<li>use <strong>tf.global_variables_initializer</strong> to initialize the variables before running the session.</li>
+</ul>
+<h1 id="7tensorflow-graphs">7.TensorFlow Graphs</h1>
+<ul>
+<li>Graphs are sets of connected nodes(vertices)</li>
+<li>THe connections are referred to as edges.</li>
+<li>In TensorFlow each node is an operation with possible inputs that can supply some output.</li>
+<li>Its like we construct a graph and execute it.</li>
+</ul>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Matrix Math and Numpy Refresher</title>
+            <link>https://itsg.dev/posts/matrix-math-and-numpy-refresher/</link>
+            <pubDate>Sun, 21 Jan 2018 00:00:00 +0000</pubDate>
+            
+            <guid>https://itsg.dev/posts/matrix-math-and-numpy-refresher/</guid>
+            <description>image borrowed from UDACITYData Dimentions We fist need to understand how we represent the data specifically the shape the data can have.
+Eg: we can have a number representing a person height or a list of numbers for height, weight, age etc. May be a display picture represented as grid having rows and columns of each individual pixels and each pixels having its color value for RED, BLUE, GREEN.
+We describe this data in terms of number of dimentions.</description>
+            <content type="html"><![CDATA[<p><img src="/images/articles/2018/matrix-math.jpg" alt="matrix-math.jpg" title="matrix-math.jpg">
+image borrowed from <!-- raw HTML omitted -->UDACITY<!-- raw HTML omitted --></p>
+<h1 id="data-dimentions">Data Dimentions</h1>
+<p>We fist need to understand how we represent the data specifically the shape the data can have.</p>
+<p>Eg: we can have a number representing a person height or a list of numbers for height, weight, age etc. May be a display picture represented as grid having rows and columns of each individual pixels and each pixels having its color value for RED, BLUE, GREEN.</p>
+<p>We describe this data in terms of number of dimentions.</p>
+<p>First we have the smallest simplest shape called <code>SCALARS</code> (single value)
+eg: 1, -5, 8.9 etc</p>
+<p>It is said that scalars have zero dimentions.</p>
+<p>So from the previous example of the person the height, weight and age are all scalar.</p>
+<!-- raw HTML omitted -->
+<p>Then there are lists of values called <code>VECTORS</code>.</p>
+<p>They are of two types <code>row vector</code> and <code>column vector</code></p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic"># row vector</span>
+[<span style="color:#0086f7;font-weight:bold">1</span>,<span style="color:#0086f7;font-weight:bold">2</span>,<span style="color:#0086f7;font-weight:bold">3</span>]
+
+<span style="color:#080;background-color:#0f140f;font-style:italic"># column vector</span>
+[<span style="color:#0086f7;font-weight:bold">1</span>
+<span style="color:#0086f7;font-weight:bold">2</span>
+<span style="color:#0086f7;font-weight:bold">3</span>]
+</code></pre></div><p><strong>Vectors</strong> are said to have 1 dimention called length.</p>
+<p>So from the previous example we have store the persons height, weight and age as Vector [height, weight, age]</p>
+<!-- raw HTML omitted -->
+<p>Then we have <code>MATRICS</code>. Its a 2-dimentional grid of value.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">[[<span style="color:#0086f7;font-weight:bold">1</span>,<span style="color:#0086f7;font-weight:bold">2</span>,<span style="color:#0086f7;font-weight:bold">3</span>]
+[<span style="color:#0086f7;font-weight:bold">4</span>,<span style="color:#0086f7;font-weight:bold">5</span>,<span style="color:#0086f7;font-weight:bold">6</span>]]
+</code></pre></div><p>The above code snippet shows a 2x3( two cross three ) matrix ie. 2 rows and 3 columns.</p>
+<!-- raw HTML omitted -->
+<p>Finally there are tensors named for a collection of n-dimentional values.</p>
+<p><img src="/images/articles/2018/tensor-data-shape.png" alt="tensor-data-shape.png" title="tensor-data-shape.png">
+image borrowed from <!-- raw HTML omitted -->UDACITY<!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<p>Mostly everyone uses the terms SCALAR and MATRICES for all tutorials.
+VECTORS are hereby considered are a MATRIX having either of its row or column (dimentions) as size 1.</p>
+<!-- raw HTML omitted -->
+<p>To get values from a matrix we use indexes. Indexes start from a11, a12, a21 etc. <!-- raw HTML omitted -->
+<code>But in programming most languages have indexes starting from 0. So we have indexes as a00, a01, a10 etc</code></p>
+<p><img src="/images/articles/2018/matrix-indexes.jpg" alt="matrix-indexes.jpg" title="matrix-indexes.jpg">
+image borrowed from <!-- raw HTML omitted -->UDACITY<!-- raw HTML omitted --> and modified by me :)</p>
+<hr>
+<!-- raw HTML omitted -->
+<h1 id="numpy-and-its-data-in-python">Numpy and its Data in Python</h1>
+<p>Python is convenient, but it can also be slow. However, it does allow us to access libraries that execute faster code written in languages like C. NumPy is one such library: it provides fast alternatives to math operations in Python and is designed to work efficiently with groups of numbers - like matrices.</p>
+<h2 id="data-types-and-shapes">Data Types and Shapes</h2>
+<p>The most common way to work with numbers in NumPy is through ndarray objects.</p>
+<pre><code>https://docs.scipy.org/doc/numpy/reference/arrays.html
+</code></pre><!-- raw HTML omitted -->
+<p>These datatypes are important because every object we make (vectors, matrices, tensors) eventually stores scalars.</p>
+<p><code>Do note that every item in an array must have the same data type.</code></p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#fb660a;font-weight:bold">import</span> numpy <span style="color:#fb660a;font-weight:bold">as</span> np
+</code></pre></div><div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic"># to create a numpy array that stores a scalar</span>
+scalar_array = np.array(<span style="color:#0086f7;font-weight:bold">8</span>)
+</code></pre></div><p>To get the shape of this array we use the arribute <code>shape</code>.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">scalar_array.shape
+</code></pre></div><p>Here we get the output as <code>()</code>. This means that it has zero dimension.</p>
+<!-- raw HTML omitted -->
+<p>Vectors are created by passing a python list [1,2,3] to the numpy array.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">vector_array = np.array([<span style="color:#0086f7;font-weight:bold">1</span>,<span style="color:#0086f7;font-weight:bold">2</span>,<span style="color:#0086f7;font-weight:bold">3</span>])
+</code></pre></div><p>to check its shape</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">vector_array.shape
+</code></pre></div><p>The above snippet returns <code>(3,)</code>. This is a tuple having the dimension of 1 and a comma suffixed.</p>
+<pre><code>https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences
+</code></pre><p>We can access an element within a vector as</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">x = vector_array[<span style="color:#0086f7;font-weight:bold">1</span>]
+<span style="color:#080;background-color:#0f140f;font-style:italic"># which gives x as 1</span>
+
+<span style="color:#080;background-color:#0f140f;font-style:italic"># to get all elements from second element we use</span>
+x = vector_array[<span style="color:#0086f7;font-weight:bold">1</span>:]
+</code></pre></div><!-- raw HTML omitted -->
+<p>To create a matrix using numpy array we just need to pass lists of lists, where each list represents a row. So to create a 3x3 matrix we do as</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">matrix_33 = np.array([<span style="color:#0086f7;font-weight:bold">1</span>,<span style="color:#0086f7;font-weight:bold">2</span>,<span style="color:#0086f7;font-weight:bold">3</span>], [<span style="color:#0086f7;font-weight:bold">4</span>,<span style="color:#0086f7;font-weight:bold">5</span>,<span style="color:#0086f7;font-weight:bold">6</span>], [<span style="color:#0086f7;font-weight:bold">7</span>,<span style="color:#0086f7;font-weight:bold">8</span>,<span style="color:#0086f7;font-weight:bold">9</span>])
+</code></pre></div><p>checking the shape we get tuple <code>(3,3)</code> indicating it has 2 dimentions, each length of 3.</p>
+<!-- raw HTML omitted -->
+<p>Same as matrices, here tensors can have n-dimensions.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">tensor = np.array([[[[<span style="color:#0086f7;font-weight:bold">1</span>],[<span style="color:#0086f7;font-weight:bold">2</span>]],[[<span style="color:#0086f7;font-weight:bold">3</span>],[<span style="color:#0086f7;font-weight:bold">4</span>]],[[<span style="color:#0086f7;font-weight:bold">5</span>],[<span style="color:#0086f7;font-weight:bold">6</span>]]],[[[<span style="color:#0086f7;font-weight:bold">7</span>],[<span style="color:#0086f7;font-weight:bold">8</span>]],[[<span style="color:#0086f7;font-weight:bold">9</span>],[<span style="color:#0086f7;font-weight:bold">10</span>]],[[<span style="color:#0086f7;font-weight:bold">11</span>],[<span style="color:#0086f7;font-weight:bold">12</span>]]],[[[<span style="color:#0086f7;font-weight:bold">13</span>],[<span style="color:#0086f7;font-weight:bold">14</span>]],[[<span style="color:#0086f7;font-weight:bold">15</span>],[<span style="color:#0086f7;font-weight:bold">16</span>]],[[<span style="color:#0086f7;font-weight:bold">17</span>],[<span style="color:#0086f7;font-weight:bold">17</span>]]]])
+</code></pre></div><p>This returns <code>(3, 3, 2, 1)</code>. Which says <code>4</code> dimensions and each number represents the <code>length of each lists</code> in tensor.</p>
+<!-- raw HTML omitted -->
+<p>Sometimes we&rsquo;ll need to change the shape of our data without actually changing its contents. Eg: you may have a vector, which is one-dimensional, but need a matrix, which is two-dimensional.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">v = np.array([<span style="color:#0086f7;font-weight:bold">1</span>,<span style="color:#0086f7;font-weight:bold">2</span>,<span style="color:#0086f7;font-weight:bold">3</span>,<span style="color:#0086f7;font-weight:bold">4</span>])
+
+<span style="color:#080;background-color:#0f140f;font-style:italic"># v.shape returns (4,)</span>
+
+<span style="color:#080;background-color:#0f140f;font-style:italic"># to change shape we use the reshape function </span>
+x = v.reshape(<span style="color:#0086f7;font-weight:bold">1</span>,<span style="color:#0086f7;font-weight:bold">4</span>)
+
+<span style="color:#080;background-color:#0f140f;font-style:italic"># x.shape returns (1,4)</span>
+</code></pre></div><p>Experienced users do it the following way.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">x = v[None, :]
+
+<span style="color:#080;background-color:#0f140f;font-style:italic"># x.shape returns (1,4)</span>
+</code></pre></div><!-- raw HTML omitted -->
+<p>Suppose we wanted to add a value to every element in the list</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">values = [<span style="color:#0086f7;font-weight:bold">1</span>,<span style="color:#0086f7;font-weight:bold">2</span>,<span style="color:#0086f7;font-weight:bold">3</span>,<span style="color:#0086f7;font-weight:bold">4</span>,<span style="color:#0086f7;font-weight:bold">5</span>]
+values = np.array(values) + <span style="color:#0086f7;font-weight:bold">5</span>
+
+<span style="color:#080;background-color:#0f140f;font-style:italic"># value gives [6,7,8,9,10]</span>
+</code></pre></div><p>Similarly numpy has function for addition, subtraction, multiplication, division etc.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">x = np.multiply(some_array, <span style="color:#0086f7;font-weight:bold">5</span>)
+x = some_array * <span style="color:#0086f7;font-weight:bold">5</span>
+</code></pre></div><!-- raw HTML omitted -->
+<p>The same functions and operators that work with scalars and matrices also work with other dimensions. We just need to make sure that the items we perform the operation on have compatible shapes.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">a = np.array([[<span style="color:#0086f7;font-weight:bold">1</span>,<span style="color:#0086f7;font-weight:bold">3</span>],[<span style="color:#0086f7;font-weight:bold">5</span>,<span style="color:#0086f7;font-weight:bold">7</span>]])
+a
+<span style="color:#080;background-color:#0f140f;font-style:italic"># displays the following result:</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># array([[1, 3],</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic">#        [5, 7]])</span>
+
+b = np.array([[<span style="color:#0086f7;font-weight:bold">2</span>,<span style="color:#0086f7;font-weight:bold">4</span>],[<span style="color:#0086f7;font-weight:bold">6</span>,<span style="color:#0086f7;font-weight:bold">8</span>]])
+b
+<span style="color:#080;background-color:#0f140f;font-style:italic"># displays the following result:</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># array([[2, 4],</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic">#        [6, 8]])</span>
+
+a + b
+<span style="color:#080;background-color:#0f140f;font-style:italic"># displays the following result</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic">#      array([[ 3,  7],</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic">#             [11, 15]])</span>
+
+</code></pre></div><p>And if we try working with incompatible shapes, we&rsquo;d get an error:</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">a = np.array([[<span style="color:#0086f7;font-weight:bold">1</span>,<span style="color:#0086f7;font-weight:bold">3</span>],[<span style="color:#0086f7;font-weight:bold">5</span>,<span style="color:#0086f7;font-weight:bold">7</span>]])
+a
+<span style="color:#080;background-color:#0f140f;font-style:italic"># displays the following result:</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># array([[1, 3],</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic">#        [5, 7]])</span>
+c = np.array([[<span style="color:#0086f7;font-weight:bold">2</span>,<span style="color:#0086f7;font-weight:bold">3</span>,<span style="color:#0086f7;font-weight:bold">6</span>],[<span style="color:#0086f7;font-weight:bold">4</span>,<span style="color:#0086f7;font-weight:bold">5</span>,<span style="color:#0086f7;font-weight:bold">9</span>],[<span style="color:#0086f7;font-weight:bold">1</span>,<span style="color:#0086f7;font-weight:bold">8</span>,<span style="color:#0086f7;font-weight:bold">7</span>]])
+c
+<span style="color:#080;background-color:#0f140f;font-style:italic"># displays the following result:</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># array([[2, 3, 6],</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic">#        [4, 5, 9],</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic">#        [1, 8, 7]])</span>
+
+a.shape
+<span style="color:#080;background-color:#0f140f;font-style:italic"># displays the following result:</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic">#  (2, 2)</span>
+
+c.shape
+<span style="color:#080;background-color:#0f140f;font-style:italic"># displays the following result:</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic">#  (3, 3)</span>
+
+a + c
+<span style="color:#080;background-color:#0f140f;font-style:italic"># displays the following error:</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># ValueError: operands could not be broadcast together with shapes (2,2) (3,3)</span>
+</code></pre></div><h3 id="important-reminders-about-matrix-multiplication">Important Reminders About Matrix Multiplication</h3>
+<ul>
+<li>The <strong>number</strong> of <strong>columns</strong> in the <strong>left</strong> matrix <strong>must equal</strong> the <strong>number</strong> of <strong>rows</strong> in the <strong>right</strong> matrix.</li>
+<li>The <strong>answer</strong> matrix <strong>always has</strong> the <strong>same number</strong> of <strong>rows</strong> as the <strong>left</strong> matrix and the <strong>same number</strong> of <strong>columns</strong> as the <strong>right</strong> matrix.</li>
+<li><strong>Order matters</strong>. Multiplying <strong>A•B</strong> is not the same as multiplying <strong>B•A</strong>.</li>
+<li>Data in the <strong>left</strong> matrix <strong>should be</strong> arranged as <strong>rows</strong>., while data in the <strong>right</strong> matrix <strong>should be</strong> arranged as <strong>columns</strong>.</li>
+</ul>
+<p>If we keep these four points in mind, you should always be able to figure out how to properly arrange your matrix multiplications when building a neural network.</p>
+<h3 id="numpy-matrix-multiplication">NumPy Matrix Multiplication</h3>
+<p>It&rsquo;s important to know that NumPy supports several types of matrix multiplication.</p>
+<p>To find the matrix product, you use NumPy&rsquo;s matmul function.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">a = np.array([[<span style="color:#0086f7;font-weight:bold">1</span>,<span style="color:#0086f7;font-weight:bold">2</span>,<span style="color:#0086f7;font-weight:bold">3</span>,<span style="color:#0086f7;font-weight:bold">4</span>],[<span style="color:#0086f7;font-weight:bold">5</span>,<span style="color:#0086f7;font-weight:bold">6</span>,<span style="color:#0086f7;font-weight:bold">7</span>,<span style="color:#0086f7;font-weight:bold">8</span>]])
+a
+<span style="color:#080;background-color:#0f140f;font-style:italic"># displays the following result:</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># array([[1, 2, 3, 4],</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic">#        [5, 6, 7, 8]])</span>
+a.shape
+<span style="color:#080;background-color:#0f140f;font-style:italic"># displays the following result:</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># (2, 4)</span>
+
+b = np.array([[<span style="color:#0086f7;font-weight:bold">1</span>,<span style="color:#0086f7;font-weight:bold">2</span>,<span style="color:#0086f7;font-weight:bold">3</span>],[<span style="color:#0086f7;font-weight:bold">4</span>,<span style="color:#0086f7;font-weight:bold">5</span>,<span style="color:#0086f7;font-weight:bold">6</span>],[<span style="color:#0086f7;font-weight:bold">7</span>,<span style="color:#0086f7;font-weight:bold">8</span>,<span style="color:#0086f7;font-weight:bold">9</span>],[<span style="color:#0086f7;font-weight:bold">10</span>,<span style="color:#0086f7;font-weight:bold">11</span>,<span style="color:#0086f7;font-weight:bold">12</span>]])
+b
+<span style="color:#080;background-color:#0f140f;font-style:italic"># displays the following result:</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># array([[ 1,  2,  3],</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic">#        [ 4,  5,  6],</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic">#        [ 7,  8,  9],</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic">#        [10, 11, 12]])</span>
+b.shape
+<span style="color:#080;background-color:#0f140f;font-style:italic"># displays the following result:</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># (4, 3)</span>
+
+c = np.matmul(a, b)
+c
+<span style="color:#080;background-color:#0f140f;font-style:italic"># displays the following result:</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># array([[ 70,  80,  90],</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic">#        [158, 184, 210]])</span>
+c.shape
+<span style="color:#080;background-color:#0f140f;font-style:italic"># displays the following result:</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># (2, 3)</span>
+</code></pre></div><p>We may sometimes see NumPy&rsquo;s dot function in places where you would expect a matmul. It turns out that the results of dot and matmul are the same if the matrices are two dimensional.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">a = np.array([[<span style="color:#0086f7;font-weight:bold">1</span>,<span style="color:#0086f7;font-weight:bold">2</span>],[<span style="color:#0086f7;font-weight:bold">3</span>,<span style="color:#0086f7;font-weight:bold">4</span>]])
+a
+<span style="color:#080;background-color:#0f140f;font-style:italic"># displays the following result:</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># array([[1, 2],</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic">#        [3, 4]])</span>
+
+np.dot(a,a)
+<span style="color:#080;background-color:#0f140f;font-style:italic"># displays the following result:</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># array([[ 7, 10],</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic">#        [15, 22]])</span>
+
+a.dot(a)  <span style="color:#080;background-color:#0f140f;font-style:italic"># you can call `dot` directly on the `ndarray`</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># displays the following result:</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># array([[ 7, 10],</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic">#        [15, 22]])</span>
+
+np.matmul(a,a)
+<span style="color:#080;background-color:#0f140f;font-style:italic"># array([[ 7, 10],</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic">#        [15, 22]])</span>
+</code></pre></div><h3 id="transpose">Transpose</h3>
+<p>This is used to convert a row to column and viceversa. Do note that numpy transpose simply changes the way it indexes the original matrix. It does not create a new matrix.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">m = np.array([[<span style="color:#0086f7;font-weight:bold">1</span>,<span style="color:#0086f7;font-weight:bold">2</span>,<span style="color:#0086f7;font-weight:bold">3</span>,<span style="color:#0086f7;font-weight:bold">4</span>], [<span style="color:#0086f7;font-weight:bold">5</span>,<span style="color:#0086f7;font-weight:bold">6</span>,<span style="color:#0086f7;font-weight:bold">7</span>,<span style="color:#0086f7;font-weight:bold">8</span>], [<span style="color:#0086f7;font-weight:bold">9</span>,<span style="color:#0086f7;font-weight:bold">10</span>,<span style="color:#0086f7;font-weight:bold">11</span>,<span style="color:#0086f7;font-weight:bold">12</span>]])
+m
+<span style="color:#080;background-color:#0f140f;font-style:italic"># displays the following result:</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># array([[ 1,  2,  3,  4],</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic">#        [ 5,  6,  7,  8],</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic">#        [ 9, 10, 11, 12]])</span>
+
+m.T
+<span style="color:#080;background-color:#0f140f;font-style:italic"># displays the following result:</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># array([[ 1,  5,  9],</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic">#        [ 2,  6, 10],</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic">#        [ 3,  7, 11],</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic">#        [ 4,  8, 12]])</span>
+</code></pre></div>]]></content>
+        </item>
+        
+        <item>
+            <title>Core Programming Principles</title>
+            <link>https://itsg.dev/posts/core-programming-principles/</link>
+            <pubDate>Sat, 20 Jan 2018 00:00:00 +0000</pubDate>
+            
+            <guid>https://itsg.dev/posts/core-programming-principles/</guid>
+            <description>#integer x = 2 x 2 #float y = 2.5 y 2.5 #string a = &amp;#34;hello&amp;#34; b = &amp;#39;hello2&amp;#39; a b hello hello2 #logical / boolean q1 = True q True </description>
+            <content type="html"><![CDATA[<p><img src="/images/articles/2018/core-programming-principles.jpg" alt="Core-Programming-Principles" title="core-programming-principles.jpg"></p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic">#integer</span>
+x = <span style="color:#0086f7;font-weight:bold">2</span>
+</code></pre></div><div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">x
+</code></pre></div><pre><code>2
+</code></pre><div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic">#float</span>
+y = <span style="color:#0086f7;font-weight:bold">2.5</span>
+</code></pre></div><div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">y
+</code></pre></div><pre><code>2.5
+</code></pre><div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic">#string</span>
+a = <span style="color:#0086d2">&#34;hello&#34;</span>
+b = <span style="color:#0086d2">&#39;hello2&#39;</span>
+</code></pre></div><div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">a
+b
+</code></pre></div><pre><code>hello
+hello2
+</code></pre><div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic">#logical / boolean</span>
+q1 = True
+</code></pre></div><div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">q
+</code></pre></div><pre><code>True
+</code></pre>]]></content>
+        </item>
+        
+        <item>
+            <title>How a software developer re-focused his life to learn artificial intelligence</title>
+            <link>https://itsg.dev/posts/how-a-software-developer-re-focused-his-life-to-learn-artificial-intelligence/</link>
+            <pubDate>Wed, 17 Jan 2018 00:00:00 +0000</pubDate>
+            
+            <guid>https://itsg.dev/posts/how-a-software-developer-re-focused-his-life-to-learn-artificial-intelligence/</guid>
+            <description>Why would a young man quit his comfortable life and enjoyable career to „survive on benefits“ while studying a new field without any certainty as to where it may lead him? Tune in to hear Tuatini Godard&amp;rsquo;s story and life philosophy.
+Along the way, you will hear us discuss the wide range of tools and ideas within the space of deep learning and AI, as well as our in depth discussion about the current state of hardware technology for deep learning and where it is headed.</description>
+            <content type="html"><![CDATA[<!-- raw HTML omitted -->
+<p>Why would a young man quit his comfortable life and enjoyable career to „survive on benefits“ while studying a new field without any certainty as to where it may lead him? Tune in to hear Tuatini Godard&rsquo;s story and life philosophy.</p>
+<p>Along the way, you will hear us discuss the wide range of tools and ideas within the space of deep learning and AI, as well as our in depth discussion about the current state of hardware technology for deep learning and where it is headed.</p>
+<p>Let&rsquo;s begin!</p>
+<!-- raw HTML omitted -->
+<h3 id="in-this-episode-you-will-learn">IN THIS EPISODE YOU WILL LEARN:</h3>
+<ol>
+<li>Using the Pomodoro Technique to Improve Productivity (10:01)</li>
+<li>Exploring the World of Deep Learning and AI (19:25)</li>
+<li>The Role of Games in AI Development (23:51)</li>
+<li>On Only Doing What Makes You Happy (29:17)</li>
+<li>Mathematics in Data Science (39:04)</li>
+<li>Tools: TensorFlow vs PyTorch (41:44)</li>
+<li>Appropriate Hardware for Deep Learning (45:45)</li>
+<li>The Next Big Thing: Edge Computing (54:04)</li>
+</ol>
+]]></content>
+        </item>
+        
+    </channel>
+</rss>
