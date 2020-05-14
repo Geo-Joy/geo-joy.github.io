@@ -13,10 +13,10 @@
     
     <item>
       <title>Machine Learning &amp; Deep learning Terms</title>
-      <link>https://itsg.dev/posts/machine-learning-and-deep-learning-terms/</link>
+      <link>https://itsg.dev/blog/machine-learning-and-deep-learning-terms/</link>
       <pubDate>Tue, 06 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://itsg.dev/posts/machine-learning-and-deep-learning-terms/</guid>
+      <guid>https://itsg.dev/blog/machine-learning-and-deep-learning-terms/</guid>
       <description>The Machine Learning Landscape 1. What is Machine Learning?  It is the field of study that gives computers the ability to learn without being explicitly programmed.  2. Types of Machine Learning  Whether or not they are trained with human supervision  Supervised Learning Unsupervised Learning Semisupervised Learning Reinforcement Learning   Whether or not they can learn incrementally on the fly  Online Learning Batch Learning   Whether they work by simly comparing new data points to known data points, or instead detect patterns in the training data and build a predictive model, much like scientists do.</description>
     </item>
     

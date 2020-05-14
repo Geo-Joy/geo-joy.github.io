@@ -1,5 +1,5 @@
 ---
-section: post
+section: blogs
 date: "2018-01-27"
 title: "Basics to get started with Tensorflow"
 description: "Things to learn before starting up with Tensorflow"

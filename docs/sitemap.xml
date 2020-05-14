@@ -8,22 +8,22 @@
   </url>
   
   <url>
+    <loc>https://itsg.dev/blog/</loc>
+    <lastmod>2018-03-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://itsg.dev/</loc>
     <lastmod>2018-03-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://itsg.dev/posts/machine-learning-and-deep-learning-terms/</loc>
+    <loc>https://itsg.dev/blog/machine-learning-and-deep-learning-terms/</loc>
     <lastmod>2018-03-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://itsg.dev/tags/machine_learning/</loc>
-    <lastmod>2018-03-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://itsg.dev/posts/</loc>
     <lastmod>2018-03-06T00:00:00+00:00</lastmod>
   </url>
   
@@ -38,7 +38,7 @@
   </url>
   
   <url>
-    <loc>https://itsg.dev/posts/building-a-chatbot-with-deep-natural-language-processing-using-tensorflow-part-1-2-3/</loc>
+    <loc>https://itsg.dev/blog/building-a-chatbot-with-deep-natural-language-processing-using-tensorflow-part-1-2-3/</loc>
     <lastmod>2018-02-10T00:00:00+00:00</lastmod>
   </url>
   
@@ -83,7 +83,7 @@
   </url>
   
   <url>
-    <loc>https://itsg.dev/posts/object-detection-using-single-shot-detection-algorithm/</loc>
+    <loc>https://itsg.dev/blog/object-detection-using-single-shot-detection-algorithm/</loc>
     <lastmod>2018-02-05T00:00:00+00:00</lastmod>
   </url>
   
@@ -98,7 +98,7 @@
   </url>
   
   <url>
-    <loc>https://itsg.dev/posts/predicting-stock-price-using-recurrent-neural-network/</loc>
+    <loc>https://itsg.dev/blog/predicting-stock-price-using-recurrent-neural-network/</loc>
     <lastmod>2018-02-03T00:00:00+00:00</lastmod>
   </url>
   
@@ -113,12 +113,12 @@
   </url>
   
   <url>
-    <loc>https://itsg.dev/posts/intro-to-recurrent-neural-network-rnn/</loc>
+    <loc>https://itsg.dev/blog/intro-to-recurrent-neural-network-rnn/</loc>
     <lastmod>2018-01-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://itsg.dev/posts/basics-to-get-started-with-tensorflow/</loc>
+    <loc>https://itsg.dev/blog/basics-to-get-started-with-tensorflow/</loc>
     <lastmod>2018-01-27T00:00:00+00:00</lastmod>
   </url>
   
@@ -128,7 +128,7 @@
   </url>
   
   <url>
-    <loc>https://itsg.dev/posts/matrix-math-and-numpy-refresher/</loc>
+    <loc>https://itsg.dev/blog/matrix-math-and-numpy-refresher/</loc>
     <lastmod>2018-01-21T00:00:00+00:00</lastmod>
   </url>
   
@@ -143,18 +143,28 @@
   </url>
   
   <url>
-    <loc>https://itsg.dev/posts/core-programming-principles/</loc>
+    <loc>https://itsg.dev/blog/core-programming-principles/</loc>
     <lastmod>2018-01-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://itsg.dev/posts/how-a-software-developer-re-focused-his-life-to-learn-artificial-intelligence/</loc>
+    <loc>https://itsg.dev/blog/how-a-software-developer-re-focused-his-life-to-learn-artificial-intelligence/</loc>
     <lastmod>2018-01-17T11:27:30+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://itsg.dev/tags/podcast/</loc>
     <lastmod>2018-01-17T11:27:30+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://itsg.dev/profile/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://itsg.dev/projects/</loc>
+    <priority>0</priority>
   </url>
   
   <url>

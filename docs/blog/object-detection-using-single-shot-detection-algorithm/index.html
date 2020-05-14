@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="male https://graph.facebook.com/10207052454221714/picture?type=large Geo Joy Geo-Joy ">
+<meta name="description" content="Addon Prelude Read the article from intel developers zone.https://software.intel.com/en-us/articles/a-closer-look-at-object-detection-recognition-and-tracking
+ Prelude I have taken the explanation from towardsdatascience.com - Understanding SSD MultiBox — Real-Time Object Detection In Deep Learningand further simplified it for much better understanding. Especially for the slow ones like me :P
+Architecture of SSD mean Average Precision (mAP) Lets try to understand what is Average Precision:e.g. Let’s say, we recommended 7 products to a customer and the 1st, 4th, 5th, 6th product recommended was correct." />
+<meta name="keywords" content=", computer_vision, ssd, tensorflow, project, deep_learning, tutorial" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="https://itsg.dev/blog/object-detection-using-single-shot-detection-algorithm/" />
+
+
+    <title>
+        
+            Object Detection using Single Shot Detection Algorithm :: its Geo  — Artificial Intelligence // Microservices // Web Architect // Mentor
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="/main.min.753fac8f03736f0edc9be411eb20cee875dd7bb8e73c8155fbf6a629c863f4ca.css">
+
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="msapplication-TileColor" content="#252627">
+    <meta name="theme-color" content="#252627">
+
+
+
+<meta itemprop="name" content="Object Detection using Single Shot Detection Algorithm">
+<meta itemprop="description" content="Using tensorflow to build a chatbot demonstrating the power of Deep Natural Language Processing">
+<meta itemprop="datePublished" content="2018-02-05T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-02-05T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="1316">
+
+
+
+<meta itemprop="keywords" content="computer_vision,ssd,tensorflow,project,deep_learning,tutorial," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Object Detection using Single Shot Detection Algorithm"/>
+<meta name="twitter:description" content="Using tensorflow to build a chatbot demonstrating the power of Deep Natural Language Processing"/>
+
+
+
+
+
+
+
+    <meta property="article:published_time" content="2018-02-05 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+            <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">
+                <a href="/blog" style="text-decoration: none;">
+                    $ cd /itsG/blog/     
+                </a>
+            </span>
+            <span class="logo__cursor" style=
+                  "
+                   background-color:#51fe5fa6;
+                   ">
+            </span>
+        
+    </div>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://itsg.dev/">Home</a></li><li><a href="https://itsg.dev/blog/">Blog</a></li><li><a href="https://itsg.dev/projects">Projects</a></li><li><a href="https://itsg.dev/profile">Profile</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            
+            </p>
+        </div>
+
+        <article>
+            <h2 class="post-title"><a href="https://itsg.dev/blog/object-detection-using-single-shot-detection-algorithm/">Object Detection using Single Shot Detection Algorithm</a></h2>
+
+            
+
+            <div class="post-content">
+                <!-- raw HTML omitted -->
+<p><img src="/images/articles/2018/computer_vision/object-detection-recognition-and-tracking-intro.jpg" alt="Computer Vision" title="Computer Vision Intro"></p>
+<!-- raw HTML omitted -->
+<h1 id="addon-prelude">Addon Prelude</h1>
+<p><code>Read the article from intel developers zone.</code><!-- raw HTML omitted -->
+<a href="https://software.intel.com/en-us/articles/a-closer-look-at-object-detection-recognition-and-tracking">https://software.intel.com/en-us/articles/a-closer-look-at-object-detection-recognition-and-tracking</a></p>
+<hr>
+<h1 id="prelude">Prelude</h1>
+<p>I have taken the explanation from <!-- raw HTML omitted -->towardsdatascience.com - Understanding SSD MultiBox — Real-Time Object Detection In Deep Learning<!-- raw HTML omitted --> and further simplified it for much better understanding. Especially for the slow ones like me :P</p>
+<h2 id="architecture-of-ssd">Architecture of SSD</h2>
+<p><img src="/images/articles/2018/computer_vision/som_architecture.png" alt="som_architecture.png" title="som_architecture.png"></p>
+<!-- raw HTML omitted -->
+<h3 id="mean-average-precision-map">mean Average Precision (mAP)</h3>
+<p>Lets try to understand what is Average Precision:<!-- raw HTML omitted -->e.g. Let’s say, we recommended 7 products to a customer and the 1st, 4th, 5th, 6th product recommended was correct. So now the result would look like - 1, 0, 0, 1, 1, 1, 0. <!-- raw HTML omitted --></p>
+<p>In this case,</p>
+<ul>
+<li>The precision at 1 will be: 1/1 = 1</li>
+<li>The precision at 2 will be: 0/2 = 0</li>
+<li>The precision at 3 will be: 0/3 = 0</li>
+<li>The precision at 4 will be: 2/4 = 0.5</li>
+<li>The precision at 5 will be: 3/5 = 0.6</li>
+<li>The precision at 6 will be: 4/6 = 0.66</li>
+<li>The precision at 7 will be: 0/7 = 0</li>
+</ul>
+<p>Average Precision will be: 1 + 0 + 0 + 0.5 + 0.6 + 0.66 + 0 /4 = 0.69 — Please note that here we always sum over the correct images, hence we are <code>dividing by 4 and not 7</code>.
+MAP is just an extension, where the mean is taken across all AP scores.</p>
+<p><a href="https://medium.com/@pds.bangalore/mean-average-precision-abd77d0b9a7e">thanks to Pallavi Sahoo</a></p>
+<p>The paper about <a href="https://arxiv.org/abs/1512.02325">SSD: Single Shot MultiBox Detector</a> (by C. Szegedy et al.) was released at the end of November 2016 and reached new records in terms of performance and precision for object detection tasks, scoring over 74% mAP (mean Average Precision) at 59 frames per second on standard datasets such as <a href="http://host.robots.ox.ac.uk/pascal/VOC/">PascalVOC</a> and <a href="http://cocodataset.org/#home">COCO</a>. To better understand SSD, let’s start by explaining where the name of this architecture comes from:</p>
+<h1 id="lets-start">Lets Start!</h1>
+<hr>
+<h1 id="importing-libraries">Importing Libraries</h1>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#fb660a;font-weight:bold">import</span> torch
+<span style="color:#fb660a;font-weight:bold">from</span> torch.autograd <span style="color:#fb660a;font-weight:bold">import</span> Variable
+<span style="color:#fb660a;font-weight:bold">import</span> cv2
+<span style="color:#fb660a;font-weight:bold">from</span> data <span style="color:#fb660a;font-weight:bold">import</span> BaseTransform, VOC_CLASSES <span style="color:#fb660a;font-weight:bold">as</span> labelmap
+<span style="color:#fb660a;font-weight:bold">from</span> ssd <span style="color:#fb660a;font-weight:bold">import</span> build_ssd
+<span style="color:#fb660a;font-weight:bold">import</span> imageio
+</code></pre></div><ul>
+<li><code>Torch</code>: Library that cointain <code>PyTorch</code> - it contains the dynamic graphs for efficient calculation of the gradient of composition functions in backpropagation(computing weights).</li>
+<li><code>torch.autograd</code>: module responsible for gradient decent</li>
+<li><code>torch.autograd import Variable</code>: used to convert Tensors into Torch Variables that contains both the tensor and the gradient.</li>
+<li><code>cv2</code>: to draw rectangles on images not the detection</li>
+<li><code>data</code>: is just a folder containing the classes BaseTransform, VOC_CLASSES (pretrained model using CUDA)</li>
+<li><code>BaseTransform</code>: is a class for image transformationns making the input images compatible with neural network</li>
+<li><code>VOC_CLASSES</code>: for encoding of classes eg: planes as 1, dogs as 2 so we can work with numbers and not texts</li>
+<li><code>ssd</code>: library of the single shot multibox detector</li>
+<li><code>build_ssd</code>: is the constructor to build the architecture of single shot multibo xarchitecture.</li>
+<li><code>imageio</code>: library to process the images of the video (an alternative to <a href="https://pillow.readthedocs.io/en/latest/">PIL</a>)</li>
+</ul>
+<h1 id="building-a-function-for-object-detection">Building a Function for Object Detection</h1>
+<p>Now we are going to do a frame by frame detection i.e we user <code>imageio</code> library to extract all the frames calculating <code>fps</code> (frames per second) - then do the object detection and stitch back all frames to a video.</p>
+<p>We will create a function to do all there operation called <code>detect</code> which will return the <code>frame</code> containing the rectangle on the detected image and its label,</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#fb660a;font-weight:bold">def</span> <span style="color:#ff0086;font-weight:bold">detect</span>(frame, net, transform):
+</code></pre></div><ul>
+<li><code>frame</code>: image on which the detect function will be applied</li>
+<li><code>net</code>: this will be the single shot multibox detector nueral network</li>
+<li><code>transform</code>: transform the input images so that they are compatible with the network</li>
+</ul>
+<p>Now lets work on the first input the <code>frame</code>.</p>
+<p>We need to get the height and weight of the image. We need to take this from the frame and it has as attribute <code>.shape</code> which returns a vector of three elements [height, weight, number_of_channels(1 for black and white &amp; 3 for color)]</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">height, width = frame.shape[:<span style="color:#0086f7;font-weight:bold">2</span>] <span style="color:#080;background-color:#0f140f;font-style:italic">#range 0 to 2 except 2</span>
+</code></pre></div><h1 id="image-transformations">Image Transformations</h1>
+<p>There are 4 transformations that we need to apply on to the image(frame)</p>
+<p>i.e original image(frame) =&gt; Torch varible compatible with Nueral Network.</p>
+<ol>
+<li>
+<p>Is to apply the <code>transform</code> transformation to make sure the image has the right dimensions and color value.</p>
+</li>
+<li>
+<p>Convert this transformed frame from <code>numpy array</code> to <code>torch_tensor</code></p>
+</li>
+<li>
+<p>Add a fake dimention to <code>torch_tensor</code> for batch</p>
+</li>
+<li>
+<p>Convert it to a torch variable(both tensor and gradient)</p>
+</li>
+<li></li>
+</ol>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">frame_transformed = transform(frame)[<span style="color:#0086f7;font-weight:bold">0</span>] <span style="color:#080;background-color:#0f140f;font-style:italic"># returns 2 elements. we need only the transformed frame of index [0]</span>
+</code></pre></div><ol start="2">
+<li></li>
+</ol>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">x = torch.from_numpy(frame_transformed).permute(<span style="color:#0086f7;font-weight:bold">2</span>,<span style="color:#0086f7;font-weight:bold">0</span>,<span style="color:#0086f7;font-weight:bold">1</span>) <span style="color:#080;background-color:#0f140f;font-style:italic"># the pre-trained SSD model was done in GRB format not in RGB. Hence the conversion.</span>
+</code></pre></div><p>3.The neural network cannot accept single input vector or image it only accepts in batches.
+So now we need to create a structure with the first dimension as the batch and other dimension as the input.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">(x.unsqueeze(<span style="color:#0086f7;font-weight:bold">0</span>) <span style="color:#080;background-color:#0f140f;font-style:italic"># 0 is the index of the batch and batch should be the first index in the tensor.</span>
+</code></pre></div><p>4.Convert this batch of torch tensor of inputs to a torch variable.
+<!-- raw HTML omitted --> A torch variable is a highly advanced variable that containes both a tensor and the gradient.<!-- raw HTML omitted --> This torch variable will become an element of the dynamic graph which will conpute the gradients very efficiently of any backpropagation</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">
+</code></pre></div><p>Its time to feed our <code>torch variable</code> to the SSD Neural Network</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">y = net(x)
+</code></pre></div><p>Now we have the output <code>y</code>. This y directly does not contain what we are interested in i.e the result of the detection wheather we have a dog or a human in frame. So to get the specific information from y we need to use the <code>data</code> attribute from y</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">detections = y.data
+</code></pre></div><p>Now we need to create a new tensor which will have dimention as [width, height, width, height].<!-- raw HTML omitted --> This is because the position of the detected object inside the image has to be normalized between 0 &amp; 1 and to do this normalization we will need this scaled tensor with these 4 dimensions.</p>
+<p>The first 2 width &amp; height corresponds to the scalar values of the upper left corner</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">scale = torch.Tensor([width, height, width, height])
+</code></pre></div><p>The detection tensor contains 4 elements
+batch: we created the fake dimension with unsqueeze
+number of classes: the objects that can be detected like dog, place, boat, car
+number of occurance of the class: count of the previous classes. like 2 dogs in a frame.
+tuple: 5 element tuple - score, x0, y0, x1, y1 - for each occurance we get a score and its cordinates upper left corner and lower right corner. score(threshold) &gt; 0.6 to be found.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#fb660a;font-weight:bold">for</span> i in range(detections.size(<span style="color:#0086f7;font-weight:bold">1</span>)): <span style="color:#080;background-color:#0f140f;font-style:italic">#detection(size(i)) is the number of classes</span>
+    j = <span style="color:#0086f7;font-weight:bold">0</span> <span style="color:#080;background-color:#0f140f;font-style:italic"># occurances of class i</span>
+    <span style="color:#fb660a;font-weight:bold">while</span> detections[<span style="color:#0086f7;font-weight:bold">0</span>, i, j, <span style="color:#0086f7;font-weight:bold">0</span>] &gt;= <span style="color:#0086f7;font-weight:bold">0.6</span>: <span style="color:#080;background-color:#0f140f;font-style:italic"># for score &gt;= 0.6 [batch,class,occurance, score]</span>
+        points = (detections[<span style="color:#0086f7;font-weight:bold">0</span>, i, j, <span style="color:#0086f7;font-weight:bold">1</span>:] * scale).numpy() <span style="color:#080;background-color:#0f140f;font-style:italic">#here we are not interested in score but the cordinates hence 1: - scale(normalize) and convert to numpy array for openCV</span>
+        <span style="color:#080;background-color:#0f140f;font-style:italic">#draw rectangle - frame color red - thickness of 2</span>
+        cv2.rectangle(frame, (int(points[<span style="color:#0086f7;font-weight:bold">0</span>]), int(points[<span style="color:#0086f7;font-weight:bold">1</span>])), (int(points[<span style="color:#0086f7;font-weight:bold">2</span>]), int(points[<span style="color:#0086f7;font-weight:bold">3</span>])), (<span style="color:#0086f7;font-weight:bold">255</span>, <span style="color:#0086f7;font-weight:bold">0</span>, <span style="color:#0086f7;font-weight:bold">0</span>), <span style="color:#0086f7;font-weight:bold">2</span>)
+        <span style="color:#080;background-color:#0f140f;font-style:italic">#print the label - labelmap (to get the class text)is the dictionary from VOC_CLASSES we imported - i-1 is for phthon index 0 - then font - size - color - continues text not dots.</span>
+        cv2.putText(frame, labelmap[i-<span style="color:#0086f7;font-weight:bold">1</span>], (int(points[<span style="color:#0086f7;font-weight:bold">0</span>]), int(points[<span style="color:#0086f7;font-weight:bold">1</span>])), cv2.FONT_HERSHEY_SIMPLEX, <span style="color:#0086f7;font-weight:bold">2</span>, (<span style="color:#0086f7;font-weight:bold">255</span>, <span style="color:#0086f7;font-weight:bold">255</span>, <span style="color:#0086f7;font-weight:bold">255</span>), <span style="color:#0086f7;font-weight:bold">2</span>, cv2.LINE_AA)
+        j += <span style="color:#0086f7;font-weight:bold">1</span> <span style="color:#080;background-color:#0f140f;font-style:italic"># increment j</span>
+<span style="color:#fb660a;font-weight:bold">return</span> frame <span style="color:#080;background-color:#0f140f;font-style:italic"># return of the for loop.</span>
+</code></pre></div><h1 id="creating-the-ssd-neural-network">Creating the SSD Neural Network</h1>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">net = build_ssd(<span style="color:#0086d2">&#39;test&#39;</span>) <span style="color:#080;background-color:#0f140f;font-style:italic"># test phase as we are using a pre-trained model from .pth file next.</span>
+</code></pre></div><h1 id="load-the-weights-from-already-pretrained-nn">load the weights from already pretrained NN</h1>
+<p>ssd300_mAP_77.43_v2.pth is pre-trained of about 30-40 objects.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic">#to open a tensor containing weights</span>
+net.load_state_dict(torch.load(<span style="color:#0086d2">&#39;ssd300_mAP_77.43_v2.pth&#39;</span>, map_location = <span style="color:#fb660a;font-weight:bold">lambda</span> storage, loc: storage))
+</code></pre></div><p>#Transformation</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic">#Making the frame is compatible with the neural network.</span>
+transform = BaseTransform(net.size, (<span style="color:#0086f7;font-weight:bold">104</span>/<span style="color:#0086f7;font-weight:bold">256.0</span>, <span style="color:#0086f7;font-weight:bold">117</span>/<span style="color:#0086f7;font-weight:bold">256.0</span>, <span style="color:#0086f7;font-weight:bold">123</span>/<span style="color:#0086f7;font-weight:bold">126.0</span>)) <span style="color:#080;background-color:#0f140f;font-style:italic">#net.size is  the target size of the images, tupple of 3 arguments - taken from the pretrained network (under certain convention for color values.)</span>
+</code></pre></div><h1 id="doing-object-detection-in-video">Doing object detection in video</h1>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">reader = imageio.get_reader(<span style="color:#0086d2">&#39;funny_dog.mp4&#39;</span>)
+fps = reader.get_meta_data()[<span style="color:#0086d2">&#39;fps&#39;</span>]
+writer = imageio.get_writer(<span style="color:#0086d2">&#39;output.mp4&#39;</span>, fps = fps)
+<span style="color:#fb660a;font-weight:bold">for</span> i, frame in enumerate(reader):
+    processed_frame = detect(frame, net.eval(), transform)
+    writer.append_data(processed_frame)
+    <span style="color:#fb660a;font-weight:bold">print</span>(i)
+writer.close()
+</code></pre></div><h1 id="final-output">Final Output</h1>
+<!-- raw HTML omitted -->
+<h1 id="source-code">Source Code</h1>
+<!-- raw HTML omitted -->
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+  				<p>
+  					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://itsg.dev/tags/computer_vision">computer_vision</a></span><span class="tag"><a href="https://itsg.dev/tags/ssd">ssd</a></span><span class="tag"><a href="https://itsg.dev/tags/tensorflow">tensorflow</a></span><span class="tag"><a href="https://itsg.dev/tags/project">project</a></span><span class="tag"><a href="https://itsg.dev/tags/deep_learning">deep_learning</a></span><span class="tag"><a href="https://itsg.dev/tags/tutorial">tutorial</a></span>
+  				</p>
+  		</div>
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2020</span>
+            
+                <span><a href="https://itsg.dev">Geo Joy</a></span>
+            
+            
+            <span> <a href="https://itsg.dev/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>with &#10084; from Bangalore, India</a></span>
+            <span>theme inspiration from  <a href="https://github.com/rhazdon/hugo-theme-hello-friend-ng">hello-friend</a></span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="/bundle.min.dc716e9092c9820b77f96da294d0120aeeb189b5bcea9752309ebea27fd53bbe6b13cffb2aca8ecf32525647ceb7001f76091de4199ac5a3caa432c070247f5b.js" integrity="sha512-3HFukJLJggt3&#43;W2ilNASCu6xibW86pdSMJ6&#43;on/VO75rE8/7KsqOzzJSVkfOtwAfdgkd5BmaxaPKpDLAcCR/Ww=="></script>
+
+
+
+    </body>
+</html>

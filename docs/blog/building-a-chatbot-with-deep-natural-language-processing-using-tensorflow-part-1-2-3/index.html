@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="male https://graph.facebook.com/10207052454221714/picture?type=large Geo Joy Geo-Joy ">
+<meta name="description" content="This tutorial is divided into the following parts  Installing and configuring Anaconda Getting the Dataset Data Preprocessing Building the Seq2Seq model Training the Seq2Seq model Testing the Seq2Seq model Other Implementation  Lets Start PART-1. Installing and configuring Anaconda 1a. Installing Anaconda From anaconda.com/what-is-anaconda/
+ With over 6 million users, the open source Anaconda Distribution is the easiest way to do Python data science and machine learning. It includes hundreds of popular &amp;gt; data science packages and the conda package and virtual environment manager for Windows, Linux, and MacOS." />
+<meta name="keywords" content=", Chatbot, NLP, TensorFlow, Project, Deep Learning, Artificial Intelligence, Tutorial" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="https://itsg.dev/blog/building-a-chatbot-with-deep-natural-language-processing-using-tensorflow-part-1-2-3/" />
+
+
+    <title>
+        
+            Building a Chatbot with Deep Natural Language Processing using Tensorflow [PART-1-2-3] :: its Geo  — Artificial Intelligence // Microservices // Web Architect // Mentor
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="/main.min.753fac8f03736f0edc9be411eb20cee875dd7bb8e73c8155fbf6a629c863f4ca.css">
+
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="msapplication-TileColor" content="#252627">
+    <meta name="theme-color" content="#252627">
+
+
+
+<meta itemprop="name" content="Building a Chatbot with Deep Natural Language Processing using Tensorflow [PART-1-2-3]">
+<meta itemprop="description" content="Using tensorflow to build a chatbot demonstrating the power of Deep Natural Language Processing">
+<meta itemprop="datePublished" content="2018-02-10T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-02-10T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="1980">
+
+
+
+<meta itemprop="keywords" content="Chatbot,NLP,TensorFlow,Project,Deep Learning,Artificial Intelligence,Tutorial," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Building a Chatbot with Deep Natural Language Processing using Tensorflow [PART-1-2-3]"/>
+<meta name="twitter:description" content="Using tensorflow to build a chatbot demonstrating the power of Deep Natural Language Processing"/>
+
+
+
+
+
+
+
+    <meta property="article:published_time" content="2018-02-10 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+            <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">
+                <a href="/blog" style="text-decoration: none;">
+                    $ cd /itsG/blog/     
+                </a>
+            </span>
+            <span class="logo__cursor" style=
+                  "
+                   background-color:#51fe5fa6;
+                   ">
+            </span>
+        
+    </div>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://itsg.dev/">Home</a></li><li><a href="https://itsg.dev/blog/">Blog</a></li><li><a href="https://itsg.dev/projects">Projects</a></li><li><a href="https://itsg.dev/profile">Profile</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            
+            </p>
+        </div>
+
+        <article>
+            <h2 class="post-title"><a href="https://itsg.dev/blog/building-a-chatbot-with-deep-natural-language-processing-using-tensorflow-part-1-2-3/">Building a Chatbot with Deep Natural Language Processing using Tensorflow [PART-1-2-3]</a></h2>
+
+            
+
+            <div class="post-content">
+                <!-- raw HTML omitted -->
+<p><img src="/images/articles/2018/chat-bot-intro-image.jpg" alt="Chat Bot" title="Chatbot"></p>
+<h4 id="this-tutorial-is-divided-into-the-following-parts">This tutorial is divided into the following parts</h4>
+<ol>
+<li>Installing and configuring Anaconda</li>
+<li>Getting the Dataset</li>
+<li>Data Preprocessing</li>
+<li>Building the Seq2Seq model</li>
+<li>Training the Seq2Seq model</li>
+<li>Testing the Seq2Seq model</li>
+<li>Other Implementation</li>
+</ol>
+<h1 id="lets-start">Lets Start</h1>
+<h2 id="part-1-installing-and-configuring-anaconda">PART-1. Installing and configuring Anaconda</h2>
+<h3 id="1a-installing-anaconda">1a. Installing Anaconda</h3>
+<p><img src="/images/articles/2018/anaconda-logo-dark.png" alt="Anaconda Logo" title="Anaconda IDE"></p>
+<p><a href="https://www.anaconda.com/what-is-anaconda/">From anaconda.com/what-is-anaconda/</a></p>
+<blockquote>
+<p>With over 6 million users, the open source Anaconda Distribution is the easiest way to do Python data science and machine learning. It includes hundreds of popular &gt; data science packages and the conda package and virtual environment manager for Windows, Linux, and MacOS. Conda makes it quick and easy to install, run, and upgrade complex data science and machine learning environments like Scikit-learn, TensorFlow, and SciPy. Anaconda Distribution is the foundation of millions of data science projects as well as Amazon Web Services&rsquo; Machine Learning AMIs and Anaconda for Microsoft on Azure and Windows.</p>
+</blockquote>
+<p><a href="https://www.anaconda.com/download/">Download for latest python version</a></p>
+<h3 id="1b-configuring-anaconda--creating-virtual-environment">1b. Configuring Anaconda &amp; Creating Virtual Environment</h3>
+<blockquote>
+<p>A virtual environment is a named, isolated, working copy of Python that that maintains its own files, directories, and paths so that you can work with specific versions of libraries or Python itself without affecting other Python projects. Virtual environmets make it easy to cleanly separate different projects and avoid problems with different dependencies and version requiremetns across components. The conda command is the preferred interface for managing intstallations and virtual environments with the Anaconda Python distribution. If you have a vanilla Python installation or other Python distribution see virtualenv</p>
+</blockquote>
+<p>I will name the virtual environment as <strong>chatbot</strong></p>
+<p>Open terminal / Command Prompt and type.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">conda create -n chatbot python=<span style="color:#0086f7;font-weight:bold">3.5</span> anaconda
+</code></pre></div><p>After finishing the download we need to activate our newly created environment. To do this type</p>
+<p>For mac /linux users</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">source activate chatbot
+</code></pre></div><p>For windows users (Powershell users - try to activate using Command prompt. )</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">activate chatbot
+</code></pre></div><p><img src="/images/articles/2018/activate-chatbot.png" alt="Activating source" title="Activating source"></p>
+<h3 id="1c-installing-tensorflow">1c. Installing TensorFlow</h3>
+<p>Now after activating our virtual environment named <strong>chatbot</strong>. We now have to install tensorflow library.
+I will be using v1.0.0 of tensorflow for this tutorial.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">pip install tensorflow==<span style="color:#0086f7;font-weight:bold">1.0</span>.<span style="color:#0086f7;font-weight:bold">0</span>
+</code></pre></div><p><img src="/images/articles/2018/activate-chatbot-tensorflow.png" alt="Installing Tensorflow" title="Installing Tensorflow"></p>
+<h3 id="1d-finalizing-setup">1d. Finalizing setup.</h3>
+<p>Its time to open our installed anaconda program (Anaconda Navigator).
+After opening Anaconda Navigator, we need to switch the application to use the virtual environment that we have created.
+To do this use the dropdown menu on top left corner - near to <strong>Application on</strong> and select <strong>chatbot</strong> from the list.</p>
+<p><img src="/images/articles/2018/anaconda-switch-env.png" alt="Switch Env" title="Switch Env"></p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted -->
+Now select &ldquo;SPYDER&rdquo; to start our development IDE.</p>
+<blockquote>
+<p>Spyder is a powerful interactive development environment for the Python language with advanced editing, interactive testing, debugging and introspection features. Additionally, Spyder is a numerical computing environment thanks to the support of IPython and popular Python libraries such as NumPy, SciPy, or matplotlib.</p>
+</blockquote>
+<p><img src="/images/articles/2018/anaconda-spyder.png" alt="Spyder" title="Spyder"></p>
+<p>In FileExplorer select a working directory for this project.</p>
+<p><img src="/images/articles/2018/spyder-file-explorer.png" alt="spyder-file-explorer" title="spyder-file-explorer"></p>
+<hr>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="part-2-getting-the-dataset">PART-2. Getting the Dataset</h2>
+<p>Download the dataset from - <a href="http://www.cs.cornell.edu/~cristian/data/cornell_movie_dialogs_corpus.zip">cornell_movie_dialogs_corpus.zip</a></p>
+<p>This corpus contains a large metadata-rich collection of fictional conversations extracted from raw movie scripts:</p>
+<ul>
+<li>220,579 conversational exchanges between 10,292 pairs of movie characters</li>
+<li>involves 9,035 characters from 617 movies</li>
+<li>in total 304,713 utterances</li>
+<li>movie metadata included:
+<ul>
+<li>genres</li>
+<li>release year</li>
+<li>IMDB rating</li>
+<li>number of IMDB votes</li>
+<li>IMDB rating</li>
+</ul>
+</li>
+<li>character metadata included:
+<ul>
+<li>gender (for 3,774 characters)</li>
+<li>position on movie credits (3,321 characters)</li>
+</ul>
+</li>
+<li>see README.txt (included) for details</li>
+</ul>
+<p>We are interested only in two files from the downloaded zip.</p>
+<ol>
+<li>movie_conversations.txt
+<ul>
+<li>each row has one single <strong>conversations</strong> between characters. <!-- raw HTML omitted -->u0 +++$+++ u2 +++$+++ m0 +++$+++ [&lsquo;L194&rsquo;, &lsquo;L195&rsquo;, &lsquo;L196&rsquo;, &lsquo;L197&rsquo;]</li>
+</ul>
+</li>
+<li>movie_lines.txt
+<ul>
+<li>contains some extract from movies. <!-- raw HTML omitted --> L1045 +++$+++ u0 +++$+++ m0 +++$+++ BIANCA +++$+++ They do not!<!-- raw HTML omitted -->L1044 +++$+++ u2 +++$+++ m0 +++$+++ CAMERON +++$+++ They do to!
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted --><!-- raw HTML omitted --></li>
+</ul>
+</li>
+</ol>
+<h4 id="dataset-explanation">DATAset explanation</h4>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">movie_lines.txt
+L1045 +++$+++ u0 +++$+++ m0 +++$+++ BIANCA +++$+++ They do not!
+L1044 +++$+++ u2 +++$+++ m0 +++$+++ CAMERON +++$+++ 
+</code></pre></div><p><strong>+++$+++</strong>: column splitter<!-- raw HTML omitted -->
+<strong>L1045</strong>: Just an ID for the column<!-- raw HTML omitted -->
+<strong>u0</strong>: id of user 0<!-- raw HTML omitted -->
+<strong>m0</strong>: if of movie 0<!-- raw HTML omitted -->
+<strong>BIANCA</strong>: name of user 0<!-- raw HTML omitted -->
+<strong>They do not!</strong>: dialog of user0 BIANCA<!-- raw HTML omitted --></p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">movie_conversations.txt
+u0 +++$+++ u2 +++$+++ m0 +++$+++ [<span style="color:#0086d2">&#39;L194&#39;</span>, <span style="color:#0086d2">&#39;L195&#39;</span>, <span style="color:#0086d2">&#39;L196&#39;</span>, <span style="color:#0086d2">&#39;L197&#39;</span>]
+</code></pre></div><p><strong>+++$+++</strong>: column splitter<!-- raw HTML omitted -->
+<strong>u0</strong>: id of user 0<!-- raw HTML omitted -->
+<strong>u2</strong>: id of user 2<!-- raw HTML omitted -->
+<strong>m0</strong>: if of movie 0<!-- raw HTML omitted -->
+<strong>L194, L195</strong>: row id reference to movie_lines.txt<!-- raw HTML omitted --></p>
+<hr>
+<!-- raw HTML omitted -->
+<h2 id="part-3-data-preprocessing">PART-3. Data Preprocessing</h2>
+<p>Importing the necessary libraries</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic"># Importing the libraries</span>
+
+<span style="color:#fb660a;font-weight:bold">import</span> numpy <span style="color:#fb660a;font-weight:bold">as</span> np <span style="color:#080;background-color:#0f140f;font-style:italic"># to work with array</span>
+<span style="color:#fb660a;font-weight:bold">import</span> tensorflow <span style="color:#fb660a;font-weight:bold">as</span> tf <span style="color:#080;background-color:#0f140f;font-style:italic"># to do all the deep learning stuffs</span>
+<span style="color:#fb660a;font-weight:bold">import</span> re <span style="color:#080;background-color:#0f140f;font-style:italic"># to clear the text and replace</span>
+<span style="color:#fb660a;font-weight:bold">import</span> time <span style="color:#080;background-color:#0f140f;font-style:italic"># to measure the training time</span>
+
+</code></pre></div><p>To run the above code - select the four lines and press CMD+ENTER / CTRL+ENTER and find the below results in the iPython console.
+<img src="/images/articles/2018/ipython_run.png" alt="ipython_run" title="ipython_run.png"></p>
+<p><strong>Make sure you get no error to continue further.</strong></p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic">## importing the dataset ##</span>
+
+<span style="color:#080;background-color:#0f140f;font-style:italic">## giving a reference for the conversatons and movie lines ##</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># open and read a file with utf-8 encoding and ignore all errors then split all observations by lines</span>
+
+movie_lines = open(<span style="color:#0086d2">&#39;movie_lines.txt&#39;</span>, encoding = <span style="color:#0086d2">&#39;utf-8&#39;</span>, errors = <span style="color:#0086d2">&#39;ignore&#39;</span>).read().split(<span style="color:#0086d2">&#39;</span><span style="color:#0086d2">\n</span><span style="color:#0086d2">&#39;</span>)
+movie_conversations = open(<span style="color:#0086d2">&#39;movie_conversations.txt&#39;</span>, encoding = <span style="color:#0086d2">&#39;utf-8&#39;</span>, errors = <span style="color:#0086d2">&#39;ignore&#39;</span>).read().split(<span style="color:#0086d2">&#39;</span><span style="color:#0086d2">\n</span><span style="color:#0086d2">&#39;</span>)
+</code></pre></div><p>run and check variable explorer for the results
+<img src="/images/articles/2018/variable_explorer_import.png" alt="variable_explorer_import" title="variable_explorer_import"></p>
+<!-- raw HTML omitted -->
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic">## creating a dictionary to map each line identifier(id) with its line conversation.</span>
+id2line = {} <span style="color:#080;background-color:#0f140f;font-style:italic">#initialize a dict with {}</span>
+<span style="color:#fb660a;font-weight:bold">for</span> line in movie_lines: <span style="color:#080;background-color:#0f140f;font-style:italic">#line is a reference to each line in movie_line.txt</span>
+    _line = line.split(<span style="color:#0086d2">&#39; +++$+++ &#39;</span>) <span style="color:#080;background-color:#0f140f;font-style:italic">#be careful and add the extra space with +++$+++ &amp; _line is a temp variable inside for loop</span>
+    <span style="color:#fb660a;font-weight:bold">if</span> len( _line ) == <span style="color:#0086f7;font-weight:bold">5</span> : <span style="color:#080;background-color:#0f140f;font-style:italic"># just to check if there are 5 elements after split.</span>
+        id2line[ _line[<span style="color:#0086f7;font-weight:bold">0</span>] ] = _line[<span style="color:#0086f7;font-weight:bold">4</span>] <span style="color:#080;background-color:#0f140f;font-style:italic">#index in python starts from 0</span>
+</code></pre></div><p><img src="/images/articles/2018/variable_explorer_id2line1.png" alt="variable_explorer_id2line1" title="variable_explorer_id2line1">
+<img src="/images/articles/2018/variable_explorer_id2line2.png" alt="variable_explorer_id2line2" title="variable_explorer_id2line2"></p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic">## cleaning up the list of all conversations</span>
+conversations_ids = []
+<span style="color:#fb660a;font-weight:bold">for</span> conversation in movie_conversations[:-<span style="color:#0086f7;font-weight:bold">1</span>]: <span style="color:#080;background-color:#0f140f;font-style:italic">#last row is empty so skipping</span>
+    <span style="color:#080;background-color:#0f140f;font-style:italic">#split and get the last element either use 4 or -1 to get the last element directly </span>
+    <span style="color:#080;background-color:#0f140f;font-style:italic">#then remove the square brackets on both end </span>
+    <span style="color:#080;background-color:#0f140f;font-style:italic">#then replace single quote with nothing</span>
+    <span style="color:#080;background-color:#0f140f;font-style:italic">#then replace the space between words with nothing</span>
+    _conversation = conversation.split(<span style="color:#0086d2">&#39; +++$+++ &#39;</span>)[-<span style="color:#0086f7;font-weight:bold">1</span>][<span style="color:#0086f7;font-weight:bold">1</span>:-<span style="color:#0086f7;font-weight:bold">1</span>].replace(<span style="color:#0086d2">&#34;&#39;&#34;</span>,<span style="color:#0086d2">&#34;&#34;</span>).replace(<span style="color:#0086d2">&#34; &#34;</span>,<span style="color:#0086d2">&#34;&#34;</span>)
+    <span style="color:#080;background-color:#0f140f;font-style:italic"># now we have the list as string - split each by comma to convert from string.</span>
+    conversations_ids.append(_conversation.split(<span style="color:#0086d2">&#39;,&#39;</span>))
+</code></pre></div><p><img src="/images/articles/2018/conversation_compare.png" alt="comparing two lists" title="variable_explorer_id2line2"></p>
+<!-- raw HTML omitted -->
+<p>Now we have to convert our conversations ids to relevant questions and answers taking ID from <strong>conversations_ids</strong> and its text from <strong>id2lines</strong>. <!-- raw HTML omitted --></p>
+<p>Refer the image below. Here <strong>L194</strong> will be treated as question and next <strong>L195</strong> as answer. Then <strong>L195</strong> becomes question for <strong>L196</strong> and so on.</p>
+<p><img src="/images/articles/2018/conversation_compare_idea.png" alt="conversation_compare_idea" title="conversation_compare_idea.png"></p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic">## Getting the questions and answers from our conversation_ids and pairing it with id2line to get the actual texts</span>
+questions = [] <span style="color:#080;background-color:#0f140f;font-style:italic"># creating a array holder for the questions</span>
+answers = [] <span style="color:#080;background-color:#0f140f;font-style:italic"># creating an array holder for the answers</span>
+<span style="color:#fb660a;font-weight:bold">for</span> conversation in conversations_ids: <span style="color:#080;background-color:#0f140f;font-style:italic"># conversation local variable for lopping inside conversations_ids</span>
+    <span style="color:#fb660a;font-weight:bold">for</span> i in range(len(conversation) - <span style="color:#0086f7;font-weight:bold">1</span>): <span style="color:#080;background-color:#0f140f;font-style:italic"># i refering to the size of each individual array in list</span>
+        questions.append(id2line[conversation[i]]) <span style="color:#080;background-color:#0f140f;font-style:italic"># refering the i value from id2line dictionary to get the actual text.</span>
+        answers.append(id2line[conversation[i+<span style="color:#0086f7;font-weight:bold">1</span>]]) <span style="color:#080;background-color:#0f140f;font-style:italic"># first value of i will be treated as question then next i+1 for answer and later i+1 as question</span>
+</code></pre></div><p>Lets clean the text now. We will convert all the text to smallcase and change all short hand words to its actual form. Also remove some unwanted characters.
+I hav&rsquo;nt removed <strong>!(exclamation symbol)</strong> so that this dataset will help in sentiment analysis :P</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic">## doing the cleaning of text -</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># converting all texts to smallcase</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># converting that&#39;s to that is and so on.</span>
+<span style="color:#fb660a;font-weight:bold">def</span> <span style="color:#ff0086;font-weight:bold">clean_text</span>(text):
+    text = text.lower() <span style="color:#080;background-color:#0f140f;font-style:italic">#to lowercase</span>
+    text = re.sub(<span style="color:#0086d2">r</span><span style="color:#0086d2">&#34;i&#39;m&#34;</span>, <span style="color:#0086d2">&#34;i am&#34;</span>, text)
+    text = re.sub(<span style="color:#0086d2">r</span><span style="color:#0086d2">&#34;he&#39;s&#34;</span>, <span style="color:#0086d2">&#34;he is&#34;</span>, text)
+    text = re.sub(<span style="color:#0086d2">r</span><span style="color:#0086d2">&#34;she&#39;s&#34;</span>, <span style="color:#0086d2">&#34;she is&#34;</span>, text)
+    text = re.sub(<span style="color:#0086d2">r</span><span style="color:#0086d2">&#34;that&#39;s&#34;</span>, <span style="color:#0086d2">&#34;that is&#34;</span>, text)
+    text = re.sub(<span style="color:#0086d2">r</span><span style="color:#0086d2">&#34;what&#39;s&#34;</span>, <span style="color:#0086d2">&#34;what is&#34;</span>, text)
+    text = re.sub(<span style="color:#0086d2">r</span><span style="color:#0086d2">&#34;where&#39;s&#34;</span>, <span style="color:#0086d2">&#34;where is&#34;</span>, text)
+    text = re.sub(<span style="color:#0086d2">r</span><span style="color:#0086d2">&#34;\&#39;ll&#34;</span>, <span style="color:#0086d2">&#34; will&#34;</span>, text) <span style="color:#080;background-color:#0f140f;font-style:italic"># carefull with space he&#39;ll to he will</span>
+    text = re.sub(<span style="color:#0086d2">r</span><span style="color:#0086d2">&#34;\&#39;ve&#34;</span>, <span style="color:#0086d2">&#34; have&#34;</span>, text)
+    text = re.sub(<span style="color:#0086d2">r</span><span style="color:#0086d2">&#34;\&#39;re&#34;</span>, <span style="color:#0086d2">&#34; are&#34;</span>, text)
+    text = re.sub(<span style="color:#0086d2">r</span><span style="color:#0086d2">&#34;\&#39;d&#34;</span>, <span style="color:#0086d2">&#34; would&#34;</span>, text)
+    text = re.sub(<span style="color:#0086d2">r</span><span style="color:#0086d2">&#34;won&#39;t&#34;</span>, <span style="color:#0086d2">&#34;will not&#34;</span>, text)
+    text = re.sub(<span style="color:#0086d2">r</span><span style="color:#0086d2">&#34;can&#39;t&#34;</span>, <span style="color:#0086d2">&#34;cannot&#34;</span>, text)
+    text = re.sub(<span style="color:#0086d2">r</span><span style="color:#0086d2">&#34;[-()</span><span style="color:#0086d2">\&#34;</span><span style="color:#0086d2">#/@;:&lt;&gt;{}+=~|.?,]&#34;</span>, <span style="color:#0086d2">&#34;&#34;</span>, text)
+    <span style="color:#fb660a;font-weight:bold">return</span> text
+</code></pre></div><div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic">## cleaning the question</span>
+clean_questions = []
+<span style="color:#fb660a;font-weight:bold">for</span> question in questions:
+     clean_questions.append(clean_text(question))
+     
+<span style="color:#080;background-color:#0f140f;font-style:italic">## cleaning the answers</span>
+clean_answers = []
+<span style="color:#fb660a;font-weight:bold">for</span> answer in answers:
+     clean_answers.append(clean_text(answer))  
+</code></pre></div><p><img src="/images/articles/2018/clean_answer.png" alt="clean_answer" title="clean_answer.png"></p>
+<p>Now lets remove the non-frequently used words from the question and answer so that we can optimize the training session.<!-- raw HTML omitted -->
+To do this we need to create a dictionary that has word as the key and number of occurances as the value.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic">## creating a dictionary to map the number of occurances</span>
+word2count = {} <span style="color:#080;background-color:#0f140f;font-style:italic"># creating a new dictionary</span>
+<span style="color:#fb660a;font-weight:bold">for</span> question in clean_questions: <span style="color:#080;background-color:#0f140f;font-style:italic">#question as the local variable to iterate from the clean_questions list</span>
+    <span style="color:#fb660a;font-weight:bold">for</span> word in question.split():   <span style="color:#080;background-color:#0f140f;font-style:italic">#word local variable to iterate throught each clean_questions</span>
+        <span style="color:#fb660a;font-weight:bold">if</span> word not in word2count:  <span style="color:#080;background-color:#0f140f;font-style:italic"># to check if the word exists in the dictionary</span>
+            word2count[word] = <span style="color:#0086f7;font-weight:bold">1</span> <span style="color:#080;background-color:#0f140f;font-style:italic"># adds the word to dictionary and assigns a value of 1</span>
+        <span style="color:#fb660a;font-weight:bold">else</span>:
+            word2count[word] += <span style="color:#0086f7;font-weight:bold">1</span> <span style="color:#080;background-color:#0f140f;font-style:italic"># if word exists in dict then increment its value</span>
+     
+<span style="color:#fb660a;font-weight:bold">for</span> answer in clean_answers: <span style="color:#080;background-color:#0f140f;font-style:italic">#answer as the local variable to iterate from the clean_answers list</span>
+    <span style="color:#fb660a;font-weight:bold">for</span> word in answer.split(): <span style="color:#080;background-color:#0f140f;font-style:italic">#word local variable to iterate throught each clean_answers</span>
+        <span style="color:#fb660a;font-weight:bold">if</span> word not in word2count:  <span style="color:#080;background-color:#0f140f;font-style:italic"># to check if the word exists in the dictionary</span>
+            word2count[word] = <span style="color:#0086f7;font-weight:bold">1</span> <span style="color:#080;background-color:#0f140f;font-style:italic"># adds the word to dictionary and assigns a value of 1</span>
+        <span style="color:#fb660a;font-weight:bold">else</span>:
+            word2count[word] += <span style="color:#0086f7;font-weight:bold">1</span> <span style="color:#080;background-color:#0f140f;font-style:italic"># if word exists in dict then increment its value     </span>
+</code></pre></div><!-- raw HTML omitted -->
+<p>Now lets create two dictionaries that map each word of all the questions to a unique integer and vice versa for answers and while creating this dictionary we will check if the word has higher than a certain threshold to be included in the list else remove those words.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic">## tokenization (unique number for each word)</span>
+threshold = <span style="color:#0086f7;font-weight:bold">20</span>
+questionswords2int = {}
+word_number = <span style="color:#0086f7;font-weight:bold">0</span>
+<span style="color:#fb660a;font-weight:bold">for</span> word, count in word2count.items(): <span style="color:#080;background-color:#0f140f;font-style:italic"># get words and count from dictionary separately</span>
+    <span style="color:#fb660a;font-weight:bold">if</span> count &gt;= threshold:
+        questionswords2int[word] = word_number;
+        word_number += <span style="color:#0086f7;font-weight:bold">1</span>;
+        
+answerswords2int = {}
+word_number = <span style="color:#0086f7;font-weight:bold">0</span>
+<span style="color:#fb660a;font-weight:bold">for</span> word, count in word2count.items(): <span style="color:#080;background-color:#0f140f;font-style:italic"># get words and count from dictionary separately</span>
+    <span style="color:#fb660a;font-weight:bold">if</span> count &gt;= threshold:
+        answerswords2int[word] = word_number;
+        word_number += <span style="color:#0086f7;font-weight:bold">1</span>;
+</code></pre></div><p>Adding the last tokens to the above two dictionaries - useful for the encoder and decoder in SEQ2SEQ.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic"># &lt;PAD&gt; : to match the length of question and answer dict</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># &lt;EOS&gt; : End of String</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># &lt;OUT&gt; : to replace it with the removed words previously</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># &lt;SOS&gt; : Start of String</span>
+tokens = [<span style="color:#0086d2">&#39;&lt;PAD&gt;&#39;</span>, <span style="color:#0086d2">&#39;&lt;EOS&gt;&#39;</span>, <span style="color:#0086d2">&#39;&lt;OUT&gt;&#39;</span>, <span style="color:#0086d2">&#39;&lt;SOS&gt;&#39;</span>] <span style="color:#080;background-color:#0f140f;font-style:italic"># use the same format do not change the order</span>
+<span style="color:#fb660a;font-weight:bold">for</span> token in tokens:
+    questionswords2int[token] = len(questionswords2int) + <span style="color:#0086f7;font-weight:bold">1</span>
+<span style="color:#fb660a;font-weight:bold">for</span> token in tokens:
+    answerswords2int[token] = len(answerswords2int) + <span style="color:#0086f7;font-weight:bold">1</span>
+</code></pre></div><p>Creating the inverse dictionary of the answerswords2int dictionary. We will need the inverse mapping from the intergers to answers in the seq2seq model only for the answers</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic"># w_i is the loop variable (integers of the words )</span>
+<span style="color:#080;background-color:#0f140f;font-style:italic"># w key identifiers of the dictionary</span>
+answersints2word = { w_i:w <span style="color:#fb660a;font-weight:bold">for</span> w, w_i in answerswords2int.items()} <span style="color:#080;background-color:#0f140f;font-style:italic"># inverse mapping shortcut !important!!!</span>
+</code></pre></div><p><img src="/images/articles/2018/ansint2words.png" alt="ansint2words.png" title="ansint2words.png"></p>
+<p>Now we need to add the &lt; EOS &gt; token to the end of every answers. This is to detect the end of sentense.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#080;background-color:#0f140f;font-style:italic">## Adding EOS at the end of every answers.</span>
+<span style="color:#fb660a;font-weight:bold">for</span> i in range(len(clean_answers)):
+    clean_answers[i] += <span style="color:#0086d2">&#39; &lt;EOS&gt;&#39;</span> <span style="color:#080;background-color:#0f140f;font-style:italic"># careful to add the space to seperate the last word woth EOS</span>
+</code></pre></div><p><img src="/images/articles/2018/eos_clean_answer.png" alt="eos_clean_answer" title="eos_clean_answer.png"></p>
+<p>Translating all words in the clean_answers and clean_questions to their respective interger.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">questions_to_int = []
+<span style="color:#fb660a;font-weight:bold">for</span> question in clean_questions:
+    ints = []
+    <span style="color:#fb660a;font-weight:bold">for</span> word in question.split():
+        <span style="color:#fb660a;font-weight:bold">if</span> word not in questionswords2int:
+            ints.append(questionswords2int[<span style="color:#0086d2">&#39;&lt;OUT&gt;&#39;</span>])
+        <span style="color:#fb660a;font-weight:bold">else</span>:
+            ints.append(questionswords2int[word])
+            
+    questions_to_int.append(ints);
+            
+answers_to_int = []
+<span style="color:#fb660a;font-weight:bold">for</span> answer in clean_questions:
+    ints = []
+    <span style="color:#fb660a;font-weight:bold">for</span> word in question.split():
+        <span style="color:#fb660a;font-weight:bold">if</span> word not in answerswords2int:
+            ints.append(answerswords2int[<span style="color:#0086d2">&#39;&lt;OUT&gt;&#39;</span>])
+        <span style="color:#fb660a;font-weight:bold">else</span>:
+            ints.append(answerswords2int[word])
+    answers_to_int.append(ints);
+    
+</code></pre></div><p><img src="/images/articles/2018/qa_to_int.png" alt="qa_to_int" title="qa_to_int.png"></p>
+<p>Sorting questions and answers by the length of questions will speed up the training also we will remove the amount of padding during training.</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">sorted_clean_questions = []
+sorted_clean_answers = []
+
+<span style="color:#fb660a;font-weight:bold">for</span> length in range(<span style="color:#0086f7;font-weight:bold">1</span>,<span style="color:#0086f7;font-weight:bold">25</span>+<span style="color:#0086f7;font-weight:bold">1</span>): <span style="color:#080;background-color:#0f140f;font-style:italic"># upper bound is excluded in python so to get 25 add 1 - For why 25 (dont want the questions too long )</span>
+    <span style="color:#fb660a;font-weight:bold">for</span> i in enumerate(questions_to_int):
+        <span style="color:#fb660a;font-weight:bold">if</span> len(i[<span style="color:#0086f7;font-weight:bold">1</span>]) == length: <span style="color:#080;background-color:#0f140f;font-style:italic"># because i is a couple with index and the question as we used enumerate function</span>
+            sorted_clean_questions.append(questions_to_int[i[<span style="color:#0086f7;font-weight:bold">0</span>]]) <span style="color:#080;background-color:#0f140f;font-style:italic"># use index 0 to get its value</span>
+            sorted_clean_answers.append(answers_to_int[i[<span style="color:#0086f7;font-weight:bold">0</span>]]) <span style="color:#080;background-color:#0f140f;font-style:italic"># to align questions and answers</span>
+     
+</code></pre></div><p><img src="/images/articles/2018/sorted_clean_questions.png" alt="sorted_clean_questions.png" title="sorted_clean_questions.png"></p>
+<hr>
+<p>continued</p>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+  				<p>
+  					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://itsg.dev/tags/chatbot">Chatbot</a></span><span class="tag"><a href="https://itsg.dev/tags/nlp">NLP</a></span><span class="tag"><a href="https://itsg.dev/tags/tensorflow">TensorFlow</a></span><span class="tag"><a href="https://itsg.dev/tags/project">Project</a></span><span class="tag"><a href="https://itsg.dev/tags/deep-learning">Deep Learning</a></span><span class="tag"><a href="https://itsg.dev/tags/artificial-intelligence">Artificial Intelligence</a></span><span class="tag"><a href="https://itsg.dev/tags/tutorial">Tutorial</a></span>
+  				</p>
+  		</div>
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2020</span>
+            
+                <span><a href="https://itsg.dev">Geo Joy</a></span>
+            
+            
+            <span> <a href="https://itsg.dev/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>with &#10084; from Bangalore, India</a></span>
+            <span>theme inspiration from  <a href="https://github.com/rhazdon/hugo-theme-hello-friend-ng">hello-friend</a></span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="/bundle.min.dc716e9092c9820b77f96da294d0120aeeb189b5bcea9752309ebea27fd53bbe6b13cffb2aca8ecf32525647ceb7001f76091de4199ac5a3caa432c070247f5b.js" integrity="sha512-3HFukJLJggt3&#43;W2ilNASCu6xibW86pdSMJ6&#43;on/VO75rE8/7KsqOzzJSVkfOtwAfdgkd5BmaxaPKpDLAcCR/Ww=="></script>
+
+
+
+    </body>
+</html>

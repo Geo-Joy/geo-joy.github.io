@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="male https://graph.facebook.com/10207052454221714/picture?type=large Geo Joy Geo-Joy ">
+<meta name="description" content="1. What is Tensor  Just a fancy word for an n-dimentional matrix Or an advanced array Holds only single type They are the standard way of representing data in tensorflow.  2. Tensor Data Types    python type  Description     tf.float32 32 bits floating point   tf.float64 64 bits floating point   tf.int8 8 bits signed integer   tf.int16 16 bits signed integer   tf." />
+<meta name="keywords" content=", 101, TensorFlow" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="https://itsg.dev/blog/basics-to-get-started-with-tensorflow/" />
+
+
+    <title>
+        
+            Basics to get started with Tensorflow :: its Geo  — Artificial Intelligence // Microservices // Web Architect // Mentor
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="/main.min.753fac8f03736f0edc9be411eb20cee875dd7bb8e73c8155fbf6a629c863f4ca.css">
+
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="msapplication-TileColor" content="#252627">
+    <meta name="theme-color" content="#252627">
+
+
+
+<meta itemprop="name" content="Basics to get started with Tensorflow">
+<meta itemprop="description" content="Things to learn before starting up with Tensorflow">
+<meta itemprop="datePublished" content="2018-01-27T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-01-27T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="267">
+
+
+
+<meta itemprop="keywords" content="101,TensorFlow," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Basics to get started with Tensorflow"/>
+<meta name="twitter:description" content="Things to learn before starting up with Tensorflow"/>
+
+
+
+
+
+
+
+    <meta property="article:published_time" content="2018-01-27 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+            <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">
+                <a href="/blog" style="text-decoration: none;">
+                    $ cd /itsG/blog/     
+                </a>
+            </span>
+            <span class="logo__cursor" style=
+                  "
+                   background-color:#51fe5fa6;
+                   ">
+            </span>
+        
+    </div>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://itsg.dev/">Home</a></li><li><a href="https://itsg.dev/blog/">Blog</a></li><li><a href="https://itsg.dev/projects">Projects</a></li><li><a href="https://itsg.dev/profile">Profile</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            
+            </p>
+        </div>
+
+        <article>
+            <h2 class="post-title"><a href="https://itsg.dev/blog/basics-to-get-started-with-tensorflow/">Basics to get started with Tensorflow</a></h2>
+
+            
+
+            <div class="post-content">
+                <p><img src="/images/articles/2018/TensorFlow-banner.jpg" alt="TensorFlow Basics" title="TensorFlow-banner.jpg"></p>
+<h1 id="1-what-is-tensor">1. What is Tensor</h1>
+<ul>
+<li>Just a fancy word for an n-dimentional matrix</li>
+<li>Or an advanced array</li>
+<li>Holds only single type</li>
+<li>They are the standard way of representing data in tensorflow.</li>
+</ul>
+<h1 id="2-tensor-data-types">2. Tensor Data Types</h1>
+<table>
+<thead>
+<tr>
+<th>python type   </th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tf.float32</td>
+<td>32 bits floating point</td>
+</tr>
+<tr>
+<td>tf.float64</td>
+<td>64 bits floating point</td>
+</tr>
+<tr>
+<td>tf.int8</td>
+<td>8 bits signed integer</td>
+</tr>
+<tr>
+<td>tf.int16</td>
+<td>16 bits signed integer</td>
+</tr>
+<tr>
+<td>tf.int32</td>
+<td>32 bits signed integer</td>
+</tr>
+<tr>
+<td>tf.int64</td>
+<td>64 bits signed integer</td>
+</tr>
+<tr>
+<td>tf.uint8</td>
+<td>8 bits signed integer</td>
+</tr>
+<tr>
+<td>tf.string</td>
+<td>Variable length byte array</td>
+</tr>
+<tr>
+<td>tf.bool</td>
+<td>Boolean</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>DataTypes need not be explicitly mentioned it get automatically assigned by the tensorflor library.</li>
+<li>Only mention it if you need to save few memory of tensor</li>
+</ul>
+<h1 id="3-what-is-tensorflow">3. What is TensorFlow</h1>
+<ul>
+<li>Open Source library released by Google in 2015</li>
+<li>It works by first defining and describing a model and later run in a session</li>
+</ul>
+<h1 id="4-what-are-constant">4. What are constant</h1>
+<ul>
+<li>It takes no inputs and cannot change the value stored in it</li>
+</ul>
+<h1 id="5-what-are-placeholders">5. What are placeholders</h1>
+<ul>
+<li>A placeholder is a promise to provide a value later.</li>
+<li>Use the <strong>feed_dict</strong> parameter in <strong>tf.session.run()</strong> to set the placeholder tensor.</li>
+<li>They are initially empty and are used to feed in the actual raining examples.</li>
+<li>Need to declare the required type as <strong>tf.float32</strong> and shape as optional.</li>
+</ul>
+<h1 id="6-what-are-variables">6. What are variables</h1>
+<ul>
+<li>They need to be initialized</li>
+<li>Values that keeps on changing</li>
+<li>They are in memory buffers</li>
+<li>use <strong>tf.global_variables_initializer</strong> to initialize the variables before running the session.</li>
+</ul>
+<h1 id="7tensorflow-graphs">7.TensorFlow Graphs</h1>
+<ul>
+<li>Graphs are sets of connected nodes(vertices)</li>
+<li>THe connections are referred to as edges.</li>
+<li>In TensorFlow each node is an operation with possible inputs that can supply some output.</li>
+<li>Its like we construct a graph and execute it.</li>
+</ul>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+  				<p>
+  					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://itsg.dev/tags/101">101</a></span><span class="tag"><a href="https://itsg.dev/tags/tensorflow">TensorFlow</a></span>
+  				</p>
+  		</div>
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2020</span>
+            
+                <span><a href="https://itsg.dev">Geo Joy</a></span>
+            
+            
+            <span> <a href="https://itsg.dev/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>with &#10084; from Bangalore, India</a></span>
+            <span>theme inspiration from  <a href="https://github.com/rhazdon/hugo-theme-hello-friend-ng">hello-friend</a></span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="/bundle.min.dc716e9092c9820b77f96da294d0120aeeb189b5bcea9752309ebea27fd53bbe6b13cffb2aca8ecf32525647ceb7001f76091de4199ac5a3caa432c070247f5b.js" integrity="sha512-3HFukJLJggt3&#43;W2ilNASCu6xibW86pdSMJ6&#43;on/VO75rE8/7KsqOzzJSVkfOtwAfdgkd5BmaxaPKpDLAcCR/Ww=="></script>
+
+
+
+    </body>
+</html>

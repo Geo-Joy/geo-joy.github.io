@@ -13,10 +13,10 @@
     
     <item>
       <title>Matrix Math and Numpy Refresher</title>
-      <link>https://itsg.dev/posts/matrix-math-and-numpy-refresher/</link>
+      <link>https://itsg.dev/blog/matrix-math-and-numpy-refresher/</link>
       <pubDate>Sun, 21 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://itsg.dev/posts/matrix-math-and-numpy-refresher/</guid>
+      <guid>https://itsg.dev/blog/matrix-math-and-numpy-refresher/</guid>
       <description>image borrowed from UDACITYData Dimentions We fist need to understand how we represent the data specifically the shape the data can have.
 Eg: we can have a number representing a person height or a list of numbers for height, weight, age etc. May be a display picture represented as grid having rows and columns of each individual pixels and each pixels having its color value for RED, BLUE, GREEN.
 We describe this data in terms of number of dimentions.</description>
@@ -24,10 +24,10 @@ We describe this data in terms of number of dimentions.</description>
     
     <item>
       <title>Core Programming Principles</title>
-      <link>https://itsg.dev/posts/core-programming-principles/</link>
+      <link>https://itsg.dev/blog/core-programming-principles/</link>
       <pubDate>Sat, 20 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://itsg.dev/posts/core-programming-principles/</guid>
+      <guid>https://itsg.dev/blog/core-programming-principles/</guid>
       <description>#integer x = 2 x 2 #float y = 2.5 y 2.5 #string a = &amp;#34;hello&amp;#34; b = &amp;#39;hello2&amp;#39; a b hello hello2 #logical / boolean q1 = True q True </description>
     </item>
     
