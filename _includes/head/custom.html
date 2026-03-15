@@ -14,4 +14,71 @@
 <link rel="icon" href="/images/favicon.ico"/>
 <meta name="theme-color" content="#ffffff"/>
 
+<!-- Matrix rain -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const canvas = document.getElementById('matrix-canvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  // Malayalam, Devanagari (Hindi), Kannada, Tamil, Telugu, Bengali, Gujarati, Gurmukhi
+  const chars = [
+    // Malayalam
+    'കഖഗഘങചഛജഝഞടഠഡഢണതഥദധനപഫബഭമയരലവശഷസഹളഴറ',
+    // Devanagari (Hindi)
+    'कखगघङचछजझञटठडढणतथदधनपफबभमयरलवशषसहक्षत्र',
+    // Kannada
+    'ಕಖಗಘಙಚಛಜಝಞಟಠಡಢಣತಥದಧನಪಫಬಭಮಯರಲವಶಷಸಹಳ',
+    // Tamil
+    'கஙசஞடணதநபமயரலவழளறன',
+    // Telugu
+    'కఖగఘఙచఛజఝఞటఠడఢణతథదధనపఫబభమయరలవశషసహ',
+    // Bengali
+    'কখগঘঙচছজঝঞটঠডঢণতথদধনপফবভমযরলশষসহ',
+    // Gujarati
+    'કખગઘચછજઝટઠડઢણતથદધનપફબભમયરલવશષસહ',
+    // Gurmukhi (Punjabi)
+    'ਕਖਗਘਙਚਛਜਝਞਟਠਡਢਣਤਥਦਧਨਪਫਬਭਮਯਰਲਵਸਹ',
+  ].join('');
+  const charArray = [...chars]; // spread into proper Unicode code-point array
+  const FONT_SIZE = 18;
+  const TEAL      = '#2dd4bf';
+  const TEAL_HEAD = '#99f6e4';
+  let cols, drops, speeds;
+
+  function resize() {
+    canvas.width  = window.innerWidth;
+    canvas.height = window.innerHeight;
+    cols   = Math.floor(canvas.width / FONT_SIZE);
+    drops  = Array.from({ length: cols }, () => Math.random() * -(canvas.height / FONT_SIZE));
+    speeds = Array.from({ length: cols }, () => 0.3 + Math.random() * 0.7);
+  }
+
+  function draw() {
+    ctx.fillStyle = 'rgba(10, 22, 40, 0.06)';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.font = FONT_SIZE + 'px "Noto Sans", "Noto Sans Malayalam", "Noto Sans Devanagari", sans-serif';
+
+    for (let i = 0; i < drops.length; i++) {
+      const y = Math.floor(drops[i]);
+      ctx.fillStyle = TEAL_HEAD;
+      ctx.globalAlpha = 0.85;
+      ctx.fillText(charArray[Math.floor(Math.random() * charArray.length)], i * FONT_SIZE, y * FONT_SIZE);
+      ctx.fillStyle = TEAL;
+      ctx.globalAlpha = 0.45;
+      ctx.fillText(charArray[Math.floor(Math.random() * charArray.length)], i * FONT_SIZE, (y - 1) * FONT_SIZE);
+      ctx.globalAlpha = 1;
+      if (drops[i] * FONT_SIZE > canvas.height && Math.random() > 0.97) {
+        drops[i] = Math.random() * -20;
+        speeds[i] = 0.3 + Math.random() * 0.7;
+      }
+      drops[i] += speeds[i];
+    }
+  }
+
+  resize();
+  window.addEventListener('resize', resize);
+  setInterval(draw, 45);
+});
+</script>
+
 <!-- end custom head snippets -->

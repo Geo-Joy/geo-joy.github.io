@@ -1,0 +1,272 @@
+/* ==========================================================================
+   CUSTOM STYLES — Breach Guru palette
+   ========================================================================== */
+
+$teal:        #2dd4bf;
+$teal-dim:    rgba(45, 212, 191, 0.45);
+$teal-glow:   rgba(45, 212, 191, 0.15);
+$orange:      #f4860a;
+$orange-dim:  rgba(244, 134, 10, 0.45);
+$navy:        #0a1628;
+$glass-bg:    rgba(8, 18, 35, 0.82);
+
+/* --- Keyframes --- */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================================================
+   BACKGROUND LAYERS
+   ========================================================= */
+
+body {
+  background-image: url('/assets/web-bg.png');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+/* Heavier overlay — more readable */
+#bg-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(8, 18, 35, 0.91);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Matrix rain — lower opacity so it's ambient, not distracting */
+#matrix-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.1;
+}
+
+/* CRT scanlines */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 3px,
+    rgba(0, 0, 0, 0.05) 3px,
+    rgba(0, 0, 0, 0.05) 4px
+  );
+}
+
+/* Vignette */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 45%,
+    rgba(4, 10, 20, 0.7) 100%
+  );
+}
+
+/* --- Content above background layers --- */
+.masthead,
+#main,
+.page__footer {
+  position: relative;
+  z-index: 10;
+}
+
+/* --- Page fade-in --- */
+.masthead     { animation: fadeUp 0.4s ease both; animation-delay: 0.0s; }
+#main         { animation: fadeUp 0.5s ease both; animation-delay: 0.1s; }
+.page__footer { animation: fadeUp 0.5s ease both; animation-delay: 0.2s; }
+
+/* --- Body --- */
+body {
+  padding-top: 70px !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "kern" 1, "calt" 1;
+  background-color: transparent !important;
+}
+
+/* Strip opaque backgrounds */
+#main,
+.page,
+.page__inner-wrap,
+.page__content,
+.archive {
+  background: transparent !important;
+}
+
+/* --- Frosted glass panels for readability --- */
+.page__content,
+.page__meta {
+  background: $glass-bg !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(45, 212, 191, 0.08);
+  border-radius: 8px;
+  padding: 1.5em 2em !important;
+}
+
+.sidebar {
+  background: $glass-bg !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(45, 212, 191, 0.08);
+  border-radius: 8px;
+  padding: 1em !important;
+}
+
+.page__footer {
+  background: rgba(8, 18, 35, 0.88) !important;
+  backdrop-filter: blur(8px);
+  border-top: 1px solid rgba(45, 212, 191, 0.1);
+}
+
+/* --- Masthead --- */
+.masthead {
+  top: 0 !important;
+  border-bottom: none;
+  background: rgba(8, 18, 35, 0.9) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  &::after { background: rgba(45, 212, 191, 0.1); }
+}
+
+/* =========================================================
+   DARK THEME RULES
+   ========================================================= */
+html[data-theme="dark"] {
+
+  /* Headings */
+  h1 {
+    color: $orange;
+    text-shadow: 0 0 20px rgba(244, 134, 10, 0.25);
+    font-weight: 700;
+  }
+  h2 {
+    color: $orange;
+    text-shadow: 0 0 14px rgba(244, 134, 10, 0.18);
+    border-bottom-color: rgba(45, 212, 191, 0.1);
+    font-weight: 700;
+  }
+  h3, h4 {
+    color: $teal;
+    font-weight: 600;
+  }
+
+  /* Body text — brighter for readability */
+  p, li, td, dd {
+    color: #d1fae5;
+    line-height: 1.8;
+  }
+
+  /* Nav */
+  .greedy-nav a {
+    font-size: 0.78em;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-weight: 500;
+    &:hover {
+      color: $orange !important;
+      text-shadow: 0 0 10px $orange-dim;
+    }
+  }
+
+  /* Links */
+  a:not(.btn):not([class*="author__"]):not([class*="masthead"]):not([class*="nav__"]):not([class*="greedy"]) {
+    color: $teal;
+    text-decoration: none;
+    background-image: linear-gradient($teal, $teal);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 1px;
+    transition: background-size 0.25s ease, color 0.2s ease;
+    &:hover {
+      color: $orange;
+      background-image: linear-gradient($orange, $orange);
+      background-size: 100% 1px;
+    }
+  }
+
+  /* Sidebar author */
+  .author__name {
+    color: $orange;
+    font-weight: 700;
+  }
+  .author__bio {
+    font-size: 0.8em;
+    line-height: 1.6;
+    color: #a7f3d0;
+  }
+
+  .author__avatar img {
+    border-radius: 50%;
+    border: 3px solid rgba(244, 134, 10, 0.6);
+    box-shadow: 0 0 0 4px rgba(45, 212, 191, 0.15), 0 0 24px rgba(244, 134, 10, 0.2);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    object-fit: cover;
+    aspect-ratio: 1;
+    &:hover {
+      border-color: $orange;
+      box-shadow: 0 0 0 4px rgba(45, 212, 191, 0.25), 0 0 36px rgba(244, 134, 10, 0.4);
+    }
+  }
+
+  .social-icons a {
+    transition: transform 0.2s ease, color 0.2s ease;
+    color: rgba(45, 212, 191, 0.5) !important;
+    &:hover {
+      transform: translateY(-2px);
+      color: $orange !important;
+    }
+  }
+
+  /* Code */
+  code, pre, kbd {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.85em;
+    color: $teal;
+  }
+  pre {
+    border: 1px solid rgba(45, 212, 191, 0.15);
+    border-radius: 4px;
+    background: rgba(5, 12, 24, 0.95) !important;
+  }
+
+  /* Buttons */
+  .btn {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.8em;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border-color: $orange;
+    color: $orange;
+    transition: background 0.2s ease, box-shadow 0.2s ease;
+    &:hover {
+      background: rgba(244, 134, 10, 0.1);
+      box-shadow: 0 0 12px rgba(244, 134, 10, 0.25);
+    }
+  }
+
+  ::selection {
+    background: rgba(244, 134, 10, 0.25);
+    color: $orange;
+  }
+}
+
+/* --- Scrollbar --- */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(45, 212, 191, 0.2); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: $orange; }
