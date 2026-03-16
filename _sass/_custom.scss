@@ -133,15 +133,157 @@ body {
   border-top: 1px solid rgba(45, 212, 191, 0.1);
 }
 
-/* --- Masthead --- */
-.masthead {
-  top: 0 !important;
-  border-bottom: none;
-  background: rgba(8, 18, 35, 0.9) !important;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  &::after { background: rgba(45, 212, 191, 0.1); }
+/* --- Old masthead reset (unused) --- */
+.masthead { display: none !important; }
+
+/* =========================================================
+   SITE HEADER
+   ========================================================= */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background: rgba(8, 18, 35, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(45, 212, 191, 0.1);
+  animation: fadeUp 0.4s ease both;
+
+  &__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5em;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2em;
+  }
+
+  /* Logo */
+  &__logo {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 1em;
+    font-weight: 700;
+    color: $teal !important;
+    text-decoration: none !important;
+    background: none !important;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+    flex-shrink: 0;
+
+    &:hover { color: $orange !important; }
+  }
+
+  &__logo-bracket {
+    color: $orange;
+    opacity: 0.7;
+  }
+
+  /* Desktop nav */
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 0.25em;
+    flex: 1;
+    justify-content: center;
+  }
+
+  &__nav-link {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.72em;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(178, 242, 234, 0.65) !important;
+    text-decoration: none !important;
+    background: none !important;
+    padding: 0.4em 0.85em;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+    white-space: nowrap;
+
+    &:hover {
+      color: $teal !important;
+      border-color: rgba(45, 212, 191, 0.2);
+      background: rgba(45, 212, 191, 0.05) !important;
+    }
+
+    &.is-active {
+      color: $orange !important;
+      border-color: rgba(244, 134, 10, 0.35);
+      background: rgba(244, 134, 10, 0.06) !important;
+    }
+  }
+
+  /* Actions (mobile toggle) */
+  &__actions {
+    flex-shrink: 0;
+  }
+
+  /* Hamburger */
+  &__mobile-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+
+    span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: $teal;
+      border-radius: 2px;
+      transition: transform 0.25s ease, opacity 0.25s ease;
+    }
+
+    &.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    &.is-open span:nth-child(2) { opacity: 0; }
+    &.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  }
+
+  /* Mobile nav drawer */
+  &__mobile-nav {
+    display: none;
+    flex-direction: column;
+    padding: 0.75em 1.5em 1em;
+    border-top: 1px solid rgba(45, 212, 191, 0.08);
+    background: rgba(8, 18, 35, 0.96);
+
+    &.is-open { display: flex; }
+  }
+
+  &__mobile-nav-link {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.85em;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: rgba(178, 242, 234, 0.7) !important;
+    text-decoration: none !important;
+    background: none !important;
+    padding: 0.7em 0;
+    border-bottom: 1px solid rgba(45, 212, 191, 0.06);
+
+    &:last-child { border-bottom: none; }
+    &:hover { color: $teal !important; }
+    &.is-active { color: $orange !important; }
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    &__nav { display: none; }
+    &__mobile-toggle { display: flex; }
+  }
 }
+
+/* Adjust body padding to match new header height */
+body { padding-top: 58px !important; }
 
 /* =========================================================
    DARK THEME RULES

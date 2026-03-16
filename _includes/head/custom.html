@@ -14,6 +14,20 @@
 <link rel="icon" href="/images/favicon.ico"/>
 <meta name="theme-color" content="#ffffff"/>
 
+<!-- Mobile nav toggle -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var toggle = document.getElementById('mobile-menu-toggle');
+  var mobileNav = document.getElementById('mobile-nav');
+  if (toggle && mobileNav) {
+    toggle.addEventListener('click', function() {
+      toggle.classList.toggle('is-open');
+      mobileNav.classList.toggle('is-open');
+    });
+  }
+});
+</script>
+
 <!-- Matrix rain -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
