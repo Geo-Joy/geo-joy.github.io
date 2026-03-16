@@ -33,7 +33,7 @@ redirect_from:
     </div>
     <div class="blog-card__body">
       <h2 class="blog-card__title">
-        <a href="{{ base_path }}{{ post.url }}">{{ post.title }}</a>
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
       </h2>
       {% if post.excerpt %}
         <p class="blog-card__excerpt">{{ post.excerpt | strip_html | truncate: 160 }}</p>
