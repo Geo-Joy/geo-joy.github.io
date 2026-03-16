@@ -227,22 +227,24 @@ body {
    ========================================================= */
 
 .mobile-menu-btn {
-  display: none;
+  display: flex;
   position: fixed;
   top: 14px;
   left: 14px;
-  z-index: 200;
+  z-index: 9999;
   flex-direction: column;
   gap: 5px;
-  background: rgba(8, 18, 35, 0.9);
-  border: 1px solid var(--global-border-color);
+  background: rgba(8, 18, 35, 0.95);
+  border: 1px solid rgba(45, 212, 191, 0.3);
   border-radius: 6px;
-  padding: 8px 10px;
+  padding: 9px 11px;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 
   span {
     display: block;
-    width: 20px;
+    width: 22px;
     height: 2px;
     background: $teal;
     border-radius: 2px;
@@ -253,8 +255,8 @@ body {
   &.is-open span:nth-child(2) { opacity: 0; }
   &.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-  @media screen and (max-width: #{$sidebar-screen-min-width - 1px}) {
-    display: flex;
+  @media screen and (min-width: #{$sidebar-screen-min-width}) {
+    display: none;
   }
 }
 
