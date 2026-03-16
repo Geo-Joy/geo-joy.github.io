@@ -1,14 +1,70 @@
 ---
 layout: archive
-title: "Portfolio"
+title: "Projects"
+hide_title: true
 permalink: /portfolio/
 author_profile: true
 ---
 
 {% include base_path %}
 
+<div class="content-terminal-bar">
+  <span class="terminal-dot terminal-dot--red"></span>
+  <span class="terminal-dot terminal-dot--yellow"></span>
+  <span class="terminal-dot terminal-dot--green"></span>
+  <span class="terminal-bar__label">projects.sh</span>
+</div>
 
-{% for post in site.portfolio %}
-  {% include archive-single.html %}
-{% endfor %}
+<div class="repos-container">
+  <div class="repos-loading">
+    <span class="section-comment">// fetching repos...</span>
+  </div>
+  <div class="repos-grid" id="repos-grid" style="display:none;"></div>
+</div>
 
+<script>
+const GITHUB_USER = 'Geo-Joy';
+const LANG_COLORS = {
+  JavaScript: '#f1e05a', TypeScript: '#3178c6', Python: '#3572A5',
+  HTML: '#e34c26', CSS: '#563d7c', Shell: '#89e051',
+  Java: '#b07219', Kotlin: '#A97BFF', Swift: '#F05138',
+  Dart: '#00B4AB', Go: '#00ADD8', Rust: '#dea584',
+  Ruby: '#701516', PHP: '#4F5D95', 'C++': '#f34b7d',
+  C: '#555555', 'C#': '#178600', Jupyter: '#DA5B0B'
+};
+
+fetch(`https://api.github.com/users/${GITHUB_USER}/repos?sort=updated&per_page=30&type=owner`)
+  .then(r => r.json())
+  .then(repos => {
+    const grid = document.getElementById('repos-grid');
+    document.querySelector('.repos-loading').style.display = 'none';
+    grid.style.display = 'grid';
+
+    repos
+      .filter(r => !r.fork)
+      .filter(r => !['geo-joy.github.io','chimba.in','unyk.life','my-api-services','fastapi-openai','breach-guru-apps','geo-joy-blog'].includes(r.name))
+      .forEach(repo => {
+        const lang = repo.language || '';
+        const color = LANG_COLORS[lang] || '#666';
+        const updated = new Date(repo.updated_at).toLocaleDateString('en-GB', { month: 'short', year: 'numeric' });
+
+        grid.innerHTML += `
+          <a class="repo-card" href="${repo.html_url}" target="_blank" rel="noopener">
+            <div class="repo-card__header">
+              <span class="repo-card__name">${repo.name}</span>
+              <span class="repo-card__arrow">↗</span>
+            </div>
+            ${repo.description ? `<p class="repo-card__desc">${repo.description}</p>` : ''}
+            <div class="repo-card__footer">
+              ${lang ? `<span class="repo-card__lang"><span class="repo-card__lang-dot" style="background:${color}"></span>${lang}</span>` : ''}
+              ${repo.stargazers_count > 0 ? `<span class="repo-card__stat">★ ${repo.stargazers_count}</span>` : ''}
+              ${repo.forks_count > 0 ? `<span class="repo-card__stat">⑂ ${repo.forks_count}</span>` : ''}
+              <span class="repo-card__updated">${updated}</span>
+            </div>
+          </a>`;
+      });
+  })
+  .catch(() => {
+    document.querySelector('.repos-loading').innerHTML = '<span class="section-comment">// failed to load repos</span>';
+  });
+</script>

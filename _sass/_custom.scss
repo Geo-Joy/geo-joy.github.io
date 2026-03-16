@@ -110,9 +110,192 @@ body {
   background: transparent !important;
 }
 
+/* =========================================================
+   GITHUB REPOS
+   ========================================================= */
+
+.repos-container {
+  padding: 1em 2em 2em;
+}
+
+.repos-loading {
+  padding: 0.5em 0;
+}
+
+.repos-grid {
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1em;
+  margin-top: 0.5em;
+}
+
+.repo-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  padding: 1em;
+  border: 1px solid var(--global-border-color);
+  border-radius: 8px;
+  background: rgba(10, 22, 40, 0.5);
+  text-decoration: none !important;
+  transition: border-color 0.2s ease, background 0.2s ease;
+
+  &:hover {
+    border-color: $teal;
+    background: rgba(45, 212, 191, 0.04);
+    text-decoration: none !important;
+
+    .repo-card__name { color: $orange; }
+    .repo-card__arrow { opacity: 1; }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5em;
+  }
+
+  &__name {
+    font-family: $monospace;
+    font-size: $type-size-6;
+    font-weight: 600;
+    color: $teal;
+    transition: color 0.2s ease;
+    word-break: break-word;
+  }
+
+  &__arrow {
+    font-size: $type-size-7;
+    color: var(--global-text-color);
+    opacity: 0.3;
+    flex-shrink: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  &__desc {
+    font-size: $type-size-7;
+    color: var(--global-text-color);
+    opacity: 0.7;
+    margin: 0;
+    line-height: 1.5;
+    flex: 1;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    gap: 0.75em;
+    flex-wrap: wrap;
+    margin-top: auto;
+  }
+
+  &__lang {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-family: $monospace;
+    font-size: $type-size-8;
+    color: var(--global-text-color);
+    opacity: 0.6;
+  }
+
+  &__lang-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  &__stat {
+    font-family: $monospace;
+    font-size: $type-size-8;
+    color: var(--global-text-color);
+    opacity: 0.5;
+  }
+
+  &__updated {
+    font-family: $monospace;
+    font-size: $type-size-8;
+    color: var(--global-text-color);
+    opacity: 0.35;
+    margin-left: auto;
+  }
+}
+
+/* =========================================================
+   BLOG LIST
+   ========================================================= */
+
+.blog-list {
+  padding: 0.5em 2em 2em;
+}
+
+.blog-year {
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+
+  &:first-child { margin-top: 0.25em; }
+}
+
+.blog-card {
+  display: flex;
+  gap: 1.25em;
+  align-items: flex-start;
+  padding: 0.85em 0;
+  border-bottom: 1px solid var(--global-border-color);
+  text-decoration: none;
+
+  &:last-child { border-bottom: none; }
+}
+
+.blog-card__meta {
+  flex-shrink: 0;
+  width: 52px;
+  text-align: right;
+}
+
+.blog-card__date {
+  font-family: $monospace;
+  font-size: $type-size-7;
+  color: var(--global-text-color);
+  opacity: 0.4;
+  white-space: nowrap;
+}
+
+.blog-card__body {
+  flex: 1;
+  min-width: 0;
+}
+
+.blog-card__title {
+  font-family: $monospace;
+  font-size: $type-size-5;
+  font-weight: 600;
+  margin: 0 0 0.3em;
+  border: none !important;
+
+  a {
+    color: $teal !important;
+    text-decoration: none !important;
+
+    &:hover {
+      color: $orange !important;
+    }
+  }
+}
+
+.blog-card__excerpt {
+  font-size: $type-size-6;
+  color: var(--global-text-color);
+  opacity: 0.7;
+  margin: 0;
+  line-height: 1.5;
+}
+
 /* --- Frosted glass panels for readability --- */
 .page__content,
-.page__meta {
+.page__meta,
+.archive {
   background: $glass-bg !important;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);

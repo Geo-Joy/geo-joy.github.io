@@ -3,7 +3,7 @@ main:
     url: /
 
   - title: "Blog"
-    url: /year-archive/
+    url: /blog/
 
   - title: "Projects"
     url: /portfolio/

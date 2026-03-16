@@ -147,7 +147,7 @@
           {% endif %}
         {% endunless %}
         <a class="author__nav-link{% if is_active %} is-active{% endif %}"
-           href="{% if link.external %}{{ link.url }}{% else %}{{ base_path }}{{ link.url }}{% endif %}"
+           href="{% if link.external %}{{ link.url }}{% else %}{{ site.baseurl }}{{ link.url }}{% endif %}"
            {% if link.external %}target="_blank" rel="noopener"{% endif %}>
           <span class="author__nav-prompt">~/</span>{{ link.title | downcase }}
           {% if link.external %}<span class="author__nav-ext" aria-hidden="true">↗</span>{% endif %}
