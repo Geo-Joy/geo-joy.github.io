@@ -9,9 +9,9 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
-title                    : "Breach Guru"
+title                    : "Geo Joy - Breach Guru"
 title_separator          : "-"
-name                     : &name "Breach Guru"
+name                     : &name "Geo Joy"
 description              : &description "Security researcher, ethical hacker, and breach analyst"
 url                      : https://geo-joy.github.io
 baseurl                  : ""
@@ -23,27 +23,27 @@ repository               : "Geo-Joy/geo-joy.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Breach Guru"
+  name             : "Geo Joy"
   pronouns         : # example: "she/her"
-  bio              : "Security researcher · Ethical hacker · Breaking things to make them stronger"
-  location         : "Kerala, India"
-  employer         : "Independent Security Researcher"
+  bio              : "Always at the edge of what's new — and loving every second of it."
+  location         : "Bangalore, India"
+  employer         :
   uri              : # URL
-  email            : "hello@breachguru.dev"
+  email            : "breachguru@gmail.com"
 
-  # Academic websites
-  academia         : # URL
-  arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
-  inspire-hep      : # URL
-  impactstory      : # URL
-  orcid            : "https://orcid.org/yourorcidurl"
-  semantic         : # URL
-  ssrn             : # URL
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  researchgate     : # URL
-  scopus           : # URL
-  zotero           : # URL
+  # Academic websites (unused)
+  academia         :
+  arxiv            :
+  googlescholar    :
+  inspire-hep      :
+  impactstory      :
+  orcid            :
+  semantic         :
+  ssrn             :
+  pubmed           :
+  researchgate     :
+  scopus           :
+  zotero           :
 
 
   # Repositories and software development
@@ -56,7 +56,7 @@ author:
 
   # Social media
   artstation       : # Username
-  bluesky          : "bsky.app" # Replace this with you Bluesky username
+  bluesky          : # Username
   facebook         : # Username
   flickr           : # Username
   foursquare       : # Username
@@ -65,7 +65,7 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : # Username
+  linkedin         : "-itsg"
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username
@@ -73,12 +73,12 @@ author:
   steam            : # Username
   telegram         : # URL
   tumblr           : # Username
-  twitter          : # Username for X / Twitter
+  twitter          : "breachguru"  # update if handle differs
   vine             : # Username
   weibo            : # Username
   wikipedia        : # Username
   xing             : # Username
-  youtube          : # Username
+  youtube          : "breachguru"
   zhihu            : # Username
 
 # Publication Category - The following the list of publication categories and their headings

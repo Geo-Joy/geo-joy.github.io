@@ -2,8 +2,14 @@
 <header class="site-header">
   <div class="site-header__inner">
 
+    <div class="site-header__dots" aria-hidden="true">
+      <span class="terminal-dot terminal-dot--red"></span>
+      <span class="terminal-dot terminal-dot--yellow"></span>
+      <span class="terminal-dot terminal-dot--green"></span>
+    </div>
+
     <a class="site-header__logo" href="{{ base_path }}/">
-      <span class="site-header__logo-bracket">[</span>{{ site.title }}<span class="site-header__logo-bracket">]</span>
+      <span class="site-header__logo-bracket">[</span>{{ site.title }}<span class="site-header__logo-bracket">]</span><span class="site-header__cursor" aria-hidden="true"></span>
     </a>
 
     <nav class="site-header__nav" id="site-nav">

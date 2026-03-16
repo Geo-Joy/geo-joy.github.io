@@ -1,15 +1,17 @@
 main:
+  - title: "Home"
+    url: /
+
   - title: "Blog"
     url: /year-archive/
 
   - title: "Projects"
     url: /portfolio/
 
-  - title: "Talks"
-    url: /talks/
-
-  - title: "Publications"
-    url: /publications/
+  - title: "Videos"
+    url: https://www.youtube.com/@breachguru
+    external: true
 
   - title: "CV"
-    url: /cv/
+    url: https://linkedin.com/in/-itsg
+    external: true

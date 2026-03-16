@@ -3,14 +3,14 @@
 <!-- start custom head snippets -->
 
 <!-- Support for Academicons -->
-<link rel="stylesheet" href="{{ base_path }}/assets/css/academicons.css"/>
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/academicons.css"/>
 
 <!-- favicon from https://commons.wikimedia.org/wiki/File:OOjs_UI_icon_academic-progressive.svg -->
 <link rel="apple-touch-icon" sizes="180x180" href="{{ base_path }}/images/apple-touch-icon-180x180.png"/>
 <link rel="icon" type="image/svg+xml" href="{{ base_path }}/images/favicon.svg"/>
 <link rel="icon" type="image/png" href="{{ base_path }}/images/favicon-32x32.png" sizes="32x32"/>
 <link rel="icon" type="image/png" href="{{ base_path }}/images/favicon-192x192.png" sizes="192x192"/>
-<link rel="manifest" href="{{ base_path }}/images/manifest.json"/>
+<link rel="manifest" href="{{ site.baseurl }}/images/manifest.json"/>
 <link rel="icon" href="/images/favicon.ico"/>
 <meta name="theme-color" content="#ffffff"/>
 
@@ -34,26 +34,9 @@ document.addEventListener('DOMContentLoaded', function() {
   const canvas = document.getElementById('matrix-canvas');
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
-  // Malayalam, Devanagari (Hindi), Kannada, Tamil, Telugu, Bengali, Gujarati, Gurmukhi
-  const chars = [
-    // Malayalam
-    'കഖഗഘങചഛജഝഞടഠഡഢണതഥദധനപഫബഭമയരലവശഷസഹളഴറ',
-    // Devanagari (Hindi)
-    'कखगघङचछजझञटठडढणतथदधनपफबभमयरलवशषसहक्षत्र',
-    // Kannada
-    'ಕಖಗಘಙಚಛಜಝಞಟಠಡಢಣತಥದಧನಪಫಬಭಮಯರಲವಶಷಸಹಳ',
-    // Tamil
-    'கஙசஞடணதநபமயரலவழளறன',
-    // Telugu
-    'కఖగఘఙచఛజఝఞటఠడఢణతథదధనపఫబభమయరలవశషసహ',
-    // Bengali
-    'কখগঘঙচছজঝঞটঠডঢণতথদধনপফবভমযরলশষসহ',
-    // Gujarati
-    'કખગઘચછજઝટઠડઢણતથદધનપફબભમયરલવશષસહ',
-    // Gurmukhi (Punjabi)
-    'ਕਖਗਘਙਚਛਜਝਞਟਠਡਢਣਤਥਦਧਨਪਫਬਭਮਯਰਲਵਸਹ',
-  ].join('');
-  const charArray = [...chars]; // spread into proper Unicode code-point array
+  // Malayalam only
+  const chars = 'അആഇഈഉഊഋഎഏഐഒഓഔകഖഗഘങചഛജഝഞടഠഡഢണതഥദധനപഫബഭമയരലവശഷസഹളഴറൺൻർൽൾൿ';
+  const charArray = [...chars];
   const FONT_SIZE = 18;
   const TEAL      = '#2dd4bf';
   const TEAL_HEAD = '#99f6e4';
@@ -70,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function draw() {
     ctx.fillStyle = 'rgba(10, 22, 40, 0.06)';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.font = FONT_SIZE + 'px "Noto Sans", "Noto Sans Malayalam", "Noto Sans Devanagari", sans-serif';
+    ctx.font = FONT_SIZE + 'px "Noto Sans Malayalam", sans-serif';
 
     for (let i = 0; i < drops.length; i++) {
       const y = Math.floor(drops[i]);
