@@ -1,0 +1,53 @@
+---
+permalink: /
+author_profile: true
+hide_meta: true
+redirect_from:
+  - /about/
+  - /about.html
+---
+
+<div class="content-terminal-bar">
+  <span class="terminal-dot terminal-dot--red"></span>
+  <span class="terminal-dot terminal-dot--yellow"></span>
+  <span class="terminal-dot terminal-dot--green"></span>
+  <span class="terminal-bar__label">about.txt</span>
+</div>
+
+<div class="about-content" markdown="1">
+
+<span class="section-comment">// origin</span>
+
+Before any of this was a career, it was just the internet. Building websites for anyone who'd pay, deep in forums and communities at odd hours, more friends online than offline. I knew every trick to watch the latest movies without paying for them. You know how.
+
+That world shaped how I think about technology more than any course or certification ever could. I wasn't studying it. I was living in it.
+
+<span class="section-comment">// build</span>
+
+Started my career building mobile apps for some of India's most recognisable financial institutions. The kind of apps where a bug isn't just embarrassing — it's someone's life savings.
+
+Since then, every major wave: blockchain, cloud on AWS, machine learning, AI products. Not by plan — just by being unable to look away from whatever became the most interesting problem.
+
+<span class="section-comment">// exploits</span>
+
+Found every user account on one of India's most popular matrimonial sites — names, passwords, the works. Reported it. Got my friends free Burger King by finding something I probably shouldn't have. Once ran a DB dump on what I was *sure* was an abandoned education website. It wasn't. The site was down for a long time. I still think about that one.
+
+<blockquote><p>There are a few others I'll never talk about.</p></blockquote>
+
+<span class="section-comment">// now</span>
+
+Leading the AI team within F-Secure's Scam Unit — some of the sharpest minds I've worked with. We're deep in the latest models: hacking them, breaking them, optimising them, pushing them beyond what their creators intended. The mission is protecting real people from scams. Sounds simple. It isn't. Scams are adaptive, personal, and human. On-device protection. Angles nobody has thought to look from yet.
+
+Every machine is vulnerable. The question is always which angle nobody saw coming.
+
+<span class="section-comment">// breach.guru</span>
+
+The name isn't accidental. *Breach* — because the best way to understand technology is to break through it, not around it. *Guru* — not in the self-proclaimed sense, but in the original one: a guide through difficult terrain.
+
+The [YouTube channel](https://www.youtube.com/@breachguru) is where I take the things I'm deep in — AI, security, the latest breakthroughs and the latest failures — and make them actually understandable. For the IT pro who wants to go deeper. For the curious person who just wants to know what's really going on.
+
+<span class="section-comment">// offline</span>
+
+Poker. Puzzles. Monopoly and Catan taken far too seriously. Used to play a lot of video games — now I just find bugs in the things other people built instead.
+
+</div>
