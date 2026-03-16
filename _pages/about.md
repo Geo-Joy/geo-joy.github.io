@@ -2,6 +2,7 @@
 permalink: /
 author_profile: true
 hide_meta: true
+description: "Geo Joy — Senior Architect and AI team lead. Builder turned breaker across mobile, blockchain, cloud and AI. Always at the edge of what's new."
 redirect_from:
   - /about/
   - /about.html

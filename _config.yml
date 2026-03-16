@@ -8,11 +8,11 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
-title                    : "Geo Joy - Breach Guru"
-title_separator          : "-"
+site_theme               : "default"
+title                    : "Geo Joy"
+title_separator          : "–"
 name                     : &name "Geo Joy"
-description              : &description "Security researcher, ethical hacker, and breach analyst"
+description              : &description "Senior Architect and AI team lead. Builder turned breaker — mobile, blockchain, cloud, AI, and security across 12+ years."
 url                      : https://geo-joy.github.io
 baseurl                  : ""
 repository               : "Geo-Joy/geo-joy.github.io"
@@ -137,19 +137,22 @@ yandex_site_verification :
 
 # Social Sharing
 twitter:
-  username               : &twitter
+  username               : &twitter "breachguru"
 facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 :  # Social media default site image
-og_description           :  # Social media default site image description
-# For specifying social profiles
-# - https://developers.google.com/structured-data/customize/social-profiles
+og_image                 : "profile.png"
+og_description           : "Senior Architect & AI team lead. Builder turned breaker across mobile, blockchain, cloud and AI."
+# Structured data — https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+  type                   : Person
+  name                   : Geo Joy
+  links:
+    - https://github.com/Geo-Joy
+    - https://www.linkedin.com/in/-itsg/
+    - https://twitter.com/breachguru
+    - https://www.youtube.com/@breachguru
 
 
 # Analytics
