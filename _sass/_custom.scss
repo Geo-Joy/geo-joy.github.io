@@ -31,7 +31,7 @@ body {
 /* Heavier overlay — more readable */
 #bg-overlay {
   position: fixed;
-  inset: 0;
+  top: 0; right: 0; bottom: 0; left: 0;
   background: rgba(8, 18, 35, 0.91);
   z-index: 0;
   pointer-events: none;
@@ -40,7 +40,7 @@ body {
 /* Matrix rain — lower opacity so it's ambient, not distracting */
 #matrix-canvas {
   position: fixed;
-  inset: 0;
+  top: 0; right: 0; bottom: 0; left: 0;
   z-index: 1;
   pointer-events: none;
   opacity: 0.1;
@@ -50,7 +50,7 @@ body {
 body::before {
   content: "";
   position: fixed;
-  inset: 0;
+  top: 0; right: 0; bottom: 0; left: 0;
   z-index: 2;
   pointer-events: none;
   background: repeating-linear-gradient(
@@ -66,7 +66,7 @@ body::before {
 body::after {
   content: "";
   position: fixed;
-  inset: 0;
+  top: 0; right: 0; bottom: 0; left: 0;
   z-index: 2;
   pointer-events: none;
   background: radial-gradient(
