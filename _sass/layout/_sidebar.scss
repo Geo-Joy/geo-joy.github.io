@@ -27,6 +27,7 @@
   @media screen and (max-width: #{$sidebar-screen-min-width - 1px}) {
     transform: translateX(-100%);
     transition: transform 0.25s ease;
+    z-index: 100;
 
     &.is-open {
       transform: translateX(0);

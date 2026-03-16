@@ -44,3 +44,185 @@ redirect_from:
 {% endfor %}
 
 </div>
+
+<script>
+(function () {
+  if (window.innerWidth < 1024) return; // mobile: navigate normally
+
+  const SIDEBAR = 310;
+  const MIN_W = 260;
+  let zTop = 1000;
+  let winCount = 0;
+  const minimized = [];
+
+  function stackMinimized() {
+    minimized.forEach((w, i) => {
+      w.style.transition = 'left 0.2s ease, top 0.2s ease, width 0.2s ease, height 0.2s ease';
+      w.style.left   = 'auto';
+      w.style.right  = '20px';
+      w.style.top    = 'auto';
+      w.style.bottom = (20 + i * 44) + 'px';
+      w.style.width  = MIN_W + 'px';
+    });
+  }
+
+  document.querySelectorAll('.blog-card__title a').forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      openWindow(this.href, this.textContent.trim());
+    });
+  });
+
+  function openWindow(url, title) {
+    const offset = (winCount % 6) * 32;
+    const W = Math.min(720, window.innerWidth - SIDEBAR - 40);
+    const H = Math.round(window.innerHeight * 0.76);
+    const left = SIDEBAR + 20 + offset;
+    const top  = 24 + offset;
+    winCount++;
+
+    const win = document.createElement('div');
+    win.className = 'os-window';
+    win.style.cssText = `left:${left}px;top:${top}px;width:${W}px;height:${H}px;z-index:${++zTop}`;
+    win.dataset.origLeft = left;
+    win.dataset.origTop  = top;
+    win.dataset.origW    = W;
+    win.dataset.origH    = H;
+
+    win.innerHTML = `
+      <div class="os-window__bar">
+        <div class="os-window__dots">
+          <button class="os-window__dot os-window__dot--close"    title="Close"></button>
+          <button class="os-window__dot os-window__dot--minimize" title="Minimize"></button>
+          <button class="os-window__dot os-window__dot--maximize" title="Maximize"></button>
+        </div>
+        <span class="os-window__title">${title}</span>
+        <a class="os-window__newtab" href="${url}" target="_blank" rel="noopener" title="Open in new tab"><i class="fas fa-external-link-alt"></i> open</a>
+      </div>
+      <div class="os-window__body">
+        <div class="os-window__loading">// loading...</div>
+      </div>
+      <div class="os-window__resize"></div>`;
+
+    document.body.appendChild(win);
+
+    // Lock body scroll when mouse is over the window
+    win.addEventListener('mouseenter', () => { document.body.style.overflow = 'hidden'; });
+    win.addEventListener('mouseleave', () => { document.body.style.overflow = ''; });
+
+    makeDraggable(win, win.querySelector('.os-window__bar'));
+    makeResizable(win, win.querySelector('.os-window__resize'));
+
+    win.addEventListener('mousedown', () => { win.style.zIndex = ++zTop; });
+
+    win.querySelector('.os-window__dot--close').addEventListener('click', e => {
+      e.stopPropagation();
+      const idx = minimized.indexOf(win);
+      if (idx > -1) minimized.splice(idx, 1);
+      win.remove();
+      stackMinimized();
+    });
+    win.querySelector('.os-window__dot--minimize').addEventListener('click', e => {
+      e.stopPropagation();
+      if (win.classList.contains('os-window--min')) {
+        // Restore
+        win.classList.remove('os-window--min');
+        const idx = minimized.indexOf(win);
+        if (idx > -1) minimized.splice(idx, 1);
+        win.style.right  = '';
+        win.style.bottom = '';
+        win.style.left   = win.dataset.origLeft + 'px';
+        win.style.top    = win.dataset.origTop  + 'px';
+        win.style.width  = win.dataset.origW    + 'px';
+        win.style.height = win.dataset.origH    + 'px';
+        win.style.transition = '';
+        win.style.zIndex = ++zTop;
+        stackMinimized();
+      } else {
+        // Minimise — save current position first
+        win.dataset.origLeft = parseInt(win.style.left) || win.dataset.origLeft;
+        win.dataset.origTop  = parseInt(win.style.top)  || win.dataset.origTop;
+        win.dataset.origW    = parseInt(win.style.width) || win.dataset.origW;
+        win.dataset.origH    = parseInt(win.style.height)|| win.dataset.origH;
+        win.classList.remove('os-window--max');
+        win.classList.add('os-window--min');
+        win.style.height = '';
+        minimized.push(win);
+        stackMinimized();
+      }
+    });
+    win.querySelector('.os-window__dot--maximize').addEventListener('click', e => {
+      e.stopPropagation();
+      const isMax = win.classList.toggle('os-window--max');
+      if (isMax) {
+        win.style.left   = (SIDEBAR + 10) + 'px';
+        win.style.top    = '10px';
+        win.style.width  = (window.innerWidth - SIDEBAR - 20) + 'px';
+        win.style.height = (window.innerHeight - 20) + 'px';
+      } else {
+        win.style.left   = win.dataset.origLeft + 'px';
+        win.style.top    = win.dataset.origTop  + 'px';
+        win.style.width  = win.dataset.origW    + 'px';
+        win.style.height = win.dataset.origH    + 'px';
+      }
+    });
+
+    fetch(url)
+      .then(r => r.text())
+      .then(html => {
+        const doc  = new DOMParser().parseFromString(html, 'text/html');
+        const hdr  = doc.querySelector('.post-header');
+        const body = doc.querySelector('.post-body');
+        const el   = win.querySelector('.os-window__body');
+        el.innerHTML = '';
+        if (hdr)  el.appendChild(document.adoptNode(hdr));
+        if (body) el.appendChild(document.adoptNode(body));
+      })
+      .catch(() => {
+        win.querySelector('.os-window__body').innerHTML = '<div class="os-window__loading">// failed to load</div>';
+      });
+  }
+
+  function makeResizable(win, handle) {
+    let resizing = false, sx, sy, sw, sh;
+    handle.addEventListener('mousedown', e => {
+      if (win.classList.contains('os-window--max')) return;
+      resizing = true;
+      sx = e.clientX; sy = e.clientY;
+      sw = win.offsetWidth; sh = win.offsetHeight;
+      e.preventDefault(); e.stopPropagation();
+    });
+    document.addEventListener('mousemove', e => {
+      if (!resizing) return;
+      const nw = Math.max(360, sw + e.clientX - sx);
+      const nh = Math.max(240, sh + e.clientY - sy);
+      win.style.width  = nw + 'px';
+      win.style.height = nh + 'px';
+      win.dataset.origW = nw;
+      win.dataset.origH = nh;
+    });
+    document.addEventListener('mouseup', () => { resizing = false; });
+  }
+
+  function makeDraggable(win, handle) {
+    let drag = false, sx, sy, sl, st;
+    handle.addEventListener('mousedown', e => {
+      if (e.target.classList.contains('os-window__dot')) return;
+      if (win.classList.contains('os-window--max')) return;
+      drag = true; sx = e.clientX; sy = e.clientY;
+      sl = parseInt(win.style.left); st = parseInt(win.style.top);
+      e.preventDefault();
+    });
+    document.addEventListener('mousemove', e => {
+      if (!drag) return;
+      win.style.left = (sl + e.clientX - sx) + 'px';
+      win.style.top  = (st + e.clientY - sy) + 'px';
+    });
+    document.addEventListener('mouseup', () => { drag = false; });
+  }
+
+  function slugify(t) {
+    return t.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 32);
+  }
+})();
+</script>

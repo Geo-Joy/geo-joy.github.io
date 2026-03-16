@@ -19,30 +19,34 @@ layout: default
 
       <section class="page__content" itemprop="text">
 
-        <div class="content-terminal-bar">
-          <span class="terminal-dot terminal-dot--red"></span>
-          <span class="terminal-dot terminal-dot--yellow"></span>
-          <span class="terminal-dot terminal-dot--green"></span>
-          <span class="terminal-bar__label">{{ page.date | date: "%Y-%m-%d" }}.md</span>
-        </div>
+        {% if page.collection == 'posts' %}
 
-        <div class="post-header">
-          <div class="post-header__top">
-            <a href="{{ site.baseurl }}/blog/" class="post-header__back">← blog</a>
-            {% if page.date %}
+          <div class="content-terminal-bar">
+            <span class="terminal-dot terminal-dot--red"></span>
+            <span class="terminal-dot terminal-dot--yellow"></span>
+            <span class="terminal-dot terminal-dot--green"></span>
+            <span class="terminal-bar__label">{{ page.date | date: "%Y-%m-%d" }}.md</span>
+          </div>
+
+          <div class="post-header">
+            <div class="post-header__top">
+              <a href="{{ site.baseurl }}/blog/" class="post-header__back">← blog</a>
               <time class="post-header__date" datetime="{{ page.date | date_to_xmlschema }}">
                 {{ page.date | date: "%B %d, %Y" }}
               </time>
-            {% endif %}
-          </div>
-          {% if page.title %}
+            </div>
             <h1 class="post-header__title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>
-          {% endif %}
-        </div>
+          </div>
 
-        <div class="post-body">
+          <div class="post-body">
+            {{ content }}
+          </div>
+
+        {% else %}
+
           {{ content }}
-        </div>
+
+        {% endif %}
 
       </section>
 
