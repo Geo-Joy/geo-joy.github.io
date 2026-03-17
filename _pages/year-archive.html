@@ -48,7 +48,7 @@ redirect_from:
 
 <script>
 (function () {
-  if (window.innerWidth < 1024) return; // mobile: navigate normally
+  if (window.innerWidth < 1024) return;
 
   const SIDEBAR = 310;
   const MIN_W = 260;
@@ -107,7 +107,6 @@ redirect_from:
 
     document.body.appendChild(win);
 
-    // Lock body scroll when mouse is over the window
     win.addEventListener('mouseenter', () => { document.body.style.overflow = 'hidden'; });
     win.addEventListener('mouseleave', () => { document.body.style.overflow = ''; });
 
@@ -126,7 +125,6 @@ redirect_from:
     win.querySelector('.os-window__dot--minimize').addEventListener('click', e => {
       e.stopPropagation();
       if (win.classList.contains('os-window--min')) {
-        // Restore
         win.classList.remove('os-window--min');
         const idx = minimized.indexOf(win);
         if (idx > -1) minimized.splice(idx, 1);
@@ -140,7 +138,6 @@ redirect_from:
         win.style.zIndex = ++zTop;
         stackMinimized();
       } else {
-        // Minimise — save current position first
         win.dataset.origLeft = parseInt(win.style.left) || win.dataset.origLeft;
         win.dataset.origTop  = parseInt(win.style.top)  || win.dataset.origTop;
         win.dataset.origW    = parseInt(win.style.width) || win.dataset.origW;
