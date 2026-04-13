@@ -11,7 +11,7 @@ tags:
   - TRIBE v2
 ---
 
-*Part 1 of 2 — The theory and the experiment design. Part 2 will show what actually happened.*
+*Part 1 of 2 — The theory and the experiment design. **[Part 2](/posts/your-brain-on-scams-what-the-experiment-actually-found/) shows what actually happened.***
 
 *When Meta released TRIBE v2 in March 2026, I couldn't stop thinking about what it could mean for scam detection. This is me finally running the experiment. It's a personal research project, not a peer-reviewed study — the goal is to ask interesting questions with a new tool and share what comes out. Some findings will hold up under scrutiny; others will invite challenge. Both outcomes are useful. If something here sparks a question, a doubt, or a better experiment — that's exactly the point.*
 
@@ -157,7 +157,7 @@ I'll run the actual experiment — both paths — share the brain activation map
 
 The code, Colab notebook, and all visualizations will be open-sourced.
 
-Stay tuned.
+**[Read Part 2 →](/posts/your-brain-on-scams-what-the-experiment-actually-found/)**
 
 ---
 
@@ -171,7 +171,7 @@ Stay tuned.
 
 **fsaverage5 cortical mesh** — A standardized 3D model of the human brain surface used in neuroscience to compare data across individuals. "fsaverage" is an average brain; "5" refers to the resolution level (~20,484 surface points). TRIBE v2 outputs predictions at each of these ~20,000 points, which is how you get a full brain map.
 
-**Region of interest (ROI)** — A specific brain area you've decided to measure in advance because you have a hypothesis about it. Rather than sifting through all 20,000+ brain points, you define ROIs (e.g., "prefrontal cortex") and compute the average activation there. This experiment uses seven ROIs: dlPFC, ACC, insula, visual cortex, TPJ, amygdala, and nucleus accumbens.
+**Region of interest (ROI)** — A specific brain area you've decided to measure in advance because you have a hypothesis about it. Rather than sifting through all 20,000+ brain points, you define ROIs (e.g., "prefrontal cortex") and compute the average activation there. This experiment tracks seven ROIs: dlPFC, ACC, insula, visual cortex, TPJ, amygdala, and nucleus accumbens. The first five are cortical and extracted cleanly; amygdala and nucleus accumbens are subcortical and came out near-zero in TRIBE v2's predictions (either a genuine finding or a model coverage limitation).
 
 **Hemodynamic response** — The blood flow change that follows neural activity, which is what fMRI actually detects. It peaks about 5–6 seconds after the neuron fires, which is why TRIBE v2 offsets its predictions by 5 seconds — to account for this lag between "neuron fires" and "scanner detects it."
 
