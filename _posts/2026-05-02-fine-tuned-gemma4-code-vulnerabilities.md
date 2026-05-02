@@ -120,7 +120,7 @@ Training completed in approximately 1 hour 45 minutes on the A100 for one epoch.
 
 ![Output files on Google Drive](/images/gemma4-vuln/other-folders.jpeg)
 *Three output formats saved to Google Drive — LoRA adapter, merged SafeTensors, and GGUF.*
-
+ 
 The fine-tuned model is saved in three formats...
 ---
 
@@ -353,6 +353,7 @@ Fine-tuning taught the model to recognize vulnerability *signatures*, not to per
 
 ## The outputs
 ![Outputs](/images/gemma4-vuln/other-folders.jpeg)
+ 
 The fine-tuned model is saved in three formats: a **LoRA adapter** (~160MB), a **merged 16-bit SafeTensors** model (~8GB), and a **GGUF Q4_K_M** file (~2.5GB). The evaluation in this post was done on the SafeTensors LoRA checkpoint. The GGUF version hasn't been evaluated yet — that's the focus of the next post.
 
 ---
