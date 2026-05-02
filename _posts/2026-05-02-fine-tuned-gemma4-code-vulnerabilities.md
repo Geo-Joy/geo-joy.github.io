@@ -1,5 +1,5 @@
 ---
-title: "I Fine-Tuned Gemma 4 to Detect Code Vulnerabilities — Here's What Happened"
+title: "I Fine-Tuned Gemma 4 to Detect Code Vulnerabilities"
 date: 2026-05-02
 permalink: /posts/fine-tuned-gemma4-code-vulnerabilities/
 tags:
