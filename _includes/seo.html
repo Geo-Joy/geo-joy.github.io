@@ -54,9 +54,9 @@
   <meta name="twitter:description" content="{{ seo_description }}">
   <meta name="twitter:url" content="{{ canonical_url }}">
 
-  {% if page.header.image or page.seo_image %}
+  {% if page.header.image or page.seo_image or page.date and page.slug %}
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="{% if page.header.image %}{% if page.header.image contains "://" %}{{ page.header.image }}{% else %}{{ page.header.image | prepend: "/images/" | prepend: base_path }}{% endif %}{% elsif page.seo_image %}{% if page.seo_image contains "://" %}{{ page.seo_image }}{% else %}{{ page.seo_image | prepend: "/images/" | prepend: base_path }}{% endif %}{% endif %}">
+    <meta name="twitter:image" content="{% if page.header.image %}{% if page.header.image contains "://" %}{{ page.header.image }}{% else %}{{ page.header.image | prepend: "/images/" | prepend: base_path }}{% endif %}{% elsif page.seo_image %}{% if page.seo_image contains "://" %}{{ page.seo_image }}{% else %}{{ page.seo_image | prepend: "/images/" | prepend: base_path }}{% endif %}{% elsif page.date and page.slug %}{{ '/images/og/' | append: page.slug | append: '.png' | prepend: base_path }}{% endif %}">
   {% else %}
     <meta name="twitter:card" content="summary">
     {% if site.og_image %}
@@ -145,5 +145,7 @@
   <meta property="og:image" content="{% if page.header.overlay_image contains "://" %}{{ page.header.overlay_image }}{% else %}{{ page.header.overlay_image | prepend: "/images/" | prepend: base_path }}{% endif %}">
 {% elsif page.seo_image %}
   <meta property="og:image" content="{% if page.seo_image contains "://" %}{{ page.seo_image }}{% else %}{{ page.seo_image | prepend: "/images/" | prepend: base_path }}{% endif %}">
+{% elsif page.date and page.slug %}
+  <meta property="og:image" content="{{ '/images/og/' | append: page.slug | append: '.png' | prepend: base_path }}">
 {% endif %}
 <!-- end Open Graph protocol -->
