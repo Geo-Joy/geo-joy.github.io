@@ -2,7 +2,7 @@
 title: "Every Concept You Need Before Fine-Tuning an LLM"
 date: 2026-05-01
 permalink: /posts/every-concept-before-fine-tuning-llm/
-seo_image: fine-tuning-guide/post.jpg
+# seo_image: fine-tuning-guide/post.jpg  # commented out to use auto-generated OG image
 tags:
   - LLM
   - fine-tuning
