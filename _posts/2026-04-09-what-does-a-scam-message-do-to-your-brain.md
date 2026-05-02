@@ -2,7 +2,7 @@
 title: "What Does a Scam Message Do to Your Brain? I Used Meta's AI to Find Out"
 date: 2026-04-09
 permalink: /posts/what-does-a-scam-message-do-to-your-brain/
-seo_image: tribev2-scam-experiment/post.jpg
+# seo_image: tribev2-scam-experiment/post.jpg  # commented out to use auto-generated OG image
 tags:
   - neuroscience
   - AI

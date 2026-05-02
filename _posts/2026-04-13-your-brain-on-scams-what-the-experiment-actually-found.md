@@ -2,7 +2,7 @@
 title: "Your Brain on Scams: What the Experiment Actually Found"
 date: 2026-04-13
 permalink: /posts/your-brain-on-scams-what-the-experiment-actually-found/
-seo_image: /images/tribev2-scam-experiment/featured_phishing_comparison.png
+# seo_image: /images/tribev2-scam-experiment/featured_phishing_comparison.png  # commented out to use auto-generated OG image
 tags:
   - neuroscience
   - AI
