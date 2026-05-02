@@ -110,13 +110,13 @@ Training completed in approximately 1 hour 45 minutes on the A100 for one epoch.
 
 ![Training loss curve](/images/gemma4-vuln/curves.png)
 
-![Unsloth training output](/images/gemma4-vuln-experiment/fine-tune-progress.png)
+![Unsloth training output](/images/gemma4-vuln/fine-tune-progress.png)
 
 **Training loss** dropped sharply from ~9.5 to ~1.3 in the first 100 steps. (A starting loss of ~9.5 is higher than typical text models — this is normal for Gemma 4's multimodal architecture with its large vocabulary. The model hasn't seen our task format before, so early predictions are essentially random across the full token space.) It continued declining gradually after that.
 
 **Validation loss** dropped to ~2.3 and plateaued completely. Additional training steps reduced training loss but didn't improve generalization. I had originally configured 3 epochs, but the validation curve made the decision clear: stop at 1 epoch. The model absorbed the clean, obvious patterns quickly. Further training was fitting the noisy labels, not learning new patterns.
 
-![Finetune outputs](/images/gemma4-vuln-experiment/after-fine-tune.jpeg)
+![Finetune outputs](/images/gemma4-vuln/after-fine-tune.jpeg)
 ---
 
 ## Evaluation: three iterations to honest numbers
@@ -347,7 +347,7 @@ Fine-tuning taught the model to recognize vulnerability *signatures*, not to per
 ---
 
 ## The outputs
-![Outputs](/images/gemma4-vuln-experiment/other-folders.jpeg)
+![Outputs](/images/gemma4-vuln/other-folders.jpeg)
 The fine-tuned model is saved in three formats: a **LoRA adapter** (~160MB), a **merged 16-bit SafeTensors** model (~8GB), and a **GGUF Q4_K_M** file (~2.5GB). The evaluation in this post was done on the SafeTensors LoRA checkpoint. The GGUF version hasn't been evaluated yet — that's the focus of the next post.
 
 ---
