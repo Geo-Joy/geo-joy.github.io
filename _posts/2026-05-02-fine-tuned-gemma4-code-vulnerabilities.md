@@ -109,14 +109,19 @@ Trainable: 42,401,792 / 8,038,558,240 (0.53%)
 Training completed in approximately 1 hour 45 minutes on the A100 for one epoch.
 
 ![Training loss curve](/images/gemma4-vuln/curves.png)
-
-![Unsloth training output](/images/gemma4-vuln/fine-tune-progress.png)
+*Fine-tuning loss curve. Training loss (blue) drops sharply from ~9.5 to ~1.3. Validation loss (orange) plateaus at ~2.3.*
 
 **Training loss** dropped sharply from ~9.5 to ~1.3 in the first 100 steps. (A starting loss of ~9.5 is higher than typical text models — this is normal for Gemma 4's multimodal architecture with its large vocabulary. The model hasn't seen our task format before, so early predictions are essentially random across the full token space.) It continued declining gradually after that.
 
 **Validation loss** dropped to ~2.3 and plateaued completely. Additional training steps reduced training loss but didn't improve generalization. I had originally configured 3 epochs, but the validation curve made the decision clear: stop at 1 epoch. The model absorbed the clean, obvious patterns quickly. Further training was fitting the noisy labels, not learning new patterns.
 
-![Finetune outputs](/images/gemma4-vuln/after-fine-tune.jpeg)
+![Unsloth training output](/images/gemma4-vuln/fine-tune-progress.png)
+*Unsloth training progress — step-by-step loss showing the plateau during epoch 1.*
+
+![Output files on Google Drive](/images/gemma4-vuln/other-folders.jpeg)
+*Three output formats saved to Google Drive — LoRA adapter, merged SafeTensors, and GGUF.*
+
+The fine-tuned model is saved in three formats...
 ---
 
 ## Evaluation: three iterations to honest numbers
