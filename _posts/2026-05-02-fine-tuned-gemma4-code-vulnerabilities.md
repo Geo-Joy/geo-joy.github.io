@@ -120,8 +120,7 @@ Training completed in approximately 1 hour 45 minutes on the A100 for one epoch.
 
 ![Output files on Google Drive](/images/gemma4-vuln/other-folders.jpeg)
 *Three output formats saved to Google Drive — LoRA adapter, merged SafeTensors, and GGUF.*
- 
-The fine-tuned model is saved in three formats...
+
 ---
 
 ## Evaluation: three iterations to honest numbers

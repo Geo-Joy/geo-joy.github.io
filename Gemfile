@@ -9,7 +9,7 @@ group :jekyll_plugins do
   gem 'webrick', '~> 1.8'
 end
 
-gem 'github-pages'
+# gem 'github-pages'  # commented out - requires Ruby >= 2.8
 gem 'connection_pool', '2.5.0'
 gem 'csv'
 gem 'base64'
